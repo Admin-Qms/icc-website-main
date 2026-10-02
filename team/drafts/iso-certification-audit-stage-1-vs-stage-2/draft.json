@@ -1,0 +1,17 @@
+{
+  "title": "ISO Certification Audit Stage 1 vs Stage 2: What Each Audit Checks",
+  "metaDescription": "How an ISO certification audit works: what the Stage 1 vs Stage 2 audits each check, what auditors ask to see, and how to prepare a plant for both.",
+  "primaryKeyword": "iso certification audit stage 1 vs stage 2",
+  "secondaryKeywords": [
+    "stage 1 audit checklist",
+    "stage 2 certification audit",
+    "iso audit nonconformity",
+    "certification body audit process"
+  ],
+  "articleType": "comparison",
+  "bodyFile": "body.md",
+  "hero": {
+    "path": "../../../public/images/hero/qms-evidence-review.png",
+    "alt": "Four people reviewing a process map and binders of records at a table beside a production floor"
+  }
+}

@@ -1,296 +1,210 @@
-const { claudeCallFast: claudeCall } = require("../shared/claude");
+const { claudeCallFast: claudeCall, hasLLMKey } = require("../shared/claude");
 const { log } = require("../shared/logger");
+const { countWords, extractLinks, normalizeBody, keywordCovered } = require("../shared/contentStore");
 
 /**
  * Targeted rewrite patcher — fixes specific QA failures without regenerating the entire article.
- * Each patch function handles one category of failure and modifies only the relevant sections.
+ * Each patch handles one failed check (matched by the check's `id` from contentQA.validateLocal)
+ * and changes only what that check needs. Checks about the title or slug are not patchable here;
+ * those fail the run.
  */
 
-const BANNED_PHRASES = [
-  "delve into", "it is worth noting", "in conclusion", "in today's landscape",
-  "navigating the complexities", "crucial", "comprehensive", "landscape",
-  "navigate", "leverage", "game-changer", "cutting-edge", "at the end of the day",
-  "it goes without saying", "needless to say",
-];
+const BANNED_REPLACEMENTS = {
+  "delve into": "examine",
+  "it is worth noting": "notably",
+  "in conclusion": "to summarize",
+  "in today's landscape": "currently",
+  "navigating the complexities": "managing the requirements",
+  "crucial": "critical",
+  "comprehensive": "thorough",
+  "landscape": "environment",
+  "navigate": "manage",
+  "leverage": "use",
+  "game-changer": "significant advantage",
+  "cutting-edge": "advanced",
+  "at the end of the day": "ultimately",
+  "it goes without saying": "",
+  "needless to say": "",
+};
+
+const MIN_WORDS = 1500;
+const EXPAND_TARGET = 1750;
+
+function failed(qaResult, ...ids) {
+  return (qaResult.checks || []).find((c) => !c.pass && ids.includes(c.id || c.name));
+}
 
 /**
- * Analyzes QA issues and applies targeted patches.
- * Returns the patched article (mutates body only — never rewrites from scratch).
+ * Analyzes QA failures and applies targeted patches.
+ * Returns the patched article (body and, when needed, metaDescription).
  */
 async function patchArticle(article, qaResult, context) {
   log("rewritePatcher", "analyzing", `${qaResult.issues?.length || 0} issues to patch`);
 
-  const issues = qaResult.issues || [];
-  const checks = qaResult.checks || [];
   let body = article.body;
-  let patchCount = 0;
+  let metaDescription = article.metaDescription;
+  const applied = [];
+  const llm = hasLLMKey();
 
-  // ── Patch 1: Banned phrases (tone) ──
-  const toneCheck = checks.find((c) => c.name === "professional-tone" || c.name === "tone");
-  if (toneCheck && !toneCheck.pass) {
+  // ── Deterministic fixes first: cheap, and they can't damage the article ──
+  if (failed(qaResult, "single-h1", "no-artifacts")) {
+    body = normalizeBody(body, article.title);
+    applied.push("normalised headings and leftovers");
+  }
+
+  if (failed(qaResult, "banned-phrases", "professional-tone", "tone")) {
     body = patchBannedPhrases(body);
-    patchCount++;
-    log("rewritePatcher", "patched", "banned phrases removed");
+    applied.push("banned phrases replaced");
   }
 
-  // ── Patch 2: Missing/weak links ──
-  const linkIssues = issues.filter((i) =>
-    i.toLowerCase().includes("link") || i.toLowerCase().includes("external") || i.toLowerCase().includes("internal")
-  );
-  if (linkIssues.length > 0 && context) {
-    body = await patchLinks(body, article, context);
-    patchCount++;
-    log("rewritePatcher", "patched", "links improved");
+  // ── Links: drop bad ones, then top up from the offered lists ──
+  if (failed(qaResult, "internal-links", "external-links")) {
+    const { validateLinks } = require("../seo/linkBuilder");
+    body = (await validateLinks({ ...article, body }, context)).body;
+    applied.push("links repaired");
   }
 
-  // ── Patch 3: Missing FAQ or weak FAQ answers ──
-  const faqCheck = checks.find((c) => c.name === "faq" || c.name === "faq-section");
-  if (faqCheck && !faqCheck.pass) {
-    body = await patchFAQ(body, article);
-    patchCount++;
-    log("rewritePatcher", "patched", "FAQ section improved");
+  // ── Model-backed rewrites: each returns the whole article and is only
+  //    accepted if it kept the links, markers and length ──
+  if (llm) {
+    const voice = failed(qaResult, "voice");
+    if (voice) {
+      const patched = await rewriteBody(
+        body,
+        `Rewrite ONLY the sentences that use first person (we, our, us, I, my) so they use third person or direct address instead. Refer to the company as "ISO Certification Consultant" and to the reader as "you". Flagged passages: ${(voice.violations || []).slice(0, 12).map((v) => `"${v.context}"`).join("; ")}`
+      );
+      if (patched) {
+        body = patched;
+        applied.push("first person removed");
+      }
+    }
+
+    const claims = failed(qaResult, "claims-audit", "fabricated-quotes");
+    if (claims) {
+      const findings = (qaResult.findings || []).map((f) => `- [${f.rule}] "${f.text}" — ${f.reason}`).join("\n");
+      const quoted = (failed(qaResult, "fabricated-quotes")?.violations || []).map((v) => `- [QUOTES] "${v.text}"`).join("\n");
+      const patched = await rewriteBody(
+        body,
+        `Fix ONLY the passages listed below. For each: remove the invented company or person name (describe the business generically, e.g. "a 60-person stamping plant in Windsor"); remove any quotation or reported speech; replace a statistic or dollar figure stated as fact with a hedged general statement, or delete it; make any scenario openly hypothetical by starting its paragraph with "**Illustrative example:**"; delete claims about ISO Certification Consultant's track record; correct a wrong clause reference only if you are certain of the right one, otherwise drop the clause number.\n\nPASSAGES:\n${findings}\n${quoted}`
+      );
+      if (patched) {
+        body = patched;
+        applied.push("unsupported claims removed");
+      }
+    }
+
+    const words = countWords(body);
+    if (failed(qaResult, "word-count") && words < MIN_WORDS) {
+      const patched = await rewriteBody(
+        body,
+        `This article is ${words} words and must reach at least ${EXPAND_TARGET}. Expand the two thinnest H2 sections with more practical detail: what the clause asks for, how a shop actually does it, and the mistake auditors commonly find. Do not add statistics, named companies, quotes or first person. Do not change the other sections.`,
+        { mustGrow: true }
+      );
+      if (patched) {
+        body = patched;
+        applied.push("thin sections expanded");
+      }
+    }
+
+    if (failed(qaResult, "meta-description", "meta-keyword") || failed(qaResult, "voice")?.violations?.some((v) => v.block === 1)) {
+      const patched = await patchMetaDescription(article, metaDescription);
+      if (patched) {
+        metaDescription = patched;
+        applied.push("meta description rewritten");
+      }
+    }
   }
 
-  // ── Patch 4: Word count too low ──
-  const wcCheck = checks.find((c) => c.name === "word-count");
-  if (wcCheck && !wcCheck.pass) {
-    body = await patchWordCount(body, article);
-    patchCount++;
-    log("rewritePatcher", "patched", "word count expanded");
-  }
-
-  // ── Patch 5: Missing image markers ──
-  const imageCheck = checks.find((c) => c.name === "inline-images" || c.name === "images");
-  if (imageCheck && !imageCheck.pass) {
-    body = patchImageMarkers(body);
-    patchCount++;
-    log("rewritePatcher", "patched", "image markers added");
-  }
-
-  // ── Patch 6: Missing keyword in first 100 words ──
-  const kwFirst100 = checks.find((c) => c.name === "keyword-in-first-100" || c.name === "keyword-first-100");
-  if (kwFirst100 && !kwFirst100.pass) {
-    body = patchKeywordPlacement(body, article.primaryKeyword);
-    patchCount++;
-    log("rewritePatcher", "patched", "keyword placed in opening");
-  }
-
-  if (patchCount === 0) {
-    log("rewritePatcher", "skip", "no patchable issues found — full rewrite may be needed");
+  if (applied.length === 0) {
+    log("rewritePatcher", "skip", llm ? "no patchable issues found" : "no model key — only deterministic patches are available");
   } else {
-    log("rewritePatcher", "complete", `${patchCount} patches applied`);
+    log("rewritePatcher", "complete", applied.join("; "));
   }
-
-  const wordCount = body.split(/\s+/).length;
 
   return {
     ...article,
     body,
-    wordCount,
+    metaDescription,
+    wordCount: countWords(body),
     patched: true,
-    patchCount,
+    patchCount: applied.length,
   };
 }
 
 // ── Individual patch functions ──
 
+/** Replaces banned phrases in prose only — URLs and image lines are left alone. */
 function patchBannedPhrases(body) {
-  let patched = body;
-  const replacements = {
-    "delve into": "examine",
-    "it is worth noting": "notably",
-    "in conclusion": "to summarize",
-    "in today's landscape": "currently",
-    "navigating the complexities": "managing the requirements",
-    "crucial": "critical",
-    "comprehensive": "thorough",
-    "landscape": "environment",
-    "navigate": "manage",
-    "leverage": "use",
-    "game-changer": "significant advantage",
-    "cutting-edge": "advanced",
-    "at the end of the day": "ultimately",
-    "it goes without saying": "",
-    "needless to say": "",
-  };
+  const protectedSpan = /(\]\([^)]*\)|^\[IMAGE:[^\]]*\]\s*$|https?:\/\/\S+)/gm;
+  return body
+    .split(protectedSpan)
+    .map((part, i) => {
+      if (i % 2 === 1) return part; // a captured link target, marker or URL
+      let text = part;
+      for (const [banned, replacement] of Object.entries(BANNED_REPLACEMENTS)) {
+        const re = new RegExp(`\\b${banned.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "gi");
+        text = text.replace(re, (match) =>
+          replacement && match[0] === match[0].toUpperCase() ? replacement[0].toUpperCase() + replacement.slice(1) : replacement
+        );
+      }
+      return text.replace(/ {2,}/g, " ").replace(/ ([,.;:])/g, "$1");
+    })
+    .join("");
+}
 
-  for (const [banned, replacement] of Object.entries(replacements)) {
-    const regex = new RegExp(banned, "gi");
-    patched = patched.replace(regex, replacement);
+/**
+ * One model pass that returns the whole article with a narrow change applied.
+ * The result is discarded unless it is recognisably the same article: same
+ * links and image markers, and no shrinkage.
+ */
+async function rewriteBody(body, instruction, { mustGrow = false } = {}) {
+  const before = { words: countWords(body), links: extractLinks(body), markers: (body.match(/^\[IMAGE:[^\]]+\]\s*$/gm) || []).length };
+
+  let result;
+  try {
+    result = await claudeCall(
+      `You make narrow, surgical edits to ISO consulting articles for Canadian manufacturers. You change only what the instruction asks and return the complete article in clean markdown. You preserve every heading, link, [IMAGE: ...] marker, callout and bold phrase that the instruction does not require you to change. No preamble, no code fences, no H1 heading. Never use first person, named companies or people, quotes, or statistics stated as fact.`,
+      `INSTRUCTION:\n${instruction}\n\nARTICLE:\n${body}\n\nReturn ONLY the full article markdown with the fix applied.`,
+      8192
+    );
+  } catch (err) {
+    log("rewritePatcher", "rewrite-error", err.message);
+    return null;
   }
 
-  // Clean up double spaces from empty replacements
-  patched = patched.replace(/ {2,}/g, " ");
+  const patched = normalizeBody(result);
+  const after = { words: countWords(patched), links: extractLinks(patched), markers: (patched.match(/^\[IMAGE:[^\]]+\]\s*$/gm) || []).length };
+
+  const keptLinks = after.links.internal.length >= before.links.internal.length - 1 && after.links.external.length >= before.links.external.length - 1;
+  const keptMarkers = after.markers >= before.markers;
+  const keptLength = mustGrow ? after.words > before.words : after.words >= before.words * 0.9;
+  if (!keptLinks || !keptMarkers || !keptLength) {
+    log("rewritePatcher", "rewrite-rejected", `words ${before.words}→${after.words}, markers ${before.markers}→${after.markers}`);
+    return null;
+  }
   return patched;
 }
 
-async function patchLinks(body, article, context) {
-  // Count existing links
-  const internalLinks = (body.match(/\[([^\]]+)\]\(\/[^)]+\)/g) || []).length;
-  const externalMatches = body.match(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g) || [];
-  const externalLinks = externalMatches.length;
-
-  // Check for reused external URLs and swap them with unused alternatives
-  const availableExternals = (context.externalLinks || []).map((l) => l.url.replace(/\/$/, ""));
-  const usedInBody = externalMatches.map((m) => {
-    const match = m.match(/\]\((https?:\/\/[^)]+)\)/);
-    return match ? match[1].replace(/\/$/, "") : null;
-  }).filter(Boolean);
-
-  // Find URLs in body that are NOT in the available (pre-filtered) list — these are reused
-  let patchedBody = body;
-  for (const url of usedInBody) {
-    const isAvailable = availableExternals.some((a) => url.includes(a) || a.includes(url));
-    if (!isAvailable && context.externalLinks?.length > 0) {
-      // Find a replacement from available links not already in body
-      const replacement = context.externalLinks.find((l) => {
-        const normalized = l.url.replace(/\/$/, "");
-        return !usedInBody.includes(normalized) && !patchedBody.includes(normalized);
-      });
-      if (replacement) {
-        // Swap the URL in the markdown link, keeping anchor text
-        const urlRegex = new RegExp(`\\]\\(${url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\)`, "g");
-        patchedBody = patchedBody.replace(urlRegex, `](${replacement.url})`);
-        log("rewritePatcher", "link-swap", `${url} → ${replacement.url}`);
-      }
+/** A new meta description: 120-160 characters, covering the keyword, no first person. */
+async function patchMetaDescription(article, current) {
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    let text;
+    try {
+      text = await claudeCall(
+        `You write meta descriptions for blog articles. Return ONLY the description text on one line — no quotes, no labels.`,
+        `Write a meta description for the article "${article.title}".\n\nRules:\n- Between 130 and 155 characters, counted exactly\n- Must contain these words: ${article.primaryKeyword}\n- No first person (no we, our, us)\n- A plain statement of what the reader will learn; no hype\n\nCurrent version (rejected): ${current || "none"}`,
+        512
+      );
+    } catch (err) {
+      log("rewritePatcher", "meta-error", err.message);
+      return null;
+    }
+    const meta = text.trim().split("\n")[0].replace(/^["'“]|["'”]$/g, "").trim();
+    if (meta.length >= 120 && meta.length <= 160 && keywordCovered(article.primaryKeyword, meta) && !/\b(?:we|our|us)\b/.test(meta)) {
+      return meta;
     }
   }
-
-  if (internalLinks >= 3 && externalLinks >= 3 && patchedBody !== body) {
-    return patchedBody; // Swapped reused URLs, counts are fine
-  }
-
-  if (internalLinks >= 4 && externalLinks >= 4) return patchedBody;
-
-  const result = await claudeCall(
-    `You are a link insertion specialist. Your ONLY job is to add missing links to an existing article without changing any other content. Preserve ALL [IMAGE:], [SANITY_IMAGE:], bold, callouts, and headings.`,
-    `This article needs more links. Current count: ${internalLinks} internal, ${externalLinks} external. Target: 4 each.
-
-AVAILABLE INTERNAL LINKS:
-${(context.internalLinks?.servicePages || []).map((s) => `- [${s.title}](${s.url})`).join("\n")}
-${(context.internalLinks?.blogPosts || []).map((p) => `- [${p.title}](${p.url})`).join("\n")}
-
-AVAILABLE EXTERNAL LINKS (these are pre-verified and unique — use ONLY from this list):
-${(context.externalLinks || []).map((l) => `- [${l.name}](${l.url}) — ${l.context}`).join("\n")}
-
-ARTICLE:
-${body}
-
-Add the missing links by weaving them naturally mid-sentence. Do NOT change any other content. Do NOT add link sections. Return the full article with links added.`,
-    8192
-  );
-
-  return result;
+  return null;
 }
 
-async function patchFAQ(body, article) {
-  // Check if FAQ section exists
-  if (!body.includes("## Frequently Asked Questions") && !body.includes("## FAQ")) {
-    // Append FAQ section before conclusion
-    const faqSection = await claudeCall(
-      `You write FAQ sections for ISO consulting articles targeting Canadian manufacturers. Each answer is 3-5 sentences with specific Canadian regulatory context.`,
-      `Write a "## Frequently Asked Questions" section with exactly 5 Q&A pairs for an article about "${article.title}" (keyword: ${article.primaryKeyword}).
-
-Each answer must be 3-5 sentences with specific Canadian regulatory context. Use ### for each question. Format:
-
-### Question text?
-
-Answer text (3-5 sentences).
-
-Return ONLY the FAQ section markdown, nothing else.`,
-      2048
-    );
-
-    // Insert before the last H2 or at the end
-    const lastH2 = body.lastIndexOf("\n## ");
-    if (lastH2 > body.length * 0.7) {
-      return body.slice(0, lastH2) + "\n\n" + faqSection + "\n" + body.slice(lastH2);
-    }
-    return body + "\n\n" + faqSection;
-  }
-
-  return body;
-}
-
-async function patchWordCount(body, article) {
-  const currentWords = body.split(/\s+/).length;
-  if (currentWords >= 1400) return body;
-
-  const deficit = 1500 - currentWords;
-
-  const expansion = await claudeCall(
-    `You expand thin sections in ISO consulting articles. Write like a senior consultant with field experience. Never use banned phrases: delve, crucial, comprehensive, landscape, navigate, leverage.`,
-    `This article "${article.title}" is ${currentWords} words — needs ~${deficit} more words to reach 1,500.
-
-Identify the thinnest H2 section and expand it with more practical detail, a specific example, or additional actionable advice. Keep the same tone and style.
-
-ARTICLE:
-${body}
-
-Return the FULL article with the thin section expanded. Do NOT change other sections.`,
-    8192
-  );
-
-  return expansion;
-}
-
-function patchImageMarkers(body) {
-  const existingMarkers = (body.match(/\[IMAGE:[^\]]+\]/g) || []).length;
-  if (existingMarkers >= 4) return body;
-
-  // Find H2 sections that don't have an image marker after their first paragraph
-  const lines = body.split("\n");
-  let result = [];
-  let markersAdded = existingMarkers;
-  let inH2 = false;
-  let paragraphAfterH2 = 0;
-
-  for (let i = 0; i < lines.length; i++) {
-    result.push(lines[i]);
-
-    if (lines[i].startsWith("## ")) {
-      inH2 = true;
-      paragraphAfterH2 = 0;
-      continue;
-    }
-
-    if (inH2 && lines[i].trim() && !lines[i].startsWith("#") && !lines[i].startsWith("[IMAGE") && !lines[i].startsWith(">")) {
-      paragraphAfterH2++;
-      if (paragraphAfterH2 === 1 && markersAdded < 4) {
-        // Check if next line is already an image marker
-        const nextLine = lines[i + 1] || "";
-        if (!nextLine.startsWith("[IMAGE")) {
-          const sectionTitle = lines.slice(0, i).reverse().find((l) => l.startsWith("## "))?.replace("## ", "") || "quality management process";
-          result.push(`\n[IMAGE: manufacturing facility scene related to ${sectionTitle.toLowerCase()}]`);
-          markersAdded++;
-        }
-        inH2 = false;
-      }
-    }
-  }
-
-  return result.join("\n");
-}
-
-function patchKeywordPlacement(body, keyword) {
-  const firstParagraph = body.split("\n\n")[0];
-  if (firstParagraph.toLowerCase().includes(keyword.toLowerCase())) return body;
-
-  // Prepend keyword naturally to opening
-  const parts = body.split("\n\n");
-  if (parts.length > 1) {
-    // Find the first real paragraph (skip key takeaways box)
-    for (let i = 0; i < parts.length; i++) {
-      if (!parts[i].startsWith(">") && !parts[i].startsWith("#") && parts[i].trim().length > 50) {
-        if (!parts[i].toLowerCase().includes(keyword.toLowerCase())) {
-          parts[i] = `Understanding **${keyword}** is essential for Canadian manufacturers seeking competitive advantage. ` + parts[i];
-        }
-        break;
-      }
-    }
-  }
-
-  return parts.join("\n\n");
-}
-
-module.exports = { patchArticle };
+module.exports = { patchArticle, patchBannedPhrases };

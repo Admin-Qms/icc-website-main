@@ -62,10 +62,36 @@ function sanityQuery(env, query) {
 // VOICE CHECK — Standard #1
 // ═══════════════════════════════════════════════════════════════
 
+// "us" is matched in lowercase only so the country ("US") never trips it.
 const FIRST_PERSON_PATTERNS = [
-  /\bwe\b/i, /\bour\b/i, /\bwe've\b/i, /\bwe're\b/i,
-  /\bwe'll\b/i, /\bus\b/i, /\bourselves\b/i
+  /\b(?:we|we've|we're|we'll|we'd|our|ours|ourselves)\b/i,
+  /\bus\b/,
+  /\b(?:my|myself)\b/i,
+  /\bI(?:'m|'ve|'ll|'d)\b/,
 ];
+
+// A bare capital "I" is usually the pronoun, but not after a label ("Class I
+// device", "Type I error") or as part of a roman numeral or abbreviation.
+const BARE_I = /\bI\b/g;
+const ROMAN_LABEL_BEFORE = /\b(?:class|type|tier|phase|stage|part|level|category|annex|appendix|group|schedule|section|division|zone|grade|title|article|chapter|volume|table|figure)\s+$/i;
+
+function findFirstPerson(text) {
+  for (const pattern of FIRST_PERSON_PATTERNS) {
+    const match = pattern.exec(text);
+    if (match) return match;
+  }
+  BARE_I.lastIndex = 0;
+  let match;
+  while ((match = BARE_I.exec(text))) {
+    const before = text.slice(0, match.index);
+    const after = text.slice(match.index + 1);
+    if (ROMAN_LABEL_BEFORE.test(before)) continue;
+    if (/^[\/.&-]/.test(after) || /[\/&-]$/.test(before)) continue; // I/O, I.D., R&I
+    if (/^\s*(?:,|and|or|through|to)\s+(?:II|III|IV|V)\b/.test(after)) continue; // I, II and III
+    return match;
+  }
+  return null;
+}
 
 function checkVoice(bodyBlocks) {
   const violations = [];
@@ -75,18 +101,13 @@ function checkVoice(bodyBlocks) {
     if (block._type !== 'block' || !block.children) continue;
 
     const text = block.children.map(c => c.text || '').join('');
-    for (const pattern of FIRST_PERSON_PATTERNS) {
-      const match = text.match(pattern);
-      if (match) {
-        // Exclude false positives like "US" (country) in all-caps context
-        if (match[0] === 'US' && /\b(in the US|the US |US-based|US market)\b/.test(text)) continue;
-        violations.push({
-          block: i,
-          match: match[0],
-          context: text.substring(Math.max(0, match.index - 20), match.index + 30).trim()
-        });
-        break; // One violation per block is enough
-      }
+    const match = findFirstPerson(text);
+    if (match) {
+      violations.push({
+        block: i,
+        match: match[0],
+        context: text.substring(Math.max(0, match.index - 30), match.index + 40).trim()
+      });
     }
   }
 
@@ -105,12 +126,16 @@ function checkVoice(bodyBlocks) {
 // FABRICATED QUOTES CHECK — Standard #2
 // ═══════════════════════════════════════════════════════════════
 
+// Signs of an invented voice: quoted speech with a speech verb, a quote
+// attributed to a titled person, or the stock "a client once told" framings.
+// (Invented statistics and unlabelled examples need the claims audit below.)
 const FABRICATED_QUOTE_PATTERNS = [
-  /plant manager/i,
-  /quality manager at/i,
+  /["“][^"”]{15,}["”],?\s+(?:said|says|explained|explains|noted|notes|recalled|recalls|told|added|adds|admitted|admits)\b/i,
+  /\b(?:said|says|explained|explains|recalled|recalls|admitted|admits)\s+[A-Z][a-z]+\s+[A-Z][a-z]+,\s+(?:the\s+|a\s+|an\s+)?[a-z ]{0,30}(?:manager|director|president|owner|engineer|supervisor|lead|ceo|vp)\b/,
+  /[—–-]\s*[A-Z][a-z]+\s+[A-Z][a-z]+,\s+(?:[A-Za-z]+\s+){0,3}(?:Manager|Director|President|Owner|Engineer|Supervisor|Lead|CEO|VP)\b/,
   /a client once told/i,
   /one manufacturer said/i,
-  /as one .+ put it/i
+  /as one .{3,40} put it/i
 ];
 
 function checkFabricatedQuotes(bodyBlocks) {
@@ -119,7 +144,6 @@ function checkFabricatedQuotes(bodyBlocks) {
   for (let i = 0; i < bodyBlocks.length; i++) {
     const block = bodyBlocks[i];
     if (block._type !== 'block') continue;
-    if (block.style !== 'blockquote') continue;
 
     const text = (block.children || []).map(c => c.text || '').join('');
     for (const pattern of FABRICATED_QUOTE_PATTERNS) {
@@ -137,7 +161,7 @@ function checkFabricatedQuotes(bodyBlocks) {
     violations,
     message: violations.length === 0
       ? 'No fabricated quotes detected'
-      : `${violations.length} suspicious blockquote(s) found`
+      : `${violations.length} passage(s) read as an attributed quote`
   };
 }
 
@@ -234,28 +258,26 @@ function checkDuplicateH1(doc, bodyBlocks) {
 
     const text = (block.children || []).map(c => c.text || '').join('').toLowerCase().trim();
 
-    // Check for h1 style blocks that match the title
-    if (block.style === 'h1' && text === title) {
-      violations.push({ block: i, text });
+    // The page renders the title as its only H1, so any H1 in the body is a second one.
+    if (block.style === 'h1') {
+      violations.push({ block: i, text, matchesTitle: text === title });
     }
 
     // Also check for raw markdown # heading in normal blocks
     if (block.style === 'normal' && text.startsWith('# ')) {
       const headingText = text.replace(/^#\s+/, '').trim();
-      if (headingText === title) {
-        violations.push({ block: i, text: headingText, rawMarkdown: true });
-      }
+      violations.push({ block: i, text: headingText, rawMarkdown: true, matchesTitle: headingText === title });
     }
   }
 
   return {
     standard: 5,
-    name: 'No duplicate H1 matching title',
+    name: 'No H1 in the body',
     pass: violations.length === 0,
     violations,
     message: violations.length === 0
-      ? 'No duplicate H1 found'
-      : `${violations.length} body block(s) duplicate the article title as H1`
+      ? 'No H1 in the body'
+      : `${violations.length} H1 heading(s) in the body (the title is the page's only H1)`
   };
 }
 
@@ -307,7 +329,11 @@ function checkSlug(doc) {
 
 function checkPublishedAt(doc) {
   const date = doc.publishedAt;
-  const valid = date && !isNaN(new Date(date).getTime());
+  const time = date ? new Date(date).getTime() : NaN;
+  const parses = !isNaN(time);
+  // A day of slack covers a date-only value written in a timezone ahead of UTC.
+  const future = parses && time > Date.now() + 24 * 60 * 60 * 1000;
+  const valid = parses && !future;
 
   return {
     standard: 8,
@@ -316,7 +342,9 @@ function checkPublishedAt(doc) {
     publishedAt: date || null,
     message: valid
       ? `publishedAt "${date}" is valid ISO date`
-      : 'publishedAt is missing or invalid'
+      : future
+        ? `publishedAt "${date}" is in the future`
+        : 'publishedAt is missing or invalid'
   };
 }
 
@@ -325,16 +353,18 @@ function checkPublishedAt(doc) {
 // ═══════════════════════════════════════════════════════════════
 
 function checkAuthor(doc) {
-  const hasAuthor = doc.author && doc.author._ref;
+  // A Sanity reference, or a plain byline for Markdown posts.
+  const byline = typeof doc.author === 'string' ? doc.author.trim() : '';
+  const hasAuthor = Boolean((doc.author && doc.author._ref) || byline);
 
   return {
     standard: 9,
-    name: 'Author reference set',
-    pass: !!hasAuthor,
-    authorRef: doc.author?._ref || null,
+    name: 'Author set',
+    pass: hasAuthor,
+    authorRef: doc.author?._ref || byline || null,
     message: hasAuthor
-      ? `Author reference: ${doc.author._ref}`
-      : 'Author reference is missing'
+      ? `Author: ${doc.author._ref || byline}`
+      : 'Author is missing'
   };
 }
 
@@ -589,6 +619,308 @@ async function runQA(article) {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// MARKDOWN BLOG — the pre-publish gate
+// Runs on the in-memory post before anything is written. Every check is
+// blocking: one failure and the post is not published.
+// ═══════════════════════════════════════════════════════════════
+
+const MIN_WORDS = 1500;
+const MIN_INTERNAL_LINKS = 3;
+const MIN_EXTERNAL_LINKS = 3;
+const HERO_WIDTH = 1200;
+const HERO_HEIGHT = 675;
+
+const BANNED_PHRASES = [
+  "delve into", "it is worth noting", "in conclusion", "in today's landscape",
+  "navigating the complexities", "crucial", "comprehensive", "landscape",
+  "navigate", "leverage", "game-changer", "cutting-edge", "at the end of the day",
+  "it goes without saying", "needless to say",
+];
+
+const ARTIFACT_PATTERNS = [
+  { re: /^```/m, label: 'code fence' },
+  { re: /\{:\s*[^}]*\}/, label: 'kramdown attribute' },
+  { re: /^\s*(?:here(?:'s| is) (?:the|your)|certainly[!,.]|i(?:'ve| have) (?:written|cleaned|revised))/im, label: 'model preamble' },
+  { re: /\[(?:placeholder|todo|insert[^\]]*)\]/i, label: 'placeholder' },
+  { re: /lorem ipsum|example\.com|\bTODO:|\bDRAFT:/i, label: 'placeholder text' },
+  { re: /\[SANITY_IMAGE:/, label: 'Sanity image marker' },
+];
+
+/**
+ * Markdown to the block shape the standard checks read (the same shape Sanity
+ * returns), so the Sanity checks above work unchanged on a Markdown post.
+ */
+function toBlocks(markdown) {
+  const { toPlainText } = require('../shared/contentStore');
+  const blocks = [];
+  const push = (style, raw, extra = {}) => {
+    const text = toPlainText(raw);
+    if (text) blocks.push({ _type: 'block', style, children: [{ text }], ...extra });
+  };
+
+  for (const chunk of String(markdown || '').split(/\n{2,}/)) {
+    const lines = chunk.split('\n').filter((l) => l.trim());
+    if (lines.length === 0) continue;
+
+    if (lines.every((l) => /^\s*>/.test(l))) {
+      push('blockquote', lines.join('\n'));
+      continue;
+    }
+
+    let paragraph = [];
+    const flush = () => {
+      if (paragraph.length) push('normal', paragraph.join(' '));
+      paragraph = [];
+    };
+    for (const line of lines) {
+      const heading = /^(#{1,6})\s+(.+)$/.exec(line.trim());
+      if (heading) {
+        flush();
+        push(`h${heading[1].length}`, heading[2]);
+      } else if (/^!\[[^\]]*\]\([^)]*\)$/.test(line.trim())) {
+        flush();
+        blocks.push({ _type: 'image' });
+      } else if (/^\s*(?:[-*+]|\d+\.)\s+/.test(line)) {
+        flush();
+        push('normal', line, { listItem: true });
+      } else if (/^\s*\|/.test(line)) {
+        flush();
+        if (!/^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(line)) push('normal', line, { table: true });
+      } else {
+        paragraph.push(line);
+      }
+    }
+    flush();
+  }
+  return blocks;
+}
+
+const CLAIMS_AUDIT_PROMPT = `You are a compliance editor for a Canadian ISO consulting firm's blog. You check a draft against the publisher's honesty rules and report violations. You do not rewrite.
+
+RULES THE DRAFT MUST FOLLOW:
+1. NAMED ENTITIES — The draft must not name any company, client or individual person. Allowed names: ISO Certification Consultant itself, standards bodies and regulators (ISO, IATF, IAF, SCC, ANAB, Health Canada, CFIA, Ministry of Labour and similar), and well-known public organizations cited as sources.
+2. QUOTES — No quotations, testimonials or reported speech attributed to any person.
+3. STATISTICS — No statistic, percentage, survey result, dollar figure or measured outcome stated as fact. Allowed: clause numbers; requirements written in the standard; and ranges clearly framed as typical or estimated ("typically 4 to 6 months", "often costs between").
+4. EXAMPLES — Any scenario about a business must be openly hypothetical: its paragraph starts with "Illustrative example:" and it names no company. A story told as something that really happened is a violation.
+5. TRACK RECORD — No claims about ISO Certification Consultant's results (pass rates, number of audits or clients, years in business).
+6. STANDARD ACCURACY — ISO/IATF clause numbers and standard names must be correct for the standard cited (for example, ISO 9001:2015 clause 9.2 is internal audit; clause 6.1 is actions to address risks and opportunities). Flag a reference only when you are confident it is wrong.
+
+Flag only clear violations. When unsure, do not flag. Hedged estimates and general professional observations are fine.
+
+Return ONLY JSON:
+{
+  "findings": [
+    { "rule": "NAMED ENTITIES|QUOTES|STATISTICS|EXAMPLES|TRACK RECORD|STANDARD ACCURACY", "text": "the exact offending sentence or phrase, copied from the draft", "reason": "one sentence" }
+  ]
+}
+Return {"findings": []} when the draft is clean.`;
+
+/**
+ * One fast-model pass for what regex can't see: invented companies, people,
+ * statistics and unlabelled examples, and wrong clause references.
+ */
+async function auditClaims(post) {
+  const { claudeJSONFast } = require('../shared/claude');
+  const { loadStandardsFacts } = require('./contextLoader');
+  const facts = loadStandardsFacts();
+  const result = await claudeJSONFast(
+    CLAIMS_AUDIT_PROMPT,
+    `${facts ? `${facts}\n\nFor rule 6, treat this table as correct even where it differs from what you remember: a draft that calls a superseded edition "current" is a violation.\n\n` : ''}TITLE: ${post.title}\nMETA DESCRIPTION: ${post.description}\n\nDRAFT:\n${post.body}`,
+    4096
+  );
+  const findings = Array.isArray(result?.findings) ? result.findings.filter((f) => f && f.text) : [];
+  return { findings };
+}
+
+function countBannedPhrases(body) {
+  const { toPlainText } = require('../shared/contentStore');
+  const text = toPlainText(body).toLowerCase();
+  return BANNED_PHRASES.filter((p) => new RegExp(`\\b${p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`).test(text));
+}
+
+/**
+ * The publish gate for a Markdown post.
+ *
+ * @param {object} post  { title, slug, description, date, author, primaryKeyword, body, hero?, inlineImages? }
+ * @param {object} opts  phase: "text" (before images exist) or "final" (everything);
+ *                       claimsAudit: false skips the model-backed check (tests);
+ *                       claimsCheck: a claims-audit result from an earlier phase to reuse
+ * @returns {Promise<{pass, score, checks[], issues[], failures[], findings[]}>}
+ *          checks[].id is the stable name rewritePatcher keys on.
+ */
+async function validateLocal(post, opts = {}) {
+  const phase = opts.phase || 'final';
+  const store = require('../shared/contentStore');
+  const { resolves } = require('../shared/siteRoutes');
+  const { loadLinkBankUrls } = require('./contextLoader');
+  const { isBlogImageUsed } = require('../shared/imageRegistry');
+  const { isExcludedTopic } = require('./keywordResearcher');
+  const { hasLLMKey } = require('../shared/claude');
+
+  const body = post.body || '';
+  const blocks = toBlocks(body);
+  const wordCount = store.countWords(body);
+  const existing = opts.existingPosts || store.listPosts();
+  const checks = [];
+  const add = (id, result, extra = {}) => checks.push({ id, ...result, ...extra });
+
+  // 1. Voice — the body, plus the title and meta description readers also see.
+  const headBlocks = [post.title, post.description].map((text) => ({ _type: 'block', style: 'normal', children: [{ text: text || '' }] }));
+  const voice = checkVoice([...headBlocks, ...blocks]);
+  if (!voice.pass) voice.message += `: ${voice.violations.slice(0, 3).map((v) => `"${v.context}"`).join('; ')}`;
+  add('voice', voice);
+
+  // 2. Fabrication — pattern check, then the model-backed claims audit.
+  const quotes = checkFabricatedQuotes(blocks);
+  if (!quotes.pass) quotes.message += `: ${quotes.violations.slice(0, 3).map((v) => `"${v.text}"`).join('; ')}`;
+  add('fabricated-quotes', quotes);
+
+  let findings = [];
+  if (opts.claimsCheck) {
+    // The text already passed the audit and only image lines changed since; carry the result over.
+    findings = opts.claimsCheck.findings || [];
+    add('claims-audit', opts.claimsCheck);
+  } else if (opts.claimsAudit === false || !hasLLMKey()) {
+    add('claims-audit', { standard: 2, name: 'Claims audit', pass: true, skipped: true, message: 'Skipped — no model key configured, so invented names and statistics were not checked' });
+  } else {
+    try {
+      ({ findings } = await auditClaims(post));
+      add('claims-audit', {
+        standard: 2,
+        name: 'Claims audit',
+        pass: findings.length === 0,
+        findings,
+        message: findings.length === 0
+          ? 'No invented names, quotes, statistics or unlabelled examples found'
+          : `${findings.length} finding(s): ${findings.slice(0, 3).map((f) => `[${f.rule}] "${String(f.text).slice(0, 70)}"`).join('; ')}`,
+      });
+    } catch (err) {
+      add('claims-audit', { standard: 2, name: 'Claims audit', pass: false, message: `Claims audit could not run: ${err.message}` });
+    }
+  }
+
+  // 3. Read time — always derived from the words at publish, so it cannot drift.
+  const readTime = store.readTimeMinutes(wordCount);
+  add('read-time', {
+    standard: 3,
+    name: 'Accurate readTime',
+    pass: post.readTime == null || Number(post.readTime) === readTime,
+    message: `${readTime} min for ${wordCount} words`,
+  });
+
+  // 4. Hero image — final phase only; images are sourced after the text passes.
+  if (phase === 'final') {
+    const hero = post.hero;
+    const sized = Boolean(hero && hero.width === HERO_WIDTH && hero.height === HERO_HEIGHT);
+    add('hero-image', {
+      standard: 4,
+      name: 'Hero image at 16:9',
+      pass: sized && Boolean(hero.alt),
+      message: !hero ? 'No hero image' : !sized ? `Hero is ${hero.width}x${hero.height}, need ${HERO_WIDTH}x${HERO_HEIGHT}` : !hero.alt ? 'Hero has no alt text' : `Hero ${hero.width}x${hero.height} from ${hero.source}`,
+    });
+
+    const images = [hero, ...(post.inlineImages || [])].filter(Boolean);
+    const reused = images.filter((img) => isBlogImageUsed(img));
+    const hashes = images.map((img) => img.sha256);
+    const repeated = hashes.length !== new Set(hashes).size;
+    add('images-unique', {
+      name: 'Images not used elsewhere',
+      pass: reused.length === 0 && !repeated,
+      message: reused.length ? `${reused.length} image(s) already appear in another post` : repeated ? 'The same image is used twice in this post' : `${images.length} unique image(s)`,
+    });
+  }
+
+  // 5. One H1 per page, unique title.
+  add('single-h1', checkDuplicateH1({ title: post.title }, blocks));
+  const titleKey = (post.title || '').trim().toLowerCase();
+  const sameTitle = existing.find((p) => (p.title || '').trim().toLowerCase() === titleKey && p.slug !== post.slug);
+  add('title-unique', {
+    standard: 5,
+    name: 'Title unique across posts',
+    pass: Boolean(titleKey) && !sameTitle,
+    message: !titleKey ? 'Title is empty' : sameTitle ? `Title already used by /blog/${sameTitle.slug}` : 'Title is unique',
+  });
+
+  // 6. Meta description.
+  add('meta-description', checkMetaDescription({ metaDescription: post.description }));
+  const metaHasKeyword = store.keywordCovered(post.primaryKeyword, post.description);
+  add('meta-keyword', {
+    standard: 6,
+    name: 'Meta description includes the keyword',
+    pass: metaHasKeyword,
+    message: metaHasKeyword ? 'Keyword present in the meta description' : `Meta description does not cover "${post.primaryKeyword}"`,
+  });
+
+  // 7. Slug — well-formed, and never an existing one (existing URLs are never overwritten).
+  add('slug', checkSlug({ slug: { current: post.slug } }));
+  const taken = store.slugExists(post.slug);
+  add('slug-unique', { standard: 7, name: 'Slug not already published', pass: !taken, message: taken ? `Slug "${post.slug}" is already published` : 'Slug is free' });
+
+  // 8-10.
+  add('published-date', checkPublishedAt({ publishedAt: post.date }));
+  add('author', checkAuthor({ author: post.author }));
+  add('min-content', checkMinimumContent(blocks));
+
+  // Length and keyword placement.
+  add('word-count', {
+    name: `At least ${MIN_WORDS} words`,
+    pass: wordCount >= MIN_WORDS,
+    wordCount,
+    message: `${wordCount} words${wordCount >= MIN_WORDS ? '' : ` — ${MIN_WORDS - wordCount} short`}`,
+  });
+  const titleHasKeyword = store.keywordCovered(post.primaryKeyword, post.title);
+  add('keyword-in-title', {
+    name: 'Title includes the keyword',
+    pass: titleHasKeyword,
+    message: titleHasKeyword ? 'Keyword present in the title' : `Title does not cover "${post.primaryKeyword}"`,
+  });
+  const excluded = isExcludedTopic(`${post.title} ${post.primaryKeyword}`);
+  add('topic-allowed', { name: 'Topic allowed on the blog', pass: !excluded, message: excluded ? 'AS9100 and ISO 27001 are not covered on the blog' : 'Topic allowed' });
+
+  // Links — every internal link must resolve; outside links only from the bank.
+  const links = store.extractLinks(body);
+  const broken = links.internal.filter((l) => !resolves(l.url));
+  add('internal-links', {
+    name: `At least ${MIN_INTERNAL_LINKS} internal links, all resolving`,
+    pass: broken.length === 0 && links.internal.length >= MIN_INTERNAL_LINKS,
+    message: broken.length
+      ? `Broken internal link(s): ${broken.map((l) => l.url).join(', ')}`
+      : `${links.internal.length} internal link(s)${links.internal.length >= MIN_INTERNAL_LINKS ? '' : ` — need ${MIN_INTERNAL_LINKS}`}`,
+  });
+  const bank = loadLinkBankUrls();
+  const offBank = links.external.filter((l) => !bank.has(store.normalizeUrl(l.url)));
+  add('external-links', {
+    name: `At least ${MIN_EXTERNAL_LINKS} external links, all from the link bank`,
+    pass: offBank.length === 0 && links.external.length >= MIN_EXTERNAL_LINKS,
+    message: offBank.length
+      ? `External link(s) not in the link bank: ${offBank.map((l) => l.url).join(', ')}`
+      : `${links.external.length} external link(s)${links.external.length >= MIN_EXTERNAL_LINKS ? '' : ` — need ${MIN_EXTERNAL_LINKS}`}`,
+  });
+
+  // Tone and leftovers.
+  const banned = countBannedPhrases(body);
+  add('banned-phrases', { name: 'No banned phrases', pass: banned.length === 0, phrases: banned, message: banned.length ? `Banned phrase(s): ${banned.join(', ')}` : 'None found' });
+
+  const artifacts = ARTIFACT_PATTERNS.filter((a) => a.re.test(body)).map((a) => a.label);
+  // Image markers are expected until the image step has run.
+  if (phase === 'final' && /\[IMAGE:/.test(body)) artifacts.push('unprocessed image marker');
+  add('no-artifacts', { name: 'No leftover markers or model preamble', pass: artifacts.length === 0, message: artifacts.length ? `Found: ${artifacts.join(', ')}` : 'Clean' });
+
+  const failures = checks.filter((c) => !c.pass);
+  return {
+    pass: failures.length === 0,
+    score: `${checks.length - failures.length}/${checks.length}`,
+    phase,
+    wordCount,
+    readTime,
+    checks,
+    findings,
+    issues: failures.map((c) => `${c.id}: ${c.message}`),
+    failures: failures.map((c) => c.id),
+  };
+}
+
+// ═══════════════════════════════════════════════════════════════
 // CLI MODE
 // ═══════════════════════════════════════════════════════════════
 
@@ -646,6 +978,13 @@ module.exports = {
   checkPublishedAt,
   checkAuthor,
   checkMinimumContent,
+  // Markdown blog gate
+  validateLocal,
+  toBlocks,
+  auditClaims,
+  countBannedPhrases,
+  BANNED_PHRASES,
+  MIN_WORDS,
   // Legacy API (backward compat)
   reviewArticle,
   reviewMegaArticle,

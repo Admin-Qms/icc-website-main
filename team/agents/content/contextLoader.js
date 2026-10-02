@@ -1,12 +1,16 @@
 const fs = require("fs");
 const path = require("path");
 const { log } = require("../shared/logger");
-const { MEMORY_DIR } = require("../shared/config");
-const { fetchAllSanity } = require("../shared/sanity");
+const { LINK_BANK_PATH } = require("../shared/config");
+const { listPosts, extractLinks, normalizeUrl, toPlainText } = require("../shared/contentStore");
+const { getLinkTargets } = require("../shared/siteRoutes");
 
-const LINK_BANK_PATH = path.join(__dirname, "../../data/external-link-bank.json");
-const LINK_MAP_PATH = path.join(MEMORY_DIR, "link-map.json");
-const PUBLISHED_PATH = path.join(MEMORY_DIR, "published-articles.json");
+const { TEAM_ROOT } = require("../shared/config");
+
+// Sources cited in the last few posts are offered last, so consecutive articles
+// vary their references without the bank ever running dry.
+const EXTERNAL_LINK_COOLDOWN_POSTS = 5;
+const STANDARDS_FACTS_PATH = path.join(TEAM_ROOT, "data", "standards-facts.json");
 
 /**
  * Detects which industry an article keyword belongs to.
@@ -24,6 +28,8 @@ function detectIndustries(keyword) {
   if (kw.includes("oil") || kw.includes("gas") || kw.includes("energy") || kw.includes("pipeline")) industries.push("oil_gas_energy");
   if (kw.includes("mining") || kw.includes("mineral")) industries.push("mining");
   if (kw.includes("14001") || kw.includes("environmental")) industries.push("environmental");
+  if (kw.includes("45001") || kw.includes("safety") || kw.includes("hazard")) industries.push("occupational_safety");
+  if (kw.includes("17025") || kw.includes("laborator") || kw.includes("calibration")) industries.push("laboratory");
   if (kw.includes("27001") || kw.includes("information security") || kw.includes("cyber")) industries.push("information_security");
   if (kw.includes("9001") || kw.includes("quality") || kw.includes("audit") || kw.includes("certification")) industries.push("general_quality");
 
@@ -36,49 +42,39 @@ function detectIndustries(keyword) {
 }
 
 /**
- * Loads all external URLs already used across published articles.
- * Returns a Set of URLs that should NOT be reused.
+ * External URLs cited by the most recent posts. These are held back so
+ * consecutive articles don't lean on the same sources.
  */
 function loadUsedExternalUrls() {
   const used = new Set();
-
-  // From link-map.json
-  try {
-    const linkMap = JSON.parse(fs.readFileSync(LINK_MAP_PATH, "utf-8"));
-    for (const page of Object.values(linkMap.pages || {})) {
-      for (const link of page.linksOut || []) {
-        if (link.type === "external" && link.url) {
-          used.add(link.url.replace(/\/$/, "")); // normalize trailing slash
-        }
-      }
-    }
-  } catch { /* ok if missing */ }
-
+  for (const post of listPosts().slice(-EXTERNAL_LINK_COOLDOWN_POSTS)) {
+    for (const link of extractLinks(post.body).external) used.add(normalizeUrl(link.url));
+  }
   return used;
 }
 
 /**
- * Loads existing blog post slugs from Sanity for internal linking.
+ * Existing blog posts for internal linking, newest first.
  * Returns array of { title, url } objects.
  */
-async function loadExistingBlogPosts() {
+function loadExistingBlogPosts() {
+  return listPosts()
+    .reverse()
+    .slice(0, 30)
+    .map((p) => ({ title: p.title, url: p.url }));
+}
+
+/** Every URL in the link bank, normalised — the only outside links an article may use. */
+function loadLinkBankUrls() {
   try {
-    const posts = await fetchAllSanity("blogPost");
-    return posts
-      .filter((p) => p.slug?.current && p.title)
-      .map((p) => ({ title: p.title, url: `/blog/${p.slug.current}` }))
-      .slice(0, 30);
-  } catch {
-    // Fallback: read from published-articles.json
-    try {
-      const published = JSON.parse(fs.readFileSync(PUBLISHED_PATH, "utf-8"));
-      return published
-        .filter((p) => p.slug && p.title)
-        .map((p) => ({ title: p.title, url: `/blog/${p.slug}` }))
-        .slice(-30);
-    } catch {
-      return [];
+    const bank = JSON.parse(fs.readFileSync(LINK_BANK_PATH, "utf-8"));
+    const urls = new Set();
+    for (const links of Object.values(bank.industries || {})) {
+      for (const link of links) urls.add(normalizeUrl(link.url));
     }
+    return urls;
+  } catch {
+    return new Set();
   }
 }
 
@@ -97,19 +93,21 @@ function selectExternalLinks(keyword, usedUrls) {
 
   const industries = detectIndustries(keyword);
   const available = [];
+  const seen = new Set();
 
   for (const industry of industries) {
-    const links = linkBank.industries[industry] || [];
+    const links = linkBank.industries?.[industry] || [];
     for (const link of links) {
-      const normalized = link.url.replace(/\/$/, "");
-      if (!usedUrls.has(normalized)) {
-        available.push({ ...link, industry });
-      }
+      const normalized = normalizeUrl(link.url);
+      if (seen.has(normalized)) continue;
+      seen.add(normalized);
+      available.push({ ...link, industry, recentlyUsed: usedUrls.has(normalized) });
     }
   }
 
-  // Prioritize industry-specific over general
+  // Fresh sources first, then industry-specific over general
   available.sort((a, b) => {
+    if (a.recentlyUsed !== b.recentlyUsed) return a.recentlyUsed ? 1 : -1;
     const aGeneral = a.industry === "general_quality" || a.industry === "manufacturing" ? 1 : 0;
     const bGeneral = b.industry === "general_quality" || b.industry === "manufacturing" ? 1 : 0;
     return aGeneral - bGeneral;
@@ -120,52 +118,64 @@ function selectExternalLinks(keyword, usedUrls) {
 }
 
 /**
+ * Current editions of the standards, as a prompt block. The writing models
+ * predate the 2026 editions, so without this they describe superseded ones.
+ */
+function loadStandardsFacts() {
+  try {
+    const facts = JSON.parse(fs.readFileSync(STANDARDS_FACTS_PATH, "utf-8"));
+    return [
+      `CURRENT STANDARD EDITIONS (as of ${facts.asOf}) — use these, not editions recalled from memory:`,
+      ...facts.standards.map((s) => `- ${s.code}: current edition is ${s.current}. ${s.status}`),
+      "",
+      "RULES FOR EDITIONS:",
+      ...facts.writingRules.map((r) => `- ${r}`),
+    ].join("\n");
+  } catch {
+    log("contextLoader", "warn", "standards-facts.json not found — editions will come from the model's memory");
+    return "";
+  }
+}
+
+/**
  * Main function: assembles all context needed by the article writer.
  * Call this BEFORE the writer runs, pass the result into writeArticle().
  */
 async function loadContext(keywordBrief) {
   log("contextLoader", "loading", `context for "${keywordBrief.primaryKeyword}"`);
 
-  const [existingPosts, usedUrls] = await Promise.all([
-    loadExistingBlogPosts(),
-    Promise.resolve(loadUsedExternalUrls()),
-  ]);
+  const existingPosts = loadExistingBlogPosts();
+  const usedUrls = loadUsedExternalUrls();
 
   const externalLinks = selectExternalLinks(keywordBrief.primaryKeyword, usedUrls);
 
-  // Service pages — static, always available
-  const servicePages = [
-    { title: "All ISO Services", url: "/services" },
-    { title: "ISO 9001 Quality Management", url: "/services/iso-9001" },
-    { title: "ISO 14001 Environmental", url: "/services/iso-14001" },
-    { title: "ISO 45001 Health & Safety", url: "/services/iso-45001" },
-    { title: "ISO 13485 Medical Devices", url: "/services/iso-13485" },
-    { title: "ISO 27001 Information Security", url: "/services/iso-27001" },
-    { title: "ISO 22000 Food Safety", url: "/services/iso-22000" },
-    { title: "IATF 16949 Automotive Quality", url: "/services/iatf-16949" },
-    { title: "AS9100 Aerospace Quality", url: "/services/as9100" },
-    { title: "ISO 22301 Business Continuity", url: "/services/iso-22301" },
-    { title: "ISO 17025 Laboratory", url: "/services/iso-17025" },
-    { title: "Our 4-Step Process", url: "/process" },
-    { title: "About ISO Certification Consultant", url: "/about" },
-    { title: "Book Consultation", url: "/contact" },
-  ];
-
-  // Pick the most relevant service pages (top 6)
+  // Internal targets come from the site's real routes, so every offered link resolves.
+  const targets = getLinkTargets();
   const kw = keywordBrief.primaryKeyword.toLowerCase();
-  const relevantServices = servicePages.filter((s) => {
-    const u = s.url.toLowerCase();
-    if (kw.includes("9001") && u.includes("9001")) return true;
-    if (kw.includes("14001") && u.includes("14001")) return true;
-    if (kw.includes("45001") && u.includes("45001")) return true;
-    if (kw.includes("13485") && u.includes("13485")) return true;
-    if (kw.includes("27001") && u.includes("27001")) return true;
-    if (kw.includes("22000") && u.includes("22000")) return true;
-    if (kw.includes("iatf") && u.includes("iatf")) return true;
-    if (kw.includes("as9100") && u.includes("as9100")) return true;
-    if (u === "/services" || u === "/contact" || u === "/process") return true;
-    return false;
-  }).slice(0, 6);
+  const industries = detectIndustries(kw);
+  const mentions = (target) => {
+    const digits = /\d{4,5}/.exec(target.match || "")?.[0];
+    if (digits) return kw.includes(digits);
+    return (target.match || "")
+      .toLowerCase()
+      .split(/[^a-z]+/)
+      .some((word) => word.length > 4 && kw.includes(word));
+  };
+
+  const standardPages = targets.filter((t) => t.kind === "standard" && mentions(t));
+  const industryPages = targets.filter(
+    (t) => t.kind === "industry" && (mentions(t) || industries.some((i) => t.url.includes(i.split("_")[0])))
+  );
+  const modulePages = targets.filter((t) => t.kind === "module" && mentions(t));
+  const generalPages = targets.filter((t) => t.kind === "general");
+
+  // The standard's own page first, then supporting pages; /contact is always offered.
+  const relevantServices = [
+    ...standardPages.slice(0, 2),
+    ...industryPages.slice(0, 2),
+    ...modulePages.slice(0, 2),
+    ...generalPages,
+  ];
 
   // Pick the most relevant blog posts (top 5)
   const relevantPosts = existingPosts
@@ -183,6 +193,7 @@ async function loadContext(keywordBrief) {
       blogPosts: relevantPosts,
     },
     externalLinks,
+    standardsFacts: loadStandardsFacts(),
     usedExternalUrlCount: usedUrls.size,
     detectedIndustries: detectIndustries(keywordBrief.primaryKeyword),
   };
@@ -200,33 +211,16 @@ async function loadContext(keywordBrief) {
 async function loadDiversityBrief() {
   log("contextLoader", "diversity", "building diversity brief from recent articles");
 
-  let posts;
-  try {
-    // Fetch recent 20 blog posts with body text from Sanity
-    const { sanityQuery } = require("../shared/sanity");
-    posts = await sanityQuery(
-      '*[_type == "blogPost"] | order(publishedAt desc)[0...20]{ title, slug, body }'
-    );
-  } catch {
-    // Fallback: no brief available
-    log("contextLoader", "diversity", "could not fetch articles — skipping diversity brief");
-    return "";
-  }
+  const posts = listPosts().reverse().slice(0, 20);
+  if (posts.length === 0) return "";
 
-  if (!posts || posts.length === 0) return "";
-
-  // Helper: extract plain text from Sanity portable text body
+  // Skip the takeaways box and headings so "opening" means the first real sentence.
   function bodyToText(body) {
-    if (!Array.isArray(body)) return "";
-    let text = "";
-    for (const block of body) {
-      if (Array.isArray(block.children)) {
-        for (const child of block.children) {
-          if (child.text) text += child.text + " ";
-        }
-      }
-    }
-    return text.trim();
+    const prose = String(body || "")
+      .split("\n")
+      .filter((line) => line.trim() && !/^\s*(>|#|\||!\[|[-*+]\s|\d+\.\s)/.test(line))
+      .join("\n");
+    return toPlainText(prose);
   }
 
   const recentOpenings = [];
@@ -241,7 +235,7 @@ async function loadDiversityBrief() {
     const text = bodyToText(post.body);
     if (!text) continue;
 
-    const slug = post.slug?.current || "unknown";
+    const slug = post.slug || "unknown";
     const sentences = text.split(/(?<=[.!?])\s+/);
 
     // First sentence = opening pattern
@@ -300,4 +294,4 @@ async function loadDiversityBrief() {
   return lines.join("\n");
 }
 
-module.exports = { loadContext, loadDiversityBrief, detectIndustries };
+module.exports = { loadContext, loadDiversityBrief, detectIndustries, loadLinkBankUrls, loadStandardsFacts };

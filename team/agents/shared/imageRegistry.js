@@ -141,7 +141,34 @@ function pickRandom(photos) {
   return photos[idx];
 }
 
+// ── Markdown blog: the posts are the registry ───────────────────
+// Every image a post uses is recorded in its frontmatter (source id + sha256),
+// so "has this image been used?" is answered from content/blog, with no state file.
+
+function usedBlogImages() {
+  const { listPosts } = require("./contentStore");
+  const sourceIds = new Set();
+  const hashes = new Set();
+  for (const post of listPosts()) {
+    for (const img of [post.image, ...(post.inlineImages || [])]) {
+      if (!img) continue;
+      if (img.source && img.sourceId != null) sourceIds.add(`${img.source}:${img.sourceId}`);
+      if (img.sha256) hashes.add(img.sha256);
+    }
+  }
+  return { sourceIds, hashes };
+}
+
+/** True if this image (by source id or content hash) already appears in a published post. */
+function isBlogImageUsed(img, used = usedBlogImages()) {
+  if (!img) return false;
+  if (img.source && img.sourceId != null && used.sourceIds.has(`${img.source}:${img.sourceId}`)) return true;
+  return Boolean(img.sha256 && used.hashes.has(img.sha256));
+}
+
 module.exports = {
+  usedBlogImages,
+  isBlogImageUsed,
   isAssetUsed,
   isUrlUsed,
   isPhotographerUsed,

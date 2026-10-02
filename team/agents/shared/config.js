@@ -1,20 +1,43 @@
 const path = require("path");
-require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
+require("dotenv").config({ path: path.resolve(__dirname, "../../.env"), quiet: true });
 
 const TEAM_ROOT = path.resolve(__dirname, "../..");
 const SITE_ROOT = path.resolve(TEAM_ROOT, "..");
 const MEMORY_DIR = path.join(TEAM_ROOT, "memory");
 const REPORTS_DIR = path.join(TEAM_ROOT, "reports");
 
+// Blog posts are Markdown files in the site repo; the env overrides exist for tests.
+const CONTENT_DIR = process.env.BLOG_CONTENT_DIR || path.join(SITE_ROOT, "content", "blog");
+const BLOG_IMAGE_DIR = process.env.BLOG_IMAGE_DIR || path.join(SITE_ROOT, "public", "images", "blog");
+
+const CLAUDE_API_KEY = process.env.CLAUDE_API_KEY || "";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
+
+// Which API writes the text. Explicit setting wins; otherwise use whichever key is present.
+const LLM_PROVIDER = (
+  process.env.LLM_PROVIDER || (CLAUDE_API_KEY ? "claude" : GEMINI_API_KEY ? "gemini" : "claude")
+).toLowerCase();
+
 module.exports = {
   TEAM_ROOT,
   SITE_ROOT,
   MEMORY_DIR,
   REPORTS_DIR,
+  CONTENT_DIR,
+  BLOG_IMAGE_DIR,
+  KEYWORD_QUEUE_PATH: path.join(MEMORY_DIR, "keyword-queue.json"),
+  LINK_BANK_PATH: path.join(TEAM_ROOT, "data", "external-link-bank.json"),
 
-  CLAUDE_API_KEY: process.env.CLAUDE_API_KEY || "",
+  BLOG_AUTHOR: process.env.BLOG_AUTHOR || "ISO Certification Consultant Editorial Team",
+  BLOG_TIMEZONE: "America/Toronto",
+
+  LLM_PROVIDER,
+  CLAUDE_API_KEY,
   CLAUDE_MODEL: "claude-sonnet-4-6",
   CLAUDE_MODEL_FAST: "claude-haiku-4-5-20251001",
+  GEMINI_TEXT_MODEL: process.env.GEMINI_TEXT_MODEL || "gemini-3.8-flash",
+  GEMINI_TEXT_MODEL_FAST: process.env.GEMINI_TEXT_MODEL_FAST || process.env.GEMINI_TEXT_MODEL || "gemini-3.8-flash",
+  GEMINI_IMAGE_MODEL: process.env.GEMINI_IMAGE_MODEL || "gemini-3.1-flash-image",
 
   SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID || "uakgkw7x",
   SANITY_DATASET: process.env.SANITY_DATASET || "production",
@@ -26,7 +49,7 @@ module.exports = {
   REPORT_EMAIL: process.env.REPORT_EMAIL || "info@isocertificationconsultant.ca",
 
   PEXELS_API_KEY: process.env.PEXELS_API_KEY || "",
-  GEMINI_API_KEY: process.env.GEMINI_API_KEY || "",
+  GEMINI_API_KEY,
 
   LEADFEEDER_API_KEY: process.env.LEADFEEDER_API_KEY || "",
   LEADFEEDER_ID: process.env.LEADFEEDER_ID || "",

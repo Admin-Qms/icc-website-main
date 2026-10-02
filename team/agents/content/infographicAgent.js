@@ -331,4 +331,4 @@ async function testGenerate() {
   return result;
 }
 
-module.exports = { getArticleImage, testGenerate, getLog, getStats, extractKeywords, detectScene };
+module.exports = { getArticleImage, testGenerate, getLog, getStats, extractKeywords, detectScene, getSearchVariations };

@@ -13,8 +13,14 @@ function loadHeartbeats() {
   }
 }
 
+// Heartbeats are diagnostics; failing to record one must never fail the agent that called.
 function saveHeartbeats(data) {
-  fs.writeFileSync(HEARTBEAT_PATH, JSON.stringify(data, null, 2) + "\n");
+  try {
+    fs.mkdirSync(MEMORY_DIR, { recursive: true });
+    fs.writeFileSync(HEARTBEAT_PATH, JSON.stringify(data, null, 2) + "\n");
+  } catch {
+    // read-only or missing memory dir — skip
+  }
 }
 
 function updateHeartbeat(agentName, status, metric) {

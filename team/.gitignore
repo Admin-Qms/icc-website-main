@@ -1,5 +1,14 @@
 node_modules/
 .env
-reports/issues/*
-!reports/issues/.gitkeep
 .vercel
+
+# Run output — regenerated every run
+reports/
+
+# Diagnostics and state the legacy (unscheduled) agents write. The blog pipeline
+# keeps no state here except keyword-queue.json: published posts are its memory.
+memory/agent-heartbeats.json
+memory/*-log.json
+memory/image-registry.json
+memory/link-map.json
+memory/images/

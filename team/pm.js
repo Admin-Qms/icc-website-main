@@ -5,7 +5,7 @@ const chalk = require("chalk");
 const path = require("path");
 
 // Load env before anything else
-require("dotenv").config({ path: path.resolve(__dirname, ".env") });
+require("dotenv").config({ path: path.resolve(__dirname, ".env"), quiet: true });
 
 const program = new Command();
 
@@ -771,31 +771,56 @@ program
 // ── blog ────────────────────────────────────────────────────────
 const blogCmd = program.command("blog").description("Daily blog publishing pipeline");
 
+// Prints one publishDaily() result and sets the exit code a scheduler can act on:
+// 0 = published (or nothing to do today), 1 = the run failed and nothing was written.
+function printBlogResult(result) {
+  if (result.success && result.dryRun) {
+    console.log(chalk.green.bold("\n  Dry Run Passed — nothing was published"));
+    console.log(`  Title:    ${result.title}`);
+    console.log(`  Slug:     ${result.slug}`);
+    console.log(`  Words:    ${result.wordCount}`);
+    console.log(`  Checks:   ${result.qaScore} passed`);
+    console.log(`  Preview:  ${result.previewDir}`);
+  } else if (result.success) {
+    console.log(chalk.green.bold("\n  Article Published Successfully"));
+    console.log(`  Title:    ${result.title}`);
+    console.log(`  Page:     ${result.localUrl}  (live URL: ${result.url})`);
+    console.log(`  Keyword:  ${result.primaryKeyword}`);
+    console.log(`  Meta:     ${result.metaDescription || "N/A"}`);
+    console.log(`  Words:    ${result.wordCount}`);
+    console.log(`  Checks:   ${result.qaScore} passed`);
+    console.log(`  Image:    ${result.image.photographer} (${result.image.source})`);
+    console.log(`  Category: ${result.category}`);
+    console.log(`  Duration: ${Math.round(result.pipelineDurationMs / 1000)}s`);
+    console.log(`  Files:`);
+    for (const f of result.files || []) console.log(`    ${path.relative(path.resolve(__dirname, ".."), f)}`);
+  } else if (result.skipped) {
+    console.log(chalk.yellow(`\n  Nothing to do: ${result.reason}`));
+  } else {
+    console.log(chalk.red.bold(`\n  Pipeline Failed: ${result.reason}`));
+    if (result.title) console.log(`  Title:   ${result.title}`);
+    for (const issue of result.issues || []) console.log(chalk.red(`    - ${issue}`));
+    console.log(chalk.gray("  Nothing was written to content/ or public/."));
+    process.exitCode = 1;
+  }
+
+  const skipped = (result.qaChecks || []).filter((c) => c.skipped);
+  for (const c of skipped) console.log(chalk.yellow(`  Note: ${c.id} — ${c.message}`));
+}
+
 blogCmd
   .command("publish")
   .description("Run the full daily blog pipeline — pick keyword, write, QA, publish")
-  .action(async () => {
+  .option("--dry-run", "run every step and check, but write nothing to the site")
+  .option("--force", "publish even if an article dated today already exists")
+  .option("--fixture <file>", "publish a ready-written draft (JSON) through the checks instead of calling the writer")
+  .action(async (opts) => {
     banner();
-    console.log(chalk.cyan("\n  Pipeline: DAILY BLOG PUBLISH\n") + "-".repeat(65));
+    console.log(chalk.cyan(`\n  Pipeline: DAILY BLOG PUBLISH${opts.dryRun ? " (dry run)" : ""}\n`) + "-".repeat(65));
 
     const contentManager = require("./agents/content/contentManager");
-    const result = await contentManager.publishDaily();
-
-    if (result.success) {
-      console.log(chalk.green.bold("\n  Article Published Successfully"));
-      console.log(`  Title:    ${result.title}`);
-      console.log(`  URL:      ${result.url}`);
-      console.log(`  Keyword:  ${result.primaryKeyword}`);
-      console.log(`  Meta:     ${result.metaDescription || "N/A"}`);
-      console.log(`  Words:    ${result.wordCount}`);
-      console.log(`  QA Score: ${result.qaScore}/100`);
-      console.log(`  Image:    ${result.image.photographer} (${result.image.source})`);
-      console.log(`  Category: ${result.category}`);
-      console.log(`  Duration: ${Math.round(result.pipelineDurationMs / 1000)}s`);
-    } else {
-      console.log(chalk.red.bold(`\n  Pipeline Failed: ${result.reason}`));
-      if (result.score) console.log(`  QA Score: ${result.score}/100`);
-    }
+    const result = await contentManager.publishDaily({ dryRun: opts.dryRun, force: opts.force, fixture: opts.fixture });
+    printBlogResult(result);
 
     console.log("\n" + "=".repeat(65) + "\n");
   });
@@ -845,7 +870,7 @@ blogCmd
     if (cal.recentArticles.length > 0) {
       console.log(chalk.bold("\n  Recent Articles:"));
       for (const a of cal.recentArticles) {
-        console.log(`    ${a.date} | ${a.title} | ${a.qaScore}/100`);
+        console.log(`    ${a.date} | ${a.title} | ${a.wordCount} words`);
       }
     }
 
@@ -874,7 +899,7 @@ blogCmd
     } else {
       for (const a of articles) {
         console.log(`  ${chalk.gray(a.date)} ${a.title}`);
-        console.log(`    ${chalk.blue(a.url)} | ${a.wordCount} words | QA: ${a.qaScore}/100`);
+        console.log(`    ${chalk.blue(a.url)} | ${a.wordCount} words`);
         if (a.metaDescription) {
           console.log(`    ${chalk.gray("Meta:")} ${a.metaDescription}`);
         }
@@ -906,64 +931,29 @@ blogCmd
 blogCmd
   .command("retry")
   .description("Retry publishing (picks the same keyword selection logic)")
-  .action(async () => {
+  .option("--force", "publish even if an article dated today already exists")
+  .action(async (opts) => {
     banner();
     console.log(chalk.cyan("\n  Pipeline: RETRY BLOG PUBLISH\n") + "-".repeat(65));
 
     const contentManager = require("./agents/content/contentManager");
-    const result = await contentManager.publishDaily();
-
-    if (result.success) {
-      console.log(chalk.green.bold(`\n  Retry Successful: ${result.title}`));
-      console.log(`  URL: ${result.url}`);
-    } else {
-      console.log(chalk.red.bold(`\n  Retry Failed: ${result.reason}`));
-    }
+    printBlogResult(await contentManager.publishDaily({ force: opts.force }));
 
     console.log("\n" + "=".repeat(65) + "\n");
   });
 
 blogCmd
   .command("auto")
-  .description("Auto-schedule: daily blog every day + mega-article on Mon & Thu")
-  .action(async () => {
+  .description("Scheduled run: one daily article (mega-articles are not scheduled)")
+  .option("--dry-run", "run every step and check, but write nothing to the site")
+  .option("--force", "publish even if an article dated today already exists")
+  .action(async (opts) => {
     banner();
-    const dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    const day = dayNames[new Date().getDay()];
-    const isMegaDay = new Date().getDay() === 1 || new Date().getDay() === 4;
-
-    console.log(chalk.cyan(`\n  Pipeline: AUTO-SCHEDULE (${day})\n`) + "-".repeat(65));
-    console.log(`  Daily blog: ${chalk.green("YES")}`);
-    console.log(`  Mega-article: ${isMegaDay ? chalk.green("YES (Mon/Thu)") : chalk.gray("No (next: " + (new Date().getDay() < 1 ? "Mon" : new Date().getDay() < 4 ? "Thu" : "Mon") + ")")}`);
-    console.log();
+    console.log(chalk.cyan("\n  Pipeline: DAILY BLOG (scheduled)\n") + "-".repeat(65));
 
     const contentManager = require("./agents/content/contentManager");
-    const results = await contentManager.publishDailySchedule();
-
-    // Daily blog result
-    if (results.daily?.success) {
-      console.log(chalk.green.bold("\n  Daily Blog Published"));
-      console.log(`  Title:    ${results.daily.title}`);
-      console.log(`  URL:      ${results.daily.url}`);
-      console.log(`  Words:    ${results.daily.wordCount}`);
-      console.log(`  QA Score: ${results.daily.qaScore}/100`);
-      console.log(`  Duration: ${Math.round(results.daily.pipelineDurationMs / 1000)}s`);
-    } else if (results.daily) {
-      console.log(chalk.red.bold(`\n  Daily Blog Failed: ${results.daily.reason}`));
-    }
-
-    // Mega-article result
-    if (results.mega?.success) {
-      console.log(chalk.green.bold("\n  Mega-Article Published"));
-      console.log(`  Title:    ${results.mega.title}`);
-      console.log(`  URL:      ${results.mega.url}`);
-      console.log(`  Words:    ${chalk.bold(results.mega.wordCount.toLocaleString())}`);
-      console.log(`  Chapters: ${results.mega.chapterCount}`);
-      console.log(`  QA Score: ${results.mega.qaScore}/100`);
-      console.log(`  Duration: ${Math.round(results.mega.pipelineDurationMs / 1000)}s`);
-    } else if (results.mega) {
-      console.log(chalk.red.bold(`\n  Mega-Article Failed: ${results.mega.reason}`));
-    }
+    const results = await contentManager.publishDailySchedule({ dryRun: opts.dryRun, force: opts.force });
+    printBlogResult(results.daily);
 
     console.log("\n" + "=".repeat(65) + "\n");
   });

@@ -1,0 +1,21 @@
+{
+  "asOf": "2026-10-03",
+  "note": "Current editions of the standards the blog covers, compiled from search results on 2026-10-03. The writing models were trained before the 2026 editions were published, so this table is given to the writer and to the claims audit. Review and correct it as editions change — it is the pipeline's only source for edition status.",
+  "standards": [
+    { "code": "ISO 9001", "current": "ISO 9001:2026", "status": "Published 16 September 2026 as the sixth edition; it replaces ISO 9001:2015. Certificates to ISO 9001:2015 remain valid during a three-year transition ending in September 2029." },
+    { "code": "ISO 14001", "current": "ISO 14001:2026", "status": "Published 15 April 2026; it replaces ISO 14001:2015. Certificates to ISO 14001:2015 remain valid during a 36-month transition ending in 2029." },
+    { "code": "ISO 45001", "current": "ISO 45001:2018", "status": "No newer edition has been published. A revision is in development and has not been published." },
+    { "code": "ISO 13485", "current": "ISO 13485:2016", "status": "No newer edition has been published; it was reviewed and confirmed in 2025." },
+    { "code": "ISO 22000", "current": "ISO 22000:2018", "status": "No newer edition has been published; Amendment 1:2024 applies. A revision is in draft and has not been published." },
+    { "code": "ISO/IEC 17025", "current": "ISO/IEC 17025:2017", "status": "No newer edition has been published." },
+    { "code": "IATF 16949", "current": "IATF 16949:2016", "status": "No newer edition has been published. IATF has announced a second edition in development; it has not been published, and IATF 16949:2016 remains the valid standard." },
+    { "code": "FSSC 22000", "current": "FSSC 22000 Version 7", "status": "Version 7 was released on 1 May 2026. Audits against Version 6 are permitted until 30 April 2027." },
+    { "code": "ISO 19011", "current": "ISO 19011:2026", "status": "The auditing guidelines; the 2026 edition replaces ISO 19011:2018." }
+  ],
+  "writingRules": [
+    "Name a standard by its current edition from this table the first time it appears, then by its short name.",
+    "For ISO 9001 and ISO 14001, acknowledge that many certified organisations are still on the 2015 edition during the transition.",
+    "Do not describe what changed between editions, and do not cite a clause number as belonging to a 2026 edition, unless the detail is given in this table. Describe the requirement in words instead.",
+    "Clause numbers may be cited for ISO 9001:2015, ISO 14001:2015, ISO 45001:2018, ISO 13485:2016, ISO 22000:2018, ISO/IEC 17025:2017 and IATF 16949:2016, naming the edition."
+  ]
+}

@@ -260,6 +260,64 @@ async function processInlineImages(article, slug) {
   };
 }
 
+// ── Markdown blog: markers become local images ──────────
+// Replaces up to `max` [IMAGE: ...] markers with standard Markdown images whose
+// files the caller publishes alongside the post. Nothing is written here.
+
+const NO_TEXT_SUFFIX = "Modern North American manufacturing or industrial setting. Natural lighting, shallow depth of field. No text, no labels, no overlays, no watermarks, no words of any kind in the image.";
+
+function pexelsQueryFor(description) {
+  const words = description
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length > 3 && !["with", "that", "this", "from", "their", "ontario", "canada", "canadian"].includes(w));
+  // Always anchored to manufacturing so results stay on the shop floor, not in an office.
+  return [`${words.slice(0, 4).join(" ")} manufacturing`, `${words.slice(0, 2).join(" ")} factory industrial`];
+}
+
+async function processInlineImagesLocal(article, slug, { exclude = new Set(), max = 2 } = {}) {
+  const { sourceImage } = require("./imageAgent");
+  const { imageUrl, stripImageMarkers } = require("../shared/contentStore");
+
+  const markers = extractMarkers(article.body);
+  const lines = article.body.split("\n");
+  const images = [];
+
+  for (const marker of markers) {
+    if (images.length >= max) {
+      lines[marker.lineIndex] = "";
+      continue;
+    }
+    const file = `inline-${images.length + 1}.webp`;
+    log("inlineImageAgent", file, `sourcing: "${marker.query.slice(0, 60)}"`);
+
+    let image = null;
+    try {
+      image = await sourceImage({
+        pexelsQueries: pexelsQueryFor(marker.query),
+        geminiPrompt: `A photorealistic photograph of ${marker.query.replace(/\.$/, "")}. ${NO_TEXT_SUFFIX}`,
+        alt: marker.query.replace(/\s+/g, " ").trim(),
+        exclude,
+      });
+    } catch (err) {
+      log("inlineImageAgent", file, `failed: ${err.message}`);
+    }
+
+    if (!image) {
+      lines[marker.lineIndex] = "";
+      continue;
+    }
+    const alt = image.alt.replace(/[\[\]]/g, "");
+    lines[marker.lineIndex] = `![${alt}](${imageUrl(slug, file)})`;
+    images.push({ ...image, alt, file });
+    log("inlineImageAgent", file, `${image.source} OK (${Math.round(image.buffer.length / 1024)}KB)`);
+  }
+
+  updateHeartbeat("inlineImageAgent", "complete", `${images.length} images for ${slug}`);
+  return { body: stripImageMarkers(lines.join("\n")), count: images.length, images };
+}
+
 // ── Test function ────────────────────────────────────────
 
 async function testInlineImages() {
@@ -299,4 +357,4 @@ Contact a certified ISO consultant to begin your journey.
   return result;
 }
 
-module.exports = { processInlineImages, testInlineImages, extractMarkers };
+module.exports = { processInlineImages, processInlineImagesLocal, testInlineImages, extractMarkers };

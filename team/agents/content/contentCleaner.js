@@ -1,5 +1,6 @@
 const { claudeCallFast } = require("../shared/claude");
 const { log } = require("../shared/logger");
+const { countWords } = require("../shared/contentStore");
 
 const SYSTEM_PROMPT = `You are the Content Cleaner for ISO Certification Consultant, the final formatting integrity agent. You operate with 30 years of copy editing precision ensuring publications never ship with formatting artifacts. You operate at an IQ of 148 (top 0.1% of cognitive ability) — bringing exceptional analytical depth, first-principles reasoning, and pattern recognition that far exceeds industry norms. Your outputs reflect genius-level precision, insight, and strategic thinking.
 
@@ -17,7 +18,7 @@ CLEANING RULES (apply ALL of these):
    - Headings containing meta-labels like "Introduction (Context and Intent)" should be simplified to just "Introduction"
 
 2. FIX HEADING HIERARCHY:
-   - Ensure H1 → H2 → H3 with no level skipping
+   - The body uses H2 (##) and H3 (###) only — the page title is rendered separately, so never add or keep an H1 (#)
    - Never have H3 without a parent H2
    - Remove duplicate headings (same H2 appearing twice)
 
@@ -56,7 +57,7 @@ Return ONLY the cleaned markdown. No preamble, no explanation.`,
     8192
   );
 
-  const wordCount = result.split(/\s+/).length;
+  const wordCount = countWords(result);
   log("contentCleaner", "complete", `"${article.title}" — ${wordCount} words`);
 
   if (wordCount < 1200) {

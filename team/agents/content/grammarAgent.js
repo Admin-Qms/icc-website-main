@@ -31,8 +31,7 @@ Max 2 passive voice sentences per 500 words. Rewrite others:
 CONSISTENCY:
 - Always "ISO Certification Consultant" never "ISO Certification Consultant"
 - Always "Book your free consultation"
-- "we" and "our" are CORRECT when referring to ISO Certification Consultant — do NOT change them
-- No first person "I" anywhere
+- No first person anywhere: no "we", "our", "us", "I" or "my". Refer to the company as "ISO Certification Consultant" and address the reader as "you". Rewrite any first-person sentence you find.
 
 READABILITY:
 - Flag sentences over 35 words — split them
@@ -44,7 +43,7 @@ CRITICAL — PRESERVE THESE ELEMENTS EXACTLY (do NOT remove, rewrite, or change)
 - ALL [IMAGE:] markers — preserve exactly as written, including the description
 - ALL callout boxes (> **Important:**, > **Did You Know?**, > **Key Consideration:**)
 - ALL bold formatting (**text**)
-- ALL heading hierarchy (## and ###)`;
+- ALL heading hierarchy (## and ###) — never add an H1 ("# ") heading`;
 
 async function checkGrammar(article) {
   log("grammarAgent", "check", `checking: ${article.title || "untitled"}`);

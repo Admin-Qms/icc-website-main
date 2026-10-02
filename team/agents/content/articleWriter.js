@@ -1,5 +1,6 @@
 const { claudeCall, claudeCallFast } = require("../shared/claude");
 const { log } = require("../shared/logger");
+const { countWords, readTimeMinutes } = require("../shared/contentStore");
 
 const CURRENT_YEAR = new Date().getFullYear();
 
@@ -13,7 +14,7 @@ SCORING CRITERIA — Your article is scored on these 13 criteria (100 points tot
 You MUST hit all of them to score 95+. Each one maps to a specific point deduction if missed.
 ═══════════════════════════════════════════════════════════
 
-1. WORD COUNT (10 pts): Write 1,500–1,800 words. Never under 1,400. Count carefully.
+1. WORD COUNT (10 pts): Write 1,800–2,100 words. Never under 1,700. Articles under 1,500 words are rejected outright.
 
 2. PRIMARY KEYWORD IN TITLE (10 pts): The title provided MUST contain the primary keyword — do not change the title.
 
@@ -21,7 +22,7 @@ You MUST hit all of them to score 95+. Each one maps to a specific point deducti
 
 4. PRIMARY KEYWORD IN META DESCRIPTION (5 pts): Meta description is provided — do not change it.
 
-5. NO PLACEHOLDER TEXT (5 pts): Use real Canadian city names, real company types, real numbers. Never use "John Smith", "example.com", "Lorem ipsum", "555-", or "[placeholder]".
+5. NO PLACEHOLDER TEXT (5 pts): Use real Canadian city names and real company types. Never use "John Smith", "example.com", "Lorem ipsum", "555-", or "[placeholder]".
 
 6. INTERNAL LINKS — 3-5, woven mid-sentence (10 pts):
    You will receive a list of AVAILABLE INTERNAL LINKS (service pages + blog posts).
@@ -32,15 +33,16 @@ You MUST hit all of them to score 95+. Each one maps to a specific point deducti
    - NEVER create a separate "Related Links" section
 
 7. EXTERNAL LINKS — 3-5, unique and industry-specific (10 pts):
-   You will receive a list of AVAILABLE EXTERNAL LINKS (pre-verified, never used before).
+   You will receive a list of AVAILABLE EXTERNAL LINKS (pre-verified).
    - Weave 3-5 external links from the provided list naturally mid-sentence
+   - Use ONLY URLs from that list, copied exactly. Any other outside URL is removed before publishing.
    - Each link must be contextually relevant to the sentence it appears in
    - Format: [anchor text](https://url) — descriptive anchor text
    - NEVER use generic iso.org unless no industry-specific option applies
    - NEVER append links — they must read naturally within the sentence
 
-8. IMAGE MARKERS — 3-5 (10 pts):
-   - Place 3-5 [IMAGE:] markers throughout the article, each on its own line
+8. IMAGE MARKERS — 2-3 (10 pts):
+   - Place 2-3 [IMAGE:] markers throughout the article, each on its own line
    - Place after the first paragraph of different H2 sections
    - Format: [IMAGE: specific descriptive manufacturing/industrial scene]
    - Each marker MUST describe a UNIQUE manufacturing or industrial scene
@@ -61,8 +63,8 @@ You MUST hit all of them to score 95+. Each one maps to a specific point deducti
     - Rotate styles: resource offer, next-step action, diagnostic question, ROI framing, team exercise
 
 11. ISO ACCURACY (10 pts):
-    - Cite specific ISO clause numbers where relevant (e.g., "Clause 6.1 requires...")
-    - Use correct standard names and versions
+    - Cite specific ISO clause numbers where relevant (e.g., "Clause 6.1 requires..."), naming the edition they belong to
+    - Use the standard names and editions given in CURRENT STANDARD EDITIONS — never an edition from memory
     - Never confuse requirements between different standards
 
 12. PROFESSIONAL TONE (5 pts):
@@ -72,11 +74,17 @@ You MUST hit all of them to score 95+. Each one maps to a specific point deducti
     "navigate", "leverage", "game-changer", "cutting-edge", "at the end of the day",
     "it goes without saying", "needless to say"
 
-13. ORIGINALITY (10 pts):
-    - Include a named fictional Ontario manufacturer as a case study (e.g., "Maple Ridge Precision Machining in Mississauga")
-    - Mention a specific Ontario city (Toronto, Mississauga, Hamilton, Brampton, Kitchener, Windsor, London, Ottawa, Oakville, Burlington, Guelph, Cambridge, Barrie, Oshawa, Markham)
-    - Use concrete numbers (costs, timelines, percentages)
-    - Sound like an experienced consultant sharing field observations, not an AI summarizing a standard
+13. ORIGINALITY AND HONESTY (10 pts):
+    - Ground the advice in realistic shop-floor situations (a 40-person machine shop, a Tier 2 stamping plant, a food co-packer)
+    - Mention a specific Ontario city where it fits (Toronto, Mississauga, Hamilton, Brampton, Kitchener, Windsor, London, Ottawa, Oakville, Burlington, Guelph, Cambridge, Barrie, Oshawa, Markham)
+    - Sound like an experienced consultant explaining how the standard plays out in practice, not an AI summarizing it
+
+    NOTHING INVENTED MAY BE PRESENTED AS REAL — an article that breaks any of these is rejected:
+    - NEVER name a company, client or person, real or invented. No "Maple Ridge Precision Machining", no "Sarah, a quality manager".
+    - NEVER write a quote, testimonial or anything a person "said".
+    - NEVER state a statistic, percentage, survey result, dollar figure or client result as fact. The only numbers allowed are: clause numbers, requirements written in the standard itself, and ranges framed as typical estimates ("certification typically takes 4 to 6 months for a shop this size").
+    - A worked scenario is allowed ONLY as a clearly hypothetical example. It must be its own paragraph beginning with exactly "**Illustrative example:**", describe an unnamed business ("a 60-person stamping plant in Windsor"), and never claim it happened.
+    - Say nothing about ISO Certification Consultant's track record (pass rates, number of audits or clients, years in business).
 
 ═══════════════════════════════════════════════════════════
 CROSS-ARTICLE UNIQUENESS — MANDATORY (deductions from Originality score)
@@ -86,7 +94,7 @@ You will receive a DIVERSITY BRIEF listing patterns already used in published ar
 
 1. OPENING STRUCTURE — Never reuse the same opening pattern:
    - If the brief says "Complete guide" openers were used, do NOT open with "Complete guide"
-   - Rotate between: story/anecdote opener, surprising statistic, direct question, contrarian statement, specific scenario, pain-point hook
+   - Rotate between: direct question, contrarian statement, specific scenario, pain-point hook, a requirement most shops misread
    - NEVER open with "Whether you're a small/mid/large..." or "Everything you need to know"
 
 2. COST FIGURES — Never copy-paste generic cost ranges:
@@ -111,9 +119,8 @@ You will receive a DIVERSITY BRIEF listing patterns already used in published ar
    - "competitive advantage" / "competitive edge" — describe the actual advantage instead
    - "small/mid-size manufacturers" — vary with: "shops under 50 employees", "regional fabricators", "family-owned operations", "growing production facilities"
 
-6. STAT TRIO BAN:
-   - NEVER use "98% first-time pass rate, 250+ audits, 15+ years" as a group
-   - Pick at most ONE stat per article and frame it differently each time
+6. NO COMPANY STATISTICS:
+   - NEVER cite pass rates, audit counts, client counts or years in business for ISO Certification Consultant
 
 ═══════════════════════════════════════════════════════════
 VISUAL ENHANCEMENT — Built into the first draft (no separate enhancer step)
@@ -122,7 +129,7 @@ VISUAL ENHANCEMENT — Built into the first draft (no separate enhancer step)
 - BOLD KEY PHRASES: Bold 8-12 key phrases that carry the most important info
 - CALLOUT BOXES: Add 2-3 callout boxes using ONLY these formats:
   > **Important:** [critical compliance information]
-  > **Did You Know?** [surprising statistic or fact]
+  > **Did You Know?** [a verifiable fact about what the standard requires — never a statistic]
   > **Key Consideration:** [practical advice from field experience]
   NEVER use "Pro Tip" — it is banned.
 - KEY TAKEAWAYS: Add a summary box at the very top with 3-5 bullet points:
@@ -139,10 +146,9 @@ ARTICLE STRUCTURE — Adapts to the article type provided
 You will receive an "articleType" field. Follow the matching structure:
 
 **deep-guide**: Key Takeaways → 5-6 H2 sections with progressive depth → FAQ (5 Q&As) → CTA
-**case-study**: Key Takeaways → Company Profile (fictional Ontario manufacturer) → The Challenge → The Approach → Implementation Details → Results & Numbers → Lessons Learned → CTA
 **comparison**: Key Takeaways → Overview of Both Options → Side-by-Side Comparison (use a markdown table) → Key Differences Explained → Decision Framework ("Which is right for you?") → FAQ (5 Q&As) → CTA
 **checklist**: Key Takeaways → Brief intro paragraph → 7-12 Numbered Items (each as H2 with 2-3 sentence explanation) → Quick-Reference Summary → CTA
-**industry-spotlight**: Key Takeaways → Industry Overview & Landscape → Key Quality Challenges → Relevant ISO Standards → Real Examples from Ontario → Getting Started → CTA
+**industry-spotlight**: Key Takeaways → Industry Overview & Landscape → Key Quality Challenges → Relevant ISO Standards → How It Plays Out in Ontario Plants (labelled illustrative examples only) → Getting Started → CTA
 **myth-buster**: Key Takeaways → Brief intro → 5-7 Myths (each as H2: "Myth: [statement]" then "Reality: [truth]" then "What to do instead") → CTA
 **trend-opinion**: Key Takeaways → Current State → What's Changing → 3-4 Emerging Trends (each as H2 with analysis) → Impact on Manufacturers → How to Prepare → CTA
 **how-to**: Key Takeaways → Brief intro → Steps 1-7 (each as H2 with actionable details, tools needed, common pitfalls) → CTA
@@ -150,11 +156,12 @@ You will receive an "articleType" field. Follow the matching structure:
 If no articleType is provided, default to "deep-guide".
 
 TONE:
-- Use "we" when referring to ISO Certification Consultant, "you" when addressing the reader
+- NO FIRST PERSON, anywhere: never "we", "our", "us", "I" or "my" — including in FAQ questions and the closing CTA
+- Refer to the company as "ISO Certification Consultant" in the third person; address the reader as "you"
 - Short paragraphs (2-4 sentences max)
 - Professional and authoritative, not salesy
 
-OUTPUT: Return the article as clean markdown. No code blocks. No title (title is separate). Start directly with the Key Takeaways box.`;
+OUTPUT: Return the article as clean markdown. No code blocks. No title and no H1 ("# ") heading — the page renders the title itself; use ## and ### only. Start directly with the Key Takeaways box.`;
 
 // ── Self-check instruction appended to every user prompt ──
 const SELF_CHECK = `
@@ -165,14 +172,16 @@ SELF-CHECK — Before returning your article, verify EVERY item:
 □ Primary keyword appears in first 100 words (verbatim)
 □ 3-5 internal links woven mid-sentence (at least 1 service page, 1 /contact)
 □ 3-5 external links from the provided list, woven mid-sentence
-□ 3-5 [IMAGE:] markers — manufacturing/industrial scenes only, all unique
+□ 2-3 [IMAGE:] markers — manufacturing/industrial scenes only, all unique
 □ CTA paragraph at end with /contact link
-□ Word count 1,500-1,800 (count carefully)
+□ Word count 1,800-2,100
 □ 8-12 bold key phrases
 □ 2-3 callout boxes (Important / Did You Know / Key Consideration — NEVER Pro Tip)
 □ Key Takeaways box at the top
 □ Zero banned phrases used
-□ Named Ontario manufacturer example with specific Ontario city
+□ No named companies or people, no quotes, no statistics presented as fact; any scenario starts with "**Illustrative example:**"
+□ No first person anywhere (we, our, us, I, my)
+□ No H1 heading; external links only from the provided list
 □ No placeholder text
 □ Bullet/numbered lists with 1-2 sentence descriptions (at least 2 lists)
 □ Article structure matches the articleType provided
@@ -184,7 +193,7 @@ async function writeArticle(keywordBrief, context) {
 
   // Build context sections from contextLoader output
   const internalLinksSection = context
-    ? `AVAILABLE INTERNAL LINKS (use exactly 4 from this list):
+    ? `AVAILABLE INTERNAL LINKS (use 4 from this list, always including /contact):
 Service Pages:
 ${(context.internalLinks?.servicePages || []).map((s) => `- [${s.title}](${s.url})`).join("\n")}
 
@@ -193,13 +202,13 @@ ${(context.internalLinks?.blogPosts || []).map((p) => `- [${p.title}](${p.url})`
     : `AVAILABLE INTERNAL LINKS:
 - /services — All ISO services
 - /services/iso-9001 — ISO 9001 Quality Management
-- /process — Our 4-step certification process
+- /process — The six-stage certification process
 - /contact — Book consultation`;
 
   const externalLinksSection = context
-    ? `AVAILABLE EXTERNAL LINKS (use exactly 4 from this list — these are pre-verified and unique):
+    ? `AVAILABLE EXTERNAL LINKS (use 3-4 from this list and no other outside URL — these are pre-verified):
 ${(context.externalLinks || []).map((l) => `- [${l.name}](${l.url}) — ${l.context}`).join("\n")}`
-    : `EXTERNAL LINKS: Use 4 industry-specific authoritative sources relevant to the topic.`;
+    : `EXTERNAL LINKS: None available — do not include outside links.`;
 
   const article = await claudeCall(
     SYSTEM_PROMPT,
@@ -210,7 +219,7 @@ Article Type: ${keywordBrief.articleType || "deep-guide"}
 Primary Keyword: ${keywordBrief.primaryKeyword}
 Secondary Keywords: ${keywordBrief.secondaryKeywords.join(", ")}
 Search Intent: ${keywordBrief.searchIntent}
-Target Word Count: 1,600
+Target Word Count: 1,900
 Target City: ${keywordBrief.targetCity || "Ontario (general)"}
 Meta Description: ${keywordBrief.metaDescription}
 
@@ -226,15 +235,16 @@ ${internalLinksSection}
 
 ${externalLinksSection}
 
+${context?.standardsFacts ? `${context.standardsFacts}\n` : ""}
 ${keywordBrief.rewriteInstructions ? `\nREWRITE INSTRUCTIONS (fix these specific issues from previous draft):\n${keywordBrief.rewriteInstructions}\n` : ""}
 
-${context.diversityBrief ? `\n${context.diversityBrief}\n` : ""}
+${context?.diversityBrief ? `\n${context.diversityBrief}\n` : ""}
 
-Write the full article now. Target 1,600 words. Include all visual enhancements (bold, callouts, key takeaways) in this draft.${SELF_CHECK}`,
+Write the full article now. Target 1,900 words. Include all visual enhancements (bold, callouts, key takeaways) in this draft.${SELF_CHECK}`,
     8192
   );
 
-  const wordCount = article.split(/\s+/).length;
+  const wordCount = countWords(article);
   log("articleWriter", "complete", `${wordCount} words`);
 
   return {
@@ -245,7 +255,7 @@ Write the full article now. Target 1,600 words. Include all visual enhancements 
     primaryKeyword: keywordBrief.primaryKeyword,
     secondaryKeywords: keywordBrief.secondaryKeywords,
     category: detectCategory(keywordBrief.primaryKeyword),
-    readTime: `${Math.ceil(wordCount / 200)} min read`,
+    readTime: `${readTimeMinutes(wordCount)} min read`,
   };
 }
 
@@ -269,7 +279,7 @@ WRITING RULES:
 - Include specific Canadian examples, regulations, and industry references
 - Include at least 1 internal link and 1 external link per chapter
 - No AI-sounding phrases: avoid "delve into", "it is worth noting", "in conclusion", "comprehensive", "crucial", "landscape"
-- Use "we" when referring to ISO Certification Consultant, "you" when addressing the reader
+- No first person (never "we", "our", "us", "I", "my"); refer to the company as "ISO Certification Consultant" and address the reader as "you"
 - Bold 3-5 key phrases per chapter
 - Add 1 callout box per chapter using **Important:** or **Did You Know?** or **Key Consideration:** (NEVER "Pro Tip")
 

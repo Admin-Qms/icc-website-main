@@ -2,17 +2,18 @@ const fs = require("fs");
 const path = require("path");
 const { claudeCallFast: claudeCall } = require("../shared/claude");
 const { log } = require("../shared/logger");
-const { MEMORY_DIR } = require("../shared/config");
-const { fetchAllSanity } = require("../shared/sanity");
+const { KEYWORD_QUEUE_PATH } = require("../shared/config");
+const { listPosts, slugify, slugExists } = require("../shared/contentStore");
 
-const QUEUE_PATH = path.join(MEMORY_DIR, "keyword-queue.json");
-const PUBLISHED_PATH = path.join(MEMORY_DIR, "published-articles.json");
+const QUEUE_PATH = KEYWORD_QUEUE_PATH;
+
+// Standards the blog does not cover (docs/knowledge-base/decisions.md).
+const EXCLUDED_TOPIC_RE = /\bas\s?-?9100\b|\b27001\b/i;
 
 const CURRENT_YEAR = new Date().getFullYear();
 
 const ARTICLE_TYPES = [
   "deep-guide",      // Comprehensive how-to
-  "case-study",      // Fictional manufacturer journey with real numbers
   "comparison",      // Standard vs standard or approach vs approach
   "checklist",       // Numbered actionable items
   "industry-spotlight", // Deep dive into one industry's ISO challenges
@@ -34,13 +35,14 @@ CRITICAL: The current year is ${CURRENT_YEAR}. Year references should use ${CURR
 ═══ ARTICLE TYPES — You must pick one ═══
 
 1. deep-guide — Comprehensive how-to covering a topic in depth (5-6 sections)
-2. case-study — Story of a fictional Ontario manufacturer's ISO journey (narrative arc with real numbers)
-3. comparison — Standard vs standard, or approach vs approach (side-by-side with decision framework)
-4. checklist — 7-12 numbered actionable items with explanations
-5. industry-spotlight — Deep dive into one industry's specific ISO challenges and requirements
-6. myth-buster — Debunk 5-7 common misconceptions about an ISO topic
-7. trend-opinion — Emerging trends, expert perspective on what's changing in quality management
-8. how-to — Tactical step-by-step guide (5-7 clear steps)
+2. comparison — Standard vs standard, or approach vs approach (side-by-side with decision framework)
+3. checklist — 7-12 numbered actionable items with explanations
+4. industry-spotlight — Deep dive into one industry's specific ISO challenges and requirements
+5. myth-buster — Debunk 5-7 common misconceptions about an ISO topic
+6. trend-opinion — Emerging trends, expert perspective on what's changing in quality management
+7. how-to — Tactical step-by-step guide (5-7 clear steps)
+
+Never propose a case study, client story or "journey" of a named company — the site does not publish invented companies or results.
 
 ═══ TITLE RULES — CRITICAL ═══
 
@@ -51,12 +53,11 @@ BANNED title patterns (DO NOT USE):
 - Titles must NOT all end with "for ${CURRENT_YEAR}" — vary placement or omit year
 
 Title MUST match the article type:
-- case-study: Narrative titles like "From Zero to Certified: A Toronto CNC Shop's 14-Week ISO Journey"
 - myth-buster: "5 ISO 9001 Myths That Cost Manufacturers Money"
 - checklist: "10-Point Internal Audit Readiness Checklist for Manufacturers"
 - how-to: "How to Run Your First ISO Internal Audit in 7 Steps"
 - comparison: "ISO 9001 vs IATF 16949: Which Does Your Auto Parts Plant Need?"
-- industry-spotlight: "Why Ontario Aerospace Suppliers Are Racing to Get AS9100 Certified"
+- industry-spotlight: "What ISO 13485 Asks of Ontario Medical Device Contract Manufacturers"
 - trend-opinion: "How AI Is Changing Quality Management in Ontario Manufacturing"
 - deep-guide: "The Quality Manager's Playbook for ISO 14001 Implementation"
 
@@ -68,19 +69,23 @@ When using a city, rotate — no city used more than once in last 10 articles.
 
 ═══ TARGET MARKET ═══
 
-Ontario manufacturers, automotive suppliers, medical device companies, food manufacturers, aerospace companies, construction firms.
+Ontario manufacturers, automotive suppliers, medical device companies, food manufacturers, construction firms.
 
 You must NEVER pick a keyword that has already been published.
+"primaryKeyword" must be copied character-for-character from the available list.
+The title must contain the significant words of the primary keyword.
+The meta description must be 125-155 characters, contain the significant words of the primary keyword, and use no first person (no we, our, us).
+FAQ questions must be phrased in the second or third person ("How long does...", "Does a shop need...") — never "we" or "our".
 
 Return JSON:
 {
   "primaryKeyword": "the exact keyword from the queue",
   "secondaryKeywords": ["3-5 related keywords to weave in naturally"],
-  "articleType": "one of: deep-guide|case-study|comparison|checklist|industry-spotlight|myth-buster|trend-opinion|how-to",
+  "articleType": "one of: deep-guide|comparison|checklist|industry-spotlight|myth-buster|trend-opinion|how-to",
   "searchIntent": "informational|commercial|transactional",
-  "recommendedWordCount": 1500,
+  "recommendedWordCount": 1900,
   "title": "creative, varied title matching the article type — NOT 'Complete Guide for ${CURRENT_YEAR}'",
-  "metaDescription": "120-155 char meta description with primary keyword",
+  "metaDescription": "125-155 char meta description with primary keyword",
   "h2Structure": ["H2 headings matching the article type structure"],
   "faqQuestions": ["5 People Also Ask style questions"],
   "targetCity": "Ontario city or null if geographically neutral",
@@ -124,42 +129,45 @@ function loadQueue() {
   return JSON.parse(fs.readFileSync(QUEUE_PATH, "utf-8"));
 }
 
+// The published posts are the record of what has been covered.
 function loadPublished() {
-  return JSON.parse(fs.readFileSync(PUBLISHED_PATH, "utf-8"));
+  return listPosts();
 }
 
-// Fetch all existing blog slugs from Sanity to prevent duplicate topics
-async function getLiveSlugs() {
-  try {
-    const posts = await fetchAllSanity("blogPost");
-    return new Set(posts.map((p) => p.slug?.current).filter(Boolean));
-  } catch {
-    return new Set();
-  }
+function isExcludedTopic(text) {
+  return EXCLUDED_TOPIC_RE.test(text || "");
+}
+
+function availableKeywords() {
+  const { queue } = loadQueue();
+  const publishedKeywords = new Set(loadPublished().map((a) => (a.primaryKeyword || "").toLowerCase()));
+  return queue.filter((k) => !publishedKeywords.has(k.toLowerCase()) && !isExcludedTopic(k));
+}
+
+function parseJSONReply(raw) {
+  const cleaned = raw.replace(/```json\n?/g, "").replace(/```\n?/g, "");
+  const start = cleaned.indexOf("{");
+  const end = cleaned.lastIndexOf("}");
+  if (start === -1 || end === -1) throw new Error("Keyword researcher returned no JSON");
+  return JSON.parse(cleaned.slice(start, end + 1));
 }
 
 async function pickKeyword() {
   log("keywordResearcher", "pick", "selecting today's keyword");
 
-  const { queue } = loadQueue();
   const published = loadPublished();
-  const publishedKeywords = new Set(published.map((a) => a.primaryKeyword));
-  const publishedSlugs = new Set(published.map((a) => a.slug).filter(Boolean));
+  const available = availableKeywords();
 
-  // Also check Sanity for slugs that exist but aren't in local published-articles.json
-  const liveSlugs = await getLiveSlugs();
-  if (liveSlugs.size > 0) {
-    log("keywordResearcher", "sanity-check", `${liveSlugs.size} live slugs fetched from Sanity`);
+  if (available.length < 14) {
+    log("keywordResearcher", "LOW-QUEUE", `only ${available.length} keywords left — add more to memory/keyword-queue.json`);
   }
-
-  const available = queue.filter((k) => !publishedKeywords.has(k));
 
   if (available.length === 0) {
     throw new Error("Keyword queue exhausted — all keywords have been published");
   }
 
   // Analyze recent topics to enforce standard diversity
-  const recentKeywords = published.slice(-7).map((a) => a.primaryKeyword);
+  const recentKeywords = published.slice(-7).map((a) => a.primaryKeyword || "");
   const recentStandards = recentKeywords.map((k) => {
     if (/9001/.test(k)) return "ISO 9001";
     if (/14001/.test(k)) return "ISO 14001";
@@ -192,22 +200,42 @@ async function pickKeyword() {
   // City diversity — no city repeated in last 10
   const recentCities = published.slice(-10).map((a) => a.targetCity).filter(Boolean);
 
-  const raw = await claudeCall(
-    SYSTEM_PROMPT,
-    `Available keywords (${available.length} remaining):\n${available.map((k, i) => `${i + 1}. ${k}`).join("\n")}\n\nAlready published (${published.length} articles, last 7 shown):\n${published.slice(-7).map((a) => `- [${a.articleType || "deep-guide"}] ${a.primaryKeyword}: "${a.title}"`).join("\n") || "None yet"}\n\n═══ DIVERSITY RULES (HARD) ═══\n\nSTANDARD ROTATION: These standards appeared 2+ times in last 7 — DO NOT pick: ${overrepresented.join(", ") || "none"}\n\nARTICLE TYPE ROTATION: These types appeared 2+ times in last 7 — DO NOT pick: ${overusedTypes.join(", ") || "none"}. Available types: ${ARTICLE_TYPES.join(", ")}\n\nTITLE RULE: ${completeUsedRecently ? 'The word "Complete" was used in a recent title — DO NOT use "Complete" in your title.' : '"Complete" not used recently, but still avoid the "[Topic]: Complete Guide for [Year]" pattern.'}\n\nCITY ROTATION: These cities were used in last 10 articles — DO NOT reuse: ${recentCities.join(", ") || "none"}. Ontario cities to choose from: ${ONTARIO_CITIES.join(", ")}. Or use null for geographically neutral topics.\n\nReturn ONLY valid JSON.`,
-    2048
-  );
+  const userPrompt =
+    `Available keywords (${available.length} remaining):\n${available.map((k, i) => `${i + 1}. ${k}`).join("\n")}\n\nAlready published (${published.length} articles, last 7 shown):\n${published.slice(-7).map((a) => `- [${a.articleType || "deep-guide"}] ${a.primaryKeyword}: "${a.title}"`).join("\n") || "None yet"}\n\n═══ DIVERSITY RULES (HARD) ═══\n\nSTANDARD ROTATION: These standards appeared 2+ times in last 7 — DO NOT pick: ${overrepresented.join(", ") || "none"}\n\nARTICLE TYPE ROTATION: These types appeared 2+ times in last 7 — DO NOT pick: ${overusedTypes.join(", ") || "none"}. Available types: ${ARTICLE_TYPES.join(", ")}\n\nTITLE RULE: ${completeUsedRecently ? 'The word "Complete" was used in a recent title — DO NOT use "Complete" in your title.' : '"Complete" not used recently, but still avoid the "[Topic]: Complete Guide for [Year]" pattern.'}\n\nCITY ROTATION: These cities were used in last 10 articles — DO NOT reuse: ${recentCities.join(", ") || "none"}. Ontario cities to choose from: ${ONTARIO_CITIES.join(", ")}. Or use null for geographically neutral topics.\n\nReturn ONLY valid JSON.`;
 
-  const cleaned = raw.replace(/```json\n?/g, "").replace(/```\n?/g, "");
-  const start = cleaned.indexOf("{");
-  const end = cleaned.lastIndexOf("}");
-  const result = JSON.parse(cleaned.slice(start, end + 1));
+  // The pick has to be a real queue entry (otherwise it is never marked used and
+  // the topic repeats) and must not collide with a published slug.
+  let result;
+  let problem = "";
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const raw = await claudeCall(
+      SYSTEM_PROMPT,
+      problem ? `${userPrompt}\n\nYOUR PREVIOUS ANSWER WAS REJECTED: ${problem} Fix that and answer again.` : userPrompt,
+      2048
+    );
+    result = parseJSONReply(raw);
 
-  // Guard: check if the generated title would produce a slug that already exists in Sanity
-  const candidateSlug = result.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 96);
-  if (liveSlugs.has(candidateSlug) || publishedSlugs.has(candidateSlug)) {
-    log("keywordResearcher", "DUPE-BLOCKED", `title "${result.title}" would produce slug "${candidateSlug}" which already exists — this keyword will be skipped by publisher`);
+    const picked = String(result.primaryKeyword || "").trim().toLowerCase();
+    const queued = available.find((k) => k.toLowerCase() === picked);
+    result.slug = slugify(result.title);
+
+    if (!queued) problem = `"${result.primaryKeyword}" is not in the available keyword list.`;
+    else if (isExcludedTopic(result.title)) problem = "AS9100 and ISO 27001 are not covered on the blog.";
+    else if (result.slug.length < 6) problem = "The title is too short to form a URL.";
+    else if (slugExists(result.slug)) problem = `The title produces the URL "${result.slug}", which is already published. Use a different title.`;
+    else {
+      result.primaryKeyword = queued;
+      problem = "";
+      break;
+    }
+    log("keywordResearcher", "pick-rejected", problem);
   }
+  if (problem) throw new Error(`Keyword pick failed: ${problem}`);
+
+  result.secondaryKeywords = Array.isArray(result.secondaryKeywords) ? result.secondaryKeywords : [];
+  result.h2Structure = Array.isArray(result.h2Structure) ? result.h2Structure : [];
+  result.faqQuestions = Array.isArray(result.faqQuestions) ? result.faqQuestions : [];
+  if (result.articleType === "case-study") result.articleType = "deep-guide";
 
   log("keywordResearcher", "picked", `"${result.primaryKeyword}" — ${result.reasoning}`);
   return result;
@@ -216,12 +244,11 @@ async function pickKeyword() {
 async function pickMegaKeyword() {
   log("keywordResearcher", "pick-mega", "selecting topic for mega-article");
 
-  const { queue } = loadQueue();
   const published = loadPublished();
   const publishedKeywords = new Set(published.map((a) => a.primaryKeyword));
   const publishedTitles = published.map((a) => a.title);
 
-  const available = queue.filter((k) => !publishedKeywords.has(k));
+  const available = availableKeywords();
 
   // Also include mega-specific keywords not in the regular queue
   const megaTopics = [
@@ -283,9 +310,8 @@ function addKeyword(keyword) {
 function getQueueStatus() {
   const { queue } = loadQueue();
   const published = loadPublished();
-  const publishedKeywords = new Set(published.map((a) => a.primaryKeyword));
-  const remaining = queue.filter((k) => !publishedKeywords.has(k));
-  return { total: queue.length, published: published.length, remaining: remaining.length };
+  const remaining = availableKeywords();
+  return { total: queue.length, published: published.length, remaining: remaining.length, next: remaining.slice(0, 14) };
 }
 
-module.exports = { pickKeyword, pickMegaKeyword, addKeyword, getQueueStatus };
+module.exports = { pickKeyword, pickMegaKeyword, addKeyword, getQueueStatus, isExcludedTopic };

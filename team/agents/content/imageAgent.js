@@ -479,6 +479,168 @@ async function repairDuplicateImages() {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// MARKDOWN BLOG — images as local files (no Sanity)
+// Used by contentManager.publishDaily and inlineImageAgent.
+// Source order follows CLAUDE.md: Pexels first, Gemini generation as fallback.
+// Nothing is written to disk here; callers get a processed buffer and publish it.
+// ═══════════════════════════════════════════════════════════════
+
+const PEXELS_MAX_PAGES = 3;
+const MIN_SOURCE_WIDTH = 1200;
+
+// What each scene shows, for alt text when the image is generated.
+const SCENE_ALT = {
+  quality: 'Quality inspectors reviewing parts on a manufacturing floor',
+  environmental: 'Industrial facility with landscaped grounds and rooftop solar panels',
+  safety: 'Industrial workers in hard hats and high-visibility vests on a plant floor',
+  medical: 'Technicians in cleanroom garments assembling medical devices',
+  automotive: 'Robotic arms working on an automotive parts production line',
+  audit: 'Auditor with a clipboard inspecting equipment on a manufacturing floor',
+  consultant: 'Two people in hard hats reviewing a process on a production floor',
+  manufacturing: 'CNC machines and workstations inside a manufacturing facility',
+  default: 'Inspectors examining products on a manufacturing production line',
+};
+
+function imageKey(source, sourceId) {
+  return `${source}:${sourceId}`;
+}
+
+/**
+ * Generate one image with Gemini at 16:9. Falls back to the previous image
+ * model if the configured one is not available on the key.
+ */
+async function generateGeminiImage(prompt) {
+  const { GEMINI_API_KEY, GEMINI_IMAGE_MODEL } = require('../shared/config');
+  if (!GEMINI_API_KEY) return null;
+
+  const { GoogleGenAI } = require('@google/genai');
+  const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
+  const models = [...new Set([GEMINI_IMAGE_MODEL, 'gemini-2.5-flash-image'])];
+
+  for (const model of models) {
+    try {
+      const response = await ai.models.generateContent({
+        model,
+        contents: prompt,
+        config: { responseModalities: ['IMAGE'], imageConfig: { aspectRatio: '16:9' } },
+      });
+      for (const part of response.candidates?.[0]?.content?.parts || []) {
+        if (part.inlineData?.data) return Buffer.from(part.inlineData.data, 'base64');
+      }
+      console.error(`  [imageAgent] Gemini (${model}) returned no image`);
+    } catch (err) {
+      console.error(`  [imageAgent] Gemini (${model}) error: ${err.message}`);
+    }
+  }
+  return null;
+}
+
+/**
+ * First unused landscape photo across the queries. Skips anything already in a
+ * published post (`used`) or already picked in this run (`exclude`).
+ */
+async function findPexelsPhoto(queries, { exclude = new Set(), used } = {}) {
+  const { PEXELS_API_KEY } = require('../shared/config');
+  if (!PEXELS_API_KEY) return null;
+
+  for (const query of queries) {
+    for (let page = 1; page <= PEXELS_MAX_PAGES; page++) {
+      let result;
+      try {
+        result = await httpsRequest({
+          hostname: 'api.pexels.com',
+          path: `/v1/search?query=${encodeURIComponent(query)}&per_page=${PEXELS_PER_PAGE}&page=${page}&orientation=landscape`,
+          method: 'GET',
+          headers: { Authorization: PEXELS_API_KEY },
+        });
+      } catch (err) {
+        console.error(`  [imageAgent] Pexels error for "${query}": ${err.message}`);
+        break;
+      }
+      if (result.status !== 200 || !Array.isArray(result.data.photos) || result.data.photos.length === 0) break;
+
+      const candidates = result.data.photos.filter((p) => {
+        const key = imageKey('pexels', p.id);
+        if (exclude.has(key) || used?.sourceIds.has(key)) return false;
+        if (p.width < MIN_SOURCE_WIDTH) return false;
+        const ratio = p.width / p.height;
+        return ratio >= 1.3 && ratio <= 2.1; // close enough to 16:9 that the crop keeps the subject
+      });
+      if (candidates.length === 0) continue;
+
+      // Not always the first hit, so similar topics don't converge on one photo.
+      const photo = candidates[Math.floor(Math.random() * Math.min(candidates.length, 6))];
+      const buffer = await httpsGetBuffer(photo.src.large2x || photo.src.large || photo.src.original);
+      console.log(`  [imageAgent] Pexels: photo ${photo.id} by ${photo.photographer} for "${query}"`);
+      return {
+        buffer,
+        alt: (photo.alt || '').trim(),
+        source: 'pexels',
+        sourceId: String(photo.id),
+        credit: `${photo.photographer} / Pexels`,
+        creditUrl: photo.url,
+      };
+    }
+  }
+  return null;
+}
+
+/**
+ * One publish-ready image (1200x675 WebP) from Pexels, else Gemini, else null.
+ * @returns {Promise<null | {buffer, width, height, sha256, alt, source, sourceId?, credit?, creditUrl?}>}
+ */
+async function sourceImage({ pexelsQueries = [], geminiPrompt, alt, exclude = new Set() }) {
+  const { processImage } = require('../shared/contentStore');
+  const { usedBlogImages, isBlogImageUsed } = require('../shared/imageRegistry');
+  const used = usedBlogImages();
+
+  const finish = async (raw) => {
+    const processed = await processImage(raw.buffer);
+    const image = { ...raw, ...processed, alt: raw.alt || alt };
+    if (isBlogImageUsed(image, used) || exclude.has(image.sha256)) return null;
+    if (image.sourceId) exclude.add(imageKey(image.source, image.sourceId));
+    exclude.add(image.sha256);
+    return image;
+  };
+
+  try {
+    const photo = await findPexelsPhoto(pexelsQueries, { exclude, used });
+    if (photo) {
+      const image = await finish(photo);
+      if (image) return image;
+    }
+  } catch (err) {
+    console.error(`  [imageAgent] Pexels image failed: ${err.message}`);
+  }
+
+  if (geminiPrompt) {
+    try {
+      const buffer = await generateGeminiImage(geminiPrompt);
+      if (buffer) {
+        const image = await finish({ buffer, alt, source: 'gemini', credit: 'AI-generated illustration' });
+        if (image) return image;
+      }
+    } catch (err) {
+      console.error(`  [imageAgent] Gemini image failed: ${err.message}`);
+    }
+  }
+  return null;
+}
+
+/** Hero image for an article, chosen from its topic. Manufacturing scenes only. */
+async function getHeroImage(article, { exclude = new Set() } = {}) {
+  const { detectScene, getSearchVariations } = require('./infographicAgent');
+  const topic = `${article.primaryKeyword || ''} ${article.title || ''}`;
+  const scene = detectScene(topic);
+  return sourceImage({
+    pexelsQueries: getSearchVariations(article.title || article.primaryKeyword || '', scene),
+    geminiPrompt: scene.prompt,
+    alt: SCENE_ALT[scene.id] || SCENE_ALT.default,
+    exclude,
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
 // EXPORTS
 // ═══════════════════════════════════════════════════════════════
 
@@ -491,6 +653,11 @@ module.exports = {
   uploadToSanity,
   patchMainImage,
   generateWithGemini,
+  // Markdown blog API
+  getHeroImage,
+  sourceImage,
+  generateGeminiImage,
+  findPexelsPhoto,
   // Legacy API (backward compat)
   findAndUploadImage,
   searchPexels,

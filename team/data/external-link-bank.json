@@ -1,0 +1,77 @@
+{
+  "note": "Approved outside sources. Articles may only link to URLs in this file. Every URL was checked on 2026-10-03: 'http' = returned 200 when fetched, 'search' = site blocks automated fetches, confirmed through search results. Add or remove entries freely; keep name and context accurate.",
+  "industries": {
+    "general_quality": [
+      { "url": "https://www.iso.org/standard/9001", "name": "ISO 9001:2026 on iso.org", "context": "official page for the current edition of ISO 9001, Quality management systems — Requirements", "verified": "search" },
+      { "url": "https://www.iso.org/home/insights-news/resources/iso-9001-explained.html", "name": "ISO's own explanation of ISO 9001", "context": "what ISO 9001 is, who uses it and what certification involves", "verified": "search" },
+      { "url": "https://scc-ccn.ca/accreditation", "name": "Standards Council of Canada accreditation", "context": "Canada's national accreditation body, which accredits the certification bodies that issue ISO certificates", "verified": "search" },
+      { "url": "https://scc-ccn.ca/accreditation/about-accreditation", "name": "Standards Council of Canada: about accreditation", "context": "how accreditation of certification bodies works in Canada", "verified": "search" },
+      { "url": "https://www.iafcertsearch.org/", "name": "IAF CertSearch", "context": "global database for checking whether an accredited management system certificate is valid", "verified": "http" }
+    ],
+    "manufacturing": [
+      { "url": "https://ised-isde.canada.ca/site/canadian-manufacturing-sector-gateway/en", "name": "Government of Canada manufacturing sector gateway", "context": "federal programs, data and resources for Canadian manufacturers", "verified": "http" },
+      { "url": "https://www.statcan.gc.ca/en/subjects-start/manufacturing", "name": "Statistics Canada manufacturing data", "context": "official statistics on Canadian manufacturing", "verified": "http" },
+      { "url": "https://emccanada.org/", "name": "Excellence in Manufacturing Consortium", "context": "Canadian manufacturing association offering peer networks and training", "verified": "http" },
+      { "url": "https://www.nist.gov/mep", "name": "NIST Manufacturing Extension Partnership", "context": "US public-private network supporting small and mid-sized manufacturers", "verified": "http" }
+    ],
+    "automotive": [
+      { "url": "https://www.iatfglobaloversight.org/", "name": "IATF Global Oversight", "context": "the body that governs IATF 16949 certification, rules and sanctioned interpretations", "verified": "http" },
+      { "url": "https://www.iatfglobaloversight.org/iatf-169492016/about/", "name": "IATF: about IATF 16949:2016", "context": "official description of the automotive quality management standard", "verified": "http" },
+      { "url": "https://www.aiag.org/", "name": "Automotive Industry Action Group (AIAG)", "context": "publisher of the automotive core tools manuals: APQP, PPAP, FMEA, MSA and SPC", "verified": "http" },
+      { "url": "https://www.aiag.org/expertise-areas/quality", "name": "AIAG quality resources", "context": "AIAG's quality initiatives, core tools and training for automotive suppliers", "verified": "http" },
+      { "url": "https://www.apma.ca/", "name": "Automotive Parts Manufacturers' Association", "context": "Canada's national association for automotive parts suppliers", "verified": "http" },
+      { "url": "https://vda-qmc.de/en/", "name": "VDA Quality Management Center", "context": "publisher of the VDA volumes used by German automakers, including VDA 6.3 process audits", "verified": "http" }
+    ],
+    "environmental": [
+      { "url": "https://www.iso.org/home/insights-news/resources/iso-14001-explained.html", "name": "ISO's own explanation of ISO 14001", "context": "what an environmental management system under ISO 14001 covers", "verified": "search" },
+      { "url": "https://www.ontario.ca/page/environmental-compliance-approval", "name": "Ontario environmental compliance approvals", "context": "provincial approvals required for emissions, discharges and waste activities", "verified": "http" },
+      { "url": "https://www.ontario.ca/laws/statute/90e19", "name": "Ontario Environmental Protection Act", "context": "the province's main environmental statute, a core compliance obligation for Ontario plants", "verified": "http" },
+      { "url": "https://laws-lois.justice.gc.ca/eng/acts/c-15.31/", "name": "Canadian Environmental Protection Act, 1999", "context": "federal environmental law covering pollution prevention and toxic substances", "verified": "http" },
+      { "url": "https://www.canada.ca/en/services/environment/pollution-waste-management/national-pollutant-release-inventory.html", "name": "National Pollutant Release Inventory", "context": "federal reporting program for pollutant releases, disposals and transfers", "verified": "search" }
+    ],
+    "occupational_safety": [
+      { "url": "https://www.iso.org/standard/63787.html", "name": "ISO 45001:2018 on iso.org", "context": "official page for ISO 45001, Occupational health and safety management systems", "verified": "search" },
+      { "url": "https://www.iso.org/home/insights-news/resources/iso-45001-explained-what-it-is.html", "name": "ISO's own explanation of ISO 45001", "context": "what ISO 45001 requires and how it is used", "verified": "search" },
+      { "url": "https://www.ontario.ca/laws/statute/90o01", "name": "Ontario Occupational Health and Safety Act", "context": "the legal duties of Ontario employers, supervisors and workers", "verified": "http" },
+      { "url": "https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives", "name": "Ontario guide to health and safety committees", "context": "provincial guidance on joint health and safety committees and worker representatives", "verified": "http" },
+      { "url": "https://www.ccohs.ca/oshanswers/hsprograms/hazard/hazard_identification.html", "name": "CCOHS: hazard identification", "context": "Canadian Centre for Occupational Health and Safety guidance on identifying workplace hazards", "verified": "http" },
+      { "url": "https://www.ccohs.ca/oshanswers/hsprograms/hazard/risk_assessment.html", "name": "CCOHS: risk assessment", "context": "Canadian Centre for Occupational Health and Safety guidance on assessing and ranking risks", "verified": "http" },
+      { "url": "https://www.wsib.ca/en", "name": "Workplace Safety and Insurance Board (WSIB)", "context": "Ontario's workplace insurer, including its Health and Safety Excellence program", "verified": "http" }
+    ],
+    "healthcare_medical": [
+      { "url": "https://www.iso.org/standard/59752.html", "name": "ISO 13485:2016 on iso.org", "context": "official page for ISO 13485, Medical devices — Quality management systems", "verified": "search" },
+      { "url": "https://laws-lois.justice.gc.ca/eng/regulations/sor-98-282/", "name": "Canada's Medical Devices Regulations", "context": "the federal regulations that set licensing and quality system requirements for medical devices", "verified": "http" },
+      { "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/about-medical-devices.html", "name": "Health Canada: about medical devices", "context": "how Health Canada classifies and licenses medical devices", "verified": "search" }
+    ],
+    "food_beverage": [
+      { "url": "https://www.iso.org/standard/65464.html", "name": "ISO 22000:2018 on iso.org", "context": "official page for ISO 22000, Food safety management systems", "verified": "search" },
+      { "url": "https://www.fssc.com/", "name": "FSSC (Foundation FSSC)", "context": "owner of the FSSC 22000 certification scheme", "verified": "http" },
+      { "url": "https://www.fssc.com/fssc-22000/scheme-documents/", "name": "FSSC 22000 scheme documents", "context": "the current scheme requirements and guidance documents", "verified": "search" },
+      { "url": "https://inspection.canada.ca/en/food-safety-industry", "name": "Canadian Food Inspection Agency: food safety for industry", "context": "federal food safety requirements, licensing and preventive controls", "verified": "http" },
+      { "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2018-108/", "name": "Safe Food for Canadians Regulations", "context": "federal regulations on licensing, preventive control plans and traceability", "verified": "http" },
+      { "url": "https://mygfsi.com/", "name": "Global Food Safety Initiative (GFSI)", "context": "the body that benchmarks food safety certification programs such as FSSC 22000 and SQF", "verified": "http" },
+      { "url": "https://www.fao.org/fao-who-codexalimentarius/en/", "name": "Codex Alimentarius", "context": "the FAO/WHO food standards, including the HACCP principles ISO 22000 builds on", "verified": "http" }
+    ],
+    "laboratory": [
+      { "url": "https://www.iso.org/standard/66912.html", "name": "ISO/IEC 17025:2017 on iso.org", "context": "official page for ISO/IEC 17025, competence of testing and calibration laboratories", "verified": "search" },
+      { "url": "https://ilac.org/", "name": "International Laboratory Accreditation Cooperation (ILAC)", "context": "the international arrangement under which laboratory accreditations are mutually recognised", "verified": "http" },
+      { "url": "https://cala.ca/", "name": "Canadian Association for Laboratory Accreditation (CALA)", "context": "Canadian accreditation body and proficiency testing provider for laboratories", "verified": "http" },
+      { "url": "https://www.bipm.org/en/committees/jc/jcgm/publications", "name": "BIPM: Guide to the expression of uncertainty in measurement", "context": "the GUM and related documents used to evaluate measurement uncertainty", "verified": "http" }
+    ],
+    "construction": [
+      { "url": "https://www.cca-acc.com/", "name": "Canadian Construction Association", "context": "national association for the construction industry", "verified": "http" },
+      { "url": "https://www.ihsa.ca/", "name": "Infrastructure Health and Safety Association", "context": "Ontario's safety association for construction, including the COR program", "verified": "http" },
+      { "url": "https://www.ontario.ca/laws/regulation/910213", "name": "Ontario Regulation 213/91: Construction Projects", "context": "the regulation setting safety requirements for construction projects in Ontario", "verified": "http" }
+    ],
+    "oil_gas_energy": [
+      { "url": "https://www.cer-rec.gc.ca/en/", "name": "Canada Energy Regulator", "context": "federal regulator of pipelines, power lines and energy development", "verified": "http" },
+      { "url": "https://www.api.org/products-and-services/api-monogram-and-apiqr", "name": "API Monogram and APIQR programs", "context": "the American Petroleum Institute's quality programs for oil and gas equipment manufacturers", "verified": "http" }
+    ],
+    "mining": [
+      { "url": "https://mining.ca/towards-sustainable-mining/", "name": "Towards Sustainable Mining", "context": "the Mining Association of Canada's performance standard for mine sites", "verified": "http" },
+      { "url": "https://www.ontario.ca/laws/regulation/900854", "name": "Ontario Regulation 854: Mines and Mining Plants", "context": "the regulation setting safety requirements for Ontario mines and mining plants", "verified": "http" }
+    ],
+    "aerospace": [],
+    "information_security": []
+  }
+}

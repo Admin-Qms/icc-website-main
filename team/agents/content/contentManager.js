@@ -3,7 +3,19 @@ const path = require("path");
 const { log } = require("../shared/logger");
 // Email notifications removed — blog results are included in the consolidated morning report
 const { today } = require("../shared/logger");
-const { MEMORY_DIR, REPORTS_DIR } = require("../shared/config");
+const { REPORTS_DIR, SITE_URL, BLOG_AUTHOR } = require("../shared/config");
+const {
+  ensureDirs,
+  slugify,
+  slugExists,
+  todayLocal,
+  toPlainText,
+  countWords,
+  normalizeBody,
+  listPosts,
+  processImage,
+  publishPost,
+} = require("../shared/contentStore");
 const keywordResearcher = require("./keywordResearcher");
 const articleWriter = require("./articleWriter");
 const contextLoader = require("./contextLoader");
@@ -22,275 +34,331 @@ const contentEnhancer = require("./contentEnhancer");
 const rewritePatcher = require("./rewritePatcher");
 const telegram = require("../shared/telegram");
 
-const PUBLISHED_PATH = path.join(MEMORY_DIR, "published-articles.json");
-const CALENDAR_PATH = path.join(MEMORY_DIR, "content-calendar.json");
-const MAX_REWRITES = 2; // With context-aware writer, 1 targeted patch should suffice
+const MAX_REWRITES = 2; // targeted patch passes before the run gives up
+const MAX_INLINE_IMAGES = 2;
 
+// The Markdown posts are the record of what has been published — there is no
+// separate published-articles.json to keep in step.
 function loadPublished() {
-  return JSON.parse(fs.readFileSync(PUBLISHED_PATH, "utf-8"));
+  return listPosts().map((p) => ({
+    date: p.date,
+    title: p.title,
+    primaryKeyword: p.primaryKeyword,
+    articleType: p.articleType,
+    targetCity: p.targetCity || null,
+    metaDescription: p.description,
+    slug: p.slug,
+    url: `${SITE_URL}${p.url}`,
+    wordCount: p.wordCount,
+    category: p.category,
+    readTime: p.readTime,
+    image: p.image,
+  }));
 }
 
-function savePublished(data) {
-  fs.writeFileSync(PUBLISHED_PATH, JSON.stringify(data, null, 2) + "\n");
+function savePublished() {
+  // Kept for the (unscheduled) mega pipeline's call sites; publishing a post is the save.
 }
 
 // ═══════════════════════════════════════════════════════════════════
-// DAILY BLOG PIPELINE — v2 (context-aware writer, QA after images)
+// DAILY BLOG PIPELINE — v3 (Markdown in the repo, blocking quality gate)
 // ═══════════════════════════════════════════════════════════════════
 //
-// New pipeline order:
-//   1. Keyword Research
-//   2. Context Loading (links, slugs, used URLs)
-//   3. Article Writing (with full context + enhancement built-in)
-//   4. Content Cleaning (strip artifacts, fix formatting)
+//   0. Guard — one article per day unless --force
+//   1. Keyword Research (picks from the queue, fixes the slug)
+//   2. Context Loading (real site routes, link bank, recent posts)
+//   3. Article Writing
+//   4. Content Cleaning
 //   5. Grammar Check
 //   6. Originality Check
-//   7. Link Validation (verify writer's links, patch if deficit)
-//   8. Hero Image (Pexels)
-//   9. Inline Images (Gemini → Pexels → skip)
-//  10. Featured Image (Gemini → Pexels → none)
-//  11. QA Review (sees complete article WITH images)
-//  12. Publish to Sanity
-//  13. Page Audit
+//   7. Link Validation
+//   8. Text QA + targeted patches (max 2) — a failure stops here, before any image spend
+//   9. Hero + inline images (Pexels, then Gemini), processed to 1200x675 in memory
+//  10. Final QA — every check, including images
+//  11. Publish — images and Markdown written to the site repo in one step
 //
-// KEY CHANGES from v1:
-// - contextLoader feeds writer real link targets + used URL history
-// - contentEnhancer REMOVED — enhancement rules merged into writer prompt
-// - QA moved AFTER inline images so it sees [SANITY_IMAGE:] markers
-// - Rewrite loop uses targeted patchArticle() instead of full regeneration
-// - MAX_REWRITES reduced to 1 (first draft should score 95+)
+// Nothing is written to content/ or public/ until step 10 passes, so a failed
+// run leaves the repo untouched.
 // ═══════════════════════════════════════════════════════════════════
 
-async function publishDaily() {
-  const startTime = Date.now();
-  log("contentManager", "pipeline-v2", "starting daily blog publish");
+function toPost(article, keywordBrief, slug, date) {
+  return {
+    slug,
+    title: article.title,
+    description: article.metaDescription,
+    date,
+    author: BLOG_AUTHOR,
+    category: article.category,
+    primaryKeyword: article.primaryKeyword,
+    keywords: [article.primaryKeyword, ...(article.secondaryKeywords || [])].filter(Boolean),
+    articleType: keywordBrief.articleType || "deep-guide",
+    targetCity: keywordBrief.targetCity || undefined,
+    body: article.body,
+  };
+}
 
-  let keywordBrief, context, article, imageResult, infographicResult, qaResult, publishResult, auditResult;
+/**
+ * A ready-written draft, published through the same checks and image steps
+ * without calling a writer. Fields: title, metaDescription, primaryKeyword,
+ * secondaryKeywords[], body or bodyFile, optional category/articleType/targetCity,
+ * and optional hero { path, alt, credit } for a local image.
+ */
+function loadFixture(fixturePath) {
+  const file = path.resolve(fixturePath);
+  const draft = JSON.parse(fs.readFileSync(file, "utf-8"));
+  const dir = path.dirname(file);
+  const body = draft.bodyFile ? fs.readFileSync(path.resolve(dir, draft.bodyFile), "utf-8") : draft.body;
+  for (const key of ["title", "metaDescription", "primaryKeyword"]) {
+    if (!draft[key]) throw new Error(`Draft ${fixturePath} is missing "${key}"`);
+  }
+  if (!body) throw new Error(`Draft ${fixturePath} has no body or bodyFile`);
+
+  const keywordBrief = {
+    title: draft.title,
+    primaryKeyword: draft.primaryKeyword,
+    secondaryKeywords: draft.secondaryKeywords || [],
+    metaDescription: draft.metaDescription,
+    articleType: draft.articleType || "deep-guide",
+    targetCity: draft.targetCity || null,
+    slug: draft.slug || slugify(draft.title),
+  };
+  const article = {
+    title: draft.title,
+    body,
+    metaDescription: draft.metaDescription,
+    primaryKeyword: draft.primaryKeyword,
+    secondaryKeywords: draft.secondaryKeywords || [],
+    category: draft.category || articleWriter.detectCategory(draft.primaryKeyword),
+    wordCount: countWords(body),
+  };
+  const hero = draft.hero?.path ? { ...draft.hero, path: path.resolve(dir, draft.hero.path) } : null;
+  return { keywordBrief, article, hero };
+}
+
+async function loadLocalHero(hero) {
+  const processed = await processImage(fs.readFileSync(hero.path));
+  return {
+    ...processed,
+    alt: hero.alt,
+    source: "local",
+    sourceId: path.basename(hero.path),
+    credit: hero.credit,
+  };
+}
+
+function savePreview(post) {
+  const dir = path.join(REPORTS_DIR, "preview", post.slug);
+  fs.rmSync(dir, { recursive: true, force: true });
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, "article.md"), `# ${post.title}\n\n> ${post.description}\n\n${post.body}\n`);
+  fs.writeFileSync(path.join(dir, "hero.webp"), post.hero.buffer);
+  for (const img of post.inlineImages || []) fs.writeFileSync(path.join(dir, img.file), img.buffer);
+  return dir;
+}
+
+async function publishDaily(options = {}) {
+  const { dryRun = false, force = false, fixture = null } = options;
+  const startTime = Date.now();
+  const date = todayLocal();
+  log("contentManager", "pipeline-v3", `starting daily blog publish${dryRun ? " (dry run)" : ""}${fixture ? ` from ${fixture}` : ""}`);
+
+  let keywordBrief, context, article, qaResult;
+
+  const fail = (reason, extra = {}) => {
+    log("contentManager", "failed", reason);
+    if (!dryRun) {
+      telegram.notifyError("Blog Pipeline", `"${keywordBrief?.title || "no title"}"\nKeyword: ${keywordBrief?.primaryKeyword || "n/a"}\n${reason}\n${(extra.issues || []).join("\n")}`).catch(() => {});
+    }
+    return { success: false, reason, keyword: keywordBrief?.primaryKeyword, title: keywordBrief?.title, ...extra };
+  };
 
   try {
-    // Step 1: Pick keyword
-    log("contentManager", "step-1", "keyword research");
-    keywordBrief = await keywordResearcher.pickKeyword();
-    log("contentManager", "keyword", `[${keywordBrief.articleType || "deep-guide"}] "${keywordBrief.primaryKeyword}" → "${keywordBrief.title}"`);
+    ensureDirs();
 
-    // Step 2: Load context (links, existing posts, used URLs)
-    log("contentManager", "step-2", "loading context");
-    context = await contextLoader.loadContext(keywordBrief);
-    log("contentManager", "context", `${context.externalLinks.length} external links available, ${context.internalLinks.blogPosts.length} blog posts for cross-linking`);
-
-    // Step 2.5: Load diversity brief (patterns to avoid)
-    log("contentManager", "step-2.5", "loading diversity brief");
-    try {
-      const diversityBrief = await contextLoader.loadDiversityBrief();
-      context.diversityBrief = diversityBrief;
-      log("contentManager", "diversity", diversityBrief ? `brief loaded (${diversityBrief.split("\n").length} lines)` : "no brief available");
-    } catch (err) {
-      log("contentManager", "diversity-error", err.message);
-      context.diversityBrief = "";
-    }
-
-    // Step 3: Write article WITH context (enhancement built into prompt)
-    log("contentManager", "step-3", "writing article (context-aware)");
-    article = await articleWriter.writeArticle(keywordBrief, context);
-    log("contentManager", "article", `${article.wordCount} words, ${article.category}`);
-
-    // Step 4: Clean article (strip artifacts, fix formatting)
-    log("contentManager", "step-4", "cleaning article");
-    article = await contentCleaner.clean(article);
-    log("contentManager", "cleaned", `"${article.title}" — ${article.wordCount} words`);
-
-    // Step 5: Grammar check
-    log("contentManager", "step-5", "grammar check");
-    try {
-      const grammarResult = await grammarAgent.checkGrammar(article);
-      if (grammarResult.totalCorrections > 0) {
-        article.body = grammarResult.correctedContent;
-        log("contentManager", "grammar", `${grammarResult.totalCorrections} corrections (${grammarResult.overallGrade})`);
-      } else {
-        log("contentManager", "grammar", "no corrections needed");
+    // Step 0: one article per day. A dry run publishes nothing, so it is always allowed.
+    if (!dryRun && !force) {
+      const already = listPosts().find((p) => p.date === date);
+      if (already) {
+        log("contentManager", "skip", `already published today: ${already.slug}`);
+        return { success: false, skipped: true, reason: `An article dated ${date} is already published (/blog/${already.slug}). Use --force to publish another.` };
       }
-    } catch (err) {
-      log("contentManager", "grammar-error", err.message);
     }
 
-    // Step 6: Plagiarism / originality check (with self-similarity detection)
-    log("contentManager", "step-6", "originality check (with self-plagiarism)");
-    try {
-      // Load recent articles for self-plagiarism comparison
-      let existingArticles = [];
+    let localHero = null;
+
+    if (fixture) {
+      ({ keywordBrief, article, hero: localHero } = loadFixture(fixture));
+      context = await contextLoader.loadContext(keywordBrief);
+      log("contentManager", "draft", `"${article.title}" — ${article.wordCount} words`);
+    } else {
+      // Step 1: Pick keyword
+      log("contentManager", "step-1", "keyword research");
+      keywordBrief = await keywordResearcher.pickKeyword();
+      log("contentManager", "keyword", `[${keywordBrief.articleType || "deep-guide"}] "${keywordBrief.primaryKeyword}" → "${keywordBrief.title}"`);
+
+      // Step 2: Load context (real routes, link bank, recent posts)
+      log("contentManager", "step-2", "loading context");
+      context = await contextLoader.loadContext(keywordBrief);
+      log("contentManager", "context", `${context.externalLinks.length} external links available, ${context.internalLinks.blogPosts.length} blog posts for cross-linking`);
       try {
-        const { sanityQuery } = require("../shared/sanity");
-        const recentPosts = await sanityQuery(
-          '*[_type == "blogPost"] | order(publishedAt desc)[0...15]{ title, body }'
-        );
-        existingArticles = (recentPosts || []).map((p) => {
-          let bodyText = "";
-          if (Array.isArray(p.body)) {
-            for (const block of p.body) {
-              if (Array.isArray(block.children)) {
-                for (const child of block.children) {
-                  if (child.text) bodyText += child.text + " ";
-                }
-              }
-            }
-          }
-          return { title: p.title, body: bodyText.trim() };
-        });
+        context.diversityBrief = await contextLoader.loadDiversityBrief();
       } catch (err) {
-        log("contentManager", "self-plagiarism-load", `skipped: ${err.message}`);
+        log("contentManager", "diversity-error", err.message);
+        context.diversityBrief = "";
       }
 
-      const origResult = await plagiarismChecker.checkOriginality(article, existingArticles);
-      log("contentManager", "originality", `${origResult.score}/100 — ${origResult.pass ? "PASS" : "NEEDS WORK"}`);
-      if (!origResult.pass && origResult.rewriteInstructions) {
-        log("contentManager", "originality-rewrite", "rewriting for uniqueness");
-        article = await articleWriter.writeArticle({
-          ...keywordBrief,
-          title: article.title,
-          rewriteInstructions: `ORIGINALITY ISSUES: ${origResult.rewriteInstructions}. Flagged sentences: ${(origResult.flaggedSentences || []).map((f) => f.text).join("; ")}`,
-        }, context);
+      // Step 3: Write article
+      log("contentManager", "step-3", "writing article (context-aware)");
+      article = await articleWriter.writeArticle(keywordBrief, context);
+      log("contentManager", "article", `${article.wordCount} words, ${article.category}`);
+
+      // Step 4: Clean article (strip artifacts, fix formatting)
+      log("contentManager", "step-4", "cleaning article");
+      try {
         article = await contentCleaner.clean(article);
+        log("contentManager", "cleaned", `"${article.title}" — ${article.wordCount} words`);
+      } catch (err) {
+        log("contentManager", "clean-error", err.message);
       }
-    } catch (err) {
-      log("contentManager", "originality-error", err.message);
+
+      // Step 5: Grammar check
+      log("contentManager", "step-5", "grammar check");
+      try {
+        const grammarResult = await grammarAgent.checkGrammar(article);
+        if (grammarResult.totalCorrections > 0) {
+          article.body = grammarResult.correctedContent;
+          log("contentManager", "grammar", `${grammarResult.totalCorrections} corrections (${grammarResult.overallGrade})`);
+        } else {
+          log("contentManager", "grammar", "no corrections needed");
+        }
+      } catch (err) {
+        log("contentManager", "grammar-error", err.message);
+      }
+
+      // Step 6: Originality check against the most recent posts
+      log("contentManager", "step-6", "originality check (with self-plagiarism)");
+      try {
+        const existingArticles = listPosts().slice(-15).map((p) => ({ title: p.title, body: toPlainText(p.body) }));
+        const origResult = await plagiarismChecker.checkOriginality(article, existingArticles);
+        log("contentManager", "originality", `${origResult.score}/100 — ${origResult.pass ? "PASS" : "NEEDS WORK"}`);
+        if (!origResult.pass && origResult.rewriteInstructions) {
+          log("contentManager", "originality-rewrite", "rewriting for uniqueness");
+          article = await articleWriter.writeArticle({
+            ...keywordBrief,
+            rewriteInstructions: `ORIGINALITY ISSUES: ${origResult.rewriteInstructions}. Flagged sentences: ${(origResult.flaggedSentences || []).map((f) => f.text).join("; ")}`,
+          }, context);
+          article = await contentCleaner.clean(article);
+        }
+      } catch (err) {
+        log("contentManager", "originality-error", err.message);
+      }
+
+      // Step 7: Validate links (drop bad ones, top up if short)
+      log("contentManager", "step-7", "validating links");
+      try {
+        article = await linkBuilder.validateLinks(article, context);
+        log("contentManager", "links", `${article.linkReport?.totalLinks || 0} links (${article.linkReport?.status || "ok"})`);
+      } catch (err) {
+        log("contentManager", "links-error", err.message);
+      }
     }
 
-    // Step 7: Validate links (verify writer's links, patch if deficit)
-    log("contentManager", "step-7", "validating links");
-    try {
-      article = await linkBuilder.validateLinks(article, context);
-      log("contentManager", "links", `${article.linkReport?.totalLinks || 0} links (${article.linkReport?.status || "ok"})`);
-    } catch (err) {
-      log("contentManager", "links-error", err.message);
+    const slug = keywordBrief.slug || slugify(article.title);
+    if (slugExists(slug)) {
+      return fail(`The URL /blog/${slug} is already published — existing posts are never overwritten`);
     }
 
-    // Step 8: Find and upload hero image
-    log("contentManager", "step-8", "finding hero image");
-    try {
-      imageResult = await imageAgent.findAndUploadImage(article);
-      log("contentManager", "image", `${imageResult.source}: ${imageResult.photographer}`);
-    } catch (err) {
-      log("contentManager", "image-error", err.message);
-      imageResult = {
-        assetId: null,
-        url: null,
-        altText: article.title,
-        photographer: "none",
-        source: "failed",
-      };
-    }
+    // Step 8: Text QA, with targeted patches. Images come after, so a draft
+    // that can't pass costs nothing more.
+    log("contentManager", "step-8", "text QA");
+    article.body = normalizeBody(article.body, article.title);
+    qaResult = await contentQA.validateLocal(toPost(article, keywordBrief, slug, date), { phase: "text" });
 
-    // Step 9: Inline images (Gemini → Pexels → skip)
-    log("contentManager", "step-9", "inline image generation");
-    let inlineImageResult = { count: 0 };
-    try {
-      const slug = article.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 80);
-      inlineImageResult = await inlineImageAgent.processInlineImages(article, slug);
-      article.body = inlineImageResult.body;
-      log("contentManager", "inline-images", `${inlineImageResult.count} images placed`);
-    } catch (err) {
-      log("contentManager", "inline-images-error", err.message);
-    }
-
-    // Step 10: Generate featured hero image (Gemini → Pexels → none)
-    log("contentManager", "step-10", "featured image generation");
-    try {
-      const slug = article.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 80);
-      infographicResult = await infographicAgent.getArticleImage(article, slug);
-      log("contentManager", "featured-image", `${infographicResult.type}: ${infographicResult.type === "gemini" ? "Gemini photo" : infographicResult.type === "pexels" ? "Pexels fallback" : "skipped"}`);
-    } catch (err) {
-      log("contentManager", "featured-image-error", err.message);
-      infographicResult = { type: "none", reason: err.message };
-    }
-
-    // Step 11: QA review (NOW sees complete article with images)
-    log("contentManager", "step-11", "QA review (post-images)");
-    qaResult = await contentQA.reviewArticle(article, imageResult, inlineImageResult.count);
-
-    // If QA fails, try targeted patching (not full rewrite)
-    let rewrites = 0;
-    while (!qaResult.pass && rewrites < MAX_REWRITES) {
-      rewrites++;
-      log("contentManager", "patch", `attempt ${rewrites} — score ${qaResult.score}/100`);
-
-      // Use targeted patcher instead of full rewrite
+    let patches = 0;
+    while (!qaResult.pass && patches < MAX_REWRITES) {
+      patches++;
+      log("contentManager", "patch", `attempt ${patches} — ${qaResult.issues.join(" | ")}`);
       article = await rewritePatcher.patchArticle(article, qaResult, context);
-
-      // Re-run QA
-      qaResult = await contentQA.reviewArticle(article, imageResult, inlineImageResult.count);
+      article.body = normalizeBody(article.body, article.title);
+      qaResult = await contentQA.validateLocal(toPost(article, keywordBrief, slug, date), { phase: "text" });
     }
 
     if (!qaResult.pass) {
-      log("contentManager", "failed", `QA failed after ${rewrites} patches — score ${qaResult.score}/100`);
-      telegram.notifyError("Blog Pipeline", `"${keywordBrief.title}"\nType: ${keywordBrief.articleType || "deep-guide"}\nKeyword: ${keywordBrief.primaryKeyword}\nQA Score: ${qaResult.score}/100\nIssues: ${(qaResult.issues || []).join(", ") || "unknown"}`).catch(() => {});
-      return { success: false, reason: "QA failed", score: qaResult.score, keyword: keywordBrief.primaryKeyword };
+      return fail(`Quality checks failed after ${patches} patch attempt(s)`, { issues: qaResult.issues, score: qaResult.score, qaChecks: qaResult.checks });
+    }
+    log("contentManager", "text-qa", `passed ${qaResult.score}`);
+
+    // Step 9: Images — held in memory until the final gate passes
+    log("contentManager", "step-9", "sourcing images");
+    const exclude = new Set();
+    const hero = localHero ? await loadLocalHero(localHero) : await imageAgent.getHeroImage(article, { exclude });
+    if (!hero) {
+      return fail("No hero image could be sourced — set PEXELS_API_KEY or GEMINI_API_KEY in team/.env");
+    }
+    exclude.add(hero.sha256);
+    log("contentManager", "image", `hero from ${hero.source}${hero.credit ? ` (${hero.credit})` : ""}`);
+
+    const inlineImageResult = await inlineImageAgent.processInlineImagesLocal(article, slug, { exclude, max: MAX_INLINE_IMAGES });
+    article.body = normalizeBody(inlineImageResult.body, article.title);
+    log("contentManager", "inline-images", `${inlineImageResult.count} images placed`);
+
+    // Step 10: Final gate — every check, on exactly what will be written
+    log("contentManager", "step-10", "final QA");
+    const post = { ...toPost(article, keywordBrief, slug, date), hero, inlineImages: inlineImageResult.images };
+    const claimsCheck = qaResult.checks.find((c) => c.id === "claims-audit");
+    qaResult = await contentQA.validateLocal(post, { phase: "final", claimsCheck });
+    if (!qaResult.pass) {
+      return fail("Final quality checks failed", { issues: qaResult.issues, score: qaResult.score, qaChecks: qaResult.checks });
     }
 
-    // Step 12: Publish to Sanity
-    log("contentManager", "step-12", "publishing to Sanity");
-    publishResult = await sanityPublisher.publishToSanity(article, imageResult, infographicResult);
-
-    // Step 13: Page Auditor — final gatekeeper
-    log("contentManager", "step-13", "page audit");
-    try {
-      auditResult = await pageAuditor.auditPage(publishResult.url);
-      log("contentManager", "audit", `${publishResult.url}: ${auditResult.score}/100 — ${auditResult.pass ? "PASS" : "FAIL"}`);
-    } catch (err) {
-      log("contentManager", "audit-error", err.message);
-      auditResult = { pass: true, score: 0 };
-    }
-
-    // Step 14: Record the publication
-    const published = loadPublished();
     const record = {
-      date: today(),
+      date,
       title: article.title,
       primaryKeyword: keywordBrief.primaryKeyword,
-      secondaryKeywords: keywordBrief.secondaryKeywords,
+      secondaryKeywords: keywordBrief.secondaryKeywords || [],
       articleType: keywordBrief.articleType || "deep-guide",
       targetCity: keywordBrief.targetCity || null,
-      metaDescription: article.metaDescription || keywordBrief.metaDescription || "",
-      slug: publishResult.slug,
-      url: publishResult.url,
-      documentId: publishResult.documentId,
-      wordCount: article.wordCount,
+      metaDescription: article.metaDescription,
+      slug,
+      wordCount: qaResult.wordCount,
+      readTime: `${qaResult.readTime} min read`,
       qaScore: qaResult.score,
-      qaChecks: qaResult.checks || [],
-      qaIssues: qaResult.issues || [],
-      qaSuggestions: qaResult.suggestions || [],
-      auditScore: auditResult?.score || null,
+      qaChecks: qaResult.checks.map((c) => ({ id: c.id, pass: c.pass, skipped: Boolean(c.skipped), message: c.message })),
       category: article.category,
-      readTime: article.readTime,
-      image: {
-        source: imageResult.source,
-        photographer: imageResult.photographer,
-        assetId: imageResult.assetId,
-        pexelsId: imageResult.pexelsId || null,
-      },
-      featuredImage: infographicResult?.type || "none",
-      inlineImages: inlineImageResult?.count || 0,
-      publishedAt: publishResult.publishedAt,
-      pipelineDurationMs: Date.now() - startTime,
+      image: { source: hero.source, photographer: hero.credit || hero.source, sourceId: hero.sourceId || null },
+      inlineImages: inlineImageResult.count,
     };
-    published.push(record);
-    savePublished(published);
 
-    // Save article to reports
-    const reportPath = path.join(REPORTS_DIR, "content", `${today()}-${publishResult.slug}.md`);
+    if (dryRun) {
+      const previewDir = savePreview(post);
+      log("contentManager", "dry-run", `all checks passed — preview in ${previewDir}, nothing published`);
+      return { success: true, dryRun: true, previewDir, url: null, ...record, pipelineDurationMs: Date.now() - startTime };
+    }
+
+    // Step 11: Publish — images, then the Markdown file
+    log("contentManager", "step-11", "publishing to content/blog");
+    const publishResult = publishPost(post);
+
     try {
-      fs.writeFileSync(reportPath, `# ${article.title}\n\n${article.body}`);
-    } catch { /* ok */ }
+      fs.writeFileSync(path.join(REPORTS_DIR, "content", `${date}-${slug}.md`), `# ${article.title}\n\n${article.body}`);
+    } catch { /* reports are optional */ }
 
     const duration = Math.round((Date.now() - startTime) / 1000);
-    log("contentManager", "complete", `published in ${duration}s — ${publishResult.url}`);
+    log("contentManager", "complete", `published in ${duration}s — ${publishResult.localUrl}`);
 
-    telegram.notifySuccess("Blog Published", `"${article.title}"\nType: ${keywordBrief.articleType || "deep-guide"}\nKeyword: ${keywordBrief.primaryKeyword}\nQA Score: ${qaResult.score}/100\nWords: ${article.wordCount}\nURL: ${publishResult.url}\nDuration: ${duration}s`).catch(() => {});
+    telegram.notifySuccess("Blog Published", `"${article.title}"\nKeyword: ${keywordBrief.primaryKeyword}\nChecks: ${qaResult.score}\nWords: ${record.wordCount}\nURL: ${publishResult.url}\nDuration: ${duration}s`).catch(() => {});
 
-    return { success: true, ...record };
+    return {
+      success: true,
+      ...record,
+      url: publishResult.url,
+      localUrl: publishResult.localUrl,
+      files: publishResult.files,
+      pipelineDurationMs: Date.now() - startTime,
+    };
 
   } catch (err) {
-    log("contentManager", "error", err.message);
-    return { success: false, reason: err.message };
+    return fail(err.message);
   }
 }
 
@@ -512,40 +580,25 @@ function getPublished() {
 }
 
 function getCalendar() {
-  const { queue } = JSON.parse(fs.readFileSync(path.join(MEMORY_DIR, "keyword-queue.json"), "utf-8"));
+  const status = keywordResearcher.getQueueStatus();
   const published = loadPublished();
-  const publishedKeywords = new Set(published.map((a) => a.primaryKeyword));
-  const remaining = queue.filter((k) => !publishedKeywords.has(k));
 
   return {
-    totalKeywords: queue.length,
+    totalKeywords: status.total,
     published: published.length,
-    remaining: remaining.length,
-    daysOfContent: remaining.length,
-    nextKeywords: remaining.slice(0, 14),
+    remaining: status.remaining,
+    daysOfContent: status.remaining,
+    nextKeywords: status.next,
     recentArticles: published.slice(-7).reverse(),
   };
 }
 
-// ── Auto-schedule: daily blog every day + mega on Tue & Fri ─────
-async function publishDailySchedule() {
-  const dayOfWeek = new Date().getDay(); // 0=Sun, 1=Mon, 2=Tue, ..., 5=Fri
-  const isMegaDay = dayOfWeek === 2 || dayOfWeek === 5; // Tuesday or Friday
-  const results = { daily: null, mega: null };
-
-  // Always publish a daily blog
-  log("contentManager", "schedule", `publishing daily blog (${["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][dayOfWeek]})`);
-  results.daily = await publishDaily();
-
-  // On Tuesday and Friday, also publish a mega-article
-  if (isMegaDay) {
-    log("contentManager", "schedule", "mega-article day — starting mega pipeline");
-    results.mega = await publishMegaArticle();
-  } else {
-    log("contentManager", "schedule", "not a mega day — daily blog only");
-  }
-
-  return results;
+// ── Auto-schedule: one daily article ─────────────────────────────
+// Mega articles are not scheduled: publishMegaArticle still targets Sanity and
+// has not been moved to the Markdown store.
+async function publishDailySchedule(options = {}) {
+  log("contentManager", "schedule", "publishing daily blog");
+  return { daily: await publishDaily(options), mega: null };
 }
 
 module.exports = { publishDaily, publishMegaArticle, publishDailySchedule, previewNext, getPublished, getCalendar };
