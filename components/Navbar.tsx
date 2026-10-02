@@ -32,6 +32,7 @@ const NAV = [
   { href: "/roi", label: "ROI" },
   { href: "/services", label: "Standards" },
   { href: "/industries", label: "Industries" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
 ];
 

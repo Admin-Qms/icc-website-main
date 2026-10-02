@@ -68,6 +68,7 @@ export function Footer() {
             <FooterLink href="/custom-solutions">Custom-built solutions</FooterLink>
             <FooterLink href="/process">How it works</FooterLink>
             <FooterLink href="/assessment">Free assessment</FooterLink>
+            <FooterLink href="/blog">Blog</FooterLink>
             <FooterLink href="/about">About</FooterLink>
             <FooterLink href="/contact">Contact</FooterLink>
           </FooterCol>
