@@ -1,0 +1,41 @@
+# Dependencies
+node_modules
+
+# Next.js
+.next
+out
+dist
+
+# Environment
+.env
+.env.local
+.env.production.local
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vercel
+.vercel
+
+# Sanity
+.sanity
+
+# Preview content (regenerated via scripts/md-to-portabletext.cjs; never ship to prod)
+/preview-data/
+/public/preview/
+
+# Local Claude Code settings (machine-specific, not part of the template)
+.claude/settings.local.json
