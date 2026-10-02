@@ -8,13 +8,13 @@
 
 | Content Type | Frequency | Pipeline |
 |-------------|-----------|----------|
-| **Daily articles** | 2 per day | 13-step automated pipeline via `contentManager.js` |
-| **Mega articles** | Tuesdays and Fridays | `outlineArchitect.js` → 9-10 chapters, 18,000-20,000 words total |
+| **Daily articles** | 1 per day | `contentManager.publishDaily` — `node team/pm.js blog publish` |
+| **Mega articles** | Not scheduled | The mega pipeline has not been moved off Sanity |
 
-### Publishing Method
-- **Daily blog:** Published via Claude Code agent (Max plan) — never via CLAUDE_API_KEY
-- **Pipeline:** Keyword Research → Context Loading → Article Writing → Content Cleaning → Grammar Check → Originality Check → Link Validation → Hero Image → Inline Images → Featured Image → QA Review (95+ to pass) → Sanity Publish → Page Audit
-- **Post-publish:** IndexNow submission to Bing/Yandex for instant indexing
+### Publishing Method (from October 2026)
+- **Daily blog:** run by hand for now; a Claude Code cloud routine is planned. The writer is set by `LLM_PROVIDER` in `team/.env` (Gemini key for testing).
+- **Pipeline:** Keyword → Context → Write → Clean → Grammar → Originality → Links → Text quality gate (with up to 2 fix passes) → Images → Final quality gate → Markdown file in `content/blog/`
+- **Topics:** `team/memory/keyword-queue.json`. The schedule table and "157 pending keywords" below are from the previous project and are kept for reference only.
 
 ---
 

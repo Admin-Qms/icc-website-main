@@ -1,5 +1,18 @@
 # ISO Certification Consultant Agent Company — Organizational Structure
 
+## Status (2026-10-03)
+
+This document describes the full agent organization as designed for the previous site. In the current codebase:
+
+| Part | Status |
+|---|---|
+| Content Production — daily article (`contentManager.publishDaily`, keyword researcher, context loader, article writer, cleaner, grammar, plagiarism checker, link builder, rewrite patcher, image agent, inline image agent, content QA) | **ACTIVE** — publishes Markdown to `content/blog/`; run by hand until scheduling is set up |
+| Sanity Publisher, Infographic Agent, Page Auditor (in the daily path) | **REPLACED** — by `shared/contentStore.js`, the hero image step and the local re-read after publishing |
+| Mega-article pipeline, Content Enhancer, Content Refresher, Similarity Audit, Cluster Scheduler, Video-to-Blog | **OFF** — still target Sanity |
+| SEO, Security, Web Development, Ops, Growth and Analytics departments; morning audit; C-Suite reports | **OFF** — target the previous site and stack |
+
+Added for the blog pipeline: `shared/contentStore.js`, `shared/siteRoutes.js`, `scripts/check-links.js`, `data/external-link-bank.json`, `data/standards-facts.json`, `memory/keyword-queue.json`, `tests/`. See `team/README.md`.
+
 ## Overview
 
 A full web development company structure with 7 departments, 3-tier hierarchy, 37+ agents, and daily automated operations. Every agent reports up a chain; every department produces measurable output.

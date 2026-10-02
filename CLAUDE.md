@@ -14,23 +14,20 @@ You report to **the Owner (CEO)** — the human. the Owner sets vision, approves
 
 **Product:** ISO Certification Consultant website — isocertificationconsultant.ca — a marketing and content platform for an ISO consulting and AI-powered QMS company targeting manufacturing and service organizations. The site drives leads, publishes SEO-optimized content, and positions ISO Certification Consultant as a thought leader in ISO 9001, IATF 16949, AIAG, VDA, and compliance automation.
 
-**Tech Stack:**
-- Frontend: Next.js (App Router), React, TypeScript, Tailwind CSS
-- CMS: Sanity.io (headless CMS, GROQ queries)
-- AI: Claude API (claude-sonnet-4-6 + claude-haiku-4-5) via `shared/claude.js`
-- Images: Pexels, Unsplash, Gemini generation, `shared/imageRegistry.js` for dedup
-- Email: Resend API via `shared/notifier.js`
-- Analytics: Leadfeeder (active), GA4 (pending setup)
-- Deployment: Vercel
-- SEO: Custom agent pipeline (7 SEO agents)
-- Testing: Playwright (12 device profiles)
-- Leads: Leadfeeder + CRM webhook
-- Scheduling: Claude Cowork on Windows (daily 5:00 AM ET pipeline)
+**Tech Stack (current as of 2026-10-03):**
+- Frontend: Next.js 14 (App Router), React, TypeScript, Tailwind CSS — a static export (`output: "export"`); all site content is in `lib/site.ts`
+- Blog: Markdown files in the repo — `content/blog/<slug>.md`, images in `public/images/blog/<slug>/`, read at build time by `lib/blog.ts`. There is no CMS.
+- AI: one switch in `team/agents/shared/claude.js` — `LLM_PROVIDER=gemini|claude`. Gemini (`GEMINI_API_KEY`) is used for testing; Claude (claude-sonnet-4-6 + claude-haiku-4-5, `CLAUDE_API_KEY`) is the alternative.
+- Images: Pexels first, Gemini generation as fallback; every image is cropped to 1200x675 WebP by `sharp`. Used images are recorded in each post's frontmatter (`shared/imageRegistry.js` reads them back).
+- Deployment: GitHub Action builds the export to a `deploy` branch for cPanel (`.github/workflows/deploy.yml`). Not live yet — the domain does not resolve.
+- Testing: `npm --prefix team test` (node:test) for the blog pipeline; `npm run build` for the site
+- Scheduling: not set up yet. The plan is a Claude Code cloud routine (Milestone 2 in `docs/knowledge-base/decisions.md`). Until then the pipeline is run by hand.
 
-**Multi-Machine Setup:**
-- **Windows Laptop:** Daily scheduled tasks (content pipeline, morning audit, SEO) via Claude Cowork `/schedule`
-- **Mac:** Interactive development, bug fixes, feature work, image fixes via Claude Code CLI
-- **Rule:** Always `git pull` before `git push` — both machines commit to the same repo.
+**What is active and what is not:**
+- **Active:** the daily blog pipeline — `node team/pm.js blog publish` (see `team/README.md`).
+- **Switched off:** every other agent in `team/` (SEO audits, security scans, morning report, web-dev agents, LinkedIn, analytics, mega-articles). They are kept for reference, still target the previous site (Sanity, Vercel, old pages) and cannot run as-is. The organizational chart below describes that wider design, not what currently runs.
+
+**Working rule:** Always `git pull` before `git push`. Commits stay local until the Owner asks for a push.
 
 ---
 
@@ -241,10 +238,12 @@ Every piece of content must pass ALL 10 standards before publishing. No exceptio
 | 6 | Meta description 120-160 chars | Within range, includes target keyword |
 | 7 | Slug format | Lowercase, hyphens only, minimum 6 characters |
 | 8 | Valid publishedAt date | ISO date format, not in the future |
-| 9 | Author reference set | Valid author linked in Sanity |
+| 9 | Author set | Byline present in the post frontmatter |
 | 10 | Minimum 3 content blocks | At least 3 structured content blocks in body |
 
-**If any standard fails, the article goes back to the responsible agent. It does not reach Sanity.**
+**If any standard fails, the article goes back to the responsible agent. Nothing is written to `content/blog/`.**
+
+These ten are enforced, with further checks (1,500-word minimum, keyword in title and meta description, internal links that resolve, external links only from `team/data/external-link-bank.json`, a claims audit for invented names and statistics), by `contentQA.validateLocal` before anything is written. Current standard editions come from `team/data/standards-facts.json` — keep that file accurate.
 
 ### PROTOCOL 3: SITE QUALITY GATES — WEB DEVELOPMENT
 
@@ -426,12 +425,12 @@ These rules are **non-negotiable**. No agent, supervisor, or department may over
 - **NEVER overwrite a file without first reading its current contents.** Always load the file, understand what's there, then make targeted edits. No blind full-file rewrites.
 - **NEVER modify more than one core system file in a single step without a plan.** Core files include: `app/layout.tsx`, `app/api/contact/route.ts`, `sanity.config.ts`, `next.config.js`, `shared/config.js`, `shared/claude.js`, and any file imported by more than 10 other files. Changes to these require explicit the Owner approval.
 
-### CMS PROTECTION
+### CONTENT PROTECTION
 
-- **NEVER delete published Sanity documents.** If content needs removal, unpublish (set draft status) — do not delete. Published URLs may be indexed by Google.
-- **NEVER bulk-publish without Content QA passing all 10 standards on every article.** No batch publishing shortcuts.
-- **NEVER modify Sanity schema without documenting the change and testing migration.** Schema changes can break existing content.
-- **NEVER overwrite existing slugs.** Slug changes break indexed URLs and backlinks. If a slug must change, create a redirect first.
+- **NEVER delete a published post** (`content/blog/*.md`) once the site is live. Published URLs may be indexed by Google.
+- **NEVER publish a post by hand-writing files into `content/blog/`.** Every post goes through `node team/pm.js blog publish` so the quality gate runs; a ready-written draft goes in with `--fixture`.
+- **NEVER change the frontmatter contract on one side only.** `lib/blog.ts` (site) and `team/agents/shared/contentStore.js` (pipeline) must agree.
+- **NEVER overwrite existing slugs.** Slug changes break indexed URLs and backlinks. `publishPost` refuses to; if a slug must change, create a redirect first.
 
 ### SEO PROTECTION
 
@@ -524,50 +523,31 @@ Plus 3 C-Suite roles (CTO, CMO, COO) = **48 total agent roles** (including the O
 
 ---
 
-## CURRENT SPRINT: SEO & LEAD GENERATION INFRASTRUCTURE
+## CURRENT SPRINT: AUTOMATED BLOG
 
-### Claude Code (Mac) — Code Changes
+The previous sprint table (BlogPosting schema, canonicals, contact form, OG images, GA4) described the old site and does not apply to this codebase: there is no `app/api/`, no Sanity and no GA4 script here.
 
-| # | Task | Files | Status |
+### Milestone 1 — working locally
+
+| # | Task | Where | Status |
 |---|------|-------|--------|
-| 1 | BlogPosting schema on blog posts | `app/blog/[slug]/page.tsx`, `lib/sanity.ts` | DONE (2026-03-25) |
-| 2 | Canonical URLs on 5 core pages | about, contact, process, privacy, terms | DONE (2026-03-25) |
-| 3 | Fix duplicate FAQPage schema | `app/layout.tsx`, `app/page.tsx` | DONE (2026-03-25) |
-| 4 | Expand form validation whitelist | `app/api/contact/route.ts` | DONE (2026-03-25) |
-| 5 | Fix ProfessionalService schema | `app/layout.tsx` | DONE (2026-03-25) |
-| 6 | Remove broken SearchAction schema | `app/layout.tsx` | DONE (2026-03-25) |
-| 7 | Dynamic OG images for service/industry pages | `app/services/[standard]/opengraph-image.tsx`, `app/industries/[industry]/opengraph-image.tsx` | DONE (2026-03-25) |
-| 8 | Wire GA4 script into site (G-XXXXXXXXXX) | `app/layout.tsx` | DONE (2026-03-25) |
+| 1 | One repo: site + `team/`, duplicates removed | repo root | DONE (2026-10-03) |
+| 2 | Blog pages, sitemap, nav | `app/blog/`, `lib/blog.ts`, `components/Markdown.tsx`, `components/PostCard.tsx` | DONE (2026-10-03) |
+| 3 | Pipeline publishes Markdown, switchable writer | `team/agents/shared/contentStore.js`, `siteRoutes.js`, `claude.js`, `team/agents/content/*` | DONE (2026-10-03) |
+| 4 | Blocking quality gate + tests | `team/agents/content/contentQA.js`, `rewritePatcher.js`, `team/tests/` | DONE (2026-10-03) |
+| 5 | Keyword queue, link bank, standards editions | `team/memory/keyword-queue.json`, `team/data/` | DONE (2026-10-03) |
+| 6 | First model-written article with the Owner's Gemini key | `node team/pm.js blog publish` | PENDING — needs `team/.env` |
 
-### Claude Cowork (Windows) — Manual/External Tasks
+### Milestone 2 — scheduled and live (not started; needs the Owner's go-ahead)
 
-| # | Task | Service | Status |
-|---|------|---------|--------|
-| 1 | Create GA4 property | Google Analytics | PENDING |
-| 2 | Verify Google Search Console | Google Search Console | PENDING |
-| 3 | Submit sitemap | Google Search Console | PENDING |
-| 4 | Request indexing for key pages | Google Search Console | PENDING |
-| 5 | Create Google Business Profile | Google Business Profile | PENDING |
-| 6 | Set up Bing Webmaster Tools | Bing Webmaster Tools | PENDING |
-| 7 | Set RESEND_API_KEY in Vercel | Vercel Dashboard | PENDING |
-| 8 | Set CRM_WEBHOOK_API_KEY in Vercel | Vercel Dashboard | PENDING |
-| 9 | Set GA4 measurement ID in Vercel | Vercel Dashboard | PENDING |
-
-### Dependency Chain
-
-```
-Cowork creates GA4 -> gets G-XXXXXXXXXX ID
-    -> Claude Code wires GA4 into layout.tsx
-    -> Cowork adds env var to Vercel
-    -> Existing gtag calls come alive
-
-Cowork verifies GSC -> submits sitemap
-    -> Claude Code fixes structured data + canonicals (DONE)
-    -> Google crawls with clean signals
-
-Cowork creates GBP listing
-    -> Local pack rankings for "ISO consultant Ontario"
-```
+| # | Task | Needs |
+|---|------|-------|
+| 1 | Choose the scheduled writer: API key, or the routine's Claude writing drafts published with `--fixture` | Owner decision |
+| 2 | Point the remote at the new GitHub repo and push | Repo URL |
+| 3 | `trailingSlash: true` in `next.config.mjs` so Apache serves `/blog` and `/services` | Before first deploy |
+| 4 | Cloud environment + Claude Code routine (daily, America/Toronto) | Repo on GitHub, keys |
+| 5 | Standing approval for the scheduled run in this file and `team/CLAUDE.md` | With item 4 |
+| 6 | Domain and cPanel pulling the `deploy` branch | Owner |
 
 ---
 
@@ -585,9 +565,9 @@ Awaiting the Owner's directive.
 Active: CTO Division (10 agents), CMO Division (23 agents + 1 planned), COO Division (4 active + 5 planned)
 Total: 37 operational | 8 on roadmap | 48 total agent roles
 
-Current sprint: SEO & Lead Generation Infrastructure
-Completed: 8/8 code tasks (BlogPosting, canonicals, FAQPage, form validation, schema fixes, OG images, GA4)
-Blockers: None — all code tasks complete. Cowork manual tasks pending.
+Current sprint: Automated Blog
+Active: daily blog pipeline (team/pm.js blog publish). All other agents are switched off.
+Blockers: see the CURRENT SPRINT tables above.
 
 Ready for orders.
 

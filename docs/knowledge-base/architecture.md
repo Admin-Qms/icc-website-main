@@ -1,5 +1,17 @@
 # Architecture
 
+> **Current state (2026-10-03).** The site was rebuilt. What exists now:
+>
+> | Layer | Now |
+> |---|---|
+> | Site | Next.js 14 App Router, static export (`output: "export"`), Tailwind, framer-motion. Content in `lib/site.ts`. No API routes, no CMS, no chatbot, no shadcn/ui |
+> | Routes | `/`, `/about`, `/assessment`, `/contact`, `/custom-solutions`, `/industries[/x]`, `/platform`, `/process`, `/roi`, `/services[/x]`, `/solutions[/x]`, `/blog`, `/blog/[slug]` |
+> | Blog | `content/blog/<slug>.md` + `public/images/blog/<slug>/`; `lib/blog.ts` reads them at build time; `components/Markdown.tsx` renders the body; `components/PostCard.tsx` for cards |
+> | Pipeline | `team/pm.js blog publish` → `team/agents/content/contentManager.js`. See `team/README.md` |
+> | Deploy | `.github/workflows/deploy.yml` builds to a `deploy` branch for cPanel. Not live yet |
+>
+> Everything below this note describes the **previous** site and agent system and is kept for reference.
+
 > Tech stack, hosting, framework, styling approach, and folder structure for ISO Certification Consultant.
 
 ---

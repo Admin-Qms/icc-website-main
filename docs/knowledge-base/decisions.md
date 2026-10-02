@@ -162,4 +162,51 @@ Each entry should include:
 
 ---
 
-*Last updated: 2026-03-31*
+## Fresh Start Decisions (October 2026)
+
+The entries above were made for the previous site (Sanity, Vercel, chatbot). The site was rebuilt as a static Next.js export; where an entry below conflicts with one above, the one below applies.
+
+### 2026-10 | Blog Posts Are Markdown Files in the Repo
+**Decision:** Articles are stored as `content/blog/<slug>.md` with images in `public/images/blog/<slug>/`. There is no CMS.
+**Why:** The site is a static export, so a post only appears after a rebuild. With Markdown in the repo, publishing an article is one commit, and that commit is also what triggers the build. A scheduled cloud run starts from a fresh clone each time, so all state has to live in the repo anyway. Starting fresh, there was no existing Sanity content to keep.
+**Alternatives Rejected:**
+- New Sanity project — needs a separate rebuild trigger and keeps state in two places; its one advantage is an editing screen
+**Impact:** `team/agents/shared/contentStore.js` writes posts; `lib/blog.ts` reads them. The published posts are the pipeline's record of used keywords, links and images; there is no `published-articles.json`. Supersedes "Sanity CMS for Blog Only".
+
+### 2026-10 | The Quality Gate Blocks, and Runs Before Anything Is Written
+**Decision:** `contentQA.validateLocal` runs every check on the in-memory article; one failure and nothing is written. Text checks run before images are sourced.
+**Why:** The earlier pre-publish check was a point scorer that never triggered the rewrite loop, and the ten standards only ran against Sanity after the fact. The writer prompt also asked for first-person "we" and a named fictional manufacturer, which the content rules forbid.
+**Alternatives Rejected:**
+- Keep the 95-point score — lets a first-person or fabricated article through if other points add up
+**Impact:** Prompts now require third person, no named companies or people, no quotes, no statistics stated as fact, and scenarios labelled "Illustrative example:". A model-backed claims audit covers what pattern checks cannot. The `case-study` article type is removed.
+
+### 2026-10 | Standard Editions Come From a Maintained File
+**Decision:** `team/data/standards-facts.json` lists the current edition of each standard and is given to the writer and to the claims audit.
+**Why:** ISO 9001:2026 (September 2026) and ISO 14001:2026 (April 2026) replaced the 2015 editions, and FSSC 22000 Version 7 was released in May 2026. The writing models were trained before these and would describe superseded editions as current.
+**Alternatives Rejected:**
+- Trust the model's memory — wrong on exactly the standards the site sells
+**Impact:** This file needs a person to keep it current. It does not yet describe what changed between editions, so articles are told not to make edition-comparison claims.
+
+### 2026-10 | Writer Is Switchable; Gemini Key for Testing
+**Decision:** `team/agents/shared/claude.js` routes every model call by `LLM_PROVIDER` (`gemini` or `claude`). Testing uses a Gemini key.
+**Why:** The Owner wanted to test without an Anthropic API key. Every agent already called the model through one file, so one switch covers all of them.
+**Alternatives Rejected:**
+- Hard-code one provider — blocks testing with the key that is available
+**Impact:** Who writes on the schedule is still open (Milestone 2): an API key, or the scheduled Claude session writing a draft that is published with `blog publish --fixture`. The 2026-03 entry "GitHub Actions Workflows Disabled" recorded API-key publishing as unreliable and expensive on the old project; weigh that when deciding.
+
+### 2026-10 | Daily Article Only; Other Agents Switched Off
+**Decision:** The launch scope is one article a day. Mega-articles and all non-blog agents stay in the repo, unscheduled.
+**Why:** The mega pipeline still targets Sanity, publishes even when QA fails, and its grammar and link steps truncate long articles. The other agents target the previous site.
+**Impact:** `blog auto` runs the daily article only. Supersedes the mega-article cadence above until that pipeline is converted.
+
+### 2026-10 | Scheduling by Claude Code Cloud Routine (Planned)
+**Decision:** The daily run will be triggered by a Claude Code cloud routine, not a Windows laptop.
+**Why:** Cowork scheduled tasks move to cloud-only on 2026-10-06 and cannot be tied to a local folder; a cloud routine clones the repo, runs the pipeline and pushes, with no machine to keep awake.
+**Alternatives Rejected:**
+- Local scheduled task — needs one machine on, awake and with the app open
+- GitHub Actions timer — viable and simpler, but the Owner chose a Claude scheduled task
+**Impact:** Not built yet. Needs the new GitHub repo, `trailingSlash: true` for Apache, a cloud environment with the keys, and a standing approval in `CLAUDE.md`.
+
+---
+
+*Last updated: 2026-10-03*
