@@ -207,6 +207,28 @@ The entries above were made for the previous site (Sanity, Vercel, chatbot). The
 - GitHub Actions timer — viable and simpler, but the Owner chose a Claude scheduled task
 **Impact:** Not built yet. Needs the new GitHub repo, `trailingSlash: true` for Apache, a cloud environment with the keys, and a standing approval in `CLAUDE.md`.
 
+### 2026-10 | The Scheduled Claude Session Writes; the Pipeline Checks
+**Decision:** On the schedule, the routine's own Claude writes the article from a pipeline-prepared brief (`blog brief` → `body.md` → `blog publish --fixture`). Gemini keeps the helper passes.
+**Why:** No per-article API bill for the text, and the first Gemini-written articles stuffed keywords and padded links. The `--fixture` path already existed, so this cost one command and a skill file.
+**Alternatives Rejected:**
+- Gemini or Claude via API key as the writer — still available with `LLM_PROVIDER`; kept for local runs and comparison
+**Impact:** The model grammar pass is off for drafts (on a Claude-written draft it rewrote the voice of every paragraph); spelling is enforced deterministically. The API path's grammar pass now has a minimum-edits prompt and a similarity guard.
+
+### 2026-10 | OpenAI Images in One House Style
+**Decision:** `IMAGE_PROVIDERS=openai,gemini`; every generated image uses the style block in `team/data/image-style.json`.
+**Why:** The Owner asked for OpenAI's image model and for images that read as one series across articles. A six-image comparison with the style block looked consistent, including a Gemini fallback.
+**Impact:** `gpt-image-2` (gpt-image-1 retires 2026-10-23). Codex's image tool is wired as a local-only provider because its ChatGPT login lives on the Owner's Mac.
+
+### 2026-10 | Scheduled Runs Publish Straight to main
+**Decision:** The scheduled run commits the article and its images and pushes to `main`; no pull request.
+**Why:** The Owner chose unattended publishing. The quality gate and the house style are the safeguards; the standing approval in `CLAUDE.md` limits what the run may do.
+**Alternatives Rejected:**
+- Pull request per article for the first weeks — rejected by the Owner
+
+### 2026-10 | Trailing-Slash URLs
+**Decision:** `trailingSlash: true`; every page exports as `<route>/index.html`.
+**Why:** Stock Apache on cPanel serves folders; the previous `blog.html`-beside-`blog/` layout would 403 or 404. Done before anything is live, so no redirects.
+
 ---
 
-*Last updated: 2026-10-03*
+*Last updated: 2026-10-04*

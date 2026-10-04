@@ -17,11 +17,11 @@ You report to **the Owner (CEO)** — the human. the Owner sets vision, approves
 **Tech Stack (current as of 2026-10-03):**
 - Frontend: Next.js 14 (App Router), React, TypeScript, Tailwind CSS — a static export (`output: "export"`); all site content is in `lib/site.ts`
 - Blog: Markdown files in the repo — `content/blog/<slug>.md`, images in `public/images/blog/<slug>/`, read at build time by `lib/blog.ts`. There is no CMS.
-- AI: one switch in `team/agents/shared/claude.js` — `LLM_PROVIDER=gemini|claude`. Gemini (`GEMINI_API_KEY`) is used for testing; Claude (claude-sonnet-4-6 + claude-haiku-4-5, `CLAUDE_API_KEY`) is the alternative.
-- Images: Pexels first, Gemini generation as fallback; every image is cropped to 1200x675 WebP by `sharp`. Used images are recorded in each post's frontmatter (`shared/imageRegistry.js` reads them back).
-- Deployment: GitHub Action builds the export to a `deploy` branch for cPanel (`.github/workflows/deploy.yml`). Not live yet — the domain does not resolve.
+- Writing: on the schedule, the Claude Code session writes the article from a brief (`node team/pm.js blog brief`, then `.claude/skills/write-blog-article/SKILL.md`, then `blog publish --fixture`). The API writer still exists: `LLM_PROVIDER=gemini|claude` in `team/agents/shared/claude.js`; Gemini also runs the helper passes (topic pick, originality, claims audit). The rules every writer follows are in `team/data/writing-rules.md`.
+- Images: `IMAGE_PROVIDERS` (default `openai,gemini`; `pexels`, and `codex` on a Mac with Codex logged in). Every generated image uses the house style in `team/data/image-style.json` and is cropped to 1200x675 WebP by `sharp`. Used images are recorded in each post's frontmatter.
+- Deployment: repo `https://github.com/Admin-Qms/icc-website-main`; a push to `main` runs the GitHub Action that builds the export (trailing-slash folders, for Apache) to the `deploy` branch for cPanel. Not live yet — the domain does not resolve.
 - Testing: `npm --prefix team test` (node:test) for the blog pipeline; `npm run build` for the site
-- Scheduling: not set up yet. The plan is a Claude Code cloud routine (Milestone 2 in `docs/knowledge-base/decisions.md`). Until then the pipeline is run by hand.
+- Scheduling: a Claude Code cloud routine (prompt in `team/ROUTINE.md`, script in `team/scripts/scheduled-run.sh`) that publishes a gate-passing article straight to `main` every morning. See the standing approval section below.
 
 **What is active and what is not:**
 - **Active:** the daily blog pipeline — `node team/pm.js blog publish` (see `team/README.md`).
@@ -536,20 +536,32 @@ The previous sprint table (BlogPosting schema, canonicals, contact form, OG imag
 | 3 | Pipeline publishes Markdown, switchable writer | `team/agents/shared/contentStore.js`, `siteRoutes.js`, `claude.js`, `team/agents/content/*` | DONE (2026-10-03) |
 | 4 | Blocking quality gate + tests | `team/agents/content/contentQA.js`, `rewritePatcher.js`, `team/tests/` | DONE (2026-10-03) |
 | 5 | Keyword queue, link bank, standards editions | `team/memory/keyword-queue.json`, `team/data/` | DONE (2026-10-03) |
-| 6 | First model-written article with the Owner's Gemini key | `node team/pm.js blog publish` | PENDING — needs `team/.env` |
+| 6 | First model-written article (Gemini) and first Claude-written article | `blog publish`, `blog brief` + `--fixture` | DONE (2026-10-04) |
 
-### Milestone 2 — scheduled and live (not started; needs the Owner's go-ahead)
+### Milestone 2 — scheduled and live
 
-| # | Task | Needs |
-|---|------|-------|
-| 1 | Choose the scheduled writer: API key, or the routine's Claude writing drafts published with `--fixture` | Owner decision |
-| 2 | Point the remote at the new GitHub repo and push | Repo URL |
-| 3 | `trailingSlash: true` in `next.config.mjs` so Apache serves `/blog` and `/services` | Before first deploy |
-| 4 | Cloud environment + Claude Code routine (daily, America/Toronto) | Repo on GitHub, keys |
-| 5 | Standing approval for the scheduled run in this file and `team/CLAUDE.md` | With item 4 |
-| 6 | Domain and cPanel pulling the `deploy` branch | Owner |
+| # | Task | Status |
+|---|------|--------|
+| 0 | Writing rules in one file; US spelling, keyword-styling and claims checks; grammar step fixed | DONE (2026-10-04) |
+| 1 | Claude-writes mode: `blog brief`, writer skill, drafts through `--fixture` | DONE (2026-10-04) |
+| 2 | OpenAI image provider, house style, Codex local option | DONE (2026-10-04) |
+| 3 | `trailingSlash: true`; sitemap and JSON-LD aligned | DONE (2026-10-04) |
+| 4 | `scheduled-run.sh`, `team/ROUTINE.md`, standing approval | DONE (2026-10-04) |
+| 5 | Push `main` to `Admin-Qms/icc-website-main`; GitHub Action builds `deploy` | see git log |
+| 6 | Cloud environment `icc-blog` (Owner) + routine via `/schedule` | PENDING |
+| 7 | Domain and cPanel pulling the `deploy` branch | PENDING (Owner) |
 
 ---
+
+## SCHEDULED BLOG RUN — STANDING APPROVAL
+
+When a session's prompt is the scheduled blog run (the text in `team/ROUTINE.md`, run by a Claude Code cloud routine against this repository), the Owner has approved in advance, with no further confirmation, exactly this:
+
+1. Running `bash team/scripts/scheduled-run.sh prepare`.
+2. Writing `body.md` for the brief it produces, following `.claude/skills/write-blog-article/SKILL.md` and `team/data/writing-rules.md`.
+3. Running `bash team/scripts/scheduled-run.sh publish <draft.json>`, which commits only the new article and its images and pushes that commit to `main`.
+
+That run may not: edit code, prompts, checks, rules, the link bank or the standards file; commit or push anything itself; force-push; change the title or meta description; or retry a failed pipeline more than twice. The start-up banner below is for interactive sessions and is not printed by the scheduled run.
 
 ## START
 

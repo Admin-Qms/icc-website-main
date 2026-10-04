@@ -12,12 +12,26 @@ cp .env.example .env      # then add GEMINI_API_KEY (and PEXELS_API_KEY if you h
 
 ## Running it
 
+Two ways to get an article.
+
+**Claude writes it** (how the schedule works):
+
+```bash
+node pm.js blog brief                       # picks the topic, writes drafts/<date>-<slug>/brief.md + draft.json
+# write body.md in that folder (Claude Code: use the write-blog-article skill)
+node pm.js blog publish --fixture drafts/<date>-<slug>/draft.json
+```
+
+**A model writes it** (needs `LLM_PROVIDER` and its key in `.env`):
+
 ```bash
 node pm.js blog publish --dry-run   # full run, every check, writes nothing; preview lands in reports/preview/
 node pm.js blog publish             # writes the article and its images into the site
-node pm.js blog calendar            # what's published, what's next in the queue
-npm test                            # pipeline tests; no keys or network needed
 ```
+
+Either way: `node pm.js blog calendar` shows what is published and what is next; `npm test` runs the pipeline tests with no keys or network.
+
+The scheduled run is `scripts/scheduled-run.sh prepare` / `publish`, driven by the prompt in `ROUTINE.md`.
 
 Then, from the repo root, `npm run dev` and open `http://localhost:3000/blog`. If the dev server was already running, a brand-new article can return an error on its first load; refresh once.
 
@@ -49,7 +63,9 @@ Nothing is written to the site before step 8, so a failed run leaves the repo un
 | `memory/keyword-queue.json` | Topic list. A topic counts as used once a published post has it as `primaryKeyword` |
 | `data/external-link-bank.json` | The only outside links an article may use |
 | `data/standards-facts.json` | Current edition of each standard. The writing models predate the 2026 editions, so this file is what keeps articles current |
-| `.env` | Keys and `LLM_PROVIDER` (`gemini` or `claude`) |
+| `data/writing-rules.md` | The rules every article follows, whoever writes it |
+| `data/image-style.json` | The house style every generated image uses |
+| `.env` | Keys, `LLM_PROVIDER` (`gemini` or `claude`), `IMAGE_PROVIDERS` (`openai,gemini`; add `codex` on a Mac with Codex logged in) |
 
 The published posts are the pipeline's memory: there is no separate "published" list to keep in step.
 

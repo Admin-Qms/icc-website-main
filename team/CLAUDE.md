@@ -105,6 +105,10 @@ QA GATE REPORT:
 
 If any issue is found during this gate, fix it before reporting. Do not report issues and ask if the user wants them fixed — fix them first, then report what was found and fixed.
 
+## Scheduled Blog Run (exception to the process below)
+
+The scheduled blog run described in `team/ROUTINE.md` and approved in the root `CLAUDE.md` publishes a gate-passing article to `main` through `team/scripts/scheduled-run.sh` without a local review, a Playwright run or an "approved, push to production" message. Its push contains only `content/blog/` and `public/images/blog/`. Everything else in this file still applies to interactive sessions.
+
 ## Development Process (NON-NEGOTIABLE)
 
 1. All changes run on local server first (`npm run dev`) — verify everything works at localhost:3000 before any git push.
