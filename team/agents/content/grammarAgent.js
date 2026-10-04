@@ -45,6 +45,25 @@ CRITICAL — PRESERVE THESE ELEMENTS EXACTLY (do NOT remove, rewrite, or change)
 - ALL bold formatting (**text**)
 - ALL heading hierarchy (## and ###) — never add an H1 ("# ") heading`;
 
+// Below this share of words kept in order, the reply is a rewrite, not a copy-edit.
+const MIN_SIMILARITY = 0.85;
+
+/** Share of words the two texts have in common, in order (longest common subsequence). */
+function wordSimilarity(a, b) {
+  const x = String(a).split(/\s+/).filter(Boolean);
+  const y = String(b).split(/\s+/).filter(Boolean);
+  if (!x.length || !y.length) return 0;
+  let prev = new Uint32Array(y.length + 1);
+  for (let i = 1; i <= x.length; i++) {
+    const cur = new Uint32Array(y.length + 1);
+    for (let j = 1; j <= y.length; j++) {
+      cur[j] = x[i - 1] === y[j - 1] ? prev[j - 1] + 1 : Math.max(prev[j], cur[j - 1]);
+    }
+    prev = cur;
+  }
+  return (2 * prev[y.length]) / (x.length + y.length);
+}
+
 function skipped(body, notes) {
   return {
     correctedContent: body,
@@ -79,9 +98,9 @@ async function checkGrammar(article) {
   try {
     const result = await claudeCallFast(
       SYSTEM_PROMPT,
-      `Review and correct the following article. Apply all spelling, grammar, style, and readability rules.
+      `Copy-edit the following article with the MINIMUM edits: fix spelling, grammar, punctuation and the style rules above. Do not rephrase sentences that are already correct, do not change the author's tone or word choice, do not shorten or expand anything. A sentence with no error is returned unchanged.
 
-CRITICAL: Preserve ALL markdown links [text](url), ALL [IMAGE:] markers, all headings, callouts and bold phrases exactly as they appear. Change wording only where a rule requires it.
+CRITICAL: Preserve ALL markdown links [text](url), ALL [IMAGE:] markers, all headings, callouts and bold phrases exactly as they appear.
 
 Return ONLY the full corrected article as markdown. No JSON, no code fences, no preamble, no notes.
 
@@ -96,9 +115,11 @@ ${body}`,
     const imagesAfter = (corrected.match(/\[IMAGE:[^\]]+\]/g) || []).length;
     const wordsAfter = countWords(corrected);
 
-    // A reply that lost links, markers or a tenth of the text is not a corrected article.
-    if (linksAfter < linksBefore - 1 || imagesAfter < imagesBefore - 1 || wordsAfter < wordsBefore * 0.9) {
-      log("grammarAgent", "rollback", `reply dropped ${linksBefore - linksAfter} links, ${imagesBefore - imagesAfter} images, ${wordsBefore - wordsAfter} words — using original body`);
+    // A reply that lost links or markers, shrank, or rewrote the article instead of
+    // correcting it is not a copy-edit; keep the original.
+    const similarity = wordSimilarity(body, corrected);
+    if (linksAfter < linksBefore - 1 || imagesAfter < imagesBefore - 1 || wordsAfter < wordsBefore * 0.95 || similarity < MIN_SIMILARITY) {
+      log("grammarAgent", "rollback", `reply dropped ${linksBefore - linksAfter} links, ${imagesBefore - imagesAfter} images, ${wordsBefore - wordsAfter} words; ${Math.round(similarity * 100)}% of words kept — using original body`);
       updateHeartbeat("grammarAgent", "failed", "rollback");
       return skipped(body, "Grammar reply rejected: it dropped links, markers or text");
     }
@@ -124,4 +145,4 @@ ${body}`,
   }
 }
 
-module.exports = { checkGrammar };
+module.exports = { checkGrammar, wordSimilarity };

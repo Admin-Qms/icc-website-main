@@ -543,23 +543,34 @@ function buildImagePrompt(scene, kind = 'inline') {
 async function generateOpenAIImage(prompt) {
   const { OPENAI_API_KEY, OPENAI_IMAGE_MODEL, OPENAI_IMAGE_QUALITY } = require('../shared/config');
   if (!OPENAI_API_KEY) return null;
-  try {
-    const res = await fetch('https://api.openai.com/v1/images/generations', {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: OPENAI_IMAGE_MODEL, prompt, size: '1536x1024', quality: OPENAI_IMAGE_QUALITY, n: 1 }),
-    });
-    const json = await res.json();
-    if (!res.ok || json.error) {
-      console.error(`  [imageAgent] OpenAI (${OPENAI_IMAGE_MODEL}) error ${res.status}: ${JSON.stringify(json.error || json).slice(0, 200)}`);
+  // The image API allows a handful of images a minute; waiting out a 429 keeps
+  // a whole article on one provider instead of mixing in the fallback's look.
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch('https://api.openai.com/v1/images/generations', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: OPENAI_IMAGE_MODEL, prompt, size: '1536x1024', quality: OPENAI_IMAGE_QUALITY, n: 1 }),
+      });
+      const json = await res.json();
+      if (res.status === 429 && attempt < 3) {
+        const wait = Number(/try again in (\d+)s/i.exec(json.error?.message || '')?.[1] || 20) + 2;
+        console.log(`  [imageAgent] OpenAI rate limit — waiting ${wait}s`);
+        await new Promise((r) => setTimeout(r, wait * 1000));
+        continue;
+      }
+      if (!res.ok || json.error) {
+        console.error(`  [imageAgent] OpenAI (${OPENAI_IMAGE_MODEL}) error ${res.status}: ${JSON.stringify(json.error || json).slice(0, 200)}`);
+        return null;
+      }
+      const b64 = json.data?.[0]?.b64_json;
+      return b64 ? Buffer.from(b64, 'base64') : null;
+    } catch (err) {
+      console.error(`  [imageAgent] OpenAI error: ${err.message}`);
       return null;
     }
-    const b64 = json.data?.[0]?.b64_json;
-    return b64 ? Buffer.from(b64, 'base64') : null;
-  } catch (err) {
-    console.error(`  [imageAgent] OpenAI error: ${err.message}`);
-    return null;
   }
+  return null;
 }
 
 /**

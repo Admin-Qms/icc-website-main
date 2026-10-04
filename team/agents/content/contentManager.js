@@ -192,18 +192,11 @@ async function publishDaily(options = {}) {
       context = await contextLoader.loadContext(keywordBrief);
       log("contentManager", "draft", `"${article.title}" — ${article.wordCount} words`);
 
-      // A ready-written draft still gets the model-backed passes when a key exists,
-      // so a Claude-written article is checked the same way as a model-written one.
+      // A ready-written draft gets the originality pass and (in QA) the claims audit
+      // when a key exists. It does not get the model grammar pass: on a Claude-written
+      // draft that pass rewrote the voice of every paragraph; spelling is enforced
+      // deterministically in the gate instead.
       if (hasLLMKey()) {
-        try {
-          const grammarResult = await grammarAgent.checkGrammar(article);
-          if (grammarResult.totalCorrections > 0) {
-            article.body = grammarResult.correctedContent;
-            log("contentManager", "grammar", "corrections applied to the draft");
-          }
-        } catch (err) {
-          log("contentManager", "grammar-error", err.message);
-        }
         try {
           const existingArticles = listPosts().slice(-15).map((p) => ({ title: p.title, body: toPlainText(p.body) }));
           const origResult = await plagiarismChecker.checkOriginality(article, existingArticles);
@@ -217,7 +210,7 @@ async function publishDaily(options = {}) {
           log("contentManager", "originality-error", err.message);
         }
       } else {
-        log("contentManager", "draft", "no model key — grammar and originality passes skipped");
+        log("contentManager", "draft", "no model key — originality pass skipped");
       }
     } else {
       // Step 1: Pick keyword
