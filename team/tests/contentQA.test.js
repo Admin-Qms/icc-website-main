@@ -90,3 +90,22 @@ test("claims audit is reported as skipped, not passed silently, when no key is s
   assert.equal(claims.skipped, true);
   assert.match(claims.message, /Skipped/);
 });
+
+test("keyword styling: pasted bold keywords and lowercase standard names fail and are fixed", async () => {
+  const body = `${goodPost().body}\n\nKeep an **iso 9001 audit checklist** on an iso 9001 line, but the ISO 9001:2015 clause reads fine.`;
+  const result = await qa.validateLocal(goodPost({ body, keywords: ["iso 9001 audit checklist"] }), { phase: "text", claimsAudit: false });
+  assert.ok(failed(result).includes("keyword-styling"));
+  const fixed = qa.fixKeywordStyling(body, ["iso 9001 audit checklist"]);
+  assert.ok(fixed.includes("Keep an ISO 9001 audit checklist on an ISO 9001 line"));
+  assert.ok(!fixed.includes("**iso 9001"));
+});
+
+test("spelling: British forms in prose fail and are rewritten; names and URLs are untouched", async () => {
+  const body = `${goodPost().body}\n\nThe organisation must analyse the colour of each label. Labelled parts travelled to the Centre for Safety; see the [Ministry of Labour](https://www.ontario.ca/laws/statute/90o01).`;
+  const result = await qa.validateLocal(goodPost({ body }), { phase: "text", claimsAudit: false });
+  assert.ok(failed(result).includes("spelling"));
+  const fixed = qa.toUSSpelling(body);
+  assert.ok(fixed.includes("The organization must analyze the color of each label. Labeled parts traveled to the Centre for Safety; see the [Ministry of Labour](https://www.ontario.ca/laws/statute/90o01)."));
+  assert.deepEqual(qa.findBritishSpellings(fixed), []);
+  assert.deepEqual(qa.findBritishSpellings(goodPost().body), [], "the seed article is already US spelling");
+});

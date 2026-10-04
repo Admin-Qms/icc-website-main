@@ -12,6 +12,7 @@ const sharp = require("sharp");
 const KEYWORD = "iso 9001 internal audit checklist";
 const TITLE = "An ISO 9001 Internal Audit Checklist for Hamilton Machine Shops";
 const FIRST_PERSON = "We always recommend starting the audit programme early.";
+const PASTED_KEYWORD = "Keep an **iso 9001 internal audit checklist** at every workstation and analyse the colour of the tags.";
 
 const calls = [];
 let draft = "";
@@ -47,6 +48,8 @@ function reply(system, user) {
       "",
       FIRST_PERSON,
       "",
+      PASTED_KEYWORD,
+      "",
       "See [this unrelated site](https://example.org/not-approved) for more.",
       "",
       "[IMAGE: an auditor checking a gauge calibration label beside a CNC machine]",
@@ -63,7 +66,8 @@ function reply(system, user) {
   }
   if (/senior copy editor/i.test(system)) {
     calls.push("grammar");
-    return { correctedContent: draft, spellingFixes: 0, grammarFixes: 0, styleViolations: 0, passiveVoiceFixed: 0, overallGrade: "pass" };
+    // The grammar step now takes the article back as plain Markdown.
+    return user.split("ARTICLE BODY:\n")[1];
   }
   if (/Plagiarism Checker/i.test(system)) {
     calls.push("originality");
@@ -77,7 +81,8 @@ function reply(system, user) {
   if (/surgical edits/i.test(system)) {
     calls.push("patch");
     const article = user.split("ARTICLE:\n")[1].split("\n\nReturn ONLY")[0];
-    return article.replace(FIRST_PERSON, "Starting the audit programme early is the safer choice.");
+    // Deterministic patches run first and may have re-spelled the sentence, so match loosely.
+    return article.replace(/We always recommend[^.]*\./, "Starting the audit program early is the safer choice.");
   }
   throw new Error(`unexpected model call: ${system.slice(0, 60)}`);
 }
@@ -99,8 +104,9 @@ let imageCalls = 0;
 class FakeGenAI {
   constructor() {
     this.models = {
-      generateContent: async ({ config }) => {
+      generateContent: async ({ config, contents }) => {
         assert.equal(config.imageConfig.aspectRatio, "16:9");
+        assert.match(String(contents), /Photorealistic editorial photograph/, "the house style is in every image prompt");
         imageCalls++;
         const png = await sharp({ create: { width: 1344, height: 768, channels: 3, background: { r: 40 * imageCalls, g: 90, b: 150 } } }).png().toBuffer();
         return { candidates: [{ content: { parts: [{ inlineData: { data: png.toString("base64") } }] } }] };
@@ -136,6 +142,11 @@ test("a flawed model draft is repaired, illustrated and published", async () => 
   assert.ok(!/^# /m.test(post.body), "the H1 was removed");
   assert.ok(!post.body.includes("Here is the cleaned article"), "model preamble was removed");
   assert.ok(!post.body.includes(FIRST_PERSON), "first person was patched out");
+  assert.ok(!post.body.includes("**iso 9001 internal audit checklist**"), "the pasted bold keyword was unbolded");
+  assert.ok(post.body.includes("ISO 9001 internal audit checklist"), "the standard name was capitalized");
+  assert.ok(post.body.includes("analyze the color"), "British spelling was changed to US");
+  assert.match(post.body, /^## /m);
+  assert.ok(post.body.includes("](/contact)"), "the contact link survived the patches");
   assert.ok(!post.body.includes("](/resources)"), "the dead internal link was unlinked");
   assert.ok(!post.body.includes("example.org"), "the off-bank link was unlinked");
   assert.ok(post.body.includes("this unrelated site"), "its anchor text was kept");

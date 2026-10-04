@@ -33,6 +33,7 @@ const outlineArchitect = require("./outlineArchitect");
 const contentEnhancer = require("./contentEnhancer");
 const rewritePatcher = require("./rewritePatcher");
 const telegram = require("../shared/telegram");
+const { hasLLMKey } = require("../shared/claude");
 
 const MAX_REWRITES = 2; // targeted patch passes before the run gives up
 const MAX_INLINE_IMAGES = 2;
@@ -190,6 +191,34 @@ async function publishDaily(options = {}) {
       ({ keywordBrief, article, hero: localHero } = loadFixture(fixture));
       context = await contextLoader.loadContext(keywordBrief);
       log("contentManager", "draft", `"${article.title}" — ${article.wordCount} words`);
+
+      // A ready-written draft still gets the model-backed passes when a key exists,
+      // so a Claude-written article is checked the same way as a model-written one.
+      if (hasLLMKey()) {
+        try {
+          const grammarResult = await grammarAgent.checkGrammar(article);
+          if (grammarResult.totalCorrections > 0) {
+            article.body = grammarResult.correctedContent;
+            log("contentManager", "grammar", "corrections applied to the draft");
+          }
+        } catch (err) {
+          log("contentManager", "grammar-error", err.message);
+        }
+        try {
+          const existingArticles = listPosts().slice(-15).map((p) => ({ title: p.title, body: toPlainText(p.body) }));
+          const origResult = await plagiarismChecker.checkOriginality(article, existingArticles);
+          log("contentManager", "originality", `${origResult.score}/100 — ${origResult.pass ? "PASS" : "NEEDS WORK"}`);
+          if (!origResult.pass) {
+            return fail(`Originality check failed (${origResult.score}/100): ${origResult.rewriteInstructions || "too close to existing articles"}`, {
+              issues: (origResult.flaggedSentences || []).map((f) => `originality: "${String(f.text).slice(0, 80)}" — ${f.reason}`),
+            });
+          }
+        } catch (err) {
+          log("contentManager", "originality-error", err.message);
+        }
+      } else {
+        log("contentManager", "draft", "no model key — grammar and originality passes skipped");
+      }
     } else {
       // Step 1: Pick keyword
       log("contentManager", "step-1", "keyword research");
@@ -569,6 +598,113 @@ async function publishMegaArticle() {
   }
 }
 
+// ═══════════════════════════════════════════════════════════════════
+// CLAUDE-WRITES MODE — `blog brief`
+// The pipeline does the research and writes a brief; a Claude session writes
+// body.md from it; `blog publish --fixture <draft.json>` takes it from there.
+// ═══════════════════════════════════════════════════════════════════
+
+const ARTICLE_STRUCTURES = {
+  "deep-guide": "Key Takeaways → 5-6 sections of increasing depth → Frequently Asked Questions (5) → close",
+  comparison: "Key Takeaways → both options → side-by-side table → the differences explained → \"which fits you\" decision framework → FAQ (5) → close",
+  checklist: "Key Takeaways → short intro → 7-12 numbered items, each a ## with 2-3 sentences → quick-reference summary → close",
+  "industry-spotlight": "Key Takeaways → the industry's quality pressures → relevant standards → how it plays out in Ontario plants (illustrative examples only) → getting started → close",
+  "myth-buster": "Key Takeaways → short intro → 5-7 myths, each a ## (Myth, reality, what to do instead) → close",
+  "trend-opinion": "Key Takeaways → current state → what is changing → 3-4 trends, each a ## → impact on manufacturers → how to prepare → close",
+  "how-to": "Key Takeaways → short intro → steps 1-7, each a ## with what to do, what you need, the common mistake → close",
+};
+
+async function prepareBrief(options = {}) {
+  const { force = false } = options;
+  const date = todayLocal();
+  ensureDirs();
+  log("contentManager", "brief", "preparing a brief for a Claude-written article");
+
+  if (!force) {
+    const already = listPosts().find((p) => p.date === date);
+    if (already) {
+      return { success: false, skipped: true, reason: `An article dated ${date} is already published (/blog/${already.slug}). Use --force to prepare another.` };
+    }
+  }
+
+  const keywordBrief = await keywordResearcher.pickKeyword();
+  const context = await contextLoader.loadContext(keywordBrief);
+  try {
+    context.diversityBrief = await contextLoader.loadDiversityBrief();
+  } catch {
+    context.diversityBrief = "";
+  }
+
+  const slug = keywordBrief.slug || slugify(keywordBrief.title);
+  const folder = path.join(path.resolve(__dirname, "../.."), "drafts", `${date}-${slug}`);
+  fs.mkdirSync(folder, { recursive: true });
+
+  const rules = articleWriter.loadWritingRules();
+  const type = keywordBrief.articleType || "deep-guide";
+  const brief = [
+    `# Brief: ${keywordBrief.title}`,
+    "",
+    `Write the article as \`body.md\` in this folder, then publish it with \`node team/pm.js blog publish --fixture ${path.relative(path.resolve(__dirname, "../.."), path.join(folder, "draft.json"))}\`.`,
+    "",
+    "## The article",
+    "",
+    `- **Title (fixed):** ${keywordBrief.title}`,
+    `- **Meta description (fixed):** ${keywordBrief.metaDescription}`,
+    `- **Primary keyword (the topic):** ${keywordBrief.primaryKeyword}`,
+    `- **Related topics to cover (not phrases to insert):** ${(keywordBrief.secondaryKeywords || []).join("; ") || "none"}`,
+    `- **Article type:** ${type} — ${ARTICLE_STRUCTURES[type] || ARTICLE_STRUCTURES["deep-guide"]}`,
+    `- **Search intent:** ${keywordBrief.searchIntent || "informational"}`,
+    `- **Target city, if one fits:** ${keywordBrief.targetCity || "none — Ontario in general"}`,
+    `- **Length:** 1,800-2,100 words`,
+    "",
+    "### Section outline",
+    "",
+    ...((keywordBrief.h2Structure || []).map((h) => `- ${h}`) || []),
+    "",
+    `### FAQ questions${["checklist", "myth-buster"].includes(type) ? " (if space permits)" : " (answer in a ## Frequently Asked Questions section)"}`,
+    "",
+    ...((keywordBrief.faqQuestions || []).map((q) => `- ${q}`) || []),
+    "",
+    "## Links you may use",
+    "",
+    "Internal (choose 3-5, always including /contact):",
+    "",
+    ...(context.internalLinks.servicePages || []).map((l) => `- [${l.title}](${l.url})`),
+    ...(context.internalLinks.blogPosts || []).map((l) => `- [${l.title}](${l.url})`),
+    "",
+    "Outside (choose 2-4, copied exactly, only where the source supports the sentence; no other outside URL):",
+    "",
+    ...((context.externalLinks || []).map((l) => `- [${l.name}](${l.url}) — ${l.context}`) || ["- none available — include no outside links"]),
+    "",
+    "## Current standard editions",
+    "",
+    context.standardsFacts || "(no facts file found)",
+    "",
+    ...(context.diversityBrief ? ["## Patterns recent articles used — avoid them", "", context.diversityBrief, ""] : []),
+    "## Writing rules",
+    "",
+    rules,
+    "",
+  ].join("\n");
+
+  const draft = {
+    title: keywordBrief.title,
+    metaDescription: keywordBrief.metaDescription,
+    primaryKeyword: keywordBrief.primaryKeyword,
+    secondaryKeywords: keywordBrief.secondaryKeywords || [],
+    articleType: type,
+    targetCity: keywordBrief.targetCity || null,
+    slug,
+    bodyFile: "body.md",
+  };
+
+  fs.writeFileSync(path.join(folder, "brief.md"), brief);
+  fs.writeFileSync(path.join(folder, "draft.json"), JSON.stringify(draft, null, 2) + "\n");
+  log("contentManager", "brief", `written to ${folder}`);
+
+  return { success: true, folder, briefPath: path.join(folder, "brief.md"), draftPath: path.join(folder, "draft.json"), title: keywordBrief.title, primaryKeyword: keywordBrief.primaryKeyword, slug, articleType: type };
+}
+
 async function previewNext() {
   log("contentManager", "preview", "previewing next article");
   const keywordBrief = await keywordResearcher.pickKeyword();
@@ -601,4 +737,4 @@ async function publishDailySchedule(options = {}) {
   return { daily: await publishDaily(options), mega: null };
 }
 
-module.exports = { publishDaily, publishMegaArticle, publishDailySchedule, previewNext, getPublished, getCalendar };
+module.exports = { publishDaily, publishMegaArticle, publishDailySchedule, prepareBrief, previewNext, getPublished, getCalendar };

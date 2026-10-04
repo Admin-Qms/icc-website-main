@@ -1,5 +1,5 @@
 const path = require("path");
-require("dotenv").config({ path: path.resolve(__dirname, "../../.env"), quiet: true });
+require("dotenv").config({ path: process.env.ICC_ENV_FILE || path.resolve(__dirname, "../../.env"), quiet: true, override: true });
 
 const TEAM_ROOT = path.resolve(__dirname, "../..");
 const SITE_ROOT = path.resolve(TEAM_ROOT, "..");
@@ -38,6 +38,12 @@ module.exports = {
   GEMINI_TEXT_MODEL: process.env.GEMINI_TEXT_MODEL || "gemini-3.8-flash",
   GEMINI_TEXT_MODEL_FAST: process.env.GEMINI_TEXT_MODEL_FAST || process.env.GEMINI_TEXT_MODEL || "gemini-3.8-flash",
   GEMINI_IMAGE_MODEL: process.env.GEMINI_IMAGE_MODEL || "gemini-3.1-flash-image",
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY || "",
+  OPENAI_IMAGE_MODEL: process.env.OPENAI_IMAGE_MODEL || "gpt-image-2",
+  OPENAI_IMAGE_QUALITY: process.env.OPENAI_IMAGE_QUALITY || "medium",
+  // Image sources in order of preference: openai, gemini, pexels, codex (codex = local Codex CLI login only)
+  IMAGE_PROVIDERS: (process.env.IMAGE_PROVIDERS || "openai,gemini").split(",").map((p) => p.trim().toLowerCase()).filter(Boolean),
+  IMAGE_STYLE_PATH: path.join(TEAM_ROOT, "data", "image-style.json"),
 
   SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID || "uakgkw7x",
   SANITY_DATASET: process.env.SANITY_DATASET || "production",

@@ -505,6 +505,91 @@ function imageKey(source, sourceId) {
   return `${source}:${sourceId}`;
 }
 
+// Short scene descriptions per topic; the house style supplies everything else.
+const HERO_SCENES = {
+  quality: 'quality inspectors checking machined parts at an inspection bench beside the production line',
+  environmental: 'a plant floor with a waste-sorting station and recycling bins beside the machinery, a worker logging a reading',
+  safety: 'workers in hard hats and high-visibility vests walking a marked aisle between machines, lockout tags on a control panel',
+  medical: 'technicians in cleanroom garments assembling small devices at a stainless bench',
+  automotive: 'robotic welding cells on an automotive parts line with an operator checking a fixture',
+  audit: 'an auditor with a clipboard and safety glasses reviewing records at a workstation on the plant floor',
+  consultant: 'two people in hard hats reviewing a process chart on a clipboard beside a running production line',
+  manufacturing: 'a row of CNC machines with operators at their control panels',
+  default: 'operators and inspectors at work on a production line',
+};
+
+let styleCache = null;
+function loadImageStyle() {
+  if (styleCache) return styleCache;
+  const { IMAGE_STYLE_PATH } = require('../shared/config');
+  try {
+    styleCache = JSON.parse(require('fs').readFileSync(IMAGE_STYLE_PATH, 'utf-8'));
+  } catch {
+    styleCache = { style: 'Photorealistic editorial photograph of a modern North American manufacturing interior. No text, logos or signage.', framing: { hero: '', inline: '' }, avoid: 'offices, text' };
+  }
+  return styleCache;
+}
+
+/** One prompt shape for every generated image: house style + framing + the scene. */
+function buildImagePrompt(scene, kind = 'inline') {
+  const style = loadImageStyle();
+  const framing = (style.framing && style.framing[kind]) || '';
+  return `${style.style}\n${framing}\nScene: ${String(scene).trim().replace(/\.$/, '')}.\nAvoid: ${style.avoid}.`;
+}
+
+/**
+ * Generate one image with OpenAI's image API (landscape, then cropped to 16:9 by the caller).
+ */
+async function generateOpenAIImage(prompt) {
+  const { OPENAI_API_KEY, OPENAI_IMAGE_MODEL, OPENAI_IMAGE_QUALITY } = require('../shared/config');
+  if (!OPENAI_API_KEY) return null;
+  try {
+    const res = await fetch('https://api.openai.com/v1/images/generations', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: OPENAI_IMAGE_MODEL, prompt, size: '1536x1024', quality: OPENAI_IMAGE_QUALITY, n: 1 }),
+    });
+    const json = await res.json();
+    if (!res.ok || json.error) {
+      console.error(`  [imageAgent] OpenAI (${OPENAI_IMAGE_MODEL}) error ${res.status}: ${JSON.stringify(json.error || json).slice(0, 200)}`);
+      return null;
+    }
+    const b64 = json.data?.[0]?.b64_json;
+    return b64 ? Buffer.from(b64, 'base64') : null;
+  } catch (err) {
+    console.error(`  [imageAgent] OpenAI error: ${err.message}`);
+    return null;
+  }
+}
+
+/**
+ * Generate one image through the Codex CLI's image tool. Works only where
+ * `codex` is installed and logged in (this Mac), so it is never the default.
+ */
+async function generateCodexImage(prompt) {
+  const os = require('os');
+  const fs = require('fs');
+  const path = require('path');
+  try {
+    const { generateImage } = require('./codexImageAgent');
+    const outputPath = path.join(os.tmpdir(), `icc-codex-${Date.now()}.png`);
+    const result = await generateImage({ slug: 'blog', scene: prompt, outputPath, size: '1536x1024' });
+    if (!result?.success) return null;
+    const buffer = fs.readFileSync(outputPath);
+    fs.rmSync(outputPath, { force: true });
+    return buffer;
+  } catch (err) {
+    console.error(`  [imageAgent] Codex error: ${err.message}`);
+    return null;
+  }
+}
+
+const GENERATORS = {
+  openai: { generate: generateOpenAIImage, credit: 'AI-generated illustration (OpenAI)' },
+  gemini: { generate: generateGeminiImage, credit: 'AI-generated illustration (Gemini)' },
+  codex: { generate: generateCodexImage, credit: 'AI-generated illustration (OpenAI via Codex)' },
+};
+
 /**
  * Generate one image with Gemini at 16:9. Falls back to the previous image
  * model if the configured one is not available on the key.
@@ -589,10 +674,13 @@ async function findPexelsPhoto(queries, { exclude = new Set(), used } = {}) {
  * One publish-ready image (1200x675 WebP) from Pexels, else Gemini, else null.
  * @returns {Promise<null | {buffer, width, height, sha256, alt, source, sourceId?, credit?, creditUrl?}>}
  */
-async function sourceImage({ pexelsQueries = [], geminiPrompt, alt, exclude = new Set() }) {
+async function sourceImage({ pexelsQueries = [], scene, kind = 'inline', geminiPrompt, alt, exclude = new Set() }) {
   const { processImage } = require('../shared/contentStore');
   const { usedBlogImages, isBlogImageUsed } = require('../shared/imageRegistry');
+  const { IMAGE_PROVIDERS } = require('../shared/config');
   const used = usedBlogImages();
+  // `scene` + the house style is the normal path; `geminiPrompt` is kept for callers that pass a full prompt.
+  const prompt = scene ? buildImagePrompt(scene, kind) : geminiPrompt;
 
   const finish = async (raw) => {
     const processed = await processImage(raw.buffer);
@@ -603,25 +691,25 @@ async function sourceImage({ pexelsQueries = [], geminiPrompt, alt, exclude = ne
     return image;
   };
 
-  try {
-    const photo = await findPexelsPhoto(pexelsQueries, { exclude, used });
-    if (photo) {
-      const image = await finish(photo);
-      if (image) return image;
-    }
-  } catch (err) {
-    console.error(`  [imageAgent] Pexels image failed: ${err.message}`);
-  }
-
-  if (geminiPrompt) {
+  for (const provider of IMAGE_PROVIDERS) {
     try {
-      const buffer = await generateGeminiImage(geminiPrompt);
+      if (provider === 'pexels') {
+        const photo = await findPexelsPhoto(pexelsQueries, { exclude, used });
+        if (photo) {
+          const image = await finish(photo);
+          if (image) return image;
+        }
+        continue;
+      }
+      const generator = GENERATORS[provider];
+      if (!generator || !prompt) continue;
+      const buffer = await generator.generate(prompt);
       if (buffer) {
-        const image = await finish({ buffer, alt, source: 'gemini', credit: 'AI-generated illustration' });
+        const image = await finish({ buffer, alt, source: provider, credit: generator.credit });
         if (image) return image;
       }
     } catch (err) {
-      console.error(`  [imageAgent] Gemini image failed: ${err.message}`);
+      console.error(`  [imageAgent] ${provider} image failed: ${err.message}`);
     }
   }
   return null;
@@ -634,7 +722,8 @@ async function getHeroImage(article, { exclude = new Set() } = {}) {
   const scene = detectScene(topic);
   return sourceImage({
     pexelsQueries: getSearchVariations(article.title || article.primaryKeyword || '', scene),
-    geminiPrompt: scene.prompt,
+    scene: HERO_SCENES[scene.id] || HERO_SCENES.default,
+    kind: 'hero',
     alt: SCENE_ALT[scene.id] || SCENE_ALT.default,
     exclude,
   });
@@ -656,7 +745,10 @@ module.exports = {
   // Markdown blog API
   getHeroImage,
   sourceImage,
+  buildImagePrompt,
   generateGeminiImage,
+  generateOpenAIImage,
+  generateCodexImage,
   findPexelsPhoto,
   // Legacy API (backward compat)
   findAndUploadImage,

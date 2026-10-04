@@ -80,7 +80,7 @@ FAQ questions must be phrased in the second or third person ("How long does...",
 Return JSON:
 {
   "primaryKeyword": "the exact keyword from the queue",
-  "secondaryKeywords": ["3-5 related keywords to weave in naturally"],
+  "secondaryKeywords": ["3-5 related subtopics written as normal capitalized phrases (e.g. \"Audit schedule and frequency\") — topics the article should cover, never phrases to paste in"],
   "articleType": "one of: deep-guide|comparison|checklist|industry-spotlight|myth-buster|trend-opinion|how-to",
   "searchIntent": "informational|commercial|transactional",
   "recommendedWordCount": 1900,

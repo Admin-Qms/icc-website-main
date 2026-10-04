@@ -625,8 +625,7 @@ async function runQA(article) {
 // ═══════════════════════════════════════════════════════════════
 
 const MIN_WORDS = 1500;
-const MIN_INTERNAL_LINKS = 3;
-const MIN_EXTERNAL_LINKS = 3;
+const { MIN_INTERNAL_LINKS, MIN_EXTERNAL_LINKS } = require('../seo/linkBuilder');
 const HERO_WIDTH = 1200;
 const HERO_HEIGHT = 675;
 
@@ -634,8 +633,132 @@ const BANNED_PHRASES = [
   "delve into", "it is worth noting", "in conclusion", "in today's landscape",
   "navigating the complexities", "crucial", "comprehensive", "landscape",
   "navigate", "leverage", "game-changer", "cutting-edge", "at the end of the day",
-  "it goes without saying", "needless to say",
+  "it goes without saying", "needless to say", "from scratch", "from the ground up",
+  "documentation burden", "documentation maturity", "competitive advantage", "competitive edge",
 ];
+
+// ── US spelling ─────────────────────────────────────────────────
+// British forms that appear in prose, lowercase only: a capitalized form is
+// treated as a proper name (Canadian Centre for Occupational Health and Safety,
+// Ministry of Labour) and left alone. URLs, link targets and image lines are skipped.
+
+const ISE_STEMS = 'organ|real|recogn|analy|optim|minim|maxim|priorit|standard|summar|util|categor|emphas|special|author|custom|final|formal|normal|visual|mobil|critic|scrutin|digit|central|industrial|material|commercial|rational|synchron|harmon|legitim|monet|capital|modern|neutral|penal|personal|stabil|steril|familiar|general|initial|internal|local|memor|minimal|moral|oxid|popular|public|random|sanit|serial|social|symbol|system|theor|total|vapor|vocal';
+const SPELLING_RULES = [
+  // -ise/-isation families: analyse→analyze, organise→organize, organisation→organization
+  { re: new RegExp(`\\b(${ISE_STEMS})is(e|es|ed|ing|ation|ations|er|ers)\\b`, 'g'), fix: (m, stem, tail) => `${stem}iz${tail}` },
+  { re: /\banalys(e|es|ed|ing)\b/g, fix: (m, tail) => `analyz${tail}` },
+  { re: /\bcatalys(e|es|ed|ing)\b/g, fix: (m, tail) => `catalyz${tail}` },
+  { re: /\bparalys(e|es|ed|ing)\b/g, fix: (m, tail) => `paralyz${tail}` },
+  // -our → -or
+  { re: /\b(col|fav|hon|lab|behavi|flav|harb|hum|neighb|rum|sav|vap|vig|od|arm|ard|end|rig)our(s|ed|ing|able|ite|ful|ably)?\b/g, fix: (m, stem, tail = '') => `${stem}or${tail}` },
+  // -re → -er
+  { re: /\b(cent|met|lit|fib|calib|theat|sab|spect|lust)re(s|d)?\b/g, fix: (m, stem, tail = '') => `${stem}er${tail}` },
+  { re: /\bcentr(ed|ing)\b/g, fix: (m, tail) => `center${tail}` },
+  // -ce → -se nouns, and the rest
+  { re: /\b(defen|offen|preten)ce(s)?\b/g, fix: (m, stem, tail = '') => `${stem}se${tail}` },
+  { re: /\blicen(ce|ces)\b/g, fix: (m, tail) => (tail === 'ce' ? 'license' : 'licenses') },
+  { re: /\bprogramme(s|d)?\b/g, fix: (m, tail = '') => `program${tail}` },
+  { re: /\bprogramming\b/g, fix: () => 'programming' },
+  { re: /\b(catalog|analog|dialog)ue(s|d)?\b/g, fix: (m, stem, tail = '') => `${stem}${tail}` },
+  { re: /\bgrey(s|er|est|ish)?\b/g, fix: (m, tail = '') => `gray${tail}` },
+  { re: /\b(travel|label|model|cancel|fuel|signal|channel|total|level|tunnel)l(ed|ing|er|ers)\b/g, fix: (m, stem, tail) => `${stem}${tail}` },
+  { re: /\bjudgement(s)?\b/g, fix: (m, tail = '') => `judgment${tail}` },
+  { re: /\benrol(ment|ments|led|ling)\b/g, fix: (m, tail) => `enroll${tail}` },
+  { re: /\bfulfil(ment|ments|s)?\b/g, fix: (m, tail = '') => `fulfill${tail}` },
+  { re: /\binstalment(s)?\b/g, fix: (m, tail = '') => `installment${tail}` },
+  { re: /\bskilful(ly)?\b/g, fix: (m, tail = '') => `skillful${tail}` },
+  { re: /\baluminium\b/g, fix: () => 'aluminum' },
+  { re: /\b(mould|tyre|cheque|plough|ageing|artefact|sulphur|kerb|pyjama|whilst|amongst)(s|ed|ing)?\b/g, fix: (m, w, tail = '') => ({ mould: 'mold', tyre: 'tire', cheque: 'check', plough: 'plow', ageing: 'aging', artefact: 'artifact', sulphur: 'sulfur', kerb: 'curb', pyjama: 'pajama', whilst: 'while', amongst: 'among' })[w] + tail },
+  { re: /\bpractis(e|es|ed|ing)\b/g, fix: (m, tail) => `practic${tail}` },
+];
+
+/** Splits prose from the spans spelling must not touch (link targets, URLs, image lines, code). */
+function proseSpans(body) {
+  return String(body || '').split(/(\]\([^)]*\)|https?:\/\/\S+|^!\[[^\]]*\]\([^)]*\)\s*$|^\[IMAGE:[^\]]*\]\s*$|`[^`]*`)/gm);
+}
+
+const SENTENCE_START_RE = /(?:^|[.!?:]\*{0,2}\s+|\n\s*(?:[-*+]|\d+\.|#{1,6}|>)\s*|\*\*|["\u201c(])$/;
+
+// A capitalized match is a proper name (Centre for…, Ministry of Labour) unless it
+// opens a sentence or a list item, where it is just an ordinary word with a capital.
+function isOrdinaryWord(text, index, word) {
+  if (word[0] === word[0].toLowerCase()) return true;
+  if (word.slice(1) !== word.slice(1).toLowerCase()) return false; // ACRONYM
+  return SENTENCE_START_RE.test(text.slice(Math.max(0, index - 12), index));
+}
+
+function applySpellingRules(part, onMatch) {
+  let text = part;
+  for (const rule of SPELLING_RULES) {
+    const re = new RegExp(rule.re.source, 'gi');
+    text = text.replace(re, (...args) => {
+      const match = args[0];
+      const offset = args[args.length - 2];
+      const whole = args[args.length - 1];
+      if (!isOrdinaryWord(whole, offset, match)) return match;
+      const lower = match.toLowerCase();
+      const groups = args.slice(1, -2).map((g) => (typeof g === 'string' ? g.toLowerCase() : g));
+      let fixed = rule.fix(lower, ...groups);
+      if (match[0] !== lower[0]) fixed = fixed[0].toUpperCase() + fixed.slice(1);
+      onMatch(match, fixed);
+      return fixed;
+    });
+  }
+  return text;
+}
+
+function findBritishSpellings(body) {
+  const found = new Set();
+  proseSpans(body).forEach((part, i) => {
+    if (i % 2 === 1) return;
+    applySpellingRules(part, (match) => found.add(match));
+  });
+  return [...found];
+}
+
+/** Rewrites British spellings to US in prose only; proper names keep their spelling. */
+function toUSSpelling(body) {
+  return proseSpans(body)
+    .map((part, i) => (i % 2 === 1 ? part : applySpellingRules(part, () => {})))
+    .join('');
+}
+
+// ── Keyword styling ─────────────────────────────────────────────
+// Search phrases pasted in bold, and lowercase standard names, are the visible
+// signs of keyword stuffing. Both are checked and patched deterministically.
+
+const STANDARD_NAME_RE = /\b(iso|iatf|fssc|as)\s?(9001|9000|14001|45001|13485|22000|27001|17025|22301|16949|9100|19011)\b/g;
+
+function findKeywordStyling(body, keywords = []) {
+  const problems = [];
+  const keys = new Set((keywords || []).map((k) => String(k).trim().toLowerCase()).filter(Boolean));
+  proseSpans(body).forEach((part, i) => {
+    if (i % 2 === 1) return;
+    for (const m of part.matchAll(/\*\*([^*\n]+)\*\*/g)) {
+      const inner = m[1].trim().replace(/[.:,;!?]+$/, '').toLowerCase();
+      if (keys.has(inner)) problems.push({ kind: 'bold-keyword', text: m[0] });
+    }
+    for (const m of part.matchAll(STANDARD_NAME_RE)) {
+      if (m[1] !== m[1].toUpperCase()) problems.push({ kind: 'lowercase-standard', text: m[0] });
+    }
+  });
+  return problems;
+}
+
+function fixKeywordStyling(body, keywords = []) {
+  const keys = new Set((keywords || []).map((k) => String(k).trim().toLowerCase()).filter(Boolean));
+  return proseSpans(body)
+    .map((part, i) => {
+      if (i % 2 === 1) return part;
+      return part
+        .replace(/\*\*([^*\n]+)\*\*/g, (all, inner) => {
+          const key = inner.trim().replace(/[.:,;!?]+$/, '').toLowerCase();
+          return keys.has(key) ? inner : all;
+        })
+        .replace(STANDARD_NAME_RE, (all, prefix, number) => `${prefix.toUpperCase()} ${number}`);
+    })
+    .join('');
+}
 
 const ARTIFACT_PATTERNS = [
   { re: /^```/m, label: 'code fence' },
@@ -700,7 +823,7 @@ const CLAIMS_AUDIT_PROMPT = `You are a compliance editor for a Canadian ISO cons
 RULES THE DRAFT MUST FOLLOW:
 1. NAMED ENTITIES — The draft must not name any company, client or individual person. Allowed names: ISO Certification Consultant itself, standards bodies and regulators (ISO, IATF, IAF, SCC, ANAB, Health Canada, CFIA, Ministry of Labour and similar), and well-known public organizations cited as sources.
 2. QUOTES — No quotations, testimonials or reported speech attributed to any person.
-3. STATISTICS — No statistic, percentage, survey result, dollar figure or measured outcome stated as fact. Allowed: clause numbers; requirements written in the standard; and ranges clearly framed as typical or estimated ("typically 4 to 6 months", "often costs between").
+3. STATISTICS AND GENERALIZATIONS — No statistic, percentage, survey result, dollar figure or measured outcome stated as fact, and no claim about what "most", "the majority of" or "nearly all" companies, plants, auditors or registrars do. Allowed: clause numbers; requirements written in the standard; ranges clearly framed as typical or estimated ("typically 4 to 6 months", "often costs between"); and hedged generalizations ("many plants", "a common approach").
 4. EXAMPLES — Any scenario about a business must be openly hypothetical: its paragraph starts with "Illustrative example:" and it names no company. A story told as something that really happened is a violation.
 5. TRACK RECORD — No claims about ISO Certification Consultant's results (pass rates, number of audits or clients, years in business).
 6. STANDARD ACCURACY — ISO/IATF clause numbers and standard names must be correct for the standard cited (for example, ISO 9001:2015 clause 9.2 is internal audit; clause 6.1 is actions to address risks and opportunities). Flag a reference only when you are confident it is wrong.
@@ -901,6 +1024,22 @@ async function validateLocal(post, opts = {}) {
   const banned = countBannedPhrases(body);
   add('banned-phrases', { name: 'No banned phrases', pass: banned.length === 0, phrases: banned, message: banned.length ? `Banned phrase(s): ${banned.join(', ')}` : 'None found' });
 
+  const styling = findKeywordStyling(body, post.keywords || [post.primaryKeyword]);
+  add('keyword-styling', {
+    name: 'No pasted keywords or lowercase standard names',
+    pass: styling.length === 0,
+    problems: styling,
+    message: styling.length ? `Found: ${styling.slice(0, 4).map((p) => p.text).join(', ')}` : 'None found',
+  });
+
+  const british = findBritishSpellings(`${post.title}\n${post.description}\n${body}`);
+  add('spelling', {
+    name: 'US spelling',
+    pass: british.length === 0,
+    words: british,
+    message: british.length ? `British spelling: ${british.slice(0, 6).join(', ')}` : 'US spelling throughout',
+  });
+
   const artifacts = ARTIFACT_PATTERNS.filter((a) => a.re.test(body)).map((a) => a.label);
   // Image markers are expected until the image step has run.
   if (phase === 'final' && /\[IMAGE:/.test(body)) artifacts.push('unprocessed image marker');
@@ -983,6 +1122,10 @@ module.exports = {
   toBlocks,
   auditClaims,
   countBannedPhrases,
+  findBritishSpellings,
+  toUSSpelling,
+  findKeywordStyling,
+  fixKeywordStyling,
   BANNED_PHRASES,
   MIN_WORDS,
   // Legacy API (backward compat)

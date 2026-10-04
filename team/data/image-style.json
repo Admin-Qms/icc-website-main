@@ -1,0 +1,9 @@
+{
+  "note": "The house style for every generated image, whatever the provider. Scene descriptions are appended to it; they never replace it. Edit the wording here to change the look of all future images.",
+  "style": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.",
+  "framing": {
+    "hero": "Wide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.",
+    "inline": "Mid-shot of the task itself: hands, tool and part fill the frame, the background softly out of focus."
+  },
+  "avoid": "offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind"
+}

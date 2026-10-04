@@ -264,8 +264,6 @@ async function processInlineImages(article, slug) {
 // Replaces up to `max` [IMAGE: ...] markers with standard Markdown images whose
 // files the caller publishes alongside the post. Nothing is written here.
 
-const NO_TEXT_SUFFIX = "Modern North American manufacturing or industrial setting. Natural lighting, shallow depth of field. No text, no labels, no overlays, no watermarks, no words of any kind in the image.";
-
 function pexelsQueryFor(description) {
   const words = description
     .toLowerCase()
@@ -296,7 +294,8 @@ async function processInlineImagesLocal(article, slug, { exclude = new Set(), ma
     try {
       image = await sourceImage({
         pexelsQueries: pexelsQueryFor(marker.query),
-        geminiPrompt: `A photorealistic photograph of ${marker.query.replace(/\.$/, "")}. ${NO_TEXT_SUFFIX}`,
+        scene: marker.query,
+        kind: "inline",
         alt: marker.query.replace(/\s+/g, " ").trim(),
         exclude,
       });

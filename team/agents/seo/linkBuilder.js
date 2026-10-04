@@ -23,7 +23,7 @@ function saveLinkMap(data) {
 }
 
 const MIN_INTERNAL_LINKS = 3;
-const MIN_EXTERNAL_LINKS = 3;
+const MIN_EXTERNAL_LINKS = 2;
 
 /**
  * Removes links the site can't stand behind: internal links to pages that

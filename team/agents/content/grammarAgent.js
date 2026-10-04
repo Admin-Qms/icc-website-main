@@ -1,4 +1,4 @@
-const { claudeCallFast, claudeJSONFast } = require("../shared/claude");
+const { claudeCallFast } = require("../shared/claude");
 const { log } = require("../shared/logger");
 const { updateHeartbeat } = require("../shared/heartbeat");
 
@@ -45,100 +45,82 @@ CRITICAL — PRESERVE THESE ELEMENTS EXACTLY (do NOT remove, rewrite, or change)
 - ALL bold formatting (**text**)
 - ALL heading hierarchy (## and ###) — never add an H1 ("# ") heading`;
 
+function skipped(body, notes) {
+  return {
+    correctedContent: body,
+    spellingFixes: 0,
+    grammarFixes: 0,
+    styleViolations: 0,
+    passiveVoiceFixed: 0,
+    totalCorrections: 0,
+    overallGrade: "pass",
+    notes,
+  };
+}
+
+// The corrected article comes back as plain Markdown, not inside a JSON string:
+// wrapped in JSON, a 2,000-word article overran the model's output limit and the
+// truncated result was always thrown away. `totalCorrections` is 1 when the text
+// changed, 0 when it did not; the per-category counts are no longer available.
 async function checkGrammar(article) {
   log("grammarAgent", "check", `checking: ${article.title || "untitled"}`);
 
-  // Use article.body (the standard field used across the pipeline — NOT article.content)
   const body = article.body || "";
-
   if (!body || body.length < 100) {
     log("grammarAgent", "skip", "article body is empty or too short");
+    return skipped(body, "Skipped — body too short");
+  }
+
+  const { countWords } = require("../shared/contentStore");
+  const linksBefore = (body.match(/\[([^\]]+)\]\([^)]+\)/g) || []).length;
+  const imagesBefore = (body.match(/\[IMAGE:[^\]]+\]/g) || []).length;
+  const wordsBefore = countWords(body);
+
+  try {
+    const result = await claudeCallFast(
+      SYSTEM_PROMPT,
+      `Review and correct the following article. Apply all spelling, grammar, style, and readability rules.
+
+CRITICAL: Preserve ALL markdown links [text](url), ALL [IMAGE:] markers, all headings, callouts and bold phrases exactly as they appear. Change wording only where a rule requires it.
+
+Return ONLY the full corrected article as markdown. No JSON, no code fences, no preamble, no notes.
+
+ARTICLE TITLE: ${article.title}
+ARTICLE BODY:
+${body}`,
+      12288
+    );
+
+    const corrected = result.replace(/^```(?:markdown|md)?\n([\s\S]*?)\n```$/m, "$1").trim();
+    const linksAfter = (corrected.match(/\[([^\]]+)\]\([^)]+\)/g) || []).length;
+    const imagesAfter = (corrected.match(/\[IMAGE:[^\]]+\]/g) || []).length;
+    const wordsAfter = countWords(corrected);
+
+    // A reply that lost links, markers or a tenth of the text is not a corrected article.
+    if (linksAfter < linksBefore - 1 || imagesAfter < imagesBefore - 1 || wordsAfter < wordsBefore * 0.9) {
+      log("grammarAgent", "rollback", `reply dropped ${linksBefore - linksAfter} links, ${imagesBefore - imagesAfter} images, ${wordsBefore - wordsAfter} words — using original body`);
+      updateHeartbeat("grammarAgent", "failed", "rollback");
+      return skipped(body, "Grammar reply rejected: it dropped links, markers or text");
+    }
+
+    const changed = corrected !== body.trim();
+    log("grammarAgent", "result", changed ? `corrections applied (${wordsBefore} → ${wordsAfter} words)` : "no changes");
+    updateHeartbeat("grammarAgent", "complete", changed ? "corrected" : "unchanged");
+
     return {
-      correctedContent: body,
+      correctedContent: changed ? corrected : body,
       spellingFixes: 0,
       grammarFixes: 0,
       styleViolations: 0,
       passiveVoiceFixed: 0,
-      totalCorrections: 0,
+      totalCorrections: changed ? 1 : 0,
       overallGrade: "pass",
-      notes: "Skipped — body too short",
-    };
-  }
-
-  // Count links and image markers before grammar check (for validation after)
-  const linksBefore = (body.match(/\[([^\]]+)\]\([^)]+\)/g) || []).length;
-  const imagesBefore = (body.match(/\[IMAGE:[^\]]+\]/g) || []).length;
-
-  const userMsg = `Review and correct the following article. Apply all spelling, grammar, style, and readability rules.
-
-CRITICAL: You MUST preserve ALL markdown links [text](url) and ALL [IMAGE:] markers exactly as they appear. Do NOT remove or modify any links or image markers.
-
-Return ONLY a JSON object with these fields:
-- "correctedContent": the full corrected article content (markdown) with ALL links and [IMAGE:] markers preserved
-- "spellingFixes": number of spelling corrections
-- "grammarFixes": number of grammar corrections
-- "styleViolations": number of style fixes
-- "passiveVoiceFixed": number of passive voice rewrites
-- "overallGrade": "pass" or "fail" (fail if more than 15 total corrections or factual ISO errors found)
-- "notes": string with any issues for Content Manager
-- "totalCorrections": total number of all corrections
-
-ARTICLE TITLE: ${article.title}
-ARTICLE BODY:
-${body}`;
-
-  try {
-    const result = await claudeJSONFast(SYSTEM_PROMPT, userMsg, 8192);
-
-    const totalCorrections = (result.spellingFixes || 0) + (result.grammarFixes || 0) +
-      (result.styleViolations || 0) + (result.passiveVoiceFixed || 0);
-
-    const grade = totalCorrections > 15 ? "fail" : (result.overallGrade || "pass");
-
-    // Validate that links and images survived the grammar check
-    const corrected = result.correctedContent || body;
-    const linksAfter = (corrected.match(/\[([^\]]+)\]\([^)]+\)/g) || []).length;
-    const imagesAfter = (corrected.match(/\[IMAGE:[^\]]+\]/g) || []).length;
-
-    let finalContent = corrected;
-
-    // If grammar agent stripped links or images, roll back to original body
-    if (linksAfter < linksBefore - 1 || imagesAfter < imagesBefore - 1) {
-      log("grammarAgent", "rollback", `grammar stripped ${linksBefore - linksAfter} links and ${imagesBefore - imagesAfter} images — using original body`);
-      finalContent = body;
-    }
-
-    const summary = {
-      spellingFixes: result.spellingFixes || 0,
-      grammarFixes: result.grammarFixes || 0,
-      styleViolations: result.styleViolations || 0,
-      passiveVoiceFixed: result.passiveVoiceFixed || 0,
-      totalCorrections,
-      overallGrade: grade,
-      notes: result.notes || "",
-    };
-
-    log("grammarAgent", "result", `${totalCorrections} corrections, grade: ${grade}`);
-    updateHeartbeat("grammarAgent", grade === "pass" ? "complete" : "failed", `${totalCorrections} fixes, ${grade}`);
-
-    return {
-      correctedContent: finalContent,
-      ...summary,
+      notes: "",
     };
   } catch (err) {
     log("grammarAgent", "error", err.message);
     updateHeartbeat("grammarAgent", "error", err.message);
-    // On error, pass through unchanged
-    return {
-      correctedContent: body,
-      spellingFixes: 0,
-      grammarFixes: 0,
-      styleViolations: 0,
-      passiveVoiceFixed: 0,
-      totalCorrections: 0,
-      overallGrade: "pass",
-      notes: `Grammar check skipped: ${err.message}`,
-    };
+    return skipped(body, `Grammar check skipped: ${err.message}`);
   }
 }
 

@@ -12,3 +12,7 @@ memory/*-log.json
 memory/image-registry.json
 memory/link-map.json
 memory/images/
+
+# Briefs and drafts written for Claude-written articles; the seed draft stays tracked
+drafts/*
+!drafts/iso-certification-audit-stage-1-vs-stage-2/

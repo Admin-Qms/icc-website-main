@@ -5,7 +5,7 @@ const chalk = require("chalk");
 const path = require("path");
 
 // Load env before anything else
-require("dotenv").config({ path: path.resolve(__dirname, ".env"), quiet: true });
+require("dotenv").config({ path: process.env.ICC_ENV_FILE || path.resolve(__dirname, ".env"), quiet: true, override: true });
 
 const program = new Command();
 
@@ -821,6 +821,37 @@ blogCmd
     const contentManager = require("./agents/content/contentManager");
     const result = await contentManager.publishDaily({ dryRun: opts.dryRun, force: opts.force, fixture: opts.fixture });
     printBlogResult(result);
+
+    console.log("\n" + "=".repeat(65) + "\n");
+  });
+
+blogCmd
+  .command("brief")
+  .description("Claude-writes mode: pick the topic and write drafts/<date>-<slug>/brief.md + draft.json for a Claude session to write from")
+  .option("--force", "prepare a brief even if an article dated today already exists")
+  .action(async (opts) => {
+    banner();
+    console.log(chalk.cyan("\n  Pipeline: PREPARE BRIEF\n") + "-".repeat(65));
+
+    const contentManager = require("./agents/content/contentManager");
+    const result = await contentManager.prepareBrief({ force: opts.force });
+
+    if (result.success) {
+      console.log(chalk.green.bold("\n  Brief Ready"));
+      console.log(`  Title:    ${result.title}`);
+      console.log(`  Keyword:  ${result.primaryKeyword}`);
+      console.log(`  Type:     ${result.articleType}`);
+      console.log(`  Folder:   ${result.folder}`);
+      console.log(`\n  Next: write body.md in that folder (see .claude/skills/write-blog-article/SKILL.md), then`);
+      console.log(`        node team/pm.js blog publish --fixture ${path.relative(path.resolve(__dirname, ".."), result.draftPath)}`);
+      console.log(`BRIEF ${result.folder}`);
+    } else if (result.skipped) {
+      console.log(chalk.yellow(`\n  Nothing to do: ${result.reason}`));
+      console.log("NOTHING_TO_PUBLISH");
+    } else {
+      console.log(chalk.red.bold(`\n  Brief Failed: ${result.reason}`));
+      process.exitCode = 1;
+    }
 
     console.log("\n" + "=".repeat(65) + "\n");
   });

@@ -57,6 +57,19 @@ async function patchArticle(article, qaResult, context) {
     applied.push("banned phrases replaced");
   }
 
+  if (failed(qaResult, "keyword-styling")) {
+    const { fixKeywordStyling } = require("./contentQA");
+    body = fixKeywordStyling(body, [article.primaryKeyword, ...(article.secondaryKeywords || [])]);
+    applied.push("pasted keywords unbolded, standard names capitalized");
+  }
+
+  if (failed(qaResult, "spelling")) {
+    const { toUSSpelling } = require("./contentQA");
+    body = toUSSpelling(body);
+    metaDescription = toUSSpelling(metaDescription || "");
+    applied.push("US spelling applied");
+  }
+
   // ── Links: drop bad ones, then top up from the offered lists ──
   if (failed(qaResult, "internal-links", "external-links")) {
     const { validateLinks } = require("../seo/linkBuilder");
