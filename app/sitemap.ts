@@ -19,28 +19,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", priority: 0.7 },
     { path: "/contact", priority: 0.7 },
   ].map((r) => ({
-    url: `${base}${r.path}`,
+    url: `${base}${r.path}/`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: r.priority,
   }));
 
   const moduleRoutes = MODULES.map((m) => ({
-    url: `${base}/solutions/${m.slug}`,
+    url: `${base}/solutions/${m.slug}/`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
   const serviceRoutes = STANDARDS.map((s) => ({
-    url: `${base}/services/${s.slug}`,
+    url: `${base}/services/${s.slug}/`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
   const industryRoutes = INDUSTRIES.map((i) => ({
-    url: `${base}/industries/${i.slug}`,
+    url: `${base}/industries/${i.slug}/`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
@@ -51,13 +51,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogRoutes = [
     {
-      url: `${base}/blog`,
+      url: `${base}/blog/`,
       lastModified: posts.length ? day(posts[0].date) : now,
       changeFrequency: "daily" as const,
       priority: 0.8,
     },
     ...posts.map((p) => ({
-      url: `${base}/blog/${p.slug}`,
+      url: `${base}/blog/${p.slug}/`,
       lastModified: day(p.updated ?? p.date),
       changeFrequency: "monthly" as const,
       priority: 0.7,

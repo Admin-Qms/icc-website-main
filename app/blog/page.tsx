@@ -30,13 +30,13 @@ export default function BlogIndexPage() {
     "@context": "https://schema.org",
     "@type": "Blog",
     name: `${SITE.name} Blog`,
-    url: `${SITE.url}/blog`,
+    url: `${SITE.url}/blog/`,
     description,
     publisher: { "@type": "Organization", name: SITE.legalName, url: SITE.url },
     blogPost: posts.map((p) => ({
       "@type": "BlogPosting",
       headline: p.title,
-      url: `${SITE.url}/blog/${p.slug}`,
+      url: `${SITE.url}/blog/${p.slug}/`,
       datePublished: p.date,
     })),
   };

@@ -60,7 +60,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   const toc = getHeadings(post.body).filter((h) => h.depth === 2);
   const related = getRelatedPosts(post);
-  const url = `${SITE.url}/blog/${post.slug}`;
+  const url = `${SITE.url}/blog/${post.slug}/`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -83,8 +83,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
-          { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE.url}/blog` },
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE.url}/` },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE.url}/blog/` },
           { "@type": "ListItem", position: 3, name: post.title, item: url },
         ],
       },
