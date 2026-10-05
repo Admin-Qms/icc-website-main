@@ -1,6 +1,6 @@
 # Content Calendar
 
-> Publishing schedule for isocertificationconsultant.ca blog. Must always have 2 weeks of planned topics ahead.
+> Publishing schedule for isocertificationconsultants.ca blog. Must always have 2 weeks of planned topics ahead.
 
 ---
 

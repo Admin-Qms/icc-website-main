@@ -3,6 +3,8 @@ import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SITE } from "@/lib/site";
+import { serializeJsonLd } from "@/lib/blog";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -17,17 +19,16 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://isocertificationconsultant.ca"),
+  metadataBase: new URL(SITE.url),
   title: {
-    default:
-      "ISO Certification Consultant — Customized QMS Platform for Manufacturers | Canada",
-    template: "%s | ISO Certification Consultant",
+    default: `${SITE.name} — ISO Certification Consulting for Canadian Companies`,
+    template: `%s | ${SITE.name}`,
   },
   description:
-    "A configurable QMS platform for Canadian manufacturers — customized to your processes (inspection, inventory, training, production and more) and ready to onboard any standard, from ISO 9001 and IATF 16949 to customer-specific frameworks.",
+    "ISO certification consulting for Canadian companies, with a configurable management system platform customized to your processes and ready to onboard any standard, from ISO 9001 and IATF 16949 to customer-specific frameworks.",
   keywords: [
     "customized QMS platform",
-    "quality management system manufacturing",
+    "ISO management systems",
     "ISO certification consultant Canada",
     "inspection software",
     "training and competence QMS",
@@ -38,9 +39,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://isocertificationconsultant.ca",
-    siteName: "ISO Certification Consultant",
-    title: "Customized QMS Platform for Manufacturers — Any Standard, One System",
+    url: SITE.url,
+    siteName: SITE.name,
+    title: "ISO Certification Consulting for Canadian Companies — Any Standard, One System",
     description:
       "Configurable QMS process modules — inspection, inventory, training, production — built around your business and mapped to any standard you certify against.",
   },
@@ -49,17 +50,18 @@ export const metadata: Metadata = {
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "ISO Certification Consultant",
-  legalName: "ISO Certification Consultant Inc.",
-  url: "https://isocertificationconsultant.ca",
+  name: SITE.name,
+  legalName: SITE.legalName,
+  url: SITE.url,
+  email: SITE.email,
   description:
-    "A configurable QMS platform for Canadian manufacturers — customized to your processes and ready to onboard any standard.",
+    "ISO certification consulting for Canadian companies — a configurable management system platform customized to your processes and ready to onboard any standard.",
   areaServed: [
     { "@type": "Country", name: "Canada" },
     { "@type": "Country", name: "United States" },
   ],
   knowsAbout: [
-    "Quality Management Systems",
+    "ISO management systems",
     "Inspection and quality control",
     "Inventory and traceability",
     "Training and competence",
@@ -83,7 +85,7 @@ export default function RootLayout({
       <body className="bg-white text-slate-700 antialiased">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(orgJsonLd) }}
         />
         <Navbar />
         <main>{children}</main>

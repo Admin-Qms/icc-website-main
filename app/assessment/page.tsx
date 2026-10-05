@@ -6,7 +6,7 @@ import { ShieldCheck } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Free ISO Readiness Assessment",
   description:
-    "Find out how audit-ready your quality system is in minutes. A free, interactive ISO readiness assessment for Canadian manufacturers — no signup required.",
+    "Find out how audit-ready your quality system is in minutes. A free, interactive ISO readiness assessment for Canadian companies — no signup required.",
   alternates: { canonical: "/assessment" },
 };
 

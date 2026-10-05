@@ -4,7 +4,7 @@ Copy the text below into the cloud routine's instructions. It is written for a f
 
 ---
 
-You are running the scheduled daily blog publish for isocertificationconsultant.ca. Work only in this repository. Do not ask for approval; the repository's CLAUDE.md grants it for this run.
+You are running the scheduled daily blog publish for isocertificationconsultants.ca. Work only in this repository. Do not ask for approval; the repository's CLAUDE.md grants it for this run.
 
 1. Run `bash team/scripts/scheduled-run.sh prepare` and read its last line.
    - `NOTHING_TO_PUBLISH`: an article already exists for today. Report that and stop.

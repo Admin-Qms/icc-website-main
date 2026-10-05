@@ -1,6 +1,6 @@
 # SEO Status
 
-> Current SEO state for isocertificationconsultant.ca. Update weekly with Google Search Console data.
+> Current SEO state for isocertificationconsultants.ca. Update weekly with Google Search Console data.
 
 ---
 
@@ -11,7 +11,7 @@
 | **Total user-facing pages** | ~1,595 |
 | **Static pages in sitemap** | 29 |
 | **Dynamic blog posts in sitemap** | ~1,566 (fetched from Sanity at build time) |
-| **Sitemap URL** | https://isocertificationconsultant.ca/sitemap.xml |
+| **Sitemap URL** | https://isocertificationconsultants.ca/sitemap.xml |
 | **Robots.txt** | Dynamic via `app/robots.ts` |
 | **IndexNow** | Active (Bing/Yandex, token file in `public/`) |
 | **Google Site Verification** | Via `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` env var |
@@ -55,9 +55,9 @@
 
 | Tag | Value | Location |
 |-----|-------|----------|
-| `en-CA` | `https://isocertificationconsultant.ca` | `app/layout.tsx` |
-| `en-US` | `https://isocertificationconsultant.ca` | `app/layout.tsx` |
-| `x-default` | `https://isocertificationconsultant.ca` | `app/layout.tsx` |
+| `en-CA` | `https://isocertificationconsultants.ca` | `app/layout.tsx` |
+| `en-US` | `https://isocertificationconsultants.ca` | `app/layout.tsx` |
+| `x-default` | `https://isocertificationconsultants.ca` | `app/layout.tsx` |
 
 ---
 

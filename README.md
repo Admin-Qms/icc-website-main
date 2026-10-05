@@ -1,4 +1,4 @@
-# ISO Certification Consultant — Website
+# ISO Certification Consultants — Website
 
 A fresh Next.js website built on a reusable **organization + knowledge** foundation.
 
@@ -26,7 +26,7 @@ team/                    Content agents — see team/README.md
   memory/keyword-queue.json   Topic list
   data/                  Approved outside links, current standard editions
 docs/knowledge-base/     Reference notes; decisions.md has the current decisions
-.github/workflows/       Build and deploy to cPanel (not live yet)
+.github/workflows/       Builds the export to the deploy branch (cPanel backup; the live site is Vercel)
 ```
 
 ## Publishing an article
@@ -47,5 +47,5 @@ Next.js 14 (App Router) · React 18 · TypeScript · Tailwind CSS 3.
 
 - The site was rebuilt from scratch; `team/` holds the agents from the previous
   project. Only the daily blog pipeline is in use — the rest is switched off.
-- Brand: **ISO Certification Consultant Inc.** — domain **isocertificationconsultant.ca** (Canada / USA).
+- Brand: **ISO Certification Consultants Inc.** — domain **isocertificationconsultants.ca** (Canada / USA).
 - Placeholders to fill when wiring services: address, GA4 id, Leadfeeder id, Calendly, GitHub account.

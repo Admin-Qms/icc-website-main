@@ -10,8 +10,8 @@ const CLIENT_ID = process.env.GOOGLE_CLIENT_ID || "";
 const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET || "";
 const REFRESH_TOKEN = process.env.GOOGLE_REFRESH_TOKEN || "";
 
-const SITE_DOMAIN = "https://isocertificationconsultant.ca";
-const GSC_SITE_URL = "sc-domain:isocertificationconsultant.ca"; // Domain property in Search Console
+const SITE_DOMAIN = "https://isocertificationconsultants.ca";
+const GSC_SITE_URL = "sc-domain:isocertificationconsultants.ca"; // Domain property in Search Console
 const INDEX_LOG_PATH = path.join(MEMORY_DIR, "indexing-log.json");
 
 // ══════════════════════════════════════════════════════════════════
@@ -192,9 +192,9 @@ const INDEXNOW_KEY = "964cad32093f21d421ad7a9bd0b92bf6";
 function submitIndexNow(urls) {
   return new Promise((resolve, reject) => {
     const payload = JSON.stringify({
-      host: "isocertificationconsultant.ca",
+      host: "isocertificationconsultants.ca",
       key: INDEXNOW_KEY,
-      keyLocation: `https://isocertificationconsultant.ca/${INDEXNOW_KEY}.txt`,
+      keyLocation: `https://isocertificationconsultants.ca/${INDEXNOW_KEY}.txt`,
       urlList: urls,
     });
 

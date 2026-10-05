@@ -6,11 +6,14 @@ import { PageHeader, CTASection } from "@/components/ui";
 import { Reveal } from "@/components/motion";
 import { ArrowRight } from "@/components/Icons";
 import { Markdown } from "@/components/Markdown";
+import { FaqAccordion } from "@/components/FaqAccordion";
 import { PostCard } from "@/components/PostCard";
 import {
   formatDate,
   getAllPosts,
   getHeadings,
+  splitFaq,
+  faqPlainText,
   getPost,
   getRelatedPosts,
   serializeJsonLd,
@@ -59,6 +62,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   if (!post) notFound();
 
   const toc = getHeadings(post.body).filter((h) => h.depth === 2);
+  const faq = splitFaq(post.body);
   const related = getRelatedPosts(post);
   const url = `${SITE.url}/blog/${post.slug}/`;
 
@@ -80,6 +84,18 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         wordCount: post.wordCount,
         inLanguage: "en-CA",
       },
+      ...(faq.items.length
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: faq.items.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: { "@type": "Answer", text: faqPlainText(item.answer) },
+              })),
+            },
+          ]
+        : []),
       {
         "@type": "BreadcrumbList",
         itemListElement: [
@@ -122,7 +138,18 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </figure>
 
             <div className="mt-10">
-              <Markdown>{post.body}</Markdown>
+              <Markdown>{faq.main}</Markdown>
+              {faq.heading && <FaqAccordion heading={faq.heading} intro={faq.intro} items={faq.items} />}
+              {faq.outro && (
+                <div className="mt-8">
+                  <Markdown>{faq.outro}</Markdown>
+                </div>
+              )}
+              {faq.after && (
+                <div className="mt-12">
+                  <Markdown>{faq.after}</Markdown>
+                </div>
+              )}
             </div>
 
             <div className="mt-12 border-t border-slate-200 pt-6">

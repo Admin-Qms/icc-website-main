@@ -199,7 +199,7 @@ async function convertToBlog(videoData, options = {}) {
 
   // Step 1: Generate structured outline from transcript
   const outline = await claudeJSON(
-    `You are a senior content strategist for ISO Certification Consultant (isocertificationconsultant.ca), a Canadian ISO consulting firm. Convert video transcripts into well-structured blog article outlines.`,
+    `You are a senior content strategist for ISO Certification Consultant (isocertificationconsultants.ca), a Canadian ISO consulting firm. Convert video transcripts into well-structured blog article outlines.`,
     `Convert this video transcript into a blog article outline for ISO Certification Consultant.
 
 VIDEO TITLE: ${videoData.title}
@@ -249,7 +249,7 @@ Return JSON:
     .join("\n\n");
 
   const article = await claudeCall(
-    `You are a senior ISO consulting content writer for ISO Certification Consultant (isocertificationconsultant.ca). Write authoritative, well-researched blog articles targeting Canadian manufacturers. Write in third-person. Never use first person (we, our, I). No "Pro Tips" or "Phase" labels. Include 4+ internal links mid-sentence and 4+ external links to authoritative sources.`,
+    `You are a senior ISO consulting content writer for ISO Certification Consultant (isocertificationconsultants.ca). Write authoritative, well-researched blog articles targeting Canadian manufacturers. Write in third-person. Never use first person (we, our, I). No "Pro Tips" or "Phase" labels. Include 4+ internal links mid-sentence and 4+ external links to authoritative sources.`,
     `Write a complete blog article based on this video transcript and outline.
 
 TITLE: ${outline.title}

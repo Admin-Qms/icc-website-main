@@ -182,7 +182,7 @@ className="animate-reveal-up"
 ## Git Conventions
 
 - **Always `git pull` before `git push`** (multi-machine setup with Windows laptop)
-- **Co-Author line:** `Co-Authored-By: ISO Consultant <info@isocertificationconsultant.ca>`
+- **Co-Author line:** `Co-Authored-By: ISO Consultant <info@isocertificationconsultants.ca>`
 - Never mention Claude, Anthropic, or AI in commits or website code
 - Run `npm run build` after every change before committing
 - Run `node scripts/update-architecture.cjs` before committing

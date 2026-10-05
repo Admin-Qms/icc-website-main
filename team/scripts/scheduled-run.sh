@@ -46,7 +46,7 @@ case "${1:-}" in
     node team/scripts/check-links.js
     # Only the article and its images are committed, never code or drafts.
     git add content/blog public/images/blog
-    git -c user.name="${GIT_AUTHOR_NAME:-ICC blog pipeline}" -c user.email="${GIT_AUTHOR_EMAIL:-blog@isocertificationconsultant.ca}" \
+    git -c user.name="${GIT_AUTHOR_NAME:-ICC blog pipeline}" -c user.email="${GIT_AUTHOR_EMAIL:-blog@isocertificationconsultants.ca}" \
       commit -q -m "Publish blog: $title"
     git pull --no-rebase -q origin main
     git push -q origin main

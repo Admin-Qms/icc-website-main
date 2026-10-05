@@ -1,6 +1,6 @@
 # Page Registry
 
-> Every page on isocertificationconsultant.ca. Update this file whenever a page is added, removed, or changes status.
+> Every page on isocertificationconsultants.ca. Update this file whenever a page is added, removed, or changes status.
 
 ---
 
@@ -8,9 +8,9 @@
 
 | Route | Page Title | Status | In Sitemap | Indexed | Est. Words | Internal Links |
 |-------|-----------|--------|------------|---------|------------|----------------|
-| `/` | ISO Certification Consultant — ISO Consulting | Published | Yes (priority 1.0) | Yes | ~2,500 | 15+ |
-| `/about` | About ISO Certification Consultant | Published | Yes (priority 0.8) | Yes | ~1,800 | 8 |
-| `/contact` | Contact ISO Certification Consultant | Published | Yes (priority 0.7) | Yes | ~800 | 5 |
+| `/` | ISO Certification Consultants — ISO Consulting | Published | Yes (priority 1.0) | Yes | ~2,500 | 15+ |
+| `/about` | About ISO Certification Consultants | Published | Yes (priority 0.8) | Yes | ~1,800 | 8 |
+| `/contact` | Contact ISO Certification Consultants | Published | Yes (priority 0.7) | Yes | ~800 | 5 |
 | `/process` | Our 6-Stage ISO Certification Process | Published | Yes (priority 0.7) | Yes | ~1,500 | 10 |
 | `/blog` | ISO Blog & Insights | Published | Yes (priority 0.9) | Yes | Dynamic | 50+ |
 | `/services` | ISO Consulting Services | Published | Yes (priority 0.9) | Yes | ~1,200 | 12 |

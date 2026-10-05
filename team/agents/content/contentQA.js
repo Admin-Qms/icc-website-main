@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 /**
- * ISO Certification Consultant Content QA Agent v3 — Hardened
+ * ISO Certification Consultants Content QA Agent v3 — Hardened
  *
  * Automated quality checks for all blog content before and after publish.
- * Implements the 10 Mandatory Quality Standards for ISO Certification Consultant blog articles.
+ * Implements the 10 Mandatory Quality Standards for ISO Certification Consultants blog articles.
  *
  * Standards enforced:
  *   1. No first-person voice (we/our) — third-person only
@@ -577,7 +577,7 @@ async function reviewArticle(article, imageResult, inlineImageCount) {
   }
 
   // Voice check — only flag excessive first-person (>10 instances)
-  // Note: articles may use "we" when referring to ISO Certification Consultant, which is allowed
+  // Note: articles may use "we" when referring to ISO Certification Consultants, which is allowed
   const bodyStr = typeof article.body === 'string' ? article.body : '';
   const voiceMatch = bodyStr.match(/\b(I|I've|my|myself)\b/g);
   if (voiceMatch && voiceMatch.length > 0) {
@@ -821,11 +821,11 @@ function toBlocks(markdown) {
 const CLAIMS_AUDIT_PROMPT = `You are a compliance editor for a Canadian ISO consulting firm's blog. You check a draft against the publisher's honesty rules and report violations. You do not rewrite.
 
 RULES THE DRAFT MUST FOLLOW:
-1. NAMED ENTITIES — The draft must not name any company, client or individual person. Allowed names: ISO Certification Consultant itself, standards bodies and regulators (ISO, IATF, IAF, SCC, ANAB, Health Canada, CFIA, Ministry of Labour and similar), and well-known public organizations cited as sources.
+1. NAMED ENTITIES — The draft must not name any company, client or individual person. Allowed names: ISO Certification Consultants itself, standards bodies and regulators (ISO, IATF, IAF, SCC, ANAB, Health Canada, CFIA, Ministry of Labour and similar), and well-known public organizations cited as sources.
 2. QUOTES — No quotations, testimonials or reported speech attributed to any person.
 3. STATISTICS AND GENERALIZATIONS — No statistic, percentage, survey result, dollar figure or measured outcome stated as fact, and no claim about what "most", "the majority of" or "nearly all" companies, plants, auditors or registrars do. Allowed: clause numbers; requirements written in the standard; ranges clearly framed as typical or estimated ("typically 4 to 6 months", "often costs between"); and hedged generalizations ("many plants", "a common approach").
 4. EXAMPLES — Any scenario about a business must be openly hypothetical: its paragraph starts with "Illustrative example:" and it names no company. A story told as something that really happened is a violation.
-5. TRACK RECORD — No claims about ISO Certification Consultant's results (pass rates, number of audits or clients, years in business).
+5. TRACK RECORD — No claims about ISO Certification Consultants' results (pass rates, number of audits or clients, years in business).
 6. STANDARD ACCURACY — ISO/IATF clause numbers and standard names must be correct for the standard cited (for example, ISO 9001:2015 clause 9.2 is internal audit; clause 6.1 is actions to address risks and opportunities). Flag a reference only when you are confident it is wrong.
 
 Flag only clear violations. When unsure, do not flag. Hedged estimates and general professional observations are fine.

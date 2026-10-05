@@ -314,12 +314,12 @@ program
       const indexingAgent = require("./agents/seo/indexingAgent");
       console.log("\n  Checking Google indexing status...");
       const pages = [
-        "https://isocertificationconsultant.ca/",
-        "https://isocertificationconsultant.ca/services/iso-9001",
-        "https://isocertificationconsultant.ca/services/iso-14001",
-        "https://isocertificationconsultant.ca/services/iso-45001",
-        "https://isocertificationconsultant.ca/industries/manufacturing",
-        "https://isocertificationconsultant.ca/blog",
+        "https://isocertificationconsultants.ca/",
+        "https://isocertificationconsultants.ca/services/iso-9001",
+        "https://isocertificationconsultants.ca/services/iso-14001",
+        "https://isocertificationconsultants.ca/services/iso-45001",
+        "https://isocertificationconsultants.ca/industries/manufacturing",
+        "https://isocertificationconsultants.ca/blog",
       ];
       const results = [];
       for (const url of pages) {
@@ -327,7 +327,7 @@ program
           const r = await indexingAgent.inspectUrl(url);
           const idx = r.inspectionResult?.indexStatusResult;
           results.push({
-            page: url.replace("https://isocertificationconsultant.ca", "") || "/",
+            page: url.replace("https://isocertificationconsultants.ca", "") || "/",
             state: idx?.coverageState || "unknown",
             crawled: idx?.lastCrawlTime || "never",
           });
@@ -391,7 +391,7 @@ program
     // Notify the Owner on Telegram
     try {
       const telegram = require("./agents/shared/telegram");
-      await telegram.notify(`Morning Audit Complete\n\nAll checks finished. Report saved to team/reports/daily/\nEmail dashboard sent to info@isocertificationconsultant.ca\n\nAsk me for details: "how did the audit go?"`);
+      await telegram.notify(`Morning Audit Complete\n\nAll checks finished. Report saved to team/reports/daily/\nEmail dashboard sent to info@isocertificationconsultants.ca\n\nAsk me for details: "how did the audit go?"`);
     } catch { /* telegram optional */ }
   });
 
@@ -647,22 +647,22 @@ seoCmd
 
     const indexing = require("./agents/seo/indexingAgent");
     const pages = [
-      "https://isocertificationconsultant.ca/",
-      "https://isocertificationconsultant.ca/about",
-      "https://isocertificationconsultant.ca/contact",
-      "https://isocertificationconsultant.ca/process",
-      "https://isocertificationconsultant.ca/blog",
-      "https://isocertificationconsultant.ca/services/iso-9001",
-      "https://isocertificationconsultant.ca/services/iso-14001",
-      "https://isocertificationconsultant.ca/services/iso-45001",
-      "https://isocertificationconsultant.ca/services/iso-13485",
-      "https://isocertificationconsultant.ca/services/iso-22000",
-      "https://isocertificationconsultant.ca/services/iatf-16949",
-      "https://isocertificationconsultant.ca/services/iso-17025",
-      "https://isocertificationconsultant.ca/industries/manufacturing",
-      "https://isocertificationconsultant.ca/industries/automotive",
-      "https://isocertificationconsultant.ca/industries/food-beverage",
-      "https://isocertificationconsultant.ca/industries/construction",
+      "https://isocertificationconsultants.ca/",
+      "https://isocertificationconsultants.ca/about",
+      "https://isocertificationconsultants.ca/contact",
+      "https://isocertificationconsultants.ca/process",
+      "https://isocertificationconsultants.ca/blog",
+      "https://isocertificationconsultants.ca/services/iso-9001",
+      "https://isocertificationconsultants.ca/services/iso-14001",
+      "https://isocertificationconsultants.ca/services/iso-45001",
+      "https://isocertificationconsultants.ca/services/iso-13485",
+      "https://isocertificationconsultants.ca/services/iso-22000",
+      "https://isocertificationconsultants.ca/services/iatf-16949",
+      "https://isocertificationconsultants.ca/services/iso-17025",
+      "https://isocertificationconsultants.ca/industries/manufacturing",
+      "https://isocertificationconsultants.ca/industries/automotive",
+      "https://isocertificationconsultants.ca/industries/food-beverage",
+      "https://isocertificationconsultants.ca/industries/construction",
     ];
 
     let indexed = 0;
@@ -671,12 +671,12 @@ seoCmd
         const r = await indexing.inspectUrl(url);
         const state = r.inspectionResult?.indexStatusResult?.coverageState || "unknown";
         const crawled = r.inspectionResult?.indexStatusResult?.lastCrawlTime;
-        const short = url.replace("https://isocertificationconsultant.ca", "") || "/";
+        const short = url.replace("https://isocertificationconsultants.ca", "") || "/";
         const icon = state === "Submitted and indexed" ? chalk.green("✓") : state.includes("Discovered") ? chalk.yellow("◌") : chalk.red("✗");
         if (state === "Submitted and indexed") indexed++;
         console.log(`  ${icon} ${short.padEnd(40)} ${state}${crawled ? "  (crawled " + crawled.slice(0, 10) + ")" : ""}`);
       } catch {
-        const short = url.replace("https://isocertificationconsultant.ca", "") || "/";
+        const short = url.replace("https://isocertificationconsultants.ca", "") || "/";
         console.log(`  ${chalk.gray("?")} ${short.padEnd(40)} check failed`);
       }
       await new Promise((r) => setTimeout(r, 300));
@@ -1320,7 +1320,7 @@ auditCmd
     const result = await teamAuditor.runAudit();
 
     console.log(chalk.bold(`\n  Agents: ${result.activeAgents}/${result.totalAgents} active`));
-    console.log(`  Dashboard emailed to info@isocertificationconsultant.ca`);
+    console.log(`  Dashboard emailed to info@isocertificationconsultants.ca`);
 
     console.log("\n" + "=".repeat(65) + "\n");
   });
@@ -1402,7 +1402,7 @@ leadsCmd
     console.log(`    Canadian:    ${result.canadian}`);
     console.log(`    US Priority: ${result.usPriority}`);
     console.log(`    US General:  ${result.usGeneral}`);
-    console.log(`  Digest emailed to info@isocertificationconsultant.ca`);
+    console.log(`  Digest emailed to info@isocertificationconsultants.ca`);
 
     console.log("\n" + "=".repeat(65) + "\n");
   });

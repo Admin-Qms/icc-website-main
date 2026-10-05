@@ -6,7 +6,7 @@ These rules apply to every article, whoever writes it: the API writer (`articleW
 
 - The reader runs quality, operations or the whole business at a Canadian manufacturing or service company: a quality manager at a 60-person stamping plant, the owner of a machine shop, a plant manager preparing for a registrar.
 - Write like a senior ISO consultant explaining how a standard plays out on a real shop floor: direct, specific, calm. Not a summary of the standard, and not a sales page.
-- **Third person or direct address only.** Refer to the company as "ISO Certification Consultant"; address the reader as "you". Never "we", "our", "us", "I", "my", including in FAQ questions and the closing call to action.
+- **Third person or direct address only.** Refer to the company as "ISO Certification Consultants" (plural name, plural verb: "ISO Certification Consultants work with…"); address the reader as "you". Never "we", "our", "us", "I", "my", including in FAQ questions and the closing call to action.
 - **US spelling throughout:** organization, analyze, center, defense, program, license (noun and verb), color, labor, behavior, catalog, gray, meter, liter, judgment, enrollment, fulfill, traveled, labeled, modeled. Proper names keep their own spelling (Canadian Centre for Occupational Health and Safety, Ministry of Labour).
 - Plain English. Short paragraphs, two to four sentences. One idea per paragraph.
 
@@ -14,7 +14,7 @@ These rules apply to every article, whoever writes it: the API writer (`articleW
 
 - 1,800 to 2,100 words. Never under 1,700; anything under 1,500 is rejected.
 - Headings: `##` for sections, `###` inside them. No `#` heading; the page shows the title itself.
-- Open with a Key Takeaways callout (3 to 5 bullets), then the article. End with one closing paragraph that leads naturally to the call to action.
+- Open with a Key Takeaways callout (3 to 5 bullets), then the article. End with one closing paragraph that leads naturally to the call to action. It comes after the FAQ (when the type has one), carries no heading, and links `/contact`; the site shows the FAQ as collapsible questions and keeps that paragraph outside them.
 - Follow the structure for the article type in the brief:
   - **deep-guide:** Key Takeaways → 5-6 sections of increasing depth → Frequently Asked Questions (5) → close
   - **comparison:** Key Takeaways → both options → side-by-side table → the differences explained → "which fits you" decision framework → FAQ (5) → close
@@ -41,7 +41,7 @@ An article that breaks any of these is rejected.
 - **No statistics, percentages, survey results, dollar figures or client results stated as fact.** The only numbers allowed: clause numbers, requirements written in the standard itself, and ranges framed as typical estimates ("certification typically takes four to six months for a shop this size").
 - **No claims about what most companies do.** Not "most Ontario plants audit annually"; say "many plants", "a common approach is".
 - **Worked scenarios are hypothetical and say so.** A scenario is its own paragraph beginning with exactly `**Illustrative example:**`, describes an unnamed business, and never claims it happened.
-- **Nothing about ISO Certification Consultant's track record**: no pass rates, audit counts, client counts or years in business.
+- **Nothing about ISO Certification Consultants' track record**: no pass rates, audit counts, client counts or years in business.
 - **Standards and clauses:** use the editions given in CURRENT STANDARD EDITIONS, name the edition when citing a clause ("clause 9.2 of ISO 9001:2015"), and describe a requirement in words rather than guess a clause number. Never describe what changed between editions unless the facts table says it.
 
 ## Links

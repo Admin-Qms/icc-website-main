@@ -25,7 +25,7 @@ function goodPost(overrides = {}) {
     title: draft.title,
     description: draft.metaDescription,
     date: "2026-10-01",
-    author: "ISO Certification Consultant Editorial Team",
+    author: "ISO Certification Consultants Editorial Team",
     primaryKeyword: draft.primaryKeyword,
     body,
     ...overrides,

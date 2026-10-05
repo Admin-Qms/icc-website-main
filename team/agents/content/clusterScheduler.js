@@ -123,8 +123,8 @@ async function getAccessToken() {
 
 async function resubmitSitemap() {
   const token = await getAccessToken();
-  const sitemapUrl = "https://isocertificationconsultant.ca/sitemap.xml";
-  const site = "sc-domain:isocertificationconsultant.ca";
+  const sitemapUrl = "https://isocertificationconsultants.ca/sitemap.xml";
+  const site = "sc-domain:isocertificationconsultants.ca";
   const url = `https://searchconsole.googleapis.com/webmasters/v3/sites/${encodeURIComponent(site)}/sitemaps/${encodeURIComponent(sitemapUrl)}`;
   await fetchJson(url, {
     method: "PUT",
@@ -135,9 +135,9 @@ async function resubmitSitemap() {
 
 async function indexNowYandex(urls) {
   const body = JSON.stringify({
-    host: "isocertificationconsultant.ca",
+    host: "isocertificationconsultants.ca",
     key: "964cad32093f21d421ad7a9bd0b92bf6",
-    keyLocation: "https://isocertificationconsultant.ca/964cad32093f21d421ad7a9bd0b92bf6.txt",
+    keyLocation: "https://isocertificationconsultants.ca/964cad32093f21d421ad7a9bd0b92bf6.txt",
     urlList: urls,
   });
   await fetchJson("https://yandex.com/indexnow", {

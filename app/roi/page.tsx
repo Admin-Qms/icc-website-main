@@ -5,12 +5,12 @@ import { ROIPanel } from "@/components/ROIPanel";
 import { ROICalculator } from "@/components/ROICalculator";
 import { Reveal } from "@/components/motion";
 import { ArrowRight } from "@/components/Icons";
-import { ROI, ROI_PLATFORM } from "@/lib/site";
+import { ROI, ROI_PLATFORM, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "ROI of ISO Certification — Estimate Your Return",
   description:
-    "What does ISO certification actually return? Use the interactive estimator to see what quality admin costs your business today, and where the payback comes from — platform and custom solutions, sized for small and mid-size manufacturers.",
+    "What does ISO certification actually return? Use the interactive estimator to see what quality admin costs your business today, and where the payback comes from — platform and custom solutions, sized for small and mid-size companies.",
   alternates: { canonical: "/roi" },
 };
 
@@ -20,7 +20,7 @@ const jsonLd = {
   name: "ROI of ISO Certification",
   description:
     "Interactive ROI estimator and value breakdown for ISO certification, QMS platform modules and custom-built quality solutions.",
-  provider: { "@type": "Organization", name: "ISO Certification Consultant Inc." },
+  provider: { "@type": "Organization", name: SITE.legalName },
 };
 
 export default function ROIPage() {

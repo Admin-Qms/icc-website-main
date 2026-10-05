@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { PageHeader, CTASection } from "@/components/ui";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight, Check, Icon } from "@/components/Icons";
-import { MODULES, CUSTOMIZATION } from "@/lib/site";
+import { MODULES, CUSTOMIZATION, SITE } from "@/lib/site";
 
 export function generateStaticParams() {
   return MODULES.map((m) => ({ module: m.slug }));
@@ -19,7 +19,7 @@ export function generateMetadata({
   if (!m) return {};
   return {
     title: `${m.name} — Customized QMS Module`,
-    description: `${m.name} for manufacturers, configured to your workflow. ${m.summary}`,
+    description: `${m.name} for Canadian companies, configured to your workflow. ${m.summary}`,
     alternates: { canonical: `/solutions/${m.slug}` },
   };
 }
@@ -36,7 +36,7 @@ export default function ModulePage({ params }: { params: { module: string } }) {
     serviceType: `${m.name} — QMS module`,
     name: m.name,
     description: m.summary,
-    provider: { "@type": "Organization", name: "ISO Certification Consultant Inc." },
+    provider: { "@type": "Organization", name: SITE.legalName },
     areaServed: { "@type": "Country", name: "Canada" },
   };
 

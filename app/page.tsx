@@ -44,7 +44,7 @@ export default function Home() {
       <section className="bg-white py-16 lg:py-24">
         <div className="container-page">
           <SectionHeading
-            eyebrow="Why manufacturers choose us"
+            eyebrow="Why companies choose us"
             title="Straightforward help from people who understand your operation"
             intro="ISO certification has a reputation for being expensive, confusing and disruptive. It doesn't have to be. Here's how we make it manageable."
           />
@@ -151,7 +151,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Standards we help with"
               title="From ISO 9001 to any standard your customers require"
-              intro="These are the standards manufacturers ask for most. If you're audited against something else, we can onboard it too."
+              intro="These are the standards Canadian companies ask for most. If you're audited against something else, we can onboard it too."
             />
             <Reveal delay={0.1}>
               <Link href="/services" className="btn-outline">

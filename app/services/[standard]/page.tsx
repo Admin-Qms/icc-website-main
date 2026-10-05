@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { PageHeader, CTASection } from "@/components/ui";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight, Check, Icon } from "@/components/Icons";
-import { STANDARDS, INDUSTRIES, PROCESS } from "@/lib/site";
+import { STANDARDS, INDUSTRIES, PROCESS, SITE } from "@/lib/site";
 
 export function generateStaticParams() {
   return STANDARDS.map((s) => ({ standard: s.slug }));
@@ -19,7 +19,7 @@ export function generateMetadata({
   if (!s) return {};
   return {
     title: `${s.code} Certification Consulting in Canada — ${s.name}`,
-    description: `${s.code} (${s.name}) consulting for Canadian manufacturers. ${s.summary}`,
+    description: `${s.code} (${s.name}) consulting for Canadian companies. ${s.summary}`,
     alternates: { canonical: `/services/${s.slug}` },
   };
 }
@@ -37,7 +37,7 @@ export default function StandardPage({ params }: { params: { standard: string } 
     serviceType: `${s.code} certification consulting`,
     name: `${s.code} — ${s.name}`,
     description: s.summary,
-    provider: { "@type": "Organization", name: "ISO Certification Consultant Inc." },
+    provider: { "@type": "Organization", name: SITE.legalName },
     areaServed: { "@type": "Country", name: "Canada" },
   };
 

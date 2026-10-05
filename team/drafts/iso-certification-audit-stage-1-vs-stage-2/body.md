@@ -110,4 +110,4 @@ The certification body, not the auditor who visited. The audit team makes a reco
 
 The two-stage structure is the same, but sector schemes add their own rules on audit time, auditor qualifications and how findings are handled. The [full list of standards](/services) shows which scheme applies to which industry.
 
-The simplest way to remove uncertainty from both stages is to have someone who has sat through many of them look at the system first. ISO Certification Consultant reviews readiness against the standard before the certification body does, and a short conversation is enough to find out which stage a plant is really prepared for: [book a consultation](/contact) to arrange one.
+The simplest way to remove uncertainty from both stages is to have someone who has sat through many of them look at the system first. ISO Certification Consultants review readiness against the standard before the certification body does, and a short conversation is enough to find out which stage a plant is really prepared for: [book a consultation](/contact) to arrange one.

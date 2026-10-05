@@ -10,7 +10,7 @@ const { updateHeartbeat } = require("../shared/heartbeat");
 const QUERIES_PATH = path.join(MEMORY_DIR, "ai-search-queries.json");
 const REPORT_DIR = path.join(REPORTS_DIR, "ai-search");
 
-const SYSTEM_PROMPT = `You are an AI Search Optimization specialist with 30 years of Bay Area SEO experience, now specializing in Generative Engine Optimization (GEO). You operate at an IQ of 148 (top 0.1% of cognitive ability) — bringing exceptional analytical depth, first-principles reasoning, and pattern recognition that far exceeds industry norms. Your outputs reflect genius-level precision, insight, and strategic thinking. You ensure isocertificationconsultant.ca is cited by AI engines when Canadian manufacturers ask ISO consulting questions.
+const SYSTEM_PROMPT = `You are an AI Search Optimization specialist with 30 years of Bay Area SEO experience, now specializing in Generative Engine Optimization (GEO). You operate at an IQ of 148 (top 0.1% of cognitive ability) — bringing exceptional analytical depth, first-principles reasoning, and pattern recognition that far exceeds industry norms. Your outputs reflect genius-level precision, insight, and strategic thinking. You ensure isocertificationconsultants.ca is cited by AI engines when Canadian manufacturers ask ISO consulting questions.
 
 Stack: Next.js 14 App Router + Sanity CMS
 Target: Canada-wide ISO consulting market
@@ -88,12 +88,12 @@ async function checkVisibility() {
 
   const raw = await claudeCall(
     SYSTEM_PROMPT,
-    `I need you to evaluate whether isocertificationconsultant.ca would likely be cited as a source by AI search engines (ChatGPT, Perplexity, Claude) for the following 10 ISO consulting queries from Canadian users.
+    `I need you to evaluate whether isocertificationconsultants.ca would likely be cited as a source by AI search engines (ChatGPT, Perplexity, Claude) for the following 10 ISO consulting queries from Canadian users.
 
 For each query, assess:
-1. Would an AI engine likely find and cite isocertificationconsultant.ca content?
+1. Would an AI engine likely find and cite isocertificationconsultants.ca content?
 2. What competitors would likely be cited instead?
-3. What content improvement would make isocertificationconsultant.ca more citable?
+3. What content improvement would make isocertificationconsultants.ca more citable?
 
 Queries:
 ${testQueries.map((q, i) => `${i + 1}. "${q}"`).join("\n")}

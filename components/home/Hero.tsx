@@ -90,7 +90,7 @@ export function Hero() {
             viewport={{ once: true }}
             className="mb-5 text-center text-xs font-bold uppercase tracking-[0.14em] text-slate-500"
           >
-            We prepare manufacturers for the standards their customers require
+            We prepare Canadian companies for the standards their customers require
           </motion.p>
           <motion.div
             variants={{ show: { transition: { staggerChildren: 0.06 } } }}
@@ -271,8 +271,8 @@ function IndustryImageWall() {
           <ShieldCheck className="h-5 w-5" />
         </span>
         <div>
-          <p className="text-xs text-slate-500">Real plant-floor implementation</p>
-          <p className="text-sm font-bold text-navy-900">across regulated manufacturing</p>
+          <p className="text-xs text-slate-500">Real-world implementation</p>
+          <p className="text-sm font-bold text-navy-900">across regulated industries</p>
         </div>
       </motion.div>
     </motion.div>

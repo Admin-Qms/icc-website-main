@@ -30,8 +30,8 @@ test("normalizeBody removes wrappers, preamble and H1s", () => {
 });
 
 test("extractLinks ignores images and sorts internal from external", () => {
-  const links = store.extractLinks("[a](/contact) ![img](/images/blog/x/hero.webp) [b](https://www.iso.org/standard/9001) [c](https://isocertificationconsultant.ca/process)");
-  assert.deepEqual(links.internal.map((l) => l.url), ["/contact", "https://isocertificationconsultant.ca/process"]);
+  const links = store.extractLinks("[a](/contact) ![img](/images/blog/x/hero.webp) [b](https://www.iso.org/standard/9001) [c](https://isocertificationconsultants.ca/process)");
+  assert.deepEqual(links.internal.map((l) => l.url), ["/contact", "https://isocertificationconsultants.ca/process"]);
   assert.deepEqual(links.external.map((l) => l.url), ["https://www.iso.org/standard/9001"]);
 });
 

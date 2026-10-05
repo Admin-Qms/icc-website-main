@@ -28,7 +28,7 @@ module.exports = {
   KEYWORD_QUEUE_PATH: path.join(MEMORY_DIR, "keyword-queue.json"),
   LINK_BANK_PATH: path.join(TEAM_ROOT, "data", "external-link-bank.json"),
 
-  BLOG_AUTHOR: process.env.BLOG_AUTHOR || "ISO Certification Consultant Editorial Team",
+  BLOG_AUTHOR: process.env.BLOG_AUTHOR || "ISO Certification Consultants Editorial Team",
   BLOG_TIMEZONE: "America/Toronto",
 
   LLM_PROVIDER,
@@ -49,10 +49,10 @@ module.exports = {
   SANITY_DATASET: process.env.SANITY_DATASET || "production",
   SANITY_API_TOKEN: process.env.SANITY_API_TOKEN || "",
 
-  SITE_URL: process.env.SITE_URL || "https://isocertificationconsultant.ca",
+  SITE_URL: process.env.SITE_URL || "https://isocertificationconsultants.ca",
 
   RESEND_API_KEY: process.env.RESEND_API_KEY || "",
-  REPORT_EMAIL: process.env.REPORT_EMAIL || "info@isocertificationconsultant.ca",
+  REPORT_EMAIL: process.env.REPORT_EMAIL || "info@isocertificationconsultants.ca",
 
   PEXELS_API_KEY: process.env.PEXELS_API_KEY || "",
   GEMINI_API_KEY,

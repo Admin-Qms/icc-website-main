@@ -123,7 +123,7 @@ WRITING RULES:
 - Include specific Canadian examples, regulations, and industry references
 - Include at least 1 internal link and 1 external link per chapter
 - No AI-sounding phrases: avoid "delve into", "it is worth noting", "in conclusion", "comprehensive", "crucial", "landscape"
-- No first person (never "we", "our", "us", "I", "my"); refer to the company as "ISO Certification Consultant" and address the reader as "you"
+- No first person (never "we", "our", "us", "I", "my"); refer to the company as "ISO Certification Consultants" and address the reader as "you"
 - Bold 3-5 key phrases per chapter
 - Add 1 callout box per chapter using **Important:** or **Did You Know?** or **Key Consideration:** (NEVER "Pro Tip")
 

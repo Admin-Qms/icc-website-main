@@ -2,15 +2,27 @@
 // Source of truth mirrors docs/knowledge-base/page-registry.md + brand-guide.md.
 
 export const SITE = {
-  name: "ISO Certification Consultant",
-  legalName: "ISO Certification Consultant Inc.",
-  domain: "isocertificationconsultant.ca",
-  url: "https://isocertificationconsultant.ca",
+  name: "ISO Certification Consultants",
+  legalName: "ISO Certification Consultants Inc.",
+  domain: "isocertificationconsultants.ca",
+  url: "https://isocertificationconsultants.ca",
   tagline:
-    "A configurable QMS platform for manufacturers — customized to your processes, ready for any standard",
-  email: "hello@isocertificationconsultant.ca",
+    "ISO certification consulting for Canadian companies — any standard, one configurable management system",
+  // Shown on the contact page and in the footer; swap for a shared inbox when one exists.
+  email: "anthony.mannella@isocertificationconsultants.ca",
   phone: "+1 (000) 000-0000",
   region: "Ontario, Canada",
+  // Path under /public (e.g. "/images/logo.svg"). Empty renders the wordmark instead.
+  logo: "",
+  forms: {
+    // Web3Forms access key; it is public by design and bound to the inbox it was generated for.
+    web3formsKey: "",
+  },
+  bbb: {
+    businessId: "1408097",
+    profileUrl:
+      "https://www.bbb.org/ca/on/toronto/profile/compliance-consulting/iso-certification-consultants-inc-0107-1408097",
+  },
 };
 
 // Positioning constants — customization first, any standard.
@@ -319,7 +331,7 @@ export const PLATFORM: PlatformFeature[] = [
 export const STATS = [
   { value: 9, suffix: "+", label: "configurable QMS process modules" },
   { value: 100, suffix: "%", label: "configured to your workflow — no rigid templates" },
-  { value: 8, suffix: "", label: "manufacturing industries served" },
+  { value: 8, suffix: "", label: "industries served across Canada" },
   { value: 24, suffix: "wk", label: "typical path to certification" },
 ];
 
@@ -335,9 +347,9 @@ export const DIFFERENTIATORS = [
       "ISO, IATF and AS are just the start. Customer-specific, regulatory or internal standards — if you're audited against it, we can build it into the system.",
   },
   {
-    title: "Manufacturing processes first",
+    title: "Your processes first",
     detail:
-      "Inspection, inventory, training, production and every process on your floor — modelled as they actually run, not forced into generic business software.",
+      "Inspection, training, production, service delivery and every process in your operation — modeled as they actually run, not forced into generic business software.",
   },
   {
     title: "Hybrid delivery",

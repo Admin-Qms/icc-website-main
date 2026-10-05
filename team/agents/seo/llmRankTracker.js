@@ -11,7 +11,7 @@ const TRACKER_PATH = path.join(MEMORY_DIR, "ai-visibility-tracker.json");
 const QUERIES_PATH = path.join(MEMORY_DIR, "ai-search-queries.json");
 const REPORT_DIR = path.join(REPORTS_DIR, "ai-visibility");
 
-const DOMAIN = "isocertificationconsultant.ca";
+const DOMAIN = "isocertificationconsultants.ca";
 const DOMAIN_SHORT = "isocertificationconsultant";
 
 // ── Load / save helpers ──────────────────────────────────────────
@@ -288,7 +288,7 @@ async function analyzeCitability(keyword, engineResults) {
   const chatgptResult = engineResults.chatgpt || {};
 
   const result = await claudeJSONFast(
-    `You are an AI search optimization expert analyzing whether isocertificationconsultant.ca (ISO consulting firm for Canadian manufacturers) is being cited by AI engines. Base your analysis on the ACTUAL results provided.`,
+    `You are an AI search optimization expert analyzing whether isocertificationconsultants.ca (ISO consulting firm for Canadian manufacturers) is being cited by AI engines. Base your analysis on the ACTUAL results provided.`,
     `Query: "${keyword}"
 
 ACTUAL ENGINE RESULTS:
@@ -605,7 +605,7 @@ async function generateReport() {
   try {
     aiSummary = await claudeCallFast(
       "You are a concise AI search visibility analyst. Provide 5-8 bullet points. Include specific wins, losses, competitive threats, and the top 3 action items prioritized by impact.",
-      `COMPREHENSIVE AI Visibility Report for isocertificationconsultant.ca (ISO consulting, Canada):
+      `COMPREHENSIVE AI Visibility Report for isocertificationconsultants.ca (ISO consulting, Canada):
 - ${totalKeywords} keywords tracked across 4 AI engines
 - Google AI Overview: ${googleCited}/${googleOverviewPresent} cited (${googleOverviewPresent} had overviews)
 - Bing Copilot: ${bingCited}/${bingCopilotPresent} cited

@@ -7,9 +7,9 @@ import { ArrowRight, Check } from "@/components/Icons";
 import { STATS, DIFFERENTIATORS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About ISO Certification Consultant",
+  title: "About ISO Certification Consultants",
   description:
-    "ISO Certification Consultant Inc. combines an AI-powered QMS platform with certified consultants to get Canadian manufacturers certified faster and more affordably.",
+    "ISO Certification Consultants Inc. combines an AI-powered management system platform with certified consultants to get Canadian companies certified faster and more affordably.",
   alternates: { canonical: "/about" },
 };
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About us"
         title={<>Certification, <span className="text-teal-700">without the mystery</span></>}
-        intro="ISO Certification Consultant Inc. pairs an enterprise QMS platform with certified consultants — a hybrid model that makes certification faster, more affordable and far less painful for Canadian manufacturers."
+        intro="ISO Certification Consultants Inc. pairs an enterprise management system platform with certified consultants — a hybrid model that makes certification faster, more affordable and far less painful for Canadian companies."
       >
         <Link href="/contact" className="btn-primary">
           Work with us <ArrowRight className="h-4 w-4" />
@@ -55,7 +55,7 @@ export default function AboutPage() {
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-teal-700">Our mission</span>
             <h2 className="mt-5 font-heading text-3xl font-bold leading-tight text-navy-900">
-              Make ISO certification accessible to every manufacturer
+              Make ISO certification accessible to every Canadian company
             </h2>
             <div className="mt-5 space-y-4 text-slate-600">
               <p>
@@ -119,7 +119,7 @@ export default function AboutPage() {
         <div className="container-page">
           <SectionHeading
             eyebrow="Why us"
-            title="What sets ISO Certification Consultant apart"
+            title="What sets ISO Certification Consultants apart"
           />
           <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {DIFFERENTIATORS.map((d) => (

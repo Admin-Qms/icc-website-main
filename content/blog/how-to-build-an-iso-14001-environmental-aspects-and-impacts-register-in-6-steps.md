@@ -8,7 +8,7 @@ description: >-
   Build a compliant ISO 14001 environmental aspects and impacts register with
   this 6-step practical method designed for Ontario manufacturing facilities.
 date: '2026-10-05'
-author: ISO Certification Consultant Editorial Team
+author: ISO Certification Consultants Editorial Team
 category: ISO 14001
 primaryKeyword: iso 14001 environmental aspects and impacts register
 keywords:

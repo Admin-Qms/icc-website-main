@@ -229,6 +229,14 @@ The entries above were made for the previous site (Sanity, Vercel, chatbot). The
 **Decision:** `trailingSlash: true`; every page exports as `<route>/index.html`.
 **Why:** Stock Apache on cPanel serves folders; the previous `blog.html`-beside-`blog/` layout would 403 or 404. Done before anything is live, so no redirects.
 
+### 2026-10 | Vercel Stays the Host; Brand Is Plural; Web3Forms for the Form
+**Decision:** The live site at isocertificationconsultants.ca is a Vercel deployment, so Vercel stays the host, connected to `Admin-Qms/icc-website-main` `main`; the `deploy`-branch Action is a backup for cPanel. The company name and domain are plural everywhere (`SITE` in `lib/site.ts`). The contact form posts to Web3Forms with a public access key in `lib/site.ts`.
+**Why:** Owner feedback (2026-10-05): enquiries never arrived (the form was a stub), the header showed a check mark instead of the logo, "Quality Management" only describes ISO 9001, and "manufacturers" narrows the audience. The singular domain in the code never resolved.
+**Alternatives Rejected:**
+- Moving DNS to cPanel — more owner-side work for no gain while Vercel already serves the site
+- Formspree / a Resend function — Formspree's free tier is smaller; a function means giving up the pure static export
+**Impact:** Header wordmark until the logo file arrives (`SITE.logo`); BBB seal in the footer and on the contact page; the form shows an email fallback until `SITE.forms.web3formsKey` is set. Blog FAQ sections render as a native `<details>` accordion with FAQPage structured data.
+
 ---
 
-*Last updated: 2026-10-04*
+*Last updated: 2026-10-06*

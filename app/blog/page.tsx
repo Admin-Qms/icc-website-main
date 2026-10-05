@@ -6,10 +6,10 @@ import { getAllPosts, serializeJsonLd } from "@/lib/blog";
 import { SITE } from "@/lib/site";
 
 const description =
-  "Practical guidance on ISO 9001, IATF 16949, ISO 14001 and ISO 45001 certification for Canadian manufacturers: costs, timelines, audits and requirements.";
+  "Practical guidance on ISO 9001, IATF 16949, ISO 14001 and ISO 45001 certification for Canadian companies: costs, timelines, audits and requirements.";
 
 export const metadata: Metadata = {
-  title: "ISO Certification Blog — Practical Guidance for Manufacturers",
+  title: "ISO Certification Blog — Practical Guidance for Canadian Companies",
   description,
   alternates: { canonical: "/blog" },
   openGraph: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     locale: "en_CA",
     siteName: SITE.name,
     url: "/blog",
-    title: "ISO Certification Blog — Practical Guidance for Manufacturers",
+    title: "ISO Certification Blog — Practical Guidance for Canadian Companies",
     description,
   },
 };

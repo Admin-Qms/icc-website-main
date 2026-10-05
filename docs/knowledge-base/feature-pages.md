@@ -1,6 +1,6 @@
 # Feature Pages
 
-> Product feature pages and interactive tools on isocertificationconsultant.ca, with target keywords.
+> Product feature pages and interactive tools on isocertificationconsultants.ca, with target keywords.
 
 ---
 

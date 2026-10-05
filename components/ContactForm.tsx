@@ -3,17 +3,47 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check } from "./Icons";
-import { STANDARDS } from "@/lib/site";
+import { STANDARDS, SITE } from "@/lib/site";
+
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+
+type Status = "idle" | "submitting" | "done" | "error";
 
 export function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "done">("idle");
+  const [status, setStatus] = useState<Status>("idle");
+  const configured = Boolean(SITE.forms.web3formsKey);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  // The site is a static export with no server, so the form posts to Web3Forms, which
+  // relays it to the inbox the access key was generated for.
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (status !== "idle") return;
+    if (status === "submitting" || !configured) return;
     setStatus("submitting");
-    // No backend wired yet — simulate submission. Replace with POST /api/contact.
-    window.setTimeout(() => setStatus("done"), 900);
+
+    const data = Object.fromEntries(new FormData(e.currentTarget).entries()) as Record<string, string>;
+    const payload = {
+      access_key: SITE.forms.web3formsKey,
+      subject: `Website enquiry — ${data.standard || "standard not chosen"} — ${data.company}`,
+      from_name: `${SITE.name} website`,
+      name: data.name,
+      email: data.email,
+      company: data.company,
+      standard: data.standard,
+      message: data.message,
+      botcheck: data.botcheck,
+    };
+
+    try {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = (await res.json()) as { success?: boolean };
+      setStatus(res.ok && result.success ? "done" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -51,14 +81,14 @@ export function ContactForm() {
             exit={{ opacity: 0 }}
             className="space-y-5"
           >
-            {/* honeypot */}
-            <input type="text" name="company_website" tabIndex={-1} autoComplete="off" className="hidden" />
+            {/* honeypot: Web3Forms discards any submission where this is filled in */}
+            <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
             <div className="grid gap-5 sm:grid-cols-2">
               <Field label="Full name" name="name" required placeholder="Jordan Smith" />
               <Field label="Work email" name="email" type="email" required placeholder="jordan@company.com" />
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
-              <Field label="Company" name="company" required placeholder="Acme Manufacturing" />
+              <Field label="Company" name="company" required placeholder="Acme Industries Ltd." />
               <div>
                 <Label>Standard of interest</Label>
                 <select
@@ -88,8 +118,30 @@ export function ContactForm() {
                 className="mt-1.5 w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition placeholder:text-slate-400 focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
               />
             </div>
-            <button type="submit" disabled={status === "submitting"} className="btn-primary w-full">
-              {status === "submitting" ? "Sending…" : "Send message"}
+            {status === "error" && (
+              <p role="alert" className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                The message could not be sent. Please try again, or email{" "}
+                <a href={`mailto:${SITE.email}`} className="font-semibold underline">
+                  {SITE.email}
+                </a>
+                .
+              </p>
+            )}
+            {!configured && (
+              <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+                Online submissions are being set up. In the meantime, email{" "}
+                <a href={`mailto:${SITE.email}`} className="font-semibold underline">
+                  {SITE.email}
+                </a>{" "}
+                and we will get back to you within one business day.
+              </p>
+            )}
+            <button
+              type="submit"
+              disabled={status === "submitting" || !configured}
+              className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {status === "submitting" ? "Sending…" : status === "error" ? "Try again" : "Send message"}
               {status !== "submitting" && <ArrowRight className="h-4 w-4" />}
             </button>
             <p className="text-center text-xs text-slate-500">

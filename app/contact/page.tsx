@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
+import { BbbSeal } from "@/components/BbbSeal";
 import { Reveal } from "@/components/motion";
 import { ShieldCheck, Check } from "@/components/Icons";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact ISO Certification Consultant",
+  title: "Contact ISO Certification Consultants",
   description:
-    "Talk to a certified ISO consultant about your certification project. Serving manufacturers across Canada and the USA. We reply within one business day.",
+    "Talk to a certified ISO consultant about your certification project. Serving companies across Canada and the USA. We reply within one business day.",
   alternates: { canonical: "/contact" },
 };
 
@@ -60,11 +61,12 @@ export default function ContactPage() {
               {SITE.email}
             </a>
             <p className="mt-3 text-sm text-slate-600">
-              Serving manufacturers across {SITE.region} and the USA.
+              Serving companies across {SITE.region} and the USA.
             </p>
             <Link href="/assessment" className="mt-4 inline-block text-sm font-semibold text-teal-700 hover:text-teal-800">
               Or run the free readiness assessment →
             </Link>
+            <BbbSeal size="compact" className="mt-6" />
           </Reveal>
         </div>
 

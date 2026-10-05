@@ -1,4 +1,4 @@
-# ISO Certification Consultant Knowledge Base
+# ISO Certification Consultants Knowledge Base
 
 > **Read this file first at the start of every Claude Code or Codex session.**
 > This is the canonical index for project context, conventions, and current state.

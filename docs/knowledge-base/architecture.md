@@ -12,7 +12,7 @@
 >
 > Everything below this note describes the **previous** site and agent system and is kept for reference.
 
-> Tech stack, hosting, framework, styling approach, and folder structure for ISO Certification Consultant.
+> Tech stack, hosting, framework, styling approach, and folder structure for ISO Certification Consultants.
 
 ---
 
@@ -27,7 +27,7 @@
 | **CMS** | Sanity | Project ID: `uakgkw7x`, Dataset: `production`, GROQ queries |
 | **AI (Chatbot)** | Groq API | Llama 3.3 70B, streaming via Vercel AI SDK v4 |
 | **AI (Agents)** | Claude API | Sonnet for planning, Haiku for fast tasks |
-| **Email** | Resend API | Transactional email to info@isocertificationconsultant.ca |
+| **Email** | Resend API | Transactional email to info@isocertificationconsultants.ca |
 | **Database** | Supabase | PostgreSQL, CRM webhook receiver |
 | **Images** | Pexels API | North American industrial imagery only |
 | **Icons** | Lucide React | 0.462.0 |
@@ -42,9 +42,9 @@
 | Item | Value |
 |------|-------|
 | **Host** | Vercel (auto-deploy on GitHub push) |
-| **Domain** | https://isocertificationconsultant.ca |
+| **Domain** | https://isocertificationconsultants.ca |
 | **Aliases** | iso-certification-consultant-site.vercel.app |
-| **Redirect** | isoconsultant.ca → isocertificationconsultant.ca |
+| **Redirect** | isoconsultant.ca → isocertificationconsultants.ca |
 | **Repository** | YOUR_GITHUB_USERNAME/iso-certification-consultant-site (GitHub) |
 | **Build** | `npm run build` (Next.js SSG) |
 | **Environment** | `.env.local` (local), Vercel dashboard (production) |

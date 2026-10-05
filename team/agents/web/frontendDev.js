@@ -85,7 +85,7 @@ async function implement(task) {
   if (written.length > 0) {
     await gitAdd(written);
     const commitHash = await gitCommit(
-      `[agent] ${task.description}\n\nCo-Authored-By: ISO Certification Consultant Agent Team <team@isocertificationconsultant.ca>`
+      `[agent] ${task.description}\n\nCo-Authored-By: ISO Certification Consultant Agent Team <team@isocertificationconsultants.ca>`
     );
     log("frontendDev", "committed", commitHash);
     result.commitHash = commitHash;

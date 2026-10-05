@@ -1,4 +1,4 @@
-# ISO Certification Consultant — Project Rules
+# ISO Certification Consultants — Project Rules
 
 ## Mandatory Multi-Agent Workflow
 
@@ -118,10 +118,10 @@ The scheduled blog run described in `team/ROUTINE.md` and approved in the root `
 
 ## Brand Rules (CRITICAL — Zero Tolerance)
 
-- **Legal entity**: ISO Certification Consultant Inc. (Canadian company). It appears as the legal entity on `/privacy`, `/terms`, and the site-wide JSON-LD `legalName` field. Site operates under Canadian law (PIPEDA for privacy; Copyright Act (Canada) for IP; governing law and jurisdiction: Province of [Province], Canada).
+- **Legal entity**: ISO Certification Consultants Inc. (Canadian company). It appears as the legal entity on `/privacy`, `/terms`, and the site-wide JSON-LD `legalName` field. Site operates under Canadian law (PIPEDA for privacy; Copyright Act (Canada) for IP; governing law and jurisdiction: Province of [Province], Canada).
 - **AI and platform references are ALLOWED** — references to "AI", "platform", "AI-powered" are fine and encouraged in content and copy.
 - **Delivery types in ISOJourney.tsx** are `"app"`, `"consultant"`, and `"hybrid"`. The hybrid model (app + consultant) is the core offering. Never use `"person"` as a delivery type.
-- **Hybrid model positioning:** ISO Certification Consultant delivers through an AI-powered platform AND expert consultants working together. The app is a primary deliverable, not a secondary tool. Every stage of the certification journey should clearly communicate whether it is app-led, consultant-led, or both.
+- **Hybrid model positioning:** ISO Certification Consultants delivers through an AI-powered platform AND expert consultants working together. The app is a primary deliverable, not a secondary tool. Every stage of the certification journey should clearly communicate whether it is app-led, consultant-led, or both.
 - The ISO standards marquee strip on the hero banner must always remain visible. It cycles through 10 ISO standards.
 
 ## SEO Rules (US + Canada Targeting)

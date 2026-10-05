@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Phone, ChevronDown, Icon } from "./Icons";
 import { SITE } from "@/lib/site";
+import { Logo } from "./Logo";
 
 // One "Solutions" menu, two clearly-differentiated offerings (+ overview).
 const SOLUTIONS_MENU = [
@@ -75,7 +76,7 @@ export function Navbar() {
         <div className="container-page flex h-10 items-center justify-between text-[13px]">
           <p className="flex items-center gap-2">
             <ShieldCheck className="h-4 w-4 text-teal-400" />
-            ISO certification consulting for Canadian manufacturers — {SITE.region}
+            ISO certification consulting for Canadian companies — {SITE.region}
           </p>
           <div className="flex items-center gap-6">
             <a
@@ -99,18 +100,8 @@ export function Navbar() {
         }`}
       >
         <nav className="container-page flex h-16 items-center justify-between lg:h-[70px]">
-          <Link href="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
-            <span className="grid h-10 w-10 place-items-center rounded-lg bg-navy-900 transition-transform duration-200 group-hover:scale-105">
-              <ShieldCheck className="h-5 w-5 text-teal-400" />
-            </span>
-            <span className="flex flex-col leading-tight">
-              <span className="font-heading text-[16px] font-bold text-navy-900">
-                ISO Certification Consultant
-              </span>
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-teal-700">
-                Quality Management · Canada
-              </span>
-            </span>
+          <Link href="/" className="group flex items-center" onClick={() => setOpen(false)} aria-label={`${SITE.name} home`}>
+            <Logo />
           </Link>
 
           <div className="hidden items-center gap-1 lg:flex">

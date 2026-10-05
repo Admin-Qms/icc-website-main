@@ -5,7 +5,7 @@ description: >-
   Calculate realistic ISO 9001 certification cost in Ontario. Explore registrar
   fees, internal labor hours, consulting rates, and practical budgeting tips.
 date: '2026-10-04'
-author: ISO Certification Consultant Editorial Team
+author: ISO Certification Consultants Editorial Team
 category: ISO 9001
 primaryKeyword: iso 9001 certification cost ontario
 keywords:
@@ -90,7 +90,7 @@ Consulting is bought three ways in Ontario, and the model matters as much as the
 
 1. **Day rate.** The consultant is paid per day on site or per hour remotely. This suits a plant that has a capable quality lead and needs targeted help: a gap analysis, internal auditor training, a pre-audit review.
 2. **Fixed-price project.** One price to take the plant from kickoff to a passed certification audit. This suits a plant starting with little in place and wanting one accountable party, and it is where the biggest quotes come from.
-3. **Platform plus consultant.** A software system that holds the documents, records, audits and corrective actions, with a consultant configuring it and reviewing the work. ISO Certification Consultant works this way; the [QMS platform overview](/platform) describes what the system covers.
+3. **Platform plus consultant.** A software system that holds the documents, records, audits and corrective actions, with a consultant configuring it and reviewing the work. ISO Certification Consultants work this way; the [QMS platform overview](/platform) describes what the system covers.
 
 A fixed-price project for a small plant is typically several times the registrar's initial-audit fee, and a day-rate engagement can be a fraction of that if the plant does the building itself. Neither is the right answer for every plant. The question to ask is which parts of the system the plant can honestly build and run on its own.
 
@@ -175,4 +175,4 @@ For a plant starting with partial records, four to six months to Stage 1 is a co
 
 No. The standard and the registrar require a working management system, not a consultant. Plants with a capable quality lead and time to build the system certify on their own. A consultant is bought for speed, for experience of what registrars look for, and to lower the chance of paying for a second Stage 2.
 
-Budgeting for certification comes down to one quote, one honest count of internal hours, and one decision about how much outside help the plant needs. ISO Certification Consultant can give a straight read on all three for a specific operation before any money is committed: [book a consultation](/contact) to walk through the plant's scope and get a figure that will hold up in the budget meeting.
+Budgeting for certification comes down to one quote, one honest count of internal hours, and one decision about how much outside help the plant needs. ISO Certification Consultants can give a straight read on all three for a specific operation before any money is committed: [book a consultation](/contact) to walk through the plant's scope and get a figure that will hold up in the budget meeting.

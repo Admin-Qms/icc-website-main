@@ -2,7 +2,7 @@
   "name": "icc-team",
   "version": "1.0.0",
   "private": true,
-  "description": "Content agents for isocertificationconsultant.ca — the blog pipeline is the only scheduled path.",
+  "description": "Content agents for isocertificationconsultants.ca — the blog pipeline is the only scheduled path.",
   "scripts": {
     "blog:daily": "node pm.js blog publish",
     "blog:dry-run": "node pm.js blog publish --dry-run",

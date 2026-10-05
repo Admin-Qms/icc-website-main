@@ -178,3 +178,99 @@ export function getHeadings(body: string): Heading[] {
   }
   return headings;
 }
+
+// ── FAQ section ───────────────────────────────────────────────────────────────
+
+export type FaqItem = { question: string; answer: string };
+
+export type FaqSplit = {
+  /** The body before the FAQ section. */
+  main: string;
+  /** Any sections after the FAQ (some article types close with a short `##` section). */
+  after: string;
+  /** Heading text and id of the FAQ section, matching getHeadings(); null when there is none. */
+  heading: { text: string; id: string } | null;
+  /** Markdown between the FAQ heading and the first question, usually empty. */
+  intro: string;
+  items: FaqItem[];
+  /** The closing paragraph(s) after the last answer — the call to action linking /contact — when the FAQ ends the article. */
+  outro: string;
+};
+
+const FAQ_HEADING_RE = /^##\s+(frequently asked questions|faqs?)\s*#*$/i;
+const CONTACT_LINK_RE = /\]\(\/contact\/?[)#?]/;
+
+function paragraphs(md: string): string[] {
+  return md
+    .split(/\n[ \t]*\n/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+}
+
+/**
+ * Pulls the "## Frequently Asked Questions" section (each `### question` and its
+ * answer) out of a body so the page can render it as an accordion. The writing
+ * rules put the closing paragraph, with its /contact link, after the last answer;
+ * it is returned separately as `outro` so it stays outside the accordion.
+ */
+export function splitFaq(body: string): FaqSplit {
+  const none: FaqSplit = { main: body, after: "", heading: null, intro: "", items: [], outro: "" };
+  const lines = body.split("\n");
+
+  let start = -1;
+  let end = lines.length;
+  let inFence = false;
+  for (let i = 0; i < lines.length; i++) {
+    if (/^```/.test(lines[i])) inFence = !inFence;
+    if (inFence) continue;
+    if (start === -1) {
+      if (FAQ_HEADING_RE.test(lines[i])) start = i;
+    } else if (/^##\s/.test(lines[i])) {
+      end = i;
+      break;
+    }
+  }
+  if (start === -1) return none;
+
+  const intro: string[] = [];
+  const items: { question: string; answer: string[] }[] = [];
+  for (const line of lines.slice(start + 1, end)) {
+    const m = /^###\s+(.+?)\s*#*$/.exec(line);
+    if (m) items.push({ question: plainText(m[1]), answer: [] });
+    else if (items.length) items[items.length - 1].answer.push(line);
+    else intro.push(line);
+  }
+  if (!items.length) return none;
+
+  let outro = "";
+  const last = items[items.length - 1];
+  if (end === lines.length) {
+    const paras = paragraphs(last.answer.join("\n"));
+    const cta = paras.findIndex((p) => CONTACT_LINK_RE.test(p));
+    if (cta > 0) {
+      outro = paras.slice(cta).join("\n\n");
+      last.answer = [paras.slice(0, cta).join("\n\n")];
+    }
+  }
+
+  const heading = getHeadings(body).find((h) => h.depth === 2 && FAQ_HEADING_RE.test(`## ${h.text}`)) ?? null;
+  return {
+    main: lines.slice(0, start).join("\n").trimEnd(),
+    after: lines.slice(end).join("\n").trim(),
+    heading: heading ? { text: heading.text, id: heading.id } : { text: "Frequently Asked Questions", id: "frequently-asked-questions" },
+    intro: intro.join("\n").trim(),
+    items: items.map((i) => ({ question: i.question, answer: i.answer.join("\n").trim() })),
+    outro,
+  };
+}
+
+/** FAQ answers as plain text for the FAQPage structured data. */
+export function faqPlainText(md: string): string {
+  return plainText(
+    md
+      .replace(/^>\s?/gm, "")
+      .replace(/^\s*[-*]\s+/gm, "")
+      .replace(/^\s*\d+\.\s+/gm, "")
+      .replace(/!\[[^\]]*\]\([^)]*\)/g, ""),
+  ).replace(/\s*\n\s*/g, " ");
+}

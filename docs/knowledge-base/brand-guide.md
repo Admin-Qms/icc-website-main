@@ -1,6 +1,6 @@
 # Brand Guide
 
-> Voice, tone, target audience, key messaging, and competitor positioning for ISO Certification Consultant.
+> Voice, tone, target audience, key messaging, and competitor positioning for ISO Certification Consultants.
 
 ---
 
@@ -8,23 +8,23 @@
 
 | Element | Value |
 |---------|-------|
-| **Company** | ISO Certification Consultant |
+| **Company** | ISO Certification Consultants |
 | **Tagline** | ISO Certification Consulting for Canadian Manufacturers |
 | **Model** | Hybrid — AI-powered platform AND expert consultants working together |
 | **Delivery types** | `"app"`, `"consultant"`, `"hybrid"` — never `"person"` |
 
-### What ISO Certification Consultant IS
+### What ISO Certification Consultants IS
 - An ISO certification consulting firm
 - AI-powered compliance platform
 - Expert consultants for Canadian manufacturers
 - A hybrid of technology and human expertise
 
-### What ISO Certification Consultant is NOT
+### What ISO Certification Consultants is NOT
 - Not a software-only product
 - Not a certification body (we prepare clients for certification, we don't issue certificates)
 
 ### Legal entity
-- Operated by **ISO Certification Consultant Inc.** (Canadian company). ISO Certification Consultant Inc. appears as the legal entity on `/privacy`, `/terms`, and the site-wide JSON-LD `legalName` field. Site operates under Canadian law (PIPEDA for privacy; Copyright Act (Canada) for IP; governing law and jurisdiction: Province of [Province], Canada).
+- Operated by **ISO Certification Consultants Inc.** (Canadian company). ISO Certification Consultants Inc. appears as the legal entity on `/privacy`, `/terms`, and the site-wide JSON-LD `legalName` field. Site operates under Canadian law (PIPEDA for privacy; Copyright Act (Canada) for IP; governing law and jurisdiction: Province of [Province], Canada).
 
 ---
 

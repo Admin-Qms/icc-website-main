@@ -252,7 +252,7 @@ Return ONLY the rewrite instructions, no preamble.`,
   // 4. Rewrite the article
   log("contentRefresher", "rewrite", "generating updated content");
   const rewrittenBody = await claudeCall(
-    `You are a senior ISO consulting content writer for ISO Certification Consultant (isocertificationconsultant.ca), a Canadian ISO consulting firm. Write authoritative, well-researched content targeting Canadian manufacturers. Keep the same style and structure but expand and improve. Use markdown format with ## H2 headings, bullet lists, and bold text.`,
+    `You are a senior ISO consulting content writer for ISO Certification Consultant (isocertificationconsultants.ca), a Canadian ISO consulting firm. Write authoritative, well-researched content targeting Canadian manufacturers. Keep the same style and structure but expand and improve. Use markdown format with ## H2 headings, bullet lists, and bold text.`,
     `Rewrite and improve this article following these instructions:
 
 INSTRUCTIONS:

@@ -10,7 +10,7 @@ import { MODULES, CUSTOMIZATION, ROI_PLATFORM } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Platform Modules — Inspection, Inventory, Training, Production & More",
   description:
-    "Nine configurable QMS process modules built around how your business runs — inspection, inventory, training & competence, production, CAPA, supplier quality and more. Sized and priced for small and mid-size manufacturers.",
+    "Nine configurable QMS process modules built around how your business runs — inspection, inventory, training & competence, production, CAPA, supplier quality and more. Sized and priced for small and mid-size companies.",
   alternates: { canonical: "/solutions" },
 };
 

@@ -11,7 +11,7 @@ test("siteRoutes knows the real pages and rejects pages that do not exist", () =
     assert.ok(routes.resolves(href), href);
   }
   assert.ok(routes.resolves("/services/iso-9001/#faq"));
-  assert.ok(routes.resolves("https://isocertificationconsultant.ca/contact"));
+  assert.ok(routes.resolves("https://isocertificationconsultants.ca/contact"));
   for (const href of ["/privacy", "/terms", "/resources", "/services/iso-99999", "/blog/not-a-post"]) {
     assert.ok(!routes.resolves(href), href);
   }

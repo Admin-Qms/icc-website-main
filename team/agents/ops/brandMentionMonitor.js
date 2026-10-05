@@ -17,7 +17,7 @@ const REPORT_DIR = path.join(REPORTS_DIR, "brand-mentions");
 const BRAND_TERMS = [
   "isocertificationconsultant",
   '"iso certification consultant"',
-  '"isocertificationconsultant.ca"',
+  '"isocertificationconsultants.ca"',
   '"iso certification consultant inc"',
   '"iso certification consultant canada"',
   '"iso certification consultant toronto"',
@@ -158,7 +158,7 @@ async function scanMentions() {
     for (const result of webResults.organic) {
       const url = result.link || "";
       const domain = extractDomain(url);
-      if (url.includes("isocertificationconsultant.ca")) continue; // Skip our own site
+      if (url.includes("isocertificationconsultants.ca")) continue; // Skip our own site
       if (knownUrls.has(url)) continue;
       if (falsePositives.has(domain)) continue;
 
@@ -174,7 +174,7 @@ async function scanMentions() {
     for (const result of newsResults.news || newsResults.organic || []) {
       const url = result.link || "";
       const domain = extractDomain(url);
-      if (url.includes("isocertificationconsultant.ca")) continue;
+      if (url.includes("isocertificationconsultants.ca")) continue;
       if (knownUrls.has(url)) continue;
       if (falsePositives.has(domain)) continue;
 
@@ -194,7 +194,7 @@ async function scanMentions() {
   if (newMentions.length > 0) {
     try {
       const sentimentResults = await claudeJSONFast(
-        `You are a brand monitoring analyst for ISO Certification Consultant, an ISO consulting firm in Canada (isocertificationconsultant.ca). Analyze each mention carefully. CRITICAL: detect false positives — other companies with similar names that are NOT ISO Certification Consultant.`,
+        `You are a brand monitoring analyst for ISO Certification Consultant, an ISO consulting firm in Canada (isocertificationconsultants.ca). Analyze each mention carefully. CRITICAL: detect false positives — other companies with similar names that are NOT ISO Certification Consultant.`,
         `Analyze sentiment and classify each mention. Return JSON array:
 
 ${newMentions.map((m, i) => `${i + 1}. [${m.domain}] "${m.title}" — ${m.snippet}`).join("\n")}
@@ -443,7 +443,7 @@ async function detectBacklinkOpportunities() {
       domain: m.domain,
       url: m.url,
       title: m.title,
-      action: `Request link addition — mention exists but may not link to isocertificationconsultant.ca`,
+      action: `Request link addition — mention exists but may not link to isocertificationconsultants.ca`,
       priority: m.priority === "high" ? "high" : "medium",
     });
   }

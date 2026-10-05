@@ -84,7 +84,7 @@ async function patchArticle(article, qaResult, context) {
     if (voice) {
       const patched = await rewriteBody(
         body,
-        `Rewrite ONLY the sentences that use first person (we, our, us, I, my) so they use third person or direct address instead. Refer to the company as "ISO Certification Consultant" and to the reader as "you". Flagged passages: ${(voice.violations || []).slice(0, 12).map((v) => `"${v.context}"`).join("; ")}`
+        `Rewrite ONLY the sentences that use first person (we, our, us, I, my) so they use third person or direct address instead. Refer to the company as "ISO Certification Consultants" and to the reader as "you". Flagged passages: ${(voice.violations || []).slice(0, 12).map((v) => `"${v.context}"`).join("; ")}`
       );
       if (patched) {
         body = patched;
@@ -98,7 +98,7 @@ async function patchArticle(article, qaResult, context) {
       const quoted = (failed(qaResult, "fabricated-quotes")?.violations || []).map((v) => `- [QUOTES] "${v.text}"`).join("\n");
       const patched = await rewriteBody(
         body,
-        `Fix ONLY the passages listed below. For each: remove the invented company or person name (describe the business generically, e.g. "a 60-person stamping plant in Windsor"); remove any quotation or reported speech; replace a statistic or dollar figure stated as fact with a hedged general statement, or delete it; make any scenario openly hypothetical by starting its paragraph with "**Illustrative example:**"; delete claims about ISO Certification Consultant's track record; correct a wrong clause reference only if you are certain of the right one, otherwise drop the clause number.\n\nPASSAGES:\n${findings}\n${quoted}`
+        `Fix ONLY the passages listed below. For each: remove the invented company or person name (describe the business generically, e.g. "a 60-person stamping plant in Windsor"); remove any quotation or reported speech; replace a statistic or dollar figure stated as fact with a hedged general statement, or delete it; make any scenario openly hypothetical by starting its paragraph with "**Illustrative example:**"; delete claims about ISO Certification Consultants' track record; correct a wrong clause reference only if you are certain of the right one, otherwise drop the clause number.\n\nPASSAGES:\n${findings}\n${quoted}`
       );
       if (patched) {
         body = patched;

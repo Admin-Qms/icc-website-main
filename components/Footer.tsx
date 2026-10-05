@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { ShieldCheck, ArrowRight, Phone } from "./Icons";
+import { ArrowRight, Phone } from "./Icons";
+import { Logo } from "./Logo";
+import { BbbSeal } from "./BbbSeal";
 import { STANDARDS, INDUSTRIES, MODULES, SITE } from "@/lib/site";
 
 export function Footer() {
@@ -9,18 +11,13 @@ export function Footer() {
       <div className="container-page">
         <div className="grid gap-12 border-b border-white/10 py-16 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
-            <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-lg bg-white/10">
-                <ShieldCheck className="h-5 w-5 text-teal-400" />
-              </span>
-              <span className="font-heading text-lg font-bold text-white">
-                ISO Certification Consultant
-              </span>
-            </div>
+            <Link href="/" aria-label={`${SITE.name} home`}>
+              <Logo variant="light" />
+            </Link>
             <p className="mt-4 text-sm leading-relaxed text-slate-400">
-              A quality management platform and certified consultants that take Canadian
-              manufacturers from gap analysis to a passed certification audit — customized
-              to your processes, ready for any standard.
+              ISO certification consulting for Canadian companies — certified consultants and a
+              management system platform that take you from gap analysis to a passed
+              certification audit, customized to your processes and ready for any standard.
             </p>
             <a
               href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
@@ -34,6 +31,7 @@ export function Footer() {
                 {SITE.email}
               </a>
             </p>
+            <BbbSeal className="mt-6" />
           </div>
 
           <FooterCol title="Platform Modules">
@@ -76,7 +74,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-4 py-8 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {SITE.legalName}. Serving manufacturers across Canada &amp; the USA.
+            © {year} {SITE.legalName}. Serving companies across Canada &amp; the USA.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-white">

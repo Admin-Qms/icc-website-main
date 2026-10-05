@@ -6,7 +6,7 @@ import { EngagementFlow } from "@/components/EngagementFlow";
 import { ROIPanel } from "@/components/ROIPanel";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { Icon, ArrowRight, Check } from "@/components/Icons";
-import { CUSTOM_EXAMPLES, EXPERTS, MODULES } from "@/lib/site";
+import { CUSTOM_EXAMPLES, EXPERTS, MODULES, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Custom QMS Solutions — Built Around Your Challenge",
@@ -21,8 +21,8 @@ const jsonLd = {
   serviceType: "Custom quality management system solutions",
   name: "Custom QMS Solutions",
   description:
-    "Custom-built quality management solutions designed around a manufacturer's specific challenge, following an onsite assessment and gap analysis by industry experts and engineers.",
-  provider: { "@type": "Organization", name: "ISO Certification Consultant Inc." },
+    "Custom-built quality management solutions designed around a company's specific challenge, following an onsite assessment and gap analysis by industry experts and engineers.",
+  provider: { "@type": "Organization", name: SITE.legalName },
   areaServed: { "@type": "Country", name: "Canada" },
 };
 
