@@ -24,7 +24,6 @@ image:
   width: 1200
   height: 675
   source: openai
-  credit: AI-generated illustration (OpenAI)
   sha256: 93f273997bb81074fa169947f31dafd4c91b9b12cb245469f617ea771fcc654f
 inlineImages:
   - src: >-
@@ -35,7 +34,6 @@ inlineImages:
     width: 1200
     height: 675
     source: openai
-    credit: AI-generated illustration (OpenAI)
     sha256: 1d450295ba2f649894d058864110d50bfa5ef23792a2037c6c4cbff20825e5d9
   - src: >-
       /images/blog/iso-9001-certification-cost-in-ontario-budgeting-breakdown-for-manufacturers/inline-2.webp
@@ -45,7 +43,6 @@ inlineImages:
     width: 1200
     height: 675
     source: openai
-    credit: AI-generated illustration (OpenAI)
     sha256: ef13788d8932e1e9d4d4ff0bef87ce8e520c81f8d72dbf3edc2eaeba60deb0f3
 ---
 

@@ -27,7 +27,6 @@ image:
   width: 1200
   height: 675
   source: gemini
-  credit: AI-generated illustration (Gemini)
   sha256: 5a62af27b7e3bf070e3bfa9aa1b1ad0dc06a7f7e3f8d17982ed3505bff8e522d
 inlineImages:
   - src: >-
@@ -38,7 +37,6 @@ inlineImages:
     width: 1200
     height: 675
     source: gemini
-    credit: AI-generated illustration (Gemini)
     sha256: 16326048f0275a7780eb77e9e39bf051ad6f36c97b2b62bffdf190e5928af4ee
   - src: >-
       /images/blog/how-to-build-an-iso-14001-environmental-aspects-and-impacts-register-in-6-steps/inline-2.webp
@@ -48,7 +46,6 @@ inlineImages:
     width: 1200
     height: 675
     source: gemini
-    credit: AI-generated illustration (Gemini)
     sha256: c7736a73fad96c443d0799dbd127985a340f6b56d5a888b57e912c2002c29f0f
 ---
 

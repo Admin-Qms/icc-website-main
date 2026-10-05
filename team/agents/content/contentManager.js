@@ -3,7 +3,7 @@ const path = require("path");
 const { log } = require("../shared/logger");
 // Email notifications removed — blog results are included in the consolidated morning report
 const { today } = require("../shared/logger");
-const { REPORTS_DIR, SITE_URL, BLOG_AUTHOR } = require("../shared/config");
+const { REPORTS_DIR, SITE_URL, BLOG_AUTHOR, IMAGE_PROVIDERS } = require("../shared/config");
 const {
   ensureDirs,
   slugify,
@@ -323,6 +323,16 @@ async function publishDaily(options = {}) {
     const inlineImageResult = await inlineImageAgent.processInlineImagesLocal(article, slug, { exclude, max: MAX_INLINE_IMAGES });
     article.body = normalizeBody(inlineImageResult.body, article.title);
     log("contentManager", "inline-images", `${inlineImageResult.count} images placed`);
+
+    // Say plainly when images did not come from the first-choice provider, so a
+    // scheduled run's report shows the fallback and the [imageAgent] lines explain it.
+    const sources = [hero, ...inlineImageResult.images].map((img) => img.source).filter((src) => src && src !== "none");
+    const preferred = IMAGE_PROVIDERS[0];
+    const fallbacks = sources.filter((src) => src !== preferred);
+    log("contentManager", "images", `sources: ${sources.join(", ")}`);
+    if (preferred && fallbacks.length) {
+      console.warn(`IMAGE_FALLBACK: ${fallbacks.length} of ${sources.length} images came from ${[...new Set(fallbacks)].join("/")} instead of ${preferred} — see the [imageAgent] lines above for the reason`);
+    }
 
     // Step 10: Final gate — every check, on exactly what will be written
     log("contentManager", "step-10", "final QA");

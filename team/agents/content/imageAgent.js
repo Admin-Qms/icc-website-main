@@ -542,7 +542,10 @@ function buildImagePrompt(scene, kind = 'inline') {
  */
 async function generateOpenAIImage(prompt) {
   const { OPENAI_API_KEY, OPENAI_IMAGE_MODEL, OPENAI_IMAGE_QUALITY } = require('../shared/config');
-  if (!OPENAI_API_KEY) return null;
+  if (!OPENAI_API_KEY) {
+    console.error('  [imageAgent] OPENAI_API_KEY is not set — OpenAI images skipped');
+    return null;
+  }
   // The image API allows a handful of images a minute; waiting out a 429 keeps
   // a whole article on one provider instead of mixing in the fallback's look.
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -595,10 +598,12 @@ async function generateCodexImage(prompt) {
   }
 }
 
+// Generated images carry no credit line: the site shows `credit` as a caption, which
+// is for photographers (Pexels), not for naming the model that drew the picture.
 const GENERATORS = {
-  openai: { generate: generateOpenAIImage, credit: 'AI-generated illustration (OpenAI)' },
-  gemini: { generate: generateGeminiImage, credit: 'AI-generated illustration (Gemini)' },
-  codex: { generate: generateCodexImage, credit: 'AI-generated illustration (OpenAI via Codex)' },
+  openai: { generate: generateOpenAIImage },
+  gemini: { generate: generateGeminiImage },
+  codex: { generate: generateCodexImage },
 };
 
 /**
@@ -716,9 +721,10 @@ async function sourceImage({ pexelsQueries = [], scene, kind = 'inline', geminiP
       if (!generator || !prompt) continue;
       const buffer = await generator.generate(prompt);
       if (buffer) {
-        const image = await finish({ buffer, alt, source: provider, credit: generator.credit });
+        const image = await finish({ buffer, alt, source: provider });
         if (image) return image;
       }
+      console.error(`  [imageAgent] ${provider} produced no usable image — trying the next provider`);
     } catch (err) {
       console.error(`  [imageAgent] ${provider} image failed: ${err.message}`);
     }

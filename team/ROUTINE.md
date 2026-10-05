@@ -12,7 +12,7 @@ You are running the scheduled daily blog publish for isocertificationconsultants
    - `BRIEF <folder>`: continue.
 2. Use the `write-blog-article` skill (`.claude/skills/write-blog-article/SKILL.md`): read `<folder>/brief.md` in full and write `<folder>/body.md`. Follow every rule in the brief.
 3. Run `bash team/scripts/scheduled-run.sh publish <folder>/draft.json` and read its last line.
-   - `PUBLISHED <title>`: report the title and the page path printed above it, and stop.
+   - `PUBLISHED <title>`: report the title and the page path printed above it. If the output contains an `IMAGE_FALLBACK:` line, quote it and every `[imageAgent]` line in your report so the reason the first-choice image provider failed is visible. Then stop.
    - `PIPELINE_FAILED` because of checks on the draft (first person, spelling, links, length, claims, keywords): fix `body.md` to satisfy them and run step 3 again. Do this at most twice, then report the remaining issues and stop.
    - `PIPELINE_FAILED` for any other reason (install, build, images, git): report the output and stop.
 
