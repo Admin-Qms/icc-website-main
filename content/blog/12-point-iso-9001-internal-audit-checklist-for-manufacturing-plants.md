@@ -5,7 +5,7 @@ description: >-
   Streamline verification with this 12-point ISO 9001 internal audit checklist
   tailored for Ontario manufacturing plants and quality management teams.
 date: '2026-10-06'
-author: ISO Certification Consultant Editorial Team
+author: ISO Certification Consultants Editorial Team
 category: ISO 9001
 primaryKeyword: iso 9001 internal audit checklist
 keywords:
@@ -24,7 +24,6 @@ image:
   width: 1200
   height: 675
   source: gemini
-  credit: AI-generated illustration (Gemini)
   sha256: e896b96a4ccf67017569ce3f6a1e3ed3f7800b8522a4fbc44cf62f8d998812b2
 inlineImages:
   - src: >-
@@ -35,7 +34,6 @@ inlineImages:
     width: 1200
     height: 675
     source: gemini
-    credit: AI-generated illustration (Gemini)
     sha256: 0d0b41b2b6c5e66dd8302f0dbbf971d06ffd26a43f78b87611c7524e5dad345e
   - src: >-
       /images/blog/12-point-iso-9001-internal-audit-checklist-for-manufacturing-plants/inline-2.webp
@@ -45,7 +43,6 @@ inlineImages:
     width: 1200
     height: 675
     source: gemini
-    credit: AI-generated illustration (Gemini)
     sha256: c3e8e617beb289eef10e54544e1045d075cd3a074b6efb41724aef002e3d613c
 ---
 
@@ -198,4 +195,4 @@ Record each one, correct the immediate problem and find the cause. Then decide w
 
 ## From Checklist to Audit-Ready Plant
 
-The twelve points above work best when the same person does not write and answer them. A plant new to internal auditing can start with a [free ISO readiness assessment](/assessment) to see which clauses need attention first, and read about the [ISO 9001 quality management service](/services/iso-9001) to see how audits fit into the wider system. Plants that want an outside view of their audit program, or a [manufacturing-focused consultant](/industries/manufacturing) to run the first cycle alongside the team, can [book a consultation](/contact) with ISO Certification Consultant.
+The twelve points above work best when the same person does not write and answer them. A plant new to internal auditing can start with a [free ISO readiness assessment](/assessment) to see which clauses need attention first, and read about the [ISO 9001 quality management service](/services/iso-9001) to see how audits fit into the wider system. Plants that want an outside view of their audit program, or a [manufacturing-focused consultant](/industries/manufacturing) to run the first cycle alongside the team, can [book a consultation](/contact) with ISO Certification Consultants.
