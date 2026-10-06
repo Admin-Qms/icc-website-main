@@ -12,20 +12,20 @@ import { ArrowRight, Check, Icon } from "./Icons";
  */
 
 const INDUSTRY_OPTIONS = [
-  { key: "fabrication", label: "Metal Fabrication", icon: "production" },
+  { key: "fabrication", label: "Metal Fabrication", icon: "rollout" },
   { key: "manufacturing", label: "Manufacturing", icon: "dashboard" },
   { key: "automotive", label: "Automotive", icon: "supplier" },
   { key: "aerospace", label: "Aerospace & Defence", icon: "calibration" },
-  { key: "food", label: "Food & Beverage", icon: "inventory" },
-  { key: "medical", label: "Medical Devices", icon: "inspection" },
+  { key: "food", label: "Food & Beverage", icon: "capa" },
+  { key: "medical", label: "Medical Devices", icon: "calibration" },
   { key: "other", label: "Other / Mixed", icon: "document" },
 ] as const;
 
 const PROCESS_OPTIONS = [
-  { key: "inspection", label: "Inspection & QC", icon: "inspection" },
-  { key: "inventory", label: "Inventory & Traceability", icon: "inventory" },
+  { key: "documents", label: "Document Control", icon: "document" },
+  { key: "audits", label: "Internal Audits", icon: "audit" },
   { key: "training", label: "Training & Competence", icon: "training" },
-  { key: "production", label: "Production Control", icon: "production" },
+  { key: "equipment", label: "Equipment, Calibration & Inspections", icon: "calibration" },
   { key: "capa", label: "Nonconformance & CAPA", icon: "capa" },
   { key: "supplier", label: "Supplier Quality", icon: "supplier" },
 ] as const;
@@ -43,7 +43,7 @@ const INDUSTRY_DEFAULTS: Record<string, { hours: number; contract: number; bids:
 
 export function ROICalculator() {
   const [industry, setIndustry] = useState<string>("manufacturing");
-  const [processes, setProcesses] = useState<string[]>(["inspection", "training"]);
+  const [processes, setProcesses] = useState<string[]>(["documents", "training"]);
 
   // Direct savings inputs
   const [hoursPerWeek, setHoursPerWeek] = useState(16);

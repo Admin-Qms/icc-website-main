@@ -9,19 +9,19 @@ import { Icon, ArrowRight, Check } from "@/components/Icons";
 import { CUSTOM_EXAMPLES, EXPERTS, MODULES, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Custom QMS Solutions — Built Around Your Challenge",
+  title: "Custom Compliance Solutions — Built Around Your Challenge",
   description:
-    "When an off-the-shelf module isn't enough, our industry experts and engineers build one. Onsite assessment, gap analysis and a custom solution tailored to your processes — with the assessment fee credited toward your solution. Fabrication, manufacturing, food, aerospace and more.",
+    "When a standard module is not enough, industry experts and engineers build one. Onsite assessment, gap analysis and a solution fitted to your processes.",
   alternates: { canonical: "/custom-solutions" },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "Custom quality management system solutions",
-  name: "Custom QMS Solutions",
+  serviceType: "Custom compliance management system solutions",
+  name: "Custom Compliance Solutions",
   description:
-    "Custom-built quality management solutions designed around a company's specific challenge, following an onsite assessment and gap analysis by industry experts and engineers.",
+    "Custom-built compliance management solutions designed around a company's specific challenge, following an onsite assessment and gap analysis by industry experts and engineers.",
   provider: { "@type": "Organization", name: SITE.legalName },
   areaServed: { "@type": "Country", name: "Canada" },
 };
@@ -103,8 +103,8 @@ export default function CustomSolutionsPage() {
         <div className="container-page">
           <SectionHeading
             eyebrow="Examples by industry"
-            title="Real challenges, custom-built solutions"
-            intro="Representative examples of how a custom solution comes together. Your situation will differ — that's the point."
+            title="Typical challenges, custom-built solutions"
+            intro="Illustrative scenarios built from real module capabilities, not client case studies. Your situation will differ; that is the point."
           />
           <div className="mt-12 space-y-6">
             {CUSTOM_EXAMPLES.map((ex, i) => (
@@ -136,7 +136,7 @@ export default function CustomSolutionsPage() {
             ))}
           </div>
           <Reveal delay={0.1} className="mt-10 text-center">
-            <p className="text-slate-600">Don&apos;t see your situation? It&apos;s probably one we&apos;ve solved before.</p>
+            <p className="text-slate-600">Don&apos;t see your situation? Tell us what you are facing and we will say plainly whether a module fits or something has to be built.</p>
             <Link href="/contact" className="btn-primary mt-4">
               Tell us your challenge <ArrowRight className="h-4 w-4" />
             </Link>
@@ -155,7 +155,7 @@ export default function CustomSolutionsPage() {
             />
             <Reveal delay={0.1}>
               <Link href="/solutions" className="btn-outline">
-                All platform modules <ArrowRight className="h-4 w-4" />
+                All software modules <ArrowRight className="h-4 w-4" />
               </Link>
             </Reveal>
           </div>

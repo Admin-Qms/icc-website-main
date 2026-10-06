@@ -8,7 +8,7 @@ import { INDUSTRIES } from "@/lib/site";
 export const metadata: Metadata = {
   title: "ISO Consulting by Industry — Manufacturing, Automotive, Aerospace & More",
   description:
-    "Industry-specific ISO consulting for eight industries across Canada — automotive core tools, aerospace traceability, food safety, medical device design controls and more.",
+    "Industry-specific ISO consulting across Canada: automotive core tools, aerospace configuration control, food safety, medical device controls and more.",
   alternates: { canonical: "/industries" },
 };
 

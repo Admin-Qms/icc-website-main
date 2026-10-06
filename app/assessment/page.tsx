@@ -6,7 +6,7 @@ import { ShieldCheck } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Free ISO Readiness Assessment",
   description:
-    "Find out how audit-ready your quality system is in minutes. A free, interactive ISO readiness assessment for Canadian companies — no signup required.",
+    "Find out how audit-ready your management system is in minutes. A free, interactive ISO readiness assessment for Canadian companies — no signup required.",
   alternates: { canonical: "/assessment" },
 };
 
@@ -28,7 +28,7 @@ export default function AssessmentPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-5 text-lg leading-relaxed text-slate-600">
-              Answer eight quick questions about your quality system and get an instant
+              Answer eight quick questions about your management system and get an instant
               readiness snapshot — plus a clear next step toward certification.
             </p>
           </Reveal>

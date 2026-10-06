@@ -147,8 +147,9 @@ export function Assessment() {
                 </button>
               </div>
               <p className="mt-6 text-xs text-slate-500">
-                This is an indicative snapshot. The full platform assessment covers 350+
-                questions across all 10 standards.
+                This is an indicative snapshot. A consultant gap analysis scores every clause of
+                your standard, and the Standards workspace in the software then tracks coverage
+                clause by clause.
               </p>
             </motion.div>
           )}

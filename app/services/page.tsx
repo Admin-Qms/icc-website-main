@@ -12,9 +12,9 @@ import { ArrowRight } from "@/components/Icons";
 import { STANDARDS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "ISO Consulting & Certification — Any Standard, One Platform",
+  title: "ISO Consulting & Certification — Any Standard, One System",
   description:
-    "Certification support for any standard — ISO 9001, 14001, 45001, IATF 16949, AS9100, ISO 13485 and customer-specific, regulatory or internal frameworks. Serving Canadian companies.",
+    "Certification support for ISO 9001, 14001, 45001, IATF 16949, AS9100, ISO 13485 and customer-specific or regulatory standards, for Canadian companies.",
   alternates: { canonical: "/services" },
 };
 
@@ -23,8 +23,8 @@ export default function ServicesPage() {
     <>
       <PageHeader
         eyebrow="Standards & certification"
-        title={<>Any standard. <span className="text-teal-700">One platform.</span></>}
-        intro="The standards below are the ones Canadian companies ask for most — but we're not limited to a fixed list. Customer-specific requirements, regulatory frameworks, internal quality standards: if you're audited against it, we can onboard it."
+        title={<>Any standard. <span className="text-teal-700">One system.</span></>}
+        intro="The standards below are the ones Canadian companies ask for most, and ten of them sit in the software catalogue. Customer-specific requirements, regulatory frameworks and internal quality standards are imported from a workbook as custom standards, so if you are audited against it, it can be tracked clause by clause."
       >
         <Link href="/assessment" className="btn-primary">
           Which standard do you need? <ArrowRight className="h-4 w-4" />

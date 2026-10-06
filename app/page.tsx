@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { ProcessTimeline } from "@/components/home/ProcessTimeline";
@@ -6,20 +7,35 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { SectionHeading, StandardCard, IndustryCard, ModuleCard, AnyStandardCard, CTASection } from "@/components/ui";
 import { ROIPanel } from "@/components/ROIPanel";
 import { Icon, ArrowRight, Check } from "@/components/Icons";
-import { STANDARDS, INDUSTRIES, MODULES, DIFFERENTIATORS } from "@/lib/site";
+import {
+  SITE,
+  STANDARDS,
+  INDUSTRIES,
+  MODULES,
+  DIFFERENTIATORS,
+  PAIN_POINTS,
+  AI_PRINCIPLES,
+} from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: { absolute: `${SITE.name} — ISO Certification Consulting for Canadian Companies` },
+  description:
+    "ISO certification consulting for Canadian companies: certified consultants plus compliance management software that holds audit evidence as daily work happens.",
+  alternates: { canonical: "/" },
+};
 
 const WHY = [
   {
-    icon: "production",
+    icon: "rollout",
     title: "We know how your business runs",
     detail:
-      "Automotive core tools, aerospace traceability, food safety, device design controls — practical advice grounded in how manufacturing actually works, not generic business consulting.",
+      "Automotive core tools, aerospace configuration control, food safety, device design controls. Practical advice grounded in how manufacturing actually works, not generic business consulting.",
   },
   {
-    icon: "document",
+    icon: "design",
     title: "Built around your processes",
     detail:
-      "Your inspection, inventory, training and production processes stay yours. We shape the quality system around them — not a rigid template you have to bend to fit.",
+      "Your processes are mapped as they run, with named owners, and the compliance management system is shaped around them. Not a rigid template you have to bend to fit.",
   },
   {
     icon: "expert",
@@ -31,7 +47,7 @@ const WHY = [
     icon: "assessment",
     title: "Any standard, one team",
     detail:
-      "ISO, IATF, AS or a customer-specific requirement — we onboard whatever you're audited against, so a multi-standard rollout never means juggling multiple firms.",
+      "ISO, IATF, AS or a customer-specific requirement: we onboard whatever you are audited against, so a multi-standard rollout never means juggling multiple firms.",
   },
 ];
 
@@ -40,13 +56,41 @@ export default function Home() {
     <>
       <Hero />
 
-      {/* WHY / TRUST */}
+      {/* PAIN → SOLUTION */}
       <section className="bg-white py-16 lg:py-24">
+        <div className="container-page">
+          <SectionHeading
+            eyebrow="What hurts, and what fixes it"
+            title="Evidence produced by daily work, not assembled before the audit"
+            intro="Each of these is a problem a quality manager lives with every week. Each one maps to a module in the compliance management software and a concrete capability that removes it."
+          />
+          <Stagger className="mt-12 grid gap-4">
+            {PAIN_POINTS.map((p) => (
+              <StaggerItem key={p.slug}>
+                <Link
+                  href={`/solutions/${p.slug}`}
+                  className="group grid gap-3 rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-teal-300 hover:shadow-md md:grid-cols-[1fr_auto_1.3fr] md:items-center md:gap-6"
+                >
+                  <p className="font-heading text-base font-bold text-navy-900">{p.pain}</p>
+                  <span className="inline-flex w-fit items-center gap-1.5 rounded-md bg-teal-50 px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-teal-700 ring-1 ring-teal-100">
+                    {p.module}
+                    <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                  <p className="text-sm leading-relaxed text-slate-600">{p.capability}</p>
+                </Link>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
+      {/* WHY / TRUST */}
+      <section className="bg-soft py-16 lg:py-24">
         <div className="container-page">
           <SectionHeading
             eyebrow="Why companies choose us"
             title="Straightforward help from people who understand your operation"
-            intro="ISO certification has a reputation for being expensive, confusing and disruptive. It doesn't have to be. Here's how we make it manageable."
+            intro="ISO certification has a reputation for being expensive, confusing and disruptive. It does not have to be. Here is how we make it manageable."
           />
           <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {WHY.map((w) => (
@@ -65,22 +109,22 @@ export default function Home() {
       </section>
 
       {/* SOLUTIONS / MODULES */}
-      <section className="bg-soft py-16 lg:py-24">
+      <section className="bg-white py-16 lg:py-24">
         <div className="container-page">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
-              eyebrow="Customized to your processes"
-              title="A quality system shaped around your business"
-              intro="Every process module is configured to the forms, checks and routing your team already uses — the part of a QMS that decides whether it survives the first audit."
+              eyebrow="The compliance management software"
+              title="Eleven modules, configured to your business"
+              intro="Standards, Documents, Processes, Audits, Improvements, Safety, Training, Supplier Quality, Assets, Vendors and an AI Assistant: the same module names you will see in the software. Each one is configured to the forms, checks and routing your team already uses."
             />
             <Reveal delay={0.1}>
               <Link href="/solutions" className="btn-outline">
-                View all platform modules <ArrowRight className="h-4 w-4" />
+                See all software modules <ArrowRight className="h-4 w-4" />
               </Link>
             </Reveal>
           </div>
           <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {MODULES.slice(0, 6).map((m) => (
+            {MODULES.map((m) => (
               <StaggerItem key={m.slug}>
                 <ModuleCard m={m} />
               </StaggerItem>
@@ -90,19 +134,19 @@ export default function Home() {
       </section>
 
       {/* CUSTOMIZATION */}
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-soft py-16 lg:py-24">
         <div className="container-page">
           <div className="grid gap-6 lg:grid-cols-[1.35fr_1fr] lg:items-end">
             <SectionHeading
               eyebrow="Customized to your challenge"
-              title="When an off-the-shelf module isn't enough, we build one"
-              intro="Your challenge is specific — a customer audit you keep failing, a process that lives on paper, a standard your current system can't reach. Our industry experts and engineers assess your operation onsite, then build a new solution or adapt an existing one to fit exactly how you work."
+              title="When a standard module is not enough, we build one"
+              intro="Your challenge is specific: a customer audit you keep failing, a process that lives on paper, a standard your current system cannot reach. Our industry experts and engineers assess your operation onsite, then build a new solution or configure an existing one to fit exactly how you work."
             />
             <Reveal delay={0.1}>
-              <div className="rounded-xl border border-slate-200 bg-soft p-5">
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
                 <p className="text-sm leading-relaxed text-slate-600">
                   Not sure which module fits? You don&apos;t have to guess. We start with an
-                  onsite gap assessment, then design the solution around what we find — and
+                  onsite gap assessment, then design the solution around what we find, and
                   the assessment fee is credited toward it.
                 </p>
                 <Link href="/custom-solutions" className="link-arrow mt-3">
@@ -127,12 +171,12 @@ export default function Home() {
       </section>
 
       {/* PROCESS */}
-      <section className="bg-soft py-16 lg:py-24">
+      <section className="bg-white py-16 lg:py-24">
         <div className="container-page">
           <SectionHeading
             eyebrow="How it works"
             title="A clear, six-step path to certification"
-            intro="No open-ended retainer and no mystery. You always know which stage you're in and what happens next — the roadmap fills in as your project moves forward."
+            intro="No open-ended retainer and no mystery. You always know which stage you are in and what happens next. The roadmap fills in as your project moves forward."
             align="center"
           />
           <ProcessTimeline />
@@ -145,13 +189,13 @@ export default function Home() {
       </section>
 
       {/* STANDARDS */}
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-soft py-16 lg:py-24">
         <div className="container-page">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
               eyebrow="Standards we help with"
               title="From ISO 9001 to any standard your customers require"
-              intro="These are the standards Canadian companies ask for most. If you're audited against something else, we can onboard it too."
+              intro="These are the standards Canadian companies ask for most. If you are audited against something else, it is imported as a custom standard and tracked the same way."
             />
             <Reveal delay={0.1}>
               <Link href="/services" className="btn-outline">
@@ -173,13 +217,13 @@ export default function Home() {
       </section>
 
       {/* INDUSTRIES */}
-      <section className="bg-soft py-16 lg:py-24">
+      <section className="bg-white py-16 lg:py-24">
         <div className="container-page">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
               eyebrow="Industries we serve"
               title="Depth in the sectors we work with"
-              intro="Not generic business consulting — real familiarity with the requirements and customer demands of your industry."
+              intro="Not generic business consulting. Real familiarity with the requirements and customer demands of your industry."
             />
             <Reveal delay={0.1}>
               <Link href="/industries" className="btn-outline">
@@ -197,8 +241,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI: a person always signs off */}
+      <section className="bg-white py-16 lg:py-24">
+        <div className="container-page grid gap-12 lg:grid-cols-2 lg:items-start">
+          <div>
+            <SectionHeading
+              eyebrow="How AI helps"
+              title="AI does the legwork. A person always signs off."
+              intro="The AI assistant acts inside the permissions you already set. Drafts are suggestions, and nothing enters a controlled record until a person accepts it. Gap assessments and audit findings are done by people."
+            />
+            <Link href="/platform" className="link-arrow mt-6">
+              How the software is kept in check <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <Stagger className="grid gap-4">
+            {AI_PRINCIPLES.map((p) => (
+              <StaggerItem key={p.title}>
+                <div className="flex gap-3 rounded-xl border border-slate-200 bg-white p-5">
+                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-teal-600 text-white">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <div>
+                    <h3 className="font-heading text-base font-bold text-navy-900">{p.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{p.detail}</p>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
       {/* REASSURANCE BAND */}
-      <section className="border-y border-slate-200 bg-white py-16 lg:py-20">
+      <section className="border-y border-slate-200 bg-soft py-16 lg:py-20">
         <div className="container-page">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
             <Reveal>
@@ -210,8 +285,8 @@ export default function Home() {
                 A partner that makes certification feel manageable
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-slate-600">
-                We combine a practical platform with hands-on consultants, so the work
-                gets done and stays defensible — from your first process map to a passed
+                We combine compliance management software with hands-on consultants, so the
+                work gets done and stays defensible, from your first process map to a passed
                 audit and beyond.
               </p>
               <Link href="/about" className="link-arrow mt-6">

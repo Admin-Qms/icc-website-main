@@ -9,7 +9,7 @@ import { STATS, DIFFERENTIATORS } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About ISO Certification Consultants",
   description:
-    "ISO Certification Consultants Inc. combines an AI-powered management system platform with certified consultants to get Canadian companies certified faster and more affordably.",
+    "ISO Certification Consultants Inc. pairs compliance management software with certified consultants to get Canadian companies certified without disruption.",
   alternates: { canonical: "/about" },
 };
 
@@ -22,7 +22,7 @@ const VALUES = [
   {
     title: "Documentation people use",
     detail:
-      "A binder no one opens is worthless. We build lean systems that live in the platform and in daily work, not on a shelf.",
+      "A binder no one opens is worthless. We build lean systems that live in the software and in daily work, not on a shelf.",
   },
   {
     title: "Honest about scope",
@@ -42,7 +42,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About us"
         title={<>Certification, <span className="text-teal-700">without the mystery</span></>}
-        intro="ISO Certification Consultants Inc. pairs an enterprise management system platform with certified consultants — a hybrid model that makes certification faster, more affordable and far less painful for Canadian companies."
+        intro="ISO Certification Consultants Inc. pairs compliance management software with certified consultants, a hybrid model that makes certification faster, more affordable and far less painful for Canadian companies."
       >
         <Link href="/contact" className="btn-primary">
           Work with us <ArrowRight className="h-4 w-4" />
@@ -64,10 +64,10 @@ export default function AboutPage() {
                 maintains. It should not be that way.
               </p>
               <p>
-                We built a platform that does the mechanical work — assessment,
-                documentation, audit tracking — and paired it with certified
-                consultants who make sure the system is right and stand with you through
-                the audit. Broad standard coverage, real industry depth, one team.
+                The compliance management software does the mechanical work: clause
+                tracking, controlled documents, audit records and corrective actions.
+                Certified consultants make sure the system is right and stand with you
+                through the audit. Broad standard coverage, real industry depth, one team.
               </p>
             </div>
           </Reveal>

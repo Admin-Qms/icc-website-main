@@ -8,9 +8,9 @@ import { ArrowRight } from "@/components/Icons";
 import { MODULES, CUSTOMIZATION, ROI_PLATFORM } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Platform Modules — Inspection, Inventory, Training, Production & More",
+  title: "Compliance Management Software Modules — Standards, Documents, Audits & More",
   description:
-    "Nine configurable QMS process modules built around how your business runs — inspection, inventory, training & competence, production, CAPA, supplier quality and more. Sized and priced for small and mid-size companies.",
+    "Eleven compliance management software modules: standards, documents, processes, audits, improvements, safety, training, assets, vendors and supplier quality.",
   alternates: { canonical: "/solutions" },
 };
 
@@ -18,10 +18,10 @@ export default function SolutionsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Platform modules"
-        title={<AnimatedTitle text="A QMS shaped around your operation" accent="your operation" />}
-        intro="The platform gives you everything a quality system needs — nine process modules, each configured to your workflow, not forced into a rigid template. Here is what we build around your business."
-        fx={<HeaderIconsFX icons={["inspection", "inventory", "training", "production", "capa", "document"]} />}
+        eyebrow="Software modules"
+        title={<AnimatedTitle text="Eleven modules, one compliance management system" accent="one compliance management system" />}
+        intro="These are the modules as they appear in the compliance management software: Standards, Documents, Processes, Audits, Improvements, Safety, Training, Supplier Quality, Assets, Vendors and the AI Assistant. A certified consultant configures each one to your workflow."
+        fx={<HeaderIconsFX icons={["assessment", "document", "audit", "capa", "training", "supplier"]} />}
       >
         <Link href="/contact" className="btn-primary">
           Scope your configuration <ArrowRight className="h-4 w-4" />
@@ -44,7 +44,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* ROI — platform, for small & mid-size businesses */}
+      {/* ROI — the software, for businesses without a large quality department */}
       <section className="bg-soft py-16 lg:py-20">
         <div className="container-page">
           <ROIPanel data={ROI_PLATFORM} showEstimatorLink />
@@ -56,7 +56,7 @@ export default function SolutionsPage() {
         <div className="container-page">
           <SectionHeading
             eyebrow="How configuration works"
-            title="From your process to a configured, certified system"
+            title="From your process to a configured, audit-ready system"
             align="center"
           />
           <div className="relative mt-14">
@@ -86,7 +86,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <CTASection title="Let's configure a QMS around your processes" />
+      <CTASection title="Configure a compliance management system around your processes" />
     </>
   );
 }

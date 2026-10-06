@@ -12,8 +12,8 @@ const SOLUTIONS_MENU = [
   {
     href: "/solutions",
     icon: "dashboard",
-    title: "Platform Modules",
-    desc: "Nine ready-made QMS modules, configured to your workflow",
+    title: "Software Modules",
+    desc: "Eleven modules, from Standards and Documents to Supplier Quality",
   },
   {
     href: "/custom-solutions",
@@ -24,8 +24,8 @@ const SOLUTIONS_MENU = [
   {
     href: "/platform",
     icon: "assessment",
-    title: "Platform Overview",
-    desc: "What's inside the platform and how it works",
+    title: "Compliance Management Software",
+    desc: "What the software does, and how AI is kept in check",
   },
 ];
 

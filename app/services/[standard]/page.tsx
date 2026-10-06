@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { PageHeader, CTASection } from "@/components/ui";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight, Check, Icon } from "@/components/Icons";
-import { STANDARDS, INDUSTRIES, PROCESS, SITE } from "@/lib/site";
+import { STANDARDS, INDUSTRIES, PROCESS, MODULES, SITE, type Module } from "@/lib/site";
 
 export function generateStaticParams() {
   return STANDARDS.map((s) => ({ standard: s.slug }));
@@ -19,7 +19,7 @@ export function generateMetadata({
   if (!s) return {};
   return {
     title: `${s.code} Certification Consulting in Canada — ${s.name}`,
-    description: `${s.code} (${s.name}) consulting for Canadian companies. ${s.summary}`,
+    description: `${s.code} (${s.name}) consulting for Canadian companies: gap analysis, system build and audit support, with software that tracks every clause.`,
     alternates: { canonical: `/services/${s.slug}` },
   };
 }
@@ -30,6 +30,9 @@ export default function StandardPage({ params }: { params: { standard: string } 
 
   const related = INDUSTRIES.filter((i) => i.standards.includes(s.code)).slice(0, 3);
   const others = STANDARDS.filter((x) => x.slug !== s.slug).slice(0, 3);
+  const modules = s.platformSupport.moduleSlugs
+    .map((slug) => MODULES.find((m) => m.slug === slug))
+    .filter((m): m is Module => Boolean(m));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -74,10 +77,10 @@ export default function StandardPage({ params }: { params: { standard: string } 
                 What a {s.code} engagement covers
               </h2>
               <p className="mt-4 text-slate-600">
-                Every {s.code} project runs on the same hybrid model: the platform
-                builds and tracks the system, and a certified lead consultant reviews
-                the work and stands with you through the certification audit. The core
-                elements below are tailored to how your operation actually runs.
+                Every {s.code} project runs on the same hybrid model: the compliance
+                management software holds and tracks the system, and a certified lead
+                consultant reviews the work and stands with you through the certification
+                audit. The core elements below are tailored to how your operation actually runs.
               </p>
             </Reveal>
 
@@ -92,6 +95,37 @@ export default function StandardPage({ params }: { params: { standard: string } 
                       <p className="font-heading text-sm font-semibold text-navy-900">{t}</p>
                     </div>
                   </div>
+                </StaggerItem>
+              ))}
+            </Stagger>
+
+            {/* software support */}
+            <Reveal className="mt-12">
+              <h2 className="font-heading text-2xl font-bold text-navy-900">
+                How the software supports {s.code}
+              </h2>
+              <p className="mt-4 text-slate-600">{s.platformSupport.summary}</p>
+              <p className="mt-3 text-sm text-slate-600">
+                {s.platformSupport.inCatalogue
+                  ? `Every ${s.code} clause sits in the Standards workspace with a status (Compliant, Partial, Review overdue or No evidence), coverage against a target, linked evidence, and a statement of applicability export.`
+                  : `Once imported, every ${s.code} clause sits in the Standards workspace with a status (Compliant, Partial, Review overdue or No evidence), coverage against a target, linked evidence, and a statement of applicability export.`}
+              </p>
+            </Reveal>
+            <Stagger className="mt-6 grid gap-4 sm:grid-cols-2">
+              {modules.map((m) => (
+                <StaggerItem key={m.slug}>
+                  <Link
+                    href={`/solutions/${m.slug}`}
+                    className="group flex h-full items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-teal-300 hover:shadow-md"
+                  >
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-teal-50 text-teal-700 ring-1 ring-teal-100">
+                      <Icon name={m.icon} className="h-5 w-5" />
+                    </span>
+                    <span>
+                      <span className="block font-heading text-sm font-semibold text-navy-900">{m.name}</span>
+                      <span className="block text-xs text-slate-500">{m.tagline}</span>
+                    </span>
+                  </Link>
                 </StaggerItem>
               ))}
             </Stagger>
@@ -143,6 +177,12 @@ export default function StandardPage({ params }: { params: { standard: string } 
                   <div className="flex justify-between gap-4">
                     <dt className="text-slate-600">Structure</dt>
                     <dd className="text-right font-semibold text-navy-900">{s.clauses}</dd>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <dt className="text-slate-600">In the software</dt>
+                    <dd className="text-right font-semibold text-navy-900">
+                      {s.platformSupport.inCatalogue ? "Catalogue standard" : "Custom standard"}
+                    </dd>
                   </div>
                   <div className="flex justify-between gap-4">
                     <dt className="text-slate-600">Typical path</dt>

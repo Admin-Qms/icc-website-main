@@ -8,7 +8,7 @@ import { PROCESS } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Our 6-Stage ISO Certification Process",
   description:
-    "A transparent, six-stage path from gap analysis to certification — typically 24 weeks. See exactly how the platform and consultants get Canadian companies audit-ready.",
+    "A transparent, six-stage path from gap analysis to certification, typically 24 weeks. See how the software and consultants get Canadian companies audit-ready.",
   alternates: { canonical: "/process" },
 };
 
@@ -57,7 +57,7 @@ export default function ProcessPage() {
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {[
                 "A single point of contact — your lead consultant",
-                "The platform tracking every action and owner",
+                "The software tracking every action and its owner",
                 "Lean documentation your team will actually use",
                 "No surprises before Stage 1 or Stage 2 audits",
                 "Training and competency records built in",

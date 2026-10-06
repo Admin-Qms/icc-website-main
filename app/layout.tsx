@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description:
-    "ISO certification consulting for Canadian companies, with a configurable management system platform customized to your processes and ready to onboard any standard, from ISO 9001 and IATF 16949 to customer-specific frameworks.",
+    "ISO certification consulting for Canadian companies, with compliance management software configured to your processes and mapped to any standard.",
   keywords: [
-    "customized QMS platform",
+    "compliance management software",
     "ISO management systems",
     "ISO certification consultant Canada",
-    "inspection software",
-    "training and competence QMS",
+    "document control software",
+    "compliance management system software",
     "any ISO standard onboarding",
     "IATF 16949",
     "ISO consulting Ontario",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: "ISO Certification Consulting for Canadian Companies — Any Standard, One System",
     description:
-      "Configurable QMS process modules — inspection, inventory, training, production — built around your business and mapped to any standard you certify against.",
+      "Certified consultants plus compliance management software: eleven modules configured around your business and mapped to any standard you certify against.",
   },
 };
 
@@ -56,17 +56,17 @@ const orgJsonLd = {
   email: SITE.email,
   telephone: SITE.phone,
   description:
-    "ISO certification consulting for Canadian companies — a configurable management system platform customized to your processes and ready to onboard any standard.",
+    "ISO certification consulting for Canadian companies, with compliance management software configured to your processes and ready to onboard any standard.",
   areaServed: [
     { "@type": "Country", name: "Canada" },
     { "@type": "Country", name: "United States" },
   ],
   knowsAbout: [
     "ISO management systems",
-    "Inspection and quality control",
-    "Inventory and traceability",
+    "Document control",
+    "Internal audits",
     "Training and competence",
-    "Production process control",
+    "Supplier quality (APQP, PPAP, SCAR)",
     "Corrective and preventive action (CAPA)",
     "Supplier quality management",
     "ISO 9001",

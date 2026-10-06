@@ -40,10 +40,10 @@ export function Hero() {
             </h1>
 
             <motion.p variants={item} className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
-              A quality management system built around your real processes — inspection,
-              inventory, training, production — backed by certified consultants who guide
-              you from first gap analysis to a passed certification audit. Any standard,
-              one team.
+              Certified consultants guide you from the first gap analysis to a passed
+              certification audit. Compliance management software holds the evidence as a
+              by-product of daily work, so nothing is assembled in a panic beforehand. Any
+              standard, one team.
             </motion.p>
 
             <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-4">
@@ -57,7 +57,7 @@ export function Hero() {
             </motion.div>
 
             <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
-              {["Serving Ontario & all of Canada", "10+ standards", "Consultant-led, every step"].map(
+              {["Serving Ontario & all of Canada", "10 standards in the catalogue, plus custom", "Consultant-led, every step"].map(
                 (f) => (
                   <span key={f} className="flex items-center gap-2 text-sm font-semibold text-slate-700">
                     <Check className="h-4 w-4 text-teal-600" />
@@ -186,7 +186,7 @@ function HeroBackground({ reduce }: { reduce: boolean }) {
 const HERO_IMAGES = [
   {
     src: "/images/hero/qms-fabrication-diverse.png",
-    alt: "North American fabrication team implementing a quality management system on a plant floor",
+    alt: "North American fabrication team implementing a compliance management system on a plant floor",
     label: "Fabrication",
     standard: "ISO 9001",
   },
@@ -222,13 +222,13 @@ const HERO_IMAGES = [
   },
   {
     src: "/images/hero/qms-warehouse-traceability.png",
-    alt: "Warehouse receiving team reviewing traceability records for QMS implementation",
-    label: "Traceability",
+    alt: "Warehouse receiving team reviewing records during a compliance management system rollout",
+    label: "Receiving",
     standard: "ISO 9001",
   },
   {
     src: "/images/hero/qms-training-huddle.png",
-    alt: "Plant floor team in a QMS implementation training huddle",
+    alt: "Plant floor team in a compliance management system training huddle",
     label: "Training",
     standard: "Implementation",
   },

@@ -10,7 +10,7 @@ import { ROI, ROI_PLATFORM, SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "ROI of ISO Certification — Estimate Your Return",
   description:
-    "What does ISO certification actually return? Use the interactive estimator to see what quality admin costs your business today, and where the payback comes from — platform and custom solutions, sized for small and mid-size companies.",
+    "Estimate what quality admin, failed audits and lost bids cost your business today, and see where the return from certification and the software comes from.",
   alternates: { canonical: "/roi" },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   "@type": "WebPage",
   name: "ROI of ISO Certification",
   description:
-    "Interactive ROI estimator and value breakdown for ISO certification, QMS platform modules and custom-built quality solutions.",
+    "Interactive ROI estimator and value breakdown for ISO certification, compliance management software modules and custom-built quality solutions.",
   provider: { "@type": "Organization", name: SITE.legalName },
 };
 
@@ -61,7 +61,7 @@ export default function ROIPage() {
           <SectionHeading
             eyebrow="Where the return comes from"
             title="Two ways in — the return shows up either way"
-            intro="Start with the platform modules, or start with a custom-built solution to a specific challenge. Both are sized for businesses without a big quality department."
+            intro="Start with the software modules, or start with a custom-built solution to a specific challenge. Both are sized for businesses without a big quality department."
           />
         </div>
       </section>

@@ -15,9 +15,9 @@ export function Footer() {
               <Logo variant="light" />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-slate-400">
-              ISO certification consulting for Canadian companies — certified consultants and a
-              management system platform that take you from gap analysis to a passed
-              certification audit, customized to your processes and ready for any standard.
+              ISO certification consulting for Canadian companies. Certified consultants and
+              compliance management software that take you from gap analysis to a passed
+              certification audit, configured to your processes and ready for any standard.
             </p>
             <a
               href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
@@ -34,13 +34,13 @@ export function Footer() {
             <BbbSeal className="mt-6" />
           </div>
 
-          <FooterCol title="Platform Modules">
+          <FooterCol title="Software modules">
             {MODULES.slice(0, 6).map((m) => (
               <FooterLink key={m.slug} href={`/solutions/${m.slug}`}>
                 {m.name}
               </FooterLink>
             ))}
-            <FooterLink href="/solutions">All platform modules →</FooterLink>
+            <FooterLink href="/solutions">All software modules →</FooterLink>
           </FooterCol>
 
           <FooterCol title="Standards">
