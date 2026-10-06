@@ -12,8 +12,10 @@ export const SITE = {
   email: "anthony.mannella@isocertificationconsultants.ca",
   phone: "+1 (000) 000-0000",
   region: "Ontario, Canada",
-  // Path under /public (e.g. "/images/logo.svg"). Empty renders the wordmark instead.
-  logo: "",
+  // Brand artwork under /public: the square "ICC" mark shown beside the name, and the
+  // full logo with the company name beneath it.
+  logoMark: "/images/logo-mark.png",
+  logo: "/images/logo.png",
   forms: {
     // Web3Forms access key; it is public by design and bound to the inbox it was generated for.
     web3formsKey: "",
