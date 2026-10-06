@@ -10,7 +10,7 @@ export const SITE = {
     "ISO certification consulting for Canadian companies — any standard, one configurable management system",
   // Shown on the contact page and in the footer; swap for a shared inbox when one exists.
   email: "anthony.mannella@isocertificationconsultants.ca",
-  phone: "+1 (000) 000-0000",
+  phone: "+1 (416) 622-0022",
   region: "Ontario, Canada",
   // Brand artwork under /public: the square "ICC" mark shown beside the name, and the
   // full logo with the company name beneath it.

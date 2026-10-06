@@ -54,6 +54,7 @@ const orgJsonLd = {
   legalName: SITE.legalName,
   url: SITE.url,
   email: SITE.email,
+  telephone: SITE.phone,
   description:
     "ISO certification consulting for Canadian companies — a configurable management system platform customized to your processes and ready to onboard any standard.",
   areaServed: [
