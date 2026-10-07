@@ -2,6 +2,7 @@
   "name": "iso-certification-consultant-site",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types scripts/dev-with-chat.mjs",
     "build": "next build",
