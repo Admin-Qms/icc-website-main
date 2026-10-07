@@ -10,7 +10,8 @@ Chat links are limited to the exact public routes in `lib/chatLinks.ts`, built f
 
 ## Configuration
 
-- Keep `"type": "module"` in the root `package.json`: the chat function compiles to ES-module JavaScript. Without this declaration, Vercel can load `api/chat.js` as CommonJS and fail at startup with `Cannot use import statement outside a module`. `npm run test:chat` includes a compiled-JavaScript syntax check that catches this mismatch.
+- Keep `"type": "module"` in the root `package.json`: the chat function compiles to ES-module JavaScript. Without this declaration, Vercel can load `api/chat.js` as CommonJS and fail at startup with `Cannot use import statement outside a module`.
+- Keep TypeScript at version 5.7 or newer and `rewriteRelativeImportExtensions` enabled in `tsconfig.json`. The function's `.ts` imports must become `.js` imports in the deployed output. `npm run test:chat` compiles the handler and its local dependencies, then loads and invokes that JavaScript to catch module-format and missing-import failures.
 - Set `GROQ_API_KEY` as a **server-side** environment variable in the Vercel project and in an ignored local `.env.local` for local function testing. Never use `NEXT_PUBLIC_` for this key or commit it.
 - The selected model is Groq's `openai/gpt-oss-120b` through `groq-sdk`. The context file is the sole curated public knowledge file. Update it when service or module claims change and review it against `lib/site.ts`.
 - The public contact email and phone come from `SITE` in `lib/site.ts`, not the form's Web3Forms receiving inbox.
