@@ -3,6 +3,7 @@ import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ChatWidget } from "@/components/ChatWidget";
 import { SITE } from "@/lib/site";
 import { serializeJsonLd } from "@/lib/blog";
 
@@ -91,6 +92,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   );

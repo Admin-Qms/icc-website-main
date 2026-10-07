@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types scripts/dev-with-chat.mjs",
     "build": "next build",
+    "test:chat": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types --test tests/chat-*.test.mjs",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",
     "gray-matter": "^4.0.3",
+    "groq-sdk": "^1.6.0",
     "next": "^14.2.35",
     "react": "18.3.1",
     "react-dom": "18.3.1",

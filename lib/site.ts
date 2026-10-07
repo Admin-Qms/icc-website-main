@@ -20,7 +20,7 @@ export const SITE = {
   logo: "/images/logo.png",
   forms: {
     // Web3Forms access key; it is public by design and bound to the inbox it was generated for.
-    web3formsKey: "",
+    web3formsKey: "5c6f6173-07d4-4af3-88f2-bdcf9a50a3bd",
   },
   bbb: {
     businessId: "1408097",

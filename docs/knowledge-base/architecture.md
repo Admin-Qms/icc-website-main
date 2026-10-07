@@ -4,7 +4,7 @@
 >
 > | Layer | Now |
 > |---|---|
-> | Site | Next.js 14 App Router, static export (`output: "export"`), Tailwind, framer-motion. Content in `lib/site.ts`. No API routes, no CMS, no chatbot, no shadcn/ui |
+> | Site | Next.js 14 App Router, static export (`output: "export"`), Tailwind, framer-motion. Content in `lib/site.ts`. A visitor chatbot widget uses a separate Vercel Function at `api/chat.ts` and `content/chatbot-context.md`; it is pending a Groq key and deployment validation. No CMS or shadcn/ui |
 > | Routes | `/`, `/about`, `/assessment`, `/contact`, `/custom-solutions`, `/industries[/x]`, `/platform`, `/process`, `/roi`, `/services[/x]`, `/solutions[/x]`, `/blog`, `/blog/[slug]` |
 > | Blog | `content/blog/<slug>.md` + `public/images/blog/<slug>/`; `lib/blog.ts` reads them at build time; `components/Markdown.tsx` renders the body; `components/PostCard.tsx` for cards |
 > | Pipeline | `team/pm.js blog publish` → `team/agents/content/contentManager.js`. See `team/README.md` |
