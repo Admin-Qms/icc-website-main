@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { CHAT_HISTORY_TTL_MS, lastFiveExchanges, modelMessagesFromHistory, readStoredChatHistory, serializeChatHistory } from "../lib/chatHistory.ts";
+import { normalizeChatMessages } from "../lib/chatRequest.ts";
 
 const pair = (number) => [
   { role: "user", content: `Question ${number}` },
@@ -42,4 +43,28 @@ test("gives the model five prior exchanges as untrusted user context plus the ne
   assert.deepEqual(messages.at(-1), { role: "user", content: "What about audits?" });
   assert.ok(messages.every((message) => message.content.length <= 1200));
   assert.ok(messages.reduce((total, message) => total + message.content.length, 0) <= 6000);
+});
+
+test("multiline history and a full-length follow-up stay within the API limits", () => {
+  const history = Array.from({ length: 5 }, () => [
+    { role: "user", content: "ISO 9001 checklist:\n" + "item x\n".repeat(43) + " Please review" },
+    { role: "assistant", content: "These ISO 9001 areas need attention:\n" + "- Audit planning and record control\n".repeat(14) },
+  ]).flat();
+  const question = "Our manufacturing audit context. " + "a".repeat(1167);
+  const messages = modelMessagesFromHistory(history, question);
+  assert.doesNotThrow(() => normalizeChatMessages(messages));
+  assert.equal(messages.at(-1).content, question);
+  assert.equal(messages.length, 6);
+});
+
+test("escaped characters and Unicode history produce requests the API can accept", () => {
+  for (const text of ['"'.repeat(1200), "\\\n\t\u0000".repeat(250), "质量".repeat(600), "😀".repeat(600)]) {
+    const history = Array.from({ length: 5 }, () => [
+      { role: "user", content: text }, { role: "assistant", content: text },
+    ]).flat();
+    const messages = modelMessagesFromHistory(history, "What about audits?".padEnd(1200, "?"));
+    assert.doesNotThrow(() => normalizeChatMessages(messages));
+    assert.ok(Buffer.byteLength(JSON.stringify({ messages })) <= 20000);
+    assert.equal(messages.length, 6);
+  }
 });
