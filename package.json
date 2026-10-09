@@ -7,6 +7,7 @@
     "dev": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types scripts/dev-with-chat.mjs",
     "build": "next build",
     "test:chat": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types --test tests/chat-*.test.mjs",
+    "test:contact": "node --experimental-strip-types --test tests/contact-api.test.mjs",
     "start": "next start",
     "lint": "next lint"
   },

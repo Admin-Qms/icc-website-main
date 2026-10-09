@@ -5,26 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check } from "./Icons";
 import { STANDARDS, SITE } from "@/lib/site";
 
-const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-
 type Status = "idle" | "submitting" | "done" | "error";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const configured = Boolean(SITE.forms.web3formsKey);
-
-  // The site is a static export with no server, so the form posts to Web3Forms, which
-  // relays it to the inbox the access key was generated for.
+  // The Vercel function keeps email credentials and the recipient on the server.
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (status === "submitting" || !configured) return;
+    if (status === "submitting") return;
     setStatus("submitting");
 
     const data = Object.fromEntries(new FormData(e.currentTarget).entries()) as Record<string, string>;
     const payload = {
-      access_key: SITE.forms.web3formsKey,
-      subject: `Website enquiry — ${data.standard || "standard not chosen"} — ${data.company}`,
-      from_name: `${SITE.name} website`,
       name: data.name,
       email: data.email,
       company: data.company,
@@ -34,10 +26,11 @@ export function ContactForm() {
     };
 
     try {
-      const res = await fetch(WEB3FORMS_ENDPOINT, {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
+        signal: AbortSignal.timeout(20_000),
       });
       const result = (await res.json()) as { success?: boolean };
       setStatus(res.ok && result.success ? "done" : "error");
@@ -81,17 +74,18 @@ export function ContactForm() {
             exit={{ opacity: 0 }}
             className="space-y-5"
           >
-            {/* honeypot: Web3Forms discards any submission where this is filled in */}
+            {/* Honeypot: the server discards submissions where this is filled in. */}
             <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
             <div className="grid gap-5 sm:grid-cols-2">
-              <Field label="Full name" name="name" required placeholder="Jordan Smith" />
-              <Field label="Work email" name="email" type="email" required placeholder="jordan@company.com" />
+              <Field label="Full name" name="name" maxLength={100} required placeholder="Jordan Smith" />
+              <Field label="Work email" name="email" type="email" maxLength={254} required placeholder="jordan@company.com" />
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
-              <Field label="Company" name="company" required placeholder="Acme Industries Ltd." />
+              <Field label="Company" name="company" maxLength={160} required placeholder="Acme Industries Ltd." />
               <div>
-                <Label>Standard of interest</Label>
+                <Label htmlFor="contact-standard">Standard of interest</Label>
                 <select
+                  id="contact-standard"
                   name="standard"
                   className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
                   defaultValue=""
@@ -109,9 +103,11 @@ export function ContactForm() {
               </div>
             </div>
             <div>
-              <Label>How can we help?</Label>
+              <Label htmlFor="contact-message">How can we help?</Label>
               <textarea
+                id="contact-message"
                 name="message"
+                maxLength={5000}
                 rows={4}
                 required
                 placeholder="Tell us about your operation and what you're certifying for…"
@@ -127,18 +123,9 @@ export function ContactForm() {
                 .
               </p>
             )}
-            {!configured && (
-              <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-                Online submissions are being set up. In the meantime, email{" "}
-                <a href={`mailto:${SITE.email}`} className="font-semibold underline">
-                  {SITE.email}
-                </a>{" "}
-                and we will get back to you within one business day.
-              </p>
-            )}
             <button
               type="submit"
-              disabled={status === "submitting" || !configured}
+              disabled={status === "submitting"}
               className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "submitting" ? "Sending…" : status === "error" ? "Try again" : "Send message"}
@@ -154,8 +141,8 @@ export function ContactForm() {
   );
 }
 
-function Label({ children }: { children: React.ReactNode }) {
-  return <label className="text-sm font-medium text-slate-700">{children}</label>;
+function Label({ children, htmlFor }: { children: React.ReactNode; htmlFor: string }) {
+  return <label htmlFor={htmlFor} className="text-sm font-medium text-slate-700">{children}</label>;
 }
 
 function Field({
@@ -164,17 +151,21 @@ function Field({
   type = "text",
   required,
   placeholder,
+  maxLength,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
   placeholder?: string;
+  maxLength: number;
 }) {
   return (
     <div>
-      <Label>{label}</Label>
+      <Label htmlFor={`contact-${name}`}>{label}</Label>
       <input
+        id={`contact-${name}`}
+        maxLength={maxLength}
         type={type}
         name={name}
         required={required}

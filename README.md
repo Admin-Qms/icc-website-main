@@ -43,6 +43,19 @@ npm run dev                        # http://localhost:3000/blog
 
 Next.js 14 (App Router) · React 18 · TypeScript · Tailwind CSS 3.
 
+## Contact form email
+
+The contact form posts to `/api/contact`, a Vercel function that sends enquiries
+through Resend to the public inbox in `SITE.email`. The visitor's email is the
+reply-to address. Set server-only `RESEND_API_KEY` and `CONTACT_FROM_EMAIL` in
+Vercel and redeploy after verifying the sending domain. See
+[Resend setup and DNS records](docs/resend-contact-setup.md).
+
+For local development, copy `.env.example` to `.env.local`, configure the values,
+and use `npm run dev`; the local server handles both contact and chat endpoints.
+Run `npm run test:contact` for the contact API checks. Serving `out/` alone, such
+as on the cPanel backup, does not provide these Vercel endpoints.
+
 ## Notes
 
 - The site was rebuilt from scratch; `team/` holds the agents from the previous

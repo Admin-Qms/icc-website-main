@@ -6,7 +6,7 @@ import { join, resolve } from "node:path";
 import test from "node:test";
 import ts from "typescript";
 
-test("compiled chat API loads its dependencies and handles requests", () => {
+test("compiled chat and contact APIs load their dependencies and handle requests", () => {
   const directory = mkdtempSync(join(tmpdir(), "icc-chat-module-"));
   try {
     const config = ts.readConfigFile("tsconfig.json", ts.sys.readFile);
@@ -45,8 +45,16 @@ test("compiled chat API loads its dependencies and handles requests", () => {
         }));
         assert.equal(post.status, 503);
         assert.match((await post.json()).error, /contact the team/i);
+        const { default: contact } = await import("./api/contact.js");
+        const contactResponse = await contact.fetch(new Request("https://isocertificationconsultants.ca/api/contact", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ name: "Test", email: "delivered@resend.dev", company: "Test", message: "Test enquiry" }),
+        }));
+        assert.equal(contactResponse.status, 503);
+        assert.match((await contactResponse.json()).error, /email the team/i);
       `,
-    ], { cwd: directory, encoding: "utf8", env: { ...process.env, NODE_OPTIONS: "", GROQ_API_KEY: "" } });
+    ], { cwd: directory, encoding: "utf8", env: { ...process.env, NODE_OPTIONS: "", GROQ_API_KEY: "", RESEND_API_KEY: "", CONTACT_FROM_EMAIL: "" } });
     assert.equal(result.status, 0, result.stderr || result.error?.message);
   } finally {
     rmSync(directory, { recursive: true, force: true });
