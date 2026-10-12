@@ -1,9 +1,9 @@
 # Resend contact form setup
 
-Updated on 13 October 2026. The code is on `codex/resend-contact-form`; it has not
-replaced the live Web3Forms form. DNS verification is complete. Deployment and a
-labelled test enquiry are approved; complete the Vercel environment settings
-before deploying the switch.
+Updated on 13 October 2026. The Resend contact form was prepared on
+`codex/resend-contact-form`. DNS verification and the Vercel production
+environment settings are complete. Deployment and a labelled test enquiry are
+approved; follow the release checks below.
 
 ## DNS records to add in WHC / cPanel
 
@@ -58,12 +58,11 @@ Vercel project: [your-qms / yourqms](https://vercel.com/your-qms/yourqms/setting
 Vercel, and the saved value was verified on 9 October 2026.
 
 The key named `ICC website contact form` was created on 13 October 2026 with
-**Sending access**, restricted to `isocertificationconsultants.ca`. Do not create
-a duplicate. Its token is staged in a local temporary file with owner-only
-permissions, outside the repository, pending authenticated Vercel access.
-`RESEND_API_KEY` has not yet been saved in Vercel. Save the token as a **Secret**
-for **Production**, then remove the temporary local copy. Do not write the token
-into this guide or Git.
+**Sending access**, restricted to `isocertificationconsultants.ca`, and saved as
+`RESEND_API_KEY`, a **Secret** for **Production** in Vercel. The production sender
+value above was verified again on 13 October 2026. Do not create a duplicate key
+or write the token into this guide or Git. The temporary local token copy was
+removed after the Vercel setting was confirmed.
 
 The recipient is fixed on the server as
 `anthony.mannella@isocertificationconsultants.ca`. Replies go to the visitor's
@@ -73,7 +72,7 @@ submitted email. There is no automatic acknowledgement email to visitors.
 
 Status on 13 October 2026: the branch includes the latest `origin/main` blog
 posts. All 8 contact tests and 35 chat/module tests pass; lint and the production
-build pass. Deployment and the live delivery test are waiting for Vercel access.
+build pass. Vercel CLI access and both production settings are confirmed.
 
 1. Verify the domain in Resend.
 2. Create the approved domain-restricted key and save `RESEND_API_KEY` in Vercel.
