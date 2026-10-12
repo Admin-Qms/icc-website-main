@@ -1,0 +1,17 @@
+export type GuideImage = { src: string; alt: string; width: number; height: number; source: string; sourceId: string; sha256: string; licenseUrl: string; credit?: string; creditUrl?: string };
+export type GuidePage = { slug: string; title: string; description: string; primaryKeyword: string; keywords: string[]; author: string; date: string; updated?: string; body: string; wordCount: number; readTime: number; imageBrief: string; image?: GuideImage; sourceIds: string[]; capabilityIds: string[] };
+export type SourceEvidence = { id: string; title: string; publisher: string; url: string; retrievedAt: string; supportedClaims: string[] };
+export type GuideManifest = { schemaVersion: 1; topicId: string; slug: string; title: string; description: string; primaryKeyword: string; keywords: string[]; audience: string; author: string; date: string; publishedAt?: string; updated?: string; introductionFile: string; chapters: {slug: string; file: string}[]; sources: SourceEvidence[]; capabilitySnapshotHash: string; researchSnapshotHash: string; productionSlotId?: string };
+export type GuideBundle = { manifest: GuideManifest; introduction: GuidePage; chapters: GuidePage[] };
+export type GateCheck = { id: string; pass: boolean; message: string; page?: string };
+export type GateReport = { pass: boolean; checks: GateCheck[]; failures: GateCheck[]; wordCount: number };
+export const POLICY: Readonly<{chapters: number; chapterMin: number; chapterMax: number; introductionMin: number; totalMin: number; totalMax: number}>;
+export function validSlug(value: unknown): boolean;
+export function normalizeDay(value: unknown): string | null;
+export function countGuideWords(markdown: string): number;
+export function parseGuidePage(raw: string): GuidePage;
+export function validateGuideStructure(bundle: GuideBundle, options?: {now?: Date; phase?: 'draft' | 'published'}): GateReport;
+export function guideRoutes(manifest: GuideManifest): string[];
+export function chapterNeighbors(manifest: GuideManifest, slug: string): {previous: string | null; next: string | null; contents: string};
+export function hashGuideInputs(bundle: GuideBundle): string;
+export function hashValue(value: unknown): string;
