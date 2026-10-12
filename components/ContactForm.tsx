@@ -19,6 +19,7 @@ export function ContactForm() {
     const payload = {
       name: data.name,
       email: data.email,
+      phone: data.phone,
       company: data.company,
       standard: data.standard,
       message: data.message,
@@ -82,25 +83,26 @@ export function ContactForm() {
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               <Field label="Company" name="company" maxLength={160} required placeholder="Acme Industries Ltd." />
-              <div>
-                <Label htmlFor="contact-standard">Standard of interest</Label>
-                <select
-                  id="contact-standard"
-                  name="standard"
-                  className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
-                  defaultValue=""
-                >
-                  <option value="" disabled>
-                    Select a standard
+              <Field label="Phone number (optional)" name="phone" type="tel" autoComplete="tel" maxLength={40} placeholder="+1 (416) 555-0123" />
+            </div>
+            <div>
+              <Label htmlFor="contact-standard">Standard of interest</Label>
+              <select
+                id="contact-standard"
+                name="standard"
+                className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select a standard
+                </option>
+                {STANDARDS.map((s) => (
+                  <option key={s.slug} value={s.code}>
+                    {s.code} — {s.name}
                   </option>
-                  {STANDARDS.map((s) => (
-                    <option key={s.slug} value={s.code}>
-                      {s.code} — {s.name}
-                    </option>
-                  ))}
-                  <option value="not-sure">Not sure yet</option>
-                </select>
-              </div>
+                ))}
+                <option value="not-sure">Not sure yet</option>
+              </select>
             </div>
             <div>
               <Label htmlFor="contact-message">How can we help?</Label>
@@ -152,6 +154,7 @@ function Field({
   required,
   placeholder,
   maxLength,
+  autoComplete,
 }: {
   label: string;
   name: string;
@@ -159,6 +162,7 @@ function Field({
   required?: boolean;
   placeholder?: string;
   maxLength: number;
+  autoComplete?: string;
 }) {
   return (
     <div>
@@ -167,6 +171,7 @@ function Field({
         id={`contact-${name}`}
         maxLength={maxLength}
         type={type}
+        autoComplete={autoComplete}
         name={name}
         required={required}
         placeholder={placeholder}

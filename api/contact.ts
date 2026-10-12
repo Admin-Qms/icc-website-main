@@ -65,17 +65,18 @@ export default {
     if (!request.headers.get("content-type")?.startsWith("application/json")) return json({ error: "Send JSON." }, 415);
     if (Number(request.headers.get("content-length")) > MAX_BODY_BYTES) return json({ error: "Enquiry is too long." }, 413);
 
-    let enquiry: { name: string; email: string; company: string; standard: string; message: string };
+    let enquiry: { name: string; email: string; phone: string; company: string; standard: string; message: string };
     try {
       const parsed = await readBody(request);
       if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error("Invalid body");
       const data = parsed as Record<string, unknown>;
       // A filled honeypot gets a harmless acknowledgement, without sending email.
       if (data.botcheck) return json({ success: true });
-      if (Object.keys(data).some((key) => !["name", "email", "company", "standard", "message", "botcheck"].includes(key))) throw new Error("Invalid fields");
+      if (Object.keys(data).some((key) => !["name", "email", "phone", "company", "standard", "message", "botcheck"].includes(key))) throw new Error("Invalid fields");
       enquiry = {
         name: field(data, "name", 100),
         email: field(data, "email", 254),
+        phone: field(data, "phone", 40, true),
         company: field(data, "company", 160),
         standard: field(data, "standard", 80, true),
         message: field(data, "message", 5000),
@@ -102,6 +103,7 @@ export default {
         `New enquiry from ${SITE.url}/contact/`,
         `Name: ${enquiry.name}`,
         `Email: ${enquiry.email}`,
+        `Phone: ${enquiry.phone || "Not provided"}`,
         `Company: ${enquiry.company}`,
         `Standard: ${standard}`,
         "",

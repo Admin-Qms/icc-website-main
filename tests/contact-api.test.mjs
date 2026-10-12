@@ -51,6 +51,32 @@ test("identical retries reuse idempotency keys, edited enquiries get a new key",
   assert.notEqual(keys[0], keys[2]);
 });
 
+test("phone is optional and a supplied callback number is included in the notification", async (t) => {
+  configured(t);
+  const messages = [];
+  t.mock.method(globalThis, "fetch", async (_url, options) => {
+    messages.push(JSON.parse(options.body));
+    return Response.json({ id: "test-email-id" });
+  });
+  for (const phone of [undefined, "", "+1 (416) 622-0022 ext. 123"]) {
+    assert.equal((await contact.fetch(request({ ...enquiry, phone }))).status, 200);
+  }
+  assert.match(messages[0].text, /Phone: Not provided/);
+  assert.match(messages[1].text, /Phone: Not provided/);
+  assert.ok(messages[2].text.includes("Phone: +1 (416) 622-0022 ext. 123"));
+  assert.equal(messages[2].reply_to, enquiry.email);
+  assert.deepEqual(messages[2].to, ["anthony.mannella@isocertificationconsultants.ca"]);
+});
+
+test("rejects invalid callback numbers before sending", async (t) => {
+  configured(t);
+  const send = t.mock.method(globalThis, "fetch", () => { throw new Error("Must not send"); });
+  for (const phone of [12345, "x".repeat(41), "123\r\nBcc: other@example.com"]) {
+    assert.equal((await contact.fetch(request({ ...enquiry, phone }))).status, 400);
+  }
+  assert.equal(send.mock.callCount(), 0);
+});
+
 test("rejects invalid fields, header injection and recipient overrides before calling Resend", async (t) => {
   configured(t);
   const send = t.mock.method(globalThis, "fetch", () => { throw new Error("Must not send"); });

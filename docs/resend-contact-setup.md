@@ -68,10 +68,14 @@ The recipient is fixed on the server as
 `anthony.mannella@isocertificationconsultants.ca`. Replies go to the visitor's
 submitted email. There is no automatic acknowledgement email to visitors.
 
+The form also accepts an optional phone number (up to 40 characters, including
+international formatting or an extension). Notifications include the supplied
+callback number, or `Not provided` when it is omitted.
+
 ## Final activation
 
 Status on 13 October 2026: the branch includes the latest `origin/main` blog
-posts. All 8 contact tests and 35 chat/module tests pass; lint and the production
+posts. All 10 contact tests and 35 chat/module tests pass; lint and the production
 build pass. Vercel CLI access and both production settings are confirmed.
 
 1. Verify the domain in Resend.
