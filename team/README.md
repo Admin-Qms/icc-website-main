@@ -91,4 +91,4 @@ Guides consist of `content/guides/<slug>/guide.json`, `introduction.md` and nine
 
 The static site exposes `/guides/`, `/guides/<slug>/` and `/guides/<slug>/<chapter>/`. Before the first accepted guide, the library has an honest empty state. After `npm run build`, run `node team/scripts/check-guide-links.js` and `node team/scripts/check-guide-metadata.js`.
 
-`scripts/scheduled-guide-run.sh` supports local generation for Monday/Thursday Toronto slots; it never commits or pushes. Scheduling, a persistent host and production release require separate Owner authorization. The pilot draft remains unpublished because its writer failed the length gate.
+`scripts/scheduled-guide-run.sh` supports local generation for Monday/Thursday Toronto slots; it never commits or pushes. Scheduling, a persistent host and production release require separate Owner authorization. The first document-control guide passed all publishing gates and is published locally as an introduction plus nine linked web chapters, with ten unique hero images.

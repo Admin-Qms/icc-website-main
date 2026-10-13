@@ -36,3 +36,28 @@ test('reviewing a manually saved page records its actual word budget before adva
   assert.equal((await service.reviewChapter(job.id, first)).pass, true);
   assert.equal(store.loadJob(job.id).pages[first].wordCount, 2150);
 });
+test('a real copy edit saves a draft with absent optional metadata', async t => {
+  const { service, job, store, writePage } = setupReview(t, {
+    editModel: async (_system, message) => message.split('ARTICLE BODY:\n').at(-1).replace('checks the input', 'checks each input')
+  });
+  const first = job.manifest.chapters[0].slug;
+  const filename = writePage(first);
+  assert.equal((await service.reviewChapter(job.id, first)).pass, true);
+  const page = require('../../lib/guide-contract').parseGuidePage(fs.readFileSync(filename, 'utf8'));
+  assert.ok(page.body.includes('checks each input'));
+  assert.equal(page.updated, undefined);
+  assert.equal(store.loadJob(job.id).pages[first].wordCount, page.wordCount);
+});
+test('a targeted revision saves a draft with absent optional metadata', async t => {
+  const { service, job, store, writePage } = setupReview(t, {
+    revisionModel: async (_system, message) => {
+      const { sections } = JSON.parse(message);
+      return { patches: [{ heading: sections[0].heading, body: sections[0].body.trim() + '\n\nVerify evidence before release.' }] };
+    }
+  });
+  const first = job.manifest.chapters[0].slug;
+  const filename = writePage(first);
+  assert.equal((await service.reviseGuidePage(job.id, first)).pass, true);
+  assert.ok(fs.readFileSync(filename, 'utf8').includes('Verify evidence before release.'));
+  assert.ok(store.loadJob(job.id).pages[first].wordCount > 2000);
+});

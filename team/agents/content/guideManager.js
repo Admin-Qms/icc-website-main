@@ -145,7 +145,8 @@ function createGuideManager({ store = defaultStore, model, reviewer, editModel, 
       if (words < budget.min || words > budget.max) continue;
       store.atomic(path.join(job.directory, 'attempts', `${slug}-before-revision-${Date.now()}.md`), fs.readFileSync(filename, 'utf8'));
       const { body: oldBody, wordCount, readTime, ...metadata } = page;
-      store.atomic(filename, matter.stringify(body, metadata)); store.checkpointPage(id, slug);
+      const cleanMetadata = Object.fromEntries(Object.entries(metadata).filter(([, value]) => value !== undefined));
+      store.atomic(filename, matter.stringify(body, cleanMetadata)); store.checkpointPage(id, slug);
       const report = await reviewChapter(id, slug); if (report.pass) return report;
     }
     return { pass: false, reason: 'Targeted revisions exhausted after two corrections; drafts preserved' };
