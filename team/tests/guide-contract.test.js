@@ -2,7 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const { structuralBundle } = require('./helpers/guideFixture');
 let contract;
-try { contract = require('../../lib/guide-contract'); } catch (e) { if (e.code !== 'MODULE_NOT_FOUND') throw e; }
+try { contract = require('../../lib/guide-contract.cjs'); } catch (e) { if (e.code !== 'MODULE_NOT_FOUND') throw e; }
 
 test('a complete nine-chapter guide has an inclusive 19500-word budget', () => {
   assert.ok(contract, 'The shared guide contract must exist');

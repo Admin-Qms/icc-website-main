@@ -1,8 +1,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
-const { validSlug, parseGuidePage, hashValue, hashGuideInputs } = require('../../../lib/guide-contract');
-const { readInside, readGuideFiles, listGuideFiles } = require('../../../lib/guide-files');
+const { validSlug, parseGuidePage, hashValue, hashGuideInputs } = require('../../../lib/guide-contract.cjs');
+const { readInside, readGuideFiles, listGuideFiles } = require('../../../lib/guide-files.cjs');
 const config = require('./guideConfig');
 
 function createGuideStore(paths = config) {

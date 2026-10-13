@@ -1,5 +1,5 @@
 const fs = require('node:fs'); const path = require('node:path'); const os = require('node:os'); const matter = require('gray-matter');
-const { countGuideWords } = require('../../../lib/guide-contract');
+const { countGuideWords } = require('../../../lib/guide-contract.cjs');
 const URL = 'https://www.iso.org/files/live/sites/isoorg/files/archive/pdf/en/documented_information.pdf';
 function pageBody(plan, words = 2000, seed = 'fixture') {
   let body = plan.subsections.map((s, i) => `## ${typeof s === 'string' ? s : s.title}\n\nThe workflow owner checks the input, records the decision and verifies its evidence. [Historical ISO context](${URL}) supports the stated documentation context.\n\n${Array.from({length: 70}, (_, n) => `${seed}${i}word${n}`).join(' ')}`).join('\n\n');

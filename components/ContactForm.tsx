@@ -5,29 +5,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check } from "./Icons";
 import { STANDARDS, SITE } from "@/lib/site";
 
-const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-
 type Status = "idle" | "submitting" | "done" | "error";
 
 export function ContactForm({ compact = false, title }: { compact?: boolean; title?: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const id = useId();
-  const configured = Boolean(SITE.forms.web3formsKey);
-
-  // The site is a static export with no server, so the form posts to Web3Forms, which
-  // relays it to the inbox the access key was generated for.
+  // The Vercel function keeps email credentials and the recipient on the server.
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (status === "submitting" || !configured) return;
+    if (status === "submitting") return;
     setStatus("submitting");
 
     const data = Object.fromEntries(new FormData(e.currentTarget).entries()) as Record<string, string>;
     const payload = {
-      access_key: SITE.forms.web3formsKey,
-      subject: `Website enquiry — ${data.standard || "standard not chosen"} — ${data.company}`,
-      from_name: `${SITE.name} website`,
       name: data.name,
       email: data.email,
+      phone: data.phone,
       company: data.company,
       standard: data.standard,
       message: data.message,
@@ -35,10 +28,11 @@ export function ContactForm({ compact = false, title }: { compact?: boolean; tit
     };
 
     try {
-      const res = await fetch(WEB3FORMS_ENDPOINT, {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
+        signal: AbortSignal.timeout(20_000),
       });
       const result = (await res.json()) as { success?: boolean };
       setStatus(res.ok && result.success ? "done" : "error");
@@ -87,39 +81,41 @@ export function ContactForm({ compact = false, title }: { compact?: boolean; tit
             exit={{ opacity: 0 }}
             className={compact ? "space-y-4" : "space-y-5"}
           >
-            {/* honeypot: Web3Forms discards any submission where this is filled in */}
+            {/* Honeypot: the server discards submissions where this is filled in. */}
             <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Full name" name="name" required placeholder="Jordan Smith" />
-              <Field label="Work email" name="email" type="email" required placeholder="jordan@company.com" />
+              <Field label="Full name" name="name" maxLength={100} required placeholder="Jordan Smith" />
+              <Field label="Work email" name="email" type="email" maxLength={254} required placeholder="jordan@company.com" />
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Company" name="company" required placeholder="Acme Industries Ltd." />
-              <div>
-                <Label htmlFor={`${id}-standard`}>Standard of interest</Label>
-                <select
-                  id={`${id}-standard`}
-                  name="standard"
-                  className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
-                  defaultValue=""
-                >
-                  <option value="" disabled>
-                    Select a standard
+              <Field label="Company" name="company" maxLength={160} required placeholder="Acme Industries Ltd." />
+              <Field label="Phone number (optional)" name="phone" type="tel" autoComplete="tel" maxLength={40} placeholder="+1 (416) 555-0123" />
+            </div>
+            <div>
+              <Label htmlFor={`${id}-standard`}>Standard of interest</Label>
+              <select
+                id={`${id}-standard`}
+                name="standard"
+                className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select a standard
+                </option>
+                {STANDARDS.map((s) => (
+                  <option key={s.slug} value={s.code}>
+                    {s.code} — {s.name}
                   </option>
-                  {STANDARDS.map((s) => (
-                    <option key={s.slug} value={s.code}>
-                      {s.code} — {s.name}
-                    </option>
-                  ))}
-                  <option value="not-sure">Not sure yet</option>
-                </select>
-              </div>
+                ))}
+                <option value="not-sure">Not sure yet</option>
+              </select>
             </div>
             <div>
               <Label htmlFor={`${id}-message`}>How can we help?</Label>
               <textarea
                 id={`${id}-message`}
                 name="message"
+                maxLength={5000}
                 rows={compact ? 3 : 4}
                 required
                 placeholder="Tell us about your operation and what you're certifying for…"
@@ -135,18 +131,9 @@ export function ContactForm({ compact = false, title }: { compact?: boolean; tit
                 .
               </p>
             )}
-            {!configured && (
-              <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-                Online submissions are being set up. In the meantime, email{" "}
-                <a href={`mailto:${SITE.email}`} className="font-semibold underline">
-                  {SITE.email}
-                </a>{" "}
-                and we will get back to you within one business day.
-              </p>
-            )}
             <button
               type="submit"
-              disabled={status === "submitting" || !configured}
+              disabled={status === "submitting"}
               className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "submitting" ? "Sending…" : status === "error" ? "Try again" : "Send message"}
@@ -172,12 +159,16 @@ function Field({
   type = "text",
   required,
   placeholder,
+  maxLength,
+  autoComplete,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
   placeholder?: string;
+  maxLength: number;
+  autoComplete?: string;
 }) {
   const id = useId();
   return (
@@ -185,7 +176,9 @@ function Field({
       <Label htmlFor={id}>{label}</Label>
       <input
         id={id}
+        maxLength={maxLength}
         type={type}
+        autoComplete={autoComplete}
         name={name}
         required={required}
         placeholder={placeholder}

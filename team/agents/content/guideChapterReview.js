@@ -1,6 +1,6 @@
 const fs = require('node:fs'); const path = require('node:path'); const matter = require('gray-matter');
-const { readInside } = require('../../../lib/guide-files');
-const { hashValue, countGuideWords, parseGuidePage } = require('../../../lib/guide-contract');
+const { readInside } = require('../../../lib/guide-files.cjs');
+const { hashValue, countGuideWords, parseGuidePage } = require('../../../lib/guide-contract.cjs');
 const { prepareResearchSnapshot, allowedSourceUrls } = require('./guideResearch');
 const editorial = require('./guideEditorial');
 function createChapterReview({ store, readCapabilities, reviewer, editModel }) {

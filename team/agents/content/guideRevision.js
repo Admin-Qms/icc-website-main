@@ -1,4 +1,4 @@
-const { countGuideWords } = require('../../../lib/guide-contract');
+const { countGuideWords } = require('../../../lib/guide-contract.cjs');
 const { preserveCopyEdit, normalize } = require('./guideEditorial');
 function sectionRanges(body) { const headings = [...body.matchAll(/^##\s+(.+)\r?\n/gm)]; return headings.map((match, i) => ({ title: match[1], start: match.index + match[0].length, end: headings[i + 1]?.index ?? body.length })); }
 function applySectionPatches(body, patches) {

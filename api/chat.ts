@@ -5,6 +5,7 @@ import { normalizeChatMessages } from "../lib/chatRequest.ts";
 import { CHAT_LINKABLE_PATHS } from "../lib/chatLinks.ts";
 import { acceptScopedAnswer } from "../lib/chatScope.ts";
 import { SITE } from "../lib/site.ts";
+import { retryAfterSeconds } from "../lib/chatRetry.ts";
 
 const MODEL = "openai/gpt-oss-120b";
 const CONTEXT = readFileSync(
@@ -23,8 +24,9 @@ const WINDOW_MS = 60_000;
 const REQUESTS_PER_WINDOW = 8;
 const clientWindows = new Map<string, { count: number; resetAt: number }>();
 let activeModelCalls = 0;
+let providerRetryAt = 0;
 
-function limited(ip: string): boolean {
+function limited(ip: string): number {
   const now = Date.now();
   if (clientWindows.size > 10000) {
     for (const [key, value] of clientWindows) {
@@ -35,10 +37,10 @@ function limited(ip: string): boolean {
   const current = clientWindows.get(ip);
   if (!current || current.resetAt <= now) {
     clientWindows.set(ip, { count: 1, resetAt: now + WINDOW_MS });
-    return false;
+    return 0;
   }
   current.count += 1;
-  return current.count > REQUESTS_PER_WINDOW;
+  return current.count > REQUESTS_PER_WINDOW ? Math.max(1, Math.ceil((current.resetAt - now) / 1000)) : 0;
 }
 
 async function readLimitedBody(request: Request): Promise<string> {
@@ -60,10 +62,10 @@ async function readLimitedBody(request: Request): Promise<string> {
   return body + decoder.decode();
 }
 
-function json(body: Record<string, string>, status: number) {
+function json(body: Record<string, string>, status: number, retryAfter?: number) {
   return Response.json(body, {
     status,
-    headers: { "Cache-Control": "no-store" },
+    headers: { "Cache-Control": "no-store", ...(retryAfter ? { "Retry-After": String(retryAfter) } : {}) },
   });
 }
 
@@ -86,10 +88,12 @@ export default {
       request.headers.get("x-vercel-forwarded-for") ||
       request.headers.get("x-forwarded-for") ||
       "unknown";
-    if (limited(ip))
+    const clientRetryAfter = limited(ip);
+    if (clientRetryAfter)
       return json(
         { error: "Too many messages. Please try again in a minute." },
-        429
+        429,
+        clientRetryAfter
       );
     if (!request.headers.get("content-type")?.startsWith("application/json")) {
       return json({ error: "Send JSON." }, 415);
@@ -125,8 +129,13 @@ export default {
         { error: "Chat is being set up. Please contact the team directly." },
         503
       );
-    if (activeModelCalls >= 12)
-      return json({ error: "Chat is busy. Please try again shortly." }, 429);
+    if (providerRetryAt > Date.now()) {
+      return json({ error: "Chat is busy. Please try again shortly." }, 429, Math.ceil((providerRetryAt - Date.now()) / 1000));
+    }
+    if (activeModelCalls >= 12) {
+      console.warn(JSON.stringify({ event: "chat_capacity_limit", model: MODEL }));
+      return json({ error: "Chat is busy. Please try again shortly." }, 429, 5);
+    }
 
     activeModelCalls += 1;
     try {
@@ -135,7 +144,7 @@ export default {
         model: MODEL,
         messages: [{ role: "system", content: SYSTEM_PROMPT }, ...messages],
         reasoning_effort: "low",
-        reasoning_format: "hidden",
+        include_reasoning: false,
         temperature: 0.2,
         max_completion_tokens: 650,
         response_format: {
@@ -156,17 +165,25 @@ export default {
         },
       });
       const content = completion.choices[0]?.message?.content;
-      if (!content)
+      if (!content) {
+        console.warn(JSON.stringify({ event: "chat_empty_reply", model: MODEL }));
         return json(
           { error: "No answer was available. Please try again." },
           502
         );
+      }
       const reply = acceptScopedAnswer(content);
       return json({ reply }, 200);
     } catch (error) {
       if (error instanceof Groq.RateLimitError) {
-        return json({ error: "Chat is busy. Please try again shortly." }, 429);
+        const retryAfter = retryAfterSeconds(error.headers.get("retry-after"));
+        providerRetryAt = Date.now() + retryAfter * 1000;
+        // Only operational metadata: never log prompts, replies, keys or raw errors.
+        const tokens = error.headers.get("x-ratelimit-remaining-tokens");
+        console.warn(JSON.stringify({ event: "chat_provider_rate_limit", model: MODEL, status: 429, retryAfter, remainingTokens: tokens && /^\d+$/.test(tokens) ? Number(tokens) : null }));
+        return json({ error: "Chat is busy. Please try again shortly." }, 429, retryAfter);
       }
+      console.warn(JSON.stringify({ event: error instanceof Groq.APIConnectionTimeoutError ? "chat_provider_timeout" : "chat_provider_failure", model: MODEL, status: error instanceof Groq.APIError ? error.status : null }));
       return json(
         {
           error:

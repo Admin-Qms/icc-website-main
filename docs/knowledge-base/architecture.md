@@ -1,6 +1,6 @@
 # Architecture
 
-> **Guides implementation (2026-10-13, local branch).** `app/guides/[[...path]]/page.tsx` statically exports the library, introduction and nine chapter routes. `lib/guide-contract.js` and `lib/guide-files.js` share the Markdown contract between the website and `team/pm.js guide`. Guides use their own topic queue and resumable jobs, with the existing `keywordResearcher`, model provider and image registry. `team/GUIDE-ROUTINE.md` records the inactive two-per-week schedule and local release boundary. Development uses `.next-dev` and omits export-only enforcement; production remains `output: "export"`.
+> **Guides implementation (2026-10-13, local branch).** `app/guides/[[...path]]/page.tsx` statically exports the library, introduction and nine chapter routes. `lib/guide-contract.cjs` and `lib/guide-files.cjs` share the Markdown contract between the website and `team/pm.js guide`. Guides use their own topic queue and resumable jobs, with the existing `keywordResearcher`, model provider and image registry. `team/GUIDE-ROUTINE.md` records the inactive two-per-week schedule and local release boundary. Development uses `.next-dev` and omits export-only enforcement; production remains `output: "export"`.
 
 > **Current state (2026-10-03).** The site was rebuilt. What exists now:
 >

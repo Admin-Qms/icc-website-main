@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { chapterNeighbors, type GuideManifest } from '@/lib/guide-contract';
+import { chapterNeighbors, type GuideManifest } from '@/lib/guide-contract.cjs';
 
 export function GuideChapterNavigation({ manifest, current }: { manifest: GuideManifest; current: string }) {
   const navigation = chapterNeighbors(manifest, current);

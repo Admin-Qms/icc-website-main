@@ -51,7 +51,7 @@ Files: editorial utility, `guideQA.js`, writing skill/rules; tests `guide-editor
 
 ## Task 4 — Actual-renderer preview
 
-Files: `lib/guide-preview.js` + declarations, `lib/guides.ts`, metadata/views, new `scripts/preview-guide.mjs`, CLI; tests `guide-preview.test.js` and browser QA.
+Files: `lib/guide-preview.cjs` + declarations, `lib/guides.ts`, metadata/views, new `scripts/preview-guide.mjs`, CLI; tests `guide-preview.test.js` and browser QA.
 
 - [x] RED: production preview is rejected; unsafe job/assets fail; development loads unpublished drafts without publishing them.
 - [x] GREEN: the preview serves actual guide views, Markdown tables/callouts/images/TOC/navigation and a draft banner. Copy no draft into content/public; stream only allowlisted job images. Header and metadata are noindex.

@@ -156,7 +156,7 @@ function usedBlogImages() {
       if (img.sha256) hashes.add(img.sha256);
     }
   }
-  const { listGuideFiles } = require('../../../lib/guide-files');
+  const { listGuideFiles } = require('../../../lib/guide-files.cjs');
   const guideConfig = require('./guideConfig');
   for (const guide of listGuideFiles(guideConfig.CONTENT_DIR)) {
     for (const page of [guide.introduction, ...guide.chapters]) {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import type { GuideManifest, GuidePage } from './guide-contract';
+import type { GuideManifest, GuidePage } from './guide-contract.cjs';
 import { SITE } from './site';
 
 export function guidePageMetadata(manifest: GuideManifest, page: GuidePage, route: string): Metadata {

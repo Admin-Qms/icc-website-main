@@ -1,4 +1,4 @@
-const { countGuideWords, hashValue, POLICY } = require('../../../lib/guide-contract');
+const { countGuideWords, hashValue, POLICY } = require('../../../lib/guide-contract.cjs');
 const { checkVoice, checkFabricatedQuotes, toBlocks, findBritishSpellings, countBannedPhrases } = require('./contentQA');
 const normalize = text => String(text).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 function pageWordBudget(job, slug) {

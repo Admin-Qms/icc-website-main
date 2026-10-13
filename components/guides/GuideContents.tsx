@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { GuideManifest } from '@/lib/guide-contract';
+import type { GuideManifest } from '@/lib/guide-contract.cjs';
 
 export function GuideContents({ manifest, current, titles = {} }: { manifest: GuideManifest; current?: string; titles?: Record<string, string> }) {
   const chapterLabel = (title: string) => {

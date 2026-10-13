@@ -56,7 +56,7 @@ The Owner-approved guide structure is the implementation contract. Use a researc
 
 | File or directory | Responsibility |
 |---|---|
-| `lib/guide-contract.js` and `lib/guide-contract.d.ts` | Pure shared parsing, structural validation, word counting, ordering and route helpers; usable by Node and Next.js |
+| `lib/guide-contract.cjs` and `lib/guide-contract.d.cts` | Pure shared parsing, structural validation, word counting, ordering and route helpers; usable by Node and Next.js |
 | `lib/guides.ts` | Typed build-time reader for complete published bundles |
 | `team/agents/shared/guideConfig.js` | Guide paths, timezone and immutable production policy; isolated test paths |
 | `team/agents/shared/guideStore.js` | Draft checkpoints, reservations, published bundles and local filesystem writes |
@@ -88,7 +88,7 @@ Modify `team/pm.js` only to register the new guide CLI; `app/sitemap.ts` and `co
 
 ## Shared contracts
 
-The names below are fixed interfaces for the implementation tasks. Type declarations belong in `lib/guide-contract.d.ts`; Node exports belong in `lib/guide-contract.js`.
+The names below are fixed interfaces for the implementation tasks. Type declarations belong in `lib/guide-contract.d.cts`; Node exports belong in `lib/guide-contract.cjs`.
 
 ```ts
 export type GuideImage = {
@@ -188,7 +188,7 @@ After topic reservation, primary sources are freshly retrieved from already appr
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const { structuralBundle } = require('./helpers/guideFixture');
-const { validateGuideStructure, chapterNeighbors } = require('../../lib/guide-contract');
+const { validateGuideStructure, chapterNeighbors } = require('../../lib/guide-contract.cjs');
 
 test('nine chapters plus introduction fit the inclusive word budget', () => {
   const report = validateGuideStructure(structuralBundle());

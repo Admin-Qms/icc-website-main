@@ -62,8 +62,8 @@ function getRoutes({ refresh = false } = {}) {
     for (const entry of readSiteArray(arrayName)) routes.add(`${base}/${entry.slug}`);
   }
   for (const post of listPosts()) routes.add(`/blog/${post.slug}`);
-  const { listGuideFiles } = require('../../../lib/guide-files');
-  const { guideRoutes } = require('../../../lib/guide-contract');
+  const { listGuideFiles } = require('../../../lib/guide-files.cjs');
+  const { guideRoutes } = require('../../../lib/guide-contract.cjs');
   const guideConfig = require('./guideConfig');
   for (const guide of listGuideFiles(guideConfig.CONTENT_DIR)) {
     for (const route of guideRoutes(guide.manifest)) routes.add(toRoute(route));
@@ -111,7 +111,7 @@ function getLinkTargets() {
     { title: "Book a consultation", url: "/contact" },
   ].map((t) => ({ ...t, kind: "general" }));
 
-  const { listGuideFiles } = require('../../../lib/guide-files');
+  const { listGuideFiles } = require('../../../lib/guide-files.cjs');
   const guideConfig = require('./guideConfig');
   const guideTargets = listGuideFiles(guideConfig.CONTENT_DIR).flatMap(g => [
     { title: g.manifest.title, url: `/guides/${g.manifest.slug}`, kind: 'guide' },

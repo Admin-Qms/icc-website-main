@@ -1,4 +1,4 @@
-const { validateGuideStructure, hashGuideInputs, countGuideWords, guideRoutes } = require('../../../lib/guide-contract');
+const { validateGuideStructure, hashGuideInputs, countGuideWords, guideRoutes } = require('../../../lib/guide-contract.cjs');
 const { checkVoice, checkFabricatedQuotes, toBlocks, findBritishSpellings, countBannedPhrases } = require('./contentQA');
 const { getRoutes, toRoute } = require('../shared/siteRoutes');
 const { keywordCovered } = require('../shared/contentStore');

@@ -4,6 +4,7 @@ import next from "next";
 import chat from "../api/chat.ts";
 import productionConfig from "../next.config.mjs";
 import { developmentConfig } from "./development-config.mjs";
+import contact from "../api/contact.ts";
 
 function requestedPort() {
   const args = process.argv.slice(2);
@@ -48,7 +49,9 @@ try {
 
   server.on("request", async (req, res) => {
     const url = new URL(req.url || "/", `http://${req.headers.host || `${host}:${port}`}`);
-    if (url.pathname === "/api/chat" || url.pathname === "/api/chat/") {
+    const endpoint = url.pathname.replace(/\/$/, "");
+    const api = endpoint === "/api/chat" ? chat : endpoint === "/api/contact" ? contact : null;
+    if (api) {
       try {
         const headers = new Headers();
         for (const [name, value] of Object.entries(req.headers)) {
@@ -62,19 +65,19 @@ try {
           headers,
           ...(hasBody ? { body: Readable.toWeb(req), duplex: "half" } : {}),
         });
-        const response = await chat.fetch(request);
+        const response = await api.fetch(request);
         res.writeHead(response.status, Object.fromEntries(response.headers));
         res.end(await response.text());
       } catch {
         res.writeHead(500, { "Content-Type": "application/json", "Cache-Control": "no-store" });
-        res.end(JSON.stringify({ error: "Chat is temporarily unavailable." }));
+        res.end(JSON.stringify({ error: "The service is temporarily unavailable." }));
       }
       return;
     }
     await handle(req, res);
   });
 
-  console.log(`Local site and chat ready at http://localhost:${port}`);
+  console.log(`Local site, chat and contact form ready at http://localhost:${port}`);
 } catch (error) {
   server.close();
   throw error;

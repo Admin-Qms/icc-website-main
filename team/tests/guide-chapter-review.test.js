@@ -43,7 +43,7 @@ test('a real copy edit saves a draft with absent optional metadata', async t => 
   const first = job.manifest.chapters[0].slug;
   const filename = writePage(first);
   assert.equal((await service.reviewChapter(job.id, first)).pass, true);
-  const page = require('../../lib/guide-contract').parseGuidePage(fs.readFileSync(filename, 'utf8'));
+  const page = require('../../lib/guide-contract.cjs').parseGuidePage(fs.readFileSync(filename, 'utf8'));
   assert.ok(page.body.includes('checks each input'));
   assert.equal(page.updated, undefined);
   assert.equal(store.loadJob(job.id).pages[first].wordCount, page.wordCount);

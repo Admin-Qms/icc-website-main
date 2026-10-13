@@ -1,4 +1,4 @@
-const { validSlug } = require('../../../lib/guide-contract');
+const { validSlug } = require('../../../lib/guide-contract.cjs');
 const SECTIONS = [
   ['mapping-workflows', 'Mapping the current workflow', ['Define the operational problem', 'Identify records and handoffs', 'Assign owners and decisions', 'Set acceptance criteria']],
   ['evaluating-software', 'Evaluating software capabilities', ['Build a workflow-based shortlist', 'Test the decision points', 'Examine evidence and permissions', 'Compare cost and support']],

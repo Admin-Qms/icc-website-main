@@ -1,5 +1,5 @@
 const fs = require('node:fs');
-const { hashValue } = require('../../../lib/guide-contract');
+const { hashValue } = require('../../../lib/guide-contract.cjs');
 const config = require('../shared/guideConfig');
 
 function allowedSourceUrls(bank = JSON.parse(fs.readFileSync(config.LINK_BANK_PATH, 'utf8'))) {

@@ -1,6 +1,6 @@
 const { test } = require('node:test'); const assert = require('node:assert/strict');
 const fs = require('node:fs'); const os = require('node:os'); const path = require('node:path');
-let preview; try { preview = require('../../lib/guide-preview'); } catch(e) { if (e.code !== 'MODULE_NOT_FOUND') throw e; }
+let preview; try { preview = require('../../lib/guide-preview.cjs'); } catch(e) { if (e.code !== 'MODULE_NOT_FOUND') throw e; }
 test('draft preview refuses production and unsafe job identifiers', () => {
   assert.ok(preview);
   assert.throws(() => preview.readGuidePreview({ jobId: 'valid-job', draftRoot: '/tmp', mode: 'production' }), /development|production/i);

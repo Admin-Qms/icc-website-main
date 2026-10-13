@@ -1,7 +1,7 @@
 import path from 'node:path';
-import { listGuideFiles } from './guide-files';
-import type { GuideBundle } from './guide-contract';
-import { readGuidePreview } from './guide-preview';
+import { listGuideFiles } from './guide-files.cjs';
+import type { GuideBundle } from './guide-contract.cjs';
+import { readGuidePreview } from './guide-preview.cjs';
 
 const directory = process.env.GUIDE_CONTENT_DIR || path.join(process.cwd(), 'content', 'guides');
 export function getAllGuides(): GuideBundle[] {

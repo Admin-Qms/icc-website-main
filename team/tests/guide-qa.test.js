@@ -1,5 +1,5 @@
 const { test } = require('node:test'); const assert = require('node:assert/strict');
-const { structuralBundle } = require('./helpers/guideFixture'); const { hashGuideInputs } = require('../../lib/guide-contract');
+const { structuralBundle } = require('./helpers/guideFixture'); const { hashGuideInputs } = require('../../lib/guide-contract.cjs');
 let qa; try { qa = require('../agents/content/guideQA'); } catch(e) { if(e.code !== 'MODULE_NOT_FOUND') throw e; }
 function context(bundle, changes = {}) { return { audit: { inputHash: hashGuideInputs(bundle), reviewer: 'External test boundary', reviewedAt: new Date().toISOString(), claims: 'passed', consistency: 'passed', repetition: 'passed', unresolvedFindings: [] }, evidence: { allowedUrls: new Set(bundle.manifest.sources.map(s => s.url)), capabilityIds: new Set() }, existingContent: [], existingImages: [], ...changes }; }
 test('unavailable or stale required audits never pass', async () => {

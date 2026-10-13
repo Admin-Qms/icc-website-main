@@ -2,7 +2,7 @@
 const fs = require('node:fs'); const path = require('node:path'); const matter = require('gray-matter'); const crypto = require('node:crypto');
 const sharp = require('sharp');
 const { pageBody, passedReview, editModel } = require('./guideReviewFixture');
-const { hashGuideInputs } = require('../../../lib/guide-contract');
+const { hashGuideInputs } = require('../../../lib/guide-contract.cjs');
 const SOURCE = 'https://www.iso.org/files/live/sites/isoorg/files/archive/pdf/en/documented_information.pdf';
 async function preparedGuideFixture(store, service) {
   const topic = { id: 'document-control', topic: 'Document control software', primaryKeyword: 'document control software', audience: 'Canadian quality and operations teams', secondaryKeywords: [] };
@@ -17,7 +17,7 @@ async function preparedGuideFixture(store, service) {
     let body = pageBody(job.pagePlans[slug], slug === job.manifest.slug ? 1500 : 2000, `fixture${index}`);
     if (index === 8) {
       const faq = '\n\n' + Array.from({ length: 9 }, (_, i) => `### Evaluation question ${i + 1}?\n\nCheck the assigned workflow owner, input records, acceptance decision, exceptions and supporting evidence. Test a representative task before authorizing the next operational step.`).join('\n\n') + '\n\n[Request a software demonstration](/contact/) to discuss the workflow.';
-      body = pageBody(job.pagePlans[slug], 2100 - require('../../../lib/guide-contract').countGuideWords(faq), `fixture${index}`) + faq;
+      body = pageBody(job.pagePlans[slug], 2100 - require('../../../lib/guide-contract.cjs').countGuideWords(faq), `fixture${index}`) + faq;
     }
     const buffer = await sharp({ create: { width: 1200, height: 675, channels: 3, background: { r: index * 20, g: 64, b: 100 } } }).webp().toBuffer();
     const image = { src: `/images/guides/${job.manifest.slug}/${assignment.slug}.webp`, alt: 'Synthetic industrial image fixture', width: 1200, height: 675, source: 'test-fixture', sourceId: `fixture-${index}`, sha256: crypto.createHash('sha256').update(buffer).digest('hex'), licenseUrl: 'https://example.org/test-fixture-license' };

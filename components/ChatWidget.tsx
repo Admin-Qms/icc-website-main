@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import { ArrowRight, ChevronDown, Phone } from "./Icons";
 import { SITE } from "@/lib/site";
 import { chatReplyMarkdown, safeSiteHref } from "@/lib/chatLinks";
 import { CHAT_HISTORY_KEY, CHAT_HISTORY_TTL_MS, lastFiveExchanges, modelMessagesFromHistory, readStoredChatHistory, serializeChatHistory } from "@/lib/chatHistory";
+import { ChatRequestError, requestChat } from "@/lib/chatClient";
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -20,7 +21,7 @@ function AssistantAvatar({ small = false }: { small?: boolean }) {
   return (
     <span
       aria-hidden="true"
-      className={`block shrink-0 overflow-hidden rounded-full border-2 border-white bg-teal-100 shadow-sm ${small ? "h-9 w-9" : "h-12 w-12"}`}
+      className={`block shrink-0 overflow-hidden rounded-full border-2 border-white bg-teal-100 shadow-sm ${small ? "h-7 w-7 sm:h-9 sm:w-9" : "h-9 w-9 sm:h-12 sm:w-12"}`}
     >
       <Image
         src="/images/anthony-consultant.jpg"
@@ -46,9 +47,9 @@ function ReplyText({ content }: { content: string }) {
             </a>
           ) : <span>{children}</span>;
         },
-        p: ({ children }) => <p className="mb-3 last:mb-0">{children}</p>,
-        ul: ({ children }) => <ul className="mb-3 list-disc space-y-1 pl-5 last:mb-0">{children}</ul>,
-        ol: ({ children }) => <ol className="mb-3 list-decimal space-y-1 pl-5 last:mb-0">{children}</ol>,
+        p: ({ children }) => <p className="mb-2 last:mb-0 sm:mb-3">{children}</p>,
+        ul: ({ children }) => <ul className="mb-2 list-disc space-y-1 pl-5 last:mb-0 sm:mb-3">{children}</ul>,
+        ol: ({ children }) => <ol className="mb-2 list-decimal space-y-1 pl-5 last:mb-0 sm:mb-3">{children}</ol>,
         li: ({ children }) => <li className="pl-0.5">{children}</li>,
         strong: ({ children }) => <strong className="font-semibold text-navy-900">{children}</strong>,
         h1: ({ children }) => <h3 className="mb-2 font-heading text-sm font-semibold text-navy-900">{children}</h3>,
@@ -69,12 +70,81 @@ export function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [draft, setDraft] = useState("");
   const [busy, setBusy] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState<ChatRequestError | null>(null);
+  const [failedQuestion, setFailedQuestion] = useState<string | null>(null);
+  const [retryAt, setRetryAt] = useState(0);
+  const [retrySeconds, setRetrySeconds] = useState(0);
+  const [mobile, setMobile] = useState(false);
+  const [mobileViewport, setMobileViewport] = useState<{ height: number; top: number } | null>(null);
+  const [unreadReply, setUnreadReply] = useState(false);
   const [expiresAt, setExpiresAt] = useState<number | null>(null);
   const expiresAtRef = useRef<number | null>(null);
   const sendingRef = useRef(false);
   const inputRef = useRef<HTMLTextAreaElement>(null);
-  const endRef = useRef<HTMLDivElement>(null);
+  const launcherRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const transcriptRef = useRef<HTMLDivElement>(null);
+  const replyRef = useRef<HTMLDivElement>(null);
+  const errorRef = useRef<HTMLDivElement>(null);
+  const requestRef = useRef<AbortController | null>(null);
+  const restoreFocusRef = useRef(false);
+  const followReplyRef = useRef(true);
+  const scrollActionRef = useRef<"bottom" | "reply" | "error" | null>(null);
+
+  function closeChat() {
+    restoreFocusRef.current = true;
+    setOpen(false);
+  }
+
+  function showReply() {
+    const transcript = transcriptRef.current;
+    const reply = replyRef.current;
+    if (transcript && reply) {
+      const inset = parseFloat(getComputedStyle(transcript).paddingTop);
+      transcript.scrollTop += reply.getBoundingClientRect().top - transcript.getBoundingClientRect().top - inset;
+    }
+    setUnreadReply(false);
+  }
+
+  useEffect(() => {
+    const query = window.matchMedia("(max-width: 639px)");
+    const update = () => setMobile(query.matches);
+    update();
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, []);
+
+  useEffect(() => () => requestRef.current?.abort(), []);
+
+  useEffect(() => {
+    if (!retryAt) return;
+    const update = () => {
+      const seconds = Math.max(0, Math.ceil((retryAt - Date.now()) / 1000));
+      setRetrySeconds(seconds);
+      if (seconds === 0) setRetryAt(0);
+    };
+    update();
+    const interval = window.setInterval(update, 1000);
+    return () => window.clearInterval(interval);
+  }, [retryAt]);
+
+  // Account for the visual viewport shrinking when a phone's keyboard opens.
+  useEffect(() => {
+    if (!open || !mobile) { setMobileViewport(null); return; }
+    const viewport = window.visualViewport;
+    const update = () => {
+      if (!viewport || viewport.scale > 1) return;
+      setMobileViewport({ height: viewport.height, top: viewport.offsetTop });
+    };
+    update();
+    viewport?.addEventListener("resize", update);
+    viewport?.addEventListener("scroll", update);
+    return () => {
+      viewport?.removeEventListener("resize", update);
+      viewport?.removeEventListener("scroll", update);
+    };
+  }, [open, mobile]);
 
   useEffect(() => {
     try {
@@ -103,26 +173,100 @@ export function ChatWidget() {
     return () => window.clearTimeout(timeout);
   }, [expiresAt]);
 
-  useEffect(() => {
-    if (open) inputRef.current?.focus();
-  }, [open]);
+  useLayoutEffect(() => {
+    if (!open) {
+      if (restoreFocusRef.current) launcherRef.current?.focus({ preventScroll: true });
+      restoreFocusRef.current = false;
+      return;
+    }
+    // Avoid opening the software keyboard before a phone visitor chooses to type.
+    const target = mobile ? panelRef.current : inputRef.current;
+    target?.focus({ preventScroll: true });
+    if (transcriptRef.current) transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight;
+    setUnreadReply(false);
+  }, [open, mobile]);
 
-  useEffect(() => {
-    if (open) endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  useLayoutEffect(() => {
+    const input = inputRef.current;
+    if (!input) return;
+    const resize = () => {
+      input.style.height = "0px";
+      input.style.height = `${Math.min(120, Math.max(40, input.scrollHeight))}px`;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, [draft, open]);
+
+  useLayoutEffect(() => {
+    if (!open || !transcriptRef.current) return;
+    const action = scrollActionRef.current;
+    scrollActionRef.current = null;
+    if (action === "reply") showReply();
+    if (action === "bottom") {
+      transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight;
+      followReplyRef.current = true;
+    }
+    if (action === "error" && errorRef.current) {
+      const inset = parseFloat(getComputedStyle(transcriptRef.current).paddingTop);
+      transcriptRef.current.scrollTop += errorRef.current.getBoundingClientRect().top - transcriptRef.current.getBoundingClientRect().top - inset;
+    }
   }, [open, messages, busy, error]);
 
   useEffect(() => {
     if (!open) return;
+    const panel = panelRef.current;
+    const inertElements: { element: HTMLElement; inert: boolean }[] = [];
+    const previousOverflow = document.body.style.overflow;
+    const previousRootOverflow = document.documentElement.style.overflow;
+    if (mobile && rootRef.current) {
+      let branch: HTMLElement = rootRef.current;
+      while (branch.parentElement) {
+        for (const sibling of Array.from(branch.parentElement.children)) {
+          if (sibling !== branch && sibling instanceof HTMLElement) {
+            inertElements.push({ element: sibling, inert: sibling.inert });
+            sibling.inert = true;
+          }
+        }
+        if (branch.parentElement === document.body) break;
+        branch = branch.parentElement;
+      }
+      document.body.style.overflow = "hidden";
+      // Prevent wide background decorations from scaling down a narrow phone viewport.
+      document.documentElement.style.overflow = "hidden";
+    }
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape" && (mobile || panel?.contains(document.activeElement))) {
+        event.preventDefault();
+        closeChat();
+      }
+      if (!mobile || event.key !== "Tab" || !panel) return;
+      const focusable = Array.from(panel.querySelectorAll<HTMLElement>('button:not(:disabled), a[href], textarea, [tabindex="0"]'))
+        .filter((element) => element.getClientRects().length > 0);
+      const first = focusable[0];
+      const last = focusable.at(-1);
+      if (event.shiftKey && (document.activeElement === first || document.activeElement === panel)) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
     };
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open]);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      for (const { element, inert } of inertElements) element.inert = inert;
+      if (mobile) {
+        document.body.style.overflow = previousOverflow;
+        document.documentElement.style.overflow = previousRootOverflow;
+      }
+    };
+  }, [open, mobile]);
 
   async function send(value: string) {
     const content = value.trim();
-    if (!content || sendingRef.current) return;
+    if (!content || sendingRef.current || Date.now() < retryAt) return;
     sendingRef.current = true;
     const activeMessages = expiresAtRef.current !== null && Date.now() < expiresAtRef.current ? messages : [];
     if (activeMessages.length === 0) {
@@ -131,25 +275,29 @@ export function ChatWidget() {
       try { window.localStorage.removeItem(CHAT_HISTORY_KEY); } catch { /* Storage may be unavailable. */ }
     }
     const next: Message[] = [...lastFiveExchanges(activeMessages), { role: "user", content }];
+    scrollActionRef.current = "bottom";
+    followReplyRef.current = true;
     setMessages(next);
-    setDraft("");
-    setError("");
+    setDraft((current) => current.trim() === content ? "" : current);
+    setError(null);
+    setFailedQuestion(null);
+    setUnreadReply(false);
+    setRetryAt(0);
+    setRetrySeconds(0);
     setBusy(true);
 
     const history = modelMessagesFromHistory(activeMessages, content);
 
+    const controller = new AbortController();
+    requestRef.current = controller;
     try {
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: history }),
-      });
-      const result = (await response.json().catch(() => ({ error: "Chat is unavailable on this host." }))) as { reply?: string; error?: string };
-      if (!response.ok || !result.reply) {
-        throw new Error(result.error || "Chat is temporarily unavailable.");
-      }
-      const complete = lastFiveExchanges([...next, { role: "assistant", content: result.reply }]);
+      const reply = await requestChat(history, controller.signal);
+      // Trim visible history on the next send, not while a visitor is reading it.
+      // Storage and model context still retain only the last five exchanges.
+      const complete: Message[] = [...next, { role: "assistant", content: reply }];
       const savedAt = Date.now();
+      if (followReplyRef.current) scrollActionRef.current = "reply";
+      else setUnreadReply(true);
       setMessages(complete);
       expiresAtRef.current = savedAt + CHAT_HISTORY_TTL_MS;
       setExpiresAt(expiresAtRef.current);
@@ -159,17 +307,25 @@ export function ChatWidget() {
         // The chat still works when browser storage is unavailable.
       }
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Chat is temporarily unavailable.");
+      if (controller.signal.aborted) return;
+      const failure = cause instanceof ChatRequestError ? cause : new ChatRequestError("Chat is temporarily unavailable. Please try again.");
+      setError(failure);
+      setFailedQuestion(content);
+      setDraft((current) => current || content);
+      setRetryAt(failure.retryAfterMs ? Date.now() + failure.retryAfterMs : 0);
+      setRetrySeconds(Math.ceil(failure.retryAfterMs / 1000));
+      scrollActionRef.current = "error";
     } finally {
+      requestRef.current = null;
       sendingRef.current = false;
       setBusy(false);
     }
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-[60] sm:bottom-6 sm:right-6">
+    <div ref={rootRef} className="fixed bottom-3 right-3 z-[60] sm:bottom-6 sm:right-6">
       {!open && (
-        <div className="flex items-center gap-2 rounded-full border border-teal-200 bg-white p-2 shadow-[0_14px_38px_-14px_rgba(22,43,77,0.55)]">
+        <div className="flex items-center gap-1.5 rounded-full border border-teal-200 bg-white p-1.5 shadow-[0_14px_38px_-14px_rgba(22,43,77,0.55)] sm:gap-2 sm:p-2">
           <AssistantAvatar small />
           <span className="mr-1 text-xs font-semibold text-navy-900">ISO Consultant</span>
           <a
@@ -181,6 +337,7 @@ export function ChatWidget() {
             Call
           </a>
           <button
+            ref={launcherRef}
             type="button"
             onClick={() => setOpen(true)}
             aria-label="Chat with ISO Consultant"
@@ -195,22 +352,26 @@ export function ChatWidget() {
 
       {open && (
         <section
+          ref={panelRef}
+          tabIndex={-1}
           id="website-chat-panel"
           role="dialog"
+          aria-modal={mobile || undefined}
           aria-label="Chat with ISO Consultant"
-          className="flex h-[min(620px,calc(100dvh-2rem))] w-[min(390px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_28px_80px_-22px_rgba(22,43,77,0.6)] max-sm:fixed max-sm:inset-0 max-sm:h-[100dvh] max-sm:w-full max-sm:rounded-none"
+          style={mobile && mobileViewport ? { height: mobileViewport.height, top: mobileViewport.top } : undefined}
+          className="flex h-[min(620px,calc(100dvh-2rem))] w-[min(390px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white outline-none shadow-[0_28px_80px_-22px_rgba(22,43,77,0.6)] max-sm:fixed max-sm:inset-x-0 max-sm:top-0 max-sm:h-[100dvh] max-sm:w-screen max-sm:rounded-none"
         >
-          <div className="flex items-center bg-navy-900 text-white">
+          <div className="flex shrink-0 items-center bg-navy-900 text-white max-sm:pt-[env(safe-area-inset-top)]">
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={closeChat}
               aria-label="Collapse chat"
-              className="flex min-w-0 flex-1 items-center gap-3 px-4 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+              className="flex min-w-0 flex-1 items-center gap-2 px-3 py-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-white sm:gap-3 sm:px-4 sm:py-4"
             >
               <AssistantAvatar />
               <span className="min-w-0 flex-1">
-                <span className="block truncate font-heading text-base font-semibold text-white">ISO Consultant</span>
-                <span className="block truncate text-xs text-teal-200">ISO Certification Consultants</span>
+                <span className="block truncate font-heading text-sm font-semibold text-white sm:text-base">ISO Consultant</span>
+                <span className="block truncate text-[11px] text-teal-200 sm:text-xs">ISO Certification Consultants</span>
               </span>
             </button>
             {messages.length > 0 && (
@@ -220,42 +381,48 @@ export function ChatWidget() {
                 onClick={() => {
                   setMessages([]);
                   setDraft("");
-                  setError("");
+                  setError(null);
+                  setFailedQuestion(null);
+                  setUnreadReply(false);
+                  inputRef.current?.focus({ preventScroll: true });
                   expiresAtRef.current = null;
                   setExpiresAt(null);
                   try { window.localStorage.removeItem(CHAT_HISTORY_KEY); } catch { /* Storage may be unavailable. */ }
                 }}
-                className="rounded px-2 py-1 text-xs text-teal-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white disabled:opacity-50"
+                className="min-h-11 shrink-0 rounded px-2 py-1 text-xs text-teal-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white disabled:opacity-50 sm:min-h-0"
               >
                 Clear chat
               </button>
             )}
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={closeChat}
               aria-label="Collapse chat"
-              className="mr-4 grid h-9 w-9 shrink-0 place-items-center rounded-full text-white/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+              className="mr-2 grid h-11 w-11 shrink-0 place-items-center rounded-full text-white/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white sm:mr-4 sm:h-9 sm:w-9"
             >
               <ChevronDown className="h-5 w-5" aria-hidden="true" />
             </button>
           </div>
 
-          <div className="flex-1 space-y-4 overflow-y-auto bg-slate-50 px-4 py-5" aria-live="polite" aria-relevant="additions text">
+          <div ref={transcriptRef} onScroll={() => {
+            const element = transcriptRef.current;
+            if (busy && element) followReplyRef.current = element.scrollHeight - element.scrollTop - element.clientHeight < 80;
+          }} className="min-h-0 flex-1 space-y-3 overflow-y-auto overscroll-contain bg-slate-50 px-3 py-3 [overflow-anchor:none] sm:space-y-4 sm:px-4 sm:py-5" aria-live="polite" aria-relevant="additions text">
             <div className="flex items-start gap-2">
               <AssistantAvatar small />
-              <div className="max-w-[82%] rounded-2xl rounded-tl-sm border border-slate-200 bg-white px-4 py-3 text-sm leading-relaxed text-slate-700 shadow-sm">
+              <div className="max-w-[calc(100%-2.25rem)] rounded-2xl rounded-tl-sm border border-slate-200 bg-white px-3 py-2 text-sm leading-5 text-slate-700 shadow-sm sm:max-w-[82%] sm:px-4 sm:py-3 sm:leading-relaxed">
                 Hello. Ask about certification consulting, supported standards, or the software modules. For advice about your own operation, the team can help directly.
               </div>
             </div>
 
             {messages.length === 0 && (
-              <div className="ml-11 space-y-2">
+              <div className="ml-9 space-y-1.5 sm:ml-11 sm:space-y-2">
                 {SUGGESTIONS.map((suggestion) => (
                   <button
                     key={suggestion}
                     type="button"
                     onClick={() => send(suggestion)}
-                    className="block rounded-full border border-teal-200 bg-white px-3 py-2 text-left text-xs font-medium text-teal-800 transition hover:bg-teal-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-700"
+                    className="block min-h-10 rounded-xl border border-teal-200 bg-white px-3 py-2 text-left text-xs font-medium text-teal-800 transition hover:bg-teal-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-700 sm:min-h-0 sm:rounded-full"
                   >
                     {suggestion}
                   </button>
@@ -264,61 +431,69 @@ export function ChatWidget() {
             )}
 
             {messages.map((message, index) => (
-              <div key={index} className={`flex items-start gap-2 ${message.role === "user" ? "justify-end" : ""}`}>
+              <div key={index} ref={message.role === "assistant" && index === messages.length - 1 ? replyRef : undefined} className={`flex items-start gap-2 ${message.role === "user" ? "justify-end" : ""}`}>
                 {message.role === "assistant" && <AssistantAvatar small />}
-                <div className={`max-w-[82%] break-words rounded-2xl px-4 py-3 text-sm leading-relaxed ${message.role === "user" ? "whitespace-pre-wrap rounded-tr-sm bg-navy-900 text-white" : "rounded-tl-sm border border-slate-200 bg-white text-slate-700 shadow-sm"}`}>
+                <div className={`break-words rounded-2xl px-3 py-2 text-sm leading-5 sm:max-w-[82%] sm:px-4 sm:py-3 sm:leading-relaxed ${message.role === "user" ? "max-w-[90%] whitespace-pre-wrap rounded-tr-sm bg-navy-900 text-white" : "max-w-[calc(100%-2.25rem)] rounded-tl-sm border border-slate-200 bg-white text-slate-700 shadow-sm"}`}>
                   {message.role === "assistant" ? <ReplyText content={message.content} /> : message.content}
                 </div>
               </div>
             ))}
 
             {busy && (
-              <div className="ml-11 rounded-2xl rounded-tl-sm border border-slate-200 bg-white px-4 py-3 text-sm text-slate-500 shadow-sm" role="status">
+              <div className="ml-9 rounded-2xl rounded-tl-sm border border-slate-200 bg-white px-3 py-2 text-sm text-slate-500 shadow-sm sm:ml-11 sm:px-4 sm:py-3" role="status">
                 Thinking…
               </div>
             )}
 
             {error && (
-              <div role="alert" className="ml-11 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">
-                {error} You can also email <a href={`mailto:${SITE.email}`} className="font-semibold underline">{SITE.email}</a> or call <a href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`} className="font-semibold underline">{SITE.phone}</a>.
+              <div ref={errorRef} className="ml-9 break-words rounded-xl border border-amber-200 bg-amber-50 p-2.5 text-xs leading-relaxed text-amber-900 sm:ml-11 sm:p-3">
+                <p role="alert">{error.message} You can also email <a href={`mailto:${SITE.email}`} className="font-semibold underline">{SITE.email}</a> or call <a href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`} className="font-semibold underline">{SITE.phone}</a>.</p>
+                {error.retryable && failedQuestion && (
+                  <button type="button" disabled={busy || retrySeconds > 0} onClick={() => send(failedQuestion)} className="mt-2 block min-h-11 rounded-lg border border-amber-400 px-3 py-2 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60">
+                    {retrySeconds > 0 ? `Try again in ${retrySeconds}s` : "Try again"}
+                  </button>
+                )}
               </div>
             )}
-            <div ref={endRef} />
           </div>
+
+          {unreadReply && <button type="button" onClick={showReply} className="min-h-11 shrink-0 border-t border-teal-200 bg-teal-50 px-3 text-sm font-semibold text-teal-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-700">View new reply</button>}
 
           <form
             onSubmit={(event) => {
               event.preventDefault();
               send(draft);
             }}
-            className="border-t border-slate-200 bg-white p-3"
+            className="shrink-0 border-t border-slate-200 bg-white p-2 max-sm:pb-[max(0.5rem,env(safe-area-inset-bottom))] sm:p-3"
           >
-            <div className="flex items-end gap-2 rounded-xl border border-slate-300 bg-white p-2 focus-within:border-teal-500 focus-within:ring-2 focus-within:ring-teal-100">
+            <div className="flex items-end gap-1 rounded-xl border border-slate-300 bg-white p-1 focus-within:border-teal-500 focus-within:ring-2 focus-within:ring-teal-100 sm:gap-2 sm:p-2">
               <textarea
                 ref={inputRef}
                 value={draft}
                 onChange={(event) => setDraft(event.target.value)}
                 onKeyDown={(event) => {
-                  if (event.key === "Enter" && !event.shiftKey) {
+                  if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing) {
                     event.preventDefault();
                     send(draft);
                   }
                 }}
                 aria-label="Your message"
+                aria-describedby={draft.length >= 1000 ? "chat-message-limit" : undefined}
                 placeholder="Ask a question…"
                 rows={1}
                 maxLength={1200}
-                className="max-h-28 min-h-10 flex-1 resize-none bg-transparent px-2 py-2 text-sm text-navy-900 outline-none placeholder:text-slate-400"
+                className="min-h-10 min-w-0 flex-1 resize-none overflow-y-auto bg-transparent px-2 py-2 text-base leading-6 text-navy-900 outline-none placeholder:text-slate-400 sm:text-sm sm:leading-6"
               />
               <button
                 type="submit"
-                disabled={!draft.trim() || busy}
+                disabled={!draft.trim() || busy || retrySeconds > 0}
                 aria-label="Send message"
-                className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-teal-700 text-white transition hover:bg-teal-800 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
+                className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-teal-700 text-white transition hover:bg-teal-800 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700 sm:h-10 sm:w-10"
               >
                 <ArrowRight className="h-5 w-5" />
               </button>
             </div>
+            {draft.length >= 1000 && <p id="chat-message-limit" className="mt-1 text-right text-xs text-slate-500">{draft.length} / 1200</p>}
           </form>
         </section>
       )}

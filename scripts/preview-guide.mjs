@@ -6,7 +6,7 @@ import { pathToFileURL } from 'node:url';
 import next from 'next';
 import productionConfig from '../next.config.mjs';
 const require = createRequire(import.meta.url);
-const { readGuidePreview, previewImageFile } = require('../lib/guide-preview.js');
+const { readGuidePreview, previewImageFile } = require('../lib/guide-preview.cjs');
 
 export async function startGuidePreview({ jobId, port = 3502, draftRoot = process.env.GUIDE_DRAFT_DIR || path.join(process.cwd(), 'team/drafts/guides') }) {
   if (process.env.NODE_ENV === 'production') throw new Error('Guide previews cannot run in production');

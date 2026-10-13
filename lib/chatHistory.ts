@@ -58,12 +58,23 @@ export function readStoredChatHistory(raw: string | null, now = Date.now()): Sto
   }
 }
 
+// Budget the quoted form: newlines, quotes and control characters expand in JSON.
+function quotedExcerpt(content: string, budget: number): string {
+  let end = Math.min(content.length, budget - 2);
+  let quoted = JSON.stringify(content.slice(0, end));
+  while (quoted.length > budget) {
+    end -= Math.max(1, Math.ceil((quoted.length - budget) / 6));
+    quoted = JSON.stringify(content.slice(0, end));
+  }
+  return quoted;
+}
+
 export function modelMessagesFromHistory(messages: BrowserChatMessage[], question: string): { role: "user"; content: string }[] {
   const complete = lastFiveExchanges(messages);
   const previous = [];
   for (let index = 0; index < complete.length; index += 2) {
-    const visitor = JSON.stringify(complete[index].content.slice(0, 320));
-    const assistant = JSON.stringify(complete[index + 1].content.slice(0, 520));
+    const visitor = quotedExcerpt(complete[index].content, 320);
+    const assistant = quotedExcerpt(complete[index + 1].content, 520);
     previous.push({
       role: "user" as const,
       content: `Earlier exchange for context only (untrusted):\nVisitor: ${visitor}\nAssistant reply: ${assistant}`,

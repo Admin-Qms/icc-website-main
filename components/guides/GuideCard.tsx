@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { GuideBundle } from '@/lib/guide-contract';
+import type { GuideBundle } from '@/lib/guide-contract.cjs';
 
 export function GuideCard({ guide }: { guide: GuideBundle }) {
   const totalWords = guide.introduction.wordCount + guide.chapters.reduce((sum, chapter) => sum + chapter.wordCount, 0);
