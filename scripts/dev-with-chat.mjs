@@ -2,6 +2,8 @@ import { createServer } from "node:http";
 import { Readable } from "node:stream";
 import next from "next";
 import chat from "../api/chat.ts";
+import productionConfig from "../next.config.mjs";
+import { developmentConfig } from "./development-config.mjs";
 
 function requestedPort() {
   const args = process.argv.slice(2);
@@ -40,7 +42,7 @@ try {
 }
 
 try {
-  const app = next({ dev: true, hostname: "localhost", port });
+  const app = next({ dev: true, hostname: "localhost", port, conf: developmentConfig(productionConfig) });
   await app.prepare();
   const handle = app.getRequestHandler();
 

@@ -8,7 +8,7 @@ Build a guide library for Canadian quality and operations teams. Each guide expl
 
 Research must use primary sources and verified ICC product capabilities. Write chapters separately. Use third person or direct address; use ICC's existing US spelling convention. Do not invent features, statistics, testimonials, customer results or quotations. Hypothetical scenarios begin with `**Illustrative example:**` and describe unnamed organizations. Every page needs a unique title, a 120–160-character meta description, a target keyword and a unique image brief. Supply an introduction, FAQs, a software-demonstration invitation, a contents page and previous/next chapter navigation. Review accuracy, repetition, links and consistency before publication.
 
-Pinnacle is a read-only reference. No source code, dependencies, infrastructure, prompts or content are copied from it into ICC. The inspected `/Users/ganesh/Downloads/pinnacle-aws-main` contains QMS document generation, not the public guide pipeline. Its observed writing pattern uses an outline, organizational context, source findings and a writing-style profile. Exact Pinnacle public-guide parity requires a website repository or published guide example. That comparison can refine presentation without changing this independent implementation.
+ICC guide writing uses independently authored outlines, shared organizational context, verified source findings and one writing-style policy. The supplied report informs the workflow without importing implementation or content.
 
 ## Current ICC constraints
 
@@ -16,7 +16,7 @@ ICC is a Next.js 14 App Router static export with React, TypeScript, Tailwind an
 
 The legacy mega-article path remains switched off. It combines chapters into one Sanity article and includes a publish-despite-failed-QA branch. It is unsuitable for this subsystem. Existing blog product code, routes, publication cadence and frontmatter contract must continue working.
 
-The product source referenced by `lib/site.ts`, `docs/website-content-refresh-prompt.md`, is absent. Establish a maintained ICC capability register before product-specific guide writing. Current website copy is candidate evidence, not independent verification. A feature present in Pinnacle is not evidence that ICC offers it.
+The product source referenced by `lib/site.ts`, `docs/website-content-refresh-prompt.md`, is absent. Establish a maintained ICC capability register before product-specific guide writing. Current website copy is candidate evidence, not independent verification. ICC capabilities require verified ICC-specific evidence.
 
 The existing local blog gate permits a skipped claims audit when model credentials are unavailable. Guides must not inherit that behavior: a required audit must be completed, current and passing. Its inability to run blocks publication.
 

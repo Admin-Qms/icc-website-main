@@ -9,6 +9,7 @@
 | Content Type | Frequency | Pipeline |
 |-------------|-----------|----------|
 | **Daily articles** | 1 per day | `contentManager.publishDaily` — `node team/pm.js blog publish` |
+| **Software guides** | Target: 2 complete guides per Toronto week; schedule inactive | Shared `keywordResearcher` → `guideManager`; Monday/Thursday slots, persistent drafts, required whole-guide acceptance; see `team/GUIDE-ROUTINE.md` |
 | **Mega articles** | Not scheduled | The mega pipeline has not been moved off Sanity |
 
 ### Publishing Method (from October 2026)

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "note": "Candidates derived from ICC module descriptions. Pending entries must not support published product claims. Verification must record evidence and scope; a feature in another repository does not prove ICC availability.",
+  "capabilities": [
+    { "id": "document-lifecycle", "moduleSlug": "document-control", "allowedClaim": "ICC's published Documents description lists a Draft, In review, Approved, Published and Obsolete lifecycle.", "limitations": ["Availability and configuration must be confirmed against the offered software."], "evidence": ["https://isocertificationconsultants.ca/solutions/document-control/"], "status": "pending", "verifiedBy": "", "verifiedAt": "" },
+    { "id": "capa-effectiveness", "moduleSlug": "nonconformance-capa", "allowedClaim": "Corrective action can be tracked through an effectiveness review.", "limitations": ["Confirm the supported workflow in a demonstration."], "evidence": ["https://isocertificationconsultants.ca/solutions/nonconformance-capa/"], "status": "pending", "verifiedBy": "", "verifiedAt": "" },
+    { "id": "supplier-portal", "moduleSlug": "supplier-quality", "allowedClaim": "Supplier tasks can be answered through a supplier portal.", "limitations": ["Confirm supplier access and configured workflow."], "evidence": ["https://isocertificationconsultants.ca/solutions/supplier-quality/"], "status": "pending", "verifiedBy": "", "verifiedAt": "" }
+  ]
+}

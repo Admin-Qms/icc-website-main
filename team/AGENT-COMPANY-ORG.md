@@ -13,6 +13,20 @@ This document describes the full agent organization as designed for the previous
 
 Added for the blog pipeline: `shared/contentStore.js`, `shared/siteRoutes.js`, `scripts/check-links.js`, `data/external-link-bank.json`, `data/standards-facts.json`, `memory/keyword-queue.json`, `tests/`. See `team/README.md`.
 
+## Software guides — implementation (2026-10-13)
+
+CTO owns the website routes; CMO → Content Production owns guide creation. The guide pipeline is available locally; its recurring schedule is **inactive** and has no standing approval to push.
+
+| Role | File | Responsibility |
+|---|---|---|
+| Shared Keyword Researcher | `agents/content/keywordResearcher.js` | Existing blog discovery plus guide subject selection and primary-source search queries; guide backlog in `memory/guide-topic-queue.json` |
+| Guide Manager | `agents/content/guideManager.js` | Research snapshots, nine individual chapter assignments, checkpoints, required review and atomic local publication |
+| Guide QA | `agents/content/guideQA.js` | Inclusive length, metadata, links, images, required reviews and repetition gates |
+
+`guideResearch.js`, `guideOutline.js` and `guideImages.js` are pipeline utilities. `guideStore.js` and `guideCadence.js` manage durable state and two Toronto weekly production slots. The existing image provider and registry are shared with blogs. These additions do not activate legacy Sanity or audit agents.
+
+See `GUIDE-ROUTINE.md` for generation, recovery and release boundaries. Both new guide roles are registered in the auditor's team definition; this does not enable the old morning audit.
+
 ## Overview
 
 A full web development company structure with 7 departments, 3-tier hierarchy, 37+ agents, and daily automated operations. Every agent reports up a chain; every department produces measurable output.

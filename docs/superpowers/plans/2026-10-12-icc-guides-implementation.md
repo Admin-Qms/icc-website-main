@@ -14,7 +14,7 @@
 
 ## Global Constraints
 
-- Pinnacle is a read-only reference. No source code, dependencies, infrastructure, prompts or content are copied from it into ICC.
+- external reference is a read-only reference. No source code, dependencies, infrastructure, prompts or content are copied from it into ICC.
 - The production target is two complete guides per week, in addition to the existing daily blog.
 - Initial guides contain nine chapters, each 2,000–2,200 words, and an introduction of at least 1,500 words; the inclusive overall total is 18,000–20,000 words.
 - Target 2,000 words per chapter and 1,500 words for the introduction: 19,500 words overall.
@@ -50,7 +50,7 @@ The active blog pipeline is documented in `team/README.md`. `keywordResearcher.a
 
 `lib/site.ts` contains ICC's current module catalogue. The referenced `docs/website-content-refresh-prompt.md` is absent. `AGENT-COMPANY-ORG.md` is also absent. Establish verified replacements during implementation, not invented historical records.
 
-The supplied Pinnacle AWS repository uses a section outline, context digest, source findings and style profile to generate organizational QMS documents. No public guide pipeline was found. This plan uses the Owner's guide structure; exact visual/content parity remains pending a public guide example.
+The Owner-approved guide structure is the implementation contract. Use a researched outline, shared guide context and evidence-backed chapter briefs.
 
 ## File ownership and proposed changes
 
@@ -431,7 +431,7 @@ test('a completed weekly slot cannot create a third guide', () => {
 
 - [ ] Record the actual guide roles: Guide Content Manager (`guideManager.js`), Guide Topic Researcher (`guideTopicResearcher.js`), Guide Research/Outline responsibilities and Guide QA (`guideQA.js`), reporting through Content Manager/CMO to CTO. These are pipeline responsibilities, not permission to start extra subagents or schedule the dormant departments.
 - [ ] Document topic approval, evidence verification, checkpoint recovery, failed QA, image exhaustion, stable chapter URLs, local publication and authorized production release. Include the difference between two weekly generation slots and production deployment.
-- [ ] Review code impact using code-review-graph if available, otherwise changed-file/import analysis. Verify no Pinnacle files, copied prompts, infrastructure or dependencies were introduced, no secret was added, no source/published URL was deleted and no core file was changed without the required approval.
+- [ ] Review code impact using code-review-graph if available, otherwise changed-file/import analysis. Verify no external reference files, copied prompts, infrastructure or dependencies were introduced, no secret was added, no source/published URL was deleted and no core file was changed without the required approval.
 - [ ] Complete the final independent code/content review through the Owner-selected execution method. Resolve findings, rerun checks affected by fixes and report every unavailable gate honestly.
 - [ ] Run the release checklist below; commit documentation only after the build passes. No production push without its separately established authority.
 
@@ -463,6 +463,6 @@ The first backlog priorities are proposed as document control, CAPA workflows, s
 
 ## Owner review and execution handoff
 
-This plan is ready for review, not execution. The open decisions are the exact Pinnacle public-guide reference, the proposed first topic, weekdays/start times for the two slots, the designated persistent host and whether guide release should stay manual or receive explicit standing authority.
+This plan is ready for review, not execution. The open decisions are the exact external reference public-guide reference, the proposed first topic, weekdays/start times for the two slots, the designated persistent host and whether guide release should stay manual or receive explicit standing authority.
 
 After the Owner authorizes implementation, preserve their chosen execution method. Either execute task-by-task in this session using `superpowers:executing-plans`, or use `superpowers:subagent-driven-development` if the Owner explicitly chooses delegation. During either method, obey the repository's core-file approval and local-commit rules. Do not ask for permission again for work already explicitly authorized, but do not treat acceptance of this plan as authorization to create a schedule or push production changes.

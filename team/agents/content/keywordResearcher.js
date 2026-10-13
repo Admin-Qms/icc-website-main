@@ -314,4 +314,19 @@ function getQueueStatus() {
   return { total: queue.length, published: published.length, remaining: remaining.length, next: remaining.slice(0, 14) };
 }
 
-module.exports = { pickKeyword, pickMegaKeyword, addKeyword, getQueueStatus, isExcludedTopic };
+// Guides share this researcher while keeping their software queue and eligibility
+// rules separate from the blog's standards/city rotation.
+const guideTopics = require('../shared/guideTopics');
+
+function guideResearchQueries(topic) {
+  const keyword = topic.primaryKeyword || topic.topic;
+  return [
+    { purpose: 'workflow', query: `${keyword} workflow implementation evaluation`, domains: ['nist.gov', 'iso.org'] },
+    { purpose: 'standard-context', query: `${keyword} documented information quality management guidance`, domains: ['iso.org'] },
+    { purpose: 'canadian-context', query: `${keyword} Canadian manufacturing quality operations guidance`, domains: ['canada.ca', 'scc-ccn.ca'] },
+    { purpose: 'verified-capabilities', query: `${topic.topic} ${(topic.moduleSlugs || []).join(' ')} ICC software`, domains: ['isocertificationconsultants.ca'] },
+  ];
+}
+
+module.exports = { pickKeyword, pickMegaKeyword, addKeyword, getQueueStatus, isExcludedTopic,
+  ...guideTopics, guideResearchQueries };

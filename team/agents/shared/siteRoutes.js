@@ -57,10 +57,17 @@ let cachedRoutes = null;
 function getRoutes({ refresh = false } = {}) {
   if (cachedRoutes && !refresh) return cachedRoutes;
   const routes = new Set(staticRoutes());
+  routes.add('/guides');
   for (const [base, arrayName] of Object.entries(DYNAMIC_SOURCES)) {
     for (const entry of readSiteArray(arrayName)) routes.add(`${base}/${entry.slug}`);
   }
   for (const post of listPosts()) routes.add(`/blog/${post.slug}`);
+  const { listGuideFiles } = require('../../../lib/guide-files');
+  const { guideRoutes } = require('../../../lib/guide-contract');
+  const guideConfig = require('./guideConfig');
+  for (const guide of listGuideFiles(guideConfig.CONTENT_DIR)) {
+    for (const route of guideRoutes(guide.manifest)) routes.add(toRoute(route));
+  }
   cachedRoutes = routes;
   return routes;
 }
@@ -95,6 +102,7 @@ function getLinkTargets() {
   }
 
   const general = [
+    { title: "Software guides", url: "/guides" },
     { title: "All ISO standards", url: "/services" },
     { title: "The six-stage certification process", url: "/process" },
     { title: "Free ISO readiness assessment", url: "/assessment" },
@@ -103,7 +111,13 @@ function getLinkTargets() {
     { title: "Book a consultation", url: "/contact" },
   ].map((t) => ({ ...t, kind: "general" }));
 
-  return [...targets, ...general].filter((t) => has(t.url));
+  const { listGuideFiles } = require('../../../lib/guide-files');
+  const guideConfig = require('./guideConfig');
+  const guideTargets = listGuideFiles(guideConfig.CONTENT_DIR).flatMap(g => [
+    { title: g.manifest.title, url: `/guides/${g.manifest.slug}`, kind: 'guide' },
+    ...g.chapters.map(c => ({ title: c.title, url: `/guides/${g.manifest.slug}/${c.slug}`, kind: 'guide-chapter' })),
+  ]);
+  return [...targets, ...general, ...guideTargets].filter((t) => has(t.url));
 }
 
 module.exports = { getRoutes, resolves, toRoute, getLinkTargets, readSiteArray };

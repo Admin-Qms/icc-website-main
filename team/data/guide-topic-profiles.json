@@ -1,0 +1,32 @@
+{
+  "document-control": [
+    ["revision-control", "Managing document revisions", ["Document identity and version rules", "Change requests and responsibilities", "Reviewing revision differences", "Preserving revision history"]],
+    ["approval-decisions", "Reviewing and approving documents", ["Assigning review authority", "Recording rejected changes", "Separating approval and release", "Checking approval evidence"]],
+    ["daily-workflows", "Releasing and retrieving controlled instructions", ["Distributing approved instructions", "Finding the current version", "Managing point-of-use access", "Handling unavailable instructions"]],
+    ["exceptions-evidence", "Withdrawing obsolete documents", ["Recognizing superseded versions", "Removing obsolete copies", "Retaining required records", "Testing retrieval during an audit"]]
+  ],
+  "capa-workflows": [
+    ["containment-decisions", "Recording findings and containment", ["Classifying the finding", "Assigning immediate containment", "Linking affected records", "Checking containment evidence"]],
+    ["cause-investigation", "Investigating root causes", ["Defining the investigation question", "Collecting evidence before conclusions", "Testing competing causes", "Recording the accepted cause"]],
+    ["action-planning", "Planning and implementing corrective actions", ["Connecting actions to causes", "Assigning owners and deadlines", "Handling delayed actions", "Recording implementation evidence"]],
+    ["effectiveness-review", "Reviewing corrective action effectiveness", ["Defining effectiveness criteria", "Choosing follow-up evidence", "Reopening ineffective actions", "Authorizing final closure"]]
+  ],
+  "supplier-quality": [
+    ["supplier-qualification", "Qualifying and approving suppliers", ["Defining supplier risk", "Collecting qualification evidence", "Assigning approval authority", "Handling conditional approval"]],
+    ["receiving-controls", "Connecting receiving inspection records", ["Linking orders and inspection records", "Defining acceptance criteria", "Recording rejected material", "Preserving traceability"]],
+    ["supplier-actions", "Following supplier corrective actions", ["Describing the supplier finding", "Requesting supporting evidence", "Reviewing proposed actions", "Checking action effectiveness"]],
+    ["supplier-performance", "Reviewing supplier performance", ["Choosing supported measures", "Reviewing incomplete records", "Changing supplier status", "Retaining decision evidence"]]
+  ],
+  "audit-workflows": [
+    ["audit-planning", "Planning the internal audit program", ["Defining audit scope", "Assigning suitable auditors", "Scheduling representative activities", "Handling changed priorities"]],
+    ["audit-evidence", "Collecting and connecting audit evidence", ["Preparing workflow questions", "Recording observations", "Linking evidence to criteria", "Protecting sensitive records"]],
+    ["audit-findings", "Recording and reviewing findings", ["Distinguishing findings and observations", "Confirming supporting evidence", "Assigning action ownership", "Resolving disputed findings"]],
+    ["audit-follow-up", "Following findings through closure", ["Setting follow-up criteria", "Checking action evidence", "Reopening unresolved findings", "Reporting the audit program"]]
+  ],
+  "training-competence": [
+    ["competency-matrix", "Defining roles and competency requirements", ["Mapping operational tasks", "Defining qualification criteria", "Assigning matrix ownership", "Handling changed roles"]],
+    ["training-assignments", "Assigning training and learning tasks", ["Choosing task-specific learning", "Assigning trainers and learners", "Recording attendance appropriately", "Handling overdue learning"]],
+    ["competence-verification", "Verifying competence in practical work", ["Defining practical assessment", "Recording assessment evidence", "Separating attendance and competence", "Handling unsuccessful assessment"]],
+    ["qualification-renewal", "Maintaining qualifications and renewal evidence", ["Reviewing qualification validity", "Responding to process changes", "Planning reassessment", "Retrieving competence evidence"]]
+  ]
+}

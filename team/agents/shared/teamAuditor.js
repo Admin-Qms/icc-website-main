@@ -15,6 +15,8 @@ const TEAMS = {
     emoji: "📝",
     agents: [
       { id: "contentManager", label: "Content Manager", metricLabel: "Pipeline" },
+      { id: "guideManager", label: "Guide Manager", metricLabel: "Guide" },
+      { id: "guideQA", label: "Guide QA", metricLabel: "Gate" },
       { id: "keywordResearcher", label: "Keyword Researcher", metricLabel: "Keyword" },
       { id: "articleWriter", label: "Article Writer", metricLabel: "Words" },
       { id: "contentEnhancer", label: "Content Enhancer", metricLabel: "Enhancements" },

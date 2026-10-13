@@ -156,6 +156,15 @@ function usedBlogImages() {
       if (img.sha256) hashes.add(img.sha256);
     }
   }
+  const { listGuideFiles } = require('../../../lib/guide-files');
+  const guideConfig = require('./guideConfig');
+  for (const guide of listGuideFiles(guideConfig.CONTENT_DIR)) {
+    for (const page of [guide.introduction, ...guide.chapters]) {
+      const img = page.image;
+      if (img?.source && img.sourceId != null) sourceIds.add(`${img.source}:${img.sourceId}`);
+      if (img?.sha256) hashes.add(img.sha256);
+    }
+  }
   return { sourceIds, hashes };
 }
 
