@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check } from "./Icons";
 import { STANDARDS, SITE } from "@/lib/site";
@@ -9,8 +9,9 @@ const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 type Status = "idle" | "submitting" | "done" | "error";
 
-export function ContactForm() {
+export function ContactForm({ compact = false, title }: { compact?: boolean; title?: string }) {
   const [status, setStatus] = useState<Status>("idle");
+  const id = useId();
   const configured = Boolean(SITE.forms.web3formsKey);
 
   // The site is a static export with no server, so the form posts to Web3Forms, which
@@ -47,7 +48,11 @@ export function ContactForm() {
   }
 
   return (
-    <div className="relative rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_20px_60px_-40px_rgba(22,43,77,0.5)] lg:p-9">
+    <div className={`relative rounded-2xl border border-slate-200 bg-white shadow-[0_20px_60px_-40px_rgba(22,43,77,0.5)] ${compact ? 'p-5 sm:p-6' : 'p-7 lg:p-9'}`}>
+      {title && status !== "done" && <div className="mb-5">
+        <h2 className="font-heading text-2xl font-bold text-navy-900">{title}</h2>
+        <p className="mt-2 text-sm leading-6 text-slate-600">Tell us about your operation and the support you need.</p>
+      </div>}
       <AnimatePresence mode="wait">
         {status === "done" ? (
           <motion.div
@@ -75,23 +80,25 @@ export function ContactForm() {
         ) : (
           <motion.form
             key="form"
+            aria-label={title || "Contact form"}
             onSubmit={onSubmit}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="space-y-5"
+            className={compact ? "space-y-4" : "space-y-5"}
           >
             {/* honeypot: Web3Forms discards any submission where this is filled in */}
             <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Full name" name="name" required placeholder="Jordan Smith" />
               <Field label="Work email" name="email" type="email" required placeholder="jordan@company.com" />
             </div>
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Company" name="company" required placeholder="Acme Industries Ltd." />
               <div>
-                <Label>Standard of interest</Label>
+                <Label htmlFor={`${id}-standard`}>Standard of interest</Label>
                 <select
+                  id={`${id}-standard`}
                   name="standard"
                   className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
                   defaultValue=""
@@ -109,10 +116,11 @@ export function ContactForm() {
               </div>
             </div>
             <div>
-              <Label>How can we help?</Label>
+              <Label htmlFor={`${id}-message`}>How can we help?</Label>
               <textarea
+                id={`${id}-message`}
                 name="message"
-                rows={4}
+                rows={compact ? 3 : 4}
                 required
                 placeholder="Tell us about your operation and what you're certifying for…"
                 className="mt-1.5 w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition placeholder:text-slate-400 focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
@@ -154,8 +162,8 @@ export function ContactForm() {
   );
 }
 
-function Label({ children }: { children: React.ReactNode }) {
-  return <label className="text-sm font-medium text-slate-700">{children}</label>;
+function Label({ children, htmlFor }: { children: React.ReactNode; htmlFor: string }) {
+  return <label htmlFor={htmlFor} className="text-sm font-medium text-slate-700">{children}</label>;
 }
 
 function Field({
@@ -171,10 +179,12 @@ function Field({
   required?: boolean;
   placeholder?: string;
 }) {
+  const id = useId();
   return (
     <div>
-      <Label>{label}</Label>
+      <Label htmlFor={id}>{label}</Label>
       <input
+        id={id}
         type={type}
         name={name}
         required={required}

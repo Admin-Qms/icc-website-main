@@ -53,8 +53,8 @@ export function ProcessTimeline() {
 
               {/* card */}
               <motion.div
-                initial={{ opacity: 0, x: 24 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, ease: easeOut, delay: 0.1 }}
                 className="card card-hover mb-1 flex-1 p-5 sm:p-6"

@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Check, ShieldCheck, Phone } from "../Icons";
 import { SITE } from "@/lib/site";
+import { ContactForm } from "../ContactForm";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } } };
@@ -76,8 +78,8 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right — animated industry image wall */}
-          <IndustryImageWall />
+          {/* Right — show the industry animation, then keep the enquiry form available. */}
+          <HeroContactPanel />
         </div>
       </div>
 
@@ -113,6 +115,31 @@ export function Hero() {
       </div>
     </section>
   );
+}
+
+function HeroContactPanel() {
+  const reduce = useReducedMotion();
+  const [showForm, setShowForm] = useState(false);
+
+  useEffect(() => {
+    if (reduce) { setShowForm(true); return; }
+    const timer = window.setTimeout(() => setShowForm(true), 5000);
+    return () => window.clearTimeout(timer);
+  }, [reduce]);
+
+  return <div className="grid min-w-0 items-center" aria-label="Consultation enquiry">
+    {!showForm && <div className="min-w-0 [grid-area:1/1]" aria-hidden="true"><IndustryImageWall /></div>}
+    <motion.div
+      className={`min-w-0 [grid-area:1/1] ${showForm ? 'visible' : 'invisible pointer-events-none'}`}
+      aria-hidden={!showForm}
+      initial={false}
+      animate={{ opacity: showForm ? 1 : 0 }}
+      transition={{ duration: reduce ? 0 : 0.4 }}
+    >
+      <ContactForm compact title="Book a free consultation" />
+    </motion.div>
+    <noscript><p className="mt-4"><Link href="/contact/" className="font-semibold text-teal-700 underline">Contact a consultant</Link></p></noscript>
+  </div>;
 }
 
 /* ---- headline with a highlighted, underline-drawing accent ---- */
@@ -165,20 +192,16 @@ function HeroBackground({ reduce }: { reduce: boolean }) {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
       <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-teal-50/70 to-transparent" />
-      {!reduce && (
-        <>
           <motion.div
             className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-teal-200/30 blur-3xl"
-            animate={{ x: [0, 30, 0], y: [0, 20, 0] }}
+            animate={reduce ? undefined : { x: [0, 30, 0], y: [0, 20, 0] }}
             transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
             className="absolute right-0 top-32 h-80 w-80 rounded-full bg-gold-200/25 blur-3xl"
-            animate={{ x: [0, -30, 0], y: [0, 24, 0] }}
+            animate={reduce ? undefined : { x: [0, -30, 0], y: [0, 24, 0] }}
             transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
           />
-        </>
-      )}
     </div>
   );
 }
