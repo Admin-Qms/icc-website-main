@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "topicId": "document-control",
+  "slug": "document-control-software",
+  "title": "Document control software for Canadian quality and operations teams",
+  "description": "Evaluate document control software through revision, approval, retrieval and migration workflows, with practical tests for Canadian quality teams.",
+  "primaryKeyword": "document control software",
+  "keywords": [
+    "document control software",
+    "document approval workflow",
+    "document migration"
+  ],
+  "audience": "Canadian quality and operations teams",
+  "author": "ISO Certification Consultants Editorial Team",
+  "date": "2026-10-13",
+  "introductionFile": "introduction.md",
+  "chapters": [
+    {
+      "slug": "mapping-workflows",
+      "file": "chapters/mapping-workflows.md"
+    },
+    {
+      "slug": "evaluating-software",
+      "file": "chapters/evaluating-software.md"
+    },
+    {
+      "slug": "revision-control",
+      "file": "chapters/revision-control.md"
+    },
+    {
+      "slug": "approval-decisions",
+      "file": "chapters/approval-decisions.md"
+    },
+    {
+      "slug": "daily-workflows",
+      "file": "chapters/daily-workflows.md"
+    },
+    {
+      "slug": "exceptions-evidence",
+      "file": "chapters/exceptions-evidence.md"
+    },
+    {
+      "slug": "migration-planning",
+      "file": "chapters/migration-planning.md"
+    },
+    {
+      "slug": "training-rollout",
+      "file": "chapters/training-rollout.md"
+    },
+    {
+      "slug": "ongoing-operation",
+      "file": "chapters/ongoing-operation.md"
+    }
+  ],
+  "sources": [
+    {
+      "id": "iso-documentation-guidance",
+      "title": "Guidance on the requirements for documented information of ISO 9001:2015",
+      "publisher": "ISO/TC 176",
+      "url": "https://www.iso.org/files/live/sites/isoorg/files/archive/pdf/en/documented_information.pdf",
+      "retrievedAt": "2026-10-13T18:28:24.067Z",
+      "sourceType": "primary",
+      "supportedClaims": [
+        "This is edition-specific historical guidance for ISO 9001:2015, not proof of the current edition.",
+        "Documentation should support operational processes and provide evidence.",
+        "The guidance allows different forms of documented information and does not require every organization to use identical documents."
+      ]
+    },
+    {
+      "id": "iso-certification-context",
+      "title": "ISO 9001 explained",
+      "publisher": "ISO",
+      "url": "https://www.iso.org/home/insights-news/resources/iso-9001-explained.html",
+      "retrievedAt": "2026-10-13T18:28:24.068Z",
+      "sourceType": "primary",
+      "supportedClaims": [
+        "Certification is performed by independent certification bodies; ISO does not certify organizations.",
+        "Software alone does not establish that a quality management system conforms to a standard."
+      ]
+    }
+  ],
+  "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "researchSnapshotHash": "34462a8d74e08f1566772e8cf388ee8864f22c78b15efd890cbfce64ed657c0c",
+  "publishedAt": "2026-10-13T19:51:21.336Z"
+}

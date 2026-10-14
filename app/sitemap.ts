@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { STANDARDS, INDUSTRIES, MODULES, SITE } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
+import { getAllGuides } from "@/lib/guides";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;
@@ -64,5 +65,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  return [...staticRoutes, ...moduleRoutes, ...serviceRoutes, ...industryRoutes, ...blogRoutes];
+  const guides = getAllGuides();
+  const guideRoutes = [
+    { url: `${base}/guides/`, lastModified: guides.length ? day(guides[0].manifest.updated || guides[0].manifest.date) : now, changeFrequency: "weekly" as const, priority: 0.8 },
+    ...guides.flatMap(g => [
+      { url: `${base}/guides/${g.manifest.slug}/`, lastModified: day(g.manifest.updated || g.manifest.date), changeFrequency: "monthly" as const, priority: 0.8 },
+      ...g.chapters.map(c => ({ url: `${base}/guides/${g.manifest.slug}/${c.slug}/`, lastModified: day(c.updated || c.date), changeFrequency: "monthly" as const, priority: 0.7 })),
+    ]),
+  ];
+  return [...staticRoutes, ...moduleRoutes, ...serviceRoutes, ...industryRoutes, ...blogRoutes, ...guideRoutes];
 }

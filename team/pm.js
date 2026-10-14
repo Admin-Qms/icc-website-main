@@ -2122,4 +2122,5 @@ linkedinCmd
     }
   });
 
+require('./agents/content/guideCLI').registerGuideCommands(program);
 program.parse();

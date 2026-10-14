@@ -1,5 +1,9 @@
 # Coding Conventions
 
+## Guides (2026-10-13)
+
+The shared CommonJS contract in `lib/guide-contract.cjs` has TypeScript declarations and is consumed by the website and pipeline. Do not split frontmatter rules between them. Publish a complete guide through `node team/pm.js guide publish`; never hand-write accepted content into `content/guides/`. Canonical filenames and ordered manifest references preserve URLs. The shell supplies H1; Markdown uses 3–5 H2 chapter subsections. Required review hashes bind prose, metadata, order and evidence; changes invalidate reviews. Image provenance is checked separately against original stored bytes.
+
 > Component patterns, file naming, import rules, styling rules, and image handling.
 
 ---

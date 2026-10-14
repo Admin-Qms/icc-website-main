@@ -1,6 +1,10 @@
 {
   "note": "Approved outside sources. Articles may only link to URLs in this file. Every URL was checked on 2026-10-03: 'http' = returned 200 when fetched, 'search' = site blocks automated fetches, confirmed through search results. Add or remove entries freely; keep name and context accurate.",
   "industries": {
+    "software_guides": [
+      { "url": "https://www.iso.org/files/live/sites/isoorg/files/archive/pdf/en/documented_information.pdf", "name": "ISO guidance on documented information in ISO 9001:2015", "context": "Historical edition-specific primary guidance; it does not establish the current edition or changed requirements in a later edition", "verified": "http" },
+      { "url": "https://isocertificationconsultants.ca/solutions/document-control/", "name": "ICC Documents module specification", "context": "Published ICC product description; confirm availability and configuration before making unqualified product claims", "verified": "http" }
+    ],
     "general_quality": [
       { "url": "https://www.iso.org/standard/9001", "name": "ISO 9001:2026 on iso.org", "context": "official page for the current edition of ISO 9001, Quality management systems — Requirements", "verified": "search" },
       { "url": "https://www.iso.org/home/insights-news/resources/iso-9001-explained.html", "name": "ISO's own explanation of ISO 9001", "context": "what ISO 9001 is, who uses it and what certification involves", "verified": "search" },

@@ -9,8 +9,8 @@ export function Footer() {
   return (
     <footer className="bg-navy-900 text-slate-300">
       <div className="container-page">
-        <div className="grid gap-12 border-b border-white/10 py-16 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
-          <div className="max-w-sm">
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-12 border-b border-white/10 py-16 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
+          <div className="min-w-0 max-w-sm">
             <Link href="/" aria-label={`${SITE.name} home`}>
               <Logo variant="light" />
             </Link>
@@ -27,7 +27,7 @@ export function Footer() {
               {SITE.phone}
             </a>
             <p className="mt-2 text-sm text-slate-400">
-              <a href={`mailto:${SITE.email}`} className="hover:text-teal-300">
+              <a href={`mailto:${SITE.email}`} className="break-all hover:text-teal-300">
                 {SITE.email}
               </a>
             </p>
@@ -67,6 +67,7 @@ export function Footer() {
             <FooterLink href="/process">How it works</FooterLink>
             <FooterLink href="/assessment">Free assessment</FooterLink>
             <FooterLink href="/blog">Blog</FooterLink>
+            <FooterLink href="/guides">Software guides</FooterLink>
             <FooterLink href="/about">About</FooterLink>
             <FooterLink href="/contact">Contact</FooterLink>
           </FooterCol>

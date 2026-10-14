@@ -1,5 +1,15 @@
 # Page Registry
 
+## Software guides — local implementation (2026-10-13)
+
+| Route | Source | Status |
+|---|---|---|
+| `/guides/` | Static catch-all library view | Implemented; exports even with no accepted guides |
+| `/guides/<slug>/` | `content/guides/<slug>/introduction.md` and `guide.json` | Exported only for locally published, valid complete bundles |
+| `/guides/<slug>/<chapter>/` | Ordered `chapters/<chapter>.md` | Nine chapters per guide, previous/next navigation and contents |
+
+All three patterns are included in metadata and the sitemap. No guide has been published to production or submitted for indexing during implementation. The pilot is an unpublished draft; old mega-article entries below are historical.
+
 > Every page on isocertificationconsultants.ca. Update this file whenever a page is added, removed, or changes status.
 
 ---

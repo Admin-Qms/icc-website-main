@@ -1,6 +1,6 @@
-# team/ — the blog pipeline
+# team/ — content pipelines
 
-Only one thing in this folder is in use: the daily blog pipeline. Every other agent (SEO, security, ops, growth, web, mega-articles) is kept for reference and switched off.
+The daily blog pipeline is active. Software guides have a separate local pipeline with a shared researcher; their twice-weekly schedule is inactive. Other agents (SEO, security, ops, growth, web and legacy mega-articles) remain switched off.
 
 ## Setup
 
@@ -73,7 +73,7 @@ The published posts are the pipeline's memory: there is no separate "published" 
 
 | Path | Role |
 |---|---|
-| `pm.js` | CLI. Only the `blog` commands are in use |
+| `pm.js` | CLI. Active daily `blog` pipeline and local `guide` commands |
 | `agents/content/contentManager.js` | The pipeline (`publishDaily`) |
 | `agents/content/contentQA.js` | The quality gate (`validateLocal`) |
 | `agents/content/rewritePatcher.js` | Targeted fixes for failed checks |
@@ -82,3 +82,13 @@ The published posts are the pipeline's memory: there is no separate "published" 
 | `agents/shared/claude.js` | The one place models are called; switches between Gemini and Claude |
 | `scripts/check-links.js` | After `npm run build`, checks links and images on the built blog pages |
 | `tests/` | `npm test` |
+
+## Software guides
+
+From the repository root, `node team/pm.js guide topics list` shows the approved guide subject backlog. `guide brief --next` selects an eligible subject through the existing `keywordResearcher`; `guide topics suggest` includes primary-source search queries. The writer retrieves evidence and checkpoints a research fixture before chapter generation. This retains separate blog and software queues while sharing the research agent.
+
+Guides consist of `content/guides/<slug>/guide.json`, `introduction.md` and nine files in `chapters/`. Images live in `public/images/guides/<slug>/`. The pipeline uses frozen metadata/evidence, persistent draft checkpoints, mandatory audits and a final whole-guide gate. Use `GUIDE-WRITER.md` and `GUIDE-ROUTINE.md` for the commands, source renewal and interrupted-run recovery.
+
+The static site exposes `/guides/`, `/guides/<slug>/` and `/guides/<slug>/<chapter>/`. Before the first accepted guide, the library has an honest empty state. After `npm run build`, run `node team/scripts/check-guide-links.js` and `node team/scripts/check-guide-metadata.js`.
+
+`scripts/scheduled-guide-run.sh` supports local generation for Monday/Thursday Toronto slots; it never commits or pushes. Scheduling, a persistent host and production release require separate Owner authorization. The first document-control guide passed all publishing gates and is published locally as an introduction plus nine linked web chapters, with ten unique hero images.

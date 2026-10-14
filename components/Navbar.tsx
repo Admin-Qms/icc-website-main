@@ -34,6 +34,7 @@ const NAV = [
   { href: "/services", label: "Standards" },
   { href: "/industries", label: "Industries" },
   { href: "/blog", label: "Blog" },
+  { href: "/guides", label: "Guides" },
   { href: "/about", label: "About" },
 ];
 
@@ -51,11 +52,22 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
     };
   }, [open]);
+
+  useEffect(() => {
+    const onResize = () => { if (window.innerWidth >= 1280) setOpen(false); };
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+    };
+  }, []);
 
   function openMenu() {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -66,7 +78,9 @@ export function Navbar() {
   }
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-50" onKeyDown={(event) => {
+      if (event.key === "Escape") { setOpen(false); setMenuOpen(false); }
+    }}>
       {/* Utility bar — trust + phone (hidden once scrolled to save space) */}
       <div
         className={`hidden overflow-hidden bg-navy-900 text-slate-300 transition-all duration-300 lg:block ${
@@ -99,18 +113,23 @@ export function Navbar() {
             : "border-transparent bg-white"
         }`}
       >
-        <nav className="container-page flex h-16 items-center justify-between lg:h-[70px]">
-          <Link href="/" className="group flex items-center" onClick={() => setOpen(false)} aria-label={`${SITE.name} home`}>
-            <Logo />
+        <nav aria-label="Main navigation" className="container-page flex h-16 items-center justify-between gap-5 xl:h-[76px]">
+          <Link href="/" className="group flex min-w-0 items-center xl:w-[300px] xl:shrink-0" onClick={() => setOpen(false)} aria-label={`${SITE.name} home`}>
+            <Logo tagline={false} singleLine />
           </Link>
 
-          <div className="hidden items-center gap-1 lg:flex">
+          <div className="hidden shrink-0 items-center gap-0.5 xl:flex">
             {/* Solutions dropdown */}
             <div className="relative" onMouseEnter={openMenu} onMouseLeave={scheduleClose}>
               <button
-                onClick={() => setMenuOpen((v) => !v)}
+                onClick={(event) => {
+                  // Pointer hover already opens the menu; its click should keep it open.
+                  if (closeTimer.current) clearTimeout(closeTimer.current);
+                  if (event.detail === 0) setMenuOpen((v) => !v);
+                  else setMenuOpen(true);
+                }}
                 aria-expanded={menuOpen}
-                className={`group relative flex items-center gap-1.5 rounded-md px-3.5 py-2 text-[15px] font-semibold transition-colors ${
+                className={`group relative flex items-center gap-1.5 whitespace-nowrap rounded-md px-2 py-2 text-sm font-semibold transition-colors ${
                   menuOpen ? "text-teal-700" : "text-navy-800 hover:text-teal-700"
                 }`}
               >
@@ -163,19 +182,19 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group relative rounded-md px-3.5 py-2 text-[15px] font-semibold text-navy-800 transition-colors hover:text-teal-700"
+                className="group relative whitespace-nowrap rounded-md px-2 py-2 text-sm font-semibold text-navy-800 transition-colors hover:text-teal-700"
               >
                 {item.label}
-                <span className="absolute inset-x-3.5 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded bg-teal-600 transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="absolute inset-x-2 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded bg-teal-600 transition-transform duration-300 group-hover:scale-x-100" />
               </Link>
             ))}
           </div>
 
-          <div className="hidden items-center gap-3 lg:flex">
-            <Link href="/assessment" className="btn-ghost px-4 py-2.5">
+          <div className="hidden shrink-0 items-center gap-2 xl:flex">
+            <Link href="/assessment" className="btn-ghost whitespace-nowrap px-2 py-2.5 text-sm">
               Free Assessment
             </Link>
-            <Link href="/contact" className="btn-primary px-5 py-2.5">
+            <Link href="/contact" className="btn-primary whitespace-nowrap px-4 py-2.5 text-sm">
               Book a Consultation
               <ArrowRight className="h-4 w-4" />
             </Link>
@@ -183,7 +202,9 @@ export function Navbar() {
 
           <button
             aria-label="Toggle menu"
-            className="relative z-50 grid h-10 w-10 place-items-center rounded-lg text-navy-900 lg:hidden"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            className="relative z-50 grid h-10 w-10 shrink-0 place-items-center rounded-lg text-navy-900 xl:hidden"
             onClick={() => setOpen((v) => !v)}
           >
             <span className="sr-only">Menu</span>
@@ -200,11 +221,12 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-navigation"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-slate-200 bg-white px-5 pb-8 pt-3 shadow-lg lg:hidden"
+            className={`overflow-y-auto border-b border-slate-200 bg-white px-5 pb-8 pt-3 shadow-lg xl:hidden ${scrolled ? 'max-h-[calc(100dvh-4rem)]' : 'max-h-[calc(100dvh-4rem)] lg:max-h-[calc(100dvh-6.5rem)]'}`}
           >
             <p className="px-1 pb-1 pt-2 text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
               Solutions

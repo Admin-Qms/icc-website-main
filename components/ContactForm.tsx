@@ -1,14 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check } from "./Icons";
 import { STANDARDS, SITE } from "@/lib/site";
 
 type Status = "idle" | "submitting" | "done" | "error";
 
-export function ContactForm() {
+export function ContactForm({ compact = false, title }: { compact?: boolean; title?: string }) {
   const [status, setStatus] = useState<Status>("idle");
+  const id = useId();
   // The Vercel function keeps email credentials and the recipient on the server.
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -41,7 +42,11 @@ export function ContactForm() {
   }
 
   return (
-    <div className="relative rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_20px_60px_-40px_rgba(22,43,77,0.5)] lg:p-9">
+    <div className={`relative rounded-2xl border border-slate-200 bg-white shadow-[0_20px_60px_-40px_rgba(22,43,77,0.5)] ${compact ? 'p-5 sm:p-6' : 'p-7 lg:p-9'}`}>
+      {title && status !== "done" && <div className="mb-5">
+        <h2 className="font-heading text-2xl font-bold text-navy-900">{title}</h2>
+        <p className="mt-2 text-sm leading-6 text-slate-600">Tell us about your operation and the support you need.</p>
+      </div>}
       <AnimatePresence mode="wait">
         {status === "done" ? (
           <motion.div
@@ -69,26 +74,27 @@ export function ContactForm() {
         ) : (
           <motion.form
             key="form"
+            aria-label={title || "Contact form"}
             onSubmit={onSubmit}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="space-y-5"
+            className={compact ? "space-y-4" : "space-y-5"}
           >
             {/* Honeypot: the server discards submissions where this is filled in. */}
             <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Full name" name="name" maxLength={100} required placeholder="Jordan Smith" />
               <Field label="Work email" name="email" type="email" maxLength={254} required placeholder="jordan@company.com" />
             </div>
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Company" name="company" maxLength={160} required placeholder="Acme Industries Ltd." />
               <Field label="Phone number (optional)" name="phone" type="tel" autoComplete="tel" maxLength={40} placeholder="+1 (416) 555-0123" />
             </div>
             <div>
-              <Label htmlFor="contact-standard">Standard of interest</Label>
+              <Label htmlFor={`${id}-standard`}>Standard of interest</Label>
               <select
-                id="contact-standard"
+                id={`${id}-standard`}
                 name="standard"
                 className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
                 defaultValue=""
@@ -105,12 +111,12 @@ export function ContactForm() {
               </select>
             </div>
             <div>
-              <Label htmlFor="contact-message">How can we help?</Label>
+              <Label htmlFor={`${id}-message`}>How can we help?</Label>
               <textarea
-                id="contact-message"
+                id={`${id}-message`}
                 name="message"
                 maxLength={5000}
-                rows={4}
+                rows={compact ? 3 : 4}
                 required
                 placeholder="Tell us about your operation and what you're certifying for…"
                 className="mt-1.5 w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition placeholder:text-slate-400 focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
@@ -164,11 +170,12 @@ function Field({
   maxLength: number;
   autoComplete?: string;
 }) {
+  const id = useId();
   return (
     <div>
-      <Label htmlFor={`contact-${name}`}>{label}</Label>
+      <Label htmlFor={id}>{label}</Label>
       <input
-        id={`contact-${name}`}
+        id={id}
         maxLength={maxLength}
         type={type}
         autoComplete={autoComplete}

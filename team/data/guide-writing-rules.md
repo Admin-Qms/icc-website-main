@@ -1,0 +1,20 @@
+# ICC software guide writing rules
+
+Write for Canadian quality and operations teams evaluating or implementing software. Explain roles, inputs, decisions, records, exceptions, evaluation criteria and rollout. Use ISO requirements as supporting context rather than the main structure.
+
+- Write the introduction and chapters in separate Markdown files. The page shell supplies the H1; body subsections use H2, and FAQ questions use H3.
+- Nine chapters, each 2,000–2,200 visible words. Introduction at least 1,500 words. Entire guide at most 20,000 words including introduction, FAQs and closing invitation. Target 19,500; never use repetitive filler.
+- Use third person or direct address, US spelling and naturally capitalized terminology. Avoid the blog rule file's banned filler phrases. Do not paste or bold raw SEO keywords.
+- Titles, descriptions, keywords and URLs are fixed by the final brief. Descriptions must be 120–160 characters. Chapter order comes from the manifest.
+- Use only the frozen primary sources and capability register entries. A primary source's existence is not proof of an unrelated claim. Cite the precise source that supports the point. Do not call historical ISO guidance the current edition; resolve edition conflicts before making edition claims.
+- Distinguish software evaluation criteria from product features. Pending or retired ICC capabilities cannot be advertised. Use verified ICC-specific evidence for every advertised capability.
+- Do not invent quotations, statistics, named clients, testimonials, client results or product behavior. Begin hypothetical scenarios with `**Illustrative example:**` and use unnamed businesses. Illustrative calculations must expose their assumptions and never describe actual results.
+- Cover each chapter's distinct scope. Use paragraphs, practical tables, steps and decision criteria where helpful. Avoid repeating definitions, introductions, examples or closing language across chapters.
+- Include 8–10 distinct FAQ answers across the guide. Put them in the assigned FAQ subsection; do not repeat the same FAQ on every chapter. The last chapter closes with an invitation to request a software demonstration at `/contact/`.
+- Each page has its own managed industrial hero brief. Use manufacturing workflow scenes; no generic office scenes, fabricated product screenshots, logos or readable invented interface text. Do not emit inline image markers or untracked image links; the guide pipeline rejects them until inline provenance is supported.
+- Use short paragraphs, clear role/input/decision/record/exception explanations and practical evaluation criteria. A table, list or Important/Key Consideration callout should help the decision, never fill a formatting quota. Each FAQ answer must give actionable detail, rather than a question heading with a token answer.
+- Read `guide-context.json` and the exact subsection brief. Preserve the reviewed glossary, example and decisions. Review each chapter before writing the next; edits to an earlier chapter require re-review of affected downstream chapters.
+- Aim near 2,000 chapter words, but use `guide budget` to determine the actual allowed maximum. Reserve at least 2,000 for each unwritten chapter and 1,500 for the introduction. Length or editorial corrections target named subsections; preserve exact citations and factual quantities.
+- Source and chapter reviews are required. Missing audit credentials, stale review hashes, unresolved accuracy/repetition findings or broken links block publication. Never edit checks or evidence to make a failed draft pass.
+
+Before checkpointing a page, count visible words, check its assigned scope and evidence, remove duplicate explanations, verify internal destinations and flag any statement the frozen evidence does not support.
