@@ -28,13 +28,18 @@ function createGuideManager({ store = defaultStore, model, reviewer, editModel, 
   };
   function prepareGuide(options = {}) {
     if (options.scheduled) {
-      const due = dueGuideSlot(options.now || new Date());
+      // A scheduled run finishes what it started before reserving anything new: an
+      // unpublished slot job from any week is resumed on any day, so an interrupted
+      // cloud run is never orphaned. Only on a production day with no open job does
+      // the run reserve the slot due today.
+      const now = options.now || new Date();
+      const publishedTopicIds = new Set(store.published().map(g => g.manifest.topicId));
+      const open = store.listJobs().filter(j => j.productionSlotId && !publishedTopicIds.has(j.topic.id)).sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
+      if (open.length) return { success: true, resumed: true, job: store.resumeJob(open[0].id) };
+      const due = dueGuideSlot(now);
       if (!due) return { skipped: true, reason: 'No guide production slot due today' };
-      const jobs = store.listJobs().map(j => store.resumeJob(j.id));
-      const next = nextGuideSlot([due], store.published(), jobs);
-      if (!next) return { skipped: true, reason: 'Guide production slot already generated' };
-      if (next.jobId) return { success: true, resumed: true, job: store.resumeJob(next.jobId) };
-      options.productionSlotId = next.slotId;
+      if (!nextGuideSlot([due], store.published(), [])) return { skipped: true, reason: 'Guide production slot already generated' };
+      options.productionSlotId = due;
     }
     if (options.productionSlotId && !weeklyGuideSlots(options.now || new Date()).includes(options.productionSlotId)) throw new Error('Production slot must belong to the current Toronto week');
     const topic = researcher.selectGuideTopic({ topicId: options.topicId, topicText: options.topic,

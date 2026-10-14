@@ -105,9 +105,13 @@ QA GATE REPORT:
 
 If any issue is found during this gate, fix it before reporting. Do not report issues and ask if the user wants them fixed — fix them first, then report what was found and fixed.
 
-## Scheduled Blog Run (exception to the process below)
+## Scheduled Blog and Guide Runs (exceptions to the process below)
 
-The scheduled blog run described in `team/ROUTINE.md` and approved in the root `CLAUDE.md` publishes a gate-passing article to `main` through `team/scripts/scheduled-run.sh` without a local review, a Playwright run or an "approved, push to production" message. Its push contains only `content/blog/` and `public/images/blog/`. Everything else in this file still applies to interactive sessions.
+The scheduled blog run described in `team/ROUTINE.md` and approved in the root `CLAUDE.md` publishes a gate-passing article to `main` through `team/scripts/scheduled-run.sh` without a local review, a Playwright run or an "approved, push to production" message. Its push contains only `content/blog/` and `public/images/blog/`.
+
+The scheduled guide run described in `team/GUIDE-ROUTINE.md` and approved in the root `CLAUDE.md` does the same for a software guide through `team/scripts/scheduled-guide-run.sh`: its push to `main` contains only `content/guides/` and `public/images/guides/`, and its pushes to the `guide-state` branch contain only `team/drafts/guides/` and `team/reports/guides/`.
+
+Everything else in this file still applies to interactive sessions.
 
 ## Development Process (NON-NEGOTIABLE)
 

@@ -1,6 +1,12 @@
 # ICC guide routine
 
-Status: implemented locally, schedule inactive. Target: two **complete guides** per Toronto ISO week, using Monday and Thursday production slots. Daily blogs retain their separate cadence. Confirm the execution host, persistence and run time before activation.
+Status: created as the Claude Code cloud routine `icc-guides` (2026-10-15, `trig_01QCftVc3PfJZmDPjnr6q4MP`), Monday and Thursday 08:00 UTC (4:00 AM Toronto in summer, 3:00 AM in winter), same cloud environment and tools as the blog routine, no MCP connectors. It stays disabled until the commit that added the cloud commands is on `main`; enable it at https://claude.ai/code/routines after the push. Target: two **complete guides** per Toronto ISO week, using the Monday and Thursday production slots. Daily blogs retain their separate cadence. The routine's prompt is the block at the end of this file; the standing approval that lets it push a gate-passing guide to `main` is in the root `CLAUDE.md`.
+
+## How the cloud run keeps state
+
+A cloud run starts from a fresh clone, and `team/drafts/guides/` and `team/reports/guides/` are gitignored. `scheduled-guide-run.sh` therefore keeps them on the orphan branch `guide-state`: `prepare` restores the branch into the checkout before `guide brief --scheduled`, and `save-state`, `review` and `publish` push the folders back (lock files are never saved; they belong to a sandbox that no longer exists). A run that ends mid-guide loses nothing that was saved, and the next run resumes the same job: in scheduled mode `guide brief` resumes any unpublished slot job, from any week and on any day, before it reserves a new slot. A reviewed-but-unsaved page is lost, which is why the prompt saves after every reviewed page.
+
+The branch holds drafts only. Vercel, once connected, should ignore builds for `guide-state` (Project Settings → Git → Ignored Build Step), and the GitHub Action only builds `main`.
 
 The shared `keywordResearcher` selects an approved software topic from `memory/guide-topic-queue.json` and supplies primary-source queries. The queue is a backlog of subjects, not a second research agent. Explicit assignments use `guide brief --topic-id <id>` or an exact approved topic/alias. Unknown topics require editorial approval before entering the queue.
 
@@ -9,16 +15,22 @@ The shared `keywordResearcher` selects an approved software topic from `memory/g
 Run commands from the repository root:
 
 ```bash
-bash team/scripts/scheduled-guide-run.sh prepare
+# Scheduled cloud run (what the routine does; publish pushes to main under the standing approval)
+bash team/scripts/scheduled-guide-run.sh prepare            # GUIDE_BRIEF <folder> | NOTHING_TO_GENERATE | GUIDE_FAILED
+bash team/scripts/scheduled-guide-run.sh save-state <note>  # after every checkpointed, reviewed page
+bash team/scripts/scheduled-guide-run.sh review <job-id>    # REVIEW_PASSED <job-id> | GUIDE_FAILED
+bash team/scripts/scheduled-guide-run.sh publish <job-id>   # PUBLISHED <title> | GUIDE_FAILED
+
+# Local, interactive use (never touches git)
+node team/pm.js guide brief --next
 node team/pm.js guide research --fixture <research.json>
-# Codex writes the assigned Markdown using .agents/skills/write-software-guide/SKILL.md.
+# Claude or Codex writes the assigned Markdown using the write-software-guide skill.
 # Optional configured API writer:
 bash team/scripts/scheduled-guide-run.sh generate <job-id>
-bash team/scripts/scheduled-guide-run.sh review <job-id>
 bash team/scripts/scheduled-guide-run.sh publish-local <job-id>
 ```
 
-`prepare` skips non-production days or completed slots and resumes an interrupted job in the due slot. Topic and slot reservations are exclusive. A successful dry-run requires all ten pages, their images and every gate; it records completed generation and consumes its weekly slot even before remote release. Drafts that fail do not count as generated. Two concurrent publications are rejected through a shared lock.
+`prepare` resumes any unpublished slot job first; otherwise it skips non-production days and already-published slots, and reserves the slot due today. Topic and slot reservations are exclusive. A successful dry-run requires all ten pages, their images and every gate. In the scheduled run a slot counts as complete only once its guide is in `content/guides/`; a generated but unpublished job is resumed and published by the next run. Two concurrent publications are rejected through a shared lock.
 
 Research requires retrieved primary evidence, approved exact URLs and supported claims. Product promises require verified entries in `data/software-capabilities.json`. Current candidate entries are pending: generic evaluation advice is allowed, advertising those capabilities is blocked. A missing model audit or unresolved finding blocks publication.
 
@@ -36,9 +48,9 @@ Images have individual provenance checkpoints. Retries verify stored bytes, dime
 
 ## Release boundary
 
-The runner generates and publishes locally; it never switches branches, resets a checkout, commits or pushes. The existing blog routine's standing approval does not cover guides.
+The scheduled run's `publish` command is the only automated path to `main`, and it is covered by the guide standing approval in the root `CLAUDE.md` (the blog approval does not cover guides). It runs `guide publish`, the pipeline tests, the site build and both guide export checkers, stages only `content/guides/` and `public/images/guides/`, commits, pulls `main`, re-verifies if the pull brought changes, pushes, then saves the job state. Drafts, reports, credentials and code never enter that commit.
 
-For an explicitly authorized production release, use a dedicated clean checkout, include only the new guide manifest, introduction, nine chapter files and ten image files, run the pipeline tests, build and both guide export checkers, and review the exact staged allowlist. Pull before pushing and rerun validation after pulled changes. Never include drafts, reports, credentials or unrelated code in a content release. Record local generation separately from production release.
+The local commands (`research`, `generate`, `publish-local`) never switch branches, reset a checkout, commit or push. A manual production release of a locally published guide follows the same allowlist: a clean checkout, only the guide manifest, introduction, nine chapters and ten images, tests, build and both checkers, pull before push.
 
 The document-control guide contains an introduction and nine chapters totaling 19,906 visible words. All ten page reviews, the whole-guide audit and 456 publishing checks passed. At the Owner's request, it is now published locally in `content/guides/document-control-software/` with ten unique industrial hero images in `public/images/guides/document-control-software/`. These website pages are separate from the previously exported review PDF. Production release and routine activation remain separate operations. System tests use clearly synthetic content in temporary directories to establish pipeline behavior.
 
@@ -52,31 +64,33 @@ The API writer command reviews each written page before the runner advances. Dir
 
 `guide preview --job <id> --port 3502` is an interactive long-running development server using the real site renderer. It rejects production mode, labels the draft, adds noindex headers/metadata and serves only allowlisted, hash-verified job images. It does not copy draft content or assets into public directories. Stop the preview after inspection.
 
-## Claude Code routine instructions
+## Claude Code routine instructions — the routine's prompt
 
-The dedicated routine is separate from the daily blog routine. Its target is two complete guides per Toronto ISO week. Monday and Thursday are the supported production days; activation still requires the execution host and start time. Use a persistent working directory or restore the ignored guide state before every run. The generation instructions below stop at a reviewed draft. Automatic production release is not enabled by this prompt.
-
-Copy the following instructions into the guide routine:
+The text below is the prompt of the cloud routine `icc-guides`. It is written for a fresh clone of `Admin-Qms/icc-website-main` with the same environment as the blog routine (LLM and image keys in its variables). If this text changes, update the routine too.
 
 ---
 
-Generate an ICC software guide for Canadian quality and operations teams in this repository. Use the `write-software-guide` skill at `.claude/skills/write-software-guide/SKILL.md`. This is the dedicated guide routine; leave the daily blog routine separate.
+You are running the scheduled guide run for isocertificationconsultants.ca. Work only in this repository. Do not ask for approval; the repository's CLAUDE.md grants it for this run. Use the `write-software-guide` skill (`.claude/skills/write-software-guide/SKILL.md`): read it, `team/GUIDE-WRITER.md` and `team/data/guide-writing-rules.md` in full before writing. The daily blog routine is separate; leave it alone.
 
-1. Run `bash team/scripts/scheduled-guide-run.sh prepare`. Inspect the full output, not only its final line: the CLI prints a marker followed by JSON. If it contains `NOTHING_TO_GENERATE`, report the skip reason and stop. If the command fails or contains `GUIDE_FAILED`, report the failed stage and stop. Otherwise retain the returned managed job ID and draft directory. Preparation may resume an existing job in today's slot; do not reserve another topic for it.
-2. Read the assignment, managed state and guide-writing skill. If research and a frozen outline already exist, resume that workflow; do not replace the outline after writing has started. Otherwise retrieve primary sources using authorized research tools, record precise approved URLs and supported claims in a research fixture, prepare and inspect a topic-specific enriched outline, and checkpoint it through `guide research`. Unverified ICC product capabilities must remain evaluation questions. Missing primary evidence or an unavailable approved URL is a research failure, not permission to invent support or edit the link bank.
-3. Write chapters yourself in manifest order, using each fixed brief, the reviewed shared context and earlier chapters. Before each page, inspect `guide budget`. Preserve an existing page; read it and correct only an affected subsection when necessary. Checkpoint each page and run `guide review-chapter` before advancing. Only the final chapter receives the assigned FAQs. A missing, failed or stale review blocks the next chapter.
-4. Write and review the introduction after all nine chapters pass. Its page identifier is the guide slug, not the word `introduction`. Keep the inclusive guide within its word budget, match the introduction to actual chapter coverage, and retain the final chapter's demonstration invitation at `/contact/`.
-5. Run `bash team/scripts/scheduled-guide-run.sh review <job-id>`. This performs the independent whole-guide audit, a dry run that prepares unique images, and final validation. Inspect every finding and command exit status. All pages, required reviews, metadata, links and images must pass before reporting completed generation. A failed draft does not count as a completed guide.
-6. For a failed editorial stage, make targeted corrections and repeat its required review at most twice. Preserve original attempts. If a failure remains, or an infrastructure, credential, lock or integrity error occurs, retain the draft and report the exact stage. Do not start a different topic, rewrite managed state or remove locks to conceal the failure.
+1. Run `bash team/scripts/scheduled-guide-run.sh prepare` and read its last line.
+   - `NOTHING_TO_GENERATE`: no slot is due today, or it is already published. Report the reason printed above it and stop.
+   - `GUIDE_FAILED`: report the output and stop.
+   - `GUIDE_BRIEF <folder>`: continue. The job ID is the folder's name. The JSON printed before the status line says whether the job was `resumed`; if so, read `<folder>/state.json` and continue from the first unfinished stage. Everything that already exists in the folder is preserved, never rewritten.
+2. Research, unless `<folder>/research.json` and `<folder>/outline.json` already exist. Read `<folder>/brief.md`, retrieve the primary sources with WebSearch and WebFetch, and write `<folder>/research-input.json` from `research-template.json`: exact approved URLs from `team/data/external-link-bank.json`, attribution, retrieval dates and the claims each source supports. Run `node team/pm.js guide outline --fixture <folder>/research-input.json`, inspect the proposal, then `node team/pm.js guide research --fixture <folder>/research-with-outline.json`, then `bash team/scripts/scheduled-guide-run.sh save-state research`. Missing primary evidence or an unapproved URL is a failed research stage: report it and stop. Never invent support and never edit the link bank.
+3. Write the nine chapters in `guide.json` order, then the introduction (its page identifier is the guide slug), each from its `chapter-briefs/<slug>.md`, the shared context and the earlier reviewed chapters. Before each page run `node team/pm.js guide budget --job <id> --page <slug>` and stay inside the reported range. A page file that already exists is preserved. After writing a page run `node team/pm.js guide checkpoint --job <id> --page <slug>` and `node team/pm.js guide review-chapter --job <id> --page <slug>`; fix findings with targeted edits (or `guide revise`), at most two passes, then checkpoint and re-review. Once the page passes run `bash team/scripts/scheduled-guide-run.sh save-state <slug>`. A failed, skipped or stale review blocks the next page. Only the final chapter carries the FAQs and the demonstration invitation to `/contact/`.
+4. Run `bash team/scripts/scheduled-guide-run.sh review <job-id>` (independent whole-guide audit, dry run that sources the ten images, final validation) and read its last line. On `GUIDE_FAILED` from an editorial finding: correct only the affected Markdown, checkpoint and re-review that page, and run step 4 again. Do this at most twice, then report the remaining findings and stop. On any other failure (credentials, images, locks, integrity) report the output and stop.
+5. Run `bash team/scripts/scheduled-guide-run.sh publish <job-id>` and read its last line.
+   - `PUBLISHED <title>`: report the title, the slug and the ten page paths. If the output contains image-provider fallback lines, quote them. Then stop.
+   - `GUIDE_FAILED`: report the output and stop. Do not retry a failed install, test, build, image, lock or git step.
 
-Rules for this run:
+The session may end before the guide is complete. That is acceptable: every `save-state` is pushed to the `guide-state` branch and the next run resumes the same job. Save state after every reviewed page and never leave a reviewed page unsaved.
 
-- Work in managed drafts and reports. Never hand-write public guide files or copy draft images into `public/`.
-- Never publish locally, commit, push, change branches or modify code, skills, checks, fixed metadata, queues, rules, the link bank, standards facts, capability verification or credentials.
-- Use third person or direct address, US spelling and clearly labeled hypothetical examples. Do not invent customers, testimonials, statistics, quotations, software capabilities or results.
-- Preserve job and reservation state for recovery. Do not launch the interactive preview server during unattended generation; report the preview command for later editorial inspection.
-- Report the topic, job ID, chapter review count, actual total words, audit result, final gate result and draft directory. Report image-provider failures or fallbacks when present. Distinguish generated drafts from production publication.
+Rules that override anything else you might consider:
+- Never edit code, prompts, skills, checks, rules, the link bank, the standards or capability files, the topic queue, `state.json`, `guide.json`, `outline.json`, `research.json`, `chapter-briefs/` or any fixed frontmatter. If a check seems wrong, say so in your report; do not work around it.
+- Never commit or push anything yourself; the script does it: drafts to `guide-state`, the finished guide to `main`, and nothing else.
+- Never force-push, never change branches, never delete a lock file, never touch `team/.env` or any key, never hand-write files into `content/guides/` or `public/images/guides/`, never start the preview server.
+- Use third person or direct address and US spelling. Never invent companies, people, quotes, statistics, results or ICC software capabilities. A scenario starts with `**Illustrative example:**` and names no business. Unverified capabilities are evaluation questions, not promises.
 
-End with: `RESULT: generated | nothing to generate | failed — <stage and reason>`.
+End your report with one line: `RESULT: published | in progress — <pages reviewed>/10 saved | nothing to generate | failed — <stage and reason>`.
 
 ---

@@ -22,10 +22,10 @@ You report to **the Owner (CEO)** — the human. the Owner sets vision, approves
 - Deployment: repo `https://github.com/Admin-Qms/icc-website-main`. The live site (isocertificationconsultants.ca) is a Vercel project; once it is connected to this repo, every push to `main` deploys. The GitHub Action that builds the export to the `deploy` branch (for cPanel) is kept as a backup.
 - Brand: the company is **ISO Certification Consultants Inc.** (plural) — `SITE` in `lib/site.ts` is the source for name, domain, email, logo path, the Web3Forms key and the BBB profile. The contact form posts to Web3Forms (no server in a static export).
 - Testing: `npm --prefix team test` (node:test) for the blog pipeline; `npm run build` for the site
-- Scheduling: a Claude Code cloud routine (prompt in `team/ROUTINE.md`, script in `team/scripts/scheduled-run.sh`) that publishes a gate-passing article straight to `main` every morning. See the standing approval section below.
+- Scheduling: a Claude Code cloud routine (prompt in `team/ROUTINE.md`, script in `team/scripts/scheduled-run.sh`) that publishes a gate-passing article straight to `main` every morning, and a second routine (prompt in `team/GUIDE-ROUTINE.md`, script in `team/scripts/scheduled-guide-run.sh`) that writes and publishes a software guide on Mondays and Thursdays, keeping unfinished drafts on the `guide-state` branch. See the standing approval sections below.
 
 **What is active and what is not:**
-- **Active:** the daily blog pipeline — `node team/pm.js blog publish` (see `team/README.md`).
+- **Active:** the daily blog pipeline — `node team/pm.js blog publish` (see `team/README.md`) — and the twice-weekly guide pipeline — `node team/pm.js guide ...` driven by `team/scripts/scheduled-guide-run.sh` (see `team/GUIDE-ROUTINE.md`).
 - **Switched off:** every other agent in `team/` (SEO audits, security scans, morning report, web-dev agents, LinkedIn, analytics, mega-articles). They are kept for reference, still target the previous site (Sanity, Vercel, old pages) and cannot run as-is. The organizational chart below describes that wider design, not what currently runs.
 
 **Working rule:** Always `git pull` before `git push`. Commits stay local until the Owner asks for a push.
@@ -552,6 +552,7 @@ The previous sprint table (BlogPosting schema, canonicals, contact form, OG imag
 | 6 | Cloud environment `icc-blog` (Owner) + routine via `/schedule` | DONE (2026-10-05; first scheduled article on `main`) |
 | 7 | Vercel project connected to this repo; `www` domain added | PENDING (Owner) |
 | 8 | Owner feedback round 1: plural brand and domain, wordmark + BBB seal, Web3Forms contact form, "Canadian companies" wording, FAQ accordion | DONE (2026-10-06); Web3Forms key and logo file pending (Owner) |
+| 9 | Guide routine `icc-guides` (Mon + Thu): `scheduled-guide-run.sh` cloud commands, `guide-state` branch, standing approval | DONE (2026-10-15); first scheduled guide pending |
 
 ---
 
@@ -564,6 +565,19 @@ When a session's prompt is the scheduled blog run (the text in `team/ROUTINE.md`
 3. Running `bash team/scripts/scheduled-run.sh publish <draft.json>`, which commits only the new article and its images and pushes that commit to `main`.
 
 That run may not: edit code, prompts, checks, rules, the link bank or the standards file; commit or push anything itself; force-push; change the title or meta description; or retry a failed pipeline more than twice. The start-up banner below is for interactive sessions and is not printed by the scheduled run.
+
+## SCHEDULED GUIDE RUN — STANDING APPROVAL
+
+When a session's prompt is the scheduled guide run (the prompt block at the end of `team/GUIDE-ROUTINE.md`, run by the Claude Code cloud routine `icc-guides` against this repository), the Owner has approved in advance, with no further confirmation, exactly this:
+
+1. Running `bash team/scripts/scheduled-guide-run.sh prepare`, which restores unfinished guide drafts from the `guide-state` branch and reserves or resumes the production slot.
+2. Researching the assigned topic with the web tools, writing the research fixture, and running `node team/pm.js guide outline` and `guide research` to freeze the outline and chapter briefs.
+3. Writing the nine chapters and the introduction in the managed draft folder, following `.claude/skills/write-software-guide/SKILL.md`, `team/GUIDE-WRITER.md` and `team/data/guide-writing-rules.md`, with `guide checkpoint`, `guide review-chapter` and `guide revise` for each page.
+4. Running `bash team/scripts/scheduled-guide-run.sh save-state`, which pushes only `team/drafts/guides` and `team/reports/guides` to the `guide-state` branch.
+5. Running `bash team/scripts/scheduled-guide-run.sh review <job-id>` (audit, dry run with images, validation).
+6. Running `bash team/scripts/scheduled-guide-run.sh publish <job-id>`, which commits only the new guide's manifest, ten pages and ten images and pushes that commit to `main`.
+
+That run may not: edit code, prompts, skills, checks, rules, the link bank, the standards or capability files, the topic queue or any frozen job state; commit or push anything itself; force-push; delete lock files; hand-write anything into `content/guides/` or `public/images/guides/`; start the preview server; or retry a failed editorial stage more than twice. The blog approval above does not cover guides and this approval does not cover blogs.
 
 ## START
 

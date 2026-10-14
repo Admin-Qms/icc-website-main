@@ -1,6 +1,6 @@
 # team/ — content pipelines
 
-The daily blog pipeline is active. Software guides have a separate local pipeline with a shared researcher; their twice-weekly schedule is inactive. Other agents (SEO, security, ops, growth, web and legacy mega-articles) remain switched off.
+The daily blog pipeline is active. Software guides have a separate pipeline with a shared researcher, run twice a week (Monday and Thursday) by the cloud routine `icc-guides`; see `GUIDE-ROUTINE.md`. Other agents (SEO, security, ops, growth, web and legacy mega-articles) remain switched off.
 
 ## Setup
 
@@ -91,4 +91,4 @@ Guides consist of `content/guides/<slug>/guide.json`, `introduction.md` and nine
 
 The static site exposes `/guides/`, `/guides/<slug>/` and `/guides/<slug>/<chapter>/`. Before the first accepted guide, the library has an honest empty state. After `npm run build`, run `node team/scripts/check-guide-links.js` and `node team/scripts/check-guide-metadata.js`.
 
-`scripts/scheduled-guide-run.sh` supports local generation for Monday/Thursday Toronto slots; it never commits or pushes. Scheduling, a persistent host and production release require separate Owner authorization. The first document-control guide passed all publishing gates and is published locally as an introduction plus nine linked web chapters, with ten unique hero images.
+`scripts/scheduled-guide-run.sh` has two halves. `prepare`, `save-state`, `review` and `publish` are what the cloud routine runs: they keep unfinished drafts on the `guide-state` branch and, under the guide standing approval in the root `CLAUDE.md`, push a gate-passing guide to `main`. `research`, `generate` and `publish-local` are for local, interactive use and never touch git. The first document-control guide passed all publishing gates and is published as an introduction plus nine linked web chapters, with ten unique hero images.
