@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { ArrowRight, ChevronDown, Phone } from "./Icons";
 import { SITE } from "@/lib/site";
@@ -458,6 +459,17 @@ export function ChatWidget() {
           </div>
 
           {unreadReply && <button type="button" onClick={showReply} className="min-h-11 shrink-0 border-t border-teal-200 bg-teal-50 px-3 text-sm font-semibold text-teal-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-700">View new reply</button>}
+
+          <div className="shrink-0 bg-slate-50 px-3 py-2.5">
+            <Link
+              href="/contact/"
+              onClick={closeChat}
+              className="inline-flex min-h-11 items-center gap-2 rounded-full border border-gold-300 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-navy-900 transition hover:bg-amber-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-700 sm:min-h-9"
+            >
+              <Phone className="h-3.5 w-3.5 text-gold-700" aria-hidden="true" />
+              Speak to us
+            </Link>
+          </div>
 
           <form
             onSubmit={(event) => {
