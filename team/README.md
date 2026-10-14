@@ -1,6 +1,6 @@
 # team/ — content pipelines
 
-The daily blog pipeline is active. Software guides have a separate pipeline with a shared researcher, run twice a week (Monday and Thursday) by the cloud routine `icc-guides`; see `GUIDE-ROUTINE.md`. Other agents (SEO, security, ops, growth, web and legacy mega-articles) remain switched off.
+The daily blog pipeline is active. Software guides have a separate pipeline with a shared researcher, run twice a week (Monday and Thursday) by the cloud routine `icc-guides`; see `GUIDE-ROUTINE.md`. A weekly topic scout (`icc-scout`, Sundays) keeps both topic queues stocked; see `SCOUT-ROUTINE.md`. Other agents (SEO, security, ops, growth, web and legacy mega-articles) remain switched off.
 
 ## Setup
 

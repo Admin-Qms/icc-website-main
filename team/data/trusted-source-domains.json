@@ -1,0 +1,18 @@
+{
+  "note": "Domains whose pages the topic scout may add to external-link-bank.json without a human looking first (standards bodies, accreditation bodies, regulators, and ICC's own site). A hostname matches when it equals an entry or ends with '.' + entry. A proposed guide topic is auto-approved only when every one of its sources is on this list and fetched successfully; otherwise it waits as 'proposed'. Edit freely.",
+  "domains": [
+    "iso.org",
+    "iec.ch",
+    "nist.gov",
+    "canada.ca",
+    "gc.ca",
+    "ontario.ca",
+    "scc-ccn.ca",
+    "iaf.nu",
+    "iafcertsearch.org",
+    "iatfglobaloversight.org",
+    "aiag.org",
+    "vda-qmc.de",
+    "isocertificationconsultants.ca"
+  ]
+}

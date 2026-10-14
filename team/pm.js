@@ -2123,4 +2123,5 @@ linkedinCmd
   });
 
 require('./agents/content/guideCLI').registerGuideCommands(program);
+require('./agents/content/scoutCLI').registerScoutCommands(program);
 program.parse();
