@@ -1,0 +1,11 @@
+{
+  "note": "Domains the topic scout may never cite as a guide source, whatever the reviewer says: social networks, forums, user-generated and aggregator sites, review marketplaces and content farms. A hostname matches when it equals an entry or ends with '.' + entry. Edit freely.",
+  "domains": [
+    "reddit.com", "quora.com", "medium.com", "substack.com", "linkedin.com", "facebook.com", "x.com", "twitter.com",
+    "youtube.com", "tiktok.com", "instagram.com", "pinterest.com", "wikipedia.org", "wikihow.com", "fandom.com",
+    "blogspot.com", "wordpress.com", "tumblr.com", "weebly.com", "wix.com", "squarespace.com", "github.io",
+    "capterra.com", "g2.com", "softwareadvice.com", "getapp.com", "trustradius.com", "trustpilot.com",
+    "scribd.com", "slideshare.net", "coursehero.com", "studocu.com", "academia.edu", "docplayer.net",
+    "amazon.com", "amazon.ca", "ebay.com", "alibaba.com"
+  ]
+}

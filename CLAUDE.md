@@ -22,7 +22,7 @@ You report to **the Owner (CEO)** — the human. the Owner sets vision, approves
 - Deployment: repo `https://github.com/Admin-Qms/icc-website-main`. The live site (isocertificationconsultants.ca) is a Vercel project; once it is connected to this repo, every push to `main` deploys. The GitHub Action that builds the export to the `deploy` branch (for cPanel) is kept as a backup.
 - Brand: the company is **ISO Certification Consultants Inc.** (plural) — `SITE` in `lib/site.ts` is the source for name, domain, email, logo path, the Web3Forms key and the BBB profile. The contact form posts to Web3Forms (no server in a static export).
 - Testing: `npm --prefix team test` (node:test) for the blog pipeline; `npm run build` for the site
-- Scheduling: a Claude Code cloud routine (prompt in `team/ROUTINE.md`, script in `team/scripts/scheduled-run.sh`) that publishes a gate-passing article straight to `main` every morning, and a second routine (prompt in `team/GUIDE-ROUTINE.md`, script in `team/scripts/scheduled-guide-run.sh`) that writes and publishes a software guide on Mondays and Thursdays, keeping unfinished drafts on the `guide-state` branch, and a third (prompt in `team/SCOUT-ROUTINE.md`, script in `team/scripts/scheduled-scout-run.sh`) that tops up both topic queues every Sunday, auto-approving guide topics only when every source is on `team/data/trusted-source-domains.json`. See the standing approval sections below.
+- Scheduling: a Claude Code cloud routine (prompt in `team/ROUTINE.md`, script in `team/scripts/scheduled-run.sh`) that publishes a gate-passing article straight to `main` every morning, and a second routine (prompt in `team/GUIDE-ROUTINE.md`, script in `team/scripts/scheduled-guide-run.sh`) that writes and publishes a software guide on Mondays and Thursdays, keeping unfinished drafts on the `guide-state` branch, and a third (prompt in `team/SCOUT-ROUTINE.md`, script in `team/scripts/scheduled-scout-run.sh`) that tops up both topic queues every Sunday, approving guide topics through an independent reviewer gate with no human step. See the standing approval sections below.
 
 **What is active and what is not:**
 - **Active:** the daily blog pipeline — `node team/pm.js blog publish` (see `team/README.md`) — and the twice-weekly guide pipeline — `node team/pm.js guide ...` driven by `team/scripts/scheduled-guide-run.sh` (see `team/GUIDE-ROUTINE.md`).
@@ -553,7 +553,7 @@ The previous sprint table (BlogPosting schema, canonicals, contact form, OG imag
 | 7 | Vercel project connected to this repo; `www` domain added | PENDING (Owner) |
 | 8 | Owner feedback round 1: plural brand and domain, wordmark + BBB seal, Web3Forms contact form, "Canadian companies" wording, FAQ accordion | DONE (2026-10-06); Web3Forms key and logo file pending (Owner) |
 | 9 | Guide routine `icc-guides` (Mon + Thu): `scheduled-guide-run.sh` cloud commands, `guide-state` branch, standing approval | DONE (2026-10-15); first scheduled guide pending |
-| 10 | Topic scout routine `icc-scout` (Sun): `topicScout.js`, trusted domains, auto-approval, standing approval | DONE (2026-10-15) |
+| 10 | Topic scout routine `icc-scout` (Sun): `topicScout.js`, blocked/trusted domains, independent reviewer gate, standing approval | DONE (2026-10-15) |
 
 ---
 
@@ -586,9 +586,9 @@ When a session's prompt is the weekly topic scout (the prompt block at the end o
 
 1. Running `bash team/scripts/scheduled-scout-run.sh prepare`.
 2. Researching topics and primary sources with the web tools and writing `team/reports/scout-proposals.json`.
-3. Running `bash team/scripts/scheduled-scout-run.sh apply <proposals.json>`, which validates the proposals through `team/agents/content/topicScout.js`, appends blog keywords to `team/memory/keyword-queue.json`, appends guide topics to `team/memory/guide-topic-queue.json` (as `approved` only when every source is on `team/data/trusted-source-domains.json` and was fetched successfully, otherwise as `proposed`), adds those auto-approved sources to `team/data/external-link-bank.json`, commits only those three files and pushes to `main`.
+3. Running `bash team/scripts/scheduled-scout-run.sh apply <proposals.json>`, which validates the proposals through `team/agents/content/topicScout.js`, appends blog keywords to `team/memory/keyword-queue.json`, and appends guide topics to `team/memory/guide-topic-queue.json` as `approved` only after all three gates pass: the hard rules in code (including `team/data/blocked-source-domains.json`), every source fetched with HTTP 200 and mentioning the topic, and an independent reviewer pass of the five rules in `REVIEW_RULES`. Approved sources go into `team/data/external-link-bank.json`. The script commits only those three files and pushes to `main`.
 
-That run may not: edit code, prompts, checks, the trusted-domain list, the capability or standards files, or any queue or bank file by hand; commit or push anything itself; force-push; propose a URL it did not open; or approve a topic any other way than through the trusted-domain rule. Topics it leaves as `proposed` wait for the Owner.
+That run may not: edit code, prompts, checks, the domain lists, the capability or standards files, or any queue or bank file by hand; commit or push anything itself; force-push; propose a URL it did not open; or approve a topic any other way than through the reviewer gate. No step waits for the Owner: a reviewer rejection discards the topic and a reviewer outage parks it for automatic re-review on the next run.
 
 ## START
 

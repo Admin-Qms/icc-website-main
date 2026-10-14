@@ -1,11 +1,21 @@
-// Topic scout: keeps the blog keyword queue and the guide topic queue from running dry.
+// Topic scout: keeps the blog keyword queue and the guide topic queue from running dry
+// with no human in the loop.
 //
 // The scheduled scout session does the web research and writes a proposals file; this
 // module is the deterministic half. `scoutStatus` tells the session what is needed and
-// `applyProposals` validates every proposal, writes the queues and the link bank, and
-// reports what it accepted. A guide topic is auto-approved only when every source is on
-// the trusted-domain list and fetched successfully; otherwise it is queued as
-// 'proposed' with its candidate sources for a human to approve.
+// `applyProposals` validates every proposal, has each guide topic judged by an
+// independent reviewer, writes the queues and the link bank, and reports what happened.
+//
+// A guide topic is approved only when ALL of these hold:
+//   1. hard rules in code: slug, no duplicate against topics/aliases/keywords, ICC module
+//      slugs, AS9100/ISO 27001 excluded, >= 2 https sources with one outside ICC's site,
+//      no source on the blocked-domain list, queue caps;
+//   2. every source fetched successfully (HTTP 200) and its page text mentions the topic;
+//   3. an independent reviewer (the configured LLM, a different prompt from the proposer,
+//      shown the fetched page text rather than the proposer's claims) passes every rule
+//      in REVIEW_RULES.
+// A reviewer failure rejects the topic. Only a reviewer OUTAGE leaves a topic `proposed`,
+// and the next run re-reviews it. Nothing waits for a person.
 const fs = require('node:fs');
 const path = require('node:path');
 const guideConfig = require('../shared/guideConfig');
@@ -20,6 +30,7 @@ const DEFAULT_PATHS = Object.freeze({
   LINK_BANK_PATH: guideConfig.LINK_BANK_PATH,
   CONTENT_DIR: guideConfig.CONTENT_DIR,
   TRUSTED_DOMAINS_PATH: path.join(guideConfig.SITE_ROOT, 'team/data/trusted-source-domains.json'),
+  BLOCKED_DOMAINS_PATH: path.join(guideConfig.SITE_ROOT, 'team/data/blocked-source-domains.json'),
   SITE_TS_PATH: path.join(guideConfig.SITE_ROOT, 'lib/site.ts'),
 });
 // Standards the blog does not cover (keywordResearcher.js has the same rule).
@@ -28,8 +39,17 @@ const BLOG_LOW_WATER = 14;     // keywordResearcher warns below this
 const BLOG_TOP_UP_TO = 28;     // four weeks of daily articles
 const GUIDE_LOW_WATER = 4;     // two weeks of Mon/Thu guides
 const GUIDE_MAX_PER_RUN = 3;
-const GUIDE_MAX_PROPOSED = 6;  // unreviewed proposals waiting for a human
+const GUIDE_MAX_PENDING = 6;   // topics parked only because the reviewer was unavailable
 const BANK_SECTION = 'software_guides';
+const PAGE_EXCERPT_CHARS = 6000;
+
+const REVIEW_RULES = Object.freeze({
+  R1_SCOPE: 'The topic is a software guide subject: how Canadian quality and operations teams use software for ONE quality-management process that matches the named ICC module(s). It is not a standards explainer, news, a product comparison, a vendor pitch or a certification how-to.',
+  R2_DISTINCT: 'The topic is not a rewording, subset or superset of any existing topic in the queue or already published. It would not produce a guide that overlaps an existing one by more than a chapter.',
+  R3_SOURCES: 'Every source is a primary or official document: a standards body, accreditation body, regulator, government agency, recognised industry body, or an ICC product page on isocertificationconsultants.ca. No vendor blog, marketing page, forum, aggregator, course material or AI-generated content. The fetched page text of each source genuinely supports the topic as described.',
+  R4_ACCURACY: 'The keyword, module slugs, audience and problem statement are consistent with what the fetched sources say. The proposal names no standard, edition or clause the sources do not support.',
+  R5_FIT: 'The subject is relevant to Canadian manufacturing or service organisations and does not involve AS9100 or ISO 27001.',
+});
 
 function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPosts } = {}) {
   const read = file => JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -38,11 +58,12 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
     fs.writeFileSync(temporary, JSON.stringify(data, null, 2) + '\n', { flag: 'wx' });
     fs.renameSync(temporary, file);
   };
-  const trustedDomains = () => read(paths.TRUSTED_DOMAINS_PATH).domains.map(d => String(d).toLowerCase());
-  const isTrusted = (url, domains) => {
-    let host; try { host = new URL(url).hostname.toLowerCase(); } catch { return false; }
-    return domains.some(d => host === d || host.endsWith(`.${d}`));
-  };
+  const domainList = file => fs.existsSync(file) ? read(file).domains.map(d => String(d).toLowerCase()) : [];
+  const hostOf = url => { try { return new URL(url).hostname.toLowerCase(); } catch { return ''; } };
+  const matchesDomain = (url, domains) => { const host = hostOf(url); return Boolean(host) && domains.some(d => host === d || host.endsWith(`.${d}`)); };
+  const isTrusted = (url, domains = domainList(paths.TRUSTED_DOMAINS_PATH)) => matchesDomain(url, domains);
+  const isBlocked = (url, domains = domainList(paths.BLOCKED_DOMAINS_PATH)) => matchesDomain(url, domains);
+  const isICC = url => /(^|\.)isocertificationconsultants\.ca$/i.test(hostOf(url));
   const moduleSlugs = () => {
     const source = fs.readFileSync(paths.SITE_TS_PATH, 'utf8');
     const start = source.indexOf('export const MODULES'); const end = source.indexOf('export const', start + 1);
@@ -55,6 +76,11 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
     }).filter(Boolean));
   };
   const bankUrls = bank => new Set(Object.values(bank.industries || {}).flat().map(s => normalizeUrl(s.url)));
+  const keywordTokens = text => [...new Set(normalize(text).split(' ').filter(w => w.length > 3))];
+  const mentionsTopic = (text, topic) => {
+    const tokens = keywordTokens(`${topic.primaryKeyword} ${topic.topic}`); const haystack = normalize(text);
+    return tokens.length > 0 && tokens.filter(t => haystack.includes(t)).length >= Math.min(2, tokens.length);
+  };
 
   function scoutStatus() {
     const blog = read(paths.KEYWORD_QUEUE_PATH);
@@ -64,25 +90,58 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
     const guide = read(paths.GUIDE_QUEUE_PATH);
     const publishedGuides = publishedGuideTopicIds();
     const approvedEligible = guide.queue.filter(q => q.approval === 'approved' && !publishedGuides.has(q.id));
-    const proposed = guide.queue.filter(q => q.approval === 'proposed');
+    const pending = guide.queue.filter(q => q.approval === 'proposed');
     const bank = read(paths.LINK_BANK_PATH);
     return {
       blog: { remaining: remaining.length, lowWater: BLOG_LOW_WATER, needed: remaining.length < BLOG_LOW_WATER ? BLOG_TOP_UP_TO - remaining.length : 0,
         queued: remaining, recentlyPublished: published.slice(-14).map(p => p.primaryKeyword).filter(Boolean), excluded: 'AS9100 and ISO 27001 topics are skipped' },
-      guides: { approvedEligible: approvedEligible.map(q => q.id), proposedWaiting: proposed.map(q => q.id), published: [...publishedGuides],
-        needed: approvedEligible.length < GUIDE_LOW_WATER ? Math.min(GUIDE_MAX_PER_RUN, Math.max(0, GUIDE_MAX_PROPOSED - proposed.length)) : 0,
-        allTopics: guide.queue.map(q => ({ id: q.id, topic: q.topic, approval: q.approval })), moduleSlugs: moduleSlugs() },
-      sources: { trustedDomains: trustedDomains(), bankUrlCount: bankUrls(bank).size, bankSection: BANK_SECTION },
-      nothingNeeded: !(remaining.length < BLOG_LOW_WATER) && approvedEligible.length >= GUIDE_LOW_WATER,
+      guides: { approvedEligible: approvedEligible.map(q => q.id), pendingReview: pending.map(q => q.id), published: [...publishedGuides],
+        needed: approvedEligible.length + pending.length < GUIDE_LOW_WATER ? Math.min(GUIDE_MAX_PER_RUN, Math.max(0, GUIDE_MAX_PENDING - pending.length)) : 0,
+        allTopics: guide.queue.map(q => ({ id: q.id, topic: q.topic, approval: q.approval })), moduleSlugs: moduleSlugs(),
+        reviewRules: REVIEW_RULES },
+      sources: { trustedDomains: domainList(paths.TRUSTED_DOMAINS_PATH), blockedDomains: domainList(paths.BLOCKED_DOMAINS_PATH), bankUrlCount: bankUrls(bank).size, bankSection: BANK_SECTION },
+      nothingNeeded: !(remaining.length < BLOG_LOW_WATER) && approvedEligible.length + pending.length >= GUIDE_LOW_WATER && pending.length === 0,
     };
   }
 
-  async function applyProposals(proposals, { now = new Date(), fetchCheck = defaultFetchCheck, dryRun = false } = {}) {
-    const status = scoutStatus();
-    const report = { blogKeywords: { added: [], rejected: [] }, guideTopics: { approved: [], proposed: [], rejected: [] }, bankAdded: [], changed: false };
-    const reject = (bucket, item, reason) => report[bucket].rejected.push({ item, reason });
+  // Independent review of one topic. Returns { verdict: 'approve' | 'reject' | 'unavailable', findings, rules }.
+  async function reviewTopic(topic, pages, existingTopics, reviewer) {
+    const system = `You are the independent reviewer for software-guide topics proposed to an ISO consulting website. The proposer is a different agent; its claims are untrusted. Judge ONLY from the fetched page text supplied and the rules below. Apply every rule strictly; when in doubt, fail the rule. Return JSON only: {"rules":{"R1_SCOPE":"pass"|"fail","R2_DISTINCT":"pass"|"fail","R3_SOURCES":"pass"|"fail","R4_ACCURACY":"pass"|"fail","R5_FIT":"pass"|"fail"},"findings":[string]}. A finding is one sentence naming the rule and the reason.\n\nRules:\n${Object.entries(REVIEW_RULES).map(([k, v]) => `${k}: ${v}`).join('\n')}`;
+    const user = JSON.stringify({
+      proposal: { id: topic.id, topic: topic.topic, primaryKeyword: topic.primaryKeyword, secondaryKeywords: topic.secondaryKeywords, moduleSlugs: topic.moduleSlugs, audience: topic.audience, problem: topic.problem },
+      existingTopics,
+      sources: pages.map(p => ({ url: p.url, host: hostOf(p.url), trustedDomain: p.trusted, proposerName: p.name, proposerContext: p.context, fetchedText: String(p.text || '').slice(0, PAGE_EXCERPT_CHARS) })),
+    });
+    let result;
+    try { result = await reviewer(system, user, 2048); } catch(error) { return { verdict: 'unavailable', findings: [`Reviewer unavailable: ${String(error.message).slice(0, 200)}`], rules: {} }; }
+    const rules = result?.rules;
+    const valid = rules && typeof rules === 'object' && Object.keys(REVIEW_RULES).every(k => ['pass', 'fail'].includes(rules[k])) && Array.isArray(result.findings);
+    if (!valid) return { verdict: 'unavailable', findings: ['Reviewer returned an invalid verdict'], rules: {} };
+    const failed = Object.keys(REVIEW_RULES).filter(k => rules[k] === 'fail');
+    return { verdict: failed.length ? 'reject' : 'approve', findings: result.findings.map(String), rules };
+  }
 
-    // ---- blog keywords ----
+  // Fetch every source, apply the deterministic source rules, then the reviewer.
+  async function judgeTopic(topic, sources, context, { fetchPage, reviewer, trusted, blocked, known }) {
+    const pages = [];
+    for (const s of sources) {
+      if (isBlocked(s.url, blocked)) return { verdict: 'reject', findings: [`${s.url}: domain is on the blocked-source list`], pages };
+      const page = await fetchPage(s.url);
+      const entry = { ...s, trusted: isTrusted(s.url, trusted), reachable: Boolean(page?.ok), text: page?.text || '' };
+      pages.push(entry);
+      if (!entry.reachable) return { verdict: 'reject', findings: [`${s.url}: could not be fetched (HTTP 200 required)`], pages };
+      if (!isICC(s.url) && !known.has(normalizeUrl(s.url)) && !mentionsTopic(entry.text, topic)) return { verdict: 'reject', findings: [`${s.url}: fetched page does not mention the topic`], pages };
+    }
+    const review = await reviewTopic(topic, pages, context, reviewer);
+    return { ...review, pages };
+  }
+
+  async function applyProposals(proposals, { now = new Date(), fetchPage = defaultFetchPage, reviewer = defaultReviewer, dryRun = false } = {}) {
+    const status = scoutStatus();
+    const report = { blogKeywords: { added: [], rejected: [] }, guideTopics: { approved: [], rejected: [], pendingReview: [], reReviewed: [] }, bankAdded: [], changed: false };
+    const reject = (bucket, item, reasons) => report[bucket].rejected.push({ item, reasons: [].concat(reasons) });
+
+    // ---- blog keywords (deterministic rules only; the daily run picks the angle) ----
     const blog = read(paths.KEYWORD_QUEUE_PATH);
     const existing = new Set(blog.queue.map(k => k.toLowerCase()));
     const publishedKeywords = new Set(listPublishedPosts().map(p => String(p.primaryKeyword || '').toLowerCase()));
@@ -100,8 +159,34 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
     const guide = read(paths.GUIDE_QUEUE_PATH);
     const bank = read(paths.LINK_BANK_PATH);
     const known = bankUrls(bank);
-    const domains = trustedDomains();
+    const trusted = domainList(paths.TRUSTED_DOMAINS_PATH);
+    const blocked = domainList(paths.BLOCKED_DOMAINS_PATH);
     const modules = new Set(moduleSlugs());
+    const judge = { fetchPage, reviewer, trusted, blocked, known };
+    const context = () => guide.queue.map(q => ({ id: q.id, topic: q.topic, primaryKeyword: q.primaryKeyword, approval: q.approval }));
+    const bankSources = pages => {
+      bank.industries[BANK_SECTION] = bank.industries[BANK_SECTION] || [];
+      for (const s of pages) {
+        if (known.has(normalizeUrl(s.url))) continue;
+        bank.industries[BANK_SECTION].push({ url: s.url, name: String(s.name).trim(), context: String(s.context).trim(), verified: 'http', addedBy: 'topic-scout', addedAt: now.toISOString().slice(0, 10) });
+        known.add(normalizeUrl(s.url)); report.bankAdded.push(s.url);
+      }
+    };
+    const approvalStamp = review => ({ approval: 'approved', approvedBy: 'scout-reviewer', approvedAt: now.toISOString(), reviewRules: review.rules, reviewFindings: review.findings });
+
+    // Topics parked earlier because the reviewer was unavailable are judged first.
+    for (const entry of guide.queue.filter(q => q.approval === 'proposed' && Array.isArray(q.candidateSources))) {
+      const review = await judgeTopic(entry, entry.candidateSources, context().filter(c => c.id !== entry.id), judge);
+      report.guideTopics.reReviewed.push({ id: entry.id, verdict: review.verdict, findings: review.findings });
+      if (review.verdict === 'approve') {
+        bankSources(review.pages);
+        Object.assign(entry, approvalStamp(review)); delete entry.candidateSources; delete entry.reviewNote;
+        report.guideTopics.approved.push(entry.id);
+      } else if (review.verdict === 'reject') {
+        guide.queue.splice(guide.queue.indexOf(entry), 1); reject('guideTopics', entry.id, review.findings);
+      }
+    }
+
     const taken = new Set(guide.queue.flatMap(q => [q.id, q.topic, q.primaryKeyword, ...(q.aliases || [])].filter(Boolean).map(normalize)));
     let guideRoom = status.guides.needed;
     let priority = Math.max(0, ...guide.queue.map(q => Number(q.priority) || 0));
@@ -117,38 +202,26 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
       const sources = Array.isArray(t.sources) ? t.sources : [];
       const badSource = sources.find(s => !s || typeof s.url !== 'string' || !/^https:\/\//i.test(s.url) || !String(s.name || '').trim() || !String(s.context || '').trim());
       if (sources.length < 2 || badSource) { reject('guideTopics', label, 'at least two sources, each with an https url, name and context'); continue; }
-      const external = sources.filter(s => !/(^|\.)isocertificationconsultants\.ca$/i.test(new URL(s.url).hostname));
-      if (!external.length) { reject('guideTopics', label, 'at least one source must be outside ICC\'s own site'); continue; }
+      if (!sources.some(s => !isICC(s.url))) { reject('guideTopics', label, 'at least one source must be outside ICC\'s own site'); continue; }
       if (guideRoom <= 0) { reject('guideTopics', label, 'guide queue does not need more topics this run'); continue; }
 
-      // Trust decision: every source trusted and reachable -> approved and banked.
-      const checks = [];
-      for (const s of sources) {
-        const trusted = isTrusted(s.url, domains);
-        const reachable = trusted && (known.has(normalizeUrl(s.url)) || await fetchCheck(s.url));
-        checks.push({ ...s, trusted, reachable });
-      }
-      const autoApprove = checks.every(c => c.trusted && c.reachable);
       const entry = { id: t.id, topic: t.topic.trim(), aliases: Array.isArray(t.aliases) ? t.aliases : [], primaryKeyword: t.primaryKeyword.trim(),
         secondaryKeywords: Array.isArray(t.secondaryKeywords) ? t.secondaryKeywords : [], moduleSlugs: slugs, audience: t.audience.trim(), problem: t.problem.trim(),
-        priority: ++priority, approval: autoApprove ? 'approved' : 'proposed', proposedAt: now.toISOString(), proposedBy: 'topic-scout' };
-      if (autoApprove) {
-        bank.industries[BANK_SECTION] = bank.industries[BANK_SECTION] || [];
-        for (const s of checks) {
-          if (known.has(normalizeUrl(s.url))) continue;
-          bank.industries[BANK_SECTION].push({ url: s.url, name: s.name.trim(), context: s.context.trim(), verified: 'http', addedBy: 'topic-scout', addedAt: now.toISOString().slice(0, 10) });
-          known.add(normalizeUrl(s.url)); report.bankAdded.push(s.url);
-        }
-        report.guideTopics.approved.push(t.id);
+        priority: priority + 1, proposedAt: now.toISOString(), proposedBy: 'topic-scout' };
+      const review = await judgeTopic(entry, sources, context(), judge);
+      if (review.verdict === 'reject') { reject('guideTopics', label, review.findings); continue; }
+      if (review.verdict === 'approve') {
+        bankSources(review.pages); Object.assign(entry, approvalStamp(review)); report.guideTopics.approved.push(t.id);
       } else {
-        entry.candidateSources = checks.map(({ url, name, context, trusted, reachable }) => ({ url, name, context, trusted, reachable }));
-        entry.reviewNote = 'Approve by setting approval to "approved" and moving reachable candidateSources into external-link-bank.json';
-        report.guideTopics.proposed.push(t.id);
+        entry.approval = 'proposed';
+        entry.candidateSources = sources.map(s => ({ url: s.url, name: String(s.name).trim(), context: String(s.context).trim() }));
+        entry.reviewNote = `Reviewer unavailable on ${now.toISOString().slice(0, 10)}; re-reviewed automatically on the next scout run`;
+        report.guideTopics.pendingReview.push({ id: t.id, findings: review.findings });
       }
-      guide.queue.push(entry); names.forEach(n => taken.add(n)); guideRoom--;
+      guide.queue.push(entry); names.forEach(n => taken.add(n)); guideRoom--; priority++;
     }
 
-    report.changed = report.blogKeywords.added.length > 0 || report.guideTopics.approved.length > 0 || report.guideTopics.proposed.length > 0;
+    report.changed = report.blogKeywords.added.length > 0 || report.guideTopics.approved.length > 0 || report.guideTopics.pendingReview.length > 0 || report.guideTopics.reReviewed.some(r => r.verdict !== 'unavailable');
     if (report.changed && !dryRun) {
       write(paths.KEYWORD_QUEUE_PATH, blog);
       write(paths.GUIDE_QUEUE_PATH, guide);
@@ -157,16 +230,27 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
     return report;
   }
 
-  return { scoutStatus, applyProposals, isTrusted, moduleSlugs, constants: { BLOG_LOW_WATER, BLOG_TOP_UP_TO, GUIDE_LOW_WATER, GUIDE_MAX_PER_RUN, GUIDE_MAX_PROPOSED } };
+  return { scoutStatus, applyProposals, reviewTopic, isTrusted, isBlocked, moduleSlugs, REVIEW_RULES, constants: { BLOG_LOW_WATER, BLOG_TOP_UP_TO, GUIDE_LOW_WATER, GUIDE_MAX_PER_RUN, GUIDE_MAX_PENDING } };
 }
 
-async function defaultFetchCheck(url) {
+function htmlToText(html) {
+  return String(html).replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+}
+async function defaultFetchPage(url) {
   try {
-    const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 15000);
-    const response = await fetch(url, { method: 'GET', redirect: 'follow', signal: controller.signal, headers: { 'user-agent': 'Mozilla/5.0 (compatible; ICC topic scout)' } });
+    const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 20000);
+    const response = await fetch(url, { method: 'GET', redirect: 'follow', signal: controller.signal, headers: { 'user-agent': 'Mozilla/5.0 (compatible; ICC topic scout)', accept: 'text/html,application/pdf;q=0.8,*/*;q=0.5' } });
     clearTimeout(timer);
-    return response.ok;
-  } catch { return false; }
+    if (!response.ok) return { ok: false, status: response.status, text: '' };
+    const type = response.headers.get('content-type') || '';
+    const body = await response.text();
+    return { ok: true, status: response.status, text: /html/i.test(type) ? htmlToText(body) : body.slice(0, 50000) };
+  } catch { return { ok: false, status: 0, text: '' }; }
+}
+async function defaultReviewer(system, user, maxTokens) {
+  const { claudeJSONFast, hasLLMKey } = require('../shared/claude');
+  if (!hasLLMKey()) throw new Error('No LLM key configured for the scout reviewer');
+  return claudeJSONFast(system, user, maxTokens);
 }
 
-module.exports = { createTopicScout, defaultFetchCheck, ...createTopicScout() };
+module.exports = { createTopicScout, defaultFetchPage, defaultReviewer, htmlToText, REVIEW_RULES, ...createTopicScout() };
