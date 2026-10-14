@@ -1,6 +1,6 @@
 # ICC guide routine
 
-Status: created as the Claude Code cloud routine `icc-guides` (2026-10-15, `trig_01QCftVc3PfJZmDPjnr6q4MP`), Monday and Thursday 08:00 UTC (4:00 AM Toronto in summer, 3:00 AM in winter), same cloud environment and tools as the blog routine, no MCP connectors. It stays disabled until the commit that added the cloud commands is on `main`; enable it at https://claude.ai/code/routines after the push. Target: two **complete guides** per Toronto ISO week, using the Monday and Thursday production slots. Daily blogs retain their separate cadence. The routine's prompt is the block at the end of this file; the standing approval that lets it push a gate-passing guide to `main` is in the root `CLAUDE.md`.
+Status: created as the Claude Code cloud routine `icc-guides` (2026-10-15, `trig_01QCftVc3PfJZmDPjnr6q4MP`), Monday and Thursday 08:00 UTC (4:00 AM Toronto in summer, 3:00 AM in winter), same cloud environment and tools as the blog routine, no MCP connectors. Enabled on 2026-10-15 once the cloud commands reached `main`; manage it at https://claude.ai/code/routines. Target: two **complete guides** per Toronto ISO week, using the Monday and Thursday production slots. Daily blogs retain their separate cadence. The routine's prompt is the block at the end of this file; the standing approval that lets it push a gate-passing guide to `main` is in the root `CLAUDE.md`.
 
 ## How the cloud run keeps state
 
