@@ -6,7 +6,7 @@ import { Icon, ArrowRight, Check } from "@/components/Icons";
 import { PLATFORM, DIFFERENTIATORS, AI_PRINCIPLES } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Compliance Management Software — Configured by Certified Consultants",
+  title: "Compliance Management Software",
   description:
     "Compliance management software with eleven modules, an AI assistant that acts within your permissions, and AI suggestions a person always reviews.",
   alternates: { canonical: "/platform" },

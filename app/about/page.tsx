@@ -7,7 +7,7 @@ import { ArrowRight, Check } from "@/components/Icons";
 import { STATS, DIFFERENTIATORS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About ISO Certification Consultants",
+  title: "About Us",
   description:
     "ISO Certification Consultants Inc. pairs compliance management software with certified consultants to get Canadian companies certified without disruption.",
   alternates: { canonical: "/about" },

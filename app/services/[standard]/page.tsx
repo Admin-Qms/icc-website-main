@@ -5,6 +5,8 @@ import { PageHeader, CTASection } from "@/components/ui";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight, Check, Icon } from "@/components/Icons";
 import { STANDARDS, INDUSTRIES, PROCESS, MODULES, SITE, type Module } from "@/lib/site";
+import { getServiceCopy, getPostsAbout } from "@/lib/page-copy";
+import { CopyOverview, CopyArticle } from "@/components/PageCopy";
 
 export function generateStaticParams() {
   return STANDARDS.map((s) => ({ standard: s.slug }));
@@ -18,7 +20,7 @@ export function generateMetadata({
   const s = STANDARDS.find((x) => x.slug === params.standard);
   if (!s) return {};
   return {
-    title: `${s.code} Certification Consulting in Canada — ${s.name}`,
+    title: `${s.code} Certification in Canada`,
     description: `${s.code} (${s.name}) consulting for Canadian companies: gap analysis, system build and audit support, with software that tracks every clause.`,
     alternates: { canonical: `/services/${s.slug}` },
   };
@@ -30,6 +32,8 @@ export default function StandardPage({ params }: { params: { standard: string } 
 
   const related = INDUSTRIES.filter((i) => i.standards.includes(s.code)).slice(0, 3);
   const others = STANDARDS.filter((x) => x.slug !== s.slug).slice(0, 3);
+  const copy = getServiceCopy(s.slug);
+  const posts = getPostsAbout([s.code]);
   const modules = s.platformSupport.moduleSlugs
     .map((slug) => MODULES.find((m) => m.slug === slug))
     .filter((m): m is Module => Boolean(m));
@@ -67,6 +71,8 @@ export default function StandardPage({ params }: { params: { standard: string } 
           Free readiness check
         </Link>
       </PageHeader>
+
+      {copy && <CopyOverview copy={copy} />}
 
       <section className="bg-white py-16 lg:py-24">
         <div className="container-page grid gap-14 lg:grid-cols-[1.4fr_0.9fr]">
@@ -184,10 +190,6 @@ export default function StandardPage({ params }: { params: { standard: string } 
                       {s.platformSupport.inCatalogue ? "Catalogue standard" : "Custom standard"}
                     </dd>
                   </div>
-                  <div className="flex justify-between gap-4">
-                    <dt className="text-slate-600">Typical path</dt>
-                    <dd className="font-semibold text-navy-900">~24 weeks</dd>
-                  </div>
                 </dl>
                 <Link href="/contact" className="btn-primary mt-6 w-full">
                   Talk to an expert
@@ -219,6 +221,8 @@ export default function StandardPage({ params }: { params: { standard: string } 
           </aside>
         </div>
       </section>
+
+      {copy && <CopyArticle copy={copy} topic={s.code} posts={posts} />}
 
       {/* other standards */}
       <section className="bg-soft py-16">

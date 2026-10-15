@@ -5,6 +5,8 @@ import { PageHeader, CTASection } from "@/components/ui";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight, Check, Icon } from "@/components/Icons";
 import { INDUSTRIES, STANDARDS, MODULES, type Module } from "@/lib/site";
+import { getIndustryCopy, getPostsAbout } from "@/lib/page-copy";
+import { CopyOverview, CopyArticle } from "@/components/PageCopy";
 
 export function generateStaticParams() {
   return INDUSTRIES.map((i) => ({ industry: i.slug }));
@@ -18,7 +20,7 @@ export function generateMetadata({
   const i = INDUSTRIES.find((x) => x.slug === params.industry);
   if (!i) return {};
   return {
-    title: `ISO Consulting for ${i.name} in Canada`,
+    title: `${i.name} ISO Consulting in Canada`,
     description: `ISO consulting for ${i.name} in Canada: gap analysis, a compliance management system built around your processes, and evidence to prove it.`,
     alternates: { canonical: `/industries/${i.slug}` },
   };
@@ -202,6 +204,8 @@ export default function IndustryPage({ params }: { params: { industry: string } 
   const modules = ind.moduleSlugs
     .map((slug) => MODULES.find((m) => m.slug === slug))
     .filter((m): m is Module => Boolean(m));
+  const copy = getIndustryCopy(ind.slug);
+  const posts = getPostsAbout([ind.name.split(/[ ,&]/)[0], ...ind.standards.slice(0, 1)]);
   const otherIndustries = INDUSTRIES.filter((x) => x.slug !== ind.slug).slice(0, 4);
 
   return (
@@ -223,6 +227,8 @@ export default function IndustryPage({ params }: { params: { industry: string } 
           Free readiness check
         </Link>
       </PageHeader>
+
+      {copy && <CopyOverview copy={copy} />}
 
       <section className="bg-white py-16 lg:py-24">
         <div className="container-page grid gap-14 lg:grid-cols-2">
@@ -267,7 +273,7 @@ export default function IndustryPage({ params }: { params: { industry: string } 
                 Standards we implement here
               </h2>
               <p className="mt-4 text-slate-600">
-                Most {ind.name.toLowerCase()} clients integrate two or three standards
+                Many {ind.name.toLowerCase()} clients integrate two or three standards
                 into a single management system rather than running them in parallel.
               </p>
             </Reveal>
@@ -292,6 +298,8 @@ export default function IndustryPage({ params }: { params: { industry: string } 
           </div>
         </div>
       </section>
+
+      {copy && <CopyArticle copy={copy} topic={ind.name} posts={posts} />}
 
       {/* modules used in this industry */}
       <section className="bg-soft py-16">

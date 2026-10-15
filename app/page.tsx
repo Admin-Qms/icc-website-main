@@ -18,7 +18,7 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: { absolute: `${SITE.name} — ISO Certification Consulting for Canadian Companies` },
+  title: { absolute: `${SITE.name} in Canada | ISO 9001, IATF 16949 & More` },
   description:
     "ISO certification consulting for Canadian companies: certified consultants plus compliance management software that holds audit evidence as daily work happens.",
   alternates: { canonical: "/" },

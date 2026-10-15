@@ -12,7 +12,7 @@ import { ArrowRight } from "@/components/Icons";
 import { STANDARDS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "ISO Consulting & Certification — Any Standard, One System",
+  title: "ISO Certification Services",
   description:
     "Certification support for ISO 9001, 14001, 45001, IATF 16949, AS9100, ISO 13485 and customer-specific or regulatory standards, for Canadian companies.",
   alternates: { canonical: "/services" },

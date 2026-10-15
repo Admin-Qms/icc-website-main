@@ -25,6 +25,15 @@ export const SITE = {
   },
 };
 
+// Share image for pages without their own (blog posts and guides set theirs).
+// Shop-floor photo with the mark and name, 1200x630.
+export const OG_IMAGE = {
+  url: "/images/og-default.jpg",
+  width: 1200,
+  height: 630,
+  alt: "ISO Certification Consultants: ISO certification consulting for Canadian companies",
+};
+
 // Positioning constants — customization first, any standard.
 export const ANY_STANDARD = {
   title: "Your standard not listed?",

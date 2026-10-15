@@ -29,7 +29,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!post) return {};
   const url = `/blog/${post.slug}`;
   return {
-    title: post.title,
+    // Long post titles drop the brand suffix so the post title itself is not cut off.
+    title: post.title.length > 38 ? { absolute: post.title } : post.title,
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical: url },

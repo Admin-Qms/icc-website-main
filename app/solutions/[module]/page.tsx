@@ -18,7 +18,7 @@ export function generateMetadata({
   const m = MODULES.find((x) => x.slug === params.module);
   if (!m) return {};
   return {
-    title: `${m.name} — Compliance Management Software Module`,
+    title: `${m.name} Module — Compliance Software`,
     description: m.metaDescription,
     alternates: { canonical: `/solutions/${m.slug}` },
   };
