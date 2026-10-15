@@ -22,6 +22,18 @@ test("wildcard sources match the prefix and anything below it", () => {
   assert.ok(!matches("/tag/:path*", "/tagged/"));
 });
 
+test("catch-all (.*) sources match the prefix with or without a trailing slash", () => {
+  assert.ok(matches("/tag/(.*)", "/tag/iso-9001/"));
+  assert.ok(matches("/tag/(.*)", "/tag/iso-9001/feed/"));
+  assert.ok(matches("/author/(.*)", "/author/mnassar/"));
+  assert.ok(!matches("/tag/(.*)", "/tagged/"));
+});
+
+test("vercel.json wildcard redirects use the catch-all form that Vercel matches with a trailing slash", () => {
+  const { redirects } = JSON.parse(readFileSync(new URL("../vercel.json", import.meta.url), "utf8"));
+  assert.deepEqual(redirects.filter((r) => /:[a-zA-Z]+\*/.test(r.source)).map((r) => r.source), []);
+});
+
 test("unsupported patterns are refused instead of producing a wrong rule", () => {
   assert.throws(() => sourceToRegex("/blog/:slug"));
   assert.throws(() =>

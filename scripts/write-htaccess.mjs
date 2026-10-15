@@ -13,7 +13,8 @@ const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export function sourceToRegex(source) {
   if (!source.startsWith("/"))
     throw new Error(`Redirect source must start with "/": ${source}`);
-  const wildcard = source.match(/^(.*?)\/:[a-zA-Z]+\*$/);
+  // "/tag/:path*" or "/tag/(.*)": the prefix and anything below it.
+  const wildcard = source.match(/^(.*?)\/(?::[a-zA-Z]+\*|\(\.\*\))$/);
   if (wildcard) return `^${escapeRegex(wildcard[1])}(?:/.*)?$`;
   if (/[:()*?]/.test(source))
     throw new Error(`Unsupported redirect source pattern: ${source}`);
