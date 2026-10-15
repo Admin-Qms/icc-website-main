@@ -5,6 +5,8 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { Counter } from "@/components/Counter";
 import { ArrowRight, Check } from "@/components/Icons";
 import { STATS, DIFFERENTIATORS } from "@/lib/site";
+import Image from "next/image";
+import { ANTHONY_MANNELLA, personPath } from "@/lib/people";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -41,7 +43,12 @@ export default function AboutPage() {
     <>
       <PageHeader
         eyebrow="About us"
-        title={<>Certification, <span className="text-teal-700">without the mystery</span></>}
+        title={
+          <>
+            Certification,{" "}
+            <span className="text-teal-700">without the mystery</span>
+          </>
+        }
         intro="ISO Certification Consultants Inc. pairs compliance management software with certified consultants, a hybrid model that makes certification faster, more affordable and far less painful for Canadian companies."
       >
         <Link href="/contact" className="btn-primary">
@@ -53,21 +60,24 @@ export default function AboutPage() {
       <section className="bg-white py-16 lg:py-24">
         <div className="container-page grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-teal-700">Our mission</span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-teal-700">
+              Our mission
+            </span>
             <h2 className="mt-5 font-heading text-3xl font-bold leading-tight text-navy-900">
               Make ISO certification accessible to every Canadian company
             </h2>
             <div className="mt-5 space-y-4 text-slate-600">
               <p>
-                For most shops under 50 employees, ISO certification has meant expensive
-                consultants, months of confusion and a documentation set no one
-                maintains. It should not be that way.
+                For most shops under 50 employees, ISO certification has meant
+                expensive consultants, months of confusion and a documentation
+                set no one maintains. It should not be that way.
               </p>
               <p>
-                The compliance management software does the mechanical work: clause
-                tracking, controlled documents, audit records and corrective actions.
-                Certified consultants make sure the system is right and stand with you
-                through the audit. Broad standard coverage, real industry depth, one team.
+                The compliance management software does the mechanical work:
+                clause tracking, controlled documents, audit records and
+                corrective actions. Certified consultants make sure the system
+                is right and stand with you through the audit. Broad standard
+                coverage, real industry depth, one team.
               </p>
             </div>
           </Reveal>
@@ -90,6 +100,46 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* leadership */}
+      <section className="bg-white pb-16 lg:pb-24">
+        <div className="container-page">
+          <div className="grid gap-8 rounded-3xl border border-slate-200 bg-soft p-7 sm:grid-cols-[auto_1fr] sm:items-center lg:p-10">
+            <Image
+              src={ANTHONY_MANNELLA.photo}
+              alt={ANTHONY_MANNELLA.photoAlt}
+              width={160}
+              height={160}
+              className="h-32 w-32 rounded-2xl object-cover lg:h-40 lg:w-40"
+            />
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.12em] text-teal-700">
+                Leadership
+              </span>
+              <h2 className="mt-2 font-heading text-2xl font-bold text-navy-900">
+                {ANTHONY_MANNELLA.name}, {ANTHONY_MANNELLA.jobTitle}
+              </h2>
+              <p className="mt-3 max-w-2xl text-slate-600">
+                Anthony leads the company and works on client engagements as a
+                consultant. He writes about ISO 9001, metrology and supplier
+                control for {ANTHONY_MANNELLA.publisher?.name}, with{" "}
+                {ANTHONY_MANNELLA.publications.length} articles published since{" "}
+                {new Date(
+                  `${ANTHONY_MANNELLA.publications.at(-1)!.date}T12:00:00Z`,
+                ).getUTCFullYear()}
+                .
+              </p>
+              <Link
+                href={personPath(ANTHONY_MANNELLA)}
+                className="mt-4 inline-flex items-center gap-1.5 font-semibold text-teal-700 hover:text-teal-800"
+              >
+                About Anthony and his articles{" "}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* values */}
       <section className="bg-soft py-16 lg:py-24">
         <div className="container-page">
@@ -105,8 +155,12 @@ export default function AboutPage() {
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-teal-50 text-teal-700 ring-1 ring-teal-100">
                     <Check className="h-5 w-5" />
                   </span>
-                  <h3 className="mt-4 font-heading text-lg font-bold text-navy-900">{v.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{v.detail}</p>
+                  <h3 className="mt-4 font-heading text-lg font-bold text-navy-900">
+                    {v.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    {v.detail}
+                  </p>
                 </div>
               </StaggerItem>
             ))}
@@ -125,7 +179,9 @@ export default function AboutPage() {
             {DIFFERENTIATORS.map((d) => (
               <StaggerItem key={d.title}>
                 <div className="h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_20px_60px_-40px_rgba(22,43,77,0.5)]">
-                  <h3 className="font-heading text-base font-bold text-navy-900">{d.title}</h3>
+                  <h3 className="font-heading text-base font-bold text-navy-900">
+                    {d.title}
+                  </h3>
                   <p className="mt-2 text-sm text-slate-600">{d.detail}</p>
                 </div>
               </StaggerItem>

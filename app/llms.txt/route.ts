@@ -1,6 +1,7 @@
 import { STANDARDS, INDUSTRIES, MODULES, SITE } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { getAllGuides } from "@/lib/guides";
+import { PEOPLE, personPath } from "@/lib/people";
 
 // /llms.txt (llmstxt.org): a plain Markdown overview of the company and its key
 // pages for AI assistants and answer engines. Built at export time like sitemap.xml,
@@ -67,6 +68,13 @@ export function GET() {
     "## Company",
     "",
     `- [About](${url("/about/")})`,
+    ...PEOPLE.flatMap((person) => [
+      `- [${person.name}, ${person.jobTitle}](${url(personPath(person))})`,
+      ...person.publications.map(
+        (pub) =>
+          `  - ${person.publisher?.name ?? "Article"}: [${pub.title}](${pub.url}) (${pub.date})`,
+      ),
+    ]),
     `- [Contact](${url("/contact/")})`,
     `- [Better Business Bureau profile](${SITE.bbb.profileUrl})`,
     "",

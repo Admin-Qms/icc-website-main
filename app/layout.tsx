@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChatWidget } from "@/components/ChatWidget";
 import { Analytics } from "@/components/Analytics";
+import { PEOPLE, personId, personPath } from "@/lib/people";
 import { SITE, OG_IMAGE } from "@/lib/site";
 import { serializeJsonLd } from "@/lib/blog";
 
@@ -70,6 +71,13 @@ const orgJsonLd = {
     addressCountry: "CA",
   },
   sameAs: [SITE.bbb.profileUrl, ...SITE.profiles],
+  employee: PEOPLE.map((p) => ({
+    "@type": "Person",
+    "@id": personId(p),
+    name: p.name,
+    jobTitle: p.jobTitle,
+    url: `${SITE.url}${personPath(p)}`,
+  })),
   description:
     "ISO certification consulting for Canadian companies, with compliance management software configured to your processes and ready to onboard any standard.",
   areaServed: [
