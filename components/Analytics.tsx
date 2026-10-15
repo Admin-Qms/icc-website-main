@@ -1,9 +1,13 @@
 import Script from "next/script";
-import { GA_MEASUREMENT_ID, analyticsEnabled } from "@/lib/analytics";
+import { GA_MEASUREMENT_ID, loadAnalytics } from "@/lib/analytics";
+import { SITE } from "@/lib/site";
 
-/** Loads Google Analytics 4 when a measurement ID is configured (see lib/analytics.ts). */
+/**
+ * Loads Google Analytics 4 in production builds (see lib/analytics.ts). Data is only
+ * sent from the live domain, so local previews and preview deployments are not counted.
+ */
 export function Analytics() {
-  if (!analyticsEnabled) return null;
+  if (!loadAnalytics) return null;
   return (
     <>
       <Script
@@ -14,7 +18,8 @@ export function Analytics() {
         {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GA_MEASUREMENT_ID}');`}
+var host = location.hostname.replace(/^www\\./, '');
+if (host === '${SITE.domain}') gtag('config', '${GA_MEASUREMENT_ID}');`}
       </Script>
     </>
   );

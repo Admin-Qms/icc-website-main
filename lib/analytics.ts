@@ -15,7 +15,16 @@ export const GA_MEASUREMENT_ID = /^G-[A-Z0-9]{4,}$/.test(raw.trim())
   ? raw.trim()
   : "";
 
+/** True when the site uses analytics (the privacy page describes it). */
 export const analyticsEnabled = GA_MEASUREMENT_ID !== "";
+
+/**
+ * Whether to load the tag in this build: never under `npm run dev`, so local work
+ * does not reach the GA property. Production builds load it, and the init script in
+ * components/Analytics.tsx only sends data when served from the real domain.
+ */
+export const loadAnalytics =
+  analyticsEnabled && process.env.NODE_ENV === "production";
 
 type Gtag = (
   command: "event",
