@@ -1,0 +1,27 @@
+{
+  "id": "20261015080949-capa-workflows-bbf5e6",
+  "topic": {
+    "id": "capa-workflows",
+    "topic": "CAPA software workflows",
+    "aliases": [
+      "CAPA software"
+    ],
+    "primaryKeyword": "CAPA software",
+    "secondaryKeywords": [
+      "corrective action workflow",
+      "effectiveness review"
+    ],
+    "moduleSlugs": [
+      "nonconformance-capa"
+    ],
+    "audience": "Canadian quality and operations teams",
+    "problem": "Following findings through containment, action and verification",
+    "priority": 2,
+    "approval": "approved"
+  },
+  "productionSlotId": "2026-W42-slot-2",
+  "stage": "reserved",
+  "pages": {},
+  "createdAt": "2026-10-15T08:09:49.111Z",
+  "updatedAt": "2026-10-15T08:09:49.111Z"
+}
