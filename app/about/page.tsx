@@ -120,13 +120,11 @@ export default function AboutPage() {
               </h2>
               <p className="mt-3 max-w-2xl text-slate-600">
                 Anthony leads the company and works on client engagements as a
-                consultant. He writes about ISO 9001, metrology and supplier
-                control for {ANTHONY_MANNELLA.publisher?.name}, with{" "}
-                {ANTHONY_MANNELLA.publications.length} articles published since{" "}
-                {new Date(
-                  `${ANTHONY_MANNELLA.publications.at(-1)!.date}T12:00:00Z`,
-                ).getUTCFullYear()}
-                .
+                consultant. He has more than 30 years in manufacturing
+                and is an Exemplar Global certified lead auditor for ISO 9001,
+                ISO 13485, IATF 16949 and AS9100. He also writes about ISO 9001,
+                metrology and supplier control for{" "}
+                {ANTHONY_MANNELLA.publisher?.name}.
               </p>
               <Link
                 href={personPath(ANTHONY_MANNELLA)}

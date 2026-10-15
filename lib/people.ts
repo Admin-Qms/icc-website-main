@@ -1,6 +1,6 @@
 // People shown on the site, with their published work elsewhere. Only state what can be
-// checked: titles as published, articles that carry the person's byline. Add
-// credentials (certifications, years of experience) only once the person confirms them.
+// checked: titles as published, articles that carry the person's byline, and
+// experience and credentials exactly as the person's own published bio states them.
 
 import { SITE } from "./site";
 
@@ -25,6 +25,10 @@ export type Person = {
   profiles: string[];
   // Topics the person writes and advises on.
   topics: string[];
+  // One sentence on background, as the person's own bio states it.
+  experience?: string;
+  // Certifications as the person's own bio states them.
+  credentials?: string[];
   publisher?: { name: string; url: string };
   publications: Publication[];
 };
@@ -45,6 +49,17 @@ export const ANTHONY_MANNELLA: Person = {
     "Lean manufacturing",
     "Supplier and outsourced process control",
     "Quality management systems",
+  ],
+  // Experience and credentials as stated in his bio on the company's own sites
+  // (isocertification.ca/about-iso-certification-consultants-inc/ and
+  // ndtconsultant.ca/about/), checked 2026-10-15 and confirmed for this site
+  // by the Owner the same day.
+  experience:
+    "More than 30 years in manufacturing, as a production and maintenance manager, quality manager, quality engineer, supplier quality engineer and internal auditor.",
+  credentials: [
+    "Exemplar Global certified lead auditor for ISO 9001, ISO 13485, IATF 16949 and AS9100",
+    "ISO 26262 functional safety engineer certification",
+    "Lean Six Sigma Black Belt",
   ],
   publisher: {
     name: "Canadian Metalworking",
@@ -120,6 +135,15 @@ export function personJsonLd(p: Person) {
     worksFor: { "@type": "Organization", name: SITE.legalName, url: SITE.url },
     knowsAbout: p.topics,
     sameAs: p.profiles,
+    ...(p.experience ? { description: p.experience } : {}),
+    ...(p.credentials?.length
+      ? {
+          hasCredential: p.credentials.map((name) => ({
+            "@type": "EducationalOccupationalCredential",
+            name,
+          })),
+        }
+      : {}),
   };
 }
 

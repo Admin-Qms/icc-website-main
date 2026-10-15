@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { BbbSeal } from "@/components/BbbSeal";
 import { Reveal } from "@/components/motion";
 import { ShieldCheck, Check } from "@/components/Icons";
-import { SITE } from "@/lib/site";
+import { SITE, ADDRESS_LINE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -60,6 +60,10 @@ export default function ContactPage() {
             >
               {SITE.email}
             </a>
+            <p className="mt-4 text-sm text-slate-600">Office</p>
+            <address className="text-sm not-italic font-semibold text-navy-900">
+              {ADDRESS_LINE}
+            </address>
             <p className="mt-3 text-sm text-slate-600">
               Serving companies across {SITE.region} and the USA.
             </p>

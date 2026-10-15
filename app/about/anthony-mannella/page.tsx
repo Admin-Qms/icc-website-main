@@ -110,6 +110,12 @@ export default function AnthonyMannellaPage() {
                 engagements, alongside the compliance management software the
                 company configures for each client.
               </p>
+              {person.experience && (
+                <p>
+                  He brings {person.experience.charAt(0).toLowerCase()}
+                  {person.experience.slice(1)}
+                </p>
+              )}
               <p>
                 He writes about quality management for{" "}
                 <a
@@ -124,6 +130,21 @@ export default function AnthonyMannellaPage() {
                 suppliers and outsourced work.
               </p>
             </div>
+            {person.credentials && person.credentials.length > 0 && (
+              <>
+                <h2 className="mt-10 font-heading text-xl font-bold text-navy-900">
+                  Credentials
+                </h2>
+                <ul className="mt-4 space-y-3">
+                  {person.credentials.map((c) => (
+                    <li key={c} className="flex items-start gap-2 text-slate-700">
+                      <Check className="mt-1 h-4 w-4 shrink-0 text-teal-600" />
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
             <h2 className="mt-10 font-heading text-xl font-bold text-navy-900">
               Areas of focus
             </h2>

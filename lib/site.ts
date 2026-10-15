@@ -14,6 +14,16 @@ export const SITE = {
   email: "anthony.mannella@isocertificationconsultants.ca",
   phone: "+1 (416) 622-0022",
   region: "Ontario, Canada",
+  // Business address as published by the company (Canadian Metalworking author bio,
+  // isocertification.ca). Keep every listing (Google Business Profile, BBB,
+  // directories) identical to this.
+  address: {
+    street: "20 Bay St., 11th Floor",
+    locality: "Toronto",
+    region: "ON",
+    postalCode: "M5J 2N8",
+    country: "CA",
+  },
   // Brand artwork under /public: the square "ICC" mark shown beside the name, and the
   // full logo with the company name beneath it.
   logoMark: "/images/logo-mark.png",
@@ -1471,3 +1481,6 @@ export const CUSTOM_EXAMPLES: CustomExample[] = [
     tags: ["Documents", "FAI", "AS9100"],
   },
 ];
+
+/** One-line business address, e.g. "20 Bay St., 11th Floor, Toronto, ON M5J 2N8". */
+export const ADDRESS_LINE = `${SITE.address.street}, ${SITE.address.locality}, ${SITE.address.region} ${SITE.address.postalCode}`;

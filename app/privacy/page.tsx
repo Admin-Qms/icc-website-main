@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui";
 import { Markdown } from "@/components/Markdown";
-import { SITE } from "@/lib/site";
+import { SITE, ADDRESS_LINE } from "@/lib/site";
 import { analyticsEnabled } from "@/lib/analytics";
 
 // Describes what the site actually does with personal information. Keep it in step
@@ -68,7 +68,7 @@ We will update this page when our practices change. The date below shows when it
 
 ## Contact
 
-- ${SITE.legalName}, ${SITE.region}
+- ${SITE.legalName}, ${ADDRESS_LINE}
 - Email: [${SITE.email}](mailto:${SITE.email})
 - Phone: ${SITE.phone}
 

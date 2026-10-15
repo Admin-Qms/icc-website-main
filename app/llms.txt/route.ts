@@ -1,4 +1,4 @@
-import { STANDARDS, INDUSTRIES, MODULES, SITE } from "@/lib/site";
+import { STANDARDS, INDUSTRIES, MODULES, SITE, ADDRESS_LINE } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { getAllGuides } from "@/lib/guides";
 import { PEOPLE, personPath } from "@/lib/people";
@@ -21,6 +21,7 @@ export function GET() {
     "ISO Certification Consultants help manufacturing and service companies prepare for and pass ISO and sector certification audits: gap analysis, management system build, internal audits and support through the certification body's Stage 1 and Stage 2 audits. Engagements pair a certified lead consultant with compliance management software that tracks every clause, document, audit and corrective action.",
     "",
     `- Contact: ${SITE.email}, ${SITE.phone}`,
+    `- Office: ${ADDRESS_LINE}`,
     `- Free readiness check: ${url("/assessment/")}`,
     `- Certification process: ${url("/process/")}`,
     "",

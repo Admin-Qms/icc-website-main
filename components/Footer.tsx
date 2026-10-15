@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Phone } from "./Icons";
 import { Logo } from "./Logo";
 import { BbbSeal } from "./BbbSeal";
-import { STANDARDS, INDUSTRIES, MODULES, SITE } from "@/lib/site";
+import { STANDARDS, INDUSTRIES, MODULES, SITE, ADDRESS_LINE } from "@/lib/site";
 
 export function Footer() {
   const year = 2026;
@@ -35,6 +35,9 @@ export function Footer() {
                 {SITE.email}
               </a>
             </p>
+            <address className="mt-2 text-sm not-italic text-slate-400">
+              {ADDRESS_LINE}
+            </address>
             <BbbSeal className="mt-6" />
           </div>
 

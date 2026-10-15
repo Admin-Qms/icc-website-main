@@ -63,12 +63,13 @@ const orgJsonLd = {
   image: `${SITE.url}${SITE.logo}`,
   email: SITE.email,
   telephone: SITE.phone,
-  // Toronto, Ontario per the BBB profile below; no street address is published.
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Toronto",
-    addressRegion: "ON",
-    addressCountry: "CA",
+    streetAddress: SITE.address.street,
+    addressLocality: SITE.address.locality,
+    addressRegion: SITE.address.region,
+    postalCode: SITE.address.postalCode,
+    addressCountry: SITE.address.country,
   },
   sameAs: [SITE.bbb.profileUrl, ...SITE.profiles],
   employee: PEOPLE.map((p) => ({
