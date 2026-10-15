@@ -11,6 +11,8 @@ export type Publication = {
   date: string;
   // One-sentence summary in the site's own words.
   summary: string;
+  // Site pages where the article is offered as further reading.
+  featuredOn: string[];
 };
 
 export type Person = {
@@ -56,6 +58,7 @@ export const ANTHONY_MANNELLA: Person = {
       date: "2026-08-24",
       summary:
         "How defined processes, controls and documentation let a quality system meet customer requirements consistently.",
+      featuredOn: ["/services/iso-9001/", "/solutions/processes/", "/industries/manufacturing/"],
     },
     {
       title: "Supplied products and services must meet your end requirements",
@@ -63,6 +66,7 @@ export const ANTHONY_MANNELLA: Person = {
       date: "2026-04-24",
       summary:
         "Identifying, controlling and monitoring suppliers and outsourced work under clause 8.4 of ISO 9001:2015.",
+      featuredOn: ["/solutions/supplier-quality/", "/services/iatf-16949/", "/industries/automotive/"],
     },
     {
       title: "Lean manufacturing and ISO 9001",
@@ -70,6 +74,7 @@ export const ANTHONY_MANNELLA: Person = {
       date: "2026-03-27",
       summary:
         "Where 5S, error proofing and continuous improvement support an ISO 9001 management system.",
+      featuredOn: ["/services/iso-9001/", "/industries/manufacturing/"],
     },
     {
       title: "A primer on metrology: Part II",
@@ -77,6 +82,7 @@ export const ANTHONY_MANNELLA: Person = {
       date: "2026-01-21",
       summary:
         "Measurement system analysis in more depth, including calibration frequency and traceability.",
+      featuredOn: ["/services/iso-17025/", "/solutions/calibration-maintenance/"],
     },
     {
       title: "A primer on metrology: Part I",
@@ -84,6 +90,7 @@ export const ANTHONY_MANNELLA: Person = {
       date: "2025-12-31",
       summary:
         "Why calibration and measurement system analysis matter to product quality on the shop floor.",
+      featuredOn: ["/services/iso-17025/", "/solutions/calibration-maintenance/"],
     },
     {
       title: "Why become ISO 9001 certified?",
@@ -91,6 +98,7 @@ export const ANTHONY_MANNELLA: Person = {
       date: "2025-10-24",
       summary:
         "The business case for ISO 9001 certification for Canadian manufacturers.",
+      featuredOn: ["/services/iso-9001/"],
     },
   ],
 };
@@ -122,3 +130,10 @@ export const formatDate = (d: string) =>
     day: "numeric",
     timeZone: "UTC",
   });
+
+/** Published articles to offer as further reading on a site page (path with slashes). */
+export function publicationsFor(path: string) {
+  return PEOPLE.flatMap((person) =>
+    person.publications.filter((p) => p.featuredOn.includes(path)).map((p) => ({ person, publication: p })),
+  );
+}

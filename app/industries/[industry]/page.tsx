@@ -8,6 +8,7 @@ import { INDUSTRIES, STANDARDS, MODULES, type Module } from "@/lib/site";
 import { getIndustryCopy, getPostsAbout } from "@/lib/page-copy";
 import { CopyOverview, CopyArticle } from "@/components/PageCopy";
 import { pageTitle } from "@/lib/seo";
+import { FurtherReading } from "@/components/FurtherReading";
 import { nextInList } from "@/lib/nextInList";
 
 export function generateStaticParams() {
@@ -342,6 +343,8 @@ export default function IndustryPage({
       </section>
 
       {copy && <CopyArticle copy={copy} topic={ind.name} posts={posts} />}
+
+      <FurtherReading path={`/industries/${ind.slug}/`} />
 
       {/* modules used in this industry */}
       <section className="bg-soft py-16">

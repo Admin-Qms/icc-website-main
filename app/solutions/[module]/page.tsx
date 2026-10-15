@@ -6,6 +6,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight, Check, Icon } from "@/components/Icons";
 import { MODULES, CUSTOMIZATION, SITE, type Module } from "@/lib/site";
 import { pageTitle } from "@/lib/seo";
+import { FurtherReading } from "@/components/FurtherReading";
 
 export function generateStaticParams() {
   return MODULES.map((m) => ({ module: m.slug }));
@@ -235,6 +236,8 @@ export default function ModulePage({ params }: { params: { module: string } }) {
           </aside>
         </div>
       </section>
+
+      <FurtherReading path={`/solutions/${m.slug}/`} />
 
       {related.length > 0 && (
         <section className="bg-soft py-16">

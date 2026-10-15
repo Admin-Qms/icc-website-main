@@ -15,6 +15,7 @@ import {
 import { getServiceCopy, getPostsAbout } from "@/lib/page-copy";
 import { CopyOverview, CopyArticle } from "@/components/PageCopy";
 import { pageTitle } from "@/lib/seo";
+import { FurtherReading } from "@/components/FurtherReading";
 import { nextInList } from "@/lib/nextInList";
 
 export function generateStaticParams() {
@@ -257,6 +258,8 @@ export default function StandardPage({
       </section>
 
       {copy && <CopyArticle copy={copy} topic={s.code} posts={posts} />}
+
+      <FurtherReading path={`/services/${s.slug}/`} />
 
       {/* other standards */}
       <section className="bg-soft py-16">
