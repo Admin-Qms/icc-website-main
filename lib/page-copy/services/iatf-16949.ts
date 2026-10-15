@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "iatf-16949",
+  updated: "2026-10-15",
   overview: [
     "IATF 16949 is the quality management system standard for automotive production and service part suppliers, published by the International Automotive Task Force (IATF), a group of vehicle manufacturers and their trade associations. It is not a stand-alone standard: it supplements ISO 9001:2015 and is implemented together with it.",
     "IATF 16949:2016 is the current edition. The IATF has announced a second edition in development, but it has not been published, and IATF 16949:2016 remains the standard certification audits use. Only certification bodies recognized by the IATF can issue an IATF 16949 certificate, and each certificate can be checked by its IATF number in the IATF customer portal.",

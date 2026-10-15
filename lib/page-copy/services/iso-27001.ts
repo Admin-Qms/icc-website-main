@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "iso-27001",
+  updated: "2026-10-15",
   overview: [
     "ISO/IEC 27001 is the international standard, published jointly by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC), that sets requirements for an information security management system (ISMS). It applies to any organization that needs to protect the confidentiality, integrity and availability of information, from software companies to manufacturers holding customer drawings.",
     "The current edition is ISO/IEC 27001:2022, with Amendment 1:2024, which adds a requirement to determine whether climate change is a relevant issue when setting the context of the ISMS. The standard is risk-based: it does not prescribe one set of controls for everyone, but requires you to assess your own risks and justify the controls you choose.",

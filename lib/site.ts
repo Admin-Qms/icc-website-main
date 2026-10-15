@@ -23,6 +23,11 @@ export const SITE = {
     profileUrl:
       "https://www.bbb.org/ca/on/toronto/profile/compliance-consulting/iso-certification-consultants-inc-0107-1408097",
   },
+  // Official public profiles of the company (LinkedIn company page, Google Business
+  // Profile, association member listings). Each URL is added to the Organization
+  // structured data as sameAs, which helps search engines and AI assistants tie the
+  // site to the same business. Add only profiles the company controls.
+  profiles: [] as string[],
 };
 
 // Share image for pages without their own (blog posts and guides set theirs).
@@ -116,7 +121,11 @@ export const STANDARDS: Standard[] = [
       "Aerospace, space and defence quality with configuration management, counterfeit-part prevention and FOD control layered onto ISO 9001.",
     keyword: "as9100 consulting canada",
     clauses: "AS9100D · aligned to ISO 9001",
-    tools: ["FOD Prevention", "Configuration Management", "Counterfeit Parts Control"],
+    tools: [
+      "FOD Prevention",
+      "Configuration Management",
+      "Counterfeit Parts Control",
+    ],
     platformSupport: {
       summary:
         "AS9100D is in the catalogue. First article inspection (FAI) packages are tracked in Supplier Quality, controlled documents carry the revision history configuration control depends on, and every clause links to the evidence behind it.",
@@ -185,7 +194,11 @@ export const STANDARDS: Standard[] = [
       "Occupational health and safety built on hazard identification, the hierarchy of controls and worker participation — not just paperwork.",
     keyword: "iso 45001 certification canada",
     clauses: "Occupational health & safety",
-    tools: ["Hazard Identification", "Hierarchy of Controls", "Emergency Response"],
+    tools: [
+      "Hazard Identification",
+      "Hierarchy of Controls",
+      "Emergency Response",
+    ],
     platformSupport: {
       summary:
         "ISO 45001 is in the catalogue. Safety captures incidents and near-misses, including anonymous reports from the floor, and Improvements carries them to root cause and corrective action.",
@@ -253,11 +266,19 @@ export const STANDARDS: Standard[] = [
       "Business continuity management — impact analysis, recovery strategies and tested plans that keep production running through disruption.",
     keyword: "iso 22301 consulting canada",
     clauses: "Business continuity management",
-    tools: ["Business Impact Analysis", "Recovery Strategy", "Continuity Testing"],
+    tools: [
+      "Business Impact Analysis",
+      "Recovery Strategy",
+      "Continuity Testing",
+    ],
     platformSupport: {
       summary:
         "ISO 22301 is not in the standard catalogue. It is supported as a custom standard: the clauses are imported from a workbook, then tracked with the same status, evidence links and coverage view as any catalogue standard.",
-      moduleSlugs: ["standards", "document-control", "audits-management-review"],
+      moduleSlugs: [
+        "standards",
+        "document-control",
+        "audits-management-review",
+      ],
       inCatalogue: false,
     },
   },
@@ -270,7 +291,11 @@ export const STANDARDS: Standard[] = [
       "Testing and calibration laboratory accreditation with measurement traceability, method validation and competence you can defend.",
     keyword: "iso 17025 accreditation canada",
     clauses: "Laboratory competence & accreditation",
-    tools: ["Measurement Traceability", "Method Validation", "Proficiency Testing"],
+    tools: [
+      "Measurement Traceability",
+      "Method Validation",
+      "Proficiency Testing",
+    ],
     platformSupport: {
       summary:
         "ISO/IEC 17025 is in the catalogue. Assets holds the equipment register, calibration intervals and certificates, Training holds personnel competence records, and Audits and Improvements cover internal audits and corrective actions.",
@@ -517,7 +542,11 @@ export const PLATFORM: PlatformFeature[] = [
 
 export const STATS = [
   { value: 11, suffix: "", label: "compliance software modules" },
-  { value: 100, suffix: "%", label: "configured to your workflow — no rigid templates" },
+  {
+    value: 100,
+    suffix: "%",
+    label: "configured to your workflow — no rigid templates",
+  },
   { value: 8, suffix: "", label: "industries served across Canada" },
   { value: 24, suffix: "wk", label: "typical path to certification" },
 ];
@@ -605,10 +634,26 @@ export const MODULES: Module[] = [
       "The exported statement of applicability.",
     ],
     clauses: [
-      { standard: "ISO 9001:2015", clause: "4.3", label: "Determining the scope of the quality management system" },
-      { standard: "ISO 9001:2015", clause: "4.4", label: "Quality management system and its processes" },
-      { standard: "ISO 9001:2015", clause: "6.1", label: "Actions to address risks and opportunities" },
-      { standard: "ISO 9001:2015", clause: "9.1", label: "Monitoring, measurement, analysis and evaluation" },
+      {
+        standard: "ISO 9001:2015",
+        clause: "4.3",
+        label: "Determining the scope of the quality management system",
+      },
+      {
+        standard: "ISO 9001:2015",
+        clause: "4.4",
+        label: "Quality management system and its processes",
+      },
+      {
+        standard: "ISO 9001:2015",
+        clause: "6.1",
+        label: "Actions to address risks and opportunities",
+      },
+      {
+        standard: "ISO 9001:2015",
+        clause: "9.1",
+        label: "Monitoring, measurement, analysis and evaluation",
+      },
     ],
     related: ["document-control", "audits-management-review", "processes"],
     cta: { label: "See the Standards workspace", href: "/contact" },
@@ -647,11 +692,31 @@ export const MODULES: Module[] = [
       "Obsolete revisions kept for the record and clearly marked.",
     ],
     clauses: [
-      { standard: "ISO 9001:2015", clause: "7.5", label: "Documented information" },
-      { standard: "ISO 13485:2016", clause: "4.2.4", label: "Control of documents" },
-      { standard: "ISO 13485:2016", clause: "4.2.5", label: "Control of records" },
-      { standard: "ISO/IEC 17025:2017", clause: "8.3", label: "Control of management system documents" },
-      { standard: "AS9100D", clause: "8.1.2", label: "Configuration management" },
+      {
+        standard: "ISO 9001:2015",
+        clause: "7.5",
+        label: "Documented information",
+      },
+      {
+        standard: "ISO 13485:2016",
+        clause: "4.2.4",
+        label: "Control of documents",
+      },
+      {
+        standard: "ISO 13485:2016",
+        clause: "4.2.5",
+        label: "Control of records",
+      },
+      {
+        standard: "ISO/IEC 17025:2017",
+        clause: "8.3",
+        label: "Control of management system documents",
+      },
+      {
+        standard: "AS9100D",
+        clause: "8.1.2",
+        label: "Configuration management",
+      },
     ],
     related: ["standards", "processes", "training-competence"],
     cta: { label: "Talk about document control", href: "/contact" },
@@ -688,8 +753,16 @@ export const MODULES: Module[] = [
       "The documents and clauses linked to each process.",
     ],
     clauses: [
-      { standard: "ISO 9001:2015", clause: "4.4", label: "Quality management system and its processes" },
-      { standard: "ISO 9001:2015", clause: "5.3", label: "Organizational roles, responsibilities and authorities" },
+      {
+        standard: "ISO 9001:2015",
+        clause: "4.4",
+        label: "Quality management system and its processes",
+      },
+      {
+        standard: "ISO 9001:2015",
+        clause: "5.3",
+        label: "Organizational roles, responsibilities and authorities",
+      },
     ],
     related: ["document-control", "standards", "audits-management-review"],
     cta: { label: "Map your processes with a consultant", href: "/contact" },
@@ -728,8 +801,16 @@ export const MODULES: Module[] = [
     clauses: [
       { standard: "ISO 9001:2015", clause: "9.2", label: "Internal audit" },
       { standard: "ISO 13485:2016", clause: "8.2.4", label: "Internal audit" },
-      { standard: "ISO/IEC 17025:2017", clause: "8.8", label: "Internal audits" },
-      { standard: "IATF 16949:2016", clause: "8.4.2.4.1", label: "Second-party audits" },
+      {
+        standard: "ISO/IEC 17025:2017",
+        clause: "8.8",
+        label: "Internal audits",
+      },
+      {
+        standard: "IATF 16949:2016",
+        clause: "8.4.2.4.1",
+        label: "Second-party audits",
+      },
     ],
     related: ["nonconformance-capa", "standards", "supplier-quality"],
     cta: { label: "Plan your audit programme", href: "/contact" },
@@ -768,11 +849,31 @@ export const MODULES: Module[] = [
       "The sealed report for every closed item.",
     ],
     clauses: [
-      { standard: "ISO 9001:2015", clause: "8.7", label: "Control of nonconforming outputs" },
-      { standard: "ISO 9001:2015", clause: "10.2", label: "Nonconformity and corrective action" },
-      { standard: "ISO 13485:2016", clause: "8.5.2", label: "Corrective action" },
-      { standard: "ISO/IEC 17025:2017", clause: "8.7", label: "Corrective actions" },
-      { standard: "IATF 16949:2016", clause: "10.2.3", label: "Problem solving" },
+      {
+        standard: "ISO 9001:2015",
+        clause: "8.7",
+        label: "Control of nonconforming outputs",
+      },
+      {
+        standard: "ISO 9001:2015",
+        clause: "10.2",
+        label: "Nonconformity and corrective action",
+      },
+      {
+        standard: "ISO 13485:2016",
+        clause: "8.5.2",
+        label: "Corrective action",
+      },
+      {
+        standard: "ISO/IEC 17025:2017",
+        clause: "8.7",
+        label: "Corrective actions",
+      },
+      {
+        standard: "IATF 16949:2016",
+        clause: "10.2.3",
+        label: "Problem solving",
+      },
     ],
     related: ["audits-management-review", "supplier-quality", "safety"],
     cta: { label: "See how CAPA closes the loop", href: "/contact" },
@@ -781,7 +882,8 @@ export const MODULES: Module[] = [
     slug: "safety",
     name: "Safety",
     icon: "certificate",
-    tagline: "Near-misses reported from the floor, before they become incidents",
+    tagline:
+      "Near-misses reported from the floor, before they become incidents",
     summary:
       "Incident and near-miss reporting with severity based on the level of harm, anonymous QR-code reporting that needs no login, and a separate dashboard and permissions. Enabled per organization.",
     features: [
@@ -809,9 +911,22 @@ export const MODULES: Module[] = [
       "The corrective actions linked to each incident.",
     ],
     clauses: [
-      { standard: "ISO 45001:2018", clause: "10.2", label: "Incident, nonconformity and corrective action" },
-      { standard: "ISO 45001:2018", clause: "5.4", label: "Consultation and participation of workers" },
-      { standard: "ISO 45001:2018", clause: "6.1.2", label: "Hazard identification and assessment of risks and opportunities" },
+      {
+        standard: "ISO 45001:2018",
+        clause: "10.2",
+        label: "Incident, nonconformity and corrective action",
+      },
+      {
+        standard: "ISO 45001:2018",
+        clause: "5.4",
+        label: "Consultation and participation of workers",
+      },
+      {
+        standard: "ISO 45001:2018",
+        clause: "6.1.2",
+        label:
+          "Hazard identification and assessment of risks and opportunities",
+      },
     ],
     related: ["nonconformance-capa", "training-competence"],
     cta: { label: "Turn on safety reporting", href: "/contact" },
@@ -893,15 +1008,41 @@ export const MODULES: Module[] = [
       "The PFMEA, Process Flow and Control Plan for a part, and the links between them.",
     ],
     clauses: [
-      { standard: "ISO 9001:2015", clause: "8.4", label: "Control of externally provided processes, products and services" },
-      { standard: "IATF 16949:2016", clause: "8.4.2.4", label: "Supplier monitoring" },
-      { standard: "IATF 16949:2016", clause: "8.3.4.4", label: "Product approval process" },
+      {
+        standard: "ISO 9001:2015",
+        clause: "8.4",
+        label:
+          "Control of externally provided processes, products and services",
+      },
+      {
+        standard: "IATF 16949:2016",
+        clause: "8.4.2.4",
+        label: "Supplier monitoring",
+      },
+      {
+        standard: "IATF 16949:2016",
+        clause: "8.3.4.4",
+        label: "Product approval process",
+      },
       { standard: "IATF 16949:2016", clause: "8.5.1.1", label: "Control plan" },
-      { standard: "AS9100D", clause: "8.4", label: "Control of externally provided processes, products and services" },
-      { standard: "AS9100D", clause: "8.5.1.3", label: "Production process verification" },
+      {
+        standard: "AS9100D",
+        clause: "8.4",
+        label:
+          "Control of externally provided processes, products and services",
+      },
+      {
+        standard: "AS9100D",
+        clause: "8.5.1.3",
+        label: "Production process verification",
+      },
       { standard: "ISO 13485:2016", clause: "7.4", label: "Purchasing" },
     ],
-    related: ["nonconformance-capa", "document-control", "audits-management-review"],
+    related: [
+      "nonconformance-capa",
+      "document-control",
+      "audits-management-review",
+    ],
     cta: { label: "Talk about supplier quality", href: "/contact" },
   },
   {
@@ -937,9 +1078,17 @@ export const MODULES: Module[] = [
       "Maintenance history for each asset.",
     ],
     clauses: [
-      { standard: "ISO 9001:2015", clause: "7.1.5", label: "Monitoring and measuring resources" },
+      {
+        standard: "ISO 9001:2015",
+        clause: "7.1.5",
+        label: "Monitoring and measuring resources",
+      },
       { standard: "ISO 9001:2015", clause: "7.1.3", label: "Infrastructure" },
-      { standard: "ISO 13485:2016", clause: "7.6", label: "Control of monitoring and measuring equipment" },
+      {
+        standard: "ISO 13485:2016",
+        clause: "7.6",
+        label: "Control of monitoring and measuring equipment",
+      },
       { standard: "ISO/IEC 17025:2017", clause: "6.4", label: "Equipment" },
     ],
     related: ["nonconformance-capa", "training-competence"],
@@ -975,7 +1124,12 @@ export const MODULES: Module[] = [
       "The evaluation history for any vendor.",
     ],
     clauses: [
-      { standard: "ISO 9001:2015", clause: "8.4", label: "Control of externally provided processes, products and services" },
+      {
+        standard: "ISO 9001:2015",
+        clause: "8.4",
+        label:
+          "Control of externally provided processes, products and services",
+      },
       { standard: "ISO 13485:2016", clause: "7.4", label: "Purchasing" },
     ],
     related: ["supplier-quality", "nonconformance-capa", "document-control"],
@@ -1060,19 +1214,23 @@ export const PAIN_POINTS = [
 export const AI_PRINCIPLES = [
   {
     title: "Acts within your permissions",
-    detail: "The assistant can only do what the person asking is allowed to do.",
+    detail:
+      "The assistant can only do what the person asking is allowed to do.",
   },
   {
     title: "Plans before it acts",
-    detail: "A multi-step request becomes a visible plan that the user approves first.",
+    detail:
+      "A multi-step request becomes a visible plan that the user approves first.",
   },
   {
     title: "Confirms destructive steps",
-    detail: "Anything that deletes or overwrites data needs extra confirmation.",
+    detail:
+      "Anything that deletes or overwrites data needs extra confirmation.",
   },
   {
     title: "Drafting is off until you turn it on",
-    detail: "AI drafting of documents is an organization-level setting, off by default.",
+    detail:
+      "AI drafting of documents is an organization-level setting, off by default.",
   },
   {
     title: "A person always signs off",
@@ -1154,7 +1312,11 @@ export const CUSTOM_FEEDBACK = {
   title: "A feedback loop at every step, until it fits",
   detail:
     "Customization is not a hand-off. We walk each draft of the solution through your actual processes with your team, gather their feedback, and refine, repeating until it matches your needs and clears the challenges you started with. The result is built around your organization, never a template bent to fit.",
-  cycle: ["Walk it through your process", "Gather your team's feedback", "Refine and re-check"],
+  cycle: [
+    "Walk it through your process",
+    "Gather your team's feedback",
+    "Refine and re-check",
+  ],
 };
 
 export const GAP_CREDIT = {

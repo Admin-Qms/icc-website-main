@@ -92,9 +92,14 @@ function buildComponents(): Components {
       </div>
     ),
     thead: ({ children }) => <thead className="bg-navy-50">{children}</thead>,
-    th: ({ children }) => (
-      <th className="px-4 py-3 font-heading text-sm font-bold text-navy-900">{children}</th>
-    ),
+    th: ({ children, scope }) =>
+      scope === "row" ? (
+        <th scope="row" className="border-t border-slate-200 px-4 py-3 align-top font-heading text-sm font-bold leading-7 text-navy-900">
+          {children}
+        </th>
+      ) : (
+        <th scope="col" className="px-4 py-3 font-heading text-sm font-bold text-navy-900">{children}</th>
+      ),
     td: ({ children }) => (
       <td className="border-t border-slate-200 px-4 py-3 align-top leading-7">{children}</td>
     ),
@@ -105,11 +110,51 @@ function buildComponents(): Components {
   };
 }
 
+type HastNode = {
+  type: string;
+  tagName?: string;
+  value?: string;
+  properties?: Record<string, unknown>;
+  children?: HastNode[];
+};
+
+const elements = (node: HastNode | undefined, tag: string) =>
+  (node?.children ?? []).filter((c) => c.type === "element" && c.tagName === tag);
+const hastText = (node: HastNode): string =>
+  node.type === "text" ? node.value ?? "" : (node.children ?? []).map(hastText).join("");
+
+/**
+ * Comparison tables leave the top-left header empty and put row labels in the first
+ * column ("Purpose", "Depth"...). Those labels become row headers, so every data cell
+ * has a column header and a row header, as screen readers expect.
+ */
+function rehypeRowHeaders() {
+  return (tree: HastNode) => {
+    const walk = (node: HastNode) => {
+      if (node.type === "element" && node.tagName === "table") {
+        const headRow = elements(elements(node, "thead")[0], "tr")[0];
+        const corner = elements(headRow, "th")[0];
+        if (corner && hastText(corner).trim() === "") {
+          for (const row of elements(elements(node, "tbody")[0], "tr")) {
+            const first = (row.children ?? []).find((c) => c.type === "element");
+            if (first?.tagName === "td") {
+              first.tagName = "th";
+              first.properties = { ...first.properties, scope: "row" };
+            }
+          }
+        }
+      }
+      (node.children ?? []).forEach(walk);
+    };
+    walk(tree);
+  };
+}
+
 /** Renders a post body. Raw HTML in the source is escaped, not executed. */
 export function Markdown({ children }: { children: string }) {
   return (
     <div className="text-[17px] text-slate-700 [&>*:first-child]:mt-0">
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={buildComponents()}>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRowHeaders]} components={buildComponents()}>
         {children}
       </ReactMarkdown>
     </div>

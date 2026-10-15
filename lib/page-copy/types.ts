@@ -14,6 +14,9 @@ export type PageFaq = { question: string; answer: string };
 
 export type PageCopy = {
   slug: string;
+  // Date (YYYY-MM-DD) this copy last changed in substance; used as the sitemap lastmod.
+  // Update it whenever the text is revised.
+  updated: string;
   // Two or three opening paragraphs: what this is and why it matters to a Canadian business.
   overview: string[];
   // Three or four sections, each under its own H2.

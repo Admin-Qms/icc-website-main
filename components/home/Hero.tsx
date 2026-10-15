@@ -9,13 +9,24 @@ import { SITE } from "@/lib/site";
 import { ContactForm } from "../ContactForm";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
-const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } } };
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } },
+};
 const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
 };
 
-const HERO_STANDARDS = ["ISO 9001", "IATF 16949", "AS9100", "ISO 13485", "ISO 14001", "ISO 45001", "ISO 27001"];
+const HERO_STANDARDS = [
+  "ISO 9001",
+  "IATF 16949",
+  "AS9100",
+  "ISO 13485",
+  "ISO 14001",
+  "ISO 45001",
+  "ISO 27001",
+];
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -41,14 +52,20 @@ export function Hero() {
               <AnimatedHeadline />
             </h1>
 
-            <motion.p variants={item} className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
-              Certified consultants guide you from the first gap analysis to a passed
-              certification audit. Compliance management software holds the evidence as a
-              by-product of daily work, so nothing is assembled in a panic beforehand. Any
-              standard, one team.
+            <motion.p
+              variants={item}
+              className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600"
+            >
+              Certified consultants guide you from the first gap analysis to a
+              passed certification audit. Compliance management software holds
+              the evidence as a by-product of daily work, so nothing is
+              assembled in a panic beforehand. Any standard, one team.
             </motion.p>
 
-            <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-4">
+            <motion.div
+              variants={item}
+              className="mt-8 flex flex-wrap items-center gap-4"
+            >
               <Link href="/contact" className="btn-primary group">
                 Book a free consultation
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -58,21 +75,35 @@ export function Hero() {
               </Link>
             </motion.div>
 
-            <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
-              {["Serving Ontario & all of Canada", "10 standards in the catalogue, plus custom", "Consultant-led, every step"].map(
-                (f) => (
-                  <span key={f} className="flex items-center gap-2 text-sm font-semibold text-slate-700">
-                    <Check className="h-4 w-4 text-teal-600" />
-                    {f}
-                  </span>
-                )
-              )}
+            <motion.div
+              variants={item}
+              className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3"
+            >
+              {[
+                "Serving Ontario & all of Canada",
+                "10 standards in the catalogue, plus custom",
+                "Consultant-led, every step",
+              ].map((f) => (
+                <span
+                  key={f}
+                  className="flex items-center gap-2 text-sm font-semibold text-slate-700"
+                >
+                  <Check className="h-4 w-4 text-teal-600" />
+                  {f}
+                </span>
+              ))}
             </motion.div>
 
-            <motion.div variants={item} className="mt-6 flex items-center gap-2 text-sm text-slate-500">
+            <motion.div
+              variants={item}
+              className="mt-6 flex items-center gap-2 text-sm text-slate-500"
+            >
               <Phone className="h-4 w-4 text-teal-600" />
               Prefer to talk?{" "}
-              <a href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`} className="font-bold text-navy-900 hover:text-teal-700">
+              <a
+                href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
+                className="font-bold text-navy-900 hover:text-teal-700"
+              >
                 {SITE.phone}
               </a>
             </motion.div>
@@ -92,7 +123,8 @@ export function Hero() {
             viewport={{ once: true }}
             className="mb-5 text-center text-xs font-bold uppercase tracking-[0.14em] text-slate-500"
           >
-            We prepare Canadian companies for the standards their customers require
+            We prepare Canadian companies for the standards their customers
+            require
           </motion.p>
           <motion.div
             variants={{ show: { transition: { staggerChildren: 0.06 } } }}
@@ -104,7 +136,10 @@ export function Hero() {
             {HERO_STANDARDS.map((code) => (
               <motion.span
                 key={code}
-                variants={{ hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }}
+                variants={{
+                  hidden: { opacity: 0, y: 12 },
+                  show: { opacity: 1, y: 0 },
+                }}
                 className="rounded-md border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-navy-800 shadow-sm transition-colors hover:border-teal-300 hover:text-teal-700"
               >
                 {code}
@@ -122,31 +157,55 @@ function HeroContactPanel() {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    if (reduce) { setShowForm(true); return; }
+    if (reduce) {
+      setShowForm(true);
+      return;
+    }
     const timer = window.setTimeout(() => setShowForm(true), 5000);
     return () => window.clearTimeout(timer);
   }, [reduce]);
 
-  return <div className="grid min-w-0 items-center" aria-label="Consultation enquiry">
-    {!showForm && <div className="min-w-0 [grid-area:1/1]" aria-hidden="true"><IndustryImageWall /></div>}
-    <motion.div
-      className={`min-w-0 [grid-area:1/1] ${showForm ? 'visible' : 'invisible pointer-events-none'}`}
-      aria-hidden={!showForm}
-      initial={false}
-      animate={{ opacity: showForm ? 1 : 0 }}
-      transition={{ duration: reduce ? 0 : 0.4 }}
+  return (
+    <section
+      className="grid min-w-0 items-center"
+      aria-label="Consultation enquiry"
     >
-      <ContactForm compact title="Book a free consultation" />
-    </motion.div>
-    <noscript><p className="mt-4"><Link href="/contact/" className="font-semibold text-teal-700 underline">Contact a consultant</Link></p></noscript>
-  </div>;
+      {!showForm && (
+        <div className="min-w-0 [grid-area:1/1]" aria-hidden="true">
+          <IndustryImageWall />
+        </div>
+      )}
+      <motion.div
+        className={`min-w-0 [grid-area:1/1] ${showForm ? "visible" : "invisible pointer-events-none"}`}
+        aria-hidden={!showForm}
+        initial={false}
+        animate={{ opacity: showForm ? 1 : 0 }}
+        transition={{ duration: reduce ? 0 : 0.4 }}
+      >
+        <ContactForm compact title="Book a free consultation" />
+      </motion.div>
+      <noscript>
+        <p className="mt-4">
+          <Link
+            href="/contact/"
+            className="font-semibold text-teal-700 underline"
+          >
+            Contact a consultant
+          </Link>
+        </p>
+      </noscript>
+    </section>
+  );
 }
 
 /* ---- headline with a highlighted, underline-drawing accent ---- */
 function AnimatedHeadline() {
   return (
     <motion.span
-      variants={{ hidden: {}, show: { transition: { staggerChildren: 0.16, delayChildren: 0.1 } } }}
+      variants={{
+        hidden: {},
+        show: { transition: { staggerChildren: 0.16, delayChildren: 0.1 } },
+      }}
       initial="hidden"
       animate="show"
       className="inline"
@@ -154,14 +213,30 @@ function AnimatedHeadline() {
       {["Get ISO certified without", "disrupting how your"].map((line, i) => (
         <motion.span
           key={i}
-          variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } } }}
+          variants={{
+            hidden: { opacity: 0, y: 18 },
+            show: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.6, ease: easeOut },
+            },
+          }}
           className="block"
         >
           {line}
+          {/* The lines are block spans; the trailing space keeps the words apart in
+              the page text that crawlers and screen readers read. */}{" "}
         </motion.span>
       ))}
       <motion.span
-        variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } } }}
+        variants={{
+          hidden: { opacity: 0, y: 18 },
+          show: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: easeOut },
+          },
+        }}
         className="relative inline-block text-teal-700"
       >
         business runs.
@@ -190,18 +265,21 @@ function AnimatedHeadline() {
 /* ---- layered animated background (subtle, industrial, professional) ---- */
 function HeroBackground({ reduce }: { reduce: boolean }) {
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+    <div
+      className="pointer-events-none absolute inset-0 overflow-hidden"
+      aria-hidden
+    >
       <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-teal-50/70 to-transparent" />
-          <motion.div
-            className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-teal-200/30 blur-3xl"
-            animate={reduce ? undefined : { x: [0, 30, 0], y: [0, 20, 0] }}
-            transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute right-0 top-32 h-80 w-80 rounded-full bg-gold-200/25 blur-3xl"
-            animate={reduce ? undefined : { x: [0, -30, 0], y: [0, 24, 0] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          />
+      <motion.div
+        className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-teal-200/30 blur-3xl"
+        animate={reduce ? undefined : { x: [0, 30, 0], y: [0, 20, 0] }}
+        transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute right-0 top-32 h-80 w-80 rounded-full bg-gold-200/25 blur-3xl"
+        animate={reduce ? undefined : { x: [0, -30, 0], y: [0, 24, 0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+      />
     </div>
   );
 }
@@ -295,7 +373,9 @@ function IndustryImageWall() {
         </span>
         <div>
           <p className="text-xs text-slate-500">Real-world implementation</p>
-          <p className="text-sm font-bold text-navy-900">across regulated industries</p>
+          <p className="text-sm font-bold text-navy-900">
+            across regulated industries
+          </p>
         </div>
       </motion.div>
     </motion.div>
@@ -338,9 +418,7 @@ function HeroImageCard({
   priority?: boolean;
 }) {
   return (
-    <article
-      className="relative h-44 w-[280px] shrink-0 overflow-hidden rounded-xl border border-white bg-white shadow-[0_18px_46px_-24px_rgba(22,43,77,0.55)] sm:h-56 sm:w-[360px] lg:h-60 lg:w-[390px]"
-    >
+    <article className="relative h-44 w-[280px] shrink-0 overflow-hidden rounded-xl border border-white bg-white shadow-[0_18px_46px_-24px_rgba(22,43,77,0.55)] sm:h-56 sm:w-[360px] lg:h-60 lg:w-[390px]">
       <Image
         src={img.src}
         alt={img.alt}
@@ -359,8 +437,12 @@ function HeroImageCard({
 function IndustryTag({ img }: { img: { label: string; standard: string } }) {
   return (
     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/75 to-transparent px-3 pb-3 pt-12">
-      <p className="text-xs font-bold uppercase tracking-[0.12em] text-teal-100">{img.label}</p>
-      <p className="font-heading text-sm font-bold text-white">{img.standard}</p>
+      <p className="text-xs font-bold uppercase tracking-[0.12em] text-teal-100">
+        {img.label}
+      </p>
+      <p className="font-heading text-sm font-bold text-white">
+        {img.standard}
+      </p>
     </div>
   );
 }

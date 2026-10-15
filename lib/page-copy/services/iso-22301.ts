@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "iso-22301",
+  updated: "2026-10-15",
   overview: [
     "ISO 22301:2019 is the international standard for business continuity management systems, published by the International Organization for Standardization (ISO). It sets requirements for planning, running and improving the arrangements that let an organization keep delivering its products and services through a disruption, and it applies to organizations of any type and size.",
     "The 2019 edition is current, and Amendment 1:2024 adds a requirement to determine whether climate change is a relevant issue for the organization. For a Canadian manufacturer or service provider, the standard turns continuity from a plan written once and filed into a tested system: you know which activities matter most, how long each can stop before the damage becomes unacceptable, and how you will bring it back.",

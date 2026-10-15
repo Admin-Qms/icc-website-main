@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "construction",
+  updated: "2026-10-15",
   overview: [
     "Construction companies in Canada typically pursue ISO 9001 for quality, ISO 45001 for health and safety and ISO 14001 for environmental management, because public owners, general contractors and infrastructure tenders ask for certified systems at prequalification. In Ontario, safety prequalification also turns on COR, which the Infrastructure Health & Safety Association grants in the province.",
     "The difficulty in construction is that the workplace keeps changing. Each project brings a new site, a new owner specification, new subcontractors and a crew that may not have worked together before. Quality problems show up as rework and deficiency lists, safety obligations fall on the constructor under provincial law, and dust, sediment runoff, noise and waste have to be controlled at every site.",

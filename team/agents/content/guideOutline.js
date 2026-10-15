@@ -11,10 +11,20 @@ const SECTIONS = [
   ['ongoing-operation', 'Maintaining the system and choosing next steps', ['Review the workflow and evidence', 'Evaluate improvements without invented ROI', 'Frequently asked questions', 'Prepare a software demonstration']]
 ];
 const SCENES = ['a fabrication inspector tracing a paper work instruction at a cutting station', 'a machining supervisor comparing inspection records beside a CNC machine', 'a production operator completing a controlled checklist at an assembly station', 'two quality inspectors reviewing a weld inspection record beside a fabrication cell', 'a line operator scanning an approved instruction beside a guarded press', 'a quality technician isolating a rejected component at a marked inspection bench', 'a receiving inspector sorting traceability records beside incoming material racks', 'a trainer showing an operator the approved setup instruction on a shop floor', 'a quality lead reviewing completed evidence beside a final inspection station'];
-function descriptionFor(keyword, focus) {
-  let description = `Explore ${keyword} for Canadian quality and operations teams: ${focus.toLowerCase()}, practical workflow examples and implementation decisions.`;
-  if (description.length > 160) description = description.slice(0, 156).replace(/\s+\S*$/, '').replace(/\s+(?:and|with|for|the|a|an|or|to|of)$/i, '') + '.';
-  if (description.length < 120) description = description.replace(/\.$/, '') + ' Use it to evaluate your next steps.';
+// "<Focus> in <keyword>: <what the page covers>." built from the page's own subsection
+// titles, so every description is specific and fits the 120-160 character rule.
+function descriptionFor(keyword, focus, details = [], lead = `${focus.charAt(0).toUpperCase()}${focus.slice(1)} in ${keyword}`) {
+  const items = details.filter(d => !/frequently asked questions/i.test(d)).map(d => d.charAt(0).toLowerCase() + d.slice(1));
+  // Items that already contain "and" are separated with semicolons so the list stays readable.
+  const join = list => list.some(i => / and /.test(i)) ? list.join('; ')
+    : list.length > 1 ? `${list.slice(0, -1).join(', ')} and ${list[list.length - 1]}` : list.join('');
+  let description = `${lead}.`;
+  for (let n = items.length; n > 0; n--) {
+    const candidate = `${lead}: ${join(items.slice(0, n))}.`;
+    if (candidate.length <= 160) { description = candidate; break; }
+  }
+  if (description.length < 120) description = description.replace(/\.$/, '') + ', for Canadian quality and operations teams.';
+  if (description.length > 160) description = description.slice(0, 156).replace(/\s+\S*$/, '').replace(/[\s,;:]+(?:and|with|for|the|a|an|or|to|of|in)?$/i, '') + '.';
   return description;
 }
 function createGuideOutline(topic, research = { sources: [] }) {
@@ -27,12 +37,12 @@ function createGuideOutline(topic, research = { sources: [] }) {
     return [...research.sources].sort((a, b) => terms.filter(t => b.supportedClaims.join(' ').toLowerCase().includes(t)).length - terms.filter(t => a.supportedClaims.join(' ').toLowerCase().includes(t)).length).slice(0, 2).map(s => s.id);
   };
   return { title: `${topic.topic} for Canadian quality and operations teams`,
-    description: descriptionFor(keyword, 'planning, evaluation and rollout'), primaryKeyword: keyword,
+    description: descriptionFor(keyword, '', ['map the workflow', 'compare capabilities', 'configure reviews', 'migrate records', 'train teams'], `How to choose and implement ${keyword}`), primaryKeyword: keyword,
     introductionWords: 1500, estimatedWords: 19500,
     introductionImageBrief: `A manufacturing quality technician confirming a controlled work instruction at a production cell; authentic industrial setting, no text or logos`,
     glossary: [{ term: 'Workflow owner', definition: 'The role responsible for decisions and records in the defined workflow.' }],
     example: { label: 'Illustrative example', description: `An unnamed Canadian manufacturer evaluates ${topic.topic.toLowerCase()} for one production workflow; all situations and records are hypothetical, not customer results.` },
-    chapters: sections.map(([slug, title, subsectionTitles], i) => ({ slug, title: `${title}: ${topic.topic}`, description: descriptionFor(keyword, title), targetWords: 2000,
+    chapters: sections.map(([slug, title, subsectionTitles], i) => ({ slug, title: `${title}: ${topic.topic}`, description: descriptionFor(keyword, title, subsectionTitles), targetWords: 2000,
       chapterKeyword: `${keyword} ${title.toLowerCase()}`,
       boundaries: sections.filter((_, other) => other !== i).map(([, otherTitle]) => `Leave ${otherTitle.toLowerCase()} to its assigned chapter.`),
       subsections: subsectionTitles.map(section => ({ title: section, sourceIds: evidenceFor(section), keyPoints: [`Explain ${section.toLowerCase()} as a software evaluation or implementation decision; do not imply an unverified ICC feature.`, `Connect the decision to ${topic.problem || 'the operational problem'}; distinguish sourced facts from hypothetical workflow advice.`],

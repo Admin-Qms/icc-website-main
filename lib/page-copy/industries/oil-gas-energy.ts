@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "oil-gas-energy",
+  updated: "2026-10-15",
   overview: [
     "Oil, gas and energy companies in Canada typically certify to ISO 9001, ISO 14001 and ISO 45001, often as one integrated system, because operators and project owners prequalify contractors on them and regulators expect hazards and compliance obligations to be managed systematically. Federally regulated pipeline companies must also maintain a management system under the Canadian Energy Regulator Onshore Pipeline Regulations.",
     "The work is high-consequence and spread out. A loss of containment, a spill or a failed lift has consequences far beyond the site, and the people doing the work are often contractors on rotation at remote locations. Interprovincial pipelines answer to the federal regulator, while upstream and provincial facilities answer to provincial bodies, so one company can carry several sets of obligations at once.",

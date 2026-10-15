@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "iso-17025",
+  updated: "2026-10-15",
   overview: [
     "ISO/IEC 17025:2017 is the international standard for the competence, impartiality and consistent operation of testing and calibration laboratories, published jointly by ISO and the International Electrotechnical Commission (IEC). It applies to any organization that performs testing, calibration or sampling linked to later testing or calibration, from in-plant labs to independent commercial laboratories.",
     "Unlike most ISO standards, ISO/IEC 17025 leads to **accreditation, not certification.** An accreditation body assesses the laboratory and grants accreditation for a defined scope of tests or calibrations. In Canada, the Standards Council of Canada (SCC) and the Canadian Association for Laboratory Accreditation (CALA) both accredit laboratories to ISO/IEC 17025.",

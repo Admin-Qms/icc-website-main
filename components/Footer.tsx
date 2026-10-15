@@ -11,13 +11,14 @@ export function Footer() {
       <div className="container-page">
         <div className="grid grid-cols-[minmax(0,1fr)] gap-12 border-b border-white/10 py-16 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
           <div className="min-w-0 max-w-sm">
-            <Link href="/" aria-label={`${SITE.name} home`}>
+            <Link href="/">
               <Logo variant="light" />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-slate-400">
-              ISO certification consulting for Canadian companies. Certified consultants and
-              compliance management software that take you from gap analysis to a passed
-              certification audit, configured to your processes and ready for any standard.
+              ISO certification consulting for Canadian companies. Certified
+              consultants and compliance management software that take you from
+              gap analysis to a passed certification audit, configured to your
+              processes and ready for any standard.
             </p>
             <a
               href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
@@ -27,7 +28,10 @@ export function Footer() {
               {SITE.phone}
             </a>
             <p className="mt-2 text-sm text-slate-400">
-              <a href={`mailto:${SITE.email}`} className="break-all hover:text-teal-300">
+              <a
+                href={`mailto:${SITE.email}`}
+                className="break-all hover:text-teal-300"
+              >
                 {SITE.email}
               </a>
             </p>
@@ -63,7 +67,9 @@ export function Footer() {
 
           <FooterCol title="Company">
             <FooterLink href="/roi">ROI estimator</FooterLink>
-            <FooterLink href="/custom-solutions">Custom-built solutions</FooterLink>
+            <FooterLink href="/custom-solutions">
+              Custom-built solutions
+            </FooterLink>
             <FooterLink href="/process">How it works</FooterLink>
             <FooterLink href="/assessment">Free assessment</FooterLink>
             <FooterLink href="/blog">Blog</FooterLink>
@@ -75,7 +81,8 @@ export function Footer() {
 
         <div className="flex flex-col gap-4 py-8 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {SITE.legalName}. Serving companies across Canada &amp; the USA.
+            © {year} {SITE.legalName}. Serving companies across Canada &amp; the
+            USA.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-white">
@@ -93,7 +100,10 @@ export function Footer() {
       <div className="border-t border-white/10 bg-navy-950">
         <div className="container-page flex flex-col items-center justify-between gap-3 py-5 text-sm sm:flex-row">
           <p className="text-slate-300">Ready to find out where you stand?</p>
-          <Link href="/contact" className="inline-flex items-center gap-1.5 font-semibold text-teal-300 hover:text-teal-200">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-1.5 font-semibold text-teal-300 hover:text-teal-200"
+          >
             Book a free consultation <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -102,19 +112,36 @@ export function Footer() {
   );
 }
 
-function FooterCol({ title, children }: { title: string; children: React.ReactNode }) {
+function FooterCol({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <div>
-      <h4 className="text-xs font-bold uppercase tracking-[0.14em] text-white">{title}</h4>
+      <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-white">
+        {title}
+      </h2>
       <ul className="mt-4 space-y-2.5">{children}</ul>
     </div>
   );
 }
 
-function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
+function FooterLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
   return (
     <li>
-      <Link href={href} className="text-sm text-slate-400 transition-colors hover:text-teal-300">
+      <Link
+        href={href}
+        className="text-sm text-slate-400 transition-colors hover:text-teal-300"
+      >
         {children}
       </Link>
     </li>

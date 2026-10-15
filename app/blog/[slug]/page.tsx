@@ -19,6 +19,7 @@ import {
   serializeJsonLd,
 } from "@/lib/blog";
 import { SITE } from "@/lib/site";
+import { pageTitle } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -29,8 +30,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!post) return {};
   const url = `/blog/${post.slug}`;
   return {
-    // Long post titles drop the brand suffix so the post title itself is not cut off.
-    title: post.title.length > 38 ? { absolute: post.title } : post.title,
+    title: pageTitle(post.title),
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical: url },

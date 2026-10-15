@@ -4,6 +4,7 @@ import type { MetadataRoute } from "next";
 import { STANDARDS, INDUSTRIES, MODULES, SITE } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { getAllGuides } from "@/lib/guides";
+import { getServiceCopy, getIndustryCopy } from "@/lib/page-copy";
 
 // Fixed pages are found by scanning app/ for page.tsx at build time, so a new page
 // is listed without editing this file. Dynamic segments ([slug]) are listed below
@@ -21,23 +22,39 @@ const PRIORITY: Record<string, number> = {
   "/assessment": 0.8,
   "/about": 0.7,
   "/contact": 0.7,
+  "/privacy": 0.2,
+  "/terms": 0.2,
 };
 const LISTED_ELSEWHERE = new Set(["/blog", "/guides"]);
 
-function findStaticPages(dir = path.join(process.cwd(), "app"), route = ""): string[] {
+function findStaticPages(
+  dir = path.join(process.cwd(), "app"),
+  route = "",
+): string[] {
   const found: string[] = [];
   const page = path.join(dir, "page.tsx");
-  if (existsSync(page) && !readFileSync(page, "utf8").includes("RedirectStub")) found.push(route);
+  if (existsSync(page) && !readFileSync(page, "utf8").includes("RedirectStub"))
+    found.push(route);
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     if (!entry.isDirectory() || /^[[(_.]/.test(entry.name)) continue;
-    found.push(...findStaticPages(path.join(dir, entry.name), `${route}/${entry.name}`));
+    found.push(
+      ...findStaticPages(path.join(dir, entry.name), `${route}/${entry.name}`),
+    );
   }
   return found;
 }
 
+function lastmod(date: string | undefined) {
+  return date ? { lastModified: new Date(`${date}T12:00:00Z`) } : {};
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;
-  const now = new Date("2026-10-15");
+  const day = (d: string) => new Date(`${d}T12:00:00Z`);
+  // lastmod is only given where a real change date is known: service and industry
+  // copy carries its own `updated` date, posts and guides carry theirs. Fixed pages
+  // and software modules leave it out, because Google ignores lastmod values that
+  // are not consistently accurate.
 
   const staticRoutes = findStaticPages()
     .filter((p) => !LISTED_ELSEWHERE.has(p))
@@ -45,39 +62,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .sort((x, y) => y.priority - x.priority || x.path.localeCompare(y.path))
     .map((r) => ({
       url: `${base}${r.path}/`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: r.priority,
     }));
 
   const moduleRoutes = MODULES.map((m) => ({
     url: `${base}/solutions/${m.slug}/`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
   const serviceRoutes = STANDARDS.map((s) => ({
     url: `${base}/services/${s.slug}/`,
-    lastModified: now,
+    ...lastmod(getServiceCopy(s.slug)?.updated),
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
   const industryRoutes = INDUSTRIES.map((i) => ({
     url: `${base}/industries/${i.slug}/`,
-    lastModified: now,
+    ...lastmod(getIndustryCopy(i.slug)?.updated),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
   const posts = getAllPosts();
-  const day = (d: string) => new Date(`${d}T12:00:00Z`);
 
   const blogRoutes = [
     {
       url: `${base}/blog/`,
-      lastModified: posts.length ? day(posts[0].date) : now,
+      ...(posts.length ? { lastModified: day(posts[0].date) } : {}),
       changeFrequency: "daily" as const,
       priority: 0.8,
     },
@@ -91,11 +105,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const guides = getAllGuides();
   const guideRoutes = [
-    { url: `${base}/guides/`, lastModified: guides.length ? day(guides[0].manifest.updated || guides[0].manifest.date) : now, changeFrequency: "weekly" as const, priority: 0.8 },
-    ...guides.flatMap(g => [
-      { url: `${base}/guides/${g.manifest.slug}/`, lastModified: day(g.manifest.updated || g.manifest.date), changeFrequency: "monthly" as const, priority: 0.8 },
-      ...g.chapters.map(c => ({ url: `${base}/guides/${g.manifest.slug}/${c.slug}/`, lastModified: day(c.updated || c.date), changeFrequency: "monthly" as const, priority: 0.7 })),
+    {
+      url: `${base}/guides/`,
+      ...(guides.length
+        ? {
+            lastModified: day(
+              guides[0].manifest.updated || guides[0].manifest.date,
+            ),
+          }
+        : {}),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    ...guides.flatMap((g) => [
+      {
+        url: `${base}/guides/${g.manifest.slug}/`,
+        lastModified: day(g.manifest.updated || g.manifest.date),
+        changeFrequency: "monthly" as const,
+        priority: 0.8,
+      },
+      ...g.chapters.map((c) => ({
+        url: `${base}/guides/${g.manifest.slug}/${c.slug}/`,
+        lastModified: day(c.updated || c.date),
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+      })),
     ]),
   ];
-  return [...staticRoutes, ...moduleRoutes, ...serviceRoutes, ...industryRoutes, ...blogRoutes, ...guideRoutes];
+  return [
+    ...staticRoutes,
+    ...moduleRoutes,
+    ...serviceRoutes,
+    ...industryRoutes,
+    ...blogRoutes,
+    ...guideRoutes,
+  ];
 }

@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "iso-22000",
+  updated: "2026-10-15",
   overview: [
     "ISO 22000:2018 is the international standard for food safety management systems, published by the International Organization for Standardization (ISO). It combines the HACCP principles, prerequisite programs and a management system structure, and it applies to any organization in the food chain, from ingredient suppliers and processors to packaging, storage and transport operators.",
     "The 2018 edition, with Amendment 1:2024, is the current version. For a Canadian food business, certification gives retail, food service and export customers independent evidence that hazards are identified, controlled and verified in a system that keeps running between audits, not just in a binder prepared for the visit.",

@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "iso-13485",
+  updated: "2026-10-15",
   overview: [
     "ISO 13485:2016 is the international standard, published by the International Organization for Standardization (ISO), that sets quality management system requirements for regulatory purposes in the medical device sector. It applies to organizations at any stage of a device's life cycle, from design and production to storage, distribution, installation and servicing, and to the suppliers that support them.",
     "For a Canadian device maker, the standard is not optional in practice. Health Canada requires manufacturers of Class II, III and IV medical devices sold in Canada to hold an ISO 13485 certificate issued under the Medical Device Single Audit Program (MDSAP) to obtain or keep a Medical Device Licence (MDL). A plain ISO 13485 certificate issued outside that program does not meet the requirement.",

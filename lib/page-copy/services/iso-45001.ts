@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "iso-45001",
+  updated: "2026-10-15",
   overview: [
     "ISO 45001:2018 is the international standard, published by the International Organization for Standardization (ISO), that specifies requirements for an occupational health and safety (OH&S) management system. It helps organizations of any size and sector prevent work-related injury and ill health and provide safe, healthy workplaces by managing hazards and risks in a planned, measurable way.",
     "For Canadian employers, ISO 45001 sits on top of a legal duty that already exists. Every province and territory has its own occupational health and safety legislation, federally regulated workplaces fall under the Canada Labour Code, and in Ontario the Occupational Health and Safety Act sets the duties of employers, supervisors and workers. **Certification does not replace any of those obligations; it gives you a system for meeting them consistently and showing that you do.**",

@@ -4,9 +4,18 @@ import { notFound } from "next/navigation";
 import { PageHeader, CTASection } from "@/components/ui";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight, Check, Icon } from "@/components/Icons";
-import { STANDARDS, INDUSTRIES, PROCESS, MODULES, SITE, type Module } from "@/lib/site";
+import {
+  STANDARDS,
+  INDUSTRIES,
+  PROCESS,
+  MODULES,
+  SITE,
+  type Module,
+} from "@/lib/site";
 import { getServiceCopy, getPostsAbout } from "@/lib/page-copy";
 import { CopyOverview, CopyArticle } from "@/components/PageCopy";
+import { pageTitle } from "@/lib/seo";
+import { nextInList } from "@/lib/nextInList";
 
 export function generateStaticParams() {
   return STANDARDS.map((s) => ({ standard: s.slug }));
@@ -20,18 +29,27 @@ export function generateMetadata({
   const s = STANDARDS.find((x) => x.slug === params.standard);
   if (!s) return {};
   return {
-    title: `${s.code} Certification in Canada`,
+    title: pageTitle(`${s.code} Certification in Canada`),
     description: `${s.code} (${s.name}) consulting for Canadian companies: gap analysis, system build and audit support, with software that tracks every clause.`,
     alternates: { canonical: `/services/${s.slug}` },
   };
 }
 
-export default function StandardPage({ params }: { params: { standard: string } }) {
+export default function StandardPage({
+  params,
+}: {
+  params: { standard: string };
+}) {
   const s = STANDARDS.find((x) => x.slug === params.standard);
   if (!s) notFound();
 
-  const related = INDUSTRIES.filter((i) => i.standards.includes(s.code)).slice(0, 3);
-  const others = STANDARDS.filter((x) => x.slug !== s.slug).slice(0, 3);
+  const related = INDUSTRIES.filter((i) => i.standards.includes(s.code)).slice(
+    0,
+    3,
+  );
+  // The next three standards in catalogue order, wrapping round, so every service
+  // page is linked from its neighbours rather than all pointing at the first three.
+  const others = nextInList(STANDARDS, s, 3);
   const copy = getServiceCopy(s.slug);
   const posts = getPostsAbout([s.code]);
   const modules = s.platformSupport.moduleSlugs
@@ -58,14 +76,13 @@ export default function StandardPage({ params }: { params: { standard: string } 
         eyebrow={`${s.category} · ${s.clauses}`}
         title={
           <>
-            {s.code} —{" "}
-            <span className="text-teal-700">{s.name}</span>
+            {s.code} — <span className="text-teal-700">{s.name}</span>
           </>
         }
         intro={s.summary}
       >
         <Link href="/contact" className="btn-primary">
-          Scope a {s.code} project <ArrowRight className="h-4 w-4" />
+          Scope your {s.code} project <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/assessment" className="btn-ghost">
           Free readiness check
@@ -80,13 +97,14 @@ export default function StandardPage({ params }: { params: { standard: string } 
           <div>
             <Reveal>
               <h2 className="font-heading text-2xl font-bold text-navy-900">
-                What a {s.code} engagement covers
+                What the {s.code} engagement covers
               </h2>
               <p className="mt-4 text-slate-600">
-                Every {s.code} project runs on the same hybrid model: the compliance
-                management software holds and tracks the system, and a certified lead
-                consultant reviews the work and stands with you through the certification
-                audit. The core elements below are tailored to how your operation actually runs.
+                Every {s.code} project runs on the same hybrid model: the
+                compliance management software holds and tracks the system, and
+                a certified lead consultant reviews the work and stands with you
+                through the certification audit. The core elements below are
+                tailored to how your operation actually runs.
               </p>
             </Reveal>
 
@@ -98,7 +116,9 @@ export default function StandardPage({ params }: { params: { standard: string } 
                       <Check className="h-3.5 w-3.5" />
                     </span>
                     <div>
-                      <p className="font-heading text-sm font-semibold text-navy-900">{t}</p>
+                      <p className="font-heading text-sm font-semibold text-navy-900">
+                        {t}
+                      </p>
                     </div>
                   </div>
                 </StaggerItem>
@@ -128,8 +148,12 @@ export default function StandardPage({ params }: { params: { standard: string } 
                       <Icon name={m.icon} className="h-5 w-5" />
                     </span>
                     <span>
-                      <span className="block font-heading text-sm font-semibold text-navy-900">{m.name}</span>
-                      <span className="block text-xs text-slate-500">{m.tagline}</span>
+                      <span className="block font-heading text-sm font-semibold text-navy-900">
+                        {m.name}
+                      </span>
+                      <span className="block text-xs text-slate-500">
+                        {m.tagline}
+                      </span>
                     </span>
                   </Link>
                 </StaggerItem>
@@ -150,8 +174,12 @@ export default function StandardPage({ params }: { params: { standard: string } 
                     </span>
                     <div>
                       <div className="flex flex-wrap items-center gap-x-3">
-                        <h3 className="font-heading font-bold text-navy-900">{p.title}</h3>
-                        <span className="text-[11px] font-medium text-teal-700">{p.duration}</span>
+                        <h3 className="font-heading font-bold text-navy-900">
+                          {p.title}
+                        </h3>
+                        <span className="text-[11px] font-medium text-teal-700">
+                          {p.duration}
+                        </span>
                       </div>
                       <p className="mt-1 text-sm text-slate-600">{p.detail}</p>
                     </div>
@@ -178,16 +206,22 @@ export default function StandardPage({ params }: { params: { standard: string } 
                   </div>
                   <div className="flex justify-between gap-4">
                     <dt className="text-slate-600">Focus</dt>
-                    <dd className="font-semibold text-navy-900">{s.category}</dd>
+                    <dd className="font-semibold text-navy-900">
+                      {s.category}
+                    </dd>
                   </div>
                   <div className="flex justify-between gap-4">
                     <dt className="text-slate-600">Structure</dt>
-                    <dd className="text-right font-semibold text-navy-900">{s.clauses}</dd>
+                    <dd className="text-right font-semibold text-navy-900">
+                      {s.clauses}
+                    </dd>
                   </div>
                   <div className="flex justify-between gap-4">
                     <dt className="text-slate-600">In the software</dt>
                     <dd className="text-right font-semibold text-navy-900">
-                      {s.platformSupport.inCatalogue ? "Catalogue standard" : "Custom standard"}
+                      {s.platformSupport.inCatalogue
+                        ? "Catalogue standard"
+                        : "Custom standard"}
                     </dd>
                   </div>
                 </dl>
@@ -227,7 +261,9 @@ export default function StandardPage({ params }: { params: { standard: string } 
       {/* other standards */}
       <section className="bg-soft py-16">
         <div className="container-page">
-          <h2 className="font-heading text-xl font-bold text-navy-900">Explore other standards</h2>
+          <h2 className="font-heading text-xl font-bold text-navy-900">
+            Explore other standards
+          </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {others.map((o) => (
               <Link

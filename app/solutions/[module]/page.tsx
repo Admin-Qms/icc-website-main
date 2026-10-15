@@ -5,6 +5,7 @@ import { PageHeader, CTASection } from "@/components/ui";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight, Check, Icon } from "@/components/Icons";
 import { MODULES, CUSTOMIZATION, SITE, type Module } from "@/lib/site";
+import { pageTitle } from "@/lib/seo";
 
 export function generateStaticParams() {
   return MODULES.map((m) => ({ module: m.slug }));
@@ -18,7 +19,7 @@ export function generateMetadata({
   const m = MODULES.find((x) => x.slug === params.module);
   if (!m) return {};
   return {
-    title: `${m.name} Module — Compliance Software`,
+    title: pageTitle(`${m.name} Module — Compliance Software`),
     description: m.metaDescription,
     alternates: { canonical: `/solutions/${m.slug}` },
   };

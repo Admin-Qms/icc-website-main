@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "iso-14001",
+  updated: "2026-10-15",
   overview: [
     "ISO 14001 is the international standard, published by the International Organization for Standardization (ISO), that specifies requirements for an environmental management system. It gives organizations of any size and sector a framework to control their environmental aspects, meet their compliance obligations and improve environmental performance. The current edition, ISO 14001:2026, was published in April 2026.",
     "Many certified organizations are still on ISO 14001:2015, and those certificates remain valid during a 36-month transition that ends in 2029. If you are starting a project now, ask your certification body which edition it can audit you against, and plan the transition as part of your certification cycle rather than as a separate project.",

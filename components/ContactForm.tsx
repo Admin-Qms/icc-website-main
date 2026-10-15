@@ -4,10 +4,17 @@ import { useId, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check } from "./Icons";
 import { STANDARDS, SITE } from "@/lib/site";
+import { trackLead } from "@/lib/analytics";
 
 type Status = "idle" | "submitting" | "done" | "error";
 
-export function ContactForm({ compact = false, title }: { compact?: boolean; title?: string }) {
+export function ContactForm({
+  compact = false,
+  title,
+}: {
+  compact?: boolean;
+  title?: string;
+}) {
   const [status, setStatus] = useState<Status>("idle");
   const id = useId();
   // The Vercel function keeps email credentials and the recipient on the server.
@@ -16,7 +23,9 @@ export function ContactForm({ compact = false, title }: { compact?: boolean; tit
     if (status === "submitting") return;
     setStatus("submitting");
 
-    const data = Object.fromEntries(new FormData(e.currentTarget).entries()) as Record<string, string>;
+    const data = Object.fromEntries(
+      new FormData(e.currentTarget).entries(),
+    ) as Record<string, string>;
     const payload = {
       name: data.name,
       email: data.email,
@@ -30,23 +39,36 @@ export function ContactForm({ compact = false, title }: { compact?: boolean; tit
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(payload),
         signal: AbortSignal.timeout(20_000),
       });
       const result = (await res.json()) as { success?: boolean };
-      setStatus(res.ok && result.success ? "done" : "error");
+      const sent = res.ok && Boolean(result.success);
+      if (sent) trackLead(compact ? "contact_form_compact" : "contact_form");
+      setStatus(sent ? "done" : "error");
     } catch {
       setStatus("error");
     }
   }
 
   return (
-    <div className={`relative rounded-2xl border border-slate-200 bg-white shadow-[0_20px_60px_-40px_rgba(22,43,77,0.5)] ${compact ? 'p-5 sm:p-6' : 'p-7 lg:p-9'}`}>
-      {title && status !== "done" && <div className="mb-5">
-        <h2 className="font-heading text-2xl font-bold text-navy-900">{title}</h2>
-        <p className="mt-2 text-sm leading-6 text-slate-600">Tell us about your operation and the support you need.</p>
-      </div>}
+    <div
+      className={`relative rounded-2xl border border-slate-200 bg-white shadow-[0_20px_60px_-40px_rgba(22,43,77,0.5)] ${compact ? "p-5 sm:p-6" : "p-7 lg:p-9"}`}
+    >
+      {title && status !== "done" && (
+        <div className="mb-5">
+          <h2 className="font-heading text-2xl font-bold text-navy-900">
+            {title}
+          </h2>
+          <p className="mt-2 text-sm leading-6 text-slate-600">
+            Tell us about your operation and the support you need.
+          </p>
+        </div>
+      )}
       <AnimatePresence mode="wait">
         {status === "done" ? (
           <motion.div
@@ -67,8 +89,9 @@ export function ContactForm({ compact = false, title }: { compact?: boolean; tit
               Message received
             </h3>
             <p className="mt-3 max-w-sm text-slate-600">
-              A certified consultant will be in touch within one business day. In the
-              meantime, the free readiness assessment is a good next step.
+              A certified consultant will be in touch within one business day.
+              In the meantime, the free readiness assessment is a good next
+              step.
             </p>
           </motion.div>
         ) : (
@@ -82,14 +105,47 @@ export function ContactForm({ compact = false, title }: { compact?: boolean; tit
             className={compact ? "space-y-4" : "space-y-5"}
           >
             {/* Honeypot: the server discards submissions where this is filled in. */}
-            <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
+            <input
+              type="checkbox"
+              name="botcheck"
+              tabIndex={-1}
+              autoComplete="off"
+              className="hidden"
+              aria-hidden
+            />
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Full name" name="name" maxLength={100} required placeholder="Jordan Smith" />
-              <Field label="Work email" name="email" type="email" maxLength={254} required placeholder="jordan@company.com" />
+              <Field
+                label="Full name"
+                name="name"
+                maxLength={100}
+                required
+                placeholder="Jordan Smith"
+              />
+              <Field
+                label="Work email"
+                name="email"
+                type="email"
+                maxLength={254}
+                required
+                placeholder="jordan@company.com"
+              />
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Company" name="company" maxLength={160} required placeholder="Acme Industries Ltd." />
-              <Field label="Phone number (optional)" name="phone" type="tel" autoComplete="tel" maxLength={40} placeholder="+1 (416) 555-0123" />
+              <Field
+                label="Company"
+                name="company"
+                maxLength={160}
+                required
+                placeholder="Acme Industries Ltd."
+              />
+              <Field
+                label="Phone number (optional)"
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                maxLength={40}
+                placeholder="+1 (416) 555-0123"
+              />
             </div>
             <div>
               <Label htmlFor={`${id}-standard`}>Standard of interest</Label>
@@ -123,9 +179,15 @@ export function ContactForm({ compact = false, title }: { compact?: boolean; tit
               />
             </div>
             {status === "error" && (
-              <p role="alert" className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+              <p
+                role="alert"
+                className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+              >
                 The message could not be sent. Please try again, or email{" "}
-                <a href={`mailto:${SITE.email}`} className="font-semibold underline">
+                <a
+                  href={`mailto:${SITE.email}`}
+                  className="font-semibold underline"
+                >
                   {SITE.email}
                 </a>
                 .
@@ -136,7 +198,11 @@ export function ContactForm({ compact = false, title }: { compact?: boolean; tit
               disabled={status === "submitting"}
               className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {status === "submitting" ? "Sending…" : status === "error" ? "Try again" : "Send message"}
+              {status === "submitting"
+                ? "Sending…"
+                : status === "error"
+                  ? "Try again"
+                  : "Send message"}
               {status !== "submitting" && <ArrowRight className="h-4 w-4" />}
             </button>
             <p className="text-center text-xs text-slate-500">
@@ -149,8 +215,18 @@ export function ContactForm({ compact = false, title }: { compact?: boolean; tit
   );
 }
 
-function Label({ children, htmlFor }: { children: React.ReactNode; htmlFor: string }) {
-  return <label htmlFor={htmlFor} className="text-sm font-medium text-slate-700">{children}</label>;
+function Label({
+  children,
+  htmlFor,
+}: {
+  children: React.ReactNode;
+  htmlFor: string;
+}) {
+  return (
+    <label htmlFor={htmlFor} className="text-sm font-medium text-slate-700">
+      {children}
+    </label>
+  );
 }
 
 function Field({

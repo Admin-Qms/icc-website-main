@@ -64,6 +64,7 @@ const config: Config = {
           500: "#f59e0b",
           600: "#D97706",
           700: "#b45309",
+          800: "#92400e",
         },
       },
       fontFamily: {
@@ -73,10 +74,13 @@ const config: Config = {
         mono: ["var(--font-jetbrains)", "ui-monospace", "monospace"],
       },
       boxShadow: {
-        "glow-cyan": "0 0 0 1px rgba(34,211,238,0.18), 0 20px 60px -20px rgba(34,211,238,0.45)",
-        "glow-violet": "0 0 0 1px rgba(139,123,255,0.18), 0 20px 60px -20px rgba(139,123,255,0.4)",
+        "glow-cyan":
+          "0 0 0 1px rgba(34,211,238,0.18), 0 20px 60px -20px rgba(34,211,238,0.45)",
+        "glow-violet":
+          "0 0 0 1px rgba(139,123,255,0.18), 0 20px 60px -20px rgba(139,123,255,0.4)",
         "glow-gold": "0 12px 40px -12px rgba(245,158,11,0.55)",
-        surface: "0 1px 0 0 rgba(255,255,255,0.06) inset, 0 24px 60px -30px rgba(0,0,0,0.85)",
+        surface:
+          "0 1px 0 0 rgba(255,255,255,0.06) inset, 0 24px 60px -30px rgba(0,0,0,0.85)",
         "surface-hover":
           "0 1px 0 0 rgba(255,255,255,0.1) inset, 0 30px 80px -30px rgba(0,0,0,0.9)",
       },

@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "manufacturing",
+  updated: "2026-10-15",
   overview: [
     "Manufacturers in Canada are commonly asked for ISO 9001 first, because customers name it in supplier questionnaires and purchasing terms. ISO 14001 for environmental management and ISO 45001 for occupational health and safety follow when a customer, a public tender or the owners want proof that environmental and safety risks are managed as carefully as quality.",
     "The pressure on a plant is rarely the standard itself. It is a customer audit landing in the same month as a registrar visit, a high mix of part numbers changing faster than the work instructions, and a second shift that learns the process from whoever trained them. A certified system has to hold up on every shift, not only on the day the auditor walks the floor.",

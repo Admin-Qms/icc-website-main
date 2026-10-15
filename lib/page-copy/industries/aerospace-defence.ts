@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "aerospace-defence",
+  updated: "2026-10-15",
   overview: [
     "Aerospace and defense suppliers in Canada are typically asked for AS9100D, the aerospace quality management standard built on ISO 9001 that primes and their supply chains require. Defense work adds registration in the federal Controlled Goods Program for anyone handling controlled goods, and information security expectations that an ISO/IEC 27001 management system helps you meet.",
     "Aerospace customers judge suppliers on evidence that lasts as long as the aircraft. A precision machine shop has to show which revision of a drawing a part was built to, prove that every characteristic was verified on the first article, keep counterfeit material out of the supply chain, and control foreign objects on the floor. Purchase orders carry quality clauses that flow down to your own suppliers, and a lapse on any one of them can cost a supplier its approval.",

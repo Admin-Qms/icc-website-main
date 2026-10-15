@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "iso-9001",
+  updated: "2026-10-15",
   overview: [
     "ISO 9001 is the international standard for quality management systems, published by the International Organization for Standardization (ISO). It sets out what an organization of any size or sector must do to deliver products and services that consistently meet customer and regulatory requirements, and to keep improving how it does so.",
     "The current edition is ISO 9001:2026, published in September 2026. Many certified organizations still hold ISO 9001:2015 certificates, which remain valid through a transition that ends in September 2029, so a company starting now should confirm with its certification body which edition its certification audit will use.",

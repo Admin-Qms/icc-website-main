@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "food-beverage",
+  updated: "2026-10-15",
   overview: [
     "Food and beverage companies in Canada typically certify to ISO 22000 or to FSSC 22000, the GFSI-recognized scheme built on it, because retail and food-service customers ask for a recognized food safety certificate. Many add ISO 9001 for quality and ISO 14001 for environmental management. None of them replaces the licensing and preventive control requirements of the Safe Food for Canadians Regulations.",
     "The pressure comes from two directions at once. A business that manufactures, processes or packages food for interprovincial trade, or imports food, generally needs a license and a written preventive control plan showing how biological, chemical and physical hazards are identified and controlled. Customers then audit against their own requirements, and an allergen or labeling error can mean a recall in which you must prove which lots are affected.",

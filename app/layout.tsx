@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChatWidget } from "@/components/ChatWidget";
+import { Analytics } from "@/components/Analytics";
 import { SITE, OG_IMAGE } from "@/lib/site";
 import { serializeJsonLd } from "@/lib/blog";
 
@@ -22,7 +23,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} in Canada | ISO 9001, IATF 16949 & More`,
+    default: `${SITE.name} in Canada | ISO 9001, IATF 16949`,
     template: `%s | ${SITE.name}`,
   },
   description:
@@ -42,7 +43,8 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: SITE.url,
     siteName: SITE.name,
-    title: "ISO Certification Consulting for Canadian Companies — Any Standard, One System",
+    title:
+      "ISO Certification Consulting for Canadian Companies — Any Standard, One System",
     description:
       "Certified consultants plus compliance management software: eleven modules configured around your business and mapped to any standard you certify against.",
     images: [OG_IMAGE],
@@ -67,7 +69,7 @@ const orgJsonLd = {
     addressRegion: "ON",
     addressCountry: "CA",
   },
-  sameAs: [SITE.bbb.profileUrl],
+  sameAs: [SITE.bbb.profileUrl, ...SITE.profiles],
   description:
     "ISO certification consulting for Canadian companies, with compliance management software configured to your processes and ready to onboard any standard.",
   areaServed: [
@@ -105,6 +107,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <ChatWidget />
+        <Analytics />
       </body>
     </html>
   );

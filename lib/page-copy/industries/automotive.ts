@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "automotive",
+  updated: "2026-10-15",
   overview: [
     "Automotive suppliers in Canada that make production or service parts are typically required to hold IATF 16949:2016, the automotive quality management standard their OEM and Tier 1 customers write into purchase terms. It is applied together with ISO 9001 and each customer's own customer-specific requirements, and some customers also expect ISO 14001.",
     "For a supplier in Ontario's automotive supply base, the certificate is only the entry ticket. Customers watch delivery and quality performance on their scorecards, expect a complete PPAP before parts ship, and can escalate a supplier with repeat problems to tighter containment. The quality system has to produce the same evidence a customer's supplier quality engineer will ask for, not just what a registrar checks once a year.",

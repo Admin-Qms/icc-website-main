@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "as9100",
+  updated: "2026-10-15",
   overview: [
     "AS9100 is the quality management system standard for organizations that design, produce or support products for the aviation, space and defense industries. It is developed by the International Aerospace Quality Group (IAQG) and published in the Americas by SAE International. It contains every requirement of ISO 9001:2015 and adds requirements specific to aerospace work.",
     "AS9100D, released in September 2016, is the current revision. A successor revision is in development at the IAQG but has not been published, so certification audits continue against AS9100D. Customer and regulatory requirements sit alongside it, and where they conflict with the standard, the customer or regulatory requirement takes precedence.",

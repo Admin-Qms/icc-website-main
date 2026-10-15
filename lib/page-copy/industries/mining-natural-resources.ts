@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "mining-natural-resources",
+  updated: "2026-10-15",
   overview: [
     "Mining and natural resource operations in Canada typically certify to ISO 14001 and ISO 45001, adding ISO 9001 where product specifications drive sales, because customers, communities and regulators look closely at environmental and safety performance. Members of the Mining Association of Canada also implement Towards Sustainable Mining (TSM), which is mandatory for their Canadian operations.",
     "The risks are long-lived and visible. Tailings, water, dust and land disturbance are managed over the life of a mine and well past closure, and safety risks range from ground control and mobile equipment to confined spaces and explosives. Work happens at remote sites with rotating crews and many contractors, and mine-specific health and safety rules apply on top of general workplace law, such as Ontario's Regulation 854 for mines and mining plants.",

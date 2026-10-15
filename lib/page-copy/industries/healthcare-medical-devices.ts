@@ -2,6 +2,7 @@ import type { PageCopy } from "../types";
 
 const copy: PageCopy = {
   slug: "healthcare-medical-devices",
+  updated: "2026-10-15",
   overview: [
     "Medical device manufacturers in Canada need an ISO 13485:2016 quality management system. To obtain a Health Canada Medical Device Licence (MDL) for a Class II, III or IV device, the manufacturer must hold an ISO 13485 certificate under the Medical Device Single Audit Program (MDSAP). Importers, distributors and many Class I manufacturers need a Medical Device Establishment Licence (MDEL) instead.",
     "That makes the quality system part of market access, not only a customer preference. A regulator can act on what an audit finds, and an MDL depends on the certificate behind it. The pressure shows up in design records that must explain every decision, complaints that may need to be reported to the regulator, traceability that has to reach the customer who received a device, and suppliers whose processes become part of your product.",

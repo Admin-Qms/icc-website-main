@@ -7,12 +7,12 @@ const { patchBannedPhrases } = require("../agents/content/rewritePatcher");
 const { loadLinkBankUrls, loadContext } = require("../agents/content/contextLoader");
 
 test("siteRoutes knows the real pages and rejects pages that do not exist", () => {
-  for (const href of ["/", "/contact", "/process", "/blog", "/services/iso-9001", "/industries/automotive", "/solutions/document-control"]) {
+  for (const href of ["/", "/contact", "/process", "/blog", "/privacy", "/terms", "/services/iso-9001", "/industries/automotive", "/solutions/document-control"]) {
     assert.ok(routes.resolves(href), href);
   }
   assert.ok(routes.resolves("/services/iso-9001/#faq"));
   assert.ok(routes.resolves("https://isocertificationconsultants.ca/contact"));
-  for (const href of ["/privacy", "/terms", "/resources", "/services/iso-99999", "/blog/not-a-post"]) {
+  for (const href of ["/pricing", "/careers", "/resources", "/services/iso-99999", "/blog/not-a-post"]) {
     assert.ok(!routes.resolves(href), href);
   }
 });
