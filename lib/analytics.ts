@@ -1,11 +1,14 @@
-// Google Analytics 4, switched off until a measurement ID is configured.
+// Google Analytics 4.
 //
-// To turn it on, set NEXT_PUBLIC_GA_MEASUREMENT_ID (e.g. "G-ABC123XYZ") in the Vercel
-// project's environment variables and redeploy. The ID is read at build time, because
-// the site is a static export. With no valid ID, no script loads, nothing is tracked,
-// and the privacy page says so.
+// The measurement ID is public (it appears in every page's HTML), so the site's own ID
+// is kept here and every build, on Vercel or for the cPanel backup, includes analytics.
+// NEXT_PUBLIC_GA_MEASUREMENT_ID overrides it at build time; set it to "off" to build
+// without analytics. With no valid ID, no script loads, nothing is tracked, and the
+// privacy page says so.
 
-const raw = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "";
+const SITE_GA_MEASUREMENT_ID = "G-PF6WGBM02W";
+
+const raw = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || SITE_GA_MEASUREMENT_ID;
 
 /** The GA4 measurement ID, or "" when analytics is off. */
 export const GA_MEASUREMENT_ID = /^G-[A-Z0-9]{4,}$/.test(raw.trim())
