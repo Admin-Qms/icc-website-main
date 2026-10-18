@@ -19,7 +19,7 @@ The scheduled session (the proposer) researches with the web tools and writes `t
 
 An approved topic's sources go into `external-link-bank.json` under `software_guides` with `verified: "http"` and `addedBy: "topic-scout"`. A rejected topic is reported with its reasons and not queued. Only a reviewer outage (no key, provider error, invalid verdict) parks a topic as `proposed` with its `candidateSources`; the next run re-judges it first, approving or removing it. `team/data/trusted-source-domains.json` remains the list of preferred domains the proposer is pointed at.
 
-`team/scripts/scheduled-scout-run.sh apply` then runs the pipeline tests, commits only the two queue files and the link bank, pulls and pushes `main`. `prepare` is the usual fresh-clone start (fetch, checkout, `npm ci`) plus the status file.
+`team/scripts/scheduled-scout-run.sh apply` then runs the pipeline tests, commits only the two queue files and the link bank, pulls and pushes `main`. `prepare` is the usual fresh-clone start (fetch, checkout, `npm ci` for both `team/` and the repo root, since `team/pm.js` loads `lib/guide-contract.cjs`) plus the status file.
 
 ## Changing the rules
 
