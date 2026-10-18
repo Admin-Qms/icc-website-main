@@ -4,13 +4,14 @@ import { PageHeader } from '@/components/ui';
 import { GuideCard } from '@/components/guides/GuideCard';
 import { getAllGuides } from '@/lib/guides';
 import { SITE } from '@/lib/site';
+import { pageTitle } from '@/lib/seo';
 import { serializeJsonLd } from '@/lib/blog';
 import { GuideDraftBanner } from './GuideDraftBanner';
 
 const description = 'Software guides for Canadian quality and operations teams: practical workflows, evaluation criteria, migration, implementation and audit evidence.';
 export const metadata: Metadata = {
   ...(process.env.GUIDE_PREVIEW_JOB ? { robots: { index: false, follow: false } } : {}),
-  title: 'Software Guides for Canadian Quality and Operations Teams', description,
+  title: pageTitle('Software Guides for Canadian Quality and Operations Teams'), description,
   alternates: { canonical: '/guides/' },
   openGraph: { type: 'website', locale: 'en_CA', siteName: SITE.name, url: '/guides/', title: 'Software Guides for Canadian Quality and Operations Teams', description, images: [{ url: SITE.logo, alt: SITE.name }] },
   twitter: { card: 'summary', title: 'Software Guides for Canadian Quality and Operations Teams', description, images: [SITE.logo] },

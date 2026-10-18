@@ -4,7 +4,9 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChatWidget } from "@/components/ChatWidget";
-import { SITE } from "@/lib/site";
+import { Analytics } from "@/components/Analytics";
+import { PEOPLE, personId, personPath } from "@/lib/people";
+import { SITE, OG_IMAGE } from "@/lib/site";
 import { serializeJsonLd } from "@/lib/blog";
 
 const outfit = Outfit({
@@ -22,7 +24,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — ISO Certification Consulting for Canadian Companies`,
+    default: `${SITE.name} in Canada | ISO 9001, IATF 16949`,
     template: `%s | ${SITE.name}`,
   },
   description:
@@ -42,10 +44,13 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: SITE.url,
     siteName: SITE.name,
-    title: "ISO Certification Consulting for Canadian Companies — Any Standard, One System",
+    title:
+      "ISO Certification Consulting for Canadian Companies — Any Standard, One System",
     description:
       "Certified consultants plus compliance management software: eleven modules configured around your business and mapped to any standard you certify against.",
+    images: [OG_IMAGE],
   },
+  twitter: { card: "summary_large_image", images: [OG_IMAGE.url] },
 };
 
 const orgJsonLd = {
@@ -54,8 +59,25 @@ const orgJsonLd = {
   name: SITE.name,
   legalName: SITE.legalName,
   url: SITE.url,
+  logo: `${SITE.url}${SITE.logo}`,
+  image: `${SITE.url}${SITE.logo}`,
   email: SITE.email,
   telephone: SITE.phone,
+  // Toronto, Ontario per the BBB profile below; no street address is published.
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Toronto",
+    addressRegion: "ON",
+    addressCountry: "CA",
+  },
+  sameAs: [SITE.bbb.profileUrl, ...SITE.profiles],
+  employee: PEOPLE.map((p) => ({
+    "@type": "Person",
+    "@id": personId(p),
+    name: p.name,
+    jobTitle: p.jobTitle,
+    url: `${SITE.url}${personPath(p)}`,
+  })),
   description:
     "ISO certification consulting for Canadian companies, with compliance management software configured to your processes and ready to onboard any standard.",
   areaServed: [
@@ -93,6 +115,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <ChatWidget />
+        <Analytics />
       </body>
     </html>
   );

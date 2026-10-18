@@ -9,7 +9,7 @@ import { Icon, ArrowRight, Check } from "@/components/Icons";
 import { CUSTOM_EXAMPLES, EXPERTS, MODULES, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Custom Compliance Solutions — Built Around Your Challenge",
+  title: "Custom Compliance Solutions",
   description:
     "When a standard module is not enough, industry experts and engineers build one. Onsite assessment, gap analysis and a solution fitted to your processes.",
   alternates: { canonical: "/custom-solutions" },

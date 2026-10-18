@@ -88,7 +88,7 @@ function CycleDiagram() {
         >
           <span className="relative grid h-16 w-16 place-items-center rounded-full border-4 border-white bg-navy-900 text-teal-400 shadow-[0_10px_24px_-8px_rgba(22,43,77,0.6)]">
             <Icon name={s.icon} className="h-7 w-7" />
-            <span className="absolute -right-1 -top-1 grid h-6 w-6 place-items-center rounded-full bg-gold-600 font-heading text-[11px] font-bold text-white ring-2 ring-white">
+            <span className="absolute -right-1 -top-1 grid h-6 w-6 place-items-center rounded-full bg-gold-700 font-heading text-[11px] font-bold text-white ring-2 ring-white">
               {s.n.replace("0", "")}
             </span>
           </span>

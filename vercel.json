@@ -3,5 +3,192 @@
     "api/chat.ts": {
       "includeFiles": "content/chatbot-context.md"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/npri-consultant-canada/",
+      "destination": "/services/iso-14001/",
+      "permanent": true
+    },
+    {
+      "source": "/environmental-compliance-approval-consultant/",
+      "destination": "/services/iso-14001/",
+      "permanent": true
+    },
+    {
+      "source": "/good-manufacturing-practices-guide-for-drug-products-gmp-cgmp-compliance-gui-0001-gui-0002-gui-0069-gui-0104-gui-0119-consultant-canada/",
+      "destination": "/industries/healthcare-medical-devices/",
+      "permanent": true
+    },
+    {
+      "source": "/iso-37001-certification-audits-consulting/",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/iso-55001-certification-audits-consulting/",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/icc-es-consultation-in-canada/",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/tssa-bcsa-absa-services-consultation-support-in-canada/",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/certifications/",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/iso-services/",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/iso-22301-certification-audits-training-consulting/",
+      "destination": "/services/iso-22301/",
+      "permanent": true
+    },
+    {
+      "source": "/iso-9001-certification-auditing-training-consulting/",
+      "destination": "/services/iso-9001/",
+      "permanent": true
+    },
+    {
+      "source": "/quality-systems/",
+      "destination": "/services/iso-9001/",
+      "permanent": true
+    },
+    {
+      "source": "/cyber-security/",
+      "destination": "/services/iso-27001/",
+      "permanent": true
+    },
+    {
+      "source": "/cmmc-consultation-support-services/",
+      "destination": "/services/iso-27001/",
+      "permanent": true
+    },
+    {
+      "source": "/pci-dss-compliance-certification-audits-consulting/",
+      "destination": "/services/iso-27001/",
+      "permanent": true
+    },
+    {
+      "source": "/iso-iec-27017-iso-27701-certification-audits-consulting/",
+      "destination": "/services/iso-27001/",
+      "permanent": true
+    },
+    {
+      "source": "/health-and-safety/",
+      "destination": "/services/iso-45001/",
+      "permanent": true
+    },
+    {
+      "source": "/metallurgical-services-2/",
+      "destination": "/services/iso-17025/",
+      "permanent": true
+    },
+    {
+      "source": "/oil-and-gas/",
+      "destination": "/industries/oil-gas-energy/",
+      "permanent": true
+    },
+    {
+      "source": "/food-safety-retail/",
+      "destination": "/industries/food-beverage/",
+      "permanent": true
+    },
+    {
+      "source": "/cor-consultant-canada/",
+      "destination": "/industries/construction/",
+      "permanent": true
+    },
+    {
+      "source": "/iso-and-operational-compliance-solutions/",
+      "destination": "/solutions/",
+      "permanent": true
+    },
+    {
+      "source": "/who-we-are/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/consultants/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/become-a-contract-consultant/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us-canada/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/topics/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/(.*)",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/(.*)",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/author/(.*)",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap-pages.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap-posts.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap-categories.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap-archives.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    }
+  ]
 }

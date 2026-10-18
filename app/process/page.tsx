@@ -6,7 +6,7 @@ import { ArrowRight, Check } from "@/components/Icons";
 import { PROCESS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Our 6-Stage ISO Certification Process",
+  title: "6-Stage ISO Certification Process",
   description:
     "A transparent, six-stage path from gap analysis to certification, typically 24 weeks. See how the software and consultants get Canadian companies audit-ready.",
   alternates: { canonical: "/process" },

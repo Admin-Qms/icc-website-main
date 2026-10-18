@@ -3,13 +3,13 @@ import { PageHeader, CTASection } from "@/components/ui";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { FeaturedPostCard, PostCard } from "@/components/PostCard";
 import { getAllPosts, serializeJsonLd } from "@/lib/blog";
-import { SITE } from "@/lib/site";
+import { SITE, OG_IMAGE } from "@/lib/site";
 
 const description =
   "Practical guidance on ISO 9001, IATF 16949, ISO 14001 and ISO 45001 certification for Canadian companies: costs, timelines, audits and requirements.";
 
 export const metadata: Metadata = {
-  title: "ISO Certification Blog — Practical Guidance for Canadian Companies",
+  title: "ISO Certification Blog",
   description,
   alternates: { canonical: "/blog" },
   openGraph: {
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     url: "/blog",
     title: "ISO Certification Blog — Practical Guidance for Canadian Companies",
     description,
+    images: [OG_IMAGE],
   },
 };
 

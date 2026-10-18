@@ -8,7 +8,14 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const matter = require("gray-matter");
-const { CONTENT_DIR, BLOG_IMAGE_DIR, MEMORY_DIR, REPORTS_DIR, SITE_URL, BLOG_TIMEZONE } = require("./config");
+const {
+  CONTENT_DIR,
+  BLOG_IMAGE_DIR,
+  MEMORY_DIR,
+  REPORTS_DIR,
+  SITE_URL,
+  BLOG_TIMEZONE,
+} = require("./config");
 
 const IMAGE_WIDTH = 1200;
 const IMAGE_HEIGHT = 675;
@@ -35,13 +42,26 @@ function slugify(text) {
     .normalize("NFKD")
     .replace(/[̀-ͯ]/g, "")
     .replace(/&/g, " and ")
+    // "Manager's" becomes "managers", not "manager-s".
+    .replace(/(\w)['’](\w)/g, "$1$2")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
   if (slug.length <= 80) return slug;
   const cut = slug.slice(0, 80);
   const lastHyphen = cut.lastIndexOf("-");
-  return (lastHyphen > 40 ? cut.slice(0, lastHyphen) : cut).replace(/-+$/g, "");
+  let capped = (lastHyphen > 40 ? cut.slice(0, lastHyphen) : cut).replace(
+    /-+$/g,
+    "",
+  );
+  // A cut can leave a dangling filler word ("...-process-in"); drop it.
+  while (SLUG_TAIL_FILLER.test(capped) && capped.lastIndexOf("-") > 40) {
+    capped = capped.replace(SLUG_TAIL_FILLER, "");
+  }
+  return capped;
 }
+
+const SLUG_TAIL_FILLER =
+  /-(?:a|an|and|as|at|by|for|from|in|into|of|on|or|the|to|vs|with|your)$/;
 
 /** Today's date (YYYY-MM-DD) where the business is, not in UTC. */
 function todayLocal(now = new Date()) {
@@ -78,7 +98,8 @@ function readTimeMinutes(wordCount) {
   return Math.max(1, Math.ceil(wordCount / 200));
 }
 
-const PREAMBLE_RE = /^(here(?:'s| is)\b.*|certainly[!.,].*|sure[!.,].*|i(?:'ve| have) (?:written|cleaned|revised|updated)\b.*)$/i;
+const PREAMBLE_RE =
+  /^(here(?:'s| is)\b.*|certainly[!.,].*|sure[!.,].*|i(?:'ve| have) (?:written|cleaned|revised|updated)\b.*)$/i;
 
 /**
  * Deterministic clean-up applied before QA and again before publishing:
@@ -86,14 +107,20 @@ const PREAMBLE_RE = /^(here(?:'s| is)\b.*|certainly[!.,].*|sure[!.,].*|i(?:'ve| 
  * the only H1), strips kramdown attributes and collapses whitespace.
  */
 function normalizeBody(markdown, title = "") {
-  let body = String(markdown || "").replace(/\r\n/g, "\n").trim();
+  let body = String(markdown || "")
+    .replace(/\r\n/g, "\n")
+    .trim();
 
   // A reply wrapped in one code fence
   const fenced = /^```(?:markdown|md)?\n([\s\S]*?)\n```$/.exec(body);
   if (fenced) body = fenced[1].trim();
 
   const lines = body.split("\n");
-  while (lines.length && (!lines[0].trim() || PREAMBLE_RE.test(lines[0].trim()))) lines.shift();
+  while (
+    lines.length &&
+    (!lines[0].trim() || PREAMBLE_RE.test(lines[0].trim()))
+  )
+    lines.shift();
 
   const titleKey = title.trim().toLowerCase();
   const out = [];
@@ -101,14 +128,18 @@ function normalizeBody(markdown, title = "") {
     const line = raw.replace(/[ \t]+$/g, "");
     const h1 = /^#\s+(.+?)\s*#*$/.exec(line);
     if (h1) {
-      if (h1[1].replace(/[*_`]/g, "").trim().toLowerCase() === titleKey) continue;
+      if (h1[1].replace(/[*_`]/g, "").trim().toLowerCase() === titleKey)
+        continue;
       out.push(`## ${h1[1]}`);
       continue;
     }
     out.push(line.replace(/\{:\s*[^}]*\}/g, ""));
   }
 
-  return out.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  return out
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
 
 /** Drops image markers that were never turned into images. */
@@ -120,7 +151,11 @@ function stripImageMarkers(markdown) {
 }
 
 function normalizeUrl(url) {
-  return String(url || "").trim().replace(/[#?].*$/, "").replace(/\/+$/, "").toLowerCase();
+  return String(url || "")
+    .trim()
+    .replace(/[#?].*$/, "")
+    .replace(/\/+$/, "")
+    .toLowerCase();
 }
 
 /** Text links only — `![alt](src)` images are not links. */
@@ -132,7 +167,8 @@ function extractLinks(markdown) {
   while ((m = re.exec(String(markdown || "")))) {
     const link = { text: m[1], url: m[2] };
     if (/^https?:\/\//i.test(link.url)) {
-      if (SITE_URL && normalizeUrl(link.url).startsWith(normalizeUrl(SITE_URL))) internal.push(link);
+      if (SITE_URL && normalizeUrl(link.url).startsWith(normalizeUrl(SITE_URL)))
+        internal.push(link);
       else external.push(link);
     } else if (link.url.startsWith("/")) {
       internal.push(link);
@@ -143,15 +179,54 @@ function extractLinks(markdown) {
 
 /** Replaces `[text](url)` with `text` for every link whose url fails `keep`. */
 function unlinkWhere(markdown, shouldRemove) {
-  return String(markdown || "").replace(/(?<!!)\[([^\]]+)\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g, (all, text, url) =>
-    shouldRemove(url) ? text : all
+  return String(markdown || "").replace(
+    /(?<!!)\[([^\]]+)\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g,
+    (all, text, url) => (shouldRemove(url) ? text : all),
   );
 }
 
 const KEYWORD_STOP_WORDS = new Set([
-  "a", "an", "the", "for", "and", "or", "of", "to", "in", "on", "at", "by", "with", "your", "how", "what", "why", "is", "are", "do", "does", "vs",
-  "guide", "canada", "canadian", "ontario", "toronto", "mississauga", "hamilton", "brampton", "kitchener", "windsor", "london", "ottawa",
-  "oakville", "burlington", "guelph", "cambridge", "barrie", "oshawa", "markham",
+  "a",
+  "an",
+  "the",
+  "for",
+  "and",
+  "or",
+  "of",
+  "to",
+  "in",
+  "on",
+  "at",
+  "by",
+  "with",
+  "your",
+  "how",
+  "what",
+  "why",
+  "is",
+  "are",
+  "do",
+  "does",
+  "vs",
+  "guide",
+  "canada",
+  "canadian",
+  "ontario",
+  "toronto",
+  "mississauga",
+  "hamilton",
+  "brampton",
+  "kitchener",
+  "windsor",
+  "london",
+  "ottawa",
+  "oakville",
+  "burlington",
+  "guelph",
+  "cambridge",
+  "barrie",
+  "oshawa",
+  "markham",
 ]);
 
 /**
@@ -162,7 +237,10 @@ const KEYWORD_STOP_WORDS = new Set([
 function keywordCovered(keyword, text) {
   const haystack = String(text || "").toLowerCase();
   const hayWords = haystack.split(/[^a-z0-9]+/).filter(Boolean);
-  const words = String(keyword || "").toLowerCase().split(/[^a-z0-9]+/).filter((w) => w && !KEYWORD_STOP_WORDS.has(w));
+  const words = String(keyword || "")
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((w) => w && !KEYWORD_STOP_WORDS.has(w));
   if (words.length === 0) return true;
   if (haystack.includes(String(keyword).toLowerCase())) return true;
 
@@ -170,8 +248,11 @@ function keywordCovered(keyword, text) {
   const others = words.filter((w) => !/\d/.test(w));
   if (!numbers.every((n) => hayWords.includes(n))) return false;
 
-  const stem = (w) => (w.length > 5 ? w.slice(0, 5) : w.length > 3 ? w.slice(0, 4) : w);
-  const matched = others.filter((w) => hayWords.some((h) => h === w || (w.length > 3 && h.startsWith(stem(w)))));
+  const stem = (w) =>
+    w.length > 5 ? w.slice(0, 5) : w.length > 3 ? w.slice(0, 4) : w;
+  const matched = others.filter((w) =>
+    hayWords.some((h) => h === w || (w.length > 3 && h.startsWith(stem(w)))),
+  );
   return matched.length >= Math.ceil(others.length * 0.6);
 }
 
@@ -179,7 +260,8 @@ function keywordCovered(keyword, text) {
 
 function toDay(value) {
   if (value instanceof Date) return value.toISOString().slice(0, 10);
-  if (typeof value === "string" && /^\d{4}-\d{2}-\d{2}/.test(value)) return value.slice(0, 10);
+  if (typeof value === "string" && /^\d{4}-\d{2}-\d{2}/.test(value))
+    return value.slice(0, 10);
   return "";
 }
 
@@ -188,7 +270,9 @@ function postPath(slug) {
 }
 
 function readPostFile(file) {
-  const { data, content } = matter(fs.readFileSync(path.join(CONTENT_DIR, file), "utf-8"));
+  const { data, content } = matter(
+    fs.readFileSync(path.join(CONTENT_DIR, file), "utf-8"),
+  );
   const slug = file.replace(/\.md$/, "");
   return {
     ...data,
@@ -209,7 +293,9 @@ function listPosts() {
     .readdirSync(CONTENT_DIR)
     .filter((f) => f.endsWith(".md"))
     .map(readPostFile)
-    .sort((a, b) => a.date.localeCompare(b.date) || a.slug.localeCompare(b.slug));
+    .sort(
+      (a, b) => a.date.localeCompare(b.date) || a.slug.localeCompare(b.slug),
+    );
 }
 
 function getPost(slug) {
@@ -217,7 +303,10 @@ function getPost(slug) {
 }
 
 function slugExists(slug) {
-  return fs.existsSync(postPath(slug)) || fs.existsSync(path.join(BLOG_IMAGE_DIR, slug));
+  return (
+    fs.existsSync(postPath(slug)) ||
+    fs.existsSync(path.join(BLOG_IMAGE_DIR, slug))
+  );
 }
 
 // ── Images ───────────────────────────────────────────────────────
@@ -257,7 +346,8 @@ function imageMeta(slug, file, img) {
     creditUrl: img.creditUrl,
     sha256: img.sha256,
   };
-  for (const key of Object.keys(meta)) if (meta[key] === undefined || meta[key] === null) delete meta[key];
+  for (const key of Object.keys(meta))
+    if (meta[key] === undefined || meta[key] === null) delete meta[key];
   return meta;
 }
 
@@ -274,9 +364,14 @@ function imageMeta(slug, file, img) {
 function publishPost(post) {
   ensureDirs();
   const { slug } = post;
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) throw new Error(`Invalid slug "${slug}"`);
-  if (slugExists(slug)) throw new Error(`Slug "${slug}" already exists — refusing to overwrite a published post`);
-  if (!post.hero?.buffer) throw new Error("Cannot publish without a hero image");
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))
+    throw new Error(`Invalid slug "${slug}"`);
+  if (slugExists(slug))
+    throw new Error(
+      `Slug "${slug}" already exists — refusing to overwrite a published post`,
+    );
+  if (!post.hero?.buffer)
+    throw new Error("Cannot publish without a hero image");
 
   const imageDir = path.join(BLOG_IMAGE_DIR, slug);
   const mdPath = postPath(slug);
@@ -300,15 +395,25 @@ function publishPost(post) {
     inlineImages: inlineImages.map((img) => imageMeta(slug, img.file, img)),
   };
   for (const key of Object.keys(frontmatter)) {
-    if (frontmatter[key] === undefined || frontmatter[key] === null || frontmatter[key] === "") delete frontmatter[key];
+    if (
+      frontmatter[key] === undefined ||
+      frontmatter[key] === null ||
+      frontmatter[key] === ""
+    )
+      delete frontmatter[key];
   }
 
   try {
     fs.mkdirSync(imageDir, { recursive: true });
     fs.writeFileSync(path.join(imageDir, "hero.webp"), post.hero.buffer);
-    for (const img of inlineImages) fs.writeFileSync(path.join(imageDir, img.file), img.buffer);
+    for (const img of inlineImages)
+      fs.writeFileSync(path.join(imageDir, img.file), img.buffer);
     // "wx" fails instead of overwriting if the file appeared since the check above.
-    fs.writeFileSync(mdPath, matter.stringify(`\n${post.body.trim()}\n`, frontmatter), { flag: "wx" });
+    fs.writeFileSync(
+      mdPath,
+      matter.stringify(`\n${post.body.trim()}\n`, frontmatter),
+      { flag: "wx" },
+    );
   } catch (err) {
     fs.rmSync(imageDir, { recursive: true, force: true });
     if (err.code !== "EEXIST") fs.rmSync(mdPath, { force: true });
@@ -317,7 +422,12 @@ function publishPost(post) {
 
   // Read it back the way the site will, so a post that can't be parsed never lands.
   const saved = getPost(slug);
-  if (!saved || saved.title !== post.title || !saved.body || saved.image?.src !== imageUrl(slug, "hero.webp")) {
+  if (
+    !saved ||
+    saved.title !== post.title ||
+    !saved.body ||
+    saved.image?.src !== imageUrl(slug, "hero.webp")
+  ) {
     fs.rmSync(imageDir, { recursive: true, force: true });
     fs.rmSync(mdPath, { force: true });
     throw new Error(`Post "${slug}" did not read back correctly after writing`);
@@ -330,7 +440,11 @@ function publishPost(post) {
     localUrl: `/blog/${slug}`,
     wordCount,
     readTime: frontmatter.readTime,
-    files: [mdPath, path.join(imageDir, "hero.webp"), ...inlineImages.map((i) => path.join(imageDir, i.file))],
+    files: [
+      mdPath,
+      path.join(imageDir, "hero.webp"),
+      ...inlineImages.map((i) => path.join(imageDir, i.file)),
+    ],
   };
 }
 

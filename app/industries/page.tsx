@@ -6,7 +6,7 @@ import { ArrowRight } from "@/components/Icons";
 import { INDUSTRIES } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "ISO Consulting by Industry — Manufacturing, Automotive, Aerospace & More",
+  title: "ISO Consulting by Industry",
   description:
     "Industry-specific ISO consulting across Canada: automotive core tools, aerospace configuration control, food safety, medical device controls and more.",
   alternates: { canonical: "/industries" },

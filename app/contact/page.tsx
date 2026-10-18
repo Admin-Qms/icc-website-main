@@ -7,7 +7,7 @@ import { ShieldCheck, Check } from "@/components/Icons";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact ISO Certification Consultants",
+  title: "Contact Us",
   description:
     "Talk to a certified ISO consultant about your certification project. Serving companies across Canada and the USA. We reply within one business day.",
   alternates: { canonical: "/contact" },

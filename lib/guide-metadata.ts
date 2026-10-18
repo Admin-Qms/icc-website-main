@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import type { GuideManifest, GuidePage } from './guide-contract.cjs';
 import { SITE } from './site';
+import { pageTitle } from './seo';
 
 export function guidePageMetadata(manifest: GuideManifest, page: GuidePage, route: string): Metadata {
   const images = page.image ? [{ url: page.image.src, width: page.image.width, height: page.image.height, alt: page.image.alt }] : [];
-  return { title: page.title, description: page.description, keywords: page.keywords,
+  return { title: pageTitle(page.title), description: page.description, keywords: page.keywords,
     ...(process.env.GUIDE_PREVIEW_JOB ? { robots: { index: false, follow: false } } : {}),
     alternates: { canonical: route },
     openGraph: { type: 'article', siteName: SITE.name, locale: 'en_CA', url: route, title: page.title, description: page.description, publishedTime: manifest.publishedAt || page.date, modifiedTime: page.updated || page.date, authors: [page.author], images },

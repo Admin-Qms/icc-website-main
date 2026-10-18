@@ -64,7 +64,7 @@ test("each rule blocks on its own", async () => {
     ["word-count", { body: base.body.split("## What a Stage 2 Audit Checks")[0] }],
     ["keyword-in-title", { title: "What Auditors Look For During a Site Visit" }],
     ["topic-allowed", { title: "ISO Certification Audit Stage 1 vs Stage 2 for AS9100 Suppliers" }],
-    ["internal-links", { body: base.body.replace("](/contact)", "](/privacy)") }],
+    ["internal-links", { body: base.body.replace("](/contact)", "](/pricing)") }],
     ["external-links", { body: base.body.replace("https://www.iafcertsearch.org/", "https://example.org/made-up-source") }],
     ["banned-phrases", { body: `${base.body}\n\nThis step is crucial for every plant.` }],
     ["no-artifacts", { body: `Here is the article:\n\n${base.body}` }],

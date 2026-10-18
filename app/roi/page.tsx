@@ -8,7 +8,7 @@ import { ArrowRight } from "@/components/Icons";
 import { ROI, ROI_PLATFORM, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "ROI of ISO Certification — Estimate Your Return",
+  title: "ISO Certification ROI Calculator",
   description:
     "Estimate what quality admin, failed audits and lost bids cost your business today, and see where the return from certification and the software comes from.",
   alternates: { canonical: "/roi" },

@@ -8,7 +8,7 @@ import { ArrowRight } from "@/components/Icons";
 import { MODULES, CUSTOMIZATION, ROI_PLATFORM } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Compliance Management Software Modules — Standards, Documents, Audits & More",
+  title: "Compliance Software Modules",
   description:
     "Eleven compliance management software modules: standards, documents, processes, audits, improvements, safety, training, assets, vendors and supplier quality.",
   alternates: { canonical: "/solutions" },

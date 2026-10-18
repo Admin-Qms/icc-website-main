@@ -114,7 +114,7 @@ export function Navbar() {
         }`}
       >
         <nav aria-label="Main navigation" className="container-page flex h-16 items-center justify-between gap-5 xl:h-[76px]">
-          <Link href="/" className="group flex min-w-0 items-center xl:w-[300px] xl:shrink-0" onClick={() => setOpen(false)} aria-label={`${SITE.name} home`}>
+          <Link href="/" className="group flex min-w-0 items-center xl:w-[300px] xl:shrink-0" onClick={() => setOpen(false)}>
             <Logo tagline={false} singleLine />
           </Link>
 
