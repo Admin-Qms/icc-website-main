@@ -90,7 +90,14 @@
     "Release decision",
     "Work order",
     "Inspection record",
-    "Receiving record"
+    "Receiving record",
+    "Statement of nonconformity",
+    "Offset history",
+    "Tool change records",
+    "Maintenance record",
+    "Measurement data",
+    "Setup instruction",
+    "Competing-cause record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -141,6 +148,21 @@
         "Decide whether to connect records via live integrations or validated manual references",
         "Authorize release of held product or resumption of work",
         "Document override when proceeding past missing containment evidence"
+      ]
+    },
+    {
+      "slug": "cause-investigation",
+      "title": "Investigating root causes: CAPA software workflows",
+      "summary": "The guide page strictly complies with its assigned scope, chapter plan, and research sources. It provides practical evaluation criteria and workflow guidance for investigating root causes in CAPA software, covering question definition, evidence gathering, competing cause analysis, and cause statement recording. All primary source citations to the ISO/IAF Auditing Practices Group papers are accurate and properly contextualized as auditor guidance. Each subsection features structured workflow evaluation points, clear roles, record inputs/outputs, and consistently labeled illustrative examples using the unnamed machining manufacturer scenario without claiming unverified vendor features. No unassigned FAQ section is included.",
+      "bodyHash": "64799cac45522d789471fcc32609f94d6f308892ab31c0b17779cba7888d7a61",
+      "decisions": [
+        "Record chosen investigation depth and justify full investigation versus simple correction",
+        "Modify or refine the investigation question midway through an investigation",
+        "Log data collection gaps as independent findings requiring follow-up action",
+        "Categorize candidate failure factors as not able to confirm, possible, or confirmed",
+        "Determine whether a failure mechanism is systemic or accidental",
+        "Accept, challenge, or return the root cause statement for additional evidence",
+        "Flag related processes, machines, or sites for parallel evaluation"
       ]
     }
   ],

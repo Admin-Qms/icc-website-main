@@ -1,0 +1,154 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The guide page strictly complies with its assigned scope, chapter plan, and research sources. It provides practical evaluation criteria and workflow guidance for investigating root causes in CAPA software, covering question definition, evidence gathering, competing cause analysis, and cause statement recording. All primary source citations to the ISO/IAF Auditing Practices Group papers are accurate and properly contextualized as auditor guidance. Each subsection features structured workflow evaluation points, clear roles, record inputs/outputs, and consistently labeled illustrative examples using the unnamed machining manufacturer scenario without claiming unverified vendor features. No unassigned FAQ section is included.",
+  "glossary": [
+    {
+      "term": "Correction",
+      "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
+    },
+    {
+      "term": "Corrective action",
+      "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+    },
+    {
+      "term": "Nonconformity",
+      "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+    },
+    {
+      "term": "Traceability",
+      "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
+    },
+    {
+      "term": "Workflow owner",
+      "definition": "The role responsible for decisions and records in the defined workflow."
+    }
+  ],
+  "roles": [
+    "Investigation lead",
+    "Process engineer",
+    "Quality supervisor",
+    "Operator",
+    "Reviewer",
+    "Supervisor"
+  ],
+  "recordNames": [
+    "Statement of nonconformity",
+    "Nonconformity Report form",
+    "Offset history",
+    "Tool change records",
+    "Maintenance record",
+    "Measurement data",
+    "Setup instruction",
+    "Competing-cause record",
+    "Cause statement"
+  ],
+  "decisions": [
+    "Record chosen investigation depth and justify full investigation versus simple correction",
+    "Modify or refine the investigation question midway through an investigation",
+    "Log data collection gaps as independent findings requiring follow-up action",
+    "Categorize candidate failure factors as not able to confirm, possible, or confirmed",
+    "Determine whether a failure mechanism is systemic or accidental",
+    "Accept, challenge, or return the root cause statement for additional evidence",
+    "Flag related processes, machines, or sites for parallel evaluation"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Defining the investigation question",
+        "section": "Defining the investigation question"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Defining the investigation question; semantic review verifies support",
+        "section": "Defining the investigation question"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Collecting evidence before conclusions",
+        "section": "Collecting evidence before conclusions"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Collecting evidence before conclusions; semantic review verifies support",
+        "section": "Collecting evidence before conclusions"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Testing competing causes",
+        "section": "Testing competing causes"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Testing competing causes; semantic review verifies support",
+        "section": "Testing competing causes"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Recording the accepted cause",
+        "section": "Recording the accepted cause"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Recording the accepted cause; semantic review verifies support",
+        "section": "Recording the accepted cause"
+      }
+    ],
+    "failures": []
+  },
+  "inputHash": "62c9cba5b514b4d248a80376e1abbe33307da5e62f24e8606df26e2131852a69",
+  "outputContextHash": "456cf50a623e702dd80a10b09b555964d0cd9e3163cd476d1f0a31215a4b7cbf",
+  "reviewedAt": "2026-10-19T18:28:08.383Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
