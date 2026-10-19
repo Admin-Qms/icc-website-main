@@ -56,10 +56,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-19T18:35:12.243Z"
+    },
+    "effectiveness-review": {
+      "hash": "afe8b97e3951d7a359cc5f36a4d2334a903b2900e09d3030707b6d5467ad831d",
+      "wordCount": 2006,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-19T18:38:40.984Z"
     }
   },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-19T18:35:30.180Z",
+  "updatedAt": "2026-10-19T18:39:07.100Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
@@ -1431,7 +1438,7 @@
     "reviewedChapters": [],
     "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
   },
-  "contextHash": "a0fb1e6d4c8c1303914328626f630b3b3cadf79fda5a2b53c4d3ffa840c98e3c",
+  "contextHash": "f765870057aa9420641a63e8fe96df968b6a5eab81b1fb83ae11c70f5bb6897c",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2210,6 +2217,167 @@
       "inputHash": "bc9d4517044fade3ec3249d52e0f910175cb5cd0058846aefc4ceae7795e5c2a",
       "outputContextHash": "a0fb1e6d4c8c1303914328626f630b3b3cadf79fda5a2b53c4d3ffa840c98e3c",
       "reviewedAt": "2026-10-19T18:35:30.177Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "effectiveness-review": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The guide page strictly complies with its assigned scope, chapter plan, and primary source materials. It addresses defining effectiveness criteria, choosing follow-up evidence, reopening ineffective actions, and authorizing closure within CAPA software evaluation workflows. Citations to ISO/IAF Auditing Practices Group guidance on nonconformity review and closing and the NIST RPD-G-08 corrective action procedure are accurately represented with proper context. The unnamed machining manufacturer illustrative scenario is consistently maintained across all subsections, and no unassigned FAQ section is present.",
+      "glossary": [
+        {
+          "term": "Effectiveness",
+          "definition": "Whether the root cause was eliminated and recurrence prevented by the actions taken, verified through objective evidence."
+        },
+        {
+          "term": "Effectiveness criteria",
+          "definition": "Pre-established, measurable specifications detailing the measure, scope, and duration needed to confirm that a nonconformity's cause has been eliminated."
+        },
+        {
+          "term": "Follow-up evidence",
+          "definition": "Objective records, observations, or measurement data gathered after action implementation to verify that effectiveness criteria were met."
+        },
+        {
+          "term": "Closure summary",
+          "definition": "A compiled record summarizing the finding, cause analysis, completed actions, and verification results reviewed prior to authorizing final closure."
+        }
+      ],
+      "roles": [
+        "Management system auditor",
+        "Internal reviewer",
+        "Investigation team",
+        "Investigator",
+        "Group leader",
+        "Quality manager",
+        "Division chief",
+        "Quality supervisor",
+        "Plant manager",
+        "Action owner",
+        "Workflow owner",
+        "Closer",
+        "Doer"
+      ],
+      "recordNames": [
+        "Action plan",
+        "Corrective action plan form",
+        "Closure checklist",
+        "Closure summary",
+        "Effectiveness task",
+        "In-process inspection record",
+        "Final inspection record",
+        "Audit notes",
+        "Photographs",
+        "Containment record"
+      ],
+      "decisions": [
+        "Defining measurable effectiveness criteria and monitoring duration in advance of result review",
+        "Selecting follow-up evidence methods proportionate to the finding and aligned to the accepted cause",
+        "Deciding whether to extend monitoring or record stated caveats for limited sample sizes",
+        "Evaluating whether corrective actions caused unintended side effects or new management system issues",
+        "Marking an effectiveness check as failed and reopening the original finding record",
+        "Determining whether to re-establish containment after an action fails",
+        "Returning to root cause analysis versus replanning actions upon action failure",
+        "Escalating recurring failures to wider process reviews after exceeding defined cycle limits",
+        "Confirming all closure preconditions are satisfied before authorizing final sign-off",
+        "Enforcing separation of duties between the action implementer and the closing authority"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Defining effectiveness criteria",
+            "section": "Defining effectiveness criteria"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Defining effectiveness criteria; semantic review verifies support",
+            "section": "Defining effectiveness criteria"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Choosing follow-up evidence",
+            "section": "Choosing follow-up evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Choosing follow-up evidence; semantic review verifies support",
+            "section": "Choosing follow-up evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Reopening ineffective actions",
+            "section": "Reopening ineffective actions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Reopening ineffective actions; semantic review verifies support",
+            "section": "Reopening ineffective actions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Authorizing final closure",
+            "section": "Authorizing final closure"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Authorizing final closure; semantic review verifies support",
+            "section": "Authorizing final closure"
+          }
+        ],
+        "failures": []
+      },
+      "inputHash": "847e2eced796e0ecafaf19e4ed87aeafa565e53dbd1bbf7234c2112f298331da",
+      "outputContextHash": "f765870057aa9420641a63e8fe96df968b6a5eab81b1fb83ae11c70f5bb6897c",
+      "reviewedAt": "2026-10-19T18:39:07.096Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

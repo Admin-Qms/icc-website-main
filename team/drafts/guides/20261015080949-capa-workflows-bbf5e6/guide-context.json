@@ -41,6 +41,22 @@
     {
       "term": "Traceability",
       "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
+    },
+    {
+      "term": "Effectiveness",
+      "definition": "Whether the root cause was eliminated and recurrence prevented by the actions taken, verified through objective evidence."
+    },
+    {
+      "term": "Effectiveness criteria",
+      "definition": "Pre-established, measurable specifications detailing the measure, scope, and duration needed to confirm that a nonconformity's cause has been eliminated."
+    },
+    {
+      "term": "Follow-up evidence",
+      "definition": "Objective records, observations, or measurement data gathered after action implementation to verify that effectiveness criteria were met."
+    },
+    {
+      "term": "Closure summary",
+      "definition": "A compiled record summarizing the finding, cause analysis, completed actions, and verification results reviewed prior to authorizing final closure."
     }
   ],
   "roles": [
@@ -65,7 +81,12 @@
     "Quality technician",
     "Responsible party",
     "Action owner",
-    "Supporting contributor"
+    "Supporting contributor",
+    "Management system auditor",
+    "Internal reviewer",
+    "Investigation team",
+    "Closer",
+    "Doer"
   ],
   "recordNames": [
     "Hold tag",
@@ -107,7 +128,15 @@
     "Training record",
     "Purchase and installation record",
     "Report of overdue actions",
-    "Controlled document"
+    "Controlled document",
+    "Corrective action plan form",
+    "Closure checklist",
+    "Closure summary",
+    "Effectiveness task",
+    "In-process inspection record",
+    "Final inspection record",
+    "Audit notes",
+    "Photographs"
   ],
   "example": {
     "label": "Illustrative example",
@@ -191,6 +220,24 @@
         "Approving or rejecting action cancellation requests",
         "Confirming implementation evidence matches the plan prior to marking an action complete",
         "Returning an action as incomplete due to missing implementation evidence"
+      ]
+    },
+    {
+      "slug": "effectiveness-review",
+      "title": "Reviewing corrective action effectiveness: CAPA software workflows",
+      "summary": "The guide page strictly complies with its assigned scope, chapter plan, and primary source materials. It addresses defining effectiveness criteria, choosing follow-up evidence, reopening ineffective actions, and authorizing closure within CAPA software evaluation workflows. Citations to ISO/IAF Auditing Practices Group guidance on nonconformity review and closing and the NIST RPD-G-08 corrective action procedure are accurately represented with proper context. The unnamed machining manufacturer illustrative scenario is consistently maintained across all subsections, and no unassigned FAQ section is present.",
+      "bodyHash": "f183c97553a7b752293702b58e6d28ee951dfffd0981fb94816671fc6badfb18",
+      "decisions": [
+        "Defining measurable effectiveness criteria and monitoring duration in advance of result review",
+        "Selecting follow-up evidence methods proportionate to the finding and aligned to the accepted cause",
+        "Deciding whether to extend monitoring or record stated caveats for limited sample sizes",
+        "Evaluating whether corrective actions caused unintended side effects or new management system issues",
+        "Marking an effectiveness check as failed and reopening the original finding record",
+        "Determining whether to re-establish containment after an action fails",
+        "Returning to root cause analysis versus replanning actions upon action failure",
+        "Escalating recurring failures to wider process reviews after exceeding defined cycle limits",
+        "Confirming all closure preconditions are satisfied before authorizing final sign-off",
+        "Enforcing separation of duties between the action implementer and the closing authority"
       ]
     }
   ],
