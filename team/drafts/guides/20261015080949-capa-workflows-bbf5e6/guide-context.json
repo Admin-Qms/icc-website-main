@@ -77,6 +77,26 @@
     {
       "term": "Cutover",
       "definition": "The formal transition point where legacy recordkeeping is discontinued and active CAPA workflows commence in the new software."
+    },
+    {
+      "term": "Role-based learning task",
+      "definition": "A practical training action structured around the specific permissions, records, and decisions an assigned role executes in the CAPA system."
+    },
+    {
+      "term": "Pilot user",
+      "definition": "A representative user across production shifts and operational roles selected to test live workflows and surface configuration defects prior to broader rollout."
+    },
+    {
+      "term": "Staged deployment",
+      "definition": "A phased rollout strategy deploying the CAPA software by department, area, or finding classification to manage support workload and integrate lessons learned."
+    },
+    {
+      "term": "Adoption indicator",
+      "definition": "A measurable metric—such as finding entry rates, assignment turnaround, or bypass frequency—used to evaluate whether personnel use the software as intended."
+    },
+    {
+      "term": "Side channel",
+      "definition": "An unauthorized parallel recordkeeping path, such as spreadsheets, emails, or paper logs, used by staff instead of the central CAPA software."
     }
   ],
   "roles": [
@@ -107,7 +127,9 @@
     "Investigation team",
     "Closer",
     "Doer",
-    "Customer-facing coordinator"
+    "Customer-facing coordinator",
+    "Approver",
+    "Area supervisor"
   ],
   "recordNames": [
     "Hold tag",
@@ -165,7 +187,13 @@
     "Controlled list of values",
     "Pilot test record",
     "Legacy backup",
-    "Workstation instructions"
+    "Workstation instructions",
+    "Nonconformity report",
+    "Evidence record",
+    "Pilot issue log",
+    "Deployment checklist",
+    "Procedure",
+    "Paper log"
   ],
   "example": {
     "label": "Illustrative example",
@@ -282,6 +310,19 @@
         "Approve pilot import results and verify discrepancy thresholds before authorizing full cutover",
         "Select cutover strategy (single direct cutover versus phased transition) and schedule freeze window",
         "Define recovery threshold triggers and authorize aborting cutover to roll back to legacy systems"
+      ]
+    },
+    {
+      "slug": "training-rollout",
+      "title": "Training teams and rolling out the system: CAPA software workflows",
+      "summary": "The guide page adheres strictly to the assigned chapter plan, scope boundaries, and primary research sources. It provides practical, actionable guidance on training teams and rolling out CAPA software, covering role-based learning tasks, pilot testing with representative users, staged deployment management, and adoption/workload evaluation. All primary source citations (ISO/IAF APG papers on documenting and reviewing nonconformities, and NIST RPD-G-07/G-08 procedures) are cited accurately within their appropriate contexts. Each subsection features structured workflow evaluation decisions, distinct user roles, record artifacts, and consistently labeled hypothetical examples based on the unnamed machining manufacturer scenario without asserting unverified software features. No unassigned FAQ section is present.",
+      "bodyHash": "a3710f5367704cf12740602fd1e2421d2ad7b1fc0551699edca49d8dfdadd918",
+      "decisions": [
+        "Accept or return sample training submissions based on review criteria",
+        "Extend, fix and repeat, approve, or stop the workflow pilot",
+        "Authorize area rollout entry against defined checklist readiness criteria",
+        "Determine handling and rerouting rules for findings raised in side channels",
+        "Adjust system forms, workflow steps, or provide refresher coaching based on adoption review metrics"
       ]
     }
   ],
