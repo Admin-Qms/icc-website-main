@@ -23,7 +23,7 @@ capabilityIds: []
 ---
 ## Inventory and classify existing records
 
-A migration begins with knowing what exists. Most plants hold CAPA information in several places: a spreadsheet log, paper reports in a binder, email threads, attachments on a shared drive, and notes in other systems. Before any software is configured, list these sources and describe what each holds.
+A migration begins with knowing what exists. Most plants hold [CAPA information](/solutions/nonconformance-capa/) in several places: a spreadsheet log, paper reports in a binder, email threads, attachments on a shared drive, and notes in other systems. Before any software is configured, list these sources and describe what each holds.
 
 The ISO and IAF guidance on [documenting a nonconformity](https://committee.iso.org/files/live/sites/tc176sc2/files/documents/ISO%209001%20Auditing%20Practices%20Group%20docs/Auditing%20General/APG-DocumentNonconformity2015.pdf) offers a useful template for classification. It describes an example report form with separate parts for the details of the finding, root cause analysis, correction, corrective action, review of the plan, verification of implementation, verification of effectiveness, and close-out. Compare each legacy record against that structure. Some records will have most of the parts, while others hold only a description and a closing date. The comparison shows how much of the old information can map to the new fields and where gaps exist.
 

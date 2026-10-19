@@ -41,62 +41,6 @@
     {
       "term": "Traceability",
       "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
-    },
-    {
-      "term": "Effectiveness",
-      "definition": "Whether the root cause was eliminated and recurrence prevented by the actions taken, verified through objective evidence."
-    },
-    {
-      "term": "Effectiveness criteria",
-      "definition": "Pre-established, measurable specifications detailing the measure, scope, and duration needed to confirm that a nonconformity's cause has been eliminated."
-    },
-    {
-      "term": "Follow-up evidence",
-      "definition": "Objective records, observations, or measurement data gathered after action implementation to verify that effectiveness criteria were met."
-    },
-    {
-      "term": "Closure summary",
-      "definition": "A compiled record summarizing the finding, cause analysis, completed actions, and verification results reviewed prior to authorizing final closure."
-    },
-    {
-      "term": "Legacy record",
-      "definition": "Historical quality records, logs, emails, or paper reports created prior to implementing the new CAPA software."
-    },
-    {
-      "term": "Controlled list of values",
-      "definition": "A standardized dropdown list or taxonomy (such as source, significance, or cause categories) used to normalize legacy data during migration."
-    },
-    {
-      "term": "Pilot import",
-      "definition": "A scoped test execution of legacy data migration into a non-production test environment to validate mapping rules and error handling before cutover."
-    },
-    {
-      "term": "Freeze period",
-      "definition": "A designated timeframe prior to cutover during which no new data entries are permitted in legacy sources to ensure migration completeness."
-    },
-    {
-      "term": "Cutover",
-      "definition": "The formal transition point where legacy recordkeeping is discontinued and active CAPA workflows commence in the new software."
-    },
-    {
-      "term": "Role-based learning task",
-      "definition": "A practical training action structured around the specific permissions, records, and decisions an assigned role executes in the CAPA system."
-    },
-    {
-      "term": "Pilot user",
-      "definition": "A representative user across production shifts and operational roles selected to test live workflows and surface configuration defects prior to broader rollout."
-    },
-    {
-      "term": "Staged deployment",
-      "definition": "A phased rollout strategy deploying the CAPA software by department, area, or finding classification to manage support workload and integrate lessons learned."
-    },
-    {
-      "term": "Adoption indicator",
-      "definition": "A measurable metric—such as finding entry rates, assignment turnaround, or bypass frequency—used to evaluate whether personnel use the software as intended."
-    },
-    {
-      "term": "Side channel",
-      "definition": "An unauthorized parallel recordkeeping path, such as spreadsheets, emails, or paper logs, used by staff instead of the central CAPA software."
     }
   ],
   "roles": [
@@ -118,19 +62,7 @@
     "Group leader",
     "Division chief",
     "Supervisor",
-    "Quality technician",
-    "Responsible party",
-    "Action owner",
-    "Supporting contributor",
-    "Management system auditor",
-    "Internal reviewer",
-    "Investigation team",
-    "Closer",
-    "Doer",
-    "Customer-facing coordinator",
-    "Approver",
-    "Area supervisor",
-    "Presenter"
+    "Quality technician"
   ],
   "recordNames": [
     "Hold tag",
@@ -149,63 +81,14 @@
     "Comparison sheet",
     "Drawing revision",
     "Work instruction",
-    "Specification",
-    "Contract clause",
     "Containment task",
     "Hold record",
     "Sort result",
-    "Customer notification",
-    "Release decision",
+    "Receiving record",
     "Work order",
     "Inspection record",
-    "Receiving record",
-    "Statement of nonconformity",
-    "Offset history",
-    "Tool change records",
-    "Maintenance record",
-    "Measurement data",
-    "Setup instruction",
-    "Competing-cause record",
-    "Corrective Action Plan form",
-    "Sampling plan",
-    "Fixture drawing",
-    "Training record",
-    "Purchase and installation record",
-    "Report of overdue actions",
-    "Controlled document",
-    "Corrective action plan form",
-    "Closure checklist",
-    "Closure summary",
-    "Effectiveness task",
-    "In-process inspection record",
-    "Final inspection record",
-    "Audit notes",
-    "Photographs",
-    "Spreadsheet log",
-    "Paper reports",
-    "Email threads",
-    "Nonconformity report form",
-    "Controlled list of values",
-    "Pilot test record",
-    "Legacy backup",
-    "Workstation instructions",
-    "Nonconformity report",
-    "Evidence record",
-    "Pilot issue log",
-    "Deployment checklist",
-    "Procedure",
-    "Paper log",
-    "Review record",
-    "Sampled closed finding",
-    "Cause form",
-    "Improvement request backlog",
-    "Automatic report of repeat findings by process",
-    "Pilot data",
-    "Problem statement",
-    "Indexed archive",
-    "Scoring sheet",
-    "Checklist",
-    "Acceptance criteria"
+    "Customer notification",
+    "Release decision"
   ],
   "example": {
     "label": "Illustrative example",
@@ -245,126 +128,16 @@
     {
       "slug": "containment-decisions",
       "title": "Recording findings and containment: CAPA software workflows",
-      "summary": "The page adheres strictly to its assigned brief, chapter boundaries, and research sources. Factual claims from NIST RPD-G-07, APG Documenting Nonconformity, and APG Review and Closing are accurately quoted and framed with appropriate caveats regarding ISO 9001:2015 auditor guidance and laboratory context. The text covers classification, immediate containment assignment, linking affected records, and checking containment evidence. Practical evaluation criteria, workflow decisions, inputs, roles, records, exceptions, and consistently labeled hypothetical examples featuring an unnamed machining manufacturer are present in each subsection. No unassigned FAQ section was included.",
-      "bodyHash": "70221276a28089b06b15f5a1fefa81c89fe7e46dd4e1f1387fc88b376e7b3084",
+      "summary": "The guide page strictly complies with its assigned scope, chapter plan, and boundaries. All cited primary sources (ISO/IAF APG Documenting, ISO/IAF APG Review and Closing, and NIST RPD-G-07) are cited accurately with explicit contextual disclaimers noting auditor guidance and laboratory service limits. All four subsections incorporate assigned workflow decisions, roles, records, exceptions, and software evaluation criteria. Examples are consistently labeled as hypothetical illustrative scenarios featuring an unnamed manufacturer. No unassigned FAQ section was included.",
+      "bodyHash": "daee8b86031ee523e60ba676756698883f38fe211b0a6a93c28354efda6ad058",
       "decisions": [
-        "Confirm or reject whether a deviation is a true nonconformity",
-        "Assign significance rating and determine routing path",
-        "Define containment scope and boundary",
-        "Select containment action and assign authority to execute",
-        "Determine required internal and customer notifications",
-        "Decide whether to connect records via live integrations or validated manual references",
-        "Authorize release of held product or resumption of work",
-        "Document override when proceeding past missing containment evidence"
-      ]
-    },
-    {
-      "slug": "cause-investigation",
-      "title": "Investigating root causes: CAPA software workflows",
-      "summary": "The guide page strictly complies with its assigned scope, chapter plan, and research sources. It provides practical evaluation criteria and workflow guidance for investigating root causes in CAPA software, covering question definition, evidence gathering, competing cause analysis, and cause statement recording. All primary source citations to the ISO/IAF Auditing Practices Group papers are accurate and properly contextualized as auditor guidance. Each subsection features structured workflow evaluation points, clear roles, record inputs/outputs, and consistently labeled illustrative examples using the unnamed machining manufacturer scenario without claiming unverified vendor features. No unassigned FAQ section is included.",
-      "bodyHash": "64799cac45522d789471fcc32609f94d6f308892ab31c0b17779cba7888d7a61",
-      "decisions": [
-        "Record chosen investigation depth and justify full investigation versus simple correction",
-        "Modify or refine the investigation question midway through an investigation",
-        "Log data collection gaps as independent findings requiring follow-up action",
-        "Categorize candidate failure factors as not able to confirm, possible, or confirmed",
-        "Determine whether a failure mechanism is systemic or accidental",
-        "Accept, challenge, or return the root cause statement for additional evidence",
-        "Flag related processes, machines, or sites for parallel evaluation"
-      ]
-    },
-    {
-      "slug": "action-planning",
-      "title": "Planning and implementing corrective actions: CAPA software workflows",
-      "summary": "The guide page adheres strictly to its outline, scope boundaries, and research sources. Factual citations to the ISO/IAF Auditing Practices Group guidance on reviewing and closing nonconformities and the NIST RPD-G-08 corrective action procedure are accurately represented with required contextual disclaimers. The four subsections cover connecting actions to causes, assigning owners and deadlines, handling delays, and recording implementation evidence without overstepping into effectiveness review or prior stages. Hypothetical examples featuring the unnamed machining manufacturer scenario are consistently labeled across all subsections, and no unassigned FAQ section is present.",
-      "bodyHash": "e78ee38fc098da61dbbf918018bed781bd91457730e96d206f909ffe5ebd9500",
-      "decisions": [
-        "Deciding whether correction, corrective action, or both are required and recording why",
-        "Rejecting improvement proposals from the action plan when they do not link to the accepted cause",
-        "Accepting or refusing an assigned action ownership and due date",
-        "Approving or returning an action plan prior to implementation",
-        "Approving or rejecting an action due date extension request",
-        "Establishing interim containment protection during an action delay",
-        "Prioritizing actions and findings during resource conflicts",
-        "Approving or rejecting action cancellation requests",
-        "Confirming implementation evidence matches the plan prior to marking an action complete",
-        "Returning an action as incomplete due to missing implementation evidence"
-      ]
-    },
-    {
-      "slug": "effectiveness-review",
-      "title": "Reviewing corrective action effectiveness: CAPA software workflows",
-      "summary": "The guide page strictly complies with its assigned scope, chapter plan, and primary source materials. It addresses defining effectiveness criteria, choosing follow-up evidence, reopening ineffective actions, and authorizing closure within CAPA software evaluation workflows. Citations to ISO/IAF Auditing Practices Group guidance on nonconformity review and closing and the NIST RPD-G-08 corrective action procedure are accurately represented with proper context. The unnamed machining manufacturer illustrative scenario is consistently maintained across all subsections, and no unassigned FAQ section is present.",
-      "bodyHash": "f183c97553a7b752293702b58e6d28ee951dfffd0981fb94816671fc6badfb18",
-      "decisions": [
-        "Defining measurable effectiveness criteria and monitoring duration in advance of result review",
-        "Selecting follow-up evidence methods proportionate to the finding and aligned to the accepted cause",
-        "Deciding whether to extend monitoring or record stated caveats for limited sample sizes",
-        "Evaluating whether corrective actions caused unintended side effects or new management system issues",
-        "Marking an effectiveness check as failed and reopening the original finding record",
-        "Determining whether to re-establish containment after an action fails",
-        "Returning to root cause analysis versus replanning actions upon action failure",
-        "Escalating recurring failures to wider process reviews after exceeding defined cycle limits",
-        "Confirming all closure preconditions are satisfied before authorizing final sign-off",
-        "Enforcing separation of duties between the action implementer and the closing authority"
-      ]
-    },
-    {
-      "slug": "migration-planning",
-      "title": "Planning migration and configuration: CAPA software workflows",
-      "summary": "The guide page adheres strictly to the assigned chapter plan, scope boundaries, and primary source materials. Factual citations to the ISO/IAF Auditing Practices Group guidance papers (on documenting nonconformities and reviewing/closing nonconformities) and the NIST RPD-G-08 corrective action procedure are accurately contextualized. Each subsection methodically addresses legacy record inventory, data cleaning, relationship mapping, pilot import verification, cutover scheduling, and rollback recovery planning. All illustrative examples are clearly labeled and consistently follow the unnamed machining manufacturer scenario without asserting unverified software capabilities. No unassigned FAQ section is included.",
-      "bodyHash": "60bed15457cab3c4343fa5cb50a76ae0b853a6ad426ab7490bc26b82e66b0882",
-      "decisions": [
-        "Classify legacy records by status and business value to determine migration versus archival scope",
-        "Define retention rules and approve legacy records to leave behind or purge",
-        "Decide whether unmapped legacy fields should be left blank, filled with marked placeholders, or manually populated",
-        "Determine whether legacy record relationships should be rebuilt as relational database links or preserved as plain text",
-        "Approve pilot import results and verify discrepancy thresholds before authorizing full cutover",
-        "Select cutover strategy (single direct cutover versus phased transition) and schedule freeze window",
-        "Define recovery threshold triggers and authorize aborting cutover to roll back to legacy systems"
-      ]
-    },
-    {
-      "slug": "training-rollout",
-      "title": "Training teams and rolling out the system: CAPA software workflows",
-      "summary": "The guide page adheres strictly to the assigned chapter plan, scope boundaries, and primary research sources. It provides practical, actionable guidance on training teams and rolling out CAPA software, covering role-based learning tasks, pilot testing with representative users, staged deployment management, and adoption/workload evaluation. All primary source citations (ISO/IAF APG papers on documenting and reviewing nonconformities, and NIST RPD-G-07/G-08 procedures) are cited accurately within their appropriate contexts. Each subsection features structured workflow evaluation decisions, distinct user roles, record artifacts, and consistently labeled hypothetical examples based on the unnamed machining manufacturer scenario without asserting unverified software features. No unassigned FAQ section is present.",
-      "bodyHash": "a3710f5367704cf12740602fd1e2421d2ad7b1fc0551699edca49d8dfdadd918",
-      "decisions": [
-        "Accept or return sample training submissions based on review criteria",
-        "Extend, fix and repeat, approve, or stop the workflow pilot",
-        "Authorize area rollout entry against defined checklist readiness criteria",
-        "Determine handling and rerouting rules for findings raised in side channels",
-        "Adjust system forms, workflow steps, or provide refresher coaching based on adoption review metrics"
-      ]
-    },
-    {
-      "slug": "ongoing-operation",
-      "title": "Maintaining the system and choosing next steps: CAPA software workflows",
-      "summary": "The guide page adheres strictly to the assigned chapter brief, scope, and primary source materials. It addresses ongoing workflow review, disciplined evaluation of improvement requests without fabricated ROI, authorized FAQ guidance, and preparing scripted software demonstrations. All citations to the ISO/IAF APG papers and NIST RPD-G-07 are accurately quoted and properly contextualized. All illustrative examples are clearly designated as hypothetical scenarios based on an unnamed machining manufacturer, and no unverified software capabilities are asserted.",
-      "bodyHash": "f5dfced28b40f5c00d3ca6e50e15fb6157d24e2d8f0921380dab3eabd90d64dc",
-      "decisions": [
-        "Establish operational and design review rhythms with designated role ownership",
-        "Select and monitor a small set of workflow measures evaluated by process and role rather than plant-wide averages alone",
-        "Authorize or reject configuration changes through formal change control, testing sample findings prior to release",
-        "Decide which improvement requests to pursue based on plant measurements and failure evidence rather than unverified ROI claims",
-        "Assign improvement backlog statuses: do now, schedule, wait for more evidence, or decline",
-        "Determine legacy record migration scope: migrate open and recent closed findings, and place older records into an indexed archive",
-        "Assign decision permissions with backups and enforce separation of duties between action implementers and verifiers",
-        "Archive obsolete records with index entries instead of deleting historical quality records",
-        "Score software demonstrations live against pre-set acceptance criteria using scripted failure cases and anonymized plant data"
-      ]
-    },
-    {
-      "slug": "capa-software",
-      "title": "CAPA software workflows for Canadian quality and operations teams",
-      "summary": "The introduction page fully adheres to its outline, assigned word count, and scope boundaries. It sets clear context for Canadian quality and operations teams evaluating CAPA software, reviews all nine guide chapters in logical sequence, and establishes essential principles such as role accountability and separation of duties. Citations to ISO/IAF Auditing Practices Group guidance papers and NIST quality guides are accurately cited with appropriate disclaimers. Hypothetical examples are explicitly designated, and no unassigned FAQ section is present.",
-      "bodyHash": "feb6328bb2d1e58f8769195c7bf62343f55b3095407bb3232b02d0e220f55906",
-      "decisions": [
-        "Decide who confirms a finding, who approves an action, and who may close a record",
-        "Assign ownership to each stage of evaluation and implementation",
-        "Record a decision to proceed, repeat, or stop at the end of each implementation stage",
-        "Approve workflow configuration changes",
-        "Define and record measurable acceptance criteria prior to vendor demonstrations"
+        "Confirm or reject a finding as a true nonconformity",
+        "Assign significance rating and workflow routing",
+        "Define containment boundary and scope (lots, serial numbers, machines, shifts)",
+        "Select and authorize immediate containment action (hold, stop, sort, recall)",
+        "Notify internal roles, customers, or suppliers",
+        "Approve release of held product or work resumption",
+        "Authorize documented override for incomplete containment evidence"
       ]
     }
   ],

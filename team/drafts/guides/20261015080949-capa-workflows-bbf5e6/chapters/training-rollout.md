@@ -24,7 +24,7 @@ capabilityIds: []
 ---
 ## Set role-based learning tasks
 
-People use a CAPA system in different ways, so training should follow roles. An inspector raising a finding at a station needs different skills from an investigation lead assembling evidence, and an approver reviewing a plan needs different skills again. Training everyone on everything wastes time and buries the steps each person actually performs.
+People use a [CAPA system](/solutions/nonconformance-capa/) in different ways, so training should follow roles. An inspector raising a finding at a station needs different skills from an investigation lead assembling evidence, and an approver reviewing a plan needs different skills again. Training everyone on everything wastes time and buries the steps each person actually performs.
 
 Start from the decisions and records mapped in the earlier chapters. For each role, list the tasks the person must perform in the system, the records they create or approve and the mistakes that would do the most harm. The ISO and IAF guidance on [documenting a nonconformity](https://committee.iso.org/files/live/sites/tc176sc2/files/documents/ISO%209001%20Auditing%20Practices%20Group%20docs/Auditing%20General/APG-DocumentNonconformity2015.pdf) gives a concrete skill to teach. A well-documented nonconformity has audit evidence, the requirement and a statement of nonconformity, and the statement should be precise and not a restatement of the evidence. Inspectors and auditors who raise findings can practice that exact skill with real examples.
 

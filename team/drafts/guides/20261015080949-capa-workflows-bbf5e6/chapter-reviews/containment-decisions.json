@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The page adheres strictly to its assigned brief, chapter boundaries, and research sources. Factual claims from NIST RPD-G-07, APG Documenting Nonconformity, and APG Review and Closing are accurately quoted and framed with appropriate caveats regarding ISO 9001:2015 auditor guidance and laboratory context. The text covers classification, immediate containment assignment, linking affected records, and checking containment evidence. Practical evaluation criteria, workflow decisions, inputs, roles, records, exceptions, and consistently labeled hypothetical examples featuring an unnamed machining manufacturer are present in each subsection. No unassigned FAQ section was included.",
+  "summary": "The guide page strictly complies with its assigned scope, chapter plan, and boundaries. All cited primary sources (ISO/IAF APG Documenting, ISO/IAF APG Review and Closing, and NIST RPD-G-07) are cited accurately with explicit contextual disclaimers noting auditor guidance and laboratory service limits. All four subsections incorporate assigned workflow decisions, roles, records, exceptions, and software evaluation criteria. Examples are consistently labeled as hypothetical illustrative scenarios featuring an unnamed manufacturer. No unassigned FAQ section was included.",
   "glossary": [
     {
       "term": "Containment",
@@ -23,13 +23,17 @@
     {
       "term": "Nonconformity",
       "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+    },
+    {
+      "term": "Workflow owner",
+      "definition": "The role responsible for decisions and records in the defined workflow."
     }
   ],
   "roles": [
+    "Workflow owner",
     "Inspector",
     "Quality supervisor",
     "Reviewer",
-    "Workflow owner",
     "Quality technician",
     "Production supervisor",
     "Plant manager",
@@ -39,26 +43,23 @@
     "Finding record",
     "Drawing revision",
     "Work instruction",
-    "Specification",
-    "Contract clause",
     "Containment task",
     "Hold record",
     "Sort result",
-    "Customer notification",
-    "Release decision",
+    "Receiving record",
     "Work order",
     "Inspection record",
-    "Receiving record"
+    "Customer notification",
+    "Release decision"
   ],
   "decisions": [
-    "Confirm or reject whether a deviation is a true nonconformity",
-    "Assign significance rating and determine routing path",
-    "Define containment scope and boundary",
-    "Select containment action and assign authority to execute",
-    "Determine required internal and customer notifications",
-    "Decide whether to connect records via live integrations or validated manual references",
-    "Authorize release of held product or resumption of work",
-    "Document override when proceeding past missing containment evidence"
+    "Confirm or reject a finding as a true nonconformity",
+    "Assign significance rating and workflow routing",
+    "Define containment boundary and scope (lots, serial numbers, machines, shifts)",
+    "Select and authorize immediate containment action (hold, stop, sort, recall)",
+    "Notify internal roles, customers, or suppliers",
+    "Approve release of held product or work resumption",
+    "Authorize documented override for incomplete containment evidence"
   ],
   "pass": true,
   "deterministic": {
@@ -150,8 +151,8 @@
     ],
     "failures": []
   },
-  "inputHash": "92b13fd1bc27f72022b6f6ef68e1ca610e07a6bc171b9a666121d6001619f3b4",
-  "outputContextHash": "0a01928a5b2de760f4fcf102f06e4a12322166776ed3821017e31c99c11d349e",
-  "reviewedAt": "2026-10-19T18:24:10.745Z",
+  "inputHash": "3f5a4d6b247df58f039adacda50f842439d958009275d83e68c838282aadc586",
+  "outputContextHash": "515745cf1c29ecc94e2e63e623c1a47a9cda1f0ee504aec3ae2e25e38d830798",
+  "reviewedAt": "2026-10-19T19:25:40.702Z",
   "reviewer": "Configured independent chapter reviewer"
 }
