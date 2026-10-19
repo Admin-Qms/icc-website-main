@@ -1,0 +1,157 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The page adheres strictly to its assigned brief, chapter boundaries, and research sources. Factual claims from NIST RPD-G-07, APG Documenting Nonconformity, and APG Review and Closing are accurately quoted and framed with appropriate caveats regarding ISO 9001:2015 auditor guidance and laboratory context. The text covers classification, immediate containment assignment, linking affected records, and checking containment evidence. Practical evaluation criteria, workflow decisions, inputs, roles, records, exceptions, and consistently labeled hypothetical examples featuring an unnamed machining manufacturer are present in each subsection. No unassigned FAQ section was included.",
+  "glossary": [
+    {
+      "term": "Containment",
+      "definition": "Immediate steps that limit the effect of a finding while its cause is investigated."
+    },
+    {
+      "term": "Correction",
+      "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
+    },
+    {
+      "term": "Corrective action",
+      "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+    },
+    {
+      "term": "Nonconformity",
+      "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+    }
+  ],
+  "roles": [
+    "Inspector",
+    "Quality supervisor",
+    "Reviewer",
+    "Workflow owner",
+    "Quality technician",
+    "Production supervisor",
+    "Plant manager",
+    "Auditor"
+  ],
+  "recordNames": [
+    "Finding record",
+    "Drawing revision",
+    "Work instruction",
+    "Specification",
+    "Contract clause",
+    "Containment task",
+    "Hold record",
+    "Sort result",
+    "Customer notification",
+    "Release decision",
+    "Work order",
+    "Inspection record",
+    "Receiving record"
+  ],
+  "decisions": [
+    "Confirm or reject whether a deviation is a true nonconformity",
+    "Assign significance rating and determine routing path",
+    "Define containment scope and boundary",
+    "Select containment action and assign authority to execute",
+    "Determine required internal and customer notifications",
+    "Decide whether to connect records via live integrations or validated manual references",
+    "Authorize release of held product or resumption of work",
+    "Document override when proceeding past missing containment evidence"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Classifying the finding",
+        "section": "Classifying the finding"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Classifying the finding; semantic review verifies support",
+        "section": "Classifying the finding"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Assigning immediate containment",
+        "section": "Assigning immediate containment"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Assigning immediate containment; semantic review verifies support",
+        "section": "Assigning immediate containment"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Linking affected records",
+        "section": "Linking affected records"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Linking affected records; semantic review verifies support",
+        "section": "Linking affected records"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Checking containment evidence",
+        "section": "Checking containment evidence"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Checking containment evidence; semantic review verifies support",
+        "section": "Checking containment evidence"
+      }
+    ],
+    "failures": []
+  },
+  "inputHash": "92b13fd1bc27f72022b6f6ef68e1ca610e07a6bc171b9a666121d6001619f3b4",
+  "outputContextHash": "0a01928a5b2de760f4fcf102f06e4a12322166776ed3821017e31c99c11d349e",
+  "reviewedAt": "2026-10-19T18:24:10.745Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

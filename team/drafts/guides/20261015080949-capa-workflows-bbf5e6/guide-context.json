@@ -61,7 +61,8 @@
     "Investigator",
     "Group leader",
     "Division chief",
-    "Supervisor"
+    "Supervisor",
+    "Quality technician"
   ],
   "recordNames": [
     "Hold tag",
@@ -77,7 +78,19 @@
     "History report",
     "Effectiveness check",
     "Change history",
-    "Comparison sheet"
+    "Comparison sheet",
+    "Drawing revision",
+    "Work instruction",
+    "Specification",
+    "Contract clause",
+    "Containment task",
+    "Hold record",
+    "Sort result",
+    "Customer notification",
+    "Release decision",
+    "Work order",
+    "Inspection record",
+    "Receiving record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -112,6 +125,22 @@
         "Verify implementation and confirm effectiveness before closing",
         "Reopen closed finding upon recurrence",
         "Score candidate products against must-have criteria"
+      ]
+    },
+    {
+      "slug": "containment-decisions",
+      "title": "Recording findings and containment: CAPA software workflows",
+      "summary": "The page adheres strictly to its assigned brief, chapter boundaries, and research sources. Factual claims from NIST RPD-G-07, APG Documenting Nonconformity, and APG Review and Closing are accurately quoted and framed with appropriate caveats regarding ISO 9001:2015 auditor guidance and laboratory context. The text covers classification, immediate containment assignment, linking affected records, and checking containment evidence. Practical evaluation criteria, workflow decisions, inputs, roles, records, exceptions, and consistently labeled hypothetical examples featuring an unnamed machining manufacturer are present in each subsection. No unassigned FAQ section was included.",
+      "bodyHash": "70221276a28089b06b15f5a1fefa81c89fe7e46dd4e1f1387fc88b376e7b3084",
+      "decisions": [
+        "Confirm or reject whether a deviation is a true nonconformity",
+        "Assign significance rating and determine routing path",
+        "Define containment scope and boundary",
+        "Select containment action and assign authority to execute",
+        "Determine required internal and customer notifications",
+        "Decide whether to connect records via live integrations or validated manual references",
+        "Authorize release of held product or resumption of work",
+        "Document override when proceeding past missing containment evidence"
       ]
     }
   ],
