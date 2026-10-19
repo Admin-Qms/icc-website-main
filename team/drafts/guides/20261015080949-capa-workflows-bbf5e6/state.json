@@ -20,10 +20,18 @@
     "approval": "approved"
   },
   "productionSlotId": "2026-W42-slot-2",
-  "stage": "outlined",
-  "pages": {},
+  "stage": "writing",
+  "pages": {
+    "mapping-workflows": {
+      "hash": "6bef24b1ef6e259eaae0a5ef449c188fae0373931e210f167c870be96f476202",
+      "wordCount": 2182,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-19T18:01:41.445Z"
+    }
+  },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-19T17:41:44.221Z",
+  "updatedAt": "2026-10-19T18:01:55.945Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
@@ -1395,8 +1403,162 @@
     "reviewedChapters": [],
     "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
   },
-  "contextHash": "4bcde216ed0e654c09d25a093bdb5ac8d878e0f3860b6c7ae7f92ff511c6ec9d",
-  "chapterReviews": {},
+  "contextHash": "b75e3f5fe3b3f65fadb1ee96c7be06f963346774b86f3a2679162dfb30391836",
+  "chapterReviews": {
+    "mapping-workflows": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The guide page adheres strictly to its assigned scope, chapter plan, and boundaries. All cited primary sources (ISO/IAF APG Documenting Nonconformity and NIST RPD-G-07) are accurately quoted with proper disclaimers, external links match research sources, and internal references maintain appropriate caution regarding software capabilities. The text systematically develops workflow mapping from problem definition through handoff mapping, decision ownership, and acceptance criteria using a consistent, clearly labeled hypothetical machining manufacturer scenario.",
+      "glossary": [
+        {
+          "term": "Corrective action",
+          "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+        },
+        {
+          "term": "Containment",
+          "definition": "Immediate steps that limit the effect of a finding while its cause is investigated."
+        },
+        {
+          "term": "Workflow owner",
+          "definition": "The role responsible for decisions and records in the defined workflow."
+        },
+        {
+          "term": "Nonconformity",
+          "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+        }
+      ],
+      "roles": [
+        "Inspector",
+        "Auditor",
+        "Quality manager",
+        "Quality owner",
+        "Quality supervisor",
+        "Production supervisor",
+        "Investigation lead",
+        "Action owners",
+        "Process engineer",
+        "Plant manager",
+        "Workflow owner"
+      ],
+      "recordNames": [
+        "Hold tag",
+        "Containment record",
+        "Process data",
+        "Cause statement",
+        "Implementation evidence",
+        "Effectiveness evidence",
+        "Nonconformity Report form"
+      ],
+      "decisions": [
+        "Is this a real nonconformity?",
+        "How significant is it?",
+        "What must be isolated now? / What is contained, and by whom?",
+        "What question will the investigation answer? / Who investigates?",
+        "Who does what by when? / Who approves the action plan?",
+        "Was the action carried out as described?",
+        "Is the finding closed, or reopened? / Who confirms closure?"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Define the operational problem",
+            "section": "Define the operational problem"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Define the operational problem; semantic review verifies support",
+            "section": "Define the operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Identify records and handoffs",
+            "section": "Identify records and handoffs"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Identify records and handoffs; semantic review verifies support",
+            "section": "Identify records and handoffs"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assign owners and decisions",
+            "section": "Assign owners and decisions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assign owners and decisions; semantic review verifies support",
+            "section": "Assign owners and decisions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Set acceptance criteria",
+            "section": "Set acceptance criteria"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Set acceptance criteria; semantic review verifies support",
+            "section": "Set acceptance criteria"
+          }
+        ],
+        "failures": []
+      },
+      "inputHash": "c3a4900bde9629186829454bcc8e1d47ed336a89d53518335aef72016020c333",
+      "outputContextHash": "b75e3f5fe3b3f65fadb1ee96c7be06f963346774b86f3a2679162dfb30391836",
+      "reviewedAt": "2026-10-19T18:01:55.942Z",
+      "reviewer": "Configured independent chapter reviewer"
+    }
+  },
   "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed",
   "outlineHash": "4f4d2d7805d4cf8bd3629d844cfa083eca53dcf51d585791181d8ab57841d8ac",
   "audit": null,

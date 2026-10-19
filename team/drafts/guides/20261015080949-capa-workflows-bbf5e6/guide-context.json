@@ -21,18 +21,56 @@
     {
       "term": "Workflow owner",
       "definition": "The role responsible for decisions and records in the defined workflow."
+    },
+    {
+      "term": "Nonconformity",
+      "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
     }
   ],
   "roles": [
     "Quality owner",
     "Process owner",
-    "Operator"
+    "Operator",
+    "Inspector",
+    "Auditor",
+    "Quality manager",
+    "Quality supervisor",
+    "Production supervisor",
+    "Investigation lead",
+    "Action owners",
+    "Process engineer",
+    "Plant manager",
+    "Workflow owner"
   ],
-  "recordNames": [],
+  "recordNames": [
+    "Hold tag",
+    "Containment record",
+    "Process data",
+    "Cause statement",
+    "Implementation evidence",
+    "Effectiveness evidence",
+    "Nonconformity Report form"
+  ],
   "example": {
     "label": "Illustrative example",
     "description": "An unnamed Canadian manufacturer evaluates CAPA software for one recurring inspection finding, following it through containment, cause investigation, action, effectiveness review and closure; all situations and records are hypothetical, not customer results."
   },
-  "reviewedChapters": [],
+  "reviewedChapters": [
+    {
+      "slug": "mapping-workflows",
+      "title": "Mapping the current workflow: CAPA software workflows",
+      "summary": "The guide page adheres strictly to its assigned scope, chapter plan, and boundaries. All cited primary sources (ISO/IAF APG Documenting Nonconformity and NIST RPD-G-07) are accurately quoted with proper disclaimers, external links match research sources, and internal references maintain appropriate caution regarding software capabilities. The text systematically develops workflow mapping from problem definition through handoff mapping, decision ownership, and acceptance criteria using a consistent, clearly labeled hypothetical machining manufacturer scenario.",
+      "bodyHash": "8e1060e0ad6a41f8dcddd1a2e70459d02292164c3c406aff6a1ab00d19ff1393",
+      "decisions": [
+        "Is this a real nonconformity?",
+        "How significant is it?",
+        "What must be isolated now? / What is contained, and by whom?",
+        "What question will the investigation answer? / Who investigates?",
+        "Who does what by when? / Who approves the action plan?",
+        "Was the action carried out as described?",
+        "Is the finding closed, or reopened? / Who confirms closure?"
+      ]
+    }
+  ],
   "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
 }
