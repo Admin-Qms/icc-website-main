@@ -84,10 +84,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-19T18:52:52.775Z"
+    },
+    "capa-software": {
+      "hash": "5a716fe620df392dfc2054b41df20768a6dbf15c8db46d52be31b80f4afbf313",
+      "wordCount": 1503,
+      "readTime": 8,
+      "status": "written",
+      "checkpointedAt": "2026-10-19T19:15:52.713Z"
     }
   },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-19T18:53:24.844Z",
+  "updatedAt": "2026-10-19T19:16:06.908Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
@@ -1459,7 +1466,7 @@
     "reviewedChapters": [],
     "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
   },
-  "contextHash": "f36d904a4f6a65b6ffc29e19f25a2c94b0d0cd3701907654f47542de2dc66572",
+  "contextHash": "ef52fbeefe935f32be5a8ad5cc60933610cd65ec3969f2186adb41b7bdb90a3f",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2914,6 +2921,129 @@
       "inputHash": "93db776fd21c218993eaec1c5923050965043ca2ddfe725c84759f05397302a7",
       "outputContextHash": "f36d904a4f6a65b6ffc29e19f25a2c94b0d0cd3701907654f47542de2dc66572",
       "reviewedAt": "2026-10-19T18:53:24.840Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "capa-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The introduction page fully adheres to its outline, assigned word count, and scope boundaries. It sets clear context for Canadian quality and operations teams evaluating CAPA software, reviews all nine guide chapters in logical sequence, and establishes essential principles such as role accountability and separation of duties. Citations to ISO/IAF Auditing Practices Group guidance papers and NIST quality guides are accurately cited with appropriate disclaimers. Hypothetical examples are explicitly designated, and no unassigned FAQ section is present.",
+      "glossary": [
+        {
+          "term": "Correction",
+          "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
+        },
+        {
+          "term": "Corrective action",
+          "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+        },
+        {
+          "term": "Containment",
+          "definition": "Immediate steps that limit the effect of a finding while its cause is investigated."
+        },
+        {
+          "term": "Effectiveness review",
+          "definition": "Follow-up evidence check that a corrective action prevented recurrence before closure."
+        },
+        {
+          "term": "Workflow owner",
+          "definition": "The role responsible for decisions and records in the defined workflow."
+        },
+        {
+          "term": "Nonconformity",
+          "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+        }
+      ],
+      "roles": [
+        "Workflow owner",
+        "Quality manager",
+        "Investigation lead",
+        "Plant manager",
+        "Quality supervisor",
+        "Inspector",
+        "Process engineer"
+      ],
+      "recordNames": [
+        "Nonconformity Report form",
+        "Requirements sheet",
+        "Problem statement",
+        "Corrective Action Plan form",
+        "Acceptance criteria"
+      ],
+      "decisions": [
+        "Decide who confirms a finding, who approves an action, and who may close a record",
+        "Assign ownership to each stage of evaluation and implementation",
+        "Record a decision to proceed, repeat, or stop at the end of each implementation stage",
+        "Approve workflow configuration changes",
+        "Define and record measurable acceptance criteria prior to vendor demonstrations"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: The operational problem",
+            "section": "The operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: How to use this guide",
+            "section": "How to use this guide"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+            "section": "Planning evaluation and implementation"
+          }
+        ],
+        "failures": []
+      },
+      "inputHash": "83a8219f55185a469a57597c79f48373acc99ba17fdd9c8743c9eeccae685d70",
+      "outputContextHash": "ef52fbeefe935f32be5a8ad5cc60933610cd65ec3969f2186adb41b7bdb90a3f",
+      "reviewedAt": "2026-10-19T19:16:06.904Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

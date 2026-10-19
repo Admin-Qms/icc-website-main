@@ -204,7 +204,8 @@
     "Problem statement",
     "Indexed archive",
     "Scoring sheet",
-    "Checklist"
+    "Checklist",
+    "Acceptance criteria"
   ],
   "example": {
     "label": "Illustrative example",
@@ -351,6 +352,19 @@
         "Assign decision permissions with backups and enforce separation of duties between action implementers and verifiers",
         "Archive obsolete records with index entries instead of deleting historical quality records",
         "Score software demonstrations live against pre-set acceptance criteria using scripted failure cases and anonymized plant data"
+      ]
+    },
+    {
+      "slug": "capa-software",
+      "title": "CAPA software workflows for Canadian quality and operations teams",
+      "summary": "The introduction page fully adheres to its outline, assigned word count, and scope boundaries. It sets clear context for Canadian quality and operations teams evaluating CAPA software, reviews all nine guide chapters in logical sequence, and establishes essential principles such as role accountability and separation of duties. Citations to ISO/IAF Auditing Practices Group guidance papers and NIST quality guides are accurately cited with appropriate disclaimers. Hypothetical examples are explicitly designated, and no unassigned FAQ section is present.",
+      "bodyHash": "feb6328bb2d1e58f8769195c7bf62343f55b3095407bb3232b02d0e220f55906",
+      "decisions": [
+        "Decide who confirms a finding, who approves an action, and who may close a record",
+        "Assign ownership to each stage of evaluation and implementation",
+        "Record a decision to proceed, repeat, or stop at the end of each implementation stage",
+        "Approve workflow configuration changes",
+        "Define and record measurable acceptance criteria prior to vendor demonstrations"
       ]
     }
   ],

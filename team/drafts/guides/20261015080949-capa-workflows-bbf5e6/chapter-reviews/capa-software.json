@@ -1,0 +1,123 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The introduction page fully adheres to its outline, assigned word count, and scope boundaries. It sets clear context for Canadian quality and operations teams evaluating CAPA software, reviews all nine guide chapters in logical sequence, and establishes essential principles such as role accountability and separation of duties. Citations to ISO/IAF Auditing Practices Group guidance papers and NIST quality guides are accurately cited with appropriate disclaimers. Hypothetical examples are explicitly designated, and no unassigned FAQ section is present.",
+  "glossary": [
+    {
+      "term": "Correction",
+      "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
+    },
+    {
+      "term": "Corrective action",
+      "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+    },
+    {
+      "term": "Containment",
+      "definition": "Immediate steps that limit the effect of a finding while its cause is investigated."
+    },
+    {
+      "term": "Effectiveness review",
+      "definition": "Follow-up evidence check that a corrective action prevented recurrence before closure."
+    },
+    {
+      "term": "Workflow owner",
+      "definition": "The role responsible for decisions and records in the defined workflow."
+    },
+    {
+      "term": "Nonconformity",
+      "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+    }
+  ],
+  "roles": [
+    "Workflow owner",
+    "Quality manager",
+    "Investigation lead",
+    "Plant manager",
+    "Quality supervisor",
+    "Inspector",
+    "Process engineer"
+  ],
+  "recordNames": [
+    "Nonconformity Report form",
+    "Requirements sheet",
+    "Problem statement",
+    "Corrective Action Plan form",
+    "Acceptance criteria"
+  ],
+  "decisions": [
+    "Decide who confirms a finding, who approves an action, and who may close a record",
+    "Assign ownership to each stage of evaluation and implementation",
+    "Record a decision to proceed, repeat, or stop at the end of each implementation stage",
+    "Approve workflow configuration changes",
+    "Define and record measurable acceptance criteria prior to vendor demonstrations"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: The operational problem",
+        "section": "The operational problem"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: How to use this guide",
+        "section": "How to use this guide"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+        "section": "Planning evaluation and implementation"
+      }
+    ],
+    "failures": []
+  },
+  "inputHash": "83a8219f55185a469a57597c79f48373acc99ba17fdd9c8743c9eeccae685d70",
+  "outputContextHash": "ef52fbeefe935f32be5a8ad5cc60933610cd65ec3969f2186adb41b7bdb90a3f",
+  "reviewedAt": "2026-10-19T19:16:06.904Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
