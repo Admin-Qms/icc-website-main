@@ -6,64 +6,57 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The guide page adheres strictly to its outline, scope boundaries, and research sources. Factual citations to the ISO/IAF Auditing Practices Group guidance on reviewing and closing nonconformities and the NIST RPD-G-08 corrective action procedure are accurately represented with required contextual disclaimers. The four subsections cover connecting actions to causes, assigning owners and deadlines, handling delays, and recording implementation evidence without overstepping into effectiveness review or prior stages. Hypothetical examples featuring the unnamed machining manufacturer scenario are consistently labeled across all subsections, and no unassigned FAQ section is present.",
+  "summary": "The guide page adheres strictly to the assigned chapter plan, scope boundaries, and primary source evidence. Primary citations from NIST RPD-G-08 and the ISO/IAF Auditing Practices Group guidance on reviewing and closing nonconformities are cited accurately with appropriate contextual disclaimers. Workflow roles, decisions, records, exceptions, software demonstration criteria, and labeled illustrative examples are systematically developed across all four subsections without unassigned FAQ content or unverified product claims.",
   "glossary": [
     {
-      "term": "Correction",
-      "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
+      "term": "Immediate fix",
+      "definition": "An action taken to contain or rectify detected nonconforming product or symptoms immediately, distinguished from a corrective action targeting root cause."
     },
     {
-      "term": "Corrective action",
-      "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+      "term": "Interim protection",
+      "definition": "Temporary controls, such as heightened inspection or extended containment, put in place to mitigate quality risk while a long-term corrective action remains pending."
     },
     {
-      "term": "Effectiveness review",
-      "definition": "Follow-up evidence check that a corrective action prevented recurrence before closure."
-    },
-    {
-      "term": "Traceability",
-      "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
+      "term": "Implementation evidence",
+      "definition": "Objective documentation demonstrating that an action was executed as described, such as released revisions, training logs, or installation records."
     }
   ],
   "roles": [
     "Investigation lead",
     "Group leader",
-    "Responsible party",
     "Quality manager",
     "Division chief",
-    "Auditor",
+    "Responsible party",
     "Action owner",
     "Supporting contributor",
     "Reviewer",
+    "Approver",
     "Plant manager",
     "Process engineer",
     "Quality supervisor",
     "Production supervisor",
-    "Operator",
-    "Workflow owner"
+    "Operator"
   ],
   "recordNames": [
-    "Corrective Action Plan form",
+    "Corrective action plan",
     "Setup instruction",
     "Sampling plan",
-    "Fixture drawing",
-    "Training record",
-    "Purchase and installation record",
     "Inspection record",
-    "Report of overdue actions",
-    "Controlled document"
+    "Overdue action report",
+    "Purchase record",
+    "Installation record",
+    "Training record",
+    "Photograph",
+    "Fixture drawing"
   ],
   "decisions": [
-    "Deciding whether correction, corrective action, or both are required and recording why",
-    "Rejecting improvement proposals from the action plan when they do not link to the accepted cause",
-    "Accepting or refusing an assigned action ownership and due date",
-    "Approving or returning an action plan prior to implementation",
-    "Approving or rejecting an action due date extension request",
-    "Establishing interim containment protection during an action delay",
-    "Prioritizing actions and findings during resource conflicts",
-    "Approving or rejecting action cancellation requests",
-    "Confirming implementation evidence matches the plan prior to marking an action complete",
-    "Returning an action as incomplete due to missing implementation evidence"
+    "Classify action as immediate fix versus corrective action",
+    "Accept or reject proposed action into the CAPA plan based on root cause linkage",
+    "Approve or return action plan prior to execution",
+    "Accept or refuse action assignment and proposed deadline",
+    "Approve or reject due date extension request with interim containment controls",
+    "Authorize cancellation of an action that is no longer valid",
+    "Confirm implementation evidence or return action as incomplete"
   ],
   "pass": true,
   "deterministic": {
@@ -155,8 +148,8 @@
     ],
     "failures": []
   },
-  "inputHash": "bc9d4517044fade3ec3249d52e0f910175cb5cd0058846aefc4ceae7795e5c2a",
-  "outputContextHash": "a0fb1e6d4c8c1303914328626f630b3b3cadf79fda5a2b53c4d3ffa840c98e3c",
-  "reviewedAt": "2026-10-19T18:35:30.177Z",
+  "inputHash": "1b5b6b8abd5932e85f97a01ccc5d9e93d3166f6f75772fa525564345359d0bbc",
+  "outputContextHash": "16a770218d47e20f02bc06ab4a5eef370e8140b2a21cab63273e0e745e3c845c",
+  "reviewedAt": "2026-10-19T20:07:24.405Z",
   "reviewer": "Configured independent chapter reviewer"
 }

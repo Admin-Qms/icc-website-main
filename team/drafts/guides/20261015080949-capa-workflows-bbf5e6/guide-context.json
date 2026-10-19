@@ -57,6 +57,18 @@
     {
       "term": "Contributing cause",
       "definition": "A secondary factor or control breakdown (such as a deficient sampling plan) that allowed a defect to go undetected or persist without being the primary failure mechanism."
+    },
+    {
+      "term": "Immediate fix",
+      "definition": "An action taken to contain or rectify detected nonconforming product or symptoms immediately, distinguished from a corrective action targeting root cause."
+    },
+    {
+      "term": "Interim protection",
+      "definition": "Temporary controls, such as heightened inspection or extended containment, put in place to mitigate quality risk while a long-term corrective action remains pending."
+    },
+    {
+      "term": "Implementation evidence",
+      "definition": "Objective documentation demonstrating that an action was executed as described, such as released revisions, training logs, or installation records."
     }
   ],
   "roles": [
@@ -79,7 +91,11 @@
     "Division chief",
     "Supervisor",
     "Quality technician",
-    "Senior operator"
+    "Senior operator",
+    "Responsible party",
+    "Action owner",
+    "Supporting contributor",
+    "Approver"
   ],
   "recordNames": [
     "Hold tag",
@@ -112,7 +128,16 @@
     "Interview notes",
     "Maintenance record",
     "Competing-cause table",
-    "Accepted cause record"
+    "Accepted cause record",
+    "Corrective action plan",
+    "Setup instruction",
+    "Sampling plan",
+    "Overdue action report",
+    "Purchase record",
+    "Installation record",
+    "Training record",
+    "Photograph",
+    "Fixture drawing"
   ],
   "example": {
     "label": "Illustrative example",
@@ -177,6 +202,21 @@
         "Differentiate systematic causes from accidental one-off failures",
         "Accept cause statement or return investigation for further evidence gathering",
         "Flag related equipment, lines, or facilities for wider-impact checks"
+      ]
+    },
+    {
+      "slug": "action-planning",
+      "title": "Planning and implementing corrective actions: CAPA software workflows",
+      "summary": "The guide page adheres strictly to the assigned chapter plan, scope boundaries, and primary source evidence. Primary citations from NIST RPD-G-08 and the ISO/IAF Auditing Practices Group guidance on reviewing and closing nonconformities are cited accurately with appropriate contextual disclaimers. Workflow roles, decisions, records, exceptions, software demonstration criteria, and labeled illustrative examples are systematically developed across all four subsections without unassigned FAQ content or unverified product claims.",
+      "bodyHash": "1417e0cb304b3e0db3c7b914a3cc23c983731a39cdf17778a705882260d8a681",
+      "decisions": [
+        "Classify action as immediate fix versus corrective action",
+        "Accept or reject proposed action into the CAPA plan based on root cause linkage",
+        "Approve or return action plan prior to execution",
+        "Accept or refuse action assignment and proposed deadline",
+        "Approve or reject due date extension request with interim containment controls",
+        "Authorize cancellation of an action that is no longer valid",
+        "Confirm implementation evidence or return action as incomplete"
       ]
     }
   ],
