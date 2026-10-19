@@ -62,7 +62,10 @@
     "Group leader",
     "Division chief",
     "Supervisor",
-    "Quality technician"
+    "Quality technician",
+    "Responsible party",
+    "Action owner",
+    "Supporting contributor"
   ],
   "recordNames": [
     "Hold tag",
@@ -97,7 +100,14 @@
     "Maintenance record",
     "Measurement data",
     "Setup instruction",
-    "Competing-cause record"
+    "Competing-cause record",
+    "Corrective Action Plan form",
+    "Sampling plan",
+    "Fixture drawing",
+    "Training record",
+    "Purchase and installation record",
+    "Report of overdue actions",
+    "Controlled document"
   ],
   "example": {
     "label": "Illustrative example",
@@ -163,6 +173,24 @@
         "Determine whether a failure mechanism is systemic or accidental",
         "Accept, challenge, or return the root cause statement for additional evidence",
         "Flag related processes, machines, or sites for parallel evaluation"
+      ]
+    },
+    {
+      "slug": "action-planning",
+      "title": "Planning and implementing corrective actions: CAPA software workflows",
+      "summary": "The guide page adheres strictly to its outline, scope boundaries, and research sources. Factual citations to the ISO/IAF Auditing Practices Group guidance on reviewing and closing nonconformities and the NIST RPD-G-08 corrective action procedure are accurately represented with required contextual disclaimers. The four subsections cover connecting actions to causes, assigning owners and deadlines, handling delays, and recording implementation evidence without overstepping into effectiveness review or prior stages. Hypothetical examples featuring the unnamed machining manufacturer scenario are consistently labeled across all subsections, and no unassigned FAQ section is present.",
+      "bodyHash": "e78ee38fc098da61dbbf918018bed781bd91457730e96d206f909ffe5ebd9500",
+      "decisions": [
+        "Deciding whether correction, corrective action, or both are required and recording why",
+        "Rejecting improvement proposals from the action plan when they do not link to the accepted cause",
+        "Accepting or refusing an assigned action ownership and due date",
+        "Approving or returning an action plan prior to implementation",
+        "Approving or rejecting an action due date extension request",
+        "Establishing interim containment protection during an action delay",
+        "Prioritizing actions and findings during resource conflicts",
+        "Approving or rejecting action cancellation requests",
+        "Confirming implementation evidence matches the plan prior to marking an action complete",
+        "Returning an action as incomplete due to missing implementation evidence"
       ]
     }
   ],

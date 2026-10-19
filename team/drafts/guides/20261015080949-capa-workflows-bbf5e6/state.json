@@ -49,10 +49,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-19T18:27:55.743Z"
+    },
+    "action-planning": {
+      "hash": "1c5108d2255f0612d9b4532393c1fad5bd77602cc7e4ccba99d442ce25d9bcf9",
+      "wordCount": 2139,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-19T18:35:12.243Z"
     }
   },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-19T18:28:08.387Z",
+  "updatedAt": "2026-10-19T18:35:30.180Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
@@ -1424,7 +1431,7 @@
     "reviewedChapters": [],
     "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
   },
-  "contextHash": "456cf50a623e702dd80a10b09b555964d0cd9e3163cd476d1f0a31215a4b7cbf",
+  "contextHash": "a0fb1e6d4c8c1303914328626f630b3b3cadf79fda5a2b53c4d3ffa840c98e3c",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2041,6 +2048,168 @@
       "inputHash": "62c9cba5b514b4d248a80376e1abbe33307da5e62f24e8606df26e2131852a69",
       "outputContextHash": "456cf50a623e702dd80a10b09b555964d0cd9e3163cd476d1f0a31215a4b7cbf",
       "reviewedAt": "2026-10-19T18:28:08.383Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "action-planning": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The guide page adheres strictly to its outline, scope boundaries, and research sources. Factual citations to the ISO/IAF Auditing Practices Group guidance on reviewing and closing nonconformities and the NIST RPD-G-08 corrective action procedure are accurately represented with required contextual disclaimers. The four subsections cover connecting actions to causes, assigning owners and deadlines, handling delays, and recording implementation evidence without overstepping into effectiveness review or prior stages. Hypothetical examples featuring the unnamed machining manufacturer scenario are consistently labeled across all subsections, and no unassigned FAQ section is present.",
+      "glossary": [
+        {
+          "term": "Correction",
+          "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
+        },
+        {
+          "term": "Corrective action",
+          "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+        },
+        {
+          "term": "Effectiveness review",
+          "definition": "Follow-up evidence check that a corrective action prevented recurrence before closure."
+        },
+        {
+          "term": "Traceability",
+          "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
+        }
+      ],
+      "roles": [
+        "Investigation lead",
+        "Group leader",
+        "Responsible party",
+        "Quality manager",
+        "Division chief",
+        "Auditor",
+        "Action owner",
+        "Supporting contributor",
+        "Reviewer",
+        "Plant manager",
+        "Process engineer",
+        "Quality supervisor",
+        "Production supervisor",
+        "Operator",
+        "Workflow owner"
+      ],
+      "recordNames": [
+        "Corrective Action Plan form",
+        "Setup instruction",
+        "Sampling plan",
+        "Fixture drawing",
+        "Training record",
+        "Purchase and installation record",
+        "Inspection record",
+        "Report of overdue actions",
+        "Controlled document"
+      ],
+      "decisions": [
+        "Deciding whether correction, corrective action, or both are required and recording why",
+        "Rejecting improvement proposals from the action plan when they do not link to the accepted cause",
+        "Accepting or refusing an assigned action ownership and due date",
+        "Approving or returning an action plan prior to implementation",
+        "Approving or rejecting an action due date extension request",
+        "Establishing interim containment protection during an action delay",
+        "Prioritizing actions and findings during resource conflicts",
+        "Approving or rejecting action cancellation requests",
+        "Confirming implementation evidence matches the plan prior to marking an action complete",
+        "Returning an action as incomplete due to missing implementation evidence"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Connecting actions to causes",
+            "section": "Connecting actions to causes"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Connecting actions to causes; semantic review verifies support",
+            "section": "Connecting actions to causes"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assigning owners and deadlines",
+            "section": "Assigning owners and deadlines"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assigning owners and deadlines; semantic review verifies support",
+            "section": "Assigning owners and deadlines"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Handling delayed actions",
+            "section": "Handling delayed actions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Handling delayed actions; semantic review verifies support",
+            "section": "Handling delayed actions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Recording implementation evidence",
+            "section": "Recording implementation evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Recording implementation evidence; semantic review verifies support",
+            "section": "Recording implementation evidence"
+          }
+        ],
+        "failures": []
+      },
+      "inputHash": "bc9d4517044fade3ec3249d52e0f910175cb5cd0058846aefc4ceae7795e5c2a",
+      "outputContextHash": "a0fb1e6d4c8c1303914328626f630b3b3cadf79fda5a2b53c4d3ffa840c98e3c",
+      "reviewedAt": "2026-10-19T18:35:30.177Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
