@@ -2,6 +2,8 @@
 
 Status: cloud routine `icc-scout`, every Sunday 08:00 UTC, same environment and tools as the blog routine, no MCP connectors. Its job is to keep the two topic queues from running dry with no human involvement; it writes nothing else.
 
+The environment needs the Custom network allowlist described under "Environment network access" in `team/GUIDE-ROUTINE.md`: `apply` fetches every proposed source, and a host outside the allowlist fails that fetch and rejects the topic. `www.iso.org` refuses automated fetches with HTTP 403, so cite the `committee.iso.org` PDFs for ISO guidance.
+
 ## What it does
 
 `node team/pm.js scout status` reports what each queue needs:
