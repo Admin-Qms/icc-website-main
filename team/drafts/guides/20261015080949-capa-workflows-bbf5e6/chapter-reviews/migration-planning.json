@@ -1,0 +1,157 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The guide page adheres strictly to the assigned chapter plan, scope boundaries, and primary source materials. Factual citations to the ISO/IAF Auditing Practices Group guidance papers (on documenting nonconformities and reviewing/closing nonconformities) and the NIST RPD-G-08 corrective action procedure are accurately contextualized. Each subsection methodically addresses legacy record inventory, data cleaning, relationship mapping, pilot import verification, cutover scheduling, and rollback recovery planning. All illustrative examples are clearly labeled and consistently follow the unnamed machining manufacturer scenario without asserting unverified software capabilities. No unassigned FAQ section is included.",
+  "glossary": [
+    {
+      "term": "Legacy record",
+      "definition": "Historical quality records, logs, emails, or paper reports created prior to implementing the new CAPA software."
+    },
+    {
+      "term": "Controlled list of values",
+      "definition": "A standardized dropdown list or taxonomy (such as source, significance, or cause categories) used to normalize legacy data during migration."
+    },
+    {
+      "term": "Pilot import",
+      "definition": "A scoped test execution of legacy data migration into a non-production test environment to validate mapping rules and error handling before cutover."
+    },
+    {
+      "term": "Freeze period",
+      "definition": "A designated timeframe prior to cutover during which no new data entries are permitted in legacy sources to ensure migration completeness."
+    },
+    {
+      "term": "Cutover",
+      "definition": "The formal transition point where legacy recordkeeping is discontinued and active CAPA workflows commence in the new software."
+    }
+  ],
+  "roles": [
+    "Workflow owner",
+    "Quality supervisor",
+    "Inspector",
+    "Customer-facing coordinator",
+    "Investigator",
+    "Plant manager",
+    "Operator",
+    "Supervisor"
+  ],
+  "recordNames": [
+    "Spreadsheet log",
+    "Paper reports",
+    "Email threads",
+    "Nonconformity report form",
+    "Controlled list of values",
+    "Work order",
+    "Drawing revision",
+    "Pilot test record",
+    "Legacy backup",
+    "Workstation instructions"
+  ],
+  "decisions": [
+    "Classify legacy records by status and business value to determine migration versus archival scope",
+    "Define retention rules and approve legacy records to leave behind or purge",
+    "Decide whether unmapped legacy fields should be left blank, filled with marked placeholders, or manually populated",
+    "Determine whether legacy record relationships should be rebuilt as relational database links or preserved as plain text",
+    "Approve pilot import results and verify discrepancy thresholds before authorizing full cutover",
+    "Select cutover strategy (single direct cutover versus phased transition) and schedule freeze window",
+    "Define recovery threshold triggers and authorize aborting cutover to roll back to legacy systems"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Inventory and classify existing records",
+        "section": "Inventory and classify existing records"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Inventory and classify existing records; semantic review verifies support",
+        "section": "Inventory and classify existing records"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Clean data and map relationships",
+        "section": "Clean data and map relationships"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Clean data and map relationships; semantic review verifies support",
+        "section": "Clean data and map relationships"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Pilot the import and verify results",
+        "section": "Pilot the import and verify results"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Pilot the import and verify results; semantic review verifies support",
+        "section": "Pilot the import and verify results"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Plan cutover and recovery",
+        "section": "Plan cutover and recovery"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Plan cutover and recovery; semantic review verifies support",
+        "section": "Plan cutover and recovery"
+      }
+    ],
+    "failures": []
+  },
+  "inputHash": "a8d1feba4039a4d0b68b6b1d72a2ec7b44ad2760b5a49f9e18a468d7dbdf17fc",
+  "outputContextHash": "cf0717b23709a4c90ec5e5c1b2feaf521df67cf7bc3de1648c6afabdb8669ea2",
+  "reviewedAt": "2026-10-19T18:41:35.526Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

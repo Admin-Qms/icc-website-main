@@ -57,6 +57,26 @@
     {
       "term": "Closure summary",
       "definition": "A compiled record summarizing the finding, cause analysis, completed actions, and verification results reviewed prior to authorizing final closure."
+    },
+    {
+      "term": "Legacy record",
+      "definition": "Historical quality records, logs, emails, or paper reports created prior to implementing the new CAPA software."
+    },
+    {
+      "term": "Controlled list of values",
+      "definition": "A standardized dropdown list or taxonomy (such as source, significance, or cause categories) used to normalize legacy data during migration."
+    },
+    {
+      "term": "Pilot import",
+      "definition": "A scoped test execution of legacy data migration into a non-production test environment to validate mapping rules and error handling before cutover."
+    },
+    {
+      "term": "Freeze period",
+      "definition": "A designated timeframe prior to cutover during which no new data entries are permitted in legacy sources to ensure migration completeness."
+    },
+    {
+      "term": "Cutover",
+      "definition": "The formal transition point where legacy recordkeeping is discontinued and active CAPA workflows commence in the new software."
     }
   ],
   "roles": [
@@ -86,7 +106,8 @@
     "Internal reviewer",
     "Investigation team",
     "Closer",
-    "Doer"
+    "Doer",
+    "Customer-facing coordinator"
   ],
   "recordNames": [
     "Hold tag",
@@ -136,7 +157,15 @@
     "In-process inspection record",
     "Final inspection record",
     "Audit notes",
-    "Photographs"
+    "Photographs",
+    "Spreadsheet log",
+    "Paper reports",
+    "Email threads",
+    "Nonconformity report form",
+    "Controlled list of values",
+    "Pilot test record",
+    "Legacy backup",
+    "Workstation instructions"
   ],
   "example": {
     "label": "Illustrative example",
@@ -238,6 +267,21 @@
         "Escalating recurring failures to wider process reviews after exceeding defined cycle limits",
         "Confirming all closure preconditions are satisfied before authorizing final sign-off",
         "Enforcing separation of duties between the action implementer and the closing authority"
+      ]
+    },
+    {
+      "slug": "migration-planning",
+      "title": "Planning migration and configuration: CAPA software workflows",
+      "summary": "The guide page adheres strictly to the assigned chapter plan, scope boundaries, and primary source materials. Factual citations to the ISO/IAF Auditing Practices Group guidance papers (on documenting nonconformities and reviewing/closing nonconformities) and the NIST RPD-G-08 corrective action procedure are accurately contextualized. Each subsection methodically addresses legacy record inventory, data cleaning, relationship mapping, pilot import verification, cutover scheduling, and rollback recovery planning. All illustrative examples are clearly labeled and consistently follow the unnamed machining manufacturer scenario without asserting unverified software capabilities. No unassigned FAQ section is included.",
+      "bodyHash": "60bed15457cab3c4343fa5cb50a76ae0b853a6ad426ab7490bc26b82e66b0882",
+      "decisions": [
+        "Classify legacy records by status and business value to determine migration versus archival scope",
+        "Define retention rules and approve legacy records to leave behind or purge",
+        "Decide whether unmapped legacy fields should be left blank, filled with marked placeholders, or manually populated",
+        "Determine whether legacy record relationships should be rebuilt as relational database links or preserved as plain text",
+        "Approve pilot import results and verify discrepancy thresholds before authorizing full cutover",
+        "Select cutover strategy (single direct cutover versus phased transition) and schedule freeze window",
+        "Define recovery threshold triggers and authorize aborting cutover to roll back to legacy systems"
       ]
     }
   ],
