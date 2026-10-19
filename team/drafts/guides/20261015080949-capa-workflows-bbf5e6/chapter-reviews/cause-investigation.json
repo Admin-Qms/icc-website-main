@@ -6,56 +6,50 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The guide page strictly complies with its assigned scope, chapter plan, and research sources. It provides practical evaluation criteria and workflow guidance for investigating root causes in CAPA software, covering question definition, evidence gathering, competing cause analysis, and cause statement recording. All primary source citations to the ISO/IAF Auditing Practices Group papers are accurate and properly contextualized as auditor guidance. Each subsection features structured workflow evaluation points, clear roles, record inputs/outputs, and consistently labeled illustrative examples using the unnamed machining manufacturer scenario without claiming unverified vendor features. No unassigned FAQ section is included.",
+  "summary": "The chapter adheres rigorously to its plan, boundaries, and assigned scope for root cause investigation workflows in CAPA software. Primary source citations from ISO/IAF Auditing Practices Group guidance documents are accurately quoted and contextualized. Workflow decisions, inputs, roles, records, exceptions, evaluation criteria, and scripted demonstration prompts are systematically covered across all four subsections. The hypothetical machining manufacturer scenario remains consistent with preceding chapters, and no unassigned FAQ content is included.",
   "glossary": [
     {
-      "term": "Correction",
-      "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
+      "term": "Statement of nonconformity",
+      "definition": "A precise, unambiguous statement identifying the requirement that was not met and the nature of the deviation, which directly drives the cause analysis and corrective action."
     },
     {
-      "term": "Corrective action",
-      "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+      "term": "Competing causes",
+      "definition": "Multiple candidate explanations for a nonconformity that are systematically recorded and tested against objective evidence before concluding on a root cause."
     },
     {
-      "term": "Nonconformity",
-      "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+      "term": "Data gap",
+      "definition": "A missing or unrecorded process parameter or variable identified during an investigation that is logged as a finding to prompt future measurement controls."
     },
     {
-      "term": "Traceability",
-      "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
-    },
-    {
-      "term": "Workflow owner",
-      "definition": "The role responsible for decisions and records in the defined workflow."
+      "term": "Contributing cause",
+      "definition": "A secondary factor or control breakdown (such as a deficient sampling plan) that allowed a defect to go undetected or persist without being the primary failure mechanism."
     }
   ],
   "roles": [
     "Investigation lead",
     "Process engineer",
+    "Senior operator",
     "Quality supervisor",
-    "Operator",
-    "Reviewer",
-    "Supervisor"
+    "Reviewer"
   ],
   "recordNames": [
     "Statement of nonconformity",
-    "Nonconformity Report form",
-    "Offset history",
-    "Tool change records",
+    "Recurrence check record",
+    "Collection task record",
+    "Interview notes",
     "Maintenance record",
-    "Measurement data",
-    "Setup instruction",
-    "Competing-cause record",
-    "Cause statement"
+    "Competing-cause table",
+    "Accepted cause record",
+    "Nonconformity Report form"
   ],
   "decisions": [
-    "Record chosen investigation depth and justify full investigation versus simple correction",
-    "Modify or refine the investigation question midway through an investigation",
-    "Log data collection gaps as independent findings requiring follow-up action",
-    "Categorize candidate failure factors as not able to confirm, possible, or confirmed",
-    "Determine whether a failure mechanism is systemic or accidental",
-    "Accept, challenge, or return the root cause statement for additional evidence",
-    "Flag related processes, machines, or sites for parallel evaluation"
+    "Determine investigation depth based on finding severity and recurrence",
+    "Approve midway modifications to the investigation question",
+    "Log missing process parameters as data gap findings",
+    "Categorize candidate factors as not able to confirm, possible, or confirmed",
+    "Differentiate systematic causes from accidental one-off failures",
+    "Accept cause statement or return investigation for further evidence gathering",
+    "Flag related equipment, lines, or facilities for wider-impact checks"
   ],
   "pass": true,
   "deterministic": {
@@ -147,8 +141,8 @@
     ],
     "failures": []
   },
-  "inputHash": "62c9cba5b514b4d248a80376e1abbe33307da5e62f24e8606df26e2131852a69",
-  "outputContextHash": "456cf50a623e702dd80a10b09b555964d0cd9e3163cd476d1f0a31215a4b7cbf",
-  "reviewedAt": "2026-10-19T18:28:08.383Z",
+  "inputHash": "4b58645963a55100ef5a9ba16edbd91257241a32fbfce18033e5c2d15463baae",
+  "outputContextHash": "b5f3fd787a409a0ff0283df8ef7a9449babc341eeeb7457680b0a33a8d6210e8",
+  "reviewedAt": "2026-10-19T19:27:31.398Z",
   "reviewer": "Configured independent chapter reviewer"
 }

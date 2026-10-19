@@ -41,6 +41,22 @@
     {
       "term": "Traceability",
       "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
+    },
+    {
+      "term": "Statement of nonconformity",
+      "definition": "A precise, unambiguous statement identifying the requirement that was not met and the nature of the deviation, which directly drives the cause analysis and corrective action."
+    },
+    {
+      "term": "Competing causes",
+      "definition": "Multiple candidate explanations for a nonconformity that are systematically recorded and tested against objective evidence before concluding on a root cause."
+    },
+    {
+      "term": "Data gap",
+      "definition": "A missing or unrecorded process parameter or variable identified during an investigation that is logged as a finding to prompt future measurement controls."
+    },
+    {
+      "term": "Contributing cause",
+      "definition": "A secondary factor or control breakdown (such as a deficient sampling plan) that allowed a defect to go undetected or persist without being the primary failure mechanism."
     }
   ],
   "roles": [
@@ -62,7 +78,8 @@
     "Group leader",
     "Division chief",
     "Supervisor",
-    "Quality technician"
+    "Quality technician",
+    "Senior operator"
   ],
   "recordNames": [
     "Hold tag",
@@ -88,7 +105,14 @@
     "Work order",
     "Inspection record",
     "Customer notification",
-    "Release decision"
+    "Release decision",
+    "Statement of nonconformity",
+    "Recurrence check record",
+    "Collection task record",
+    "Interview notes",
+    "Maintenance record",
+    "Competing-cause table",
+    "Accepted cause record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -138,6 +162,21 @@
         "Notify internal roles, customers, or suppliers",
         "Approve release of held product or work resumption",
         "Authorize documented override for incomplete containment evidence"
+      ]
+    },
+    {
+      "slug": "cause-investigation",
+      "title": "Investigating root causes: CAPA software workflows",
+      "summary": "The chapter adheres rigorously to its plan, boundaries, and assigned scope for root cause investigation workflows in CAPA software. Primary source citations from ISO/IAF Auditing Practices Group guidance documents are accurately quoted and contextualized. Workflow decisions, inputs, roles, records, exceptions, evaluation criteria, and scripted demonstration prompts are systematically covered across all four subsections. The hypothetical machining manufacturer scenario remains consistent with preceding chapters, and no unassigned FAQ content is included.",
+      "bodyHash": "bd6d6004661d99c6be0db1ed9cdafa8095f77bc780b61791384d989207e3b7ee",
+      "decisions": [
+        "Determine investigation depth based on finding severity and recurrence",
+        "Approve midway modifications to the investigation question",
+        "Log missing process parameters as data gap findings",
+        "Categorize candidate factors as not able to confirm, possible, or confirmed",
+        "Differentiate systematic causes from accidental one-off failures",
+        "Accept cause statement or return investigation for further evidence gathering",
+        "Flag related equipment, lines, or facilities for wider-impact checks"
       ]
     }
   ],
