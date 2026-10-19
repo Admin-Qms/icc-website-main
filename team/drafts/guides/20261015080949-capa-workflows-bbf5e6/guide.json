@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "topicId": "capa-workflows",
+  "slug": "capa-software",
+  "title": "CAPA software workflows for Canadian quality and operations teams",
+  "description": "How to choose and implement CAPA software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.",
+  "primaryKeyword": "CAPA software",
+  "keywords": [
+    "CAPA software",
+    "corrective action workflow",
+    "effectiveness review"
+  ],
+  "audience": "Canadian quality and operations teams",
+  "author": "ISO Certification Consultants Editorial Team",
+  "date": "2026-10-19",
+  "introductionFile": "introduction.md",
+  "chapters": [
+    {
+      "slug": "mapping-workflows",
+      "file": "chapters/mapping-workflows.md"
+    },
+    {
+      "slug": "evaluating-software",
+      "file": "chapters/evaluating-software.md"
+    },
+    {
+      "slug": "containment-decisions",
+      "file": "chapters/containment-decisions.md"
+    },
+    {
+      "slug": "cause-investigation",
+      "file": "chapters/cause-investigation.md"
+    },
+    {
+      "slug": "action-planning",
+      "file": "chapters/action-planning.md"
+    },
+    {
+      "slug": "effectiveness-review",
+      "file": "chapters/effectiveness-review.md"
+    },
+    {
+      "slug": "migration-planning",
+      "file": "chapters/migration-planning.md"
+    },
+    {
+      "slug": "training-rollout",
+      "file": "chapters/training-rollout.md"
+    },
+    {
+      "slug": "ongoing-operation",
+      "file": "chapters/ongoing-operation.md"
+    }
+  ],
+  "sources": [
+    {
+      "id": "apg-review-closing",
+      "title": "ISO 9001 Auditing Practices Group: Nonconformity - review and closing (Edition 1, 13 January 2016)",
+      "publisher": "ISO/TC 176 and IAF",
+      "sourceType": "primary",
+      "url": "https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ReviewNonconformity.pdf",
+      "retrievedAt": "2026-10-19",
+      "supportedClaims": [
+        "An organization's response to a nonconformity has three parts: correction, analysis of cause and corrective action.",
+        "ISO 9000 defines nonconformity as non-fulfillment of a requirement, correction as action to eliminate a detected nonconformity, and corrective action as action to eliminate the cause of a nonconformity and to prevent recurrence.",
+        "Corrective action cannot be taken without first determining the cause; methods range from brainstorming to root cause analysis, fish-bone diagrams and 5 Whys.",
+        "The first failure factor found should not be assumed to be the root cause; factors are categorized as not able to confirm, possible or confirmed, and the analysis and conclusions are recorded.",
+        "Organizations should check whether a cause was systematic or accidental; treating a systematic failure as a one-off means corrective action will not succeed.",
+        "Auditors verify clear statements of actions, thorough descriptions referencing specific documents, past tense, completion dates and evidence that corrective action was implemented as described and did not create further problems.",
+        "Correction or corrective action alone can be sufficient in some cases, and the need for comprehensive root cause analysis depends on the nature of the finding and whether it suggests a systemic failure.",
+        "Before closing, a nonconformity needs objective evidence that the corrective action is fully implemented and effective at preventing recurrence; closure may be by on-site examination or remote review of documentary evidence.",
+        "Cause analysis can reveal potential nonconformities elsewhere in the organization and informs risk-based planning.",
+        "The paper was written for ISO 9001:2015 and is auditor guidance that has not been endorsed by ISO, TC 176 or IAF; it does not establish current edition requirements."
+      ]
+    },
+    {
+      "id": "apg-documenting",
+      "title": "ISO 9001 Auditing Practices Group: Nonconformity - Documenting (13 January 2016)",
+      "publisher": "ISO/TC 176 and IAF",
+      "sourceType": "primary",
+      "url": "https://committee.iso.org/files/live/sites/tc176sc2/files/documents/ISO%209001%20Auditing%20Practices%20Group%20docs/Auditing%20General/APG-DocumentNonconformity2015.pdf",
+      "retrievedAt": "2026-10-19",
+      "supportedClaims": [
+        "A well-documented nonconformity has three parts: the audit evidence, the requirement and the statement of nonconformity.",
+        "Requirements can come from the standard, the organization's own management system, regulations or the customer.",
+        "The statement of nonconformity drives cause analysis, correction and corrective action, so it should be precise, unambiguous and not a restatement of the evidence.",
+        "Systematic recording, for example on a Nonconformity Report form, gives traceability, progress review and evidence of completion and effectiveness of corrective actions.",
+        "The example NCR form separates details, root cause analysis, correction with dates, corrective action with dates, review of the plan, verification of implementation, verification of effectiveness and close-out."
+      ]
+    },
+    {
+      "id": "nist-rpd-g08",
+      "title": "NIST Radiation Physics Division Quality Management System Guide RPD-G-08 Corrective Action (version 2.11)",
+      "publisher": "National Institute of Standards and Technology",
+      "sourceType": "primary",
+      "url": "https://www.nist.gov/document/guide08v211pdf",
+      "retrievedAt": "2026-10-19",
+      "supportedClaims": [
+        "One NIST laboratory's procedure has the responsible party investigate the root cause and record it on a Corrective Action Plan form.",
+        "Corrective actions are selected to fit the root cause, eliminate the problem and prevent recurrence, and the group leader reviews and signs the plan.",
+        "Affected organizations are notified and required changes are documented and implemented.",
+        "Results are monitored after completion to confirm the desired effect, with monitoring appropriate to the nature of the action.",
+        "Where doubt is cast on compliance with the quality system, the affected areas are audited.",
+        "Acceptance requires demonstrating quality is restored before regular service resumes, and the investigator, group leader, quality manager and division chief sign the plan.",
+        "The quality manager files the original plan.",
+        "This is one laboratory's process for calibration and testing services, not ISO 9001 guidance."
+      ]
+    },
+    {
+      "id": "nist-rpd-g07",
+      "title": "NIST Radiation Physics Division Quality Management System Guide RPD-G-07 Nonconformance (version 2.11)",
+      "publisher": "National Institute of Standards and Technology",
+      "sourceType": "primary",
+      "url": "https://www.nist.gov/document/guide07v211pdf",
+      "retrievedAt": "2026-10-19",
+      "supportedClaims": [
+        "Nonconforming work may be identified through internal or external audits, management reviews, the process itself, client feedback or staff observation, and complaints may reveal it.",
+        "Personnel first identify whether the work is truly nonconforming, then evaluate its significance and determine root cause through the corrective action procedure.",
+        "Different situations follow different routes: some require only notifying the client and documenting, equipment malfunction stops work and proceeds to corrective action, and a need to revise procedures proceeds to corrective action.",
+        "If a client chooses to accept nonconforming work, the acceptance must be in writing and placed in the client's file.",
+        "Not every nonconformance requires the corrective action form.",
+        "This is one laboratory's process, not ISO 9001 guidance."
+      ]
+    }
+  ],
+  "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "researchSnapshotHash": "134653cc595c48af6dc70f2054664d4991fea17901e8b90479ef12c0f974776e",
+  "productionSlotId": "2026-W42-slot-2"
+}

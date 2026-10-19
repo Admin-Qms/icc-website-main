@@ -20,8 +20,1386 @@
     "approval": "approved"
   },
   "productionSlotId": "2026-W42-slot-2",
-  "stage": "reserved",
+  "stage": "outlined",
   "pages": {},
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-15T08:09:49.111Z"
+  "updatedAt": "2026-10-19T17:41:44.221Z",
+  "manifest": {
+    "schemaVersion": 1,
+    "topicId": "capa-workflows",
+    "slug": "capa-software",
+    "title": "CAPA software workflows for Canadian quality and operations teams",
+    "description": "How to choose and implement CAPA software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.",
+    "primaryKeyword": "CAPA software",
+    "keywords": [
+      "CAPA software",
+      "corrective action workflow",
+      "effectiveness review"
+    ],
+    "audience": "Canadian quality and operations teams",
+    "author": "ISO Certification Consultants Editorial Team",
+    "date": "2026-10-19",
+    "introductionFile": "introduction.md",
+    "chapters": [
+      {
+        "slug": "mapping-workflows",
+        "file": "chapters/mapping-workflows.md"
+      },
+      {
+        "slug": "evaluating-software",
+        "file": "chapters/evaluating-software.md"
+      },
+      {
+        "slug": "containment-decisions",
+        "file": "chapters/containment-decisions.md"
+      },
+      {
+        "slug": "cause-investigation",
+        "file": "chapters/cause-investigation.md"
+      },
+      {
+        "slug": "action-planning",
+        "file": "chapters/action-planning.md"
+      },
+      {
+        "slug": "effectiveness-review",
+        "file": "chapters/effectiveness-review.md"
+      },
+      {
+        "slug": "migration-planning",
+        "file": "chapters/migration-planning.md"
+      },
+      {
+        "slug": "training-rollout",
+        "file": "chapters/training-rollout.md"
+      },
+      {
+        "slug": "ongoing-operation",
+        "file": "chapters/ongoing-operation.md"
+      }
+    ],
+    "sources": [
+      {
+        "id": "apg-review-closing",
+        "title": "ISO 9001 Auditing Practices Group: Nonconformity - review and closing (Edition 1, 13 January 2016)",
+        "publisher": "ISO/TC 176 and IAF",
+        "sourceType": "primary",
+        "url": "https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ReviewNonconformity.pdf",
+        "retrievedAt": "2026-10-19",
+        "supportedClaims": [
+          "An organization's response to a nonconformity has three parts: correction, analysis of cause and corrective action.",
+          "ISO 9000 defines nonconformity as non-fulfillment of a requirement, correction as action to eliminate a detected nonconformity, and corrective action as action to eliminate the cause of a nonconformity and to prevent recurrence.",
+          "Corrective action cannot be taken without first determining the cause; methods range from brainstorming to root cause analysis, fish-bone diagrams and 5 Whys.",
+          "The first failure factor found should not be assumed to be the root cause; factors are categorized as not able to confirm, possible or confirmed, and the analysis and conclusions are recorded.",
+          "Organizations should check whether a cause was systematic or accidental; treating a systematic failure as a one-off means corrective action will not succeed.",
+          "Auditors verify clear statements of actions, thorough descriptions referencing specific documents, past tense, completion dates and evidence that corrective action was implemented as described and did not create further problems.",
+          "Correction or corrective action alone can be sufficient in some cases, and the need for comprehensive root cause analysis depends on the nature of the finding and whether it suggests a systemic failure.",
+          "Before closing, a nonconformity needs objective evidence that the corrective action is fully implemented and effective at preventing recurrence; closure may be by on-site examination or remote review of documentary evidence.",
+          "Cause analysis can reveal potential nonconformities elsewhere in the organization and informs risk-based planning.",
+          "The paper was written for ISO 9001:2015 and is auditor guidance that has not been endorsed by ISO, TC 176 or IAF; it does not establish current edition requirements."
+        ]
+      },
+      {
+        "id": "apg-documenting",
+        "title": "ISO 9001 Auditing Practices Group: Nonconformity - Documenting (13 January 2016)",
+        "publisher": "ISO/TC 176 and IAF",
+        "sourceType": "primary",
+        "url": "https://committee.iso.org/files/live/sites/tc176sc2/files/documents/ISO%209001%20Auditing%20Practices%20Group%20docs/Auditing%20General/APG-DocumentNonconformity2015.pdf",
+        "retrievedAt": "2026-10-19",
+        "supportedClaims": [
+          "A well-documented nonconformity has three parts: the audit evidence, the requirement and the statement of nonconformity.",
+          "Requirements can come from the standard, the organization's own management system, regulations or the customer.",
+          "The statement of nonconformity drives cause analysis, correction and corrective action, so it should be precise, unambiguous and not a restatement of the evidence.",
+          "Systematic recording, for example on a Nonconformity Report form, gives traceability, progress review and evidence of completion and effectiveness of corrective actions.",
+          "The example NCR form separates details, root cause analysis, correction with dates, corrective action with dates, review of the plan, verification of implementation, verification of effectiveness and close-out."
+        ]
+      },
+      {
+        "id": "nist-rpd-g08",
+        "title": "NIST Radiation Physics Division Quality Management System Guide RPD-G-08 Corrective Action (version 2.11)",
+        "publisher": "National Institute of Standards and Technology",
+        "sourceType": "primary",
+        "url": "https://www.nist.gov/document/guide08v211pdf",
+        "retrievedAt": "2026-10-19",
+        "supportedClaims": [
+          "One NIST laboratory's procedure has the responsible party investigate the root cause and record it on a Corrective Action Plan form.",
+          "Corrective actions are selected to fit the root cause, eliminate the problem and prevent recurrence, and the group leader reviews and signs the plan.",
+          "Affected organizations are notified and required changes are documented and implemented.",
+          "Results are monitored after completion to confirm the desired effect, with monitoring appropriate to the nature of the action.",
+          "Where doubt is cast on compliance with the quality system, the affected areas are audited.",
+          "Acceptance requires demonstrating quality is restored before regular service resumes, and the investigator, group leader, quality manager and division chief sign the plan.",
+          "The quality manager files the original plan.",
+          "This is one laboratory's process for calibration and testing services, not ISO 9001 guidance."
+        ]
+      },
+      {
+        "id": "nist-rpd-g07",
+        "title": "NIST Radiation Physics Division Quality Management System Guide RPD-G-07 Nonconformance (version 2.11)",
+        "publisher": "National Institute of Standards and Technology",
+        "sourceType": "primary",
+        "url": "https://www.nist.gov/document/guide07v211pdf",
+        "retrievedAt": "2026-10-19",
+        "supportedClaims": [
+          "Nonconforming work may be identified through internal or external audits, management reviews, the process itself, client feedback or staff observation, and complaints may reveal it.",
+          "Personnel first identify whether the work is truly nonconforming, then evaluate its significance and determine root cause through the corrective action procedure.",
+          "Different situations follow different routes: some require only notifying the client and documenting, equipment malfunction stops work and proceeds to corrective action, and a need to revise procedures proceeds to corrective action.",
+          "If a client chooses to accept nonconforming work, the acceptance must be in writing and placed in the client's file.",
+          "Not every nonconformance requires the corrective action form.",
+          "This is one laboratory's process, not ISO 9001 guidance."
+        ]
+      }
+    ],
+    "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "researchSnapshotHash": "134653cc595c48af6dc70f2054664d4991fea17901e8b90479ef12c0f974776e",
+    "productionSlotId": "2026-W42-slot-2"
+  },
+  "assignments": {
+    "capa-software": {
+      "slug": "capa-software",
+      "title": "CAPA software workflows for Canadian quality and operations teams",
+      "description": "How to choose and implement CAPA software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.",
+      "primaryKeyword": "CAPA software",
+      "keywords": [
+        "CAPA software",
+        "corrective action workflow",
+        "effectiveness review"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-10-19",
+      "imageBrief": "A manufacturing quality technician confirming a controlled work instruction at a production cell; authentic industrial setting, no text or logos",
+      "sourceIds": [
+        "apg-review-closing",
+        "apg-documenting",
+        "nist-rpd-g08",
+        "nist-rpd-g07"
+      ],
+      "capabilityIds": []
+    },
+    "mapping-workflows": {
+      "slug": "mapping-workflows",
+      "title": "Mapping the current workflow: CAPA software workflows",
+      "description": "Mapping the current workflow in CAPA software: define the operational problem; identify records and handoffs; assign owners and decisions.",
+      "primaryKeyword": "CAPA software",
+      "keywords": [
+        "CAPA software mapping the current workflow",
+        "CAPA software",
+        "corrective action workflow",
+        "effectiveness review"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-10-19",
+      "imageBrief": "a fabrication inspector tracing a paper work instruction at a cutting station; authentic manufacturing environment, no readable text or logos",
+      "sourceIds": [
+        "nist-rpd-g07",
+        "apg-documenting"
+      ],
+      "capabilityIds": []
+    },
+    "evaluating-software": {
+      "slug": "evaluating-software",
+      "title": "Evaluating software capabilities: CAPA software workflows",
+      "description": "Evaluating software capabilities in CAPA software: build a workflow-based shortlist; test the decision points; examine evidence and permissions.",
+      "primaryKeyword": "CAPA software",
+      "keywords": [
+        "CAPA software evaluating software capabilities",
+        "CAPA software",
+        "corrective action workflow",
+        "effectiveness review"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-10-19",
+      "imageBrief": "a machining supervisor comparing inspection records beside a CNC machine; authentic manufacturing environment, no readable text or logos",
+      "sourceIds": [
+        "apg-documenting",
+        "nist-rpd-g08"
+      ],
+      "capabilityIds": []
+    },
+    "containment-decisions": {
+      "slug": "containment-decisions",
+      "title": "Recording findings and containment: CAPA software workflows",
+      "description": "Recording findings and containment in CAPA software: classifying the finding, assigning immediate containment and linking affected records.",
+      "primaryKeyword": "CAPA software",
+      "keywords": [
+        "CAPA software recording findings and containment",
+        "CAPA software",
+        "corrective action workflow",
+        "effectiveness review"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-10-19",
+      "imageBrief": "a production operator completing a controlled checklist at an assembly station; authentic manufacturing environment, no readable text or logos",
+      "sourceIds": [
+        "apg-documenting",
+        "nist-rpd-g07",
+        "apg-review-closing"
+      ],
+      "capabilityIds": []
+    },
+    "cause-investigation": {
+      "slug": "cause-investigation",
+      "title": "Investigating root causes: CAPA software workflows",
+      "description": "Investigating root causes in CAPA software: defining the investigation question, collecting evidence before conclusions and testing competing causes.",
+      "primaryKeyword": "CAPA software",
+      "keywords": [
+        "CAPA software investigating root causes",
+        "CAPA software",
+        "corrective action workflow",
+        "effectiveness review"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-10-19",
+      "imageBrief": "two quality inspectors reviewing a weld inspection record beside a fabrication cell; authentic manufacturing environment, no readable text or logos",
+      "sourceIds": [
+        "apg-review-closing",
+        "apg-documenting"
+      ],
+      "capabilityIds": []
+    },
+    "action-planning": {
+      "slug": "action-planning",
+      "title": "Planning and implementing corrective actions: CAPA software workflows",
+      "description": "Planning and implementing corrective actions in CAPA software: connecting actions to causes; assigning owners and deadlines; handling delayed actions.",
+      "primaryKeyword": "CAPA software",
+      "keywords": [
+        "CAPA software planning and implementing corrective actions",
+        "CAPA software",
+        "corrective action workflow",
+        "effectiveness review"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-10-19",
+      "imageBrief": "a line operator scanning an approved instruction beside a guarded press; authentic manufacturing environment, no readable text or logos",
+      "sourceIds": [
+        "apg-review-closing",
+        "nist-rpd-g08"
+      ],
+      "capabilityIds": []
+    },
+    "effectiveness-review": {
+      "slug": "effectiveness-review",
+      "title": "Reviewing corrective action effectiveness: CAPA software workflows",
+      "description": "Reviewing corrective action effectiveness in CAPA software: defining effectiveness criteria, choosing follow-up evidence and reopening ineffective actions.",
+      "primaryKeyword": "CAPA software",
+      "keywords": [
+        "CAPA software reviewing corrective action effectiveness",
+        "CAPA software",
+        "corrective action workflow",
+        "effectiveness review"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-10-19",
+      "imageBrief": "a quality technician isolating a rejected component at a marked inspection bench; authentic manufacturing environment, no readable text or logos",
+      "sourceIds": [
+        "apg-review-closing",
+        "nist-rpd-g08"
+      ],
+      "capabilityIds": []
+    },
+    "migration-planning": {
+      "slug": "migration-planning",
+      "title": "Planning migration and configuration: CAPA software workflows",
+      "description": "Planning migration and configuration in CAPA software: inventory and classify existing records; clean data and map relationships.",
+      "primaryKeyword": "CAPA software",
+      "keywords": [
+        "CAPA software planning migration and configuration",
+        "CAPA software",
+        "corrective action workflow",
+        "effectiveness review"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-10-19",
+      "imageBrief": "a receiving inspector sorting traceability records beside incoming material racks; authentic manufacturing environment, no readable text or logos",
+      "sourceIds": [
+        "apg-review-closing",
+        "apg-documenting",
+        "nist-rpd-g08"
+      ],
+      "capabilityIds": []
+    },
+    "training-rollout": {
+      "slug": "training-rollout",
+      "title": "Training teams and rolling out the system: CAPA software workflows",
+      "description": "Training teams and rolling out the system in CAPA software: set role-based learning tasks, pilot with representative users and manage staged deployment.",
+      "primaryKeyword": "CAPA software",
+      "keywords": [
+        "CAPA software training teams and rolling out the system",
+        "CAPA software",
+        "corrective action workflow",
+        "effectiveness review"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-10-19",
+      "imageBrief": "a trainer showing an operator the approved setup instruction on a shop floor; authentic manufacturing environment, no readable text or logos",
+      "sourceIds": [
+        "apg-review-closing",
+        "apg-documenting",
+        "nist-rpd-g08",
+        "nist-rpd-g07"
+      ],
+      "capabilityIds": []
+    },
+    "ongoing-operation": {
+      "slug": "ongoing-operation",
+      "title": "Maintaining the system and choosing next steps: CAPA software workflows",
+      "description": "Maintaining the system and choosing next steps in CAPA software: review the workflow and evidence; evaluate improvements without invented ROI.",
+      "primaryKeyword": "CAPA software",
+      "keywords": [
+        "CAPA software maintaining the system and choosing next steps",
+        "CAPA software",
+        "corrective action workflow",
+        "effectiveness review"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-10-19",
+      "imageBrief": "a quality lead reviewing completed evidence beside a final inspection station; authentic manufacturing environment, no readable text or logos",
+      "sourceIds": [
+        "apg-review-closing",
+        "apg-documenting",
+        "nist-rpd-g07"
+      ],
+      "capabilityIds": []
+    }
+  },
+  "pagePlans": {
+    "capa-software": {
+      "slug": "capa-software",
+      "title": "CAPA software workflows for Canadian quality and operations teams",
+      "description": "How to choose and implement CAPA software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.",
+      "imageBrief": "A manufacturing quality technician confirming a controlled work instruction at a production cell; authentic industrial setting, no text or logos",
+      "targetWords": 1500,
+      "subsections": [
+        "The operational problem",
+        "How to use this guide",
+        "Planning evaluation and implementation"
+      ],
+      "scope": "Introduce the complete guide, its audience and the decisions it helps make. Include an ordered overview, useful internal/primary links, no product promises."
+    },
+    "mapping-workflows": {
+      "slug": "mapping-workflows",
+      "title": "Mapping the current workflow: CAPA software workflows",
+      "description": "Mapping the current workflow in CAPA software: define the operational problem; identify records and handoffs; assign owners and decisions.",
+      "targetWords": 2000,
+      "chapterKeyword": "CAPA software mapping the current workflow",
+      "boundaries": [
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave recording findings and containment to its assigned chapter.",
+        "Leave investigating root causes to its assigned chapter.",
+        "Leave planning and implementing corrective actions to its assigned chapter.",
+        "Leave reviewing corrective action effectiveness to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Define the operational problem",
+          "sourceIds": [
+            "nist-rpd-g07",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain define the operational problem as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for define the operational problem",
+            "decision": "Define acceptance and exception decisions for define the operational problem",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show define the operational problem using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests define the operational problem; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Identify records and handoffs",
+          "sourceIds": [
+            "nist-rpd-g07",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain identify records and handoffs as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for identify records and handoffs",
+            "decision": "Define acceptance and exception decisions for identify records and handoffs",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show identify records and handoffs using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests identify records and handoffs; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Assign owners and decisions",
+          "sourceIds": [
+            "nist-rpd-g07",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain assign owners and decisions as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for assign owners and decisions",
+            "decision": "Define acceptance and exception decisions for assign owners and decisions",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show assign owners and decisions using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests assign owners and decisions; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Set acceptance criteria",
+          "sourceIds": [
+            "nist-rpd-g07",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain set acceptance criteria as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for set acceptance criteria",
+            "decision": "Define acceptance and exception decisions for set acceptance criteria",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show set acceptance criteria using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests set acceptance criteria; no actual customer outcomes are claimed."
+        }
+      ],
+      "imageBrief": "a fabrication inspector tracing a paper work instruction at a cutting station; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover mapping the current workflow for CAPA software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    "evaluating-software": {
+      "slug": "evaluating-software",
+      "title": "Evaluating software capabilities: CAPA software workflows",
+      "description": "Evaluating software capabilities in CAPA software: build a workflow-based shortlist; test the decision points; examine evidence and permissions.",
+      "targetWords": 2000,
+      "chapterKeyword": "CAPA software evaluating software capabilities",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave recording findings and containment to its assigned chapter.",
+        "Leave investigating root causes to its assigned chapter.",
+        "Leave planning and implementing corrective actions to its assigned chapter.",
+        "Leave reviewing corrective action effectiveness to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Build a workflow-based shortlist",
+          "sourceIds": [
+            "apg-documenting",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Explain build a workflow-based shortlist as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for build a workflow-based shortlist",
+            "decision": "Define acceptance and exception decisions for build a workflow-based shortlist",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show build a workflow-based shortlist using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests build a workflow-based shortlist; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Test the decision points",
+          "sourceIds": [
+            "apg-documenting",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Explain test the decision points as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for test the decision points",
+            "decision": "Define acceptance and exception decisions for test the decision points",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show test the decision points using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests test the decision points; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Examine evidence and permissions",
+          "sourceIds": [
+            "apg-documenting",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Explain examine evidence and permissions as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for examine evidence and permissions",
+            "decision": "Define acceptance and exception decisions for examine evidence and permissions",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show examine evidence and permissions using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests examine evidence and permissions; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Compare cost and support",
+          "sourceIds": [
+            "apg-documenting",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Explain compare cost and support as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for compare cost and support",
+            "decision": "Define acceptance and exception decisions for compare cost and support",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show compare cost and support using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests compare cost and support; no actual customer outcomes are claimed."
+        }
+      ],
+      "imageBrief": "a machining supervisor comparing inspection records beside a CNC machine; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover evaluating software capabilities for CAPA software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    "containment-decisions": {
+      "slug": "containment-decisions",
+      "title": "Recording findings and containment: CAPA software workflows",
+      "description": "Recording findings and containment in CAPA software: classifying the finding, assigning immediate containment and linking affected records.",
+      "targetWords": 2000,
+      "chapterKeyword": "CAPA software recording findings and containment",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave investigating root causes to its assigned chapter.",
+        "Leave planning and implementing corrective actions to its assigned chapter.",
+        "Leave reviewing corrective action effectiveness to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Classifying the finding",
+          "sourceIds": [
+            "apg-documenting",
+            "nist-rpd-g07"
+          ],
+          "keyPoints": [
+            "Sources show a finding is first confirmed as real, evaluated for significance and given a documented requirement, evidence and statement before cause work starts; correction or containment is distinct from corrective action.",
+            "Explain classifying the finding as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for classifying the finding",
+            "decision": "Define acceptance and exception decisions for classifying the finding",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show classifying the finding using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests classifying the finding; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Assigning immediate containment",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g07"
+          ],
+          "keyPoints": [
+            "Sources show a finding is first confirmed as real, evaluated for significance and given a documented requirement, evidence and statement before cause work starts; correction or containment is distinct from corrective action.",
+            "Explain assigning immediate containment as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for assigning immediate containment",
+            "decision": "Define acceptance and exception decisions for assigning immediate containment",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show assigning immediate containment using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests assigning immediate containment; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Linking affected records",
+          "sourceIds": [
+            "apg-documenting",
+            "nist-rpd-g07"
+          ],
+          "keyPoints": [
+            "Sources show a finding is first confirmed as real, evaluated for significance and given a documented requirement, evidence and statement before cause work starts; correction or containment is distinct from corrective action.",
+            "Explain linking affected records as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for linking affected records",
+            "decision": "Define acceptance and exception decisions for linking affected records",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show linking affected records using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests linking affected records; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Checking containment evidence",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g07"
+          ],
+          "keyPoints": [
+            "Sources show a finding is first confirmed as real, evaluated for significance and given a documented requirement, evidence and statement before cause work starts; correction or containment is distinct from corrective action.",
+            "Explain checking containment evidence as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for checking containment evidence",
+            "decision": "Define acceptance and exception decisions for checking containment evidence",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show checking containment evidence using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests checking containment evidence; no actual customer outcomes are claimed."
+        }
+      ],
+      "imageBrief": "a production operator completing a controlled checklist at an assembly station; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover recording findings and containment for CAPA software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    "cause-investigation": {
+      "slug": "cause-investigation",
+      "title": "Investigating root causes: CAPA software workflows",
+      "description": "Investigating root causes in CAPA software: defining the investigation question, collecting evidence before conclusions and testing competing causes.",
+      "targetWords": 2000,
+      "chapterKeyword": "CAPA software investigating root causes",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave recording findings and containment to its assigned chapter.",
+        "Leave planning and implementing corrective actions to its assigned chapter.",
+        "Leave reviewing corrective action effectiveness to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Defining the investigation question",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Sources show the first failure factor found is not assumed to be the root cause; factors are categorized as not able to confirm, possible or confirmed, with analysis recorded, and systematic causes are separated from one-off ones.",
+            "Explain defining the investigation question as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for defining the investigation question",
+            "decision": "Define acceptance and exception decisions for defining the investigation question",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show defining the investigation question using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests defining the investigation question; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Collecting evidence before conclusions",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Sources show the first failure factor found is not assumed to be the root cause; factors are categorized as not able to confirm, possible or confirmed, with analysis recorded, and systematic causes are separated from one-off ones.",
+            "Explain collecting evidence before conclusions as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for collecting evidence before conclusions",
+            "decision": "Define acceptance and exception decisions for collecting evidence before conclusions",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show collecting evidence before conclusions using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests collecting evidence before conclusions; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Testing competing causes",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Sources show the first failure factor found is not assumed to be the root cause; factors are categorized as not able to confirm, possible or confirmed, with analysis recorded, and systematic causes are separated from one-off ones.",
+            "Explain testing competing causes as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for testing competing causes",
+            "decision": "Define acceptance and exception decisions for testing competing causes",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show testing competing causes using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests testing competing causes; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Recording the accepted cause",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Sources show the first failure factor found is not assumed to be the root cause; factors are categorized as not able to confirm, possible or confirmed, with analysis recorded, and systematic causes are separated from one-off ones.",
+            "Explain recording the accepted cause as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for recording the accepted cause",
+            "decision": "Define acceptance and exception decisions for recording the accepted cause",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show recording the accepted cause using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests recording the accepted cause; no actual customer outcomes are claimed."
+        }
+      ],
+      "imageBrief": "two quality inspectors reviewing a weld inspection record beside a fabrication cell; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover investigating root causes for CAPA software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    "action-planning": {
+      "slug": "action-planning",
+      "title": "Planning and implementing corrective actions: CAPA software workflows",
+      "description": "Planning and implementing corrective actions in CAPA software: connecting actions to causes; assigning owners and deadlines; handling delayed actions.",
+      "targetWords": 2000,
+      "chapterKeyword": "CAPA software planning and implementing corrective actions",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave recording findings and containment to its assigned chapter.",
+        "Leave investigating root causes to its assigned chapter.",
+        "Leave reviewing corrective action effectiveness to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Connecting actions to causes",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Sources show actions are chosen to fit the root cause, reviewed and accepted by a named role, and recorded in past tense with completion dates and implementation evidence.",
+            "Explain connecting actions to causes as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for connecting actions to causes",
+            "decision": "Define acceptance and exception decisions for connecting actions to causes",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show connecting actions to causes using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests connecting actions to causes; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Assigning owners and deadlines",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Sources show actions are chosen to fit the root cause, reviewed and accepted by a named role, and recorded in past tense with completion dates and implementation evidence.",
+            "Explain assigning owners and deadlines as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for assigning owners and deadlines",
+            "decision": "Define acceptance and exception decisions for assigning owners and deadlines",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show assigning owners and deadlines using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests assigning owners and deadlines; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Handling delayed actions",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Sources show actions are chosen to fit the root cause, reviewed and accepted by a named role, and recorded in past tense with completion dates and implementation evidence.",
+            "Explain handling delayed actions as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for handling delayed actions",
+            "decision": "Define acceptance and exception decisions for handling delayed actions",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show handling delayed actions using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests handling delayed actions; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Recording implementation evidence",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Sources show actions are chosen to fit the root cause, reviewed and accepted by a named role, and recorded in past tense with completion dates and implementation evidence.",
+            "Explain recording implementation evidence as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for recording implementation evidence",
+            "decision": "Define acceptance and exception decisions for recording implementation evidence",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show recording implementation evidence using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests recording implementation evidence; no actual customer outcomes are claimed."
+        }
+      ],
+      "imageBrief": "a line operator scanning an approved instruction beside a guarded press; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover planning and implementing corrective actions for CAPA software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    "effectiveness-review": {
+      "slug": "effectiveness-review",
+      "title": "Reviewing corrective action effectiveness: CAPA software workflows",
+      "description": "Reviewing corrective action effectiveness in CAPA software: defining effectiveness criteria, choosing follow-up evidence and reopening ineffective actions.",
+      "targetWords": 2000,
+      "chapterKeyword": "CAPA software reviewing corrective action effectiveness",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave recording findings and containment to its assigned chapter.",
+        "Leave investigating root causes to its assigned chapter.",
+        "Leave planning and implementing corrective actions to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Defining effectiveness criteria",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Sources show closure requires objective evidence that the action was implemented and prevents recurrence, monitoring appropriate to the action, and sign-off by named roles; ineffective results go back to analysis.",
+            "Explain defining effectiveness criteria as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for defining effectiveness criteria",
+            "decision": "Define acceptance and exception decisions for defining effectiveness criteria",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show defining effectiveness criteria using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests defining effectiveness criteria; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Choosing follow-up evidence",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Sources show closure requires objective evidence that the action was implemented and prevents recurrence, monitoring appropriate to the action, and sign-off by named roles; ineffective results go back to analysis.",
+            "Explain choosing follow-up evidence as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for choosing follow-up evidence",
+            "decision": "Define acceptance and exception decisions for choosing follow-up evidence",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show choosing follow-up evidence using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests choosing follow-up evidence; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Reopening ineffective actions",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Sources show closure requires objective evidence that the action was implemented and prevents recurrence, monitoring appropriate to the action, and sign-off by named roles; ineffective results go back to analysis.",
+            "Explain reopening ineffective actions as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for reopening ineffective actions",
+            "decision": "Define acceptance and exception decisions for reopening ineffective actions",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show reopening ineffective actions using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests reopening ineffective actions; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Authorizing final closure",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Sources show closure requires objective evidence that the action was implemented and prevents recurrence, monitoring appropriate to the action, and sign-off by named roles; ineffective results go back to analysis.",
+            "Explain authorizing final closure as a software evaluation decision for Following findings through containment, action and verification; do not imply an unverified ICC feature. Cite the supplied sources only for what they state, noting they are written for ISO 9001:2015 auditors or describe one NIST laboratory's process."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for authorizing final closure",
+            "decision": "Define acceptance and exception decisions for authorizing final closure",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show authorizing final closure using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests authorizing final closure; no actual customer outcomes are claimed."
+        }
+      ],
+      "imageBrief": "a quality technician isolating a rejected component at a marked inspection bench; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover reviewing corrective action effectiveness for CAPA software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    "migration-planning": {
+      "slug": "migration-planning",
+      "title": "Planning migration and configuration: CAPA software workflows",
+      "description": "Planning migration and configuration in CAPA software: inventory and classify existing records; clean data and map relationships.",
+      "targetWords": 2000,
+      "chapterKeyword": "CAPA software planning migration and configuration",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave recording findings and containment to its assigned chapter.",
+        "Leave investigating root causes to its assigned chapter.",
+        "Leave planning and implementing corrective actions to its assigned chapter.",
+        "Leave reviewing corrective action effectiveness to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Inventory and classify existing records",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain inventory and classify existing records as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for inventory and classify existing records",
+            "decision": "Define acceptance and exception decisions for inventory and classify existing records",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show inventory and classify existing records using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests inventory and classify existing records; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Clean data and map relationships",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain clean data and map relationships as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for clean data and map relationships",
+            "decision": "Define acceptance and exception decisions for clean data and map relationships",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show clean data and map relationships using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests clean data and map relationships; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Pilot the import and verify results",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Explain pilot the import and verify results as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for pilot the import and verify results",
+            "decision": "Define acceptance and exception decisions for pilot the import and verify results",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show pilot the import and verify results using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests pilot the import and verify results; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Plan cutover and recovery",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain plan cutover and recovery as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for plan cutover and recovery",
+            "decision": "Define acceptance and exception decisions for plan cutover and recovery",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show plan cutover and recovery using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests plan cutover and recovery; no actual customer outcomes are claimed."
+        }
+      ],
+      "imageBrief": "a receiving inspector sorting traceability records beside incoming material racks; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover planning migration and configuration for CAPA software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    "training-rollout": {
+      "slug": "training-rollout",
+      "title": "Training teams and rolling out the system: CAPA software workflows",
+      "description": "Training teams and rolling out the system in CAPA software: set role-based learning tasks, pilot with representative users and manage staged deployment.",
+      "targetWords": 2000,
+      "chapterKeyword": "CAPA software training teams and rolling out the system",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave recording findings and containment to its assigned chapter.",
+        "Leave investigating root causes to its assigned chapter.",
+        "Leave planning and implementing corrective actions to its assigned chapter.",
+        "Leave reviewing corrective action effectiveness to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Set role-based learning tasks",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain set role-based learning tasks as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for set role-based learning tasks",
+            "decision": "Define acceptance and exception decisions for set role-based learning tasks",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show set role-based learning tasks using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests set role-based learning tasks; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Pilot with representative users",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain pilot with representative users as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for pilot with representative users",
+            "decision": "Define acceptance and exception decisions for pilot with representative users",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show pilot with representative users using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests pilot with representative users; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Manage staged deployment",
+          "sourceIds": [
+            "apg-documenting",
+            "nist-rpd-g08"
+          ],
+          "keyPoints": [
+            "Explain manage staged deployment as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for manage staged deployment",
+            "decision": "Define acceptance and exception decisions for manage staged deployment",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show manage staged deployment using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests manage staged deployment; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Evaluate adoption and workload",
+          "sourceIds": [
+            "nist-rpd-g07",
+            "apg-review-closing"
+          ],
+          "keyPoints": [
+            "Explain evaluate adoption and workload as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for evaluate adoption and workload",
+            "decision": "Define acceptance and exception decisions for evaluate adoption and workload",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show evaluate adoption and workload using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests evaluate adoption and workload; no actual customer outcomes are claimed."
+        }
+      ],
+      "imageBrief": "a trainer showing an operator the approved setup instruction on a shop floor; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover training teams and rolling out the system for CAPA software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    "ongoing-operation": {
+      "slug": "ongoing-operation",
+      "title": "Maintaining the system and choosing next steps: CAPA software workflows",
+      "description": "Maintaining the system and choosing next steps in CAPA software: review the workflow and evidence; evaluate improvements without invented ROI.",
+      "targetWords": 2000,
+      "chapterKeyword": "CAPA software maintaining the system and choosing next steps",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave recording findings and containment to its assigned chapter.",
+        "Leave investigating root causes to its assigned chapter.",
+        "Leave planning and implementing corrective actions to its assigned chapter.",
+        "Leave reviewing corrective action effectiveness to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Review the workflow and evidence",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain review the workflow and evidence as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for review the workflow and evidence",
+            "decision": "Define acceptance and exception decisions for review the workflow and evidence",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show review the workflow and evidence using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests review the workflow and evidence; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Evaluate improvements without invented ROI",
+          "sourceIds": [
+            "apg-review-closing",
+            "nist-rpd-g07"
+          ],
+          "keyPoints": [
+            "Explain evaluate improvements without invented roi as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for evaluate improvements without invented roi",
+            "decision": "Define acceptance and exception decisions for evaluate improvements without invented roi",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show evaluate improvements without invented roi using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests evaluate improvements without invented roi; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Frequently asked questions",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain frequently asked questions as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for frequently asked questions",
+            "decision": "Define acceptance and exception decisions for frequently asked questions",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show frequently asked questions using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests frequently asked questions; no actual customer outcomes are claimed."
+        },
+        {
+          "title": "Prepare a software demonstration",
+          "sourceIds": [
+            "apg-review-closing",
+            "apg-documenting"
+          ],
+          "keyPoints": [
+            "Explain prepare a software demonstration as a software evaluation or implementation decision; do not imply an unverified ICC feature.",
+            "Connect the decision to Following findings through containment, action and verification; distinguish sourced facts from hypothetical workflow advice."
+          ],
+          "workflow": {
+            "role": "Assigned workflow owner",
+            "input": "The records needed for prepare a software demonstration",
+            "decision": "Define acceptance and exception decisions for prepare a software demonstration",
+            "record": "Evidence of the decision and its owner",
+            "exception": "Missing evidence, rejected work or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Ask a demonstration to show prepare a software demonstration using representative records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests prepare a software demonstration; no actual customer outcomes are claimed."
+        }
+      ],
+      "imageBrief": "a quality lead reviewing completed evidence beside a final inspection station; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover maintaining the system and choosing next steps for CAPA software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    }
+  },
+  "initialContext": {
+    "schemaVersion": 1,
+    "topicId": "capa-workflows",
+    "glossary": [
+      {
+        "term": "Correction",
+        "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
+      },
+      {
+        "term": "Corrective action",
+        "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+      },
+      {
+        "term": "Containment",
+        "definition": "Immediate steps that limit the effect of a finding while its cause is investigated."
+      },
+      {
+        "term": "Effectiveness review",
+        "definition": "Follow-up evidence check that a corrective action prevented recurrence before closure."
+      },
+      {
+        "term": "Workflow owner",
+        "definition": "The role responsible for decisions and records in the defined workflow."
+      }
+    ],
+    "roles": [
+      "Quality owner",
+      "Process owner",
+      "Operator"
+    ],
+    "recordNames": [],
+    "example": {
+      "label": "Illustrative example",
+      "description": "An unnamed Canadian manufacturer evaluates CAPA software for one recurring inspection finding, following it through containment, cause investigation, action, effectiveness review and closure; all situations and records are hypothetical, not customer results."
+    },
+    "reviewedChapters": [],
+    "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
+  },
+  "contextHash": "4bcde216ed0e654c09d25a093bdb5ac8d878e0f3860b6c7ae7f92ff511c6ec9d",
+  "chapterReviews": {},
+  "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed",
+  "outlineHash": "4f4d2d7805d4cf8bd3629d844cfa083eca53dcf51d585791181d8ab57841d8ac",
+  "audit": null,
+  "generationCompletedAt": null,
+  "finalReport": null
 }

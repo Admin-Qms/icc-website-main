@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "topicId": "capa-workflows",
+  "glossary": [
+    {
+      "term": "Correction",
+      "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
+    },
+    {
+      "term": "Corrective action",
+      "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+    },
+    {
+      "term": "Containment",
+      "definition": "Immediate steps that limit the effect of a finding while its cause is investigated."
+    },
+    {
+      "term": "Effectiveness review",
+      "definition": "Follow-up evidence check that a corrective action prevented recurrence before closure."
+    },
+    {
+      "term": "Workflow owner",
+      "definition": "The role responsible for decisions and records in the defined workflow."
+    }
+  ],
+  "roles": [
+    "Quality owner",
+    "Process owner",
+    "Operator"
+  ],
+  "recordNames": [],
+  "example": {
+    "label": "Illustrative example",
+    "description": "An unnamed Canadian manufacturer evaluates CAPA software for one recurring inspection finding, following it through containment, cause investigation, action, effectiveness review and closure; all situations and records are hypothetical, not customer results."
+  },
+  "reviewedChapters": [],
+  "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
+}
