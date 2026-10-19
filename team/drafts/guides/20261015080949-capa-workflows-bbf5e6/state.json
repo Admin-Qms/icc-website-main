@@ -28,10 +28,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-19T18:01:41.445Z"
+    },
+    "evaluating-software": {
+      "hash": "0021467536cab2a6998a4dc486e6c75a0320da3b33f86e67b25f7f67e17fdd68",
+      "wordCount": 2089,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-19T18:07:23.431Z"
     }
   },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-19T18:01:55.945Z",
+  "updatedAt": "2026-10-19T18:07:46.342Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
@@ -1403,7 +1410,7 @@
     "reviewedChapters": [],
     "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
   },
-  "contextHash": "b75e3f5fe3b3f65fadb1ee96c7be06f963346774b86f3a2679162dfb30391836",
+  "contextHash": "07520c41a719ca8847a92a9f11177d9a28d1801fcb46a340e9b972b184db4339",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1556,6 +1563,159 @@
       "inputHash": "c3a4900bde9629186829454bcc8e1d47ed336a89d53518335aef72016020c333",
       "outputContextHash": "b75e3f5fe3b3f65fadb1ee96c7be06f963346774b86f3a2679162dfb30391836",
       "reviewedAt": "2026-10-19T18:01:55.942Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "evaluating-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The chapter adheres rigorously to its assigned scope and outline, providing practical, actionable guidance for evaluating CAPA software without making unsubstantiated product claims. Citations to ISO/IAF APG Nonconformity Documenting and NIST RPD-G-08 correctly reflect the source materials with appropriate caveats regarding laboratory context and auditor guidance. All four subsections feature clearly labeled illustrative examples centering on the consistent unnamed Canadian machining manufacturer scenario. No unassigned FAQ section is present.",
+      "glossary": [
+        {
+          "term": "Must-have criteria",
+          "definition": "Requirements without which the CAPA workflow fails, such as linking findings to specific requirements or separating implementation and verification roles."
+        },
+        {
+          "term": "Scripted demonstration",
+          "definition": "A vendor evaluation session structured around the buyer's workflow decision sequence and anonymized representative data rather than vendor marketing scripts."
+        },
+        {
+          "term": "Separation of duties",
+          "definition": "A workflow permission rule preventing the person who implements a corrective action from approving or verifying its effectiveness."
+        },
+        {
+          "term": "Traceability",
+          "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
+        }
+      ],
+      "roles": [
+        "Workflow owner",
+        "Reviewer",
+        "Investigator",
+        "Group leader",
+        "Quality manager",
+        "Division chief",
+        "Auditor",
+        "Supervisor"
+      ],
+      "recordNames": [
+        "Requirements sheet",
+        "Finding record",
+        "Nonconformity Report form",
+        "Containment record",
+        "Action plan",
+        "History report",
+        "Implementation evidence",
+        "Effectiveness check",
+        "Change history",
+        "Comparison sheet"
+      ],
+      "decisions": [
+        "Confirm or reject a finding as a true nonconformity",
+        "Rate significance and route",
+        "Record containment as a distinct pre-investigation action",
+        "Approve or return action plan",
+        "Verify implementation and confirm effectiveness before closing",
+        "Reopen closed finding upon recurrence",
+        "Score candidate products against must-have criteria"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Build a workflow-based shortlist",
+            "section": "Build a workflow-based shortlist"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Build a workflow-based shortlist; semantic review verifies support",
+            "section": "Build a workflow-based shortlist"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Test the decision points",
+            "section": "Test the decision points"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Test the decision points; semantic review verifies support",
+            "section": "Test the decision points"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Examine evidence and permissions",
+            "section": "Examine evidence and permissions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Examine evidence and permissions; semantic review verifies support",
+            "section": "Examine evidence and permissions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Compare cost and support",
+            "section": "Compare cost and support"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Compare cost and support; semantic review verifies support",
+            "section": "Compare cost and support"
+          }
+        ],
+        "failures": []
+      },
+      "inputHash": "5965c7f1eda8a3ab3ca1e34e622f095ab6beba645d68d1f7ddb44bad5d099d64",
+      "outputContextHash": "07520c41a719ca8847a92a9f11177d9a28d1801fcb46a340e9b972b184db4339",
+      "reviewedAt": "2026-10-19T18:07:46.340Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

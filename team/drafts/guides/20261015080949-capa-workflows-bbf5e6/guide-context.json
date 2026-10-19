@@ -25,6 +25,22 @@
     {
       "term": "Nonconformity",
       "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+    },
+    {
+      "term": "Must-have criteria",
+      "definition": "Requirements without which the CAPA workflow fails, such as linking findings to specific requirements or separating implementation and verification roles."
+    },
+    {
+      "term": "Scripted demonstration",
+      "definition": "A vendor evaluation session structured around the buyer's workflow decision sequence and anonymized representative data rather than vendor marketing scripts."
+    },
+    {
+      "term": "Separation of duties",
+      "definition": "A workflow permission rule preventing the person who implements a corrective action from approving or verifying its effectiveness."
+    },
+    {
+      "term": "Traceability",
+      "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
     }
   ],
   "roles": [
@@ -40,7 +56,12 @@
     "Action owners",
     "Process engineer",
     "Plant manager",
-    "Workflow owner"
+    "Workflow owner",
+    "Reviewer",
+    "Investigator",
+    "Group leader",
+    "Division chief",
+    "Supervisor"
   ],
   "recordNames": [
     "Hold tag",
@@ -49,7 +70,14 @@
     "Cause statement",
     "Implementation evidence",
     "Effectiveness evidence",
-    "Nonconformity Report form"
+    "Nonconformity Report form",
+    "Requirements sheet",
+    "Finding record",
+    "Action plan",
+    "History report",
+    "Effectiveness check",
+    "Change history",
+    "Comparison sheet"
   ],
   "example": {
     "label": "Illustrative example",
@@ -69,6 +97,21 @@
         "Who does what by when? / Who approves the action plan?",
         "Was the action carried out as described?",
         "Is the finding closed, or reopened? / Who confirms closure?"
+      ]
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluating software capabilities: CAPA software workflows",
+      "summary": "The chapter adheres rigorously to its assigned scope and outline, providing practical, actionable guidance for evaluating CAPA software without making unsubstantiated product claims. Citations to ISO/IAF APG Nonconformity Documenting and NIST RPD-G-08 correctly reflect the source materials with appropriate caveats regarding laboratory context and auditor guidance. All four subsections feature clearly labeled illustrative examples centering on the consistent unnamed Canadian machining manufacturer scenario. No unassigned FAQ section is present.",
+      "bodyHash": "90890549a61a0ed755f96444e63b8d7e81268b42c207dd88d463652a7a4bafa4",
+      "decisions": [
+        "Confirm or reject a finding as a true nonconformity",
+        "Rate significance and route",
+        "Record containment as a distinct pre-investigation action",
+        "Approve or return action plan",
+        "Verify implementation and confirm effectiveness before closing",
+        "Reopen closed finding upon recurrence",
+        "Score candidate products against must-have criteria"
       ]
     }
   ],
