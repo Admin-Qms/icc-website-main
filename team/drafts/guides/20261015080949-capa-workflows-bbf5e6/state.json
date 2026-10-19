@@ -20,7 +20,7 @@
     "approval": "approved"
   },
   "productionSlotId": "2026-W42-slot-2",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "6bef24b1ef6e259eaae0a5ef449c188fae0373931e210f167c870be96f476202",
@@ -94,7 +94,7 @@
     }
   },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-19T19:16:06.908Z",
+  "updatedAt": "2026-10-19T19:16:28.833Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
@@ -3049,7 +3049,15 @@
   },
   "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed",
   "outlineHash": "4f4d2d7805d4cf8bd3629d844cfa083eca53dcf51d585791181d8ab57841d8ac",
-  "audit": null,
+  "audit": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "unresolvedFindings": [],
+    "inputHash": "eb54af8f2454c26f7bbfafa95730a67900b67a2aff06d8ed8a2f5db9e8296e41",
+    "reviewer": "Configured gemini independent review",
+    "reviewedAt": "2026-10-19T19:16:28.831Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }
