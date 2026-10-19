@@ -1,0 +1,200 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The guide page adheres strictly to the assigned chapter brief, scope, and primary source materials. It addresses ongoing workflow review, disciplined evaluation of improvement requests without fabricated ROI, authorized FAQ guidance, and preparing scripted software demonstrations. All citations to the ISO/IAF APG papers and NIST RPD-G-07 are accurately quoted and properly contextualized. All illustrative examples are clearly designated as hypothetical scenarios based on an unnamed machining manufacturer, and no unverified software capabilities are asserted.",
+  "glossary": [],
+  "roles": [
+    "Workflow owner",
+    "Quality manager",
+    "Auditor",
+    "Investigation lead",
+    "Inspector",
+    "Operator",
+    "Approver",
+    "Reviewer",
+    "Presenter"
+  ],
+  "recordNames": [
+    "Review record",
+    "Sampled closed finding",
+    "Cause form",
+    "Cause statement",
+    "Effectiveness check",
+    "Improvement request backlog",
+    "Automatic report of repeat findings by process",
+    "Pilot data",
+    "Problem statement",
+    "Indexed archive",
+    "Paper reports",
+    "Scoring sheet",
+    "Checklist",
+    "Statement of nonconformity",
+    "Containment record",
+    "Change history",
+    "Closure summary"
+  ],
+  "decisions": [
+    "Establish operational and design review rhythms with designated role ownership",
+    "Select and monitor a small set of workflow measures evaluated by process and role rather than plant-wide averages alone",
+    "Authorize or reject configuration changes through formal change control, testing sample findings prior to release",
+    "Decide which improvement requests to pursue based on plant measurements and failure evidence rather than unverified ROI claims",
+    "Assign improvement backlog statuses: do now, schedule, wait for more evidence, or decline",
+    "Determine legacy record migration scope: migrate open and recent closed findings, and place older records into an indexed archive",
+    "Assign decision permissions with backups and enforce separation of duties between action implementers and verifiers",
+    "Archive obsolete records with index entries instead of deleting historical quality records",
+    "Score software demonstrations live against pre-set acceptance criteria using scripted failure cases and anonymized plant data"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Review the workflow and evidence",
+        "section": "Review the workflow and evidence"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Review the workflow and evidence; semantic review verifies support",
+        "section": "Review the workflow and evidence"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Evaluate improvements without invented ROI",
+        "section": "Evaluate improvements without invented ROI"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Evaluate improvements without invented ROI; semantic review verifies support",
+        "section": "Evaluate improvements without invented ROI"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Frequently asked questions",
+        "section": "Frequently asked questions"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Frequently asked questions; semantic review verifies support",
+        "section": "Frequently asked questions"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Prepare a software demonstration",
+        "section": "Prepare a software demonstration"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Prepare a software demonstration; semantic review verifies support",
+        "section": "Prepare a software demonstration"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: What problem should CAPA software solve first?",
+        "section": "What problem should CAPA software solve first?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: Which records should be migrated?",
+        "section": "Which records should be migrated?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: How should responsibilities and permissions be assigned?",
+        "section": "How should responsibilities and permissions be assigned?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: How should approval decisions be tested?",
+        "section": "How should approval decisions be tested?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: How should a team handle obsolete records?",
+        "section": "How should a team handle obsolete records?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: What evidence should be available during an audit?",
+        "section": "What evidence should be available during an audit?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: How should training and rollout be evaluated?",
+        "section": "How should training and rollout be evaluated?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: Does software guarantee ISO certification?",
+        "section": "Does software guarantee ISO certification?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: What should be prepared for a software demonstration?",
+        "section": "What should be prepared for a software demonstration?"
+      }
+    ],
+    "failures": []
+  },
+  "inputHash": "93db776fd21c218993eaec1c5923050965043ca2ddfe725c84759f05397302a7",
+  "outputContextHash": "f36d904a4f6a65b6ffc29e19f25a2c94b0d0cd3701907654f47542de2dc66572",
+  "reviewedAt": "2026-10-19T18:53:24.840Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

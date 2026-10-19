@@ -129,7 +129,8 @@
     "Doer",
     "Customer-facing coordinator",
     "Approver",
-    "Area supervisor"
+    "Area supervisor",
+    "Presenter"
   ],
   "recordNames": [
     "Hold tag",
@@ -193,7 +194,17 @@
     "Pilot issue log",
     "Deployment checklist",
     "Procedure",
-    "Paper log"
+    "Paper log",
+    "Review record",
+    "Sampled closed finding",
+    "Cause form",
+    "Improvement request backlog",
+    "Automatic report of repeat findings by process",
+    "Pilot data",
+    "Problem statement",
+    "Indexed archive",
+    "Scoring sheet",
+    "Checklist"
   ],
   "example": {
     "label": "Illustrative example",
@@ -323,6 +334,23 @@
         "Authorize area rollout entry against defined checklist readiness criteria",
         "Determine handling and rerouting rules for findings raised in side channels",
         "Adjust system forms, workflow steps, or provide refresher coaching based on adoption review metrics"
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Maintaining the system and choosing next steps: CAPA software workflows",
+      "summary": "The guide page adheres strictly to the assigned chapter brief, scope, and primary source materials. It addresses ongoing workflow review, disciplined evaluation of improvement requests without fabricated ROI, authorized FAQ guidance, and preparing scripted software demonstrations. All citations to the ISO/IAF APG papers and NIST RPD-G-07 are accurately quoted and properly contextualized. All illustrative examples are clearly designated as hypothetical scenarios based on an unnamed machining manufacturer, and no unverified software capabilities are asserted.",
+      "bodyHash": "f5dfced28b40f5c00d3ca6e50e15fb6157d24e2d8f0921380dab3eabd90d64dc",
+      "decisions": [
+        "Establish operational and design review rhythms with designated role ownership",
+        "Select and monitor a small set of workflow measures evaluated by process and role rather than plant-wide averages alone",
+        "Authorize or reject configuration changes through formal change control, testing sample findings prior to release",
+        "Decide which improvement requests to pursue based on plant measurements and failure evidence rather than unverified ROI claims",
+        "Assign improvement backlog statuses: do now, schedule, wait for more evidence, or decline",
+        "Determine legacy record migration scope: migrate open and recent closed findings, and place older records into an indexed archive",
+        "Assign decision permissions with backups and enforce separation of duties between action implementers and verifiers",
+        "Archive obsolete records with index entries instead of deleting historical quality records",
+        "Score software demonstrations live against pre-set acceptance criteria using scripted failure cases and anonymized plant data"
       ]
     }
   ],
