@@ -94,10 +94,27 @@ function createGuideStore(paths = config) {
     }
     return { ...job, invalidated, publicationReady, completionValid: publicationReady && Boolean(job.generationCompletedAt) };
   }
+  // A lock names the process that holds it. A lock whose process no longer exists was left by an
+  // interrupted command and is reclaimed; a lock with no owner recorded is never reclaimed.
+  function lockIsStale(lock) {
+    let pid;
+    try { pid = Number.parseInt(fs.readFileSync(lock, 'utf8').trim(), 10); } catch { return false; }
+    if (!Number.isInteger(pid) || pid <= 0) return false;
+    try { process.kill(pid, 0); return false; } catch(e) { return e.code === 'ESRCH'; }
+  }
+  function acquireLock(lock, busyMessage) {
+    for (let attempt = 0; ; attempt++) {
+      try { const descriptor = fs.openSync(lock, 'wx'); fs.writeSync(descriptor, String(process.pid)); return descriptor; }
+      catch(e) {
+        if (e.code !== 'EEXIST') throw e;
+        if (attempt === 0 && lockIsStale(lock)) { fs.rmSync(lock, { force: true }); continue; }
+        throw new Error(busyMessage);
+      }
+    }
+  }
   function withJobLock(id, callback) {
     const job = loadJob(id); const lock = path.join(job.directory, 'operation.lock');
-    let descriptor;
-    try { descriptor = fs.openSync(lock, 'wx'); } catch(e) { if (e.code === 'EEXIST') throw new Error('Guide job operation is already running; reconcile its lock after an interruption'); throw e; }
+    const descriptor = acquireLock(lock, 'Guide job operation is already running; reconcile its lock after an interruption');
     const release = () => { fs.closeSync(descriptor); fs.unlinkSync(lock); };
     try {
       const result = callback(job);
@@ -108,8 +125,7 @@ function createGuideStore(paths = config) {
   function withPublicationLock(callback) {
     fs.mkdirSync(DRAFT_DIR, { recursive: true });
     const lock = path.join(DRAFT_DIR, 'publication.lock');
-    let descriptor;
-    try { descriptor = fs.openSync(lock, 'wx'); } catch(e) { if (e.code === 'EEXIST') throw new Error('Another guide publication is running; reconcile its lock after an interruption'); throw e; }
+    const descriptor = acquireLock(lock, 'Another guide publication is running; reconcile its lock after an interruption');
     const release = () => { fs.closeSync(descriptor); fs.unlinkSync(lock); };
     try { const result = callback(); if (result && typeof result.then === 'function') return result.finally(release); release(); return result; }
     catch(e) { release(); throw e; }
