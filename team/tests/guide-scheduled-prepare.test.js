@@ -51,3 +51,15 @@ test('a published slot is not regenerated and the next production day moves on',
   assert.equal(thursday.success, true); assert.equal(thursday.job.productionSlotId, '2026-W43-slot-2');
   assert.notEqual(thursday.job.topic.id, 'document-control');
 });
+
+test('a brief lists the approved sources recorded on its topic so the writer retrieves them first', t => {
+  const { manager, store } = setup(t);
+  const queue = JSON.parse(fs.readFileSync(path.join(__dirname, '../memory/guide-topic-queue.json'), 'utf8')).queue;
+  const stocked = queue.find(q => q.approval === 'approved' && Array.isArray(q.sources) && q.sources.length >= 2);
+  assert.ok(stocked, 'the real queue has an approved topic with recorded sources');
+  const result = manager.prepareGuide({ topicId: stocked.id });
+  const brief = fs.readFileSync(path.join(store.loadJob(result.job.id).directory, 'brief.md'), 'utf8');
+  assert.match(brief, /## Approved sources/);
+  for (const url of stocked.sources) assert.ok(brief.includes(`- ${url}`), url);
+  assert.ok(brief.indexOf('## Approved sources') < brief.indexOf('## Research queries'));
+});
