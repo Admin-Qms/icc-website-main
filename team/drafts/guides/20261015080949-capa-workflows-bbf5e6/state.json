@@ -62,7 +62,7 @@
       "wordCount": 2006,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-19T18:38:40.984Z"
+      "checkpointedAt": "2026-10-22T08:16:00.535Z"
     },
     "migration-planning": {
       "hash": "0197c189abbb3c09e934a30e1503c009cc3ad70f083d5ef912f1d656e3dbf460",
@@ -94,7 +94,7 @@
     }
   },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-19T20:07:24.409Z",
+  "updatedAt": "2026-10-22T08:16:23.540Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
@@ -1466,7 +1466,7 @@
     "reviewedChapters": [],
     "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
   },
-  "contextHash": "16a770218d47e20f02bc06ab4a5eef370e8140b2a21cab63273e0e745e3c845c",
+  "contextHash": "b7fc98e4b994e408e08ef6611815398b275030b9a19b92404421ff495721c975",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2233,6 +2233,185 @@
       "inputHash": "1b5b6b8abd5932e85f97a01ccc5d9e93d3166f6f75772fa525564345359d0bbc",
       "outputContextHash": "16a770218d47e20f02bc06ab4a5eef370e8140b2a21cab63273e0e745e3c845c",
       "reviewedAt": "2026-10-19T20:07:24.405Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "effectiveness-review": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The guide page strictly complies with the assigned plan, boundaries, word count target, and evidence base. Primary source citations from the ISO/IAF Auditing Practices Group guidance on reviewing and closing nonconformities and NIST RPD-G-08 are accurately contextualized with required auditor guidance and laboratory scope disclaimers. Each subsection covers workflow roles, inputs, decision gates, records, exceptions, evaluation criteria for software demonstrations, and consistently labeled hypothetical illustrative examples featuring the unnamed machining manufacturer. No unassigned FAQ section is present.",
+      "glossary": [
+        {
+          "term": "Effectiveness review",
+          "definition": "Follow-up evidence check that a corrective action prevented recurrence before closure."
+        },
+        {
+          "term": "Corrective action",
+          "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+        },
+        {
+          "term": "Containment",
+          "definition": "Immediate steps that limit the effect of a finding while its cause is investigated."
+        },
+        {
+          "term": "Nonconformity",
+          "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+        },
+        {
+          "term": "Workflow owner",
+          "definition": "The role responsible for decisions and records in the defined workflow."
+        },
+        {
+          "term": "Separation of duties",
+          "definition": "A workflow permission rule preventing the person who implements a corrective action from approving or verifying its effectiveness."
+        },
+        {
+          "term": "Traceability",
+          "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
+        }
+      ],
+      "roles": [
+        "Auditor",
+        "Reviewer",
+        "Investigation team",
+        "Quality supervisor",
+        "Plant manager",
+        "Workflow owner",
+        "Action owner",
+        "Investigator",
+        "Group leader",
+        "Quality manager",
+        "Division chief",
+        "Closer",
+        "Doer"
+      ],
+      "recordNames": [
+        "Effectiveness criteria",
+        "Action plan",
+        "Finding record",
+        "In-process check record",
+        "Final inspection record",
+        "Inspection record",
+        "Trend data",
+        "Audit notes",
+        "Photographs",
+        "Effectiveness task",
+        "Containment record",
+        "Closure summary",
+        "Closure checklist",
+        "Corrective action plan form"
+      ],
+      "decisions": [
+        "Define effectiveness criteria (measure, scope, duration) linked to accepted cause",
+        "Schedule follow-up review date upon plan approval",
+        "Select follow-up evidence method (on-site observation vs remote documentary review)",
+        "Evaluate process side effects created by the corrective action",
+        "Extend monitoring period or accept result with caveat based on sample limits",
+        "Mark effectiveness check as failed and reopen finding instead of creating an unlinked record",
+        "Recheck and reapply containment upon effectiveness failure",
+        "Return to cause analysis and replan corrective actions upon recurrence",
+        "Escalate recurring failures to management after reaching defined cycle threshold",
+        "Verify closure preconditions across containment, cause, actions, and effectiveness",
+        "Authorize final closure by an independent role separate from the action owner",
+        "Authorize override of separation of duties with documented justification"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Defining effectiveness criteria",
+            "section": "Defining effectiveness criteria"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Defining effectiveness criteria; semantic review verifies support",
+            "section": "Defining effectiveness criteria"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Choosing follow-up evidence",
+            "section": "Choosing follow-up evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Choosing follow-up evidence; semantic review verifies support",
+            "section": "Choosing follow-up evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Reopening ineffective actions",
+            "section": "Reopening ineffective actions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Reopening ineffective actions; semantic review verifies support",
+            "section": "Reopening ineffective actions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Authorizing final closure",
+            "section": "Authorizing final closure"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Authorizing final closure; semantic review verifies support",
+            "section": "Authorizing final closure"
+          }
+        ],
+        "failures": []
+      },
+      "inputHash": "81faf1d1c53f66d72264d9eed99a3c615d0b2981ca8fe0fdfef057c4a099a270",
+      "outputContextHash": "b7fc98e4b994e408e08ef6611815398b275030b9a19b92404421ff495721c975",
+      "reviewedAt": "2026-10-22T08:16:23.538Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

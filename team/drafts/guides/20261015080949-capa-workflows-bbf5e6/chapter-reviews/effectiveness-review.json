@@ -6,63 +6,81 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The guide page strictly complies with its assigned scope, chapter plan, and primary source materials. It addresses defining effectiveness criteria, choosing follow-up evidence, reopening ineffective actions, and authorizing closure within CAPA software evaluation workflows. Citations to ISO/IAF Auditing Practices Group guidance on nonconformity review and closing and the NIST RPD-G-08 corrective action procedure are accurately represented with proper context. The unnamed machining manufacturer illustrative scenario is consistently maintained across all subsections, and no unassigned FAQ section is present.",
+  "summary": "The guide page strictly complies with the assigned plan, boundaries, word count target, and evidence base. Primary source citations from the ISO/IAF Auditing Practices Group guidance on reviewing and closing nonconformities and NIST RPD-G-08 are accurately contextualized with required auditor guidance and laboratory scope disclaimers. Each subsection covers workflow roles, inputs, decision gates, records, exceptions, evaluation criteria for software demonstrations, and consistently labeled hypothetical illustrative examples featuring the unnamed machining manufacturer. No unassigned FAQ section is present.",
   "glossary": [
     {
-      "term": "Effectiveness",
-      "definition": "Whether the root cause was eliminated and recurrence prevented by the actions taken, verified through objective evidence."
+      "term": "Effectiveness review",
+      "definition": "Follow-up evidence check that a corrective action prevented recurrence before closure."
     },
     {
-      "term": "Effectiveness criteria",
-      "definition": "Pre-established, measurable specifications detailing the measure, scope, and duration needed to confirm that a nonconformity's cause has been eliminated."
+      "term": "Corrective action",
+      "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
     },
     {
-      "term": "Follow-up evidence",
-      "definition": "Objective records, observations, or measurement data gathered after action implementation to verify that effectiveness criteria were met."
+      "term": "Containment",
+      "definition": "Immediate steps that limit the effect of a finding while its cause is investigated."
     },
     {
-      "term": "Closure summary",
-      "definition": "A compiled record summarizing the finding, cause analysis, completed actions, and verification results reviewed prior to authorizing final closure."
+      "term": "Nonconformity",
+      "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+    },
+    {
+      "term": "Workflow owner",
+      "definition": "The role responsible for decisions and records in the defined workflow."
+    },
+    {
+      "term": "Separation of duties",
+      "definition": "A workflow permission rule preventing the person who implements a corrective action from approving or verifying its effectiveness."
+    },
+    {
+      "term": "Traceability",
+      "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
     }
   ],
   "roles": [
-    "Management system auditor",
-    "Internal reviewer",
+    "Auditor",
+    "Reviewer",
     "Investigation team",
+    "Quality supervisor",
+    "Plant manager",
+    "Workflow owner",
+    "Action owner",
     "Investigator",
     "Group leader",
     "Quality manager",
     "Division chief",
-    "Quality supervisor",
-    "Plant manager",
-    "Action owner",
-    "Workflow owner",
     "Closer",
     "Doer"
   ],
   "recordNames": [
+    "Effectiveness criteria",
     "Action plan",
-    "Corrective action plan form",
-    "Closure checklist",
-    "Closure summary",
-    "Effectiveness task",
-    "In-process inspection record",
+    "Finding record",
+    "In-process check record",
     "Final inspection record",
+    "Inspection record",
+    "Trend data",
     "Audit notes",
     "Photographs",
-    "Containment record"
+    "Effectiveness task",
+    "Containment record",
+    "Closure summary",
+    "Closure checklist",
+    "Corrective action plan form"
   ],
   "decisions": [
-    "Defining measurable effectiveness criteria and monitoring duration in advance of result review",
-    "Selecting follow-up evidence methods proportionate to the finding and aligned to the accepted cause",
-    "Deciding whether to extend monitoring or record stated caveats for limited sample sizes",
-    "Evaluating whether corrective actions caused unintended side effects or new management system issues",
-    "Marking an effectiveness check as failed and reopening the original finding record",
-    "Determining whether to re-establish containment after an action fails",
-    "Returning to root cause analysis versus replanning actions upon action failure",
-    "Escalating recurring failures to wider process reviews after exceeding defined cycle limits",
-    "Confirming all closure preconditions are satisfied before authorizing final sign-off",
-    "Enforcing separation of duties between the action implementer and the closing authority"
+    "Define effectiveness criteria (measure, scope, duration) linked to accepted cause",
+    "Schedule follow-up review date upon plan approval",
+    "Select follow-up evidence method (on-site observation vs remote documentary review)",
+    "Evaluate process side effects created by the corrective action",
+    "Extend monitoring period or accept result with caveat based on sample limits",
+    "Mark effectiveness check as failed and reopen finding instead of creating an unlinked record",
+    "Recheck and reapply containment upon effectiveness failure",
+    "Return to cause analysis and replan corrective actions upon recurrence",
+    "Escalate recurring failures to management after reaching defined cycle threshold",
+    "Verify closure preconditions across containment, cause, actions, and effectiveness",
+    "Authorize final closure by an independent role separate from the action owner",
+    "Authorize override of separation of duties with documented justification"
   ],
   "pass": true,
   "deterministic": {
@@ -154,8 +172,8 @@
     ],
     "failures": []
   },
-  "inputHash": "847e2eced796e0ecafaf19e4ed87aeafa565e53dbd1bbf7234c2112f298331da",
-  "outputContextHash": "f765870057aa9420641a63e8fe96df968b6a5eab81b1fb83ae11c70f5bb6897c",
-  "reviewedAt": "2026-10-19T18:39:07.096Z",
+  "inputHash": "81faf1d1c53f66d72264d9eed99a3c615d0b2981ca8fe0fdfef057c4a099a270",
+  "outputContextHash": "b7fc98e4b994e408e08ef6611815398b275030b9a19b92404421ff495721c975",
+  "reviewedAt": "2026-10-22T08:16:23.538Z",
   "reviewer": "Configured independent chapter reviewer"
 }

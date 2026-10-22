@@ -95,7 +95,10 @@
     "Responsible party",
     "Action owner",
     "Supporting contributor",
-    "Approver"
+    "Approver",
+    "Investigation team",
+    "Closer",
+    "Doer"
   ],
   "recordNames": [
     "Hold tag",
@@ -137,7 +140,17 @@
     "Installation record",
     "Training record",
     "Photograph",
-    "Fixture drawing"
+    "Fixture drawing",
+    "Effectiveness criteria",
+    "In-process check record",
+    "Final inspection record",
+    "Trend data",
+    "Audit notes",
+    "Photographs",
+    "Effectiveness task",
+    "Closure summary",
+    "Closure checklist",
+    "Corrective action plan form"
   ],
   "example": {
     "label": "Illustrative example",
@@ -217,6 +230,26 @@
         "Approve or reject due date extension request with interim containment controls",
         "Authorize cancellation of an action that is no longer valid",
         "Confirm implementation evidence or return action as incomplete"
+      ]
+    },
+    {
+      "slug": "effectiveness-review",
+      "title": "Reviewing corrective action effectiveness: CAPA software workflows",
+      "summary": "The guide page strictly complies with the assigned plan, boundaries, word count target, and evidence base. Primary source citations from the ISO/IAF Auditing Practices Group guidance on reviewing and closing nonconformities and NIST RPD-G-08 are accurately contextualized with required auditor guidance and laboratory scope disclaimers. Each subsection covers workflow roles, inputs, decision gates, records, exceptions, evaluation criteria for software demonstrations, and consistently labeled hypothetical illustrative examples featuring the unnamed machining manufacturer. No unassigned FAQ section is present.",
+      "bodyHash": "f183c97553a7b752293702b58e6d28ee951dfffd0981fb94816671fc6badfb18",
+      "decisions": [
+        "Define effectiveness criteria (measure, scope, duration) linked to accepted cause",
+        "Schedule follow-up review date upon plan approval",
+        "Select follow-up evidence method (on-site observation vs remote documentary review)",
+        "Evaluate process side effects created by the corrective action",
+        "Extend monitoring period or accept result with caveat based on sample limits",
+        "Mark effectiveness check as failed and reopen finding instead of creating an unlinked record",
+        "Recheck and reapply containment upon effectiveness failure",
+        "Return to cause analysis and replan corrective actions upon recurrence",
+        "Escalate recurring failures to management after reaching defined cycle threshold",
+        "Verify closure preconditions across containment, cause, actions, and effectiveness",
+        "Authorize final closure by an independent role separate from the action owner",
+        "Authorize override of separation of duties with documented justification"
       ]
     }
   ],
