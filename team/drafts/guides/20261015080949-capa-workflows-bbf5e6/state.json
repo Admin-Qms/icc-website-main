@@ -90,11 +90,11 @@
       "wordCount": 1503,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-10-19T19:15:52.713Z"
+      "checkpointedAt": "2026-10-22T14:11:49.946Z"
     }
   },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-22T14:11:01.058Z",
+  "updatedAt": "2026-10-22T14:12:04.056Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
@@ -1466,7 +1466,7 @@
     "reviewedChapters": [],
     "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
   },
-  "contextHash": "ab3773f5f5e8bd3f80711f42599de5b90613dedcefc008b84a134192076aa046",
+  "contextHash": "87b951a3666b078e910a0428ee9fb9f19c67f6f51fd8b7303adde37b3cdcd487",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2930,6 +2930,104 @@
       "inputHash": "60a2f014c8787376543a95de11ae190df63fe33fad6c12657f0432ff08e9bf01",
       "outputContextHash": "ab3773f5f5e8bd3f80711f42599de5b90613dedcefc008b84a134192076aa046",
       "reviewedAt": "2026-10-22T14:11:01.054Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "capa-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The introductory guide page strictly complies with its assigned plan, scope, and word count target (1,503 words vs 1,500 target). It provides an ordered overview of the guide's nine chapters, outlines key decision-making stages, and sets clear operational boundaries. Citations to the ISO/IAF Auditing Practices Group guidance documents and NIST quality guides are accurately quoted with appropriate contextual disclaimers. Illustrative examples are clearly labeled as hypothetical scenarios featuring an unnamed Canadian machining manufacturer. No product promises or unassigned FAQ sections are included.",
+      "glossary": [],
+      "roles": [
+        "Inspector",
+        "Workflow owner",
+        "Quality manager",
+        "Investigation lead",
+        "Plant manager",
+        "Quality supervisor",
+        "Process engineer",
+        "Auditor"
+      ],
+      "recordNames": [
+        "Nonconformity Report form",
+        "Corrective Action Plan form",
+        "Requirements sheet"
+      ],
+      "decisions": [
+        "Who confirms a finding",
+        "Who approves an action",
+        "Who may close a record",
+        "Decide to proceed, repeat, or stop at stage review gates",
+        "Define criteria for project and workflow success"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: The operational problem",
+            "section": "The operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: How to use this guide",
+            "section": "How to use this guide"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+            "section": "Planning evaluation and implementation"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "f9403fe1b9b4694157b96ad8e0807cd2bc596a9f6aa208544d0467d4a3074698",
+      "outputContextHash": "87b951a3666b078e910a0428ee9fb9f19c67f6f51fd8b7303adde37b3cdcd487",
+      "reviewedAt": "2026-10-22T14:12:04.053Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

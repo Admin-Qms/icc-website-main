@@ -194,7 +194,8 @@
     "Paper log",
     "Review record",
     "Scoring sheet",
-    "Backlog"
+    "Backlog",
+    "Corrective Action Plan form"
   ],
   "example": {
     "label": "Illustrative example",
@@ -343,6 +344,19 @@
         "Determine migration boundaries between active findings, recent closed records, and indexed archives",
         "Assign decision authority, permissions, and backup roles with separation of duties",
         "Score software demonstration failure paths against objective acceptance criteria"
+      ]
+    },
+    {
+      "slug": "capa-software",
+      "title": "CAPA software workflows for Canadian quality and operations teams",
+      "summary": "The introductory guide page strictly complies with its assigned plan, scope, and word count target (1,503 words vs 1,500 target). It provides an ordered overview of the guide's nine chapters, outlines key decision-making stages, and sets clear operational boundaries. Citations to the ISO/IAF Auditing Practices Group guidance documents and NIST quality guides are accurately quoted with appropriate contextual disclaimers. Illustrative examples are clearly labeled as hypothetical scenarios featuring an unnamed Canadian machining manufacturer. No product promises or unassigned FAQ sections are included.",
+      "bodyHash": "feb6328bb2d1e58f8769195c7bf62343f55b3095407bb3232b02d0e220f55906",
+      "decisions": [
+        "Who confirms a finding",
+        "Who approves an action",
+        "Who may close a record",
+        "Decide to proceed, repeat, or stop at stage review gates",
+        "Define criteria for project and workflow success"
       ]
     }
   ],

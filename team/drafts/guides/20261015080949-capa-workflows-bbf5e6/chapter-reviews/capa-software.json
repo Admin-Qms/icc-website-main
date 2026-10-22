@@ -6,55 +6,29 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The introduction page fully adheres to its outline, assigned word count, and scope boundaries. It sets clear context for Canadian quality and operations teams evaluating CAPA software, reviews all nine guide chapters in logical sequence, and establishes essential principles such as role accountability and separation of duties. Citations to ISO/IAF Auditing Practices Group guidance papers and NIST quality guides are accurately cited with appropriate disclaimers. Hypothetical examples are explicitly designated, and no unassigned FAQ section is present.",
-  "glossary": [
-    {
-      "term": "Correction",
-      "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
-    },
-    {
-      "term": "Corrective action",
-      "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
-    },
-    {
-      "term": "Containment",
-      "definition": "Immediate steps that limit the effect of a finding while its cause is investigated."
-    },
-    {
-      "term": "Effectiveness review",
-      "definition": "Follow-up evidence check that a corrective action prevented recurrence before closure."
-    },
-    {
-      "term": "Workflow owner",
-      "definition": "The role responsible for decisions and records in the defined workflow."
-    },
-    {
-      "term": "Nonconformity",
-      "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
-    }
-  ],
+  "summary": "The introductory guide page strictly complies with its assigned plan, scope, and word count target (1,503 words vs 1,500 target). It provides an ordered overview of the guide's nine chapters, outlines key decision-making stages, and sets clear operational boundaries. Citations to the ISO/IAF Auditing Practices Group guidance documents and NIST quality guides are accurately quoted with appropriate contextual disclaimers. Illustrative examples are clearly labeled as hypothetical scenarios featuring an unnamed Canadian machining manufacturer. No product promises or unassigned FAQ sections are included.",
+  "glossary": [],
   "roles": [
+    "Inspector",
     "Workflow owner",
     "Quality manager",
     "Investigation lead",
     "Plant manager",
     "Quality supervisor",
-    "Inspector",
-    "Process engineer"
+    "Process engineer",
+    "Auditor"
   ],
   "recordNames": [
     "Nonconformity Report form",
-    "Requirements sheet",
-    "Problem statement",
     "Corrective Action Plan form",
-    "Acceptance criteria"
+    "Requirements sheet"
   ],
   "decisions": [
-    "Decide who confirms a finding, who approves an action, and who may close a record",
-    "Assign ownership to each stage of evaluation and implementation",
-    "Record a decision to proceed, repeat, or stop at the end of each implementation stage",
-    "Approve workflow configuration changes",
-    "Define and record measurable acceptance criteria prior to vendor demonstrations"
+    "Who confirms a finding",
+    "Who approves an action",
+    "Who may close a record",
+    "Decide to proceed, repeat, or stop at stage review gates",
+    "Define criteria for project and workflow success"
   ],
   "pass": true,
   "deterministic": {
@@ -116,8 +90,9 @@
     ],
     "failures": []
   },
-  "inputHash": "83a8219f55185a469a57597c79f48373acc99ba17fdd9c8743c9eeccae685d70",
-  "outputContextHash": "ef52fbeefe935f32be5a8ad5cc60933610cd65ec3969f2186adb41b7bdb90a3f",
-  "reviewedAt": "2026-10-19T19:16:06.904Z",
+  "glossaryVariantsIgnored": [],
+  "inputHash": "f9403fe1b9b4694157b96ad8e0807cd2bc596a9f6aa208544d0467d4a3074698",
+  "outputContextHash": "87b951a3666b078e910a0428ee9fb9f19c67f6f51fd8b7303adde37b3cdcd487",
+  "reviewedAt": "2026-10-22T14:12:04.053Z",
   "reviewer": "Configured independent chapter reviewer"
 }
