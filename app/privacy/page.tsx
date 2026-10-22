@@ -84,7 +84,7 @@ export default function PrivacyPage() {
         intro="What this website collects, why we collect it, and the choices you have."
       />
       <section className="bg-white py-16 lg:py-20">
-        <div className="container-page max-w-3xl">
+        <div className="container-page max-w-3xl break-words">
           <Markdown>{body}</Markdown>
         </div>
       </section>

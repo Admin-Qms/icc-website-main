@@ -41,6 +41,7 @@ const GUIDE_LOW_WATER = 4;     // two weeks of Mon/Thu guides
 const GUIDE_MAX_PER_RUN = 3;
 const GUIDE_MAX_PENDING = 6;   // topics parked only because the reviewer was unavailable
 const BANK_SECTION = 'software_guides';
+const MIN_TOPIC_SOURCES = 2;   // an approved topic needs at least this many banked sources recorded on it
 const PAGE_EXCERPT_CHARS = 6000;
 
 const REVIEW_RULES = Object.freeze({
@@ -76,6 +77,7 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
     }).filter(Boolean));
   };
   const bankUrls = bank => new Set(Object.values(bank.industries || {}).flat().map(s => normalizeUrl(s.url)));
+  const recordedSources = topic => (Array.isArray(topic.sources) ? topic.sources : []).filter(s => typeof s === 'string' && /^https:\/\//i.test(s));
   const keywordTokens = text => [...new Set(normalize(text).split(' ').filter(w => w.length > 3))];
   const mentionsTopic = (text, topic) => {
     const tokens = keywordTokens(`${topic.primaryKeyword} ${topic.topic}`); const haystack = normalize(text);
@@ -91,16 +93,21 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
     const publishedGuides = publishedGuideTopicIds();
     const approvedEligible = guide.queue.filter(q => q.approval === 'approved' && !publishedGuides.has(q.id));
     const pending = guide.queue.filter(q => q.approval === 'proposed');
+    // Approved topics seeded by hand have no recorded sources; the guide research stage
+    // accepts only link-bank URLs, so such a topic's run would stop at research.
+    const sourcesNeeded = approvedEligible.filter(q => recordedSources(q).length < MIN_TOPIC_SOURCES)
+      .map(q => ({ id: q.id, topic: q.topic, primaryKeyword: q.primaryKeyword, moduleSlugs: q.moduleSlugs || [], problem: q.problem, recordedSources: recordedSources(q) }));
     const bank = read(paths.LINK_BANK_PATH);
     return {
       blog: { remaining: remaining.length, lowWater: BLOG_LOW_WATER, needed: remaining.length < BLOG_LOW_WATER ? BLOG_TOP_UP_TO - remaining.length : 0,
         queued: remaining, recentlyPublished: published.slice(-14).map(p => p.primaryKeyword).filter(Boolean), excluded: 'AS9100 and ISO 27001 topics are skipped' },
       guides: { approvedEligible: approvedEligible.map(q => q.id), pendingReview: pending.map(q => q.id), published: [...publishedGuides],
         needed: approvedEligible.length + pending.length < GUIDE_LOW_WATER ? Math.min(GUIDE_MAX_PER_RUN, Math.max(0, GUIDE_MAX_PENDING - pending.length)) : 0,
+        sourcesNeeded, minSourcesPerTopic: MIN_TOPIC_SOURCES,
         allTopics: guide.queue.map(q => ({ id: q.id, topic: q.topic, approval: q.approval })), moduleSlugs: moduleSlugs(),
         reviewRules: REVIEW_RULES },
       sources: { trustedDomains: domainList(paths.TRUSTED_DOMAINS_PATH), blockedDomains: domainList(paths.BLOCKED_DOMAINS_PATH), bankUrlCount: bankUrls(bank).size, bankSection: BANK_SECTION },
-      nothingNeeded: !(remaining.length < BLOG_LOW_WATER) && approvedEligible.length + pending.length >= GUIDE_LOW_WATER && pending.length === 0,
+      nothingNeeded: !(remaining.length < BLOG_LOW_WATER) && approvedEligible.length + pending.length >= GUIDE_LOW_WATER && pending.length === 0 && sourcesNeeded.length === 0,
     };
   }
 
@@ -138,8 +145,15 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
 
   async function applyProposals(proposals, { now = new Date(), fetchPage = defaultFetchPage, reviewer = defaultReviewer, dryRun = false } = {}) {
     const status = scoutStatus();
-    const report = { blogKeywords: { added: [], rejected: [] }, guideTopics: { approved: [], rejected: [], pendingReview: [], reReviewed: [] }, bankAdded: [], changed: false };
+    const report = { blogKeywords: { added: [], rejected: [] }, guideTopics: { approved: [], rejected: [], pendingReview: [], reReviewed: [] }, topicSources: { stocked: [], rejected: [], unavailable: [] }, bankAdded: [], changed: false };
     const reject = (bucket, item, reasons) => report[bucket].rejected.push({ item, reasons: [].concat(reasons) });
+    // The same shape rules for sources apply to a new topic and to sources stocked for an existing one.
+    const sourceShapeProblem = sources => {
+      const badSource = sources.find(s => !s || typeof s.url !== 'string' || !/^https:\/\//i.test(s.url) || !String(s.name || '').trim() || !String(s.context || '').trim());
+      if (sources.length < MIN_TOPIC_SOURCES || badSource) return `at least ${MIN_TOPIC_SOURCES} sources, each with an https url, name and context`;
+      if (!sources.some(s => !isICC(s.url))) return 'at least one source must be outside ICC\'s own site';
+      return null;
+    };
 
     // ---- blog keywords (deterministic rules only; the daily run picks the angle) ----
     const blog = read(paths.KEYWORD_QUEUE_PATH);
@@ -200,9 +214,8 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
       const slugs = Array.isArray(t.moduleSlugs) ? t.moduleSlugs : [];
       if (!slugs.length || !slugs.every(s => modules.has(s))) { reject('guideTopics', label, `moduleSlugs must name ICC modules: ${[...modules].join(', ')}`); continue; }
       const sources = Array.isArray(t.sources) ? t.sources : [];
-      const badSource = sources.find(s => !s || typeof s.url !== 'string' || !/^https:\/\//i.test(s.url) || !String(s.name || '').trim() || !String(s.context || '').trim());
-      if (sources.length < 2 || badSource) { reject('guideTopics', label, 'at least two sources, each with an https url, name and context'); continue; }
-      if (!sources.some(s => !isICC(s.url))) { reject('guideTopics', label, 'at least one source must be outside ICC\'s own site'); continue; }
+      const shapeProblem = sourceShapeProblem(sources);
+      if (shapeProblem) { reject('guideTopics', label, shapeProblem); continue; }
       if (guideRoom <= 0) { reject('guideTopics', label, 'guide queue does not need more topics this run'); continue; }
 
       const entry = { id: t.id, topic: t.topic.trim(), aliases: Array.isArray(t.aliases) ? t.aliases : [], primaryKeyword: t.primaryKeyword.trim(),
@@ -211,7 +224,7 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
       const review = await judgeTopic(entry, sources, context(), judge);
       if (review.verdict === 'reject') { reject('guideTopics', label, review.findings); continue; }
       if (review.verdict === 'approve') {
-        bankSources(review.pages); Object.assign(entry, approvalStamp(review)); report.guideTopics.approved.push(t.id);
+        bankSources(review.pages); Object.assign(entry, approvalStamp(review), { sources: sources.map(s => s.url) }); report.guideTopics.approved.push(t.id);
       } else {
         entry.approval = 'proposed';
         entry.candidateSources = sources.map(s => ({ url: s.url, name: String(s.name).trim(), context: String(s.context).trim() }));
@@ -221,7 +234,30 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
       guide.queue.push(entry); names.forEach(n => taken.add(n)); guideRoom--; priority++;
     }
 
-    report.changed = report.blogKeywords.added.length > 0 || report.guideTopics.approved.length > 0 || report.guideTopics.pendingReview.length > 0 || report.guideTopics.reReviewed.some(r => r.verdict !== 'unavailable');
+    // ---- sources for approved topics that have none recorded (the seeded topics) ----
+    // The topic itself is already approved; only its sources are judged, through the same
+    // fetch checks and the same independent reviewer. Nothing is parked: a rejection or an
+    // outage leaves the topic in `sourcesNeeded` for the next run.
+    const publishedGuides = publishedGuideTopicIds();
+    const stockedThisRun = new Set();
+    for (const p of Array.isArray(proposals?.topicSources) ? proposals.topicSources : []) {
+      const topicId = String(p?.topicId || '');
+      const entry = guide.queue.find(q => q.id === topicId);
+      if (!entry || entry.approval !== 'approved') { reject('topicSources', topicId || '(unnamed)', 'topicId must name an approved topic in the guide queue'); continue; }
+      if (publishedGuides.has(entry.id)) { reject('topicSources', topicId, 'topic is already published'); continue; }
+      if (recordedSources(entry).length >= MIN_TOPIC_SOURCES || stockedThisRun.has(entry.id)) { reject('topicSources', topicId, 'topic already has its sources recorded'); continue; }
+      const sources = Array.isArray(p.sources) ? p.sources : [];
+      const shapeProblem = sourceShapeProblem(sources);
+      if (shapeProblem) { reject('topicSources', topicId, shapeProblem); continue; }
+      const review = await judgeTopic(entry, sources, context().filter(c => c.id !== entry.id), judge);
+      if (review.verdict === 'reject') { reject('topicSources', topicId, review.findings); continue; }
+      if (review.verdict === 'unavailable') { report.topicSources.unavailable.push({ topicId, findings: review.findings }); continue; }
+      bankSources(review.pages);
+      Object.assign(entry, { sources: sources.map(s => s.url), sourcesAddedBy: 'scout-reviewer', sourcesAddedAt: now.toISOString(), sourceReviewRules: review.rules, sourceReviewFindings: review.findings });
+      stockedThisRun.add(entry.id); report.topicSources.stocked.push(entry.id);
+    }
+
+    report.changed = report.blogKeywords.added.length > 0 || report.guideTopics.approved.length > 0 || report.guideTopics.pendingReview.length > 0 || report.guideTopics.reReviewed.some(r => r.verdict !== 'unavailable') || report.topicSources.stocked.length > 0;
     if (report.changed && !dryRun) {
       write(paths.KEYWORD_QUEUE_PATH, blog);
       write(paths.GUIDE_QUEUE_PATH, guide);
@@ -230,7 +266,7 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
     return report;
   }
 
-  return { scoutStatus, applyProposals, reviewTopic, isTrusted, isBlocked, moduleSlugs, REVIEW_RULES, constants: { BLOG_LOW_WATER, BLOG_TOP_UP_TO, GUIDE_LOW_WATER, GUIDE_MAX_PER_RUN, GUIDE_MAX_PENDING } };
+  return { scoutStatus, applyProposals, reviewTopic, isTrusted, isBlocked, moduleSlugs, REVIEW_RULES, constants: { BLOG_LOW_WATER, BLOG_TOP_UP_TO, GUIDE_LOW_WATER, GUIDE_MAX_PER_RUN, GUIDE_MAX_PENDING, MIN_TOPIC_SOURCES } };
 }
 
 function htmlToText(html) {
@@ -253,4 +289,15 @@ async function defaultReviewer(system, user, maxTokens) {
   return claudeJSONFast(system, user, maxTokens);
 }
 
-module.exports = { createTopicScout, defaultFetchPage, defaultReviewer, htmlToText, REVIEW_RULES, ...createTopicScout() };
+// One line for the scout's commit message and status line; reads only fields every report has.
+function summarizeReport(report) {
+  const count = (list, singular, plural = `${singular}s`) => `${list.length} ${list.length === 1 ? singular : plural}`;
+  return [
+    `${report.guideTopics.approved.length} approved + ${report.guideTopics.pendingReview.length} parked guide topics`,
+    `${count(report.topicSources?.stocked || [], 'topic')} stocked with sources`,
+    count(report.blogKeywords.added, 'blog keyword'),
+    `${count(report.bankAdded, 'source')} banked`,
+  ].join(', ');
+}
+
+module.exports = { createTopicScout, defaultFetchPage, defaultReviewer, htmlToText, summarizeReport, REVIEW_RULES, ...createTopicScout() };

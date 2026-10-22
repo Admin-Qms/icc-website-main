@@ -47,7 +47,8 @@ function createGuideManager({ store = defaultStore, model, reviewer, editModel, 
     if (!topic) return { skipped: true, reason: 'No eligible approved software guide topics' };
     const job = store.createJob(topic, options.productionSlotId);
     const queries = researcher.guideResearchQueries(topic);
-    store.atomic(path.join(job.directory, 'brief.md'), `# Guide assignment: ${topic.topic}\n\nAudience: ${topic.audience}\nProblem: ${topic.problem}\n\n## Research queries\n\n${queries.map(q => `- ${q.query} — primary domains: ${q.domains.join(', ')}`).join('\n')}\n\nRetrieve primary sources, checkpoint research through guide research, then use the final chapter briefs. No chapter is authorized before evidence is ready.\n`);
+    const approvedSources = Array.isArray(topic.sources) && topic.sources.length ? `## Approved sources\n\nThese link-bank URLs were fetched and reviewed for this topic; retrieve them first.\n\n${topic.sources.map(url => `- ${url}`).join('\n')}\n\n` : '';
+    store.atomic(path.join(job.directory, 'brief.md'), `# Guide assignment: ${topic.topic}\n\nAudience: ${topic.audience}\nProblem: ${topic.problem}\n\n${approvedSources}## Research queries\n\n${queries.map(q => `- ${q.query} — primary domains: ${q.domains.join(', ')}`).join('\n')}\n\nRetrieve primary sources, checkpoint research through guide research, then use the final chapter briefs. No chapter is authorized before evidence is ready.\n`);
     store.atomic(path.join(job.directory, 'research-template.json'), { jobId: job.id, topicId: topic.id, sources: [], capabilityIds: [] });
     return { success: true, job, queries };
   }

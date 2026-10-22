@@ -22,6 +22,7 @@ case "${1:-}" in
     git fetch origin main
     git checkout -q -B main origin/main
     npm ci --prefix team --no-audit --no-fund
+    npm ci --no-audit --no-fund
     out="$(mktemp)"
     node team/pm.js scout status 2>&1 | tee "$out" >&2 || true
     if grep -q '^NOTHING_TO_SCOUT' "$out"; then
@@ -48,7 +49,8 @@ case "${1:-}" in
       status "SCOUT_NOTHING_ACCEPTED"; exit 0
     fi
     npm --prefix team test || fail
-    summary="$(node -e "const r=JSON.parse(require('fs').readFileSync(process.argv[1],'utf8').replace(/^[\s\S]*?(?=\{)/,''));process.stdout.write(\`\${r.guideTopics.approved.length} approved + \${r.guideTopics.proposed.length} proposed guide topics, \${r.blogKeywords.added.length} blog keywords, \${r.bankAdded.length} sources\`)" "$out")"
+    summary="$(sed -n 's/^SCOUT_SUMMARY //p' "$out" | tail -n 1)"
+    [ -n "$summary" ] || fail
     # Only the queues and the link bank are committed, never code.
     git add -- "${FILES[@]}"
     git "${GIT_ID[@]}" commit -q -m "Topic scout: $summary"

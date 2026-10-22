@@ -18,6 +18,7 @@ function registerScoutCommands(program) {
     const proposals = JSON.parse(fs.readFileSync(path.resolve(options.fixture), 'utf8'));
     const report = await scout.applyProposals(proposals, { dryRun: Boolean(options.dryRun) });
     console.log(report.changed ? 'SCOUT_APPLIED' : 'SCOUT_NOTHING_ACCEPTED');
+    console.log(`SCOUT_SUMMARY ${scout.summarizeReport(report)}`);
     return report;
   }));
 }

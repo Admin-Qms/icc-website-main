@@ -20,7 +20,8 @@ function setup(t, { blogQueue = [], guideQueue = [], published = [] } = {}) {
 const queue = p => JSON.parse(fs.readFileSync(p.GUIDE_QUEUE_PATH, 'utf8')).queue;
 const bank = p => JSON.parse(fs.readFileSync(p.LINK_BANK_PATH, 'utf8')).industries.software_guides;
 const fullBlogQueue = Array.from({ length: 20 }, (_, i) => `iso 9001 topic number ${i}`);
-const fullGuideQueue = ['a-topic-one', 'a-topic-two', 'a-topic-three', 'a-topic-four'].map((id, i) => ({ id, topic: id, approval: 'approved', priority: i + 1 }));
+const stockedSources = ['https://www.iso.org/standard/9001', 'https://isocertificationconsultants.ca/solutions/document-control/'];
+const fullGuideQueue = ['a-topic-one', 'a-topic-two', 'a-topic-three', 'a-topic-four'].map((id, i) => ({ id, topic: id, approval: 'approved', priority: i + 1, sources: stockedSources }));
 const topic = (overrides = {}) => ({ id: 'calibration-software', topic: 'Calibration management software', primaryKeyword: 'calibration software', audience: 'Canadian quality teams', problem: 'Tracking gauge calibration due dates', moduleSlugs: ['calibration-maintenance'],
   sources: [{ url: 'https://www.iso.org/standard/calibration-page', name: 'ISO page', context: 'c' }, { url: 'https://isocertificationconsultants.ca/solutions/calibration-maintenance/', name: 'ICC module', context: 'c' }], ...overrides });
 const relevantPage = async url => ({ ok: true, status: 200, text: `Guidance on calibration of measuring equipment and management software for ${url}` });
@@ -136,4 +137,68 @@ test('the real module slug list, trusted and blocked domains load from the repos
   const status = real.scoutStatus();
   assert.ok(status.sources.trustedDomains.includes('iso.org')); assert.ok(status.sources.blockedDomains.includes('capterra.com'));
   assert.equal(htmlToText('<html><script>x()</script><body><h1>Calibration &amp; control</h1><p>text</p></body></html>'), 'Calibration & control text');
+});
+
+// ---- sources for approved topics that have none (the seeded topics) ----
+const seeded = { id: 'capa-workflows', topic: 'CAPA software workflows', primaryKeyword: 'CAPA software', moduleSlugs: ['nonconformance-capa'], audience: 'Canadian quality and operations teams', problem: 'Following findings through containment, action and verification', priority: 2, approval: 'approved' };
+const capaSources = [{ url: 'https://www.iso.org/standard/capa-guidance', name: 'ISO CAPA guidance', context: 'c' }, { url: 'https://isocertificationconsultants.ca/solutions/nonconformance-capa/', name: 'ICC Improvements module', context: 'c' }];
+const capaPage = async url => ({ ok: true, status: 200, text: `CAPA software workflows: corrective action and nonconformity guidance for ${url}` });
+
+test('status lists approved unpublished topics with fewer than two recorded sources, and that alone keeps the scout running', t => {
+  const { scout } = setup(t, { blogQueue: fullBlogQueue, guideQueue: [...fullGuideQueue, seeded, { ...seeded, id: 'one-source-topic', topic: 'One source topic', sources: ['https://www.iso.org/standard/9001'] }] });
+  const status = scout.scoutStatus();
+  assert.deepEqual(status.guides.sourcesNeeded.map(s => s.id), ['capa-workflows', 'one-source-topic']);
+  assert.deepEqual(Object.keys(status.guides.sourcesNeeded[0]).sort(), ['id', 'moduleSlugs', 'primaryKeyword', 'problem', 'recordedSources', 'topic']);
+  assert.equal(status.guides.needed, 0); assert.equal(status.nothingNeeded, false);
+});
+test('a published topic without recorded sources is not asked for any', t => {
+  const { scout, paths } = setup(t, { blogQueue: fullBlogQueue, guideQueue: [...fullGuideQueue, seeded] });
+  fs.mkdirSync(path.join(paths.CONTENT_DIR, 'capa-software'), { recursive: true });
+  fs.writeFileSync(path.join(paths.CONTENT_DIR, 'capa-software', 'guide.json'), JSON.stringify({ topicId: 'capa-workflows' }));
+  assert.deepEqual(scout.scoutStatus().guides.sourcesNeeded, []); assert.equal(scout.scoutStatus().nothingNeeded, true);
+});
+test('sources the reviewer passes are banked and recorded on the approved topic', async t => {
+  const { scout, paths } = setup(t, { blogQueue: fullBlogQueue, guideQueue: [...fullGuideQueue, seeded] });
+  const seen = [];
+  const reviewer = async (system, user) => { seen.push(JSON.parse(user)); return { rules: passAll, findings: ['All rules satisfied.'] }; };
+  const report = await scout.applyProposals({ topicSources: [{ topicId: 'capa-workflows', sources: capaSources }] }, { fetchPage: capaPage, reviewer });
+  assert.deepEqual(report.topicSources.stocked, ['capa-workflows']); assert.deepEqual(report.topicSources.rejected, []); assert.equal(report.changed, true);
+  assert.deepEqual(report.bankAdded, capaSources.map(s => s.url));
+  assert.equal(seen[0].proposal.id, 'capa-workflows'); assert.ok(!seen[0].existingTopics.some(c => c.id === 'capa-workflows'), 'the topic is not compared against itself');
+  const entry = queue(paths).find(q => q.id === 'capa-workflows');
+  assert.deepEqual(entry.sources, capaSources.map(s => s.url)); assert.equal(entry.sourcesAddedBy, 'scout-reviewer'); assert.ok(entry.sourcesAddedAt);
+  assert.equal(entry.approval, 'approved'); assert.equal(bank(paths).length, 3);
+  assert.deepEqual(scout.scoutStatus().guides.sourcesNeeded, []);
+});
+test('source proposals for unknown, unapproved, published or already stocked topics are rejected and nothing is written', async t => {
+  const { scout, paths } = setup(t, { blogQueue: fullBlogQueue, guideQueue: [...fullGuideQueue, seeded, { ...seeded, id: 'waiting-topic', topic: 'Waiting topic', approval: 'proposed' }] });
+  const report = await scout.applyProposals({ topicSources: [
+    { topicId: 'no-such-topic', sources: capaSources }, { topicId: 'waiting-topic', sources: capaSources }, { topicId: 'a-topic-one', sources: capaSources },
+    { topicId: 'capa-workflows', sources: [capaSources[1]] }, { topicId: 'capa-workflows', sources: [capaSources[1], { ...capaSources[1], url: 'https://isocertificationconsultants.ca/other/' }] },
+  ] }, { fetchPage: capaPage, reviewer: approveAll });
+  assert.deepEqual(report.topicSources.stocked, []); assert.equal(report.changed, false);
+  assert.deepEqual(report.topicSources.rejected.map(r => r.item), ['no-such-topic', 'waiting-topic', 'a-topic-one', 'capa-workflows', 'capa-workflows']);
+  assert.match(report.topicSources.rejected[2].reasons[0], /already has/); assert.match(report.topicSources.rejected[3].reasons[0], /at least \d+ sources/); assert.match(report.topicSources.rejected[4].reasons[0], /outside ICC/);
+  assert.equal(queue(paths).find(q => q.id === 'capa-workflows').sources, undefined); assert.equal(bank(paths).length, 1);
+});
+test('rejected or unreviewable sources leave the topic waiting for the next run', async t => {
+  const { scout, paths } = setup(t, { blogQueue: fullBlogQueue, guideQueue: [...fullGuideQueue, seeded] });
+  const rejecting = async () => ({ rules: { ...passAll, R3_SOURCES: 'fail' }, findings: ['R3_SOURCES: not primary.'] });
+  let report = await scout.applyProposals({ topicSources: [{ topicId: 'capa-workflows', sources: capaSources }] }, { fetchPage: capaPage, reviewer: rejecting });
+  assert.deepEqual(report.topicSources.rejected[0].reasons, ['R3_SOURCES: not primary.']); assert.equal(report.changed, false);
+  report = await scout.applyProposals({ topicSources: [{ topicId: 'capa-workflows', sources: capaSources }] }, { fetchPage: capaPage, reviewer: async () => { throw new Error('offline'); } });
+  assert.deepEqual(report.topicSources.unavailable.map(u => u.topicId), ['capa-workflows']); assert.equal(report.changed, false);
+  assert.equal(queue(paths).find(q => q.id === 'capa-workflows').sources, undefined); assert.equal(bank(paths).length, 1);
+  assert.deepEqual(scout.scoutStatus().guides.sourcesNeeded.map(s => s.id), ['capa-workflows']);
+});
+test('a newly approved topic records its source URLs so it is never asked for sources again', async t => {
+  const { scout, paths } = setup(t);
+  await scout.applyProposals({ guideTopics: [topic()] }, { fetchPage: relevantPage, reviewer: approveAll });
+  assert.deepEqual(queue(paths)[0].sources, topic().sources.map(s => s.url));
+  assert.deepEqual(scout.scoutStatus().guides.sourcesNeeded, []);
+});
+test('the report summary names every count the script reports and never reads a missing field', () => {
+  const { summarizeReport } = require('../agents/content/topicScout');
+  const report = { blogKeywords: { added: ['a', 'b'], rejected: [] }, guideTopics: { approved: ['x'], rejected: [], pendingReview: [{ id: 'y' }], reReviewed: [] }, topicSources: { stocked: ['z'], rejected: [], unavailable: [] }, bankAdded: ['u1', 'u2', 'u3'], changed: true };
+  assert.equal(summarizeReport(report), '1 approved + 1 parked guide topics, 1 topic stocked with sources, 2 blog keywords, 3 sources banked');
 });
