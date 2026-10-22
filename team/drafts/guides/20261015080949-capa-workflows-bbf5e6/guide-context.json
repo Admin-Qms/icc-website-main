@@ -98,7 +98,10 @@
     "Approver",
     "Investigation team",
     "Closer",
-    "Doer"
+    "Doer",
+    "Customer-facing coordinator",
+    "Internal analyst",
+    "Vendor"
   ],
   "recordNames": [
     "Hold tag",
@@ -150,7 +153,20 @@
     "Effectiveness task",
     "Closure summary",
     "Closure checklist",
-    "Corrective action plan form"
+    "Corrective action plan form",
+    "Spreadsheet log",
+    "Archive index",
+    "Source inventory",
+    "Retention rules record",
+    "Field-by-field map",
+    "Mapping rules",
+    "Controlled value list",
+    "Legacy data backup",
+    "Pilot test log",
+    "Verification sign-off",
+    "Cutover plan",
+    "Workstation instructions",
+    "Daily review log"
   ],
   "example": {
     "label": "Illustrative example",
@@ -250,6 +266,26 @@
         "Verify closure preconditions across containment, cause, actions, and effectiveness",
         "Authorize final closure by an independent role separate from the action owner",
         "Authorize override of separation of duties with documented justification"
+      ]
+    },
+    {
+      "slug": "migration-planning",
+      "title": "Planning migration and configuration: CAPA software workflows",
+      "summary": "The guide page strictly complies with the assigned plan, word count target (2,001 words vs 2,000 target), and scope boundaries. Sourced citations from the ISO/IAF Auditing Practices Group guidance on documenting and reviewing nonconformities as well as NIST RPD-G-08 are accurately quoted and contextually integrated. All four subsections thoroughly address workflow decisions, inputs, roles, records, exceptions, and verification criteria. Each section features a consistently labeled hypothetical illustrative example following the unnamed machining manufacturer scenario without claiming unverified vendor features or customer outcomes. No unassigned FAQ section is present.",
+      "bodyHash": "1726a15729ec2655b0f2367eb2f524809364e73013ef1e11bfaefa09c3a95946",
+      "decisions": [
+        "Decide migration boundaries between open findings, recent closed findings, and historical archive",
+        "Agree retention rules and approve legacy records to exclude (duplicates, test records, drafts)",
+        "Define field mapping and approve data transformation rules",
+        "Decide whether unmapped legacy fields remain blank, use placeholders, or require manual backfill",
+        "Determine which record relationships are rebuilt as relational links versus preserved as static text",
+        "Map legacy values to controlled vocabulary lists and resolve ambiguous entries",
+        "Define acceptance and pass/fail criteria for the pilot import",
+        "Approve pilot import verification results before authorizing full data cutover",
+        "Select cutover strategy (single cutover switch vs phased migration)",
+        "Establish legacy data entry freeze period",
+        "Define abort/failure thresholds and authorize cutover recovery/rollback",
+        "Set legacy data read-only retention period and system retirement timeline"
       ]
     }
   ],

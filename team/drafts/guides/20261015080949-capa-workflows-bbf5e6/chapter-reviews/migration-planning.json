@@ -6,59 +6,74 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The guide page adheres strictly to the assigned chapter plan, scope boundaries, and primary source materials. Factual citations to the ISO/IAF Auditing Practices Group guidance papers (on documenting nonconformities and reviewing/closing nonconformities) and the NIST RPD-G-08 corrective action procedure are accurately contextualized. Each subsection methodically addresses legacy record inventory, data cleaning, relationship mapping, pilot import verification, cutover scheduling, and rollback recovery planning. All illustrative examples are clearly labeled and consistently follow the unnamed machining manufacturer scenario without asserting unverified software capabilities. No unassigned FAQ section is included.",
+  "summary": "The guide page strictly complies with the assigned plan, word count target (2,001 words vs 2,000 target), and scope boundaries. Sourced citations from the ISO/IAF Auditing Practices Group guidance on documenting and reviewing nonconformities as well as NIST RPD-G-08 are accurately quoted and contextually integrated. All four subsections thoroughly address workflow decisions, inputs, roles, records, exceptions, and verification criteria. Each section features a consistently labeled hypothetical illustrative example following the unnamed machining manufacturer scenario without claiming unverified vendor features or customer outcomes. No unassigned FAQ section is present.",
   "glossary": [
     {
-      "term": "Legacy record",
-      "definition": "Historical quality records, logs, emails, or paper reports created prior to implementing the new CAPA software."
+      "term": "Correction",
+      "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
     },
     {
-      "term": "Controlled list of values",
-      "definition": "A standardized dropdown list or taxonomy (such as source, significance, or cause categories) used to normalize legacy data during migration."
+      "term": "Corrective action",
+      "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
     },
     {
-      "term": "Pilot import",
-      "definition": "A scoped test execution of legacy data migration into a non-production test environment to validate mapping rules and error handling before cutover."
+      "term": "Nonconformity",
+      "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
     },
     {
-      "term": "Freeze period",
-      "definition": "A designated timeframe prior to cutover during which no new data entries are permitted in legacy sources to ensure migration completeness."
+      "term": "Workflow owner",
+      "definition": "The role responsible for decisions and records in the defined workflow."
     },
     {
-      "term": "Cutover",
-      "definition": "The formal transition point where legacy recordkeeping is discontinued and active CAPA workflows commence in the new software."
+      "term": "Traceability",
+      "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
     }
   ],
   "roles": [
     "Workflow owner",
-    "Quality supervisor",
+    "Auditor",
     "Inspector",
     "Customer-facing coordinator",
+    "Quality supervisor",
+    "Reviewer",
     "Investigator",
     "Plant manager",
+    "Internal analyst",
+    "Vendor",
     "Operator",
     "Supervisor"
   ],
   "recordNames": [
     "Spreadsheet log",
-    "Paper reports",
-    "Email threads",
-    "Nonconformity report form",
-    "Controlled list of values",
+    "Nonconformity Report form",
+    "Archive index",
+    "Source inventory",
+    "Retention rules record",
+    "Field-by-field map",
+    "Mapping rules",
     "Work order",
     "Drawing revision",
-    "Pilot test record",
-    "Legacy backup",
-    "Workstation instructions"
+    "Controlled value list",
+    "Legacy data backup",
+    "Pilot test log",
+    "Verification sign-off",
+    "Cutover plan",
+    "Workstation instructions",
+    "Daily review log"
   ],
   "decisions": [
-    "Classify legacy records by status and business value to determine migration versus archival scope",
-    "Define retention rules and approve legacy records to leave behind or purge",
-    "Decide whether unmapped legacy fields should be left blank, filled with marked placeholders, or manually populated",
-    "Determine whether legacy record relationships should be rebuilt as relational database links or preserved as plain text",
-    "Approve pilot import results and verify discrepancy thresholds before authorizing full cutover",
-    "Select cutover strategy (single direct cutover versus phased transition) and schedule freeze window",
-    "Define recovery threshold triggers and authorize aborting cutover to roll back to legacy systems"
+    "Decide migration boundaries between open findings, recent closed findings, and historical archive",
+    "Agree retention rules and approve legacy records to exclude (duplicates, test records, drafts)",
+    "Define field mapping and approve data transformation rules",
+    "Decide whether unmapped legacy fields remain blank, use placeholders, or require manual backfill",
+    "Determine which record relationships are rebuilt as relational links versus preserved as static text",
+    "Map legacy values to controlled vocabulary lists and resolve ambiguous entries",
+    "Define acceptance and pass/fail criteria for the pilot import",
+    "Approve pilot import verification results before authorizing full data cutover",
+    "Select cutover strategy (single cutover switch vs phased migration)",
+    "Establish legacy data entry freeze period",
+    "Define abort/failure thresholds and authorize cutover recovery/rollback",
+    "Set legacy data read-only retention period and system retirement timeline"
   ],
   "pass": true,
   "deterministic": {
@@ -150,8 +165,8 @@
     ],
     "failures": []
   },
-  "inputHash": "a8d1feba4039a4d0b68b6b1d72a2ec7b44ad2760b5a49f9e18a468d7dbdf17fc",
-  "outputContextHash": "cf0717b23709a4c90ec5e5c1b2feaf521df67cf7bc3de1648c6afabdb8669ea2",
-  "reviewedAt": "2026-10-19T18:41:35.526Z",
+  "inputHash": "c75b13bf293b04c5b34105ecc4618964d3e1103b24659c0e6782eb848929fbf5",
+  "outputContextHash": "127fa0d7589299011f6d646a91ca2771349a25949581e17f13deedaab0afd4bd",
+  "reviewedAt": "2026-10-22T08:18:40.806Z",
   "reviewer": "Configured independent chapter reviewer"
 }

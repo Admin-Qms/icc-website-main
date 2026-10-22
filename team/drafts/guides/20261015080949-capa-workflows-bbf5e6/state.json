@@ -69,7 +69,7 @@
       "wordCount": 2001,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-19T19:35:11.972Z"
+      "checkpointedAt": "2026-10-22T08:17:36.369Z"
     },
     "training-rollout": {
       "hash": "d41e0f12371286bcccb8cb3359ddf3fdba2b9adc59375091f0a7c1a44a1f2020",
@@ -94,7 +94,7 @@
     }
   },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-22T08:16:23.540Z",
+  "updatedAt": "2026-10-22T08:18:40.811Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
@@ -1466,7 +1466,7 @@
     "reviewedChapters": [],
     "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
   },
-  "contextHash": "b7fc98e4b994e408e08ef6611815398b275030b9a19b92404421ff495721c975",
+  "contextHash": "127fa0d7589299011f6d646a91ca2771349a25949581e17f13deedaab0afd4bd",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2412,6 +2412,178 @@
       "inputHash": "81faf1d1c53f66d72264d9eed99a3c615d0b2981ca8fe0fdfef057c4a099a270",
       "outputContextHash": "b7fc98e4b994e408e08ef6611815398b275030b9a19b92404421ff495721c975",
       "reviewedAt": "2026-10-22T08:16:23.538Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "migration-planning": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The guide page strictly complies with the assigned plan, word count target (2,001 words vs 2,000 target), and scope boundaries. Sourced citations from the ISO/IAF Auditing Practices Group guidance on documenting and reviewing nonconformities as well as NIST RPD-G-08 are accurately quoted and contextually integrated. All four subsections thoroughly address workflow decisions, inputs, roles, records, exceptions, and verification criteria. Each section features a consistently labeled hypothetical illustrative example following the unnamed machining manufacturer scenario without claiming unverified vendor features or customer outcomes. No unassigned FAQ section is present.",
+      "glossary": [
+        {
+          "term": "Correction",
+          "definition": "Action to eliminate a detected nonconformity (ISO 9000 as quoted in the ISO/IAF APG paper)."
+        },
+        {
+          "term": "Corrective action",
+          "definition": "Action to eliminate the cause of a nonconformity and prevent recurrence."
+        },
+        {
+          "term": "Nonconformity",
+          "definition": "Non-fulfillment of a requirement (ISO 9000 as cited in the APG paper)."
+        },
+        {
+          "term": "Workflow owner",
+          "definition": "The role responsible for decisions and records in the defined workflow."
+        },
+        {
+          "term": "Traceability",
+          "definition": "The ability to reconstruct the complete chronological history of a finding, including containment, cause, actions, approvals, and effectiveness evidence."
+        }
+      ],
+      "roles": [
+        "Workflow owner",
+        "Auditor",
+        "Inspector",
+        "Customer-facing coordinator",
+        "Quality supervisor",
+        "Reviewer",
+        "Investigator",
+        "Plant manager",
+        "Internal analyst",
+        "Vendor",
+        "Operator",
+        "Supervisor"
+      ],
+      "recordNames": [
+        "Spreadsheet log",
+        "Nonconformity Report form",
+        "Archive index",
+        "Source inventory",
+        "Retention rules record",
+        "Field-by-field map",
+        "Mapping rules",
+        "Work order",
+        "Drawing revision",
+        "Controlled value list",
+        "Legacy data backup",
+        "Pilot test log",
+        "Verification sign-off",
+        "Cutover plan",
+        "Workstation instructions",
+        "Daily review log"
+      ],
+      "decisions": [
+        "Decide migration boundaries between open findings, recent closed findings, and historical archive",
+        "Agree retention rules and approve legacy records to exclude (duplicates, test records, drafts)",
+        "Define field mapping and approve data transformation rules",
+        "Decide whether unmapped legacy fields remain blank, use placeholders, or require manual backfill",
+        "Determine which record relationships are rebuilt as relational links versus preserved as static text",
+        "Map legacy values to controlled vocabulary lists and resolve ambiguous entries",
+        "Define acceptance and pass/fail criteria for the pilot import",
+        "Approve pilot import verification results before authorizing full data cutover",
+        "Select cutover strategy (single cutover switch vs phased migration)",
+        "Establish legacy data entry freeze period",
+        "Define abort/failure thresholds and authorize cutover recovery/rollback",
+        "Set legacy data read-only retention period and system retirement timeline"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Inventory and classify existing records",
+            "section": "Inventory and classify existing records"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Inventory and classify existing records; semantic review verifies support",
+            "section": "Inventory and classify existing records"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Clean data and map relationships",
+            "section": "Clean data and map relationships"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Clean data and map relationships; semantic review verifies support",
+            "section": "Clean data and map relationships"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Pilot the import and verify results",
+            "section": "Pilot the import and verify results"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Pilot the import and verify results; semantic review verifies support",
+            "section": "Pilot the import and verify results"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Plan cutover and recovery",
+            "section": "Plan cutover and recovery"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Plan cutover and recovery; semantic review verifies support",
+            "section": "Plan cutover and recovery"
+          }
+        ],
+        "failures": []
+      },
+      "inputHash": "c75b13bf293b04c5b34105ecc4618964d3e1103b24659c0e6782eb848929fbf5",
+      "outputContextHash": "127fa0d7589299011f6d646a91ca2771349a25949581e17f13deedaab0afd4bd",
+      "reviewedAt": "2026-10-22T08:18:40.806Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
