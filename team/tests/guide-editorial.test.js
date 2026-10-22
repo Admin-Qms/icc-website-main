@@ -46,3 +46,26 @@ test('research briefs require the full workflow and a labeled hypothetical examp
   const second = createGuideOutline(topic, research); second.example.label = 'Customer success story';
   assert.equal(validateGuideOutline(second, research).pass, false);
 });
+
+// The chapter reviewer is a model: it rewords terms the frozen context already defines.
+// A rewording is not a conflict; the frozen definition wins and new terms are added.
+const frozenContext = () => ({ schemaVersion: 1, topicId: 'capa-workflows', glossary: [{ term: 'Workflow owner', definition: 'The role responsible for decisions and records in the defined workflow.' }], roles: ['Quality owner'], recordNames: [], reviewedChapters: [], researchHash: 'h' });
+const reviewedPage = { slug: 'ongoing-operation', title: 'Ongoing operation', body: 'Body text.' };
+test('a reviewer rewording of a frozen glossary term keeps the frozen definition instead of failing the review', () => {
+  assert.ok(editorial);
+  const review = { summary: 's', glossary: [{ term: 'workflow owner', definition: 'Whoever owns the workflow decisions.' }, { term: 'Separation of duties', definition: 'A permission rule keeping implementer and verifier apart.' }], roles: ['Operator'], recordNames: ['CAPA log'], decisions: [] };
+  const next = editorial.updateGuideContext(frozenContext(), reviewedPage, review);
+  assert.deepEqual(next.glossary, [
+    { term: 'Workflow owner', definition: 'The role responsible for decisions and records in the defined workflow.' },
+    { term: 'Separation of duties', definition: 'A permission rule keeping implementer and verifier apart.' },
+  ]);
+  assert.deepEqual(next.roles, ['Quality owner', 'Operator']); assert.deepEqual(next.recordNames, ['CAPA log']);
+  assert.deepEqual(editorial.glossaryVariants(frozenContext(), review), [{ term: 'Workflow owner', frozen: 'The role responsible for decisions and records in the defined workflow.', reviewer: 'Whoever owns the workflow decisions.' }]);
+});
+test('reviewer glossary entries without a term or definition are ignored rather than failing the review', () => {
+  assert.ok(editorial);
+  const review = { summary: 's', glossary: [{ term: '', definition: 'x' }, { term: 'Pilot' }, null, { term: 'Pilot', definition: 'A controlled preliminary release.' }], roles: [], recordNames: [], decisions: [] };
+  const next = editorial.updateGuideContext(frozenContext(), reviewedPage, review);
+  assert.equal(next.glossary.length, 2); assert.equal(next.glossary[1].term, 'Pilot');
+  assert.deepEqual(editorial.glossaryVariants(frozenContext(), review), []);
+});

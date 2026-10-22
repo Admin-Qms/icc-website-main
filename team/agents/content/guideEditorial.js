@@ -58,15 +58,25 @@ function initialGuideContext(topic, outline, research) {
     reviewedChapters: [], researchHash: hashValue(research) };
 }
 function chapterInputHash(page, plan, research, context) { return hashValue({ body: page.body, metadata: { slug: page.slug, title: page.title, description: page.description, sourceIds: page.sourceIds, capabilityIds: page.capabilityIds }, plan, research, context }); }
+// Reviewer glossary entries that are usable: a non-empty term and definition.
+function usableGlossary(review) {
+  return (Array.isArray(review?.glossary) ? review.glossary : []).filter(e => e && typeof e.term === 'string' && e.term.trim() && typeof e.definition === 'string' && e.definition.trim());
+}
+// Terms the reviewer defined differently from the frozen context. The frozen definition is
+// kept; these are reported so a genuine disagreement can be seen, not thrown as a failure.
+function glossaryVariants(context, review) {
+  const frozen = new Map(context.glossary.map(e => [normalize(e.term), e]));
+  return usableGlossary(review).filter(e => frozen.has(normalize(e.term)) && normalize(frozen.get(normalize(e.term)).definition) !== normalize(e.definition))
+    .map(e => ({ term: frozen.get(normalize(e.term)).term, frozen: frozen.get(normalize(e.term)).definition, reviewer: e.definition }));
+}
 function updateGuideContext(context, page, review) {
+  // The glossary is frozen once a term is defined: the chapter reviewer is a model and
+  // rewords existing terms freely, so only terms it introduces are added.
   const glossary = new Map(context.glossary.map(e => [normalize(e.term), e]));
-  for (const entry of review.glossary || []) {
-    if (!entry.term?.trim() || !entry.definition?.trim()) throw new Error('Invalid reviewed glossary');
-    const previous = glossary.get(normalize(entry.term));
-    if (previous && normalize(previous.definition) !== normalize(entry.definition)) throw new Error(`Conflicting reviewed definition: ${entry.term}`);
-    glossary.set(normalize(entry.term), entry);
+  for (const entry of usableGlossary(review)) {
+    if (!glossary.has(normalize(entry.term))) glossary.set(normalize(entry.term), { term: entry.term.trim(), definition: entry.definition.trim() });
   }
   return { ...context, glossary: [...glossary.values()], roles: [...new Set([...context.roles, ...(review.roles || [])])], recordNames: [...new Set([...context.recordNames, ...(review.recordNames || [])])],
     reviewedChapters: [...context.reviewedChapters.filter(c => c.slug !== page.slug), { slug: page.slug, title: page.title, summary: review.summary, bodyHash: hashValue(page.body), decisions: review.decisions || [] }] };
 }
-module.exports = { pageWordBudget, preserveCopyEdit, checkPageContent, initialGuideContext, chapterInputHash, updateGuideContext, normalize, links };
+module.exports = { pageWordBudget, preserveCopyEdit, checkPageContent, initialGuideContext, chapterInputHash, updateGuideContext, glossaryVariants, normalize, links };
