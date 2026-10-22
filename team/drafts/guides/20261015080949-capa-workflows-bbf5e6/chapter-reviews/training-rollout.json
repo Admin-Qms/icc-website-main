@@ -6,27 +6,23 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The guide page adheres strictly to the assigned chapter plan, scope boundaries, and primary research sources. It provides practical, actionable guidance on training teams and rolling out CAPA software, covering role-based learning tasks, pilot testing with representative users, staged deployment management, and adoption/workload evaluation. All primary source citations (ISO/IAF APG papers on documenting and reviewing nonconformities, and NIST RPD-G-07/G-08 procedures) are cited accurately within their appropriate contexts. Each subsection features structured workflow evaluation decisions, distinct user roles, record artifacts, and consistently labeled hypothetical examples based on the unnamed machining manufacturer scenario without asserting unverified software features. No unassigned FAQ section is present.",
+  "summary": "The guide page strictly complies with the assigned plan, word count target (2,003 words vs 2,000 target), and scope boundaries for training and staged rollout. Primary source citations from the ISO/IAF Auditing Practices Group guidance on documenting and reviewing nonconformities, as well as NIST RPD-G-07 and NIST RPD-G-08, are quoted accurately and contextualized correctly. Each subsection thoroughly addresses role-based learning tasks, pilot stage gate criteria, staged deployment checklists, and ongoing adoption and workload metrics. Consistently labeled illustrative examples featuring the unnamed machining manufacturer illustrate practical implementations without making unsupported vendor claims or including unassigned FAQ content.",
   "glossary": [
     {
-      "term": "Role-based learning task",
-      "definition": "A practical training action structured around the specific permissions, records, and decisions an assigned role executes in the CAPA system."
-    },
-    {
-      "term": "Pilot user",
-      "definition": "A representative user across production shifts and operational roles selected to test live workflows and surface configuration defects prior to broader rollout."
+      "term": "Pilot",
+      "definition": "A controlled preliminary release allowing a representative group of users to run real work through the software to uncover configuration, workflow, and training issues while correction costs are low."
     },
     {
       "term": "Staged deployment",
-      "definition": "A phased rollout strategy deploying the CAPA software by department, area, or finding classification to manage support workload and integrate lessons learned."
+      "definition": "A phased rollout strategy that introduces the software by area, finding type, or facility, using defined entry and exit criteria to keep support demands manageable."
     },
     {
-      "term": "Adoption indicator",
-      "definition": "A measurable metric—such as finding entry rates, assignment turnaround, or bypass frequency—used to evaluate whether personnel use the software as intended."
+      "term": "Adoption",
+      "definition": "The degree to which personnel consistently use the intended software workflow for authorized quality processes rather than bypassing it with offline workarounds."
     },
     {
-      "term": "Side channel",
-      "definition": "An unauthorized parallel recordkeeping path, such as spreadsheets, emails, or paper logs, used by staff instead of the central CAPA software."
+      "term": "Workload",
+      "definition": "The practical operational effort, time, and administrative friction required from each role to process a finding through the software."
     }
   ],
   "roles": [
@@ -39,27 +35,32 @@
     "Closer",
     "Plant manager",
     "Workflow owner",
+    "Trainer",
+    "Auditor",
     "Area supervisor",
     "Quality manager"
   ],
   "recordNames": [
-    "Nonconformity report",
     "Finding record",
+    "Audit evidence",
+    "Statement of nonconformity",
+    "Role map",
     "Action plan",
-    "Evidence record",
     "Pilot issue log",
-    "Deployment checklist",
     "Work instruction",
     "Procedure",
+    "Deployment checklist",
     "Training record",
     "Paper log"
   ],
   "decisions": [
-    "Accept or return sample training submissions based on review criteria",
-    "Extend, fix and repeat, approve, or stop the workflow pilot",
-    "Authorize area rollout entry against defined checklist readiness criteria",
-    "Determine handling and rerouting rules for findings raised in side channels",
-    "Adjust system forms, workflow steps, or provide refresher coaching based on adoption review metrics"
+    "Accept or return sample submissions with a reason",
+    "Confirm, classify and assign containment",
+    "Review plans and effectiveness, close or reopen",
+    "Extend, fix and repeat, approve, or stop the pilot",
+    "Authorize staged deployment gate passage based on entry and exit criteria",
+    "Adjust forms, simplify steps, add training or change reminders based on adoption reviews",
+    "Retire paper logs and offline tracking channels"
   ],
   "pass": true,
   "deterministic": {
@@ -151,8 +152,8 @@
     ],
     "failures": []
   },
-  "inputHash": "a770c05217b89053f89dee58bd317bffcf3197b9fa4657862ce048965f9aeda6",
-  "outputContextHash": "38ed016b9afe1aff87c2647b4984c7d1e1c05769d359536cf7c86d20c3925885",
-  "reviewedAt": "2026-10-19T18:44:24.591Z",
+  "inputHash": "286cbd6892b21781391fdbf87849679723e88eaacd0f76437c0926988812bbf0",
+  "outputContextHash": "41658e025ead3efac039abaf1d9f69c89c394bac680f8a37c638b65ba5f3b657",
+  "reviewedAt": "2026-10-22T08:21:02.749Z",
   "reviewer": "Configured independent chapter reviewer"
 }

@@ -69,6 +69,22 @@
     {
       "term": "Implementation evidence",
       "definition": "Objective documentation demonstrating that an action was executed as described, such as released revisions, training logs, or installation records."
+    },
+    {
+      "term": "Pilot",
+      "definition": "A controlled preliminary release allowing a representative group of users to run real work through the software to uncover configuration, workflow, and training issues while correction costs are low."
+    },
+    {
+      "term": "Staged deployment",
+      "definition": "A phased rollout strategy that introduces the software by area, finding type, or facility, using defined entry and exit criteria to keep support demands manageable."
+    },
+    {
+      "term": "Adoption",
+      "definition": "The degree to which personnel consistently use the intended software workflow for authorized quality processes rather than bypassing it with offline workarounds."
+    },
+    {
+      "term": "Workload",
+      "definition": "The practical operational effort, time, and administrative friction required from each role to process a finding through the software."
     }
   ],
   "roles": [
@@ -101,7 +117,9 @@
     "Doer",
     "Customer-facing coordinator",
     "Internal analyst",
-    "Vendor"
+    "Vendor",
+    "Trainer",
+    "Area supervisor"
   ],
   "recordNames": [
     "Hold tag",
@@ -166,7 +184,13 @@
     "Verification sign-off",
     "Cutover plan",
     "Workstation instructions",
-    "Daily review log"
+    "Daily review log",
+    "Audit evidence",
+    "Role map",
+    "Pilot issue log",
+    "Procedure",
+    "Deployment checklist",
+    "Paper log"
   ],
   "example": {
     "label": "Illustrative example",
@@ -286,6 +310,21 @@
         "Establish legacy data entry freeze period",
         "Define abort/failure thresholds and authorize cutover recovery/rollback",
         "Set legacy data read-only retention period and system retirement timeline"
+      ]
+    },
+    {
+      "slug": "training-rollout",
+      "title": "Training teams and rolling out the system: CAPA software workflows",
+      "summary": "The guide page strictly complies with the assigned plan, word count target (2,003 words vs 2,000 target), and scope boundaries for training and staged rollout. Primary source citations from the ISO/IAF Auditing Practices Group guidance on documenting and reviewing nonconformities, as well as NIST RPD-G-07 and NIST RPD-G-08, are quoted accurately and contextualized correctly. Each subsection thoroughly addresses role-based learning tasks, pilot stage gate criteria, staged deployment checklists, and ongoing adoption and workload metrics. Consistently labeled illustrative examples featuring the unnamed machining manufacturer illustrate practical implementations without making unsupported vendor claims or including unassigned FAQ content.",
+      "bodyHash": "2d6ca3ff85d7dc453101aead846566044953058b3b4963dead9c3a6f4d8d2fdb",
+      "decisions": [
+        "Accept or return sample submissions with a reason",
+        "Confirm, classify and assign containment",
+        "Review plans and effectiveness, close or reopen",
+        "Extend, fix and repeat, approve, or stop the pilot",
+        "Authorize staged deployment gate passage based on entry and exit criteria",
+        "Adjust forms, simplify steps, add training or change reminders based on adoption reviews",
+        "Retire paper logs and offline tracking channels"
       ]
     }
   ],

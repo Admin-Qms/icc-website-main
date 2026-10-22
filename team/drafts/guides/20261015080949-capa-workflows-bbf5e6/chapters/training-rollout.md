@@ -62,7 +62,7 @@ The ISO and IAF guidance on [documenting a nonconformity](https://committee.iso.
 
 Decide in advance what would extend, stop or approve the pilot:
 
-- **Extend:** Findings are processing correctly but the sample is too small or missing a key situation.
+- **Extend:** Findings are processing correctly, but the sample is too small or missing a key situation.
 - **Fix and repeat:** A defect or confusing step blocks users, and the team agrees on a correction and retest.
 - **Approve:** Goals are met, open issues are minor and the workflow owner signs off.
 - **Stop:** A serious problem, such as lost evidence, makes wider use unsafe.

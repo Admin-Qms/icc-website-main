@@ -72,11 +72,11 @@
       "checkpointedAt": "2026-10-22T08:17:36.369Z"
     },
     "training-rollout": {
-      "hash": "d41e0f12371286bcccb8cb3359ddf3fdba2b9adc59375091f0a7c1a44a1f2020",
+      "hash": "6bef3c523f768835c8fb08323a49a78bf55619ce701d8c050367065d36439fa1",
       "wordCount": 2003,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-19T19:35:13.946Z"
+      "checkpointedAt": "2026-10-22T08:20:26.295Z"
     },
     "ongoing-operation": {
       "hash": "309b4209abdba2909849d1ec871c39981afdd305a738c582633a8696aac00f81",
@@ -94,7 +94,7 @@
     }
   },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-22T08:18:40.811Z",
+  "updatedAt": "2026-10-22T08:21:02.766Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
@@ -1466,7 +1466,7 @@
     "reviewedChapters": [],
     "researchHash": "52385146c381d069570128986d79723bb298a434b4a512571d75a8c563f475ed"
   },
-  "contextHash": "127fa0d7589299011f6d646a91ca2771349a25949581e17f13deedaab0afd4bd",
+  "contextHash": "41658e025ead3efac039abaf1d9f69c89c394bac680f8a37c638b65ba5f3b657",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2584,6 +2584,165 @@
       "inputHash": "c75b13bf293b04c5b34105ecc4618964d3e1103b24659c0e6782eb848929fbf5",
       "outputContextHash": "127fa0d7589299011f6d646a91ca2771349a25949581e17f13deedaab0afd4bd",
       "reviewedAt": "2026-10-22T08:18:40.806Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "training-rollout": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The guide page strictly complies with the assigned plan, word count target (2,003 words vs 2,000 target), and scope boundaries for training and staged rollout. Primary source citations from the ISO/IAF Auditing Practices Group guidance on documenting and reviewing nonconformities, as well as NIST RPD-G-07 and NIST RPD-G-08, are quoted accurately and contextualized correctly. Each subsection thoroughly addresses role-based learning tasks, pilot stage gate criteria, staged deployment checklists, and ongoing adoption and workload metrics. Consistently labeled illustrative examples featuring the unnamed machining manufacturer illustrate practical implementations without making unsupported vendor claims or including unassigned FAQ content.",
+      "glossary": [
+        {
+          "term": "Pilot",
+          "definition": "A controlled preliminary release allowing a representative group of users to run real work through the software to uncover configuration, workflow, and training issues while correction costs are low."
+        },
+        {
+          "term": "Staged deployment",
+          "definition": "A phased rollout strategy that introduces the software by area, finding type, or facility, using defined entry and exit criteria to keep support demands manageable."
+        },
+        {
+          "term": "Adoption",
+          "definition": "The degree to which personnel consistently use the intended software workflow for authorized quality processes rather than bypassing it with offline workarounds."
+        },
+        {
+          "term": "Workload",
+          "definition": "The practical operational effort, time, and administrative friction required from each role to process a finding through the software."
+        }
+      ],
+      "roles": [
+        "Inspector",
+        "Operator",
+        "Quality supervisor",
+        "Investigation lead",
+        "Action owner",
+        "Approver",
+        "Closer",
+        "Plant manager",
+        "Workflow owner",
+        "Trainer",
+        "Auditor",
+        "Area supervisor",
+        "Quality manager"
+      ],
+      "recordNames": [
+        "Finding record",
+        "Audit evidence",
+        "Statement of nonconformity",
+        "Role map",
+        "Action plan",
+        "Pilot issue log",
+        "Work instruction",
+        "Procedure",
+        "Deployment checklist",
+        "Training record",
+        "Paper log"
+      ],
+      "decisions": [
+        "Accept or return sample submissions with a reason",
+        "Confirm, classify and assign containment",
+        "Review plans and effectiveness, close or reopen",
+        "Extend, fix and repeat, approve, or stop the pilot",
+        "Authorize staged deployment gate passage based on entry and exit criteria",
+        "Adjust forms, simplify steps, add training or change reminders based on adoption reviews",
+        "Retire paper logs and offline tracking channels"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Set role-based learning tasks",
+            "section": "Set role-based learning tasks"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Set role-based learning tasks; semantic review verifies support",
+            "section": "Set role-based learning tasks"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Pilot with representative users",
+            "section": "Pilot with representative users"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Pilot with representative users; semantic review verifies support",
+            "section": "Pilot with representative users"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Manage staged deployment",
+            "section": "Manage staged deployment"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Manage staged deployment; semantic review verifies support",
+            "section": "Manage staged deployment"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Evaluate adoption and workload",
+            "section": "Evaluate adoption and workload"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Evaluate adoption and workload; semantic review verifies support",
+            "section": "Evaluate adoption and workload"
+          }
+        ],
+        "failures": []
+      },
+      "inputHash": "286cbd6892b21781391fdbf87849679723e88eaacd0f76437c0926988812bbf0",
+      "outputContextHash": "41658e025ead3efac039abaf1d9f69c89c394bac680f8a37c638b65ba5f3b657",
+      "reviewedAt": "2026-10-22T08:21:02.749Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
