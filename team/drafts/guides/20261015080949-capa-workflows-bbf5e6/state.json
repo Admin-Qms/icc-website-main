@@ -83,7 +83,7 @@
       "wordCount": 2001,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-19T18:52:52.775Z"
+      "checkpointedAt": "2026-10-22T08:22:03.438Z"
     },
     "capa-software": {
       "hash": "5a716fe620df392dfc2054b41df20768a6dbf15c8db46d52be31b80f4afbf313",
@@ -94,7 +94,7 @@
     }
   },
   "createdAt": "2026-10-15T08:09:49.111Z",
-  "updatedAt": "2026-10-22T08:21:02.766Z",
+  "updatedAt": "2026-10-22T08:22:03.440Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "capa-workflows",
