@@ -19,6 +19,19 @@ sourceIds:
   - nist-rpd-g07
   - apg-documenting
 capabilityIds: []
+wordCount: 2182
+readTime: 11
+image:
+  src: /images/guides/capa-software/mapping-workflows.webp
+  alt: >-
+    a fabrication inspector tracing a paper work instruction at a cutting
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: d051667b49bf0035ecf8d311517d4e79e4b2e6b3dad55dfe38573d20991c6536
+  sha256: d051667b49bf0035ecf8d311517d4e79e4b2e6b3dad55dfe38573d20991c6536
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Define the operational problem
 

@@ -19,6 +19,19 @@ sourceIds:
   - apg-documenting
   - nist-rpd-g08
 capabilityIds: []
+wordCount: 2089
+readTime: 11
+image:
+  src: /images/guides/capa-software/evaluating-software.webp
+  alt: >-
+    a machining supervisor comparing inspection records beside a CNC machine;
+    authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 4c7f58811fef6d9a7a0cbb4e6105ed8a1eb9ca6f89b024523b7243e297a10217
+  sha256: 4c7f58811fef6d9a7a0cbb4e6105ed8a1eb9ca6f89b024523b7243e297a10217
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Build a workflow-based shortlist
 

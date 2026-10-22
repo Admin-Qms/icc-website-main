@@ -19,6 +19,20 @@ sourceIds:
   - apg-review-closing
   - apg-documenting
 capabilityIds: []
+wordCount: 2039
+readTime: 11
+image:
+  src: /images/guides/capa-software/cause-investigation.webp
+  alt: >-
+    two quality inspectors reviewing a weld inspection record beside a
+    fabrication cell; authentic manufacturing environment, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 78b90540e1f2812898caadf68d2199dc6589b36a2cbaa2547259446b4a15cbd1
+  sha256: 78b90540e1f2812898caadf68d2199dc6589b36a2cbaa2547259446b4a15cbd1
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Defining the investigation question
 

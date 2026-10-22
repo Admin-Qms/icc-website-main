@@ -20,6 +20,19 @@ sourceIds:
   - nist-rpd-g07
   - apg-review-closing
 capabilityIds: []
+wordCount: 2035
+readTime: 11
+image:
+  src: /images/guides/capa-software/containment-decisions.webp
+  alt: >-
+    a production operator completing a controlled checklist at an assembly
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: ea82a9767eac472591f3a1fe3e52ede85d21852b3e2771de1d33810a8117581e
+  sha256: ea82a9767eac472591f3a1fe3e52ede85d21852b3e2771de1d33810a8117581e
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Classifying the finding
 

@@ -20,6 +20,19 @@ sourceIds:
   - nist-rpd-g08
   - nist-rpd-g07
 capabilityIds: []
+wordCount: 1503
+readTime: 8
+image:
+  src: /images/guides/capa-software/capa-software.webp
+  alt: >-
+    A manufacturing quality technician confirming a controlled work instruction
+    at a production cell; authentic industrial setting, no text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 82974db22c56575a4222fbf1620bb49f7dc2d75cea0f58ec3622075f0f792bc1
+  sha256: 82974db22c56575a4222fbf1620bb49f7dc2d75cea0f58ec3622075f0f792bc1
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## The operational problem
 

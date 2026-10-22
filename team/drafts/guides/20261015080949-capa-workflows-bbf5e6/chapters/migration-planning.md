@@ -20,6 +20,19 @@ sourceIds:
   - apg-documenting
   - nist-rpd-g08
 capabilityIds: []
+wordCount: 2001
+readTime: 11
+image:
+  src: /images/guides/capa-software/migration-planning.webp
+  alt: >-
+    a receiving inspector sorting traceability records beside incoming material
+    racks; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 071e8debd4b9742f9739cce21bf3d914f1546ace6b6075f0f1612d34fa4bee3a
+  sha256: 071e8debd4b9742f9739cce21bf3d914f1546ace6b6075f0f1612d34fa4bee3a
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Inventory and classify existing records
 

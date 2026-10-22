@@ -19,6 +19,19 @@ sourceIds:
   - apg-review-closing
   - nist-rpd-g08
 capabilityIds: []
+wordCount: 2122
+readTime: 11
+image:
+  src: /images/guides/capa-software/action-planning.webp
+  alt: >-
+    a line operator scanning an approved instruction beside a guarded press;
+    authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: c75d960ec2a645206e19d1e83d674ed4dc812013c042027c92ffd402d847de34
+  sha256: c75d960ec2a645206e19d1e83d674ed4dc812013c042027c92ffd402d847de34
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Connecting actions to causes
 

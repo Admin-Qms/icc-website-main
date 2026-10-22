@@ -20,6 +20,19 @@ sourceIds:
   - apg-documenting
   - nist-rpd-g07
 capabilityIds: []
+wordCount: 2001
+readTime: 11
+image:
+  src: /images/guides/capa-software/ongoing-operation.webp
+  alt: >-
+    a quality lead reviewing completed evidence beside a final inspection
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: a3e9cf673b6101ccc2810cbb6e1f5b4d656887f5cec5f02cbdfcb1dfbdba05c2
+  sha256: a3e9cf673b6101ccc2810cbb6e1f5b4d656887f5cec5f02cbdfcb1dfbdba05c2
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Review the workflow and evidence
 

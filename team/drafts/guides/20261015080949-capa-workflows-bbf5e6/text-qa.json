@@ -1,5 +1,5 @@
 {
-  "pass": false,
+  "pass": true,
   "checks": [
     {
       "id": "schema-version",
@@ -417,7 +417,7 @@
     {
       "id": "chapter-words",
       "pass": true,
-      "message": "2139 visible words",
+      "message": "2122 visible words",
       "page": "action-planning"
     },
     {
@@ -657,7 +657,7 @@
     {
       "id": "total-words",
       "pass": true,
-      "message": "19998 total visible words; maximum 20,000 includes introduction"
+      "message": "19981 total visible words; maximum 20,000 includes introduction"
     },
     {
       "id": "cross-chapter-repetition",
@@ -1388,6 +1388,12 @@
       "page": "containment-decisions"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/nonconformance-capa/",
+      "page": "containment-decisions"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://www.nist.gov/document/guide07v211pdf",
@@ -1407,7 +1413,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "containment-decisions"
     },
@@ -1588,6 +1594,12 @@
       "page": "cause-investigation"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/nonconformance-capa/",
+      "page": "cause-investigation"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176sc2/files/documents/ISO%209001%20Auditing%20Practices%20Group%20docs/Auditing%20General/APG-DocumentNonconformity2015.pdf",
@@ -1595,7 +1607,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "cause-investigation"
     },
@@ -1764,6 +1776,12 @@
       "page": "action-planning"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/nonconformance-capa/",
+      "page": "action-planning"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://www.nist.gov/document/guide08v211pdf",
@@ -1789,7 +1807,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "action-planning"
     },
@@ -2140,6 +2158,12 @@
       "page": "migration-planning"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/nonconformance-capa/",
+      "page": "migration-planning"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176sc2/files/documents/ISO%209001%20Auditing%20Practices%20Group%20docs/Auditing%20General/APG-DocumentNonconformity2015.pdf",
@@ -2165,7 +2189,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "migration-planning"
     },
@@ -2322,6 +2346,12 @@
       "page": "training-rollout"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/nonconformance-capa/",
+      "page": "training-rollout"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176sc2/files/documents/ISO%209001%20Auditing%20Practices%20Group%20docs/Auditing%20General/APG-DocumentNonconformity2015.pdf",
@@ -2371,7 +2401,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "training-rollout"
     },
@@ -2667,37 +2697,6 @@
       "message": "The closing paragraph must invite a software demonstration at /contact/"
     }
   ],
-  "failures": [
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "containment-decisions"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "cause-investigation"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "action-planning"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "migration-planning"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "training-rollout"
-    }
-  ],
-  "wordCount": 19998
+  "failures": [],
+  "wordCount": 19981
 }

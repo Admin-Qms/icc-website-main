@@ -20,6 +20,19 @@ sourceIds:
   - apg-review-closing
   - nist-rpd-g08
 capabilityIds: []
+wordCount: 2006
+readTime: 11
+image:
+  src: /images/guides/capa-software/effectiveness-review.webp
+  alt: >-
+    a quality technician isolating a rejected component at a marked inspection
+    bench; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 6b11ffacaf28ad4be3730c7f22896cfb40403c87f2576a3fa9b95909e195b698
+  sha256: 6b11ffacaf28ad4be3730c7f22896cfb40403c87f2576a3fa9b95909e195b698
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Defining effectiveness criteria
 
