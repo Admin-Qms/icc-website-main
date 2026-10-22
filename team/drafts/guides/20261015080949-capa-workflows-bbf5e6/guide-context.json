@@ -119,7 +119,8 @@
     "Internal analyst",
     "Vendor",
     "Trainer",
-    "Area supervisor"
+    "Area supervisor",
+    "Presenter"
   ],
   "recordNames": [
     "Hold tag",
@@ -190,7 +191,10 @@
     "Pilot issue log",
     "Procedure",
     "Deployment checklist",
-    "Paper log"
+    "Paper log",
+    "Review record",
+    "Scoring sheet",
+    "Backlog"
   ],
   "example": {
     "label": "Illustrative example",
@@ -325,6 +329,20 @@
         "Authorize staged deployment gate passage based on entry and exit criteria",
         "Adjust forms, simplify steps, add training or change reminders based on adoption reviews",
         "Retire paper logs and offline tracking channels"
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Maintaining the system and choosing next steps: CAPA software workflows",
+      "summary": "The guide page strictly adheres to the assigned chapter plan, word count target (2,001 words vs 2,000 target), and scope boundaries for ongoing system maintenance, improvement evaluation, frequently asked questions, and scripted demonstration preparation. Citations to ISO/IAF Auditing Practices Group guidance on reviewing, closing, and documenting nonconformities as well as NIST RPD-G-07 are accurately quoted and contextualized. Workflow decisions, inputs, roles, records, exceptions, and demonstration evaluation criteria are thoroughly detailed, supported by consistently labeled hypothetical illustrative examples without unsubstantiated vendor or customer claims.",
+      "bodyHash": "f5dfced28b40f5c00d3ca6e50e15fb6157d24e2d8f0921380dab3eabd90d64dc",
+      "decisions": [
+        "Sample closed findings to verify objective evidence of implementation and effectiveness",
+        "Control and approve workflow configuration changes",
+        "Prioritize improvement requests (do now, schedule, wait for more evidence, or decline)",
+        "Determine migration boundaries between active findings, recent closed records, and indexed archives",
+        "Assign decision authority, permissions, and backup roles with separation of duties",
+        "Score software demonstration failure paths against objective acceptance criteria"
       ]
     }
   ],
