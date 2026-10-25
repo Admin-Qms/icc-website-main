@@ -279,9 +279,21 @@ async function defaultFetchPage(url) {
     clearTimeout(timer);
     if (!response.ok) return { ok: false, status: response.status, text: '' };
     const type = response.headers.get('content-type') || '';
-    const body = await response.text();
+    const bytes = Buffer.from(await response.arrayBuffer());
+    // A PDF's text sits in compressed streams, so reading its raw bytes finds none of the
+    // topic words; extract the text first (the ISO APG papers are all PDFs).
+    if (/pdf/i.test(type) || bytes.subarray(0, 5).toString('latin1') === '%PDF-') return { ok: true, status: response.status, text: (await pdfToText(bytes)).slice(0, 50000) };
+    const body = bytes.toString('utf8');
     return { ok: true, status: response.status, text: /html/i.test(type) ? htmlToText(body) : body.slice(0, 50000) };
   } catch { return { ok: false, status: 0, text: '' }; }
+}
+// An unreadable PDF yields no text, so the gate rejects it as not mentioning the topic.
+async function pdfToText(bytes) {
+  try {
+    const { getDocumentProxy, extractText } = require('unpdf');
+    const pdf = await getDocumentProxy(new Uint8Array(bytes), { verbosity: 0 });
+    return String((await extractText(pdf, { mergePages: true })).text || '').replace(/\s+/g, ' ').trim();
+  } catch { return ''; }
 }
 async function defaultReviewer(system, user, maxTokens) {
   const { claudeJSONFast, hasLLMKey } = require('../shared/claude');
@@ -300,4 +312,4 @@ function summarizeReport(report) {
   ].join(', ');
 }
 
-module.exports = { createTopicScout, defaultFetchPage, defaultReviewer, htmlToText, summarizeReport, REVIEW_RULES, ...createTopicScout() };
+module.exports = { createTopicScout, defaultFetchPage, defaultReviewer, htmlToText, pdfToText, summarizeReport, REVIEW_RULES, ...createTopicScout() };

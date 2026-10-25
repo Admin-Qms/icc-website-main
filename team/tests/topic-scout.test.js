@@ -202,3 +202,40 @@ test('the report summary names every count the script reports and never reads a 
   const report = { blogKeywords: { added: ['a', 'b'], rejected: [] }, guideTopics: { approved: ['x'], rejected: [], pendingReview: [{ id: 'y' }], reReviewed: [] }, topicSources: { stocked: ['z'], rejected: [], unavailable: [] }, bankAdded: ['u1', 'u2', 'u3'], changed: true };
   assert.equal(summarizeReport(report), '1 approved + 1 parked guide topics, 1 topic stocked with sources, 2 blog keywords, 3 sources banked');
 });
+// A one-page PDF whose text is Flate-compressed, like the ISO APG papers.
+function compressedPdf(sentence) {
+  const content = require('node:zlib').deflateSync(Buffer.from(`BT /F1 12 Tf 72 712 Td (${sentence}) Tj ET`));
+  const objects = ['<< /Type /Catalog /Pages 2 0 R >>', '<< /Type /Pages /Kids [3 0 R] /Count 1 >>',
+    '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>',
+    null, '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>'];
+  const parts = [Buffer.from('%PDF-1.4\n')]; const offsets = []; let length = parts[0].length;
+  objects.forEach((body, i) => {
+    const chunk = body ? Buffer.from(`${i + 1} 0 obj\n${body}\nendobj\n`)
+      : Buffer.concat([Buffer.from(`${i + 1} 0 obj\n<< /Length ${content.length} /Filter /FlateDecode >>\nstream\n`), content, Buffer.from('\nendstream\nendobj\n')]);
+    offsets.push(length); parts.push(chunk); length += chunk.length;
+  });
+  const xref = `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n${offsets.map(o => `${String(o).padStart(10, '0')} 00000 n \n`).join('')}`;
+  parts.push(Buffer.from(`${xref}trailer\n<< /Size ${objects.length + 1} /Root 1 0 R >>\nstartxref\n${length}\n%%EOF\n`));
+  return Buffer.concat(parts);
+}
+test('a fetched PDF source is read as text, so a compressed PDF can pass the topic check', async t => {
+  const { defaultFetchPage } = require('../agents/content/topicScout');
+  const pdf = compressedPdf('Calibration of measuring equipment and management software');
+  assert.equal(pdf.toString('latin1').toLowerCase().includes('calibration'), false, 'the fixture keeps its text compressed');
+  const server = require('node:http').createServer((req, res) => {
+    res.writeHead(200, { 'content-type': req.url === '/untyped' ? 'application/octet-stream' : 'application/pdf' }); res.end(pdf);
+  });
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve)); t.after(() => server.close());
+  const base = `http://127.0.0.1:${server.address().port}`;
+  for (const url of [`${base}/paper.pdf`, `${base}/untyped`]) {
+    const page = await defaultFetchPage(url);
+    assert.equal(page.ok, true); assert.match(page.text, /Calibration of measuring equipment and management software/, url);
+  }
+  const { scout } = setup(t);
+  const report = await scout.applyProposals({ guideTopics: [topic()] }, { fetchPage: async () => defaultFetchPage(`${base}/paper.pdf`), reviewer: approveAll });
+  assert.deepEqual(report.guideTopics.approved, ['calibration-software']);
+});
+test('an unreadable PDF yields no text rather than throwing', async () => {
+  const { pdfToText } = require('../agents/content/topicScout');
+  assert.equal(await pdfToText(Buffer.from('%PDF-1.4 not really a pdf')), '');
+});
