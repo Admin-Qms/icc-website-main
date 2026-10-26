@@ -105,6 +105,38 @@
         "verified": "http",
         "addedBy": "topic-scout",
         "addedAt": "2026-10-25"
+      },
+      {
+        "url": "https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+        "name": "ICC Assets (calibration and maintenance) module page",
+        "context": "Describes the equipment register, calibration intervals, certificates, maintenance history and auditor view",
+        "verified": "http",
+        "addedBy": "topic-scout",
+        "addedAt": "2026-10-26"
+      },
+      {
+        "url": "https://www.nist.gov/metrology/metrological-traceability",
+        "name": "NIST metrological traceability FAQ and policy",
+        "context": "Official explanation of metrological traceability, which calibration records must demonstrate",
+        "verified": "http",
+        "addedBy": "topic-scout",
+        "addedAt": "2026-10-26"
+      },
+      {
+        "url": "https://isocertificationconsultants.ca/solutions/safety/",
+        "name": "ICC Safety module page",
+        "context": "Describes incident and near-miss logging, severity, anonymous floor reporting and linked corrective actions",
+        "verified": "http",
+        "addedBy": "topic-scout",
+        "addedAt": "2026-10-26"
+      },
+      {
+        "url": "https://isocertificationconsultants.ca/solutions/processes/",
+        "name": "ICC Processes module page",
+        "context": "Describes the Level-1 map, Level-2 flowcharts, named owners and linked documents and clauses",
+        "verified": "http",
+        "addedBy": "topic-scout",
+        "addedAt": "2026-10-26"
       }
     ],
     "general_quality": [

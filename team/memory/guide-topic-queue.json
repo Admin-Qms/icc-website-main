@@ -148,6 +148,106 @@
         "R5_FIT": "pass"
       },
       "sourceReviewFindings": []
+    },
+    {
+      "id": "calibration-equipment-management",
+      "topic": "Calibration and equipment maintenance management software",
+      "aliases": [],
+      "primaryKeyword": "calibration management software",
+      "secondaryKeywords": [
+        "equipment calibration register",
+        "calibration due date tracking"
+      ],
+      "moduleSlugs": [
+        "calibration-maintenance"
+      ],
+      "audience": "Canadian quality and operations teams",
+      "problem": "Quality teams struggle to keep calibration intervals, certificates and maintenance history for every instrument current and audit-ready.",
+      "priority": 6,
+      "proposedAt": "2026-10-26T15:15:46.773Z",
+      "proposedBy": "topic-scout",
+      "approval": "approved",
+      "approvedBy": "scout-reviewer",
+      "approvedAt": "2026-10-26T15:15:46.773Z",
+      "reviewRules": {
+        "R1_SCOPE": "pass",
+        "R2_DISTINCT": "pass",
+        "R3_SOURCES": "pass",
+        "R4_ACCURACY": "pass",
+        "R5_FIT": "pass"
+      },
+      "reviewFindings": [],
+      "sources": [
+        "https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+        "https://www.nist.gov/metrology/metrological-traceability",
+        "https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html"
+      ]
+    },
+    {
+      "id": "incident-near-miss-reporting",
+      "topic": "Incident and near-miss reporting software",
+      "aliases": [],
+      "primaryKeyword": "incident and near-miss reporting software",
+      "secondaryKeywords": [
+        "near miss reporting",
+        "workplace incident log"
+      ],
+      "moduleSlugs": [
+        "safety"
+      ],
+      "audience": "Canadian quality and operations teams",
+      "problem": "Incidents and near-misses reported on paper or by email are not consistently logged, rated for severity or linked to corrective action.",
+      "priority": 7,
+      "proposedAt": "2026-10-26T15:15:46.773Z",
+      "proposedBy": "topic-scout",
+      "approval": "approved",
+      "approvedBy": "scout-reviewer",
+      "approvedAt": "2026-10-26T15:15:46.773Z",
+      "reviewRules": {
+        "R1_SCOPE": "pass",
+        "R2_DISTINCT": "pass",
+        "R3_SOURCES": "pass",
+        "R4_ACCURACY": "pass",
+        "R5_FIT": "pass"
+      },
+      "reviewFindings": [],
+      "sources": [
+        "https://isocertificationconsultants.ca/solutions/safety/",
+        "https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives"
+      ]
+    },
+    {
+      "id": "process-mapping-ownership",
+      "topic": "Process mapping and process ownership software",
+      "aliases": [],
+      "primaryKeyword": "process mapping software for quality management",
+      "secondaryKeywords": [
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "moduleSlugs": [
+        "processes"
+      ],
+      "audience": "Canadian quality and operations teams",
+      "problem": "Process maps go stale, processes lack named owners and documents are not tied to the processes they govern, which surfaces at audit.",
+      "priority": 8,
+      "proposedAt": "2026-10-26T15:15:46.773Z",
+      "proposedBy": "topic-scout",
+      "approval": "approved",
+      "approvedBy": "scout-reviewer",
+      "approvedAt": "2026-10-26T15:15:46.773Z",
+      "reviewRules": {
+        "R1_SCOPE": "pass",
+        "R2_DISTINCT": "pass",
+        "R3_SOURCES": "pass",
+        "R4_ACCURACY": "pass",
+        "R5_FIT": "pass"
+      },
+      "reviewFindings": [],
+      "sources": [
+        "https://isocertificationconsultants.ca/solutions/processes/",
+        "https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html"
+      ]
     }
   ]
 }
