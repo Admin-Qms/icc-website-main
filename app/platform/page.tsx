@@ -3,51 +3,67 @@ import Link from "next/link";
 import { PageHeader, SectionHeading, CTASection } from "@/components/ui";
 import { Stagger, StaggerItem, Reveal } from "@/components/motion";
 import { Icon, ArrowRight, Check } from "@/components/Icons";
-import { PLATFORM, DIFFERENTIATORS, AI_PRINCIPLES } from "@/lib/site";
+import { PLATFORM, DIFFERENTIATORS, AI_PRINCIPLES, SITE } from "@/lib/site";
+import { pageTitle } from "@/lib/seo";
+import { serializeJsonLd } from "@/lib/blog";
+
+const DESCRIPTION =
+  "AI-powered compliance management software for quality, documents, audits, training and suppliers. Stay audit-ready every day, with experts when you want them.";
 
 export const metadata: Metadata = {
-  title: "Compliance Management Software",
-  description:
-    "Compliance management software with eleven modules, an AI assistant that acts within your permissions, and AI suggestions a person always reviews.",
+  title: pageTitle("AI Compliance Management Software"),
+  description: DESCRIPTION,
   alternates: { canonical: "/platform" },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Compliance management software",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  description: DESCRIPTION,
+  provider: { "@type": "Organization", name: SITE.legalName, url: SITE.url },
+  url: `${SITE.url}/platform/`,
 };
 
 const STEPS = [
   {
-    title: "Assess",
+    title: "Know where you stand",
     detail:
-      "A certified consultant walks the floor for the gap analysis and scores every clause. The Standards module then holds the status of each clause and the evidence behind it.",
+      "A certified consultant walks the floor for the gap analysis and scores every clause. The Standards module then shows the status of each clause and the evidence behind it, so you see your gaps before the auditor does.",
   },
   {
-    title: "Build",
+    title: "Set up your system",
     detail:
-      "Documents holds the procedures, Processes holds the process maps and their owners, and Training builds the competency matrix.",
+      "Documents holds your procedures, Processes holds the process maps and their owners, and Training builds the competency matrix. Optional AI drafting helps with first versions, and a person reviews each one.",
   },
   {
-    title: "Operate",
+    title: "Work as usual, records build themselves",
     detail:
-      "Audits, Improvements, Safety, Assets, Vendors and Supplier Quality produce the records as the work happens.",
+      "Audits, Improvements, Safety, Assets, Vendors and Supplier Quality produce the records as the work happens, with overdue items flagged on your dashboard.",
   },
   {
-    title: "Certify",
+    title: "Walk into the audit ready",
     detail:
-      "The statement of applicability, audit reports and sealed CAPA records are ready for the certification body. A consultant is in the room for Stage 1 and Stage 2.",
+      "The statement of applicability, audit reports and sealed CAPA records are ready for the certification body. If you want a consultant in the room for Stage 1 and Stage 2, they are there.",
   },
 ];
 
 export default function PlatformPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />
       <PageHeader
         eyebrow="The software"
-        title={<>Compliance management software, <span className="text-teal-700">configured with you</span></>}
-        intro="Eleven modules that hold the evidence a certification audit asks for, produced as a by-product of daily work rather than assembled in a panic beforehand. Our certified consultants configure the modules around how your business runs and map them to any standard you certify against."
+        title={<>The AI-powered operating system for <span className="text-teal-700">quality and compliance</span></>}
+        intro="Our compliance management software puts eleven modules in one place and keeps the evidence a certification audit asks for as your team works, instead of leaving it to be assembled in a panic beforehand. AI does the paperwork and flags what is slipping. You stay ready for an audit any day, for any standard you certify against."
       >
         <Link href="/solutions" className="btn-primary">
           See the modules <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/contact" className="btn-ghost">
-          Request a walkthrough
+          Book a demo
         </Link>
       </PageHeader>
 
@@ -55,8 +71,8 @@ export default function PlatformPage() {
       <section className="bg-white py-16 lg:py-24">
         <div className="container-page">
           <SectionHeading
-            eyebrow="How it works"
-            title="From gap analysis to the certification audit, one system"
+            eyebrow="Your path to certification"
+            title="From first gap to passed audit, in one system"
             align="center"
           />
           <div className="relative mt-14">
@@ -82,9 +98,9 @@ export default function PlatformPage() {
       <section className="bg-soft py-16 lg:py-24">
         <div className="container-page">
           <SectionHeading
-            eyebrow="Capabilities"
-            title="What the software adds on top of the modules"
-            intro="The assistant, optional AI drafting, notifications, the home dashboard and a consultant on call. Every AI output is a suggestion a person reviews."
+            eyebrow="What you get"
+            title="Less manual work, and early warning before anything slips"
+            intro="An AI assistant, optional AI drafting, notifications, a home dashboard and a consultant on call. AI drafts and flags; a person reviews and signs off."
           />
           <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {PLATFORM.map((f) => (
@@ -108,8 +124,8 @@ export default function PlatformPage() {
           <div>
             <SectionHeading
               eyebrow="How AI is kept in check"
-              title="AI helps. A person always signs off."
-              intro="Regulated buyers need to know who did what. The assistant works inside the permissions you already set, shows its plan before it acts, and leaves a trail that separates AI from people."
+              title="AI does the paperwork. You stay in control."
+              intro="You will always know who did what. The assistant works inside the permissions you already set, shows its plan before it acts, and leaves a trail that separates AI from people. Gap assessments and audits are always done by people."
             />
           </div>
           <Stagger className="grid gap-4">
@@ -135,9 +151,9 @@ export default function PlatformPage() {
         <div className="container-page grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <SectionHeading
-              eyebrow="The hybrid difference"
-              title="Software alone will not pass your audit"
-              intro="Software vendors hand you templates and walk away. Consultants hand you a binder no one maintains. We put both on the same system so the work is done and defensible. The certification body certifies; we prepare you and the software holds the evidence."
+              eyebrow="Expert help when you want it"
+              title="Experts when you want them"
+              intro="Use the software on its own, or bring in our certified consultants to set it up with you and guide you to certification. Either way the work is done and defensible, because the software holds the evidence. The certification body certifies; we prepare you."
             />
           </div>
           <Stagger className="grid gap-4 sm:grid-cols-2">
