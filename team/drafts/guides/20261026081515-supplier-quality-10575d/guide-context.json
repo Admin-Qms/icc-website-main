@@ -49,6 +49,14 @@
     {
       "term": "Mill Test Report (MTR)",
       "definition": "A certified quality record issued by a raw material producer validating the chemical composition, physical properties, and specification compliance of a manufacturing heat or lot."
+    },
+    {
+      "term": "Containment action",
+      "definition": "An immediate interim control implemented to identify, quarantine, and prevent suspect nonconforming product from progressing through the supply chain or into production while root-cause analysis is pending."
+    },
+    {
+      "term": "Effectiveness verification",
+      "definition": "A documented evaluation conducted over an agreed production volume or calendar window to confirm that an implemented corrective action has successfully prevented defect recurrence."
     }
   ],
   "roles": [
@@ -75,7 +83,8 @@
     "Operations",
     "Quality control inspector",
     "Material review board lead",
-    "Quality systems analyst"
+    "Quality systems analyst",
+    "Supplier Quality Coordinator"
   ],
   "recordNames": [
     "Process gap assessment report",
@@ -93,7 +102,11 @@
     "Electronic receiving log entry linking shipment details to internal lot numbers",
     "Completed receiving inspection report with measured values and attached material documents",
     "Controlled nonconformance report with Material Review Board disposition authorization",
-    "Traceability link between supplier lot, internal nonconformance report, and credit memo"
+    "Traceability link between supplier lot, internal nonconformance report, and credit memo",
+    "Initiated SCAR record with pre-populated defect details, assigned response deadlines, and severity classification",
+    "SCAR response review record",
+    "Controlled SCAR action plan approval record with logged reviewer comments and verification milestones",
+    "Formal SCAR closure record signed by Quality Engineering with attached effectiveness verification data"
   ],
   "example": {
     "label": "Illustrative example",
@@ -146,6 +159,18 @@
         "Determine whether dimensional, mechanical, and material test results meet engineering acceptance criteria",
         "Authorize rework, return to vendor, scrap, or formal concession with technical justification",
         "Reconcile physical material returns against issued credit notes and update supplier evaluation metrics"
+      ]
+    },
+    {
+      "slug": "supplier-actions",
+      "title": "Following supplier corrective actions: Supplier quality management software",
+      "summary": "The chapter adheres strictly to the brief, plan, and research requirements. It covers the end-to-end supplier corrective action request (SCAR) workflow, including triggering SCARs from receiving inspection records, capturing disciplined root cause and containment evidence, conducting human reviews of action plans and AI-generated summaries, and verifying sustained effectiveness over an evaluation window. Pending capability register items (external supplier portal tasks and closure displays) are accurately treated as demonstration evaluation checks, all citations match approved sources, all hypothetical examples are explicitly labeled, and no unassigned FAQ content is included.",
+      "bodyHash": "05d2f43d4b72188933ac4403fb3b63717543aac02351edcce1c41d0f78c02cee",
+      "decisions": [
+        "Determine whether defect severity or recurring trend warrants issuing a formal SCAR to the external provider",
+        "Assess whether supplier containment actions and proposed root-cause determination are technically credible and sufficient",
+        "Approve proposed corrective action plan or mandate revision and resubmission",
+        "Determine whether corrective action demonstrated sustained recurrence prevention over 90-day evaluation window"
       ]
     }
   ],

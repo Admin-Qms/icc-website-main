@@ -1,0 +1,132 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The chapter adheres strictly to the brief, plan, and research requirements. It covers the end-to-end supplier corrective action request (SCAR) workflow, including triggering SCARs from receiving inspection records, capturing disciplined root cause and containment evidence, conducting human reviews of action plans and AI-generated summaries, and verifying sustained effectiveness over an evaluation window. Pending capability register items (external supplier portal tasks and closure displays) are accurately treated as demonstration evaluation checks, all citations match approved sources, all hypothetical examples are explicitly labeled, and no unassigned FAQ content is included.",
+  "glossary": [
+    {
+      "term": "Containment action",
+      "definition": "An immediate interim control implemented to identify, quarantine, and prevent suspect nonconforming product from progressing through the supply chain or into production while root-cause analysis is pending."
+    },
+    {
+      "term": "Effectiveness verification",
+      "definition": "A documented evaluation conducted over an agreed production volume or calendar window to confirm that an implemented corrective action has successfully prevented defect recurrence."
+    }
+  ],
+  "roles": [
+    "Supplier Quality Engineer",
+    "Supplier Quality Coordinator",
+    "Quality Assurance Manager"
+  ],
+  "recordNames": [
+    "Initiated SCAR record with pre-populated defect details, assigned response deadlines, and severity classification",
+    "SCAR response review record",
+    "Controlled SCAR action plan approval record with logged reviewer comments and verification milestones",
+    "Formal SCAR closure record signed by Quality Engineering with attached effectiveness verification data"
+  ],
+  "decisions": [
+    "Determine whether defect severity or recurring trend warrants issuing a formal SCAR to the external provider",
+    "Assess whether supplier containment actions and proposed root-cause determination are technically credible and sufficient",
+    "Approve proposed corrective action plan or mandate revision and resubmission",
+    "Determine whether corrective action demonstrated sustained recurrence prevention over 90-day evaluation window"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Triggering SCARs directly from receiving and in-process nonconformance records",
+        "section": "Triggering SCARs directly from receiving and in-process nonconformance records"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Triggering SCARs directly from receiving and in-process nonconformance records; semantic review verifies support",
+        "section": "Triggering SCARs directly from receiving and in-process nonconformance records"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Capturing supplier root-cause analysis and objective containment evidence",
+        "section": "Capturing supplier root-cause analysis and objective containment evidence"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Capturing supplier root-cause analysis and objective containment evidence; semantic review verifies support",
+        "section": "Capturing supplier root-cause analysis and objective containment evidence"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Reviewing proposed corrective actions and human review of automated summaries",
+        "section": "Reviewing proposed corrective actions and human review of automated summaries"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Reviewing proposed corrective actions and human review of automated summaries; semantic review verifies support",
+        "section": "Reviewing proposed corrective actions and human review of automated summaries"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Verifying corrective action effectiveness and recurrence prevention",
+        "section": "Verifying corrective action effectiveness and recurrence prevention"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Verifying corrective action effectiveness and recurrence prevention; semantic review verifies support",
+        "section": "Verifying corrective action effectiveness and recurrence prevention"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "d7609aa9c393120aec372c90fde1bcddfa60a360283b4744f3af838bed30e25d",
+  "outputContextHash": "89d065d42cde2d9f2915f6fd4b0dfacc82039b0d5606099aec5912cf869c2bf6",
+  "reviewedAt": "2026-10-26T15:07:33.425Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
