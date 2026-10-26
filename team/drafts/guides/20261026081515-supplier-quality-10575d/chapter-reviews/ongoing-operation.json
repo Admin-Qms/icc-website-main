@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The chapter adheres strictly to the plan, research sources, and guide context. It thoroughly covers maintaining the supplier quality system, auditing external provider workflows against ISO 9001 requirements with historical edition context, evaluating operational indicators without speculative ROI formulas, answering assigned implementation and compliance questions, and conducting scripted software demonstrations. Pending capabilities such as supplier portals and automated APQP/PPAP tracking are properly framed as items to verify live, human-in-the-loop controls over automated suggestions are reinforced, and all hypothetical examples are explicitly labeled.",
+  "summary": "The guide page adheres strictly to the plan, research brief, and context governance. It covers post-implementation maintenance and ongoing evaluation: conducting periodic workflow and external provider audits, evaluating operational indicators and total cost without fabricated ROI formulas, addressing recurring operational and compliance questions via an assigned FAQ section, and executing an evidence-based vendor demonstration script. All roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are present and aligned with verified sources.",
   "glossary": [],
   "roles": [
     "Lead Internal Quality Auditor",
@@ -17,14 +17,14 @@
   "recordNames": [
     "Internal audit finding report",
     "Annual supplier quality software governance report",
-    "Standard operational Q&A bulletin",
-    "Consolidated software demonstration evaluation matrix"
+    "Standard operational Q&A bulletin and software governance policy update",
+    "Consolidated software demonstration evaluation matrix and final vendor selection recommendation"
   ],
   "decisions": [
-    "Assess whether operational supplier quality software practices conform to ISO 9001 external provider requirements",
-    "Determine whether software delivers demonstrated operational control and risk reduction justifying ongoing licensing",
-    "Determine which operational ambiguities require published formal guidance",
-    "Score vendor demonstrations against technical compliance criteria to determine platform selection"
+    "Assess whether operational supplier quality software practices conform to documented procedures and external provider requirements",
+    "Determine whether software delivers demonstrated operational control and risk reduction justifying ongoing cost",
+    "Publish formal organizational guidance resolving operational ambiguities in supplier quality management",
+    "Score vendor demonstrations against technical compliance criteria and determine final platform selection"
   ],
   "pass": true,
   "deterministic": {
@@ -171,8 +171,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "b4da001d3cf34ce757bc9eca5701e61e00b2ac9bb54dcdd0019f6a0b71d12db7",
-  "outputContextHash": "3293b11eb69798067df3d95f51a8840e632e3f9d66c18a268c2a1000abdd1ede",
-  "reviewedAt": "2026-10-26T15:26:39.985Z",
+  "inputHash": "2207bd704755eceff4c4b044c1cd797a2ec5eae38f79c0e464fe9d8cc3f44e8c",
+  "outputContextHash": "e98f048176b8be08e3bf134a7c0da57917322de33dedb4b8fcd535b012dee8ab",
+  "reviewedAt": "2026-10-26T15:31:23.161Z",
   "reviewer": "Configured independent chapter reviewer"
 }
