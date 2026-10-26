@@ -25,6 +25,14 @@
     {
       "term": "Human-in-the-Loop AI Review",
       "definition": "A mandatory governance protocol requiring an authorized human owner to evaluate, validate, or reject automated or AI suggestions before commitment into a controlled quality record."
+    },
+    {
+      "term": "Vendor evaluation matrix",
+      "definition": "A comparative evaluation record scoring software capabilities against operational workflow requirements, noting whether features are verified with sample data, unverified, or pending release."
+    },
+    {
+      "term": "Audit trail",
+      "definition": "An unalterable, automated log of user actions, status modifications, inspection dispositions, and evidence attachment updates that records timestamps and user identities."
     }
   ],
   "roles": [
@@ -35,13 +43,21 @@
     "Procurement Lead",
     "Director of Quality and Compliance",
     "Supplier Quality Engineer",
-    "Receiving inspector"
+    "Receiving inspector",
+    "Quality Systems Lead",
+    "Quality Operations Lead",
+    "Information Technology Compliance Specialist",
+    "Operations Financial Analyst"
   ],
   "recordNames": [
     "Process gap assessment report",
     "Order specification package with engineering sign-off",
     "Controlled Approved Supplier List qualification authorization entry",
-    "Component quality inspection plan"
+    "Component quality inspection plan",
+    "Vendor evaluation matrix with capability validation statuses and architectural risk notes",
+    "Controlled nonconformance disposition record with author identity, review timestamp, and electronic signature",
+    "Security and access control validation protocol detailing permission test outcomes",
+    "Total cost of ownership evaluation sheet detailing implementation, licensing, and validation costs"
   ],
   "example": {
     "label": "Illustrative example",
@@ -58,6 +74,18 @@
         "Verify whether supplier purchase orders contain verified drawing numbers, acceptance standards, and statutory clauses",
         "Authorize or deny placement of external provider on the controlled Approved Supplier List",
         "Assign mandatory receiving inspection levels, sampling protocols, and required Mill Test Report validations"
+      ]
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluating software capabilities: Supplier quality management software",
+      "summary": "The chapter adheres precisely to the plan and source research. It establishes an operational, workflow-based framework for evaluating supplier quality management software across qualification, receiving inspection, and SCAR integration. Core capabilities are clearly distinguished from pending roadmap items, referencing the capability register status on the ICC product page and auditor guidance from the ISO 9001 APG. Each subsection systematically addresses its assigned role, input, decision, record, exception, and evaluation criteria, supplemented by clearly labeled illustrative examples. Unassigned FAQ content is correctly omitted, and all links match approved sources.",
+      "bodyHash": "d18e7ddec971576f3412e7082a07de39315c925eb47d31aa7aa9892d000b567d",
+      "decisions": [
+        "Determine which software vendors meet mandatory operational integration criteria for formal demonstration",
+        "Accept, modify, or reject AI-generated nonconformance descriptions and disposition recommendations",
+        "Determine if system audit trail meets electronic signature integrity and data tampering prevention standards",
+        "Determine whether licensing models align with operational headcount across receiving bays and quality teams"
       ]
     }
   ],
