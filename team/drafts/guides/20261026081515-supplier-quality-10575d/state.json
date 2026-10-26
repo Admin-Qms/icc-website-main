@@ -77,10 +77,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-26T15:19:33.012Z"
+    },
+    "ongoing-operation": {
+      "hash": "448f9a6ad6a4bbb45c85dfef9417b65d7672853d55589c417af0f983503f64c0",
+      "wordCount": 2010,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-26T15:26:20.290Z"
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T15:19:46.042Z",
+  "updatedAt": "2026-10-26T15:26:39.988Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -1489,7 +1496,7 @@
     "reviewedChapters": [],
     "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
   },
-  "contextHash": "81ec78ad008dcb9a59b13ef8ee854fe45fec91a9482f7db8501122b363b96fb7",
+  "contextHash": "3293b11eb69798067df3d95f51a8840e632e3f9d66c18a268c2a1000abdd1ede",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2554,6 +2561,184 @@
       "inputHash": "5e875340c1106e40824d2a0d0020e73d85a2f693337edc1a9c31e353b1af6a92",
       "outputContextHash": "81ec78ad008dcb9a59b13ef8ee854fe45fec91a9482f7db8501122b363b96fb7",
       "reviewedAt": "2026-10-26T15:19:46.038Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "ongoing-operation": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The chapter adheres strictly to the plan, research sources, and guide context. It thoroughly covers maintaining the supplier quality system, auditing external provider workflows against ISO 9001 requirements with historical edition context, evaluating operational indicators without speculative ROI formulas, answering assigned implementation and compliance questions, and conducting scripted software demonstrations. Pending capabilities such as supplier portals and automated APQP/PPAP tracking are properly framed as items to verify live, human-in-the-loop controls over automated suggestions are reinforced, and all hypothetical examples are explicitly labeled.",
+      "glossary": [],
+      "roles": [
+        "Lead Internal Quality Auditor",
+        "Director of Operational Excellence",
+        "Quality Compliance Manager",
+        "Software Evaluation Committee Chair"
+      ],
+      "recordNames": [
+        "Internal audit finding report",
+        "Annual supplier quality software governance report",
+        "Standard operational Q&A bulletin",
+        "Consolidated software demonstration evaluation matrix"
+      ],
+      "decisions": [
+        "Assess whether operational supplier quality software practices conform to ISO 9001 external provider requirements",
+        "Determine whether software delivers demonstrated operational control and risk reduction justifying ongoing licensing",
+        "Determine which operational ambiguities require published formal guidance",
+        "Score vendor demonstrations against technical compliance criteria to determine platform selection"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Conducting periodic workflow audits and ISO 9001 external provider reviews",
+            "section": "Conducting periodic workflow audits and ISO 9001 external provider reviews"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Conducting periodic workflow audits and ISO 9001 external provider reviews; semantic review verifies support",
+            "section": "Conducting periodic workflow audits and ISO 9001 external provider reviews"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Evaluating operational improvements and total cost without invented financial metrics",
+            "section": "Evaluating operational improvements and total cost without invented financial metrics"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Evaluating operational improvements and total cost without invented financial metrics; semantic review verifies support",
+            "section": "Evaluating operational improvements and total cost without invented financial metrics"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Addressing frequently asked implementation and compliance questions",
+            "section": "Addressing frequently asked implementation and compliance questions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Addressing frequently asked implementation and compliance questions; semantic review verifies support",
+            "section": "Addressing frequently asked implementation and compliance questions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Preparing an evidence-based software demonstration script",
+            "section": "Preparing an evidence-based software demonstration script"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Preparing an evidence-based software demonstration script; semantic review verifies support",
+            "section": "Preparing an evidence-based software demonstration script"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What operational problem should supplier quality software solve first?",
+            "section": "What operational problem should supplier quality software solve first?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Which historical supplier quality records should be migrated into a new system?",
+            "section": "Which historical supplier quality records should be migrated into a new system?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should user permissions and decision authorities be assigned between purchasing and quality?",
+            "section": "How should user permissions and decision authorities be assigned between purchasing and quality?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should automated decision gates and approval workflows be tested before go-live?",
+            "section": "How should automated decision gates and approval workflows be tested before go-live?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should an organization handle obsolete and inactive supplier records during migration?",
+            "section": "How should an organization handle obsolete and inactive supplier records during migration?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What objective evidence must supplier quality software provide during an ISO 9001 audit?",
+            "section": "What objective evidence must supplier quality software provide during an ISO 9001 audit?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should user training and system adoption be measured across manufacturing operations?",
+            "section": "How should user training and system adoption be measured across manufacturing operations?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Does implementing supplier quality management software guarantee ISO 9001 certification?",
+            "section": "Does implementing supplier quality management software guarantee ISO 9001 certification?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What realistic scenarios should be prepared for a vendor software demonstration?",
+            "section": "What realistic scenarios should be prepared for a vendor software demonstration?"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "b4da001d3cf34ce757bc9eca5701e61e00b2ac9bb54dcdd0019f6a0b71d12db7",
+      "outputContextHash": "3293b11eb69798067df3d95f51a8840e632e3f9d66c18a268c2a1000abdd1ede",
+      "reviewedAt": "2026-10-26T15:26:39.985Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

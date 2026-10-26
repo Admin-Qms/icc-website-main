@@ -117,7 +117,11 @@
     "Lead systems trainer",
     "Implementation project manager",
     "Continuous improvement director",
-    "Supervisor"
+    "Supervisor",
+    "Lead Internal Quality Auditor",
+    "Director of Operational Excellence",
+    "Quality Compliance Manager",
+    "Software Evaluation Committee Chair"
   ],
   "recordNames": [
     "Process gap assessment report",
@@ -151,7 +155,11 @@
     "Employee training completion log and practical competency assessment",
     "Workflow simulation validation report",
     "Facility deployment milestone sign-off and operational readiness log",
-    "Post-implementation adoption audit report"
+    "Post-implementation adoption audit report",
+    "Internal audit finding report",
+    "Annual supplier quality software governance report",
+    "Standard operational Q&A bulletin",
+    "Consolidated software demonstration evaluation matrix"
   ],
   "example": {
     "label": "Illustrative example",
@@ -252,6 +260,18 @@
         "Determine whether simulated workflow transactions satisfy internal operating procedures and data integrity standards",
         "Authorize phased go-live progression from primary fabrication plant to secondary assembly facilities",
         "Determine if system adoption meets operational readiness criteria or requires procedural adjustments"
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Maintaining the system and choosing next steps: Supplier quality management software",
+      "summary": "The chapter adheres strictly to the plan, research sources, and guide context. It thoroughly covers maintaining the supplier quality system, auditing external provider workflows against ISO 9001 requirements with historical edition context, evaluating operational indicators without speculative ROI formulas, answering assigned implementation and compliance questions, and conducting scripted software demonstrations. Pending capabilities such as supplier portals and automated APQP/PPAP tracking are properly framed as items to verify live, human-in-the-loop controls over automated suggestions are reinforced, and all hypothetical examples are explicitly labeled.",
+      "bodyHash": "28c6757cf9447add25bafcfb7f195aa34b053c640104bad21c0d101ba96b0913",
+      "decisions": [
+        "Assess whether operational supplier quality software practices conform to ISO 9001 external provider requirements",
+        "Determine whether software delivers demonstrated operational control and risk reduction justifying ongoing licensing",
+        "Determine which operational ambiguities require published formal guidance",
+        "Score vendor demonstrations against technical compliance criteria to determine platform selection"
       ]
     }
   ],
