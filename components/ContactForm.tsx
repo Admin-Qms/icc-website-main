@@ -8,12 +8,22 @@ import { trackLead } from "@/lib/analytics";
 
 type Status = "idle" | "submitting" | "done" | "error";
 
+const REQUEST_OPTIONS = [
+  { value: "demo", label: "Demo" },
+  { value: "consultation", label: "Consultation" },
+  { value: "assessment", label: "Assessment" },
+];
+
 export function ContactForm({
   compact = false,
   title,
+  askRequest = false,
+  submitLabel = "Send message",
 }: {
   compact?: boolean;
   title?: string;
+  askRequest?: boolean;
+  submitLabel?: string;
 }) {
   const [status, setStatus] = useState<Status>("idle");
   const id = useId();
@@ -32,6 +42,7 @@ export function ContactForm({
       phone: data.phone,
       company: data.company,
       standard: data.standard,
+      ...(askRequest ? { request: data.request } : {}),
       message: data.message,
       botcheck: data.botcheck,
     };
@@ -113,6 +124,32 @@ export function ContactForm({
               className="hidden"
               aria-hidden
             />
+            {askRequest && (
+              <fieldset>
+                <legend className="text-sm font-medium text-slate-700">
+                  What would you like?
+                </legend>
+                <div className="mt-1.5 grid gap-2 sm:grid-cols-3">
+                  {REQUEST_OPTIONS.map((option) => (
+                    <label
+                      key={option.value}
+                      htmlFor={`${id}-request-${option.value}`}
+                      className="flex cursor-pointer items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 transition has-[:checked]:border-teal-500 has-[:checked]:ring-2 has-[:checked]:ring-teal-100"
+                    >
+                      <input
+                        type="radio"
+                        id={`${id}-request-${option.value}`}
+                        name="request"
+                        value={option.value}
+                        defaultChecked={option.value === "demo"}
+                        className="accent-teal-700"
+                      />
+                      {option.label}
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+            )}
             <div className="grid gap-4 sm:grid-cols-2">
               <Field
                 label="Full name"
@@ -202,7 +239,7 @@ export function ContactForm({
                 ? "Sending…"
                 : status === "error"
                   ? "Try again"
-                  : "Send message"}
+                  : submitLabel}
               {status !== "submitting" && <ArrowRight className="h-4 w-4" />}
             </button>
             <p className="text-center text-xs text-slate-500">

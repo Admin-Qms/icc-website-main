@@ -136,3 +136,35 @@ test("rate limits repeated enquiries from the same client", async (t) => {
   assert.equal(response.status, 429);
   assert.ok(Number(response.headers.get("retry-after")) > 0);
 });
+
+test("a missing request type is sent as a demo request", async (t) => {
+  configured(t);
+  let email;
+  t.mock.method(globalThis, "fetch", async (_url, options) => {
+    email = JSON.parse(options.body);
+    return Response.json({ id: "test-email-id" });
+  });
+  assert.equal((await contact.fetch(request())).status, 200);
+  assert.match(email.subject, /^Demo request — ISO 9001 — Example Ltd\.$/);
+  assert.ok(email.text.includes("Request: Demo"));
+});
+
+test("consultation and assessment requests are labelled in the subject", async (t) => {
+  configured(t);
+  const subjects = [];
+  t.mock.method(globalThis, "fetch", async (_url, options) => {
+    subjects.push(JSON.parse(options.body).subject);
+    return Response.json({ id: "test-email-id" });
+  });
+  await contact.fetch(request({ ...enquiry, request: "consultation" }));
+  await contact.fetch(request({ ...enquiry, request: "assessment" }));
+  assert.ok(subjects[0].startsWith("Consultation request — "));
+  assert.ok(subjects[1].startsWith("Assessment request — "));
+});
+
+test("an unknown request type is rejected", async (t) => {
+  configured(t);
+  const send = t.mock.method(globalThis, "fetch", () => { throw new Error("Must not send"); });
+  assert.equal((await contact.fetch(request({ ...enquiry, request: "pricing" }))).status, 400);
+  assert.equal(send.mock.callCount(), 0);
+});
