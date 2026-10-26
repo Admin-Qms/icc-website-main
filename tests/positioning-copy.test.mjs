@@ -6,7 +6,7 @@ import test from "node:test";
 const ROOT = new URL("..", import.meta.url).pathname;
 
 // Mirrors POSITIONING_PATTERNS in team/agents/content/contentQA.js — keep both in sync.
-const POSITIONING_PATTERNS = [
+export const POSITIONING_PATTERNS = [
   /\byourqms\b/i,
   /\bquro\b/i,
   /yourqms\.com/i,

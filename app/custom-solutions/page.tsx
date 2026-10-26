@@ -11,7 +11,7 @@ import { CUSTOM_EXAMPLES, EXPERTS, MODULES, SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Custom Compliance Solutions",
   description:
-    "When a standard module is not enough, industry experts and engineers build one. Onsite assessment, gap analysis and a solution fitted to your processes.",
+    "When a standard module does not fit, our experts assess your operation and build one that does. See a demo, then a solution fitted to your processes.",
   alternates: { canonical: "/custom-solutions" },
 };
 
@@ -21,7 +21,7 @@ const jsonLd = {
   serviceType: "Custom compliance management system solutions",
   name: "Custom Compliance Solutions",
   description:
-    "Custom-built compliance management solutions designed around a company's specific challenge, following an onsite assessment and gap analysis by industry experts and engineers.",
+    "Custom-built compliance management solutions designed around a company's specific challenge, after an onsite assessment and gap analysis by industry experts.",
   provider: { "@type": "Organization", name: SITE.legalName },
   areaServed: { "@type": "Country", name: "Canada" },
 };
@@ -43,7 +43,7 @@ export default function CustomSolutionsPage() {
         fx={<HeaderIconsFX icons={["design", "audit", "loop", "rollout", "expert", "assessment"]} />}
       >
         <Link href="/contact" className="btn-primary">
-          Book an onsite assessment <ArrowRight className="h-4 w-4" />
+          Book a demo <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/solutions" className="btn-outline">
           Browse standard modules
@@ -138,7 +138,7 @@ export default function CustomSolutionsPage() {
           <Reveal delay={0.1} className="mt-10 text-center">
             <p className="text-slate-600">Don&apos;t see your situation? Tell us what you are facing and we will say plainly whether a module fits or something has to be built.</p>
             <Link href="/contact" className="btn-primary mt-4">
-              Tell us your challenge <ArrowRight className="h-4 w-4" />
+              Book a demo <ArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>
         </div>
@@ -170,8 +170,8 @@ export default function CustomSolutionsPage() {
       </section>
 
       <CTASection
-        title="Start with an onsite assessment — the fee comes off your solution"
-        intro="Tell us the challenge you're facing. We'll come see your operation, map the gaps, and show you exactly what it takes to fix them — with the assessment credited toward whatever we build."
+        title="See how a module built around your process would work"
+        intro="Book a demo and tell us the challenge you're facing. We'll show the software, say plainly whether a module fits or something has to be built, and credit any onsite assessment toward what we build."
       />
     </>
   );

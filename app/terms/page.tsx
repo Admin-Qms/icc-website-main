@@ -76,7 +76,7 @@ export default function TermsPage() {
               href="/contact/"
               className="font-semibold text-teal-700 hover:text-teal-800"
             >
-              Contact a consultant
+              Contact us
             </Link>
             .
           </p>

@@ -42,7 +42,7 @@ export default function ROIPage() {
           Estimate your return <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/contact" className="btn-outline">
-          Talk to a consultant
+          Book a demo
         </Link>
       </PageHeader>
 
@@ -86,8 +86,8 @@ export default function ROIPage() {
       </section>
 
       <CTASection
-        title="Stop estimating — get your real number"
-        intro="An onsite assessment maps your gaps, prices the fix, and shows the payback for your operation specifically. The fee is credited in full toward whatever we build."
+        title="Stop estimating. See your real number in a demo"
+        intro="Book a demo and we'll set the software up for your standards and processes, then work through where your time and cost go. An onsite assessment, if you want one, is credited in full toward whatever we build."
       />
     </>
   );
