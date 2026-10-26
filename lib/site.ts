@@ -601,6 +601,7 @@ export type Module = {
   summary: string;
   features: string[];
   standardsHint: string;
+  seoTitle: string;
   metaDescription: string;
   problem: string;
   howItWorks: string[];
@@ -625,6 +626,7 @@ export const MODULES: Module[] = [
       "Statement of applicability export (.xlsx)",
     ],
     standardsHint: "Supports every catalogue standard, plus custom standards",
+    seoTitle: "Standards and Clause Compliance Software",
     metaDescription:
       "See clause coverage for every standard before the auditor does. Track status per clause, coverage against a target, linked evidence and an SoA export.",
     problem:
@@ -682,6 +684,7 @@ export const MODULES: Module[] = [
       "Approved copies frozen and hash-verified",
     ],
     standardsHint: "Foundation for every standard",
+    seoTitle: "Document Management Software",
     metaDescription:
       "Know which revision is current and prove it. Documents move from Draft to Obsolete with set approvers, browser editing and hash-verified approved copies.",
     problem:
@@ -745,6 +748,7 @@ export const MODULES: Module[] = [
       "Industry process templates; supported PDF charts imported for review",
     ],
     standardsHint: "Supports every management-system standard",
+    seoTitle: "Process Management Software",
     metaDescription:
       "Show an auditor how any process runs. A Level-1 map, Level-2 flowcharts, named owners, and the documents and clauses linked to each process.",
     problem:
@@ -791,6 +795,7 @@ export const MODULES: Module[] = [
       "Branded PDF report, audit trends, reusable checklist library",
     ],
     standardsHint: "Supports every ISO, IATF and AS standard",
+    seoTitle: "Audit Management Software",
     metaDescription:
       "Capture findings on the floor, not in a retype. Plan the annual programme, keep checklist, findings and evidence together, and issue a branded PDF report.",
     problem:
@@ -839,6 +844,7 @@ export const MODULES: Module[] = [
       "SCAR raised to a supplier directly; sealed, printable report after closure",
     ],
     standardsHint: "Supports ISO 9001, ISO 13485, IATF 16949",
+    seoTitle: "Nonconformance and Corrective Action Software",
     metaDescription:
       "Give every nonconformance an owner and a verified fix. Contain it, find root cause with 8D, 5 Whys, Fishbone or Fault tree, and close once the fix is verified.",
     problem:
@@ -903,6 +909,7 @@ export const MODULES: Module[] = [
       "Separate dashboard and permissions",
     ],
     standardsHint: "Supports ISO 45001",
+    seoTitle: "Safety Management Software",
     metaDescription:
       "Get near-misses reported before they become incidents. Anonymous no-login QR-code reporting, harm-based severity, and a dashboard with its own permissions.",
     problem:
@@ -955,6 +962,7 @@ export const MODULES: Module[] = [
       "Competency matrix with custom levels, bulk updates and certificates",
     ],
     standardsHint: "Supports every management-system standard",
+    seoTitle: "Training Management Software",
     metaDescription:
       "See who is qualified and prove it. A workforce directory, a training library with quizzes, campaigns with supervisor sign-off and a competency matrix.",
     problem:
@@ -996,6 +1004,7 @@ export const MODULES: Module[] = [
       "PFMEA, Process Flow and Control Plan kept linked; change and deviation requests",
     ],
     standardsHint: "Supports ISO 9001, IATF 16949, AS9100, ISO 13485",
+    seoTitle: "Supplier Quality Management Software",
     metaDescription:
       "Answer SCARs in a portal, not an inbox. Approval gates, scorecards, supplier audits, APQP, PPAP and FAI, with suppliers responding without seeing your data.",
     problem:
@@ -1069,6 +1078,7 @@ export const MODULES: Module[] = [
       "QR labels and PIN access on the shop floor; bulk Excel import",
     ],
     standardsHint: "Supports ISO 9001, ISO 13485, ISO/IEC 17025",
+    seoTitle: "Equipment and Asset Management Software",
     metaDescription:
       "Keep every instrument in date and every inspection signed. An equipment register with calibration intervals and certificates, maintenance and e-signatures.",
     problem:
@@ -1118,6 +1128,7 @@ export const MODULES: Module[] = [
       "Excel import from a generated template",
     ],
     standardsHint: "Supports ISO 9001, ISO 13485, ISO 22000",
+    seoTitle: "Vendor Management Software",
     metaDescription:
       "See every vendor's status and documents in one directory. Qualification status, compliance documents with expiry dates, evaluations and bulk Excel import.",
     problem:
@@ -1159,6 +1170,7 @@ export const MODULES: Module[] = [
       "Every AI output is a suggestion a person reviews",
     ],
     standardsHint: "Works across every module",
+    seoTitle: "AI Assistant for Compliance Management",
     metaDescription:
       "Hand routine tasks to an assistant while a person stays in control. It acts within your permissions, shows plans for approval and confirms destructive steps.",
     problem:

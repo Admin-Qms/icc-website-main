@@ -74,5 +74,12 @@ test("module meta descriptions are 120–160 characters", async () => {
     (m) => `${m.slug} (${m.metaDescription.length}): ${m.metaDescription}`,
   );
   assert.equal(MODULES.length, 11);
+  const OWNED = ["capa software", "document control software", "supplier quality software", "internal audit software", "calibration management software", "competency management software", "incident and near-miss reporting software", "process mapping software for quality management"];
+  for (const m of MODULES) {
+    assert.ok(typeof m.seoTitle === "string" && m.seoTitle.trim(), `${m.slug} needs a seoTitle`);
+    for (const text of [m.seoTitle, m.metaDescription]) {
+      for (const phrase of OWNED) assert.ok(!text.toLowerCase().includes(phrase), `${m.slug} uses guide-owned phrase "${phrase}"`);
+    }
+  }
   assert.deepEqual(offenders, [], `Module descriptions outside 120–160 characters:\n${offenders.join("\n")}`);
 });

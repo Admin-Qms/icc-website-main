@@ -20,11 +20,7 @@ export function generateMetadata({
   const m = MODULES.find((x) => x.slug === params.module);
   if (!m) return {};
   return {
-    title: pageTitle(
-      m.name === "AI Assistant"
-        ? "AI Assistant for Compliance Management"
-        : `${m.name} Management Software`,
-    ),
+    title: pageTitle(m.seoTitle),
     description: m.metaDescription,
     alternates: { canonical: `/solutions/${m.slug}` },
   };
