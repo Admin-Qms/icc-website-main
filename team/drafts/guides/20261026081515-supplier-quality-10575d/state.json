@@ -20,7 +20,7 @@
     "approval": "approved"
   },
   "productionSlotId": "2026-W44-slot-1",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "61c5ed5ee2017ca32de224df322cff9f448b48abed3aed0dee66f44fe767a4f0",
@@ -94,7 +94,7 @@
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T15:28:51.585Z",
+  "updatedAt": "2026-10-26T15:29:41.747Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -2855,7 +2855,17 @@
   },
   "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf",
   "outlineHash": "d6e830059b19659da8310599d150077829ad696266f48c49847e49336c7e3906",
-  "audit": null,
+  "audit": {
+    "claims": "failed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "unresolvedFindings": [
+      "In the chapter 'Maintaining the system and choosing next steps: Supplier quality management software', the assertion that 'ISO 9001:2026 was published in September 2026 as the current edition, with 2015 certificates remaining valid during a transition that ends in 2029' is an unverified factual claim unsupported by the supplied primary research evidence."
+    ],
+    "inputHash": "0823f640a743a39c12794c47bc231c1c70a1d352f10e83e4550fdfee0eb39957",
+    "reviewer": "Configured gemini independent review",
+    "reviewedAt": "2026-10-26T15:29:41.744Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }

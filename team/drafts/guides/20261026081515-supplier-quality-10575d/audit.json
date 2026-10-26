@@ -1,0 +1,11 @@
+{
+  "claims": "failed",
+  "consistency": "passed",
+  "repetition": "passed",
+  "unresolvedFindings": [
+    "In the chapter 'Maintaining the system and choosing next steps: Supplier quality management software', the assertion that 'ISO 9001:2026 was published in September 2026 as the current edition, with 2015 certificates remaining valid during a transition that ends in 2029' is an unverified factual claim unsupported by the supplied primary research evidence."
+  ],
+  "inputHash": "0823f640a743a39c12794c47bc231c1c70a1d352f10e83e4550fdfee0eb39957",
+  "reviewer": "Configured gemini independent review",
+  "reviewedAt": "2026-10-26T15:29:41.744Z"
+}
