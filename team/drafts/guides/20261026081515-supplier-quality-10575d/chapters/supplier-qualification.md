@@ -23,11 +23,11 @@ capabilityIds: []
 ---
 ## Defining supplier risk tiers and criticality beyond commercial pricing
 
-Qualification effort should follow risk, not habit. A plant that sends the same questionnaire to a stationery vendor and to the sole source of a structural casting spends too much on one and too little on the other. The first design decision in any supplier quality system is therefore the tier: a small set of levels that tells everyone how much evidence a supplier must provide before it receives a purchase order.
+Qualification effort should follow risk, not habit. A plant that sends the same questionnaire to a stationery vendor and to the sole source of a structural casting spends too much on one and too little on the other. The first design decision in any [supplier quality system](/solutions/supplier-quality/) is therefore the tier: a small set of levels that tells everyone how much evidence a supplier must provide before it receives a purchase order.
 
 The ISO and IAF [external providers guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf) puts the question plainly. Providers of critical components or services should be considered for their ability to supply consistently to specification, and not selected only because they can supply at an economical price. The paper is auditor guidance written for ISO 9001:2015, so it shows what a reviewer may ask rather than prescribing a method, but the question applies to any tiering scheme.
 
-Build tiers from three factors that your risk matrix already holds.
+Build tiers from three factors that your risk matrix already holds:
 
 - **Product consequence.** What happens to safety, function or compliance if the item fails, and can the failure be found by inspection at receiving?
 - **Process dependence.** Does the provider perform a process, such as heat treatment, whose result cannot be fully verified afterward?
@@ -53,7 +53,7 @@ The [external providers guidance](https://committee.iso.org/files/live/sites/tc1
 
 The quality assurance coordinator usually performs this review. Inputs include ISO 9001 certificates and their scope statements, welding procedure qualifications, insurance certificates and, where they apply, Canadian regulatory registrations. The decision is whether the certified scope covers the services you buy. The record is a validation entry with the verified expiry date and a note on the scope. The classic exception is a certificate that covers distribution only, while the contracted work is precision machining. In that case, the certificate does not support the approval, and the record should say so.
 
-Capture evidence in a consistent structure so that anyone can read it later.
+Capture evidence in a consistent structure so that anyone can read it later:
 
 1. **Document type and issuer.** Record what the document is and who issued it, such as the certification body or the testing authority.
 2. **Scope text.** Copy or attach the scope wording and note the matching purchased service.
@@ -75,7 +75,7 @@ A gate is a point where work stops until the right people sign. Without gates, q
 
 Design the gates to match the tier. A common pattern uses a technical evaluation, a commercial review and a final quality decision, each by a different function, so that no single person can approve a supplier alone. Engineering confirms the supplier can meet the specification. Purchasing confirms commercial terms and the supplier agreement. Quality confirms evidence and risk. The quality director gives the final approval from the completed technical evaluation, the audit findings and the commercial review. The record is a controlled approved supplier list entry that shows each signature and the approval date. When engineering sign-off is missing, the package cannot move to the active register.
 
-A status vocabulary keeps the gates visible. Four statuses cover most cases.
+A status vocabulary keeps the gates visible. Four statuses cover most cases:
 
 | Status | Meaning | Purchasing effect |
 | :--- | :--- | :--- |
@@ -100,7 +100,7 @@ Real operations cannot wait for every supplier to finish qualification. A line i
 
 The quality systems manager normally grants it. The inputs are the emergency requisition, a preliminary audit or evidence review and a plan to reduce the remaining risk. The decision limits the approval to a quantity or a window, for example, one purchase order or a short calendar period. The record is an authorization showing what is allowed, who approved it, the expiry date and the extra inspection that applies. If the date passes and open items remain, the exception is automatic suspension of the supplier, not a quiet extension.
 
-Write the conditions as rules that the software can enforce.
+Write the conditions as rules that the software can enforce:
 
 - **Time or lot limit.** State the end date or the maximum quantity, and require a documented reason for any extension by an authorized technical authority.
 - **Enhanced inspection.** Specify the receiving checks, such as inspecting every incoming lot, while the condition lasts.

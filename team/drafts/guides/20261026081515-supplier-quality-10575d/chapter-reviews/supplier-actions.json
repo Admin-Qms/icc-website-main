@@ -6,33 +6,27 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The chapter adheres strictly to the brief, plan, and research requirements. It covers the end-to-end supplier corrective action request (SCAR) workflow, including triggering SCARs from receiving inspection records, capturing disciplined root cause and containment evidence, conducting human reviews of action plans and AI-generated summaries, and verifying sustained effectiveness over an evaluation window. Pending capability register items (external supplier portal tasks and closure displays) are accurately treated as demonstration evaluation checks, all citations match approved sources, all hypothetical examples are explicitly labeled, and no unassigned FAQ content is included.",
-  "glossary": [
-    {
-      "term": "Containment action",
-      "definition": "An immediate interim control implemented to identify, quarantine, and prevent suspect nonconforming product from progressing through the supply chain or into production while root-cause analysis is pending."
-    },
-    {
-      "term": "Effectiveness verification",
-      "definition": "A documented evaluation conducted over an agreed production volume or calendar window to confirm that an implemented corrective action has successfully prevented defect recurrence."
-    }
-  ],
+  "summary": "The guide chapter fully complies with the brief, contextual boundaries, and primary source claims. It systematically covers the four required phases of supplier corrective actions: triggering SCARs directly from receiving nonconformance records, capturing root-cause analysis and objective containment evidence, reviewing proposed corrective actions with human review over automated summaries, and verifying post-implementation effectiveness before formal closure. All APG external providers guidance claims and ICC Supplier Quality module notes—including the pending status of portal-based tasking and mandatory human review of AI summaries—are accurately represented and properly qualified. Each section contains required workflow parameters (role, input, decision, record, exception), concrete software evaluation criteria, and a clearly labeled hypothetical example. No unassigned FAQ section is present.",
+  "glossary": [],
   "roles": [
     "Supplier Quality Engineer",
     "Supplier Quality Coordinator",
     "Quality Assurance Manager"
   ],
   "recordNames": [
-    "Initiated SCAR record with pre-populated defect details, assigned response deadlines, and severity classification",
+    "Initiated SCAR record",
+    "Nonconformance record",
+    "Dimensional inspection log",
+    "Containment report",
     "SCAR response review record",
-    "Controlled SCAR action plan approval record with logged reviewer comments and verification milestones",
-    "Formal SCAR closure record signed by Quality Engineering with attached effectiveness verification data"
+    "Controlled SCAR action plan approval record",
+    "Formal SCAR closure record"
   ],
   "decisions": [
     "Determine whether defect severity or recurring trend warrants issuing a formal SCAR to the external provider",
     "Assess whether supplier containment actions and proposed root-cause determination are technically credible and sufficient",
     "Approve proposed corrective action plan or mandate revision and resubmission",
-    "Determine whether corrective action demonstrated sustained recurrence prevention over 90-day evaluation window"
+    "Determine whether corrective action demonstrated sustained recurrence prevention over agreed evaluation window"
   ],
   "pass": true,
   "deterministic": {
@@ -125,8 +119,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "d7609aa9c393120aec372c90fde1bcddfa60a360283b4744f3af838bed30e25d",
-  "outputContextHash": "89d065d42cde2d9f2915f6fd4b0dfacc82039b0d5606099aec5912cf869c2bf6",
-  "reviewedAt": "2026-10-26T15:07:33.425Z",
+  "inputHash": "aec0fcc7d694b84b588e224b1538b568e271b23324d643b18c4dafcf968d15ab",
+  "outputContextHash": "a5fbb1e21bd0fb26e896c3352ac863ad863fbff87399a0f60e75df16c59a6565",
+  "reviewedAt": "2026-10-26T15:45:02.855Z",
   "reviewer": "Configured independent chapter reviewer"
 }

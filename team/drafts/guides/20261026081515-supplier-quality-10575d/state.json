@@ -20,81 +20,81 @@
     "approval": "approved"
   },
   "productionSlotId": "2026-W44-slot-1",
-  "stage": "reviewing",
+  "stage": "writing",
   "pages": {
     "mapping-workflows": {
-      "hash": "61c5ed5ee2017ca32de224df322cff9f448b48abed3aed0dee66f44fe767a4f0",
+      "hash": "e2ebafabae1c23908d9e5b20749576a4be65da0fb62c1f8f788ad5410c5ccde7",
       "wordCount": 2184,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-26T14:49:14.435Z"
+      "checkpointedAt": "2026-10-26T15:35:51.869Z"
     },
     "evaluating-software": {
-      "hash": "f5a7e84e5020fb6c19493930518378aea175f9366ff89a0e1ebf4cbadfbf7113",
+      "hash": "b59a641787d424f7bd552807d0a9612d1e7b0f184f9b1d83fcc329aa1cd6ce41",
       "wordCount": 2012,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-26T14:51:49.815Z"
+      "checkpointedAt": "2026-10-26T15:38:02.868Z"
     },
     "supplier-qualification": {
-      "hash": "8d7b8bd295848a8ab49446ed8a2ecf33d0426e746fce9ab0bf01903750b847c6",
+      "hash": "d5d33d59cec4dc53c588016b7f7f22fb3ab54df847fd94d2efee2f9e6d9127b8",
       "wordCount": 2014,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-26T14:56:05.528Z"
+      "checkpointedAt": "2026-10-26T15:39:51.272Z"
     },
     "receiving-controls": {
-      "hash": "8c6f04f930395243cce0cb85123ce978c1becda6a2f681d0b8493a6f3c2e0d7e",
-      "wordCount": 2009,
+      "hash": "906033851c9df81b9b7840856e350a01f7ed876f8a955352bfd33b9fcd55f512",
+      "wordCount": 2011,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-26T15:02:14.172Z"
+      "checkpointedAt": "2026-10-26T15:42:12.957Z"
     },
     "supplier-actions": {
-      "hash": "738bcfc17cff17c41dd0da327e319ae78ca5d7fbf903453b6a61476bb4b2a035",
+      "hash": "7bf71521e596e5fbfca13aabb030b0d2886572d9dbc0d988bb316332ee0f681a",
       "wordCount": 2024,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-26T15:07:13.849Z"
+      "checkpointedAt": "2026-10-26T15:44:46.860Z"
     },
     "supplier-performance": {
-      "hash": "87ac2d1f736047d0e305dcefd9378d12f853bf79254f43d752ae63c3467778f3",
+      "hash": "62a2ad48a752ad6c26b1e6b7f80bff1bdf7c1360081ac7304d5af5b008c7fe76",
       "wordCount": 2005,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-26T15:13:42.970Z"
+      "checkpointedAt": "2026-10-26T15:46:06.892Z"
     },
     "migration-planning": {
-      "hash": "027dd717cc86efee714d88ba6e69d2543aa019e5a48ac0a90572691d499fd5e3",
+      "hash": "7a28246fc22987debcd3e253551777607e6820dc5a18286906bc25182aa66e48",
       "wordCount": 2105,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-26T15:16:34.959Z"
+      "checkpointedAt": "2026-10-26T15:48:03.178Z"
     },
     "training-rollout": {
-      "hash": "177345ecb52ecb9f86bbd199a00844dfac3f55821778139335f3e5f40892a242",
+      "hash": "07d4ff50c133072dc483128f87e710aad5f0edb7b27b2fffb0787feacd23e057",
       "wordCount": 2072,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-26T15:19:33.012Z"
+      "checkpointedAt": "2026-10-26T15:49:53.298Z"
     },
     "ongoing-operation": {
-      "hash": "2342ba952f49563124fbb877d9a9c2321b0f58f9af542a655fcf22cc957d992a",
+      "hash": "646266c194b9d43305b0aa7e08764d4d3faee49b0fd057acfdc0ef1727d407b8",
       "wordCount": 2010,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-26T15:31:09.035Z"
+      "checkpointedAt": "2026-10-26T15:51:25.670Z"
     },
     "supplier-quality-software": {
       "hash": "593fde04d3ea4406f07a171868fc70bd9dc62d14b1e621591f64157bf78ec00f",
       "wordCount": 1523,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-10-26T15:32:47.516Z"
+      "checkpointedAt": "2026-10-26T15:52:30.821Z"
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T15:34:05.225Z",
+  "updatedAt": "2026-10-26T15:52:45.612Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -1503,7 +1503,7 @@
     "reviewedChapters": [],
     "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
   },
-  "contextHash": "750f240420ab251426a6daa4801290aa45e9a463a6cd44e47ce173698caa7650",
+  "contextHash": "cff1ea92646f86262a80a1898ca52c23f5feec0a193eba436925a599d8cddc2c",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1513,26 +1513,35 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The guide chapter strictly aligns with the plan and research brief. It defines the operational workflow problem across qualification, receiving inspection, and corrective action handoffs; incorporates practical APG guidance with required disclaimers; notes the pending capability register status for ICC supplier portal functions; satisfies all assigned workflow roles, inputs, decisions, records, and exceptions; labels all hypothetical examples clearly; and excludes unassigned FAQ content.",
-      "glossary": [],
+      "summary": "The page adheres closely to the plan, accurately incorporating primary research from both the ISO 9001 APG external providers guidance and the ICC Supplier Quality module documentation. All assigned workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are properly integrated. Boundary constraints are observed, with no unassigned FAQ content included.",
+      "glossary": [
+        {
+          "term": "Product risk matrix",
+          "definition": "A classification structure that categorizes purchased parts or outsourced services into risk tiers based on the potential consequence of failure on end-product performance, user safety, and regulatory compliance."
+        }
+      ],
       "roles": [
-        "Quality Assurance Manager",
-        "Procurement Lead",
-        "Director of Quality and Compliance",
-        "Supplier Quality Engineer",
+        "Quality assurance manager",
+        "Procurement lead",
+        "Supplier quality engineer",
+        "Director of quality and compliance",
         "Receiving inspector"
       ],
       "recordNames": [
         "Process gap assessment report",
-        "Order specification package with engineering sign-off",
+        "Approved purchase order specification package",
         "Controlled Approved Supplier List qualification authorization entry",
-        "Component quality inspection plan"
+        "Component quality inspection plan",
+        "Vendor incident log",
+        "Receiving nonconformance slip",
+        "First-article inspection report",
+        "Mill test report"
       ],
       "decisions": [
-        "Determine whether handoff bottlenecks between purchasing and receiving quality require integrated workflow automation",
-        "Verify whether supplier purchase orders contain verified drawing numbers, acceptance standards, and statutory clauses",
-        "Authorize or deny placement of external provider on the controlled Approved Supplier List",
-        "Assign mandatory receiving inspection levels, sampling protocols, and required Mill Test Report validations"
+        "Determine whether handoff bottlenecks between purchasing and receiving quality justify integrated workflow automation",
+        "Verify whether supplier purchase orders contain verified drawing numbers, acceptance standards, and statutory clauses before release",
+        "Authorize, suspend, or reinstate an external provider on the controlled Approved Supplier List",
+        "Assign mandatory receiving inspection levels, sampling protocols, and required documentation verification based on component risk"
       ],
       "pass": true,
       "deterministic": {
@@ -1625,9 +1634,9 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "2826c440cd427e90a04d5545f3c340bdf6273dbb5adbda1475e6ebedd8d65c4e",
-      "outputContextHash": "3ce23106d92c55b1f4291dcbe7c00579403abe6949f34ffec391dad280096414",
-      "reviewedAt": "2026-10-26T14:49:28.393Z",
+      "inputHash": "a36c02acaa2a3d1e5a40e76f7ec1c32137f4c89652cbe2cf8e133d41c8c10bf8",
+      "outputContextHash": "e06151ace6c17add43c06809224e9fcc5a213d1e8b1a5f920f833f81b8e5f7bb",
+      "reviewedAt": "2026-10-26T15:36:16.956Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "evaluating-software": {
@@ -1638,34 +1647,32 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The chapter adheres precisely to the plan and source research. It establishes an operational, workflow-based framework for evaluating supplier quality management software across qualification, receiving inspection, and SCAR integration. Core capabilities are clearly distinguished from pending roadmap items, referencing the capability register status on the ICC product page and auditor guidance from the ISO 9001 APG. Each subsection systematically addresses its assigned role, input, decision, record, exception, and evaluation criteria, supplemented by clearly labeled illustrative examples. Unassigned FAQ content is correctly omitted, and all links match approved sources.",
-      "glossary": [
-        {
-          "term": "Vendor evaluation matrix",
-          "definition": "A comparative evaluation record scoring software capabilities against operational workflow requirements, noting whether features are verified with sample data, unverified, or pending release."
-        },
-        {
-          "term": "Audit trail",
-          "definition": "An unalterable, automated log of user actions, status modifications, inspection dispositions, and evidence attachment updates that records timestamps and user identities."
-        }
-      ],
+      "summary": "The page fully conforms to the brief and plan. It methodically covers software evaluation across four subsections: building a functional matrix linking qualification, receiving, and SCARs; testing decision gates and human-in-the-loop review for automated suggestions; verifying audit trails and role-based permissions; and evaluating licensing models, deployment scope, and integration boundaries. Primary claims from both the ISO 9001 APG external providers guidance and the ICC Supplier Quality module documentation are accurately integrated and properly cited. All assigned workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are present. No unassigned FAQ section was included, respecting boundary and structure rules.",
+      "glossary": [],
       "roles": [
-        "Quality Systems Lead",
-        "Quality Operations Lead",
-        "Information Technology Compliance Specialist",
-        "Operations Financial Analyst"
+        "Quality systems lead",
+        "Quality operations lead",
+        "Information technology compliance specialist",
+        "Operations financial analyst",
+        "Buyer",
+        "Receiving inspector",
+        "Controller"
       ],
       "recordNames": [
         "Vendor evaluation matrix with capability validation statuses and architectural risk notes",
-        "Controlled nonconformance disposition record with author identity, review timestamp, and electronic signature",
-        "Security and access control validation protocol detailing permission test outcomes",
-        "Total cost of ownership evaluation sheet detailing implementation, licensing, and validation costs"
+        "Requirements specification",
+        "Process map",
+        "Controlled nonconformance disposition record",
+        "Security and access control validation protocol",
+        "User access matrix",
+        "Audit log",
+        "Total cost of ownership evaluation sheet"
       ],
       "decisions": [
         "Determine which software vendors meet mandatory operational integration criteria for formal demonstration",
         "Accept, modify, or reject AI-generated nonconformance descriptions and disposition recommendations",
-        "Determine if system audit trail meets electronic signature integrity and data tampering prevention standards",
-        "Determine whether licensing models align with operational headcount across receiving bays and quality teams"
+        "Determine whether system audit trail and electronic signature controls protect against data tampering and satisfy compliance standards",
+        "Determine whether software licensing models align with operational headcount across receiving bays and quality teams"
       ],
       "pass": true,
       "deterministic": {
@@ -1758,9 +1765,9 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "fada4f9b7e2c0da464227f3272e4673a2e8f0b03687bc89a2ea8ed285bdff748",
-      "outputContextHash": "d7bc73259d2052e986ba131a15dd12bcda151658ee72578a677fd5b2a2a1611d",
-      "reviewedAt": "2026-10-26T14:52:05.537Z",
+      "inputHash": "9c25a8351525c1bb930a47dad1e9f3885d42d06c8eefe2cde314785e73422cdf",
+      "outputContextHash": "3aab2bc64d9c84f191ae2eb535f3015d80c10a28332ea104719bc1bc0b8db32b",
+      "reviewedAt": "2026-10-26T15:38:24.340Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "supplier-qualification": {
@@ -1771,40 +1778,34 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The chapter adheres precisely to the plan and source research. It establishes an operational, risk-tiered framework for qualifying and approving external providers in supplier quality management software. Risk categorization, certification scope validation, multi-stage approval gates, and conditional approval expiration rules are systematically addressed with corresponding roles, inputs, decisions, records, exceptions, and software evaluation criteria. All hyperlinks match verified source URLs, ISO/IAF APG auditor guidance is properly contextualized with its advisory disclaimer, pending ICC portal capabilities are accurately framed as demonstration evaluation questions, and unassigned FAQ content is correctly omitted.",
+      "summary": "The page adheres strictly to the plan and contextual guidance. It methodically establishes risk tiering principles, objective evidence scope verification, multi-tiered approval gates, and time-bound conditional waivers. All citations from the ISO/IAF external providers guidance and the ICC Supplier Quality module page are accurately represented with appropriate disclaimers and demonstration-testing framing. Assigned roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are fully implemented, and boundary constraints are observed with no unassigned FAQ section.",
       "glossary": [
         {
           "term": "Conditional approval",
-          "definition": "A temporary qualification status permitting limited purchase orders under specific constraints, such as calendar expiration or enhanced receiving inspections, while outstanding qualification deliverables remain pending."
+          "definition": "A temporary, time- or lot-limited authorization that permits procurement from an external provider while outstanding qualification requirements or audit action items are finalized under enhanced controls."
         },
         {
           "term": "Qualification gate",
-          "definition": "A mandatory operational control milestone or sequential sign-off requirement that halts workflow progression until authorized technical, commercial, or quality stakeholders record approval."
+          "definition": "A mandatory sequential checkpoint within a supplier onboarding workflow that halts progression until designated functional stakeholders complete and record their verified sign-offs."
         }
       ],
       "roles": [
-        "Supplier quality specialist",
-        "Quality assurance coordinator",
-        "Quality director",
-        "Quality systems manager",
-        "Quality engineer",
-        "Buyer",
-        "Receiving inspector",
-        "Engineering",
-        "Procurement",
-        "Operations"
+        "Supplier Quality Specialist",
+        "Quality Assurance Coordinator",
+        "Quality Director",
+        "Quality Systems Manager"
       ],
       "recordNames": [
         "Supplier risk assessment record",
         "Qualification document validation record",
-        "Controlled approved supplier list entry",
+        "Controlled Approved Supplier List record",
         "Conditional approval authorization record"
       ],
       "decisions": [
         "Assign provider risk tier and establish mandatory qualification evidence requirements",
-        "Evaluate whether certified scope matches contracted manufacturing services",
+        "Evaluate whether supplier certified scope matches the specific manufacturing services contracted",
         "Grant final approval for external provider addition to the active Approved Supplier List",
-        "Grant temporary conditional approval limited to a purchase order quantity or calendar window"
+        "Grant temporary conditional approval limited to a specific purchase order quantity or calendar window"
       ],
       "pass": true,
       "deterministic": {
@@ -1897,9 +1898,9 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "eaa9c0c9270e17c456aef715adcf7bff1fd735e1b4ffd4589a32c4649caae248",
-      "outputContextHash": "f5363fb963dab1e26da1d6a5d9b40dfc20f81dc625221c5e318c29eca8cd6e76",
-      "reviewedAt": "2026-10-26T14:56:24.496Z",
+      "inputHash": "6563ce0537e3cee553c60407ab59475135c92d5287d72f6feeec4ef5dca47a15",
+      "outputContextHash": "33f2e08bdd41dc61c35b484472f6091d02e79cf228599b74473ae013f00859a6",
+      "reviewedAt": "2026-10-26T15:40:19.602Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "receiving-controls": {
@@ -1910,35 +1911,38 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The guide chapter strictly aligns with the plan and research brief. It establishes an operational framework for linking purchase orders, drawing revisions, and receiving inspection plans; enforcing physical and ERP quarantine controls; managing technical concessions; reconciling credit notes; and maintaining bi-directional material traceability. All workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are systematically detailed without unassigned FAQ content or unverified capability claims.",
+      "summary": "The page fully conforms to the plan, brief, and contextual constraints. It systematically addresses the connection between purchase orders, engineering drawing revisions, sampling inspection protocols, quarantine controls, technical concession documentation, commercial credit note tracking, and bidirectional material traceability. All citations to the ISO/IAF external providers guidance and the ICC Supplier Quality module page are factual, accurate, and appropriately qualified regarding pending capabilities. Workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are thoroughly executed across all four sections without unassigned FAQ sections.",
       "glossary": [
         {
           "term": "Material Review Board (MRB)",
-          "definition": "A designated cross-functional team or authorized technical lead responsible for determining the disposition of nonconforming materials, such as scrap, rework, return to vendor, or technical concession."
+          "definition": "A designated cross-functional operational body authorized to evaluate nonconforming product and establish formal disposition pathways including scrap, rework, vendor return, or technical concession."
         },
         {
           "term": "Mill Test Report (MTR)",
-          "definition": "A certified quality record issued by a raw material producer validating the chemical composition, physical properties, and specification compliance of a manufacturing heat or lot."
+          "definition": "A certified quality record issued by a raw material producer validating the specific chemical analysis, mechanical test results, and specification compliance of a delivered material heat or batch."
         }
       ],
       "roles": [
         "Receiving inspector",
+        "Quality engineer",
         "Quality control inspector",
         "Material review board lead",
         "Quality systems analyst",
-        "Quality engineer"
+        "Technician"
       ],
       "recordNames": [
-        "Electronic receiving log entry linking shipment details to internal lot numbers",
-        "Completed receiving inspection report with measured values and attached material documents",
-        "Controlled nonconformance report with Material Review Board disposition authorization",
-        "Traceability link between supplier lot, internal nonconformance report, and credit memo"
+        "Electronic receiving log entry",
+        "Receiving inspection report",
+        "Receiving nonconformance report",
+        "Controlled nonconformance report",
+        "Concession record",
+        "Credit memo linkage record"
       ],
       "decisions": [
-        "Confirm whether arriving shipment matches approved purchase order specifications and drawing revisions",
+        "Confirm whether arriving shipment matches approved purchase order line items and active controlled drawing revisions",
         "Determine whether dimensional, mechanical, and material test results meet engineering acceptance criteria",
-        "Authorize rework, return to vendor, scrap, or formal concession with technical justification",
-        "Reconcile physical material returns against issued credit notes and update supplier evaluation metrics"
+        "Authorize nonconformance disposition: rework, return to supplier, scrap, or accept under technical concession",
+        "Reconcile physical material returns against supplier credit memos and adjust supplier performance metrics"
       ],
       "pass": true,
       "deterministic": {
@@ -2031,9 +2035,9 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "eb28b0914eea3153c775f3490b08eb337c72fb1968af8da58d43754bd7edde21",
-      "outputContextHash": "8fdf476776235ee0a486325036a467ed444f530283abb25bce0da27fde66cb3c",
-      "reviewedAt": "2026-10-26T15:02:31.332Z",
+      "inputHash": "3e9ea51e63f937fdc03b4df9e5f2631808f5bdd0382d344ca458d3e50900c209",
+      "outputContextHash": "01cf5c5af347fac331f705b65ddac724e2786b6bd401e28af97b95521964a3db",
+      "reviewedAt": "2026-10-26T15:42:34.611Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "supplier-actions": {
@@ -2044,33 +2048,27 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The chapter adheres strictly to the brief, plan, and research requirements. It covers the end-to-end supplier corrective action request (SCAR) workflow, including triggering SCARs from receiving inspection records, capturing disciplined root cause and containment evidence, conducting human reviews of action plans and AI-generated summaries, and verifying sustained effectiveness over an evaluation window. Pending capability register items (external supplier portal tasks and closure displays) are accurately treated as demonstration evaluation checks, all citations match approved sources, all hypothetical examples are explicitly labeled, and no unassigned FAQ content is included.",
-      "glossary": [
-        {
-          "term": "Containment action",
-          "definition": "An immediate interim control implemented to identify, quarantine, and prevent suspect nonconforming product from progressing through the supply chain or into production while root-cause analysis is pending."
-        },
-        {
-          "term": "Effectiveness verification",
-          "definition": "A documented evaluation conducted over an agreed production volume or calendar window to confirm that an implemented corrective action has successfully prevented defect recurrence."
-        }
-      ],
+      "summary": "The guide chapter fully complies with the brief, contextual boundaries, and primary source claims. It systematically covers the four required phases of supplier corrective actions: triggering SCARs directly from receiving nonconformance records, capturing root-cause analysis and objective containment evidence, reviewing proposed corrective actions with human review over automated summaries, and verifying post-implementation effectiveness before formal closure. All APG external providers guidance claims and ICC Supplier Quality module notes—including the pending status of portal-based tasking and mandatory human review of AI summaries—are accurately represented and properly qualified. Each section contains required workflow parameters (role, input, decision, record, exception), concrete software evaluation criteria, and a clearly labeled hypothetical example. No unassigned FAQ section is present.",
+      "glossary": [],
       "roles": [
         "Supplier Quality Engineer",
         "Supplier Quality Coordinator",
         "Quality Assurance Manager"
       ],
       "recordNames": [
-        "Initiated SCAR record with pre-populated defect details, assigned response deadlines, and severity classification",
+        "Initiated SCAR record",
+        "Nonconformance record",
+        "Dimensional inspection log",
+        "Containment report",
         "SCAR response review record",
-        "Controlled SCAR action plan approval record with logged reviewer comments and verification milestones",
-        "Formal SCAR closure record signed by Quality Engineering with attached effectiveness verification data"
+        "Controlled SCAR action plan approval record",
+        "Formal SCAR closure record"
       ],
       "decisions": [
         "Determine whether defect severity or recurring trend warrants issuing a formal SCAR to the external provider",
         "Assess whether supplier containment actions and proposed root-cause determination are technically credible and sufficient",
         "Approve proposed corrective action plan or mandate revision and resubmission",
-        "Determine whether corrective action demonstrated sustained recurrence prevention over 90-day evaluation window"
+        "Determine whether corrective action demonstrated sustained recurrence prevention over agreed evaluation window"
       ],
       "pass": true,
       "deterministic": {
@@ -2163,9 +2161,9 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "d7609aa9c393120aec372c90fde1bcddfa60a360283b4744f3af838bed30e25d",
-      "outputContextHash": "89d065d42cde2d9f2915f6fd4b0dfacc82039b0d5606099aec5912cf869c2bf6",
-      "reviewedAt": "2026-10-26T15:07:33.425Z",
+      "inputHash": "aec0fcc7d694b84b588e224b1538b568e271b23324d643b18c4dafcf968d15ab",
+      "outputContextHash": "a5fbb1e21bd0fb26e896c3352ac863ad863fbff87399a0f60e75df16c59a6565",
+      "reviewedAt": "2026-10-26T15:45:02.855Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "supplier-performance": {
@@ -2176,35 +2174,39 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The chapter adheres strictly to the brief, plan, and research sources. It provides actionable guidance on supplier performance scorecards, compliance gap reviews, status transitions (probation and disqualification), and audit evidence retention. Workflow roles, inputs, decisions, records, exceptions, and software evaluation criteria are methodically presented. All ISO/IAF APG guidance is properly contextualized with standard advisory notes, ICC Supplier Quality module capabilities are framed accurately for demonstration testing, hypothetical examples are explicitly labeled, and unassigned FAQ content is correctly omitted.",
+      "summary": "The page meticulously follows the assigned brief and outline. It covers the four required subsections: metric-based scorecards, compliance gap and certificate reviews, formal status transition governance, and defensible audit evidence retention. All APG external provider guidance references and ICC Supplier Quality module features are accurately cited and framed with appropriate demonstration checkpoints and ISO 9001:2015 disclaimers. All required workflow roles, inputs, decisions, records, exceptions, software evaluation tests, and labeled illustrative examples are present without unassigned FAQ sections.",
       "glossary": [
         {
-          "term": "Probation",
-          "definition": "A supervised qualification state applied to an external provider whose quality or delivery results have deteriorated, subject to mandatory operational restrictions and defined recovery conditions."
+          "term": "Supplier scorecard",
+          "definition": "A quantitative evaluation tool compiling verified receiving inspection yields, PPM defect rates, delivery timeliness, and SCAR responsiveness into periodic supplier performance ratings."
         },
         {
-          "term": "Disqualification",
-          "definition": "The formal termination of an approved supplier relationship for a category or commodity that immediately blocks the placement of new purchase orders."
+          "term": "Probationary status",
+          "definition": "A supervised governance tier applied to an external provider following quality or compliance slippage, imposing tightened inspection protocols and heightened managerial order approvals."
+        },
+        {
+          "term": "Supplier governance package",
+          "definition": "A controlled compilation of multi-year supplier evaluation records, audit reports, SCAR resolutions, and status authorizations assembled to demonstrate systematic control to external auditors."
         }
       ],
       "roles": [
         "Supplier quality analyst",
         "Quality compliance auditor",
-        "Supplier review committee chair",
+        "Chair of the supplier review committee",
         "Quality assurance director",
         "Quality director"
       ],
       "recordNames": [
-        "Published supplier scorecard",
-        "Supplier compliance gap report",
-        "Supplier status change authorization",
+        "Published scorecard",
+        "Gap report",
+        "Status change authorization",
         "Controlled supplier governance package"
       ],
       "decisions": [
-        "Assign monthly supplier rating tier based on compiled scorecard metrics",
-        "Determine whether compliance record deficiencies warrant operational intervention",
-        "Authorize supplier status transition from approved to probation or disqualification",
-        "Determine whether supplier governance evidence package is complete for third-party or customer audit"
+        "Assign monthly supplier performance scores and rating tiers based on receiving yields and SCAR cycle times",
+        "Determine whether supplier compliance deficiencies or certificate gaps require automated purchasing blocks or reminders",
+        "Downgrade chronic low-performing supplier from Approved to Probationary or Disqualified status",
+        "Evaluate completeness of historical supplier governance evidence package prior to third-party or customer audit"
       ],
       "pass": true,
       "deterministic": {
@@ -2297,9 +2299,9 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "51634c1cfb185609ef346c24201fc47b5fc5d5ac3de48903bcbab307df4e64ca",
-      "outputContextHash": "dda4a45e4c714b5ccb7a62c6f5024cc4cbf239e976f77b593a5a2a88598db907",
-      "reviewedAt": "2026-10-26T15:14:06.973Z",
+      "inputHash": "d2957cb3f519b6fb6013b7a058c8e649d556666ff68e23be982ffb682502b5b4",
+      "outputContextHash": "8b79a90248de2d686a874adfcc2f285498a914d8e4847476e94903a420ceb824",
+      "reviewedAt": "2026-10-26T15:46:24.238Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "migration-planning": {
@@ -2310,35 +2312,28 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The migration planning guide page complies fully with the assigned brief, plan structure, and source research. It methodically establishes operational workflows for legacy data auditing, relational schema mapping, pilot import verification, and system cutover protocols. Each subsection explicitly defines the assigned workflow role, inputs, decisions, records, exception handling, and software evaluation criteria. Labeled illustrative examples are provided, APG auditor guidance is properly contextualized with disclaimers, ICC supplier portal capabilities are correctly treated as pending demonstration items, and unassigned FAQ content is excluded.",
-      "glossary": [
-        {
-          "term": "Pilot import",
-          "definition": "A controlled rehearsal and validation run using a representative sample of legacy supplier records to test data mapping, schema transformations, and import scripts prior to full production migration."
-        },
-        {
-          "term": "Parallel run",
-          "definition": "A risk-mitigation deployment protocol where incoming inspections and transactions are logged simultaneously in both legacy and new systems for a defined duration to verify operational consistency."
-        }
-      ],
+      "summary": "The migration planning guide fully satisfies all brief requirements, boundaries, and workflow specifications. It methodically covers legacy record auditing and classification, relational data sanitization and mapping, pilot imports with line-by-line verification, and phased cutovers with fallback and parallel run protocols. Citations to the ISO/IAF external providers guidance and the ICC Supplier Quality module page are factual and properly contextualized, and all workflow parameters, roles, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are present without unassigned FAQ sections.",
+      "glossary": [],
       "roles": [
-        "Quality Data Analyst",
-        "Systems Integration Engineer",
-        "Quality Systems Lead",
-        "Operations Project Manager",
-        "Quality owner"
+        "Quality data analyst",
+        "Quality owner",
+        "Systems integration engineer",
+        "Quality systems lead",
+        "Operations project manager",
+        "Receiving inspector"
       ],
       "recordNames": [
         "Legacy data inventory register",
-        "Data mapping specification document detailing field transformations and validation rules",
-        "Pilot migration verification report",
-        "Signed cutover authorization and post-go-live operational support schedule"
+        "Data mapping specification",
+        "Pilot verification report",
+        "Signed cutover authorization",
+        "Post-go-live support schedule"
       ],
       "decisions": [
-        "Determine which historical supplier quality records warrant migration into the active software database",
-        "Map legacy spreadsheet columns to target software schema fields and relational data structures",
-        "Validate pilot import accuracy and approve migration script for enterprise execution",
-        "Issue final Go/No-Go authorization for production system cutover across all manufacturing plants"
+        "Determine which records deserve migration into the live database",
+        "Determine how each legacy column maps to a field in the target schema and what transformation rules apply",
+        "Determine whether the import is accurate enough to approve the script for the full load",
+        "Issue final go or no-go cutover authorization across all plants or staged sites"
       ],
       "pass": true,
       "deterministic": {
@@ -2431,9 +2426,9 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "172b92cef1ebd0a66e2a95417b7f09959dda2cbbf47aef037c5a1beb14e2d911",
-      "outputContextHash": "d06c566a63c31defc415b90471aa99661dc8fda883da4eae89691f41598f5977",
-      "reviewedAt": "2026-10-26T15:16:59.301Z",
+      "inputHash": "388a8c5d292aca0655ea1e2ed16d3ba4268063885272ef2d5eb20b47bf7d1839",
+      "outputContextHash": "0d0ec38d6317141bc56b1f55f95e5163b6ee9f8478fa123fe311b7642045e8e1",
+      "reviewedAt": "2026-10-26T15:48:19.732Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "training-rollout": {
@@ -2444,35 +2439,35 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The training and rollout guide chapter complies with the plan, research brief, and context governance. It structures role-specific training modules, sandbox workflow simulations, phased multi-site deployment protocols, and operational user adoption measurement. All required workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are properly integrated. Citations accurately reflect the ISO/IAF APG external provider guidance and ICC module capabilities (including human-in-the-loop review of AI suggestions and pending supplier portal features). Unassigned FAQ content is correctly omitted.",
+      "summary": "The guide page adheres strictly to the plan, research context, and boundary constraints. It covers role-specific training, sandbox workflow simulations, staged rollout across docks and outsourced processors, and adoption/throughput measurement. Primary research from the ISO 9001 APG external providers guidance and ICC Supplier Quality module documentation is accurately represented, with proper qualification regarding pending portal capabilities and mandatory human-in-the-loop verification of AI outputs. All assigned workflow roles, inputs, decisions, records, exceptions, software evaluation criteria, and labeled hypothetical examples are fully incorporated. No unassigned FAQ section is present.",
       "glossary": [
         {
           "term": "Hypercare",
-          "definition": "An intensive, temporary post-deployment operational support phase where technical and process specialists provide immediate assistance on-site or on-call to resolve user friction and procedural roadblocks."
+          "definition": "An intensive operational support phase immediately following go-live during which systems and technical leads remain directly accessible on site to resolve procedural roadblocks and user issues."
         }
       ],
       "roles": [
         "Quality training coordinator",
-        "Buyer",
-        "Receiving inspector",
-        "Quality engineer",
-        "Quality manager",
         "Lead systems trainer",
         "Implementation project manager",
         "Continuous improvement director",
-        "Supervisor"
+        "Buyer",
+        "Receiving inspector",
+        "Quality engineer",
+        "Quality manager"
       ],
       "recordNames": [
-        "Employee training completion log and practical competency assessment",
-        "Workflow simulation validation report",
-        "Facility deployment milestone sign-off and operational readiness log",
+        "Completion log with a practical assessment",
+        "Simulation validation report",
+        "Facility deployment milestone sign-off",
+        "Operational readiness log",
         "Post-implementation adoption audit report"
       ],
       "decisions": [
         "Certify operational staff as competent to perform live quality transactions in the new platform",
         "Determine whether simulated workflow transactions satisfy internal operating procedures and data integrity standards",
-        "Authorize phased go-live progression from primary fabrication plant to secondary assembly facilities",
-        "Determine if system adoption meets operational readiness criteria or requires procedural adjustments"
+        "Authorize phased go-live progression from one site or stage to the next",
+        "Determine whether system adoption meets operational readiness criteria or requires procedural adjustments"
       ],
       "pass": true,
       "deterministic": {
@@ -2565,9 +2560,9 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "5e875340c1106e40824d2a0d0020e73d85a2f693337edc1a9c31e353b1af6a92",
-      "outputContextHash": "81ec78ad008dcb9a59b13ef8ee854fe45fec91a9482f7db8501122b363b96fb7",
-      "reviewedAt": "2026-10-26T15:19:46.038Z",
+      "inputHash": "2f0c6738a6b2807b29b50836651e30df00871a900036d5f3891f2a7631ca231a",
+      "outputContextHash": "18c512bd064996abd31b524f9bbcabb03a583c797ee6df1097027595d209d193",
+      "reviewedAt": "2026-10-26T15:50:11.894Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "ongoing-operation": {
@@ -2578,13 +2573,13 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The guide page adheres strictly to the plan, research brief, and context governance. It covers post-implementation maintenance and ongoing evaluation: conducting periodic workflow and external provider audits, evaluating operational indicators and total cost without fabricated ROI formulas, addressing recurring operational and compliance questions via an assigned FAQ section, and executing an evidence-based vendor demonstration script. All roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are present and aligned with verified sources.",
+      "summary": "The guide chapter conforms strictly to the plan, research context, and boundary requirements. It accurately covers periodic workflow audits, operational and total cost evaluation without speculative financial figures, standard implementation and compliance FAQs, and an evidence-based demonstration script. External guidance from the ISO 9001 Auditing Practices Group and ICC Supplier Quality module specifications are accurately cited with appropriate disclaimers and status notes. All assigned roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are present.",
       "glossary": [],
       "roles": [
-        "Lead Internal Quality Auditor",
-        "Director of Operational Excellence",
-        "Quality Compliance Manager",
-        "Software Evaluation Committee Chair"
+        "Lead internal quality auditor",
+        "Director of operational excellence",
+        "Quality compliance manager",
+        "Software evaluation committee chair"
       ],
       "recordNames": [
         "Internal audit finding report",
@@ -2594,8 +2589,8 @@
       ],
       "decisions": [
         "Assess whether operational supplier quality software practices conform to documented procedures and external provider requirements",
-        "Determine whether software delivers demonstrated operational control and risk reduction justifying ongoing cost",
-        "Publish formal organizational guidance resolving operational ambiguities in supplier quality management",
+        "Determine whether software delivers demonstrated operational control and risk reduction justifying ongoing licensing",
+        "Determine which operational ambiguities require publication of formal organizational guidance",
         "Score vendor demonstrations against technical compliance criteria and determine final platform selection"
       ],
       "pass": true,
@@ -2743,9 +2738,9 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "2207bd704755eceff4c4b044c1cd797a2ec5eae38f79c0e464fe9d8cc3f44e8c",
-      "outputContextHash": "e98f048176b8be08e3bf134a7c0da57917322de33dedb4b8fcd535b012dee8ab",
-      "reviewedAt": "2026-10-26T15:31:23.161Z",
+      "inputHash": "3ccccf3fc5bc60037c8dc9399e86f82ddfb8831da0d2d87a97c2e457820f152c",
+      "outputContextHash": "e8881de9774271309322b8dd47e063f6f58c7df8a236db550625acdfaf80958c",
+      "reviewedAt": "2026-10-26T15:51:45.251Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "supplier-quality-software": {
@@ -2756,33 +2751,33 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The introductory guide page strictly complies with the plan, research brief, and context parameters. It frames the operational disconnect between qualification, receiving inspection, and corrective action; reviews APG guidance on external providers with proper disclaimers; outlines the 9 subsequent chapters; treats ICC supplier quality module features (especially pending portal functions) as demonstration verification items rather than promises; and provides practical preparation guidance without unassigned FAQ sections.",
+      "summary": "The introductory guide page matches its brief and plan exactly. It establishes the operational problem, outlines the nine guide chapters in sequential order, and details the preparatory steps for software evaluation and implementation. All citations to the ISO 9001 APG external providers paper and the ICC Supplier Quality module are accurate, noting the pending status of the supplier portal and the advisory nature of the APG paper. Labeled illustrative examples are included, links are valid, and no unassigned FAQ content is present.",
       "glossary": [],
       "roles": [
-        "Buyer",
-        "Engineering",
         "Inspector",
-        "Information technology specialist",
-        "Purchasing representative",
-        "Quality project lead",
-        "Receiving lead"
+        "Buyer",
+        "Project lead from quality",
+        "Representative from purchasing",
+        "Receiving representative",
+        "Engineering representative",
+        "Information technology representative"
       ],
       "recordNames": [
-        "Controlled Approved Supplier List",
-        "Decision rights table",
-        "Demonstration script and scoring matrix",
-        "Operational problem statement",
-        "Receiving inspection log",
-        "Supplier Corrective Action Request (SCAR)",
-        "Supplier risk classification matrix",
-        "Vendor evaluation matrix",
-        "Workflow map"
+        "List of approved providers",
+        "Problem statement",
+        "Workflow map",
+        "Decision table",
+        "Risk classification",
+        "Sample data set",
+        "Baseline performance metrics",
+        "Functional capability matrix",
+        "Vendor demonstration script"
       ],
       "decisions": [
-        "Determine who holds authority to approve, suspend, or reinstate external providers",
-        "Determine authorized roles for granting technical concessions at defined risk levels",
-        "Determine whether external providers interact directly via a portal or through internal staff data entry",
-        "Score software capabilities during vendor demonstration using representative sample records"
+        "Decide who may approve, suspend, or reinstate an external provider",
+        "Decide who may grant a nonconformance concession",
+        "Review and approve automated suggestions before committing them to a controlled record",
+        "Determine which software capabilities meet operational criteria based on sample record testing"
       ],
       "pass": true,
       "deterministic": {
@@ -2845,23 +2840,15 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "ac1026562d539ced79d28fb4040f2c919ce489a9656c2359cb98bb6b47c391eb",
-      "outputContextHash": "750f240420ab251426a6daa4801290aa45e9a463a6cd44e47ce173698caa7650",
-      "reviewedAt": "2026-10-26T15:33:02.001Z",
+      "inputHash": "1734258013e070971a1103b85bbf3c6b1315f228ade7f4f3b3270c0e4ef711a4",
+      "outputContextHash": "cff1ea92646f86262a80a1898ca52c23f5feec0a193eba436925a599d8cddc2c",
+      "reviewedAt": "2026-10-26T15:52:45.609Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
   "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf",
   "outlineHash": "d6e830059b19659da8310599d150077829ad696266f48c49847e49336c7e3906",
-  "audit": {
-    "claims": "passed",
-    "consistency": "passed",
-    "repetition": "passed",
-    "unresolvedFindings": [],
-    "inputHash": "4f29d509259f5c7df32bb6f53358bb1b5d409c60dec7c71757bcd4b40222e61c",
-    "reviewer": "Configured gemini independent review",
-    "reviewedAt": "2026-10-26T15:34:05.222Z"
-  },
+  "audit": null,
   "generationCompletedAt": null,
   "finalReport": null
 }

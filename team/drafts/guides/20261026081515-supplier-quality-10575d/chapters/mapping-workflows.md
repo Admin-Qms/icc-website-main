@@ -49,7 +49,7 @@ The quality assurance manager usually leads this work, starting from current flo
 
 The word "supplier" hides a range of relationships. The same [Auditing Practices Group paper](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf) notes that external providers can be a supplier, a partner, a sister or parent organization, or even a customer. In a plant, that means material distributors, machine shops, plating or heat treatment contractors and sister plants, so the map should list provider types before it lists forms.
 
-The paper also points out that procurement starts earlier than most teams assume. It begins during design and development, when a specification is prepared. The organization should make sure the purchase requirements are correct before they go to the provider, and that statutory and regulatory requirements are included. This matters for software because the strongest link in a supplier quality system is the one between the purchase order and the specification it is meant to enforce.
+The paper also points out that procurement starts earlier than most teams assume. It begins during design and development, when a specification is prepared. The organization should make sure the purchase requirements are correct before they go to the provider, and that statutory and regulatory requirements are included. This matters for software because the strongest link in a [supplier quality system](/solutions/supplier-quality/) is the one between the purchase order and the specification it is meant to enforce.
 
 Walk one real order from requisition to receipt and record every handoff. The following sequence is a useful template.
 

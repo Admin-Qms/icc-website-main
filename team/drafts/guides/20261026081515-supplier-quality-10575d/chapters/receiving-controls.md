@@ -35,7 +35,7 @@ Software should therefore present, on the receiving screen, the facts the inspec
 
 The receiving inspector works from the bill of lading, the supplier packing slip, the purchase order lines and the active drawings. The decision at this step is simple and strict: does the arriving shipment match what was ordered and approved? The record is an electronic receiving log entry that ties the shipment to an internal lot number. The exception to design for is a mismatch, such as parts built to an older revision than the order requires, which should hold the intake until engineering and purchasing decide what to do.
 
-Pay attention to supplier substitution. A purchase order may name an approved supplier while the goods ship from a different site or a sub-tier source. Ask whether the system compares the delivering source with the approved scope for that commodity and flags a difference when the receipt is entered, instead of leaving it to the inspector's memory.
+Pay attention to supplier substitution. A purchase order may name an approved supplier while the goods ship from a different site or a sub-tier source. Ask whether the [supplier quality](/solutions/supplier-quality/) system compares the delivering source with the approved scope for that commodity and flags a difference when the receipt is entered, instead of leaving it to the inspector's memory.
 
 > **Key Consideration:** Decide who may override a revision mismatch at the dock. If any inspector can accept a lot against the wrong revision with one click, the check exists on screen but not in practice. Reserve the override for engineering and record the reason.
 

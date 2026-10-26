@@ -24,7 +24,7 @@ capabilityIds: []
 ---
 ## Structuring role-specific training for buyers, receiving inspectors, and quality engineers
 
-A general walkthrough of every screen teaches everyone a little and nobody enough. Buyers, inspectors, and engineers use different parts of a supplier quality system, under different time pressure, and make different decisions. Training should follow those differences.
+A general walkthrough of every screen teaches everyone a little and nobody enough. Buyers, inspectors, and engineers use different parts of a [supplier quality system](/solutions/supplier-quality/), under different time pressure, and make different decisions. Training should follow those differences.
 
 Begin with the workflow map from the first chapter. For each role, list the transactions it performs, the decisions it makes, and the records it creates. Then build a short module for each role around those tasks, using the company's own procedures and sample records.
 
@@ -35,7 +35,7 @@ Begin with the workflow map from the first chapter. For each role, list the tran
 | Quality engineer | Raising and reviewing SCARs, judging root-cause responses, approving or rejecting concessions, reviewing automated suggestions | Judgment under evidence gaps |
 | Quality manager | Status changes, scorecard review, audit evidence, permission settings | Accountability |
 
-The [external providers guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf) says auditors check that activities needed to ensure specified requirements are met. Training is how those activities become routine behavior, so write each module around the control it supports, such as "the order specification matches the drawing" or "a rejected lot is placed on hold."
+The [external providers guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf) says auditors check that activities needed to ensure specified requirements are met. Training is how those activities become routine behavior, so write each module around the control it supports, such as "the order specification matches the drawing," or "a rejected lot is placed on hold."
 
 Buyers need to understand why an order can be blocked and what to do about it. Receiving inspectors need speed with accuracy, so their module should be practical and hands-on, using the same scanners, labels, and workstations they will use on the dock. Quality engineers need more depth, particularly in reviewing automated summaries or suggestions. The software may propose a cause category or a status, but a qualified person must accept it before it becomes a record, and training should rehearse that act of judgment, not just the click.
 

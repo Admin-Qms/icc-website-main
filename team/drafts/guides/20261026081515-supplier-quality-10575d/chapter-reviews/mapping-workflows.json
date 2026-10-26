@@ -6,26 +6,35 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The guide chapter strictly aligns with the plan and research brief. It defines the operational workflow problem across qualification, receiving inspection, and corrective action handoffs; incorporates practical APG guidance with required disclaimers; notes the pending capability register status for ICC supplier portal functions; satisfies all assigned workflow roles, inputs, decisions, records, and exceptions; labels all hypothetical examples clearly; and excludes unassigned FAQ content.",
-  "glossary": [],
+  "summary": "The page adheres closely to the plan, accurately incorporating primary research from both the ISO 9001 APG external providers guidance and the ICC Supplier Quality module documentation. All assigned workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are properly integrated. Boundary constraints are observed, with no unassigned FAQ content included.",
+  "glossary": [
+    {
+      "term": "Product risk matrix",
+      "definition": "A classification structure that categorizes purchased parts or outsourced services into risk tiers based on the potential consequence of failure on end-product performance, user safety, and regulatory compliance."
+    }
+  ],
   "roles": [
-    "Quality Assurance Manager",
-    "Procurement Lead",
-    "Director of Quality and Compliance",
-    "Supplier Quality Engineer",
+    "Quality assurance manager",
+    "Procurement lead",
+    "Supplier quality engineer",
+    "Director of quality and compliance",
     "Receiving inspector"
   ],
   "recordNames": [
     "Process gap assessment report",
-    "Order specification package with engineering sign-off",
+    "Approved purchase order specification package",
     "Controlled Approved Supplier List qualification authorization entry",
-    "Component quality inspection plan"
+    "Component quality inspection plan",
+    "Vendor incident log",
+    "Receiving nonconformance slip",
+    "First-article inspection report",
+    "Mill test report"
   ],
   "decisions": [
-    "Determine whether handoff bottlenecks between purchasing and receiving quality require integrated workflow automation",
-    "Verify whether supplier purchase orders contain verified drawing numbers, acceptance standards, and statutory clauses",
-    "Authorize or deny placement of external provider on the controlled Approved Supplier List",
-    "Assign mandatory receiving inspection levels, sampling protocols, and required Mill Test Report validations"
+    "Determine whether handoff bottlenecks between purchasing and receiving quality justify integrated workflow automation",
+    "Verify whether supplier purchase orders contain verified drawing numbers, acceptance standards, and statutory clauses before release",
+    "Authorize, suspend, or reinstate an external provider on the controlled Approved Supplier List",
+    "Assign mandatory receiving inspection levels, sampling protocols, and required documentation verification based on component risk"
   ],
   "pass": true,
   "deterministic": {
@@ -118,8 +127,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "2826c440cd427e90a04d5545f3c340bdf6273dbb5adbda1475e6ebedd8d65c4e",
-  "outputContextHash": "3ce23106d92c55b1f4291dcbe7c00579403abe6949f34ffec391dad280096414",
-  "reviewedAt": "2026-10-26T14:49:28.393Z",
+  "inputHash": "a36c02acaa2a3d1e5a40e76f7ec1c32137f4c89652cbe2cf8e133d41c8c10bf8",
+  "outputContextHash": "e06151ace6c17add43c06809224e9fcc5a213d1e8b1a5f920f833f81b8e5f7bb",
+  "reviewedAt": "2026-10-26T15:36:16.956Z",
   "reviewer": "Configured independent chapter reviewer"
 }

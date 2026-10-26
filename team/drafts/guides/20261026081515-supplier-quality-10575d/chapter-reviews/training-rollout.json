@@ -6,35 +6,35 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The training and rollout guide chapter complies with the plan, research brief, and context governance. It structures role-specific training modules, sandbox workflow simulations, phased multi-site deployment protocols, and operational user adoption measurement. All required workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are properly integrated. Citations accurately reflect the ISO/IAF APG external provider guidance and ICC module capabilities (including human-in-the-loop review of AI suggestions and pending supplier portal features). Unassigned FAQ content is correctly omitted.",
+  "summary": "The guide page adheres strictly to the plan, research context, and boundary constraints. It covers role-specific training, sandbox workflow simulations, staged rollout across docks and outsourced processors, and adoption/throughput measurement. Primary research from the ISO 9001 APG external providers guidance and ICC Supplier Quality module documentation is accurately represented, with proper qualification regarding pending portal capabilities and mandatory human-in-the-loop verification of AI outputs. All assigned workflow roles, inputs, decisions, records, exceptions, software evaluation criteria, and labeled hypothetical examples are fully incorporated. No unassigned FAQ section is present.",
   "glossary": [
     {
       "term": "Hypercare",
-      "definition": "An intensive, temporary post-deployment operational support phase where technical and process specialists provide immediate assistance on-site or on-call to resolve user friction and procedural roadblocks."
+      "definition": "An intensive operational support phase immediately following go-live during which systems and technical leads remain directly accessible on site to resolve procedural roadblocks and user issues."
     }
   ],
   "roles": [
     "Quality training coordinator",
-    "Buyer",
-    "Receiving inspector",
-    "Quality engineer",
-    "Quality manager",
     "Lead systems trainer",
     "Implementation project manager",
     "Continuous improvement director",
-    "Supervisor"
+    "Buyer",
+    "Receiving inspector",
+    "Quality engineer",
+    "Quality manager"
   ],
   "recordNames": [
-    "Employee training completion log and practical competency assessment",
-    "Workflow simulation validation report",
-    "Facility deployment milestone sign-off and operational readiness log",
+    "Completion log with a practical assessment",
+    "Simulation validation report",
+    "Facility deployment milestone sign-off",
+    "Operational readiness log",
     "Post-implementation adoption audit report"
   ],
   "decisions": [
     "Certify operational staff as competent to perform live quality transactions in the new platform",
     "Determine whether simulated workflow transactions satisfy internal operating procedures and data integrity standards",
-    "Authorize phased go-live progression from primary fabrication plant to secondary assembly facilities",
-    "Determine if system adoption meets operational readiness criteria or requires procedural adjustments"
+    "Authorize phased go-live progression from one site or stage to the next",
+    "Determine whether system adoption meets operational readiness criteria or requires procedural adjustments"
   ],
   "pass": true,
   "deterministic": {
@@ -127,8 +127,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "5e875340c1106e40824d2a0d0020e73d85a2f693337edc1a9c31e353b1af6a92",
-  "outputContextHash": "81ec78ad008dcb9a59b13ef8ee854fe45fec91a9482f7db8501122b363b96fb7",
-  "reviewedAt": "2026-10-26T15:19:46.038Z",
+  "inputHash": "2f0c6738a6b2807b29b50836651e30df00871a900036d5f3891f2a7631ca231a",
+  "outputContextHash": "18c512bd064996abd31b524f9bbcabb03a583c797ee6df1097027595d209d193",
+  "reviewedAt": "2026-10-26T15:50:11.894Z",
   "reviewer": "Configured independent chapter reviewer"
 }

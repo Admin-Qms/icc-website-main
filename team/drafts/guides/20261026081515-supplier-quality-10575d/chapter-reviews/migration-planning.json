@@ -6,35 +6,28 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The migration planning guide page complies fully with the assigned brief, plan structure, and source research. It methodically establishes operational workflows for legacy data auditing, relational schema mapping, pilot import verification, and system cutover protocols. Each subsection explicitly defines the assigned workflow role, inputs, decisions, records, exception handling, and software evaluation criteria. Labeled illustrative examples are provided, APG auditor guidance is properly contextualized with disclaimers, ICC supplier portal capabilities are correctly treated as pending demonstration items, and unassigned FAQ content is excluded.",
-  "glossary": [
-    {
-      "term": "Pilot import",
-      "definition": "A controlled rehearsal and validation run using a representative sample of legacy supplier records to test data mapping, schema transformations, and import scripts prior to full production migration."
-    },
-    {
-      "term": "Parallel run",
-      "definition": "A risk-mitigation deployment protocol where incoming inspections and transactions are logged simultaneously in both legacy and new systems for a defined duration to verify operational consistency."
-    }
-  ],
+  "summary": "The migration planning guide fully satisfies all brief requirements, boundaries, and workflow specifications. It methodically covers legacy record auditing and classification, relational data sanitization and mapping, pilot imports with line-by-line verification, and phased cutovers with fallback and parallel run protocols. Citations to the ISO/IAF external providers guidance and the ICC Supplier Quality module page are factual and properly contextualized, and all workflow parameters, roles, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are present without unassigned FAQ sections.",
+  "glossary": [],
   "roles": [
-    "Quality Data Analyst",
-    "Systems Integration Engineer",
-    "Quality Systems Lead",
-    "Operations Project Manager",
-    "Quality owner"
+    "Quality data analyst",
+    "Quality owner",
+    "Systems integration engineer",
+    "Quality systems lead",
+    "Operations project manager",
+    "Receiving inspector"
   ],
   "recordNames": [
     "Legacy data inventory register",
-    "Data mapping specification document detailing field transformations and validation rules",
-    "Pilot migration verification report",
-    "Signed cutover authorization and post-go-live operational support schedule"
+    "Data mapping specification",
+    "Pilot verification report",
+    "Signed cutover authorization",
+    "Post-go-live support schedule"
   ],
   "decisions": [
-    "Determine which historical supplier quality records warrant migration into the active software database",
-    "Map legacy spreadsheet columns to target software schema fields and relational data structures",
-    "Validate pilot import accuracy and approve migration script for enterprise execution",
-    "Issue final Go/No-Go authorization for production system cutover across all manufacturing plants"
+    "Determine which records deserve migration into the live database",
+    "Determine how each legacy column maps to a field in the target schema and what transformation rules apply",
+    "Determine whether the import is accurate enough to approve the script for the full load",
+    "Issue final go or no-go cutover authorization across all plants or staged sites"
   ],
   "pass": true,
   "deterministic": {
@@ -127,8 +120,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "172b92cef1ebd0a66e2a95417b7f09959dda2cbbf47aef037c5a1beb14e2d911",
-  "outputContextHash": "d06c566a63c31defc415b90471aa99661dc8fda883da4eae89691f41598f5977",
-  "reviewedAt": "2026-10-26T15:16:59.301Z",
+  "inputHash": "388a8c5d292aca0655ea1e2ed16d3ba4268063885272ef2d5eb20b47bf7d1839",
+  "outputContextHash": "0d0ec38d6317141bc56b1f55f95e5163b6ee9f8478fa123fe311b7642045e8e1",
+  "reviewedAt": "2026-10-26T15:48:19.732Z",
   "reviewer": "Configured independent chapter reviewer"
 }

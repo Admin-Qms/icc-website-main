@@ -22,7 +22,7 @@ capabilityIds: []
 ---
 ## Auditing and classifying legacy supplier records and quality history
 
-Every plant that adopts supplier quality software already has a supplier system. It is just spread across places: an approved vendor list in a spreadsheet, certificates in a shared drive, rejection notes in the ERP system, corrective action requests in email and a binder of paper inspection logs. Migration starts by finding all of it. Moving only what is easy to export creates a new system that looks complete and is not.
+Every plant that adopts [supplier quality software](/solutions/supplier-quality/) already has a supplier system. It is just spread across places: an approved vendor list in a spreadsheet, certificates in a shared drive, rejection notes in the ERP system, corrective action requests in email and a binder of paper inspection logs. Migration starts by finding all of it. Moving only what is easy to export creates a new system that looks complete and is not.
 
 The ISO and IAF [external providers guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf) says an auditor may look for documented information, such as a list, showing which external providers are approved and for it to be kept up to date. A migration is an ideal moment to make that statement true, because it forces someone to check each name on the list against reality. The paper is auditor guidance written for ISO 9001:2015, so use it as a prompt for questions about your records, not as a prescription.
 

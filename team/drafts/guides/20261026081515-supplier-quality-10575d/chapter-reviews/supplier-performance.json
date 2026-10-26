@@ -6,35 +6,39 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The chapter adheres strictly to the brief, plan, and research sources. It provides actionable guidance on supplier performance scorecards, compliance gap reviews, status transitions (probation and disqualification), and audit evidence retention. Workflow roles, inputs, decisions, records, exceptions, and software evaluation criteria are methodically presented. All ISO/IAF APG guidance is properly contextualized with standard advisory notes, ICC Supplier Quality module capabilities are framed accurately for demonstration testing, hypothetical examples are explicitly labeled, and unassigned FAQ content is correctly omitted.",
+  "summary": "The page meticulously follows the assigned brief and outline. It covers the four required subsections: metric-based scorecards, compliance gap and certificate reviews, formal status transition governance, and defensible audit evidence retention. All APG external provider guidance references and ICC Supplier Quality module features are accurately cited and framed with appropriate demonstration checkpoints and ISO 9001:2015 disclaimers. All required workflow roles, inputs, decisions, records, exceptions, software evaluation tests, and labeled illustrative examples are present without unassigned FAQ sections.",
   "glossary": [
     {
-      "term": "Probation",
-      "definition": "A supervised qualification state applied to an external provider whose quality or delivery results have deteriorated, subject to mandatory operational restrictions and defined recovery conditions."
+      "term": "Supplier scorecard",
+      "definition": "A quantitative evaluation tool compiling verified receiving inspection yields, PPM defect rates, delivery timeliness, and SCAR responsiveness into periodic supplier performance ratings."
     },
     {
-      "term": "Disqualification",
-      "definition": "The formal termination of an approved supplier relationship for a category or commodity that immediately blocks the placement of new purchase orders."
+      "term": "Probationary status",
+      "definition": "A supervised governance tier applied to an external provider following quality or compliance slippage, imposing tightened inspection protocols and heightened managerial order approvals."
+    },
+    {
+      "term": "Supplier governance package",
+      "definition": "A controlled compilation of multi-year supplier evaluation records, audit reports, SCAR resolutions, and status authorizations assembled to demonstrate systematic control to external auditors."
     }
   ],
   "roles": [
     "Supplier quality analyst",
     "Quality compliance auditor",
-    "Supplier review committee chair",
+    "Chair of the supplier review committee",
     "Quality assurance director",
     "Quality director"
   ],
   "recordNames": [
-    "Published supplier scorecard",
-    "Supplier compliance gap report",
-    "Supplier status change authorization",
+    "Published scorecard",
+    "Gap report",
+    "Status change authorization",
     "Controlled supplier governance package"
   ],
   "decisions": [
-    "Assign monthly supplier rating tier based on compiled scorecard metrics",
-    "Determine whether compliance record deficiencies warrant operational intervention",
-    "Authorize supplier status transition from approved to probation or disqualification",
-    "Determine whether supplier governance evidence package is complete for third-party or customer audit"
+    "Assign monthly supplier performance scores and rating tiers based on receiving yields and SCAR cycle times",
+    "Determine whether supplier compliance deficiencies or certificate gaps require automated purchasing blocks or reminders",
+    "Downgrade chronic low-performing supplier from Approved to Probationary or Disqualified status",
+    "Evaluate completeness of historical supplier governance evidence package prior to third-party or customer audit"
   ],
   "pass": true,
   "deterministic": {
@@ -127,8 +131,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "51634c1cfb185609ef346c24201fc47b5fc5d5ac3de48903bcbab307df4e64ca",
-  "outputContextHash": "dda4a45e4c714b5ccb7a62c6f5024cc4cbf239e976f77b593a5a2a88598db907",
-  "reviewedAt": "2026-10-26T15:14:06.973Z",
+  "inputHash": "d2957cb3f519b6fb6013b7a058c8e649d556666ff68e23be982ffb682502b5b4",
+  "outputContextHash": "8b79a90248de2d686a874adfcc2f285498a914d8e4847476e94903a420ceb824",
+  "reviewedAt": "2026-10-26T15:46:24.238Z",
   "reviewer": "Configured independent chapter reviewer"
 }

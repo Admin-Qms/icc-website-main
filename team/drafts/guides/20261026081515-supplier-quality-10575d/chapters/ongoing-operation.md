@@ -40,7 +40,7 @@ Configuration deserves its own review. Approval hierarchies, mandatory fields, i
 
 When you evaluate software, check how much of this auditors can do alone. Can they pull samples across procurement, inspection, and SCAR records without help from IT? Can an administrator change an approval path or a mandatory field in the settings, with an audit trail, instead of waiting for vendor recoding?
 
-**Illustrative example:** A hypothetical internal audit team reviews a sample of completed procurement files and checks that each high-risk order matched current engineering specifications. It finds one order placed with a conditional approval that had expired the week before, raises a corrective action, and adds an expiry alert to the buyer's order screen.
+**Illustrative example:** A hypothetical internal audit team reviews a sample of completed procurement files and checks that each high-risk order matched current engineering specifications. It finds one order placed with a conditional approval that had expired the week before, raises a corrective action, and adds an expiration alert to the buyer's order screen.
 
 ## Evaluating operational improvements and total cost without invented financial metrics
 
@@ -125,6 +125,6 @@ Test human review. Present an automated summary or suggestion and show that noth
 
 > **Important:** Score what you saw working on your data, and record promised features separately as pending. Do not let a roadmap lift a vendor's score.
 
-When you are ready to see the ICC module against your own script, request a software demonstration of ISO Certification Consultants' supplier quality module through the [contact page](/contact/). Bring the script, the masked records, and your list of pending-capability questions, and expect the answers to be tested the same way as any other vendor's.
-
 **Illustrative example:** A hypothetical evaluation committee scores three vendors on a ten-step script featuring an urgent nonconforming casting. Two complete the steps on the committee's records. The third needs to switch to a prepared environment halfway through, and the committee scores the missing steps as not demonstrated.
+
+When you are ready to see the ICC module against your own script, request a software demonstration of ISO Certification Consultants' supplier quality module through the [contact page](/contact/). Bring the script, the masked records, and your list of pending-capability questions, and expect the answers to be tested the same way as any other vendor's.

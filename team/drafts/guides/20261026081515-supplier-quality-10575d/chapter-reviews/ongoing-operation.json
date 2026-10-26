@@ -6,13 +6,13 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The guide page adheres strictly to the plan, research brief, and context governance. It covers post-implementation maintenance and ongoing evaluation: conducting periodic workflow and external provider audits, evaluating operational indicators and total cost without fabricated ROI formulas, addressing recurring operational and compliance questions via an assigned FAQ section, and executing an evidence-based vendor demonstration script. All roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are present and aligned with verified sources.",
+  "summary": "The guide chapter conforms strictly to the plan, research context, and boundary requirements. It accurately covers periodic workflow audits, operational and total cost evaluation without speculative financial figures, standard implementation and compliance FAQs, and an evidence-based demonstration script. External guidance from the ISO 9001 Auditing Practices Group and ICC Supplier Quality module specifications are accurately cited with appropriate disclaimers and status notes. All assigned roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are present.",
   "glossary": [],
   "roles": [
-    "Lead Internal Quality Auditor",
-    "Director of Operational Excellence",
-    "Quality Compliance Manager",
-    "Software Evaluation Committee Chair"
+    "Lead internal quality auditor",
+    "Director of operational excellence",
+    "Quality compliance manager",
+    "Software evaluation committee chair"
   ],
   "recordNames": [
     "Internal audit finding report",
@@ -22,8 +22,8 @@
   ],
   "decisions": [
     "Assess whether operational supplier quality software practices conform to documented procedures and external provider requirements",
-    "Determine whether software delivers demonstrated operational control and risk reduction justifying ongoing cost",
-    "Publish formal organizational guidance resolving operational ambiguities in supplier quality management",
+    "Determine whether software delivers demonstrated operational control and risk reduction justifying ongoing licensing",
+    "Determine which operational ambiguities require publication of formal organizational guidance",
     "Score vendor demonstrations against technical compliance criteria and determine final platform selection"
   ],
   "pass": true,
@@ -171,8 +171,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "2207bd704755eceff4c4b044c1cd797a2ec5eae38f79c0e464fe9d8cc3f44e8c",
-  "outputContextHash": "e98f048176b8be08e3bf134a7c0da57917322de33dedb4b8fcd535b012dee8ab",
-  "reviewedAt": "2026-10-26T15:31:23.161Z",
+  "inputHash": "3ccccf3fc5bc60037c8dc9399e86f82ddfb8831da0d2d87a97c2e457820f152c",
+  "outputContextHash": "e8881de9774271309322b8dd47e063f6f58c7df8a236db550625acdfaf80958c",
+  "reviewedAt": "2026-10-26T15:51:45.251Z",
   "reviewer": "Configured independent chapter reviewer"
 }

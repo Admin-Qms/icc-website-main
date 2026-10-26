@@ -6,40 +6,34 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The chapter adheres precisely to the plan and source research. It establishes an operational, risk-tiered framework for qualifying and approving external providers in supplier quality management software. Risk categorization, certification scope validation, multi-stage approval gates, and conditional approval expiration rules are systematically addressed with corresponding roles, inputs, decisions, records, exceptions, and software evaluation criteria. All hyperlinks match verified source URLs, ISO/IAF APG auditor guidance is properly contextualized with its advisory disclaimer, pending ICC portal capabilities are accurately framed as demonstration evaluation questions, and unassigned FAQ content is correctly omitted.",
+  "summary": "The page adheres strictly to the plan and contextual guidance. It methodically establishes risk tiering principles, objective evidence scope verification, multi-tiered approval gates, and time-bound conditional waivers. All citations from the ISO/IAF external providers guidance and the ICC Supplier Quality module page are accurately represented with appropriate disclaimers and demonstration-testing framing. Assigned roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are fully implemented, and boundary constraints are observed with no unassigned FAQ section.",
   "glossary": [
     {
       "term": "Conditional approval",
-      "definition": "A temporary qualification status permitting limited purchase orders under specific constraints, such as calendar expiration or enhanced receiving inspections, while outstanding qualification deliverables remain pending."
+      "definition": "A temporary, time- or lot-limited authorization that permits procurement from an external provider while outstanding qualification requirements or audit action items are finalized under enhanced controls."
     },
     {
       "term": "Qualification gate",
-      "definition": "A mandatory operational control milestone or sequential sign-off requirement that halts workflow progression until authorized technical, commercial, or quality stakeholders record approval."
+      "definition": "A mandatory sequential checkpoint within a supplier onboarding workflow that halts progression until designated functional stakeholders complete and record their verified sign-offs."
     }
   ],
   "roles": [
-    "Supplier quality specialist",
-    "Quality assurance coordinator",
-    "Quality director",
-    "Quality systems manager",
-    "Quality engineer",
-    "Buyer",
-    "Receiving inspector",
-    "Engineering",
-    "Procurement",
-    "Operations"
+    "Supplier Quality Specialist",
+    "Quality Assurance Coordinator",
+    "Quality Director",
+    "Quality Systems Manager"
   ],
   "recordNames": [
     "Supplier risk assessment record",
     "Qualification document validation record",
-    "Controlled approved supplier list entry",
+    "Controlled Approved Supplier List record",
     "Conditional approval authorization record"
   ],
   "decisions": [
     "Assign provider risk tier and establish mandatory qualification evidence requirements",
-    "Evaluate whether certified scope matches contracted manufacturing services",
+    "Evaluate whether supplier certified scope matches the specific manufacturing services contracted",
     "Grant final approval for external provider addition to the active Approved Supplier List",
-    "Grant temporary conditional approval limited to a purchase order quantity or calendar window"
+    "Grant temporary conditional approval limited to a specific purchase order quantity or calendar window"
   ],
   "pass": true,
   "deterministic": {
@@ -132,8 +126,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "eaa9c0c9270e17c456aef715adcf7bff1fd735e1b4ffd4589a32c4649caae248",
-  "outputContextHash": "f5363fb963dab1e26da1d6a5d9b40dfc20f81dc625221c5e318c29eca8cd6e76",
-  "reviewedAt": "2026-10-26T14:56:24.496Z",
+  "inputHash": "6563ce0537e3cee553c60407ab59475135c92d5287d72f6feeec4ef5dca47a15",
+  "outputContextHash": "33f2e08bdd41dc61c35b484472f6091d02e79cf228599b74473ae013f00859a6",
+  "reviewedAt": "2026-10-26T15:40:19.602Z",
   "reviewer": "Configured independent chapter reviewer"
 }

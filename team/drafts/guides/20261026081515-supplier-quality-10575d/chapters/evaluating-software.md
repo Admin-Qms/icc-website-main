@@ -96,7 +96,7 @@ Ask also for an export. An auditor may request a supplier's full history, and a 
 
 ## Evaluating licensing boundaries, deployment scope, and integration support
 
-A capable product can still be a poor fit if its licensing model punishes the way you work. Supplier quality software touches more people than most systems: buyers, receiving inspectors, quality engineers, managers, and possibly many outside contacts at supplier sites. How each of those groups is licensed decides the real cost.
+A capable product can still be a poor fit if its licensing model punishes the way you work. [Supplier quality software](/solutions/supplier-quality/) touches more people than most systems: buyers, receiving inspectors, quality engineers, managers, and possibly many outside contacts at supplier sites. How each of those groups is licensed decides the real cost.
 
 The operations financial analyst usually owns this part. Inputs are the vendor's licensing schedules, implementation service agreements and internal estimates of IT effort. The decision is whether the licensing model matches headcount across receiving bays and quality teams. The record is a total cost of ownership sheet that lists implementation, licensing and validation costs separately. Hidden per-transaction fees for supplier document submissions are an exception that should trigger a commercial discussion before signature.
 

@@ -6,33 +6,33 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The introductory guide page strictly complies with the plan, research brief, and context parameters. It frames the operational disconnect between qualification, receiving inspection, and corrective action; reviews APG guidance on external providers with proper disclaimers; outlines the 9 subsequent chapters; treats ICC supplier quality module features (especially pending portal functions) as demonstration verification items rather than promises; and provides practical preparation guidance without unassigned FAQ sections.",
+  "summary": "The introductory guide page matches its brief and plan exactly. It establishes the operational problem, outlines the nine guide chapters in sequential order, and details the preparatory steps for software evaluation and implementation. All citations to the ISO 9001 APG external providers paper and the ICC Supplier Quality module are accurate, noting the pending status of the supplier portal and the advisory nature of the APG paper. Labeled illustrative examples are included, links are valid, and no unassigned FAQ content is present.",
   "glossary": [],
   "roles": [
-    "Buyer",
-    "Engineering",
     "Inspector",
-    "Information technology specialist",
-    "Purchasing representative",
-    "Quality project lead",
-    "Receiving lead"
+    "Buyer",
+    "Project lead from quality",
+    "Representative from purchasing",
+    "Receiving representative",
+    "Engineering representative",
+    "Information technology representative"
   ],
   "recordNames": [
-    "Controlled Approved Supplier List",
-    "Decision rights table",
-    "Demonstration script and scoring matrix",
-    "Operational problem statement",
-    "Receiving inspection log",
-    "Supplier Corrective Action Request (SCAR)",
-    "Supplier risk classification matrix",
-    "Vendor evaluation matrix",
-    "Workflow map"
+    "List of approved providers",
+    "Problem statement",
+    "Workflow map",
+    "Decision table",
+    "Risk classification",
+    "Sample data set",
+    "Baseline performance metrics",
+    "Functional capability matrix",
+    "Vendor demonstration script"
   ],
   "decisions": [
-    "Determine who holds authority to approve, suspend, or reinstate external providers",
-    "Determine authorized roles for granting technical concessions at defined risk levels",
-    "Determine whether external providers interact directly via a portal or through internal staff data entry",
-    "Score software capabilities during vendor demonstration using representative sample records"
+    "Decide who may approve, suspend, or reinstate an external provider",
+    "Decide who may grant a nonconformance concession",
+    "Review and approve automated suggestions before committing them to a controlled record",
+    "Determine which software capabilities meet operational criteria based on sample record testing"
   ],
   "pass": true,
   "deterministic": {
@@ -95,8 +95,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "ac1026562d539ced79d28fb4040f2c919ce489a9656c2359cb98bb6b47c391eb",
-  "outputContextHash": "750f240420ab251426a6daa4801290aa45e9a463a6cd44e47ce173698caa7650",
-  "reviewedAt": "2026-10-26T15:33:02.001Z",
+  "inputHash": "1734258013e070971a1103b85bbf3c6b1315f228ade7f4f3b3270c0e4ef711a4",
+  "outputContextHash": "cff1ea92646f86262a80a1898ca52c23f5feec0a193eba436925a599d8cddc2c",
+  "reviewedAt": "2026-10-26T15:52:45.609Z",
   "reviewer": "Configured independent chapter reviewer"
 }
