@@ -108,7 +108,7 @@ function getLinkTargets() {
     { title: "Free ISO readiness assessment", url: "/assessment" },
     { title: "QMS platform overview", url: "/platform" },
     { title: "ROI estimator", url: "/roi" },
-    { title: "Book a consultation", url: "/contact" },
+    { title: "Book a demo of the compliance management software", url: "/contact" },
   ].map((t) => ({ ...t, kind: "general" }));
 
   const { listGuideFiles } = require('../../../lib/guide-files.cjs');

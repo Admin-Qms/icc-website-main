@@ -30,7 +30,7 @@ Max 2 passive voice sentences per 500 words. Rewrite others:
 
 CONSISTENCY:
 - Always "ISO Certification Consultant" never "ISO Certification Consultant"
-- Always "Book your free consultation"
+- Closing call to action invites the reader to book a demo (never "Book your free consultation")
 - No first person anywhere: no "we", "our", "us", "I" or "my". Refer to the company as "ISO Certification Consultant" and address the reader as "you". Rewrite any first-person sentence you find.
 
 READABILITY:

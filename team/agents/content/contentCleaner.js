@@ -29,7 +29,7 @@ CLEANING RULES (apply ALL of these):
 
 4. VALIDATE STRUCTURE:
    - First paragraph must be compelling body content, never a heading or list
-   - Last element must be the consultation CTA paragraph
+   - Last element must be the closing demo-invitation paragraph (contains "demo", links /contact/)
    - No markdown syntax errors: unclosed bold, broken links
 
 5. PRESERVE EVERYTHING ELSE:
