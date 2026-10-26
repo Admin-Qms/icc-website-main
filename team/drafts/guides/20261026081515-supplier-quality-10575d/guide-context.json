@@ -33,6 +33,14 @@
     {
       "term": "Audit trail",
       "definition": "An unalterable, automated log of user actions, status modifications, inspection dispositions, and evidence attachment updates that records timestamps and user identities."
+    },
+    {
+      "term": "Conditional approval",
+      "definition": "A temporary qualification status permitting limited purchase orders under specific constraints, such as calendar expiration or enhanced receiving inspections, while outstanding qualification deliverables remain pending."
+    },
+    {
+      "term": "Qualification gate",
+      "definition": "A mandatory operational control milestone or sequential sign-off requirement that halts workflow progression until authorized technical, commercial, or quality stakeholders record approval."
     }
   ],
   "roles": [
@@ -47,7 +55,16 @@
     "Quality Systems Lead",
     "Quality Operations Lead",
     "Information Technology Compliance Specialist",
-    "Operations Financial Analyst"
+    "Operations Financial Analyst",
+    "Supplier quality specialist",
+    "Quality assurance coordinator",
+    "Quality director",
+    "Quality systems manager",
+    "Quality engineer",
+    "Buyer",
+    "Engineering",
+    "Procurement",
+    "Operations"
   ],
   "recordNames": [
     "Process gap assessment report",
@@ -57,7 +74,11 @@
     "Vendor evaluation matrix with capability validation statuses and architectural risk notes",
     "Controlled nonconformance disposition record with author identity, review timestamp, and electronic signature",
     "Security and access control validation protocol detailing permission test outcomes",
-    "Total cost of ownership evaluation sheet detailing implementation, licensing, and validation costs"
+    "Total cost of ownership evaluation sheet detailing implementation, licensing, and validation costs",
+    "Supplier risk assessment record",
+    "Qualification document validation record",
+    "Controlled approved supplier list entry",
+    "Conditional approval authorization record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -86,6 +107,18 @@
         "Accept, modify, or reject AI-generated nonconformance descriptions and disposition recommendations",
         "Determine if system audit trail meets electronic signature integrity and data tampering prevention standards",
         "Determine whether licensing models align with operational headcount across receiving bays and quality teams"
+      ]
+    },
+    {
+      "slug": "supplier-qualification",
+      "title": "Qualifying and approving suppliers: Supplier quality management software",
+      "summary": "The chapter adheres precisely to the plan and source research. It establishes an operational, risk-tiered framework for qualifying and approving external providers in supplier quality management software. Risk categorization, certification scope validation, multi-stage approval gates, and conditional approval expiration rules are systematically addressed with corresponding roles, inputs, decisions, records, exceptions, and software evaluation criteria. All hyperlinks match verified source URLs, ISO/IAF APG auditor guidance is properly contextualized with its advisory disclaimer, pending ICC portal capabilities are accurately framed as demonstration evaluation questions, and unassigned FAQ content is correctly omitted.",
+      "bodyHash": "9029b0e248fb5fcbc08cecb842d55e02ec7919ea8168e40af9e8081e1597ae58",
+      "decisions": [
+        "Assign provider risk tier and establish mandatory qualification evidence requirements",
+        "Evaluate whether certified scope matches contracted manufacturing services",
+        "Grant final approval for external provider addition to the active Approved Supplier List",
+        "Grant temporary conditional approval limited to a purchase order quantity or calendar window"
       ]
     }
   ],

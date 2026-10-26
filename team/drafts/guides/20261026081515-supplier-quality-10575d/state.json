@@ -35,10 +35,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-26T14:51:49.815Z"
+    },
+    "supplier-qualification": {
+      "hash": "8d7b8bd295848a8ab49446ed8a2ecf33d0426e746fce9ab0bf01903750b847c6",
+      "wordCount": 2014,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-26T14:56:05.528Z"
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T14:52:05.539Z",
+  "updatedAt": "2026-10-26T14:56:24.498Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -1447,7 +1454,7 @@
     "reviewedChapters": [],
     "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
   },
-  "contextHash": "d7bc73259d2052e986ba131a15dd12bcda151658ee72578a677fd5b2a2a1611d",
+  "contextHash": "f5363fb963dab1e26da1d6a5d9b40dfc20f81dc625221c5e318c29eca8cd6e76",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1705,6 +1712,145 @@
       "inputHash": "fada4f9b7e2c0da464227f3272e4673a2e8f0b03687bc89a2ea8ed285bdff748",
       "outputContextHash": "d7bc73259d2052e986ba131a15dd12bcda151658ee72578a677fd5b2a2a1611d",
       "reviewedAt": "2026-10-26T14:52:05.537Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "supplier-qualification": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The chapter adheres precisely to the plan and source research. It establishes an operational, risk-tiered framework for qualifying and approving external providers in supplier quality management software. Risk categorization, certification scope validation, multi-stage approval gates, and conditional approval expiration rules are systematically addressed with corresponding roles, inputs, decisions, records, exceptions, and software evaluation criteria. All hyperlinks match verified source URLs, ISO/IAF APG auditor guidance is properly contextualized with its advisory disclaimer, pending ICC portal capabilities are accurately framed as demonstration evaluation questions, and unassigned FAQ content is correctly omitted.",
+      "glossary": [
+        {
+          "term": "Conditional approval",
+          "definition": "A temporary qualification status permitting limited purchase orders under specific constraints, such as calendar expiration or enhanced receiving inspections, while outstanding qualification deliverables remain pending."
+        },
+        {
+          "term": "Qualification gate",
+          "definition": "A mandatory operational control milestone or sequential sign-off requirement that halts workflow progression until authorized technical, commercial, or quality stakeholders record approval."
+        }
+      ],
+      "roles": [
+        "Supplier quality specialist",
+        "Quality assurance coordinator",
+        "Quality director",
+        "Quality systems manager",
+        "Quality engineer",
+        "Buyer",
+        "Receiving inspector",
+        "Engineering",
+        "Procurement",
+        "Operations"
+      ],
+      "recordNames": [
+        "Supplier risk assessment record",
+        "Qualification document validation record",
+        "Controlled approved supplier list entry",
+        "Conditional approval authorization record"
+      ],
+      "decisions": [
+        "Assign provider risk tier and establish mandatory qualification evidence requirements",
+        "Evaluate whether certified scope matches contracted manufacturing services",
+        "Grant final approval for external provider addition to the active Approved Supplier List",
+        "Grant temporary conditional approval limited to a purchase order quantity or calendar window"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Defining supplier risk tiers and criticality beyond commercial pricing",
+            "section": "Defining supplier risk tiers and criticality beyond commercial pricing"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Defining supplier risk tiers and criticality beyond commercial pricing; semantic review verifies support",
+            "section": "Defining supplier risk tiers and criticality beyond commercial pricing"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Capturing qualification evidence and evaluating standard certification scopes",
+            "section": "Capturing qualification evidence and evaluating standard certification scopes"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Capturing qualification evidence and evaluating standard certification scopes; semantic review verifies support",
+            "section": "Capturing qualification evidence and evaluating standard certification scopes"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Structuring multi-tiered approval authority and qualification gates",
+            "section": "Structuring multi-tiered approval authority and qualification gates"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Structuring multi-tiered approval authority and qualification gates; semantic review verifies support",
+            "section": "Structuring multi-tiered approval authority and qualification gates"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Managing conditional approvals, document expiries, and temporary waivers",
+            "section": "Managing conditional approvals, document expiries, and temporary waivers"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Managing conditional approvals, document expiries, and temporary waivers; semantic review verifies support",
+            "section": "Managing conditional approvals, document expiries, and temporary waivers"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "eaa9c0c9270e17c456aef715adcf7bff1fd735e1b4ffd4589a32c4649caae248",
+      "outputContextHash": "f5363fb963dab1e26da1d6a5d9b40dfc20f81dc625221c5e318c29eca8cd6e76",
+      "reviewedAt": "2026-10-26T14:56:24.496Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
