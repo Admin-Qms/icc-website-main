@@ -1,5 +1,5 @@
 {
-  "pass": true,
+  "pass": false,
   "checks": [
     {
       "id": "schema-version",
@@ -789,7 +789,7 @@
     },
     {
       "id": "page-title-unused",
-      "pass": true,
+      "pass": false,
       "message": "Title must not duplicate another published content page",
       "page": "supplier-quality-software"
     },
@@ -965,7 +965,7 @@
     },
     {
       "id": "page-title-unused",
-      "pass": true,
+      "pass": false,
       "message": "Title must not duplicate another published content page",
       "page": "mapping-workflows"
     },
@@ -1159,7 +1159,7 @@
     },
     {
       "id": "page-title-unused",
-      "pass": true,
+      "pass": false,
       "message": "Title must not duplicate another published content page",
       "page": "evaluating-software"
     },
@@ -1353,7 +1353,7 @@
     },
     {
       "id": "page-title-unused",
-      "pass": true,
+      "pass": false,
       "message": "Title must not duplicate another published content page",
       "page": "supplier-qualification"
     },
@@ -1547,7 +1547,7 @@
     },
     {
       "id": "page-title-unused",
-      "pass": true,
+      "pass": false,
       "message": "Title must not duplicate another published content page",
       "page": "receiving-controls"
     },
@@ -1741,7 +1741,7 @@
     },
     {
       "id": "page-title-unused",
-      "pass": true,
+      "pass": false,
       "message": "Title must not duplicate another published content page",
       "page": "supplier-actions"
     },
@@ -1935,7 +1935,7 @@
     },
     {
       "id": "page-title-unused",
-      "pass": true,
+      "pass": false,
       "message": "Title must not duplicate another published content page",
       "page": "supplier-performance"
     },
@@ -2129,7 +2129,7 @@
     },
     {
       "id": "page-title-unused",
-      "pass": true,
+      "pass": false,
       "message": "Title must not duplicate another published content page",
       "page": "migration-planning"
     },
@@ -2323,7 +2323,7 @@
     },
     {
       "id": "page-title-unused",
-      "pass": true,
+      "pass": false,
       "message": "Title must not duplicate another published content page",
       "page": "training-rollout"
     },
@@ -2580,7 +2580,7 @@
     },
     {
       "id": "page-title-unused",
-      "pass": true,
+      "pass": false,
       "message": "Title must not duplicate another published content page",
       "page": "ongoing-operation"
     },
@@ -2649,6 +2649,67 @@
       "message": "The closing paragraph must invite a software demonstration at /contact/"
     }
   ],
-  "failures": [],
+  "failures": [
+    {
+      "id": "page-title-unused",
+      "pass": false,
+      "message": "Title must not duplicate another published content page",
+      "page": "supplier-quality-software"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": false,
+      "message": "Title must not duplicate another published content page",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": false,
+      "message": "Title must not duplicate another published content page",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": false,
+      "message": "Title must not duplicate another published content page",
+      "page": "supplier-qualification"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": false,
+      "message": "Title must not duplicate another published content page",
+      "page": "receiving-controls"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": false,
+      "message": "Title must not duplicate another published content page",
+      "page": "supplier-actions"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": false,
+      "message": "Title must not duplicate another published content page",
+      "page": "supplier-performance"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": false,
+      "message": "Title must not duplicate another published content page",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": false,
+      "message": "Title must not duplicate another published content page",
+      "page": "training-rollout"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": false,
+      "message": "Title must not duplicate another published content page",
+      "page": "ongoing-operation"
+    }
+  ],
   "wordCount": 19960
 }
