@@ -4,12 +4,13 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { FeaturedPostCard, PostCard } from "@/components/PostCard";
 import { getAllPosts, serializeJsonLd } from "@/lib/blog";
 import { SITE, OG_IMAGE } from "@/lib/site";
+import { pageTitle } from "@/lib/seo";
 
 const description =
   "Practical ISO 9001, IATF 16949 and AS9100 how-tos for quality teams, plus how compliance software automates the work. Book a demo to see it.";
 
 export const metadata: Metadata = {
-  title: "Compliance Blog: ISO 9001, IATF 16949 and AS9100 Guidance",
+  title: pageTitle("Compliance Blog: ISO 9001, IATF 16949 and AS9100 Guidance"),
   description,
   alternates: { canonical: "/blog" },
   openGraph: {
