@@ -17,6 +17,7 @@ import { CopyOverview, CopyArticle } from "@/components/PageCopy";
 import { pageTitle } from "@/lib/seo";
 import { FurtherReading } from "@/components/FurtherReading";
 import { nextInList } from "@/lib/nextInList";
+import { standardMetaDescription } from "@/lib/seo-copy";
 
 export function generateStaticParams() {
   return STANDARDS.map((s) => ({ standard: s.slug }));
@@ -30,8 +31,8 @@ export function generateMetadata({
   const s = STANDARDS.find((x) => x.slug === params.standard);
   if (!s) return {};
   return {
-    title: pageTitle(`${s.code} Certification in Canada`),
-    description: `${s.code} (${s.name}) consulting for Canadian companies: gap analysis, system build and audit support, with software that tracks every clause.`,
+    title: pageTitle(`${s.code} Certification Consultants & Software`),
+    description: standardMetaDescription(s),
     alternates: { canonical: `/services/${s.slug}` },
   };
 }
@@ -74,16 +75,16 @@ export default function StandardPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHeader
-        eyebrow={`${s.category} · ${s.clauses}`}
+        eyebrow={`${s.name} · ${s.clauses}`}
         title={
           <>
-            {s.code} — <span className="text-teal-700">{s.name}</span>
+            Meet {s.code} with <span className="text-teal-700">less paperwork</span>
           </>
         }
         intro={s.summary}
       >
         <Link href="/contact" className="btn-primary">
-          Scope your {s.code} project <ArrowRight className="h-4 w-4" />
+          Book a demo <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/assessment" className="btn-ghost">
           Free readiness check
@@ -227,7 +228,7 @@ export default function StandardPage({
                   </div>
                 </dl>
                 <Link href="/contact" className="btn-primary mt-6 w-full">
-                  Talk to an expert
+                  Book a demo
                 </Link>
               </div>
             </Reveal>
@@ -284,7 +285,7 @@ export default function StandardPage({
         </div>
       </section>
 
-      <CTASection title={`Ready to scope your ${s.code} certification?`} />
+      <CTASection title={`Ready to meet ${s.code}? Book a demo`} />
     </>
   );
 }

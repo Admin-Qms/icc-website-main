@@ -83,3 +83,20 @@ test("module meta descriptions are 120–160 characters", async () => {
   }
   assert.deepEqual(offenders, [], `Module descriptions outside 120–160 characters:\n${offenders.join("\n")}`);
 });
+
+test("templated standard and industry descriptions are 120–160 characters", async () => {
+  const { STANDARDS, INDUSTRIES } = await import("../lib/site.ts");
+  const { standardMetaDescription, industryMetaDescription } = await import("../lib/seo-copy.ts");
+  const texts = [
+    ...STANDARDS.map((s) => [s.code, standardMetaDescription(s), s.code.toLowerCase() + " certification"]),
+    ...INDUSTRIES.map((i) => [i.name, industryMetaDescription(i), "iso certification"]),
+  ];
+  assert.equal(STANDARDS.length, 10);
+  assert.equal(INDUSTRIES.length, 8);
+  const offenders = texts.filter(([, d]) => d.length < 120 || d.length > 160).map(([n, d]) => `${n} (${d.length}): ${d}`);
+  assert.deepEqual(offenders, [], `Templated descriptions outside 120–160 characters:\n${offenders.join("\n")}`);
+  for (const [n, d, lead] of texts) {
+    assert.ok(d.toLowerCase().startsWith(lead), `${n} description should lead with "${lead}"`);
+    assert.ok(/consultants/.test(d) && /compliance management software/.test(d), `${n} description needs consultants and software`);
+  }
+});
