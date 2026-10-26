@@ -42,10 +42,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-26T14:56:05.528Z"
+    },
+    "receiving-controls": {
+      "hash": "8c6f04f930395243cce0cb85123ce978c1becda6a2f681d0b8493a6f3c2e0d7e",
+      "wordCount": 2009,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-26T15:02:14.172Z"
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T14:56:24.498Z",
+  "updatedAt": "2026-10-26T15:02:31.336Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -1454,7 +1461,7 @@
     "reviewedChapters": [],
     "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
   },
-  "contextHash": "f5363fb963dab1e26da1d6a5d9b40dfc20f81dc625221c5e318c29eca8cd6e76",
+  "contextHash": "8fdf476776235ee0a486325036a467ed444f530283abb25bce0da27fde66cb3c",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1851,6 +1858,140 @@
       "inputHash": "eaa9c0c9270e17c456aef715adcf7bff1fd735e1b4ffd4589a32c4649caae248",
       "outputContextHash": "f5363fb963dab1e26da1d6a5d9b40dfc20f81dc625221c5e318c29eca8cd6e76",
       "reviewedAt": "2026-10-26T14:56:24.496Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "receiving-controls": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The guide chapter strictly aligns with the plan and research brief. It establishes an operational framework for linking purchase orders, drawing revisions, and receiving inspection plans; enforcing physical and ERP quarantine controls; managing technical concessions; reconciling credit notes; and maintaining bi-directional material traceability. All workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are systematically detailed without unassigned FAQ content or unverified capability claims.",
+      "glossary": [
+        {
+          "term": "Material Review Board (MRB)",
+          "definition": "A designated cross-functional team or authorized technical lead responsible for determining the disposition of nonconforming materials, such as scrap, rework, return to vendor, or technical concession."
+        },
+        {
+          "term": "Mill Test Report (MTR)",
+          "definition": "A certified quality record issued by a raw material producer validating the chemical composition, physical properties, and specification compliance of a manufacturing heat or lot."
+        }
+      ],
+      "roles": [
+        "Receiving inspector",
+        "Quality control inspector",
+        "Material review board lead",
+        "Quality systems analyst",
+        "Quality engineer"
+      ],
+      "recordNames": [
+        "Electronic receiving log entry linking shipment details to internal lot numbers",
+        "Completed receiving inspection report with measured values and attached material documents",
+        "Controlled nonconformance report with Material Review Board disposition authorization",
+        "Traceability link between supplier lot, internal nonconformance report, and credit memo"
+      ],
+      "decisions": [
+        "Confirm whether arriving shipment matches approved purchase order specifications and drawing revisions",
+        "Determine whether dimensional, mechanical, and material test results meet engineering acceptance criteria",
+        "Authorize rework, return to vendor, scrap, or formal concession with technical justification",
+        "Reconcile physical material returns against issued credit notes and update supplier evaluation metrics"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Linking purchase orders, engineering revisions, and receiving inspection criteria",
+            "section": "Linking purchase orders, engineering revisions, and receiving inspection criteria"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Linking purchase orders, engineering revisions, and receiving inspection criteria; semantic review verifies support",
+            "section": "Linking purchase orders, engineering revisions, and receiving inspection criteria"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Defining sampling plans and executing receiving verification against specifications",
+            "section": "Defining sampling plans and executing receiving verification against specifications"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Defining sampling plans and executing receiving verification against specifications; semantic review verifies support",
+            "section": "Defining sampling plans and executing receiving verification against specifications"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Quarantining nonconforming material and documenting technical concessions",
+            "section": "Quarantining nonconforming material and documenting technical concessions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Quarantining nonconforming material and documenting technical concessions; semantic review verifies support",
+            "section": "Quarantining nonconforming material and documenting technical concessions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Tracking credit notes and maintaining end-to-end material traceability",
+            "section": "Tracking credit notes and maintaining end-to-end material traceability"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Tracking credit notes and maintaining end-to-end material traceability; semantic review verifies support",
+            "section": "Tracking credit notes and maintaining end-to-end material traceability"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "eb28b0914eea3153c775f3490b08eb337c72fb1968af8da58d43754bd7edde21",
+      "outputContextHash": "8fdf476776235ee0a486325036a467ed444f530283abb25bce0da27fde66cb3c",
+      "reviewedAt": "2026-10-26T15:02:31.332Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

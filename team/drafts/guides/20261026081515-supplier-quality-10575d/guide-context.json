@@ -41,6 +41,14 @@
     {
       "term": "Qualification gate",
       "definition": "A mandatory operational control milestone or sequential sign-off requirement that halts workflow progression until authorized technical, commercial, or quality stakeholders record approval."
+    },
+    {
+      "term": "Material Review Board (MRB)",
+      "definition": "A designated cross-functional team or authorized technical lead responsible for determining the disposition of nonconforming materials, such as scrap, rework, return to vendor, or technical concession."
+    },
+    {
+      "term": "Mill Test Report (MTR)",
+      "definition": "A certified quality record issued by a raw material producer validating the chemical composition, physical properties, and specification compliance of a manufacturing heat or lot."
     }
   ],
   "roles": [
@@ -64,7 +72,10 @@
     "Buyer",
     "Engineering",
     "Procurement",
-    "Operations"
+    "Operations",
+    "Quality control inspector",
+    "Material review board lead",
+    "Quality systems analyst"
   ],
   "recordNames": [
     "Process gap assessment report",
@@ -78,7 +89,11 @@
     "Supplier risk assessment record",
     "Qualification document validation record",
     "Controlled approved supplier list entry",
-    "Conditional approval authorization record"
+    "Conditional approval authorization record",
+    "Electronic receiving log entry linking shipment details to internal lot numbers",
+    "Completed receiving inspection report with measured values and attached material documents",
+    "Controlled nonconformance report with Material Review Board disposition authorization",
+    "Traceability link between supplier lot, internal nonconformance report, and credit memo"
   ],
   "example": {
     "label": "Illustrative example",
@@ -119,6 +134,18 @@
         "Evaluate whether certified scope matches contracted manufacturing services",
         "Grant final approval for external provider addition to the active Approved Supplier List",
         "Grant temporary conditional approval limited to a purchase order quantity or calendar window"
+      ]
+    },
+    {
+      "slug": "receiving-controls",
+      "title": "Connecting receiving inspection records: Supplier quality management software",
+      "summary": "The guide chapter strictly aligns with the plan and research brief. It establishes an operational framework for linking purchase orders, drawing revisions, and receiving inspection plans; enforcing physical and ERP quarantine controls; managing technical concessions; reconciling credit notes; and maintaining bi-directional material traceability. All workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are systematically detailed without unassigned FAQ content or unverified capability claims.",
+      "bodyHash": "5a0fcc979975f3aefd59225965b0ba8c363e24b0313b6f46719d44556f730744",
+      "decisions": [
+        "Confirm whether arriving shipment matches approved purchase order specifications and drawing revisions",
+        "Determine whether dimensional, mechanical, and material test results meet engineering acceptance criteria",
+        "Authorize rework, return to vendor, scrap, or formal concession with technical justification",
+        "Reconcile physical material returns against issued credit notes and update supplier evaluation metrics"
       ]
     }
   ],
