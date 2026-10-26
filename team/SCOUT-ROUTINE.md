@@ -26,6 +26,17 @@ An approved topic's sources go into `external-link-bank.json` under `software_gu
 
 `team/scripts/scheduled-scout-run.sh apply` then runs the pipeline tests, commits only the two queue files and the link bank, pulls and pushes `main`. `prepare` is the usual fresh-clone start (fetch, checkout, `npm ci` for both `team/` and the repo root, since `team/pm.js` loads `lib/guide-contract.cjs`) plus the status file.
 
+## Priority search terms
+
+When the proposer needs guide topics or blog keywords, it considers these software search terms first, before the general themes in the prompt:
+
+- training matrix software
+- IATF 16949 compliance software
+- ISO 9001 software for small manufacturers
+- compliance management software for manufacturers
+
+Terms already queued (see `team/memory/guide-topic-queue.json` and `keyword-queue.json`) are skipped. Terms owned by a module page, such as "audit management software" (the `seoTitle` values in `MODULES`), are not guide topics. This list changes no allowed action; the queues, approvals and link bank stay script-written.
+
 ## Changing the rules
 
 Edit the domain lists freely. The reviewer's five rules live in `REVIEW_RULES` in `topicScout.js`, and the hard rules next to them; both are covered by `team/tests/topic-scout.test.js`. The queue entry of every approved topic records which rules passed and the reviewer's findings, so a bad approval can be traced and the rule tightened.

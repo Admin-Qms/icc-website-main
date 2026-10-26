@@ -18,14 +18,23 @@ export function GET() {
     "",
     `> ${SITE.tagline}. Based in ${SITE.region}, serving companies across Canada.`,
     "",
-    "ISO Certification Consultants help manufacturing and service companies prepare for and pass ISO and sector certification audits: gap analysis, management system build, internal audits and support through the certification body's Stage 1 and Stage 2 audits. Engagements pair a certified lead consultant with compliance management software that tracks every clause, document, audit and corrective action.",
+    "ISO Certification Consultants provides AI-powered compliance management software for quality and compliance teams in manufacturing and service companies. The platform connects standards clauses, controlled documents, processes, audits, corrective actions, training, suppliers and equipment in one system, so a team can see where it stands before an auditor does. AI features draft and suggest, and a person reviews and approves; gap assessments and audits are carried out by people. Certified consultants are available when a company wants help with gap analysis, building the management system, internal audits and preparing for the certification body's Stage 1 and Stage 2 audits. ISO Certification Consultants is a consultancy and software provider, not a certification body or registrar.",
     "",
+    `- Book a demo: ${url("/contact/")}`,
+    `- Platform overview: ${url("/platform/")}`,
     `- Contact: ${SITE.email}, ${SITE.phone}`,
     `- Office: ${ADDRESS_LINE}`,
     `- Free readiness check: ${url("/assessment/")}`,
     `- Certification process: ${url("/process/")}`,
     "",
-    "## Certification consulting by standard",
+    "## Compliance management software by module",
+    "",
+    ...MODULES.map(
+      (m) =>
+        `- [${m.name}](${url(`/solutions/${m.slug}/`)}): ${m.seoTitle}. ${m.tagline}`,
+    ),
+    "",
+    "## By standard",
     "",
     ...STANDARDS.map(
       (s) =>
@@ -36,13 +45,6 @@ export function GET() {
     "",
     ...INDUSTRIES.map(
       (i) => `- [${i.name}](${url(`/industries/${i.slug}/`)}): ${i.blurb}`,
-    ),
-    "",
-    "## Compliance management software",
-    "",
-    `- [Platform overview](${url("/platform/")})`,
-    ...MODULES.map(
-      (m) => `- [${m.name}](${url(`/solutions/${m.slug}/`)}): ${m.tagline}`,
     ),
     "",
   ];
