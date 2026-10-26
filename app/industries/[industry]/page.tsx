@@ -253,7 +253,7 @@ export default function IndustryPage({
         eyebrow="Industry focus"
         title={
           <>
-            Compliance management software for <span className="text-teal-700">{ind.name}</span>
+            Compliance management software for <span className="text-teal-700">{ind.name}</span> teams
           </>
         }
         intro={ind.blurb}
@@ -400,7 +400,7 @@ export default function IndustryPage({
       </section>
 
       <CTASection
-        title={`See how ${ind.name.toLowerCase()} teams stay audit-ready. Book a demo`}
+        title={`Book a demo for ${ind.name}`}
       />
     </>
   );

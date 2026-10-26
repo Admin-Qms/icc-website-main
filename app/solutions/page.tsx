@@ -5,10 +5,11 @@ import { AnimatedTitle, HeaderIconsFX } from "@/components/HeaderFX";
 import { ROIPanel } from "@/components/ROIPanel";
 import { Stagger, StaggerItem, Reveal } from "@/components/motion";
 import { ArrowRight } from "@/components/Icons";
+import { pageTitle } from "@/lib/seo";
 import { MODULES, CUSTOMIZATION, ROI_PLATFORM } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Compliance Management Software Modules",
+  title: pageTitle("Compliance Management Software Modules"),
   description:
     "Eleven compliance management software modules: standards, documents, processes, audits, improvements, safety, training, assets, vendors and supplier quality.",
   alternates: { canonical: "/solutions" },

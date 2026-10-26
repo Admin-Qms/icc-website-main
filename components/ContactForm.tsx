@@ -100,7 +100,7 @@ export function ContactForm({
               Message received
             </h3>
             <p className="mt-3 max-w-sm text-slate-600">
-              Thanks, we have got your request. We will reply within one
+              Thanks, your request is in. We will reply within one
               business day to set up your demo or call.
             </p>
           </motion.div>

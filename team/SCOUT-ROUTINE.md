@@ -26,17 +26,6 @@ An approved topic's sources go into `external-link-bank.json` under `software_gu
 
 `team/scripts/scheduled-scout-run.sh apply` then runs the pipeline tests, commits only the two queue files and the link bank, pulls and pushes `main`. `prepare` is the usual fresh-clone start (fetch, checkout, `npm ci` for both `team/` and the repo root, since `team/pm.js` loads `lib/guide-contract.cjs`) plus the status file.
 
-## Priority search terms
-
-When the proposer needs guide topics or blog keywords, it considers these software search terms first, before the general themes in the prompt:
-
-- training matrix software
-- IATF 16949 compliance software
-- ISO 9001 software for small manufacturers
-- compliance management software for manufacturers
-
-Terms already queued (see `team/memory/guide-topic-queue.json` and `keyword-queue.json`) are skipped. Terms owned by a module page, such as "audit management software" (the `seoTitle` values in `MODULES`), are not guide topics. This list changes no allowed action; the queues, approvals and link bank stay script-written.
-
 ## Changing the rules
 
 Edit the domain lists freely. The reviewer's five rules live in `REVIEW_RULES` in `topicScout.js`, and the hard rules next to them; both are covered by `team/tests/topic-scout.test.js`. The queue entry of every approved topic records which rules passed and the reviewer's findings, so a bad approval can be traced and the rule tightened.
@@ -54,7 +43,7 @@ You are running the weekly topic scout for isocertificationconsultants.ca. Work 
    - `SCOUT_FAILED`: report the output and stop.
    - `SCOUT_NEEDED <status.json>`: read that file. `blog.needed` is how many blog keywords to propose, `guides.needed` how many guide topics, and `guides.sourcesNeeded` lists approved topics that still have no sources; any of these may be 0 or empty. Skip any part that is.
 2. Blog keywords, if needed: propose exactly that many search phrases an Ontario or Canadian manufacturer or service company would type when looking for ISO consulting, certification or compliance help. Spread them across the standards the site covers (ISO 9001, 14001, 45001, 13485, 22000, 22301, 17025, IATF 16949) and practical themes (audits, documentation, cost, timelines, supplier requirements, Ontario regulation). Never AS9100 or ISO 27001. Do not repeat anything in `blog.queued` or `blog.recentlyPublished`. Lowercase, 8 to 80 characters, letters, digits, spaces, commas, colons, apostrophes and hyphens only.
-3. Guide topics, if needed: each guide is a ten-page software guide about one ICC module (`guides.moduleSlugs`) for Canadian quality and operations teams. For each proposal use WebSearch and WebFetch to find at least two primary sources: standards bodies, accreditation bodies or regulators (prefer `sources.trustedDomains`, never `sources.blockedDomains`) plus the ICC module page on isocertificationconsultants.ca. Open every page you cite and record its exact URL, a short name and one line of context saying what it supports. Do not propose anything already in `guides.allTopics`, published or not. Read `guides.reviewRules`: an independent reviewer will judge each proposal against them using the fetched page text, so propose only topics and sources that clearly satisfy every rule.
+3. Guide topics, if needed: each guide is a ten-page software guide about one ICC module (`guides.moduleSlugs`) for Canadian quality and operations teams. For each proposal use WebSearch and WebFetch to find at least two primary sources: standards bodies, accreditation bodies or regulators (prefer `sources.trustedDomains`, never `sources.blockedDomains`) plus the ICC module page on isocertificationconsultants.ca. Open every page you cite and record its exact URL, a short name and one line of context saying what it supports. Do not propose anything already in `guides.allTopics`, published or not. When guide topics are needed, consider first software-intent searches tied to exactly one ICC module, for example "training matrix software" (Training); these are for guide topics only, never blog keywords. Read `guides.reviewRules`: an independent reviewer will judge each proposal against them using the fetched page text, so propose only topics and sources that clearly satisfy every rule.
 4. Sources for approved topics, for every entry in `guides.sourcesNeeded`: the topic is already approved, so research only its sources. Use WebSearch and WebFetch to find at least two primary sources that support that topic's keyword and problem, by the same standards as step 3 (prefer `sources.trustedDomains`, never `sources.blockedDomains`, include the ICC module page for its `moduleSlugs` when it exists). Open every page you cite and record its exact URL, a short name and one line of context. The reviewer judges these sources against `guides.reviewRules` using the fetched text.
 5. Write `team/reports/scout-proposals.json` in this shape:
    `{"blogKeywords":["..."],"guideTopics":[{"id":"slug-6-to-80-chars","topic":"...","aliases":[],"primaryKeyword":"...","secondaryKeywords":[],"moduleSlugs":["..."],"audience":"Canadian quality and operations teams","problem":"one sentence","sources":[{"url":"https://...","name":"...","context":"..."}]}],"topicSources":[{"topicId":"an id from guides.sourcesNeeded","sources":[{"url":"https://...","name":"...","context":"..."}]}]}`

@@ -95,18 +95,16 @@ export default function Home() {
             intro="If any of these sound familiar, this is what they look like once your compliance runs on the software."
           />
           <Stagger className="mt-12 grid gap-4">
-            {PAIN_POINTS.map((p, i) => (
+            {PAIN_POINTS.map((p) => (
               <StaggerItem key={p.slug}>
                 <Link
                   href={`/solutions/${p.slug}`}
                   className="group grid gap-3 rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-teal-300 hover:shadow-md md:grid-cols-[1fr_auto_1.3fr] md:items-center md:gap-6"
                 >
                   <div>
-                    {i === 0 && (
-                      <span className="mb-1 block text-[11px] font-bold uppercase tracking-wide text-slate-500">
-                        Today
-                      </span>
-                    )}
+                    <span className="mb-1 block text-[11px] font-bold uppercase tracking-wide text-slate-500">
+                      Today
+                    </span>
                     <p className="font-heading text-base font-bold text-navy-900">{p.pain}</p>
                   </div>
                   <span className="inline-flex w-fit items-center gap-1.5 rounded-md bg-teal-50 px-2.5 py-1 text-xs font-bold uppercase tracking-wide text-teal-700 ring-1 ring-teal-100">
@@ -114,11 +112,9 @@ export default function Home() {
                     <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
                   </span>
                   <div>
-                    {i === 0 && (
-                      <span className="mb-1 block text-[11px] font-bold uppercase tracking-wide text-teal-700">
-                        With the software
-                      </span>
-                    )}
+                    <span className="mb-1 block text-[11px] font-bold uppercase tracking-wide text-teal-700">
+                      With the software
+                    </span>
                     <p className="text-sm leading-relaxed text-slate-600">{p.capability}</p>
                   </div>
                 </Link>

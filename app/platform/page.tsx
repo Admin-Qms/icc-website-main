@@ -8,7 +8,7 @@ import { pageTitle } from "@/lib/seo";
 import { serializeJsonLd } from "@/lib/blog";
 
 const DESCRIPTION =
-  "AI-powered compliance management software for quality, documents, audits, training and suppliers. Stay audit-ready every day, with experts when you want them.";
+  "Eleven modules and an AI Assistant for standards, documents, audits, training and suppliers. AI compliance software where a person reviews and signs off.";
 
 export const metadata: Metadata = {
   title: pageTitle("AI Compliance Management Software"),
@@ -125,7 +125,7 @@ export default function PlatformPage() {
             <SectionHeading
               eyebrow="How AI is kept in check"
               title="AI does the paperwork. You stay in control."
-              intro="You will always know who did what. The assistant works inside the permissions you already set, shows its plan before it acts, and leaves a trail that separates AI from people. Gap assessments and audits are always done by people."
+              intro="You will always know who did what. The assistant works inside the permissions you already set, shows its plan before it acts, and leaves a trail that separates AI from people. Gap assessments and audits are always done by people. As AI compliance software, it prepares drafts only, and a person reviews and signs off on each one."
             />
           </div>
           <Stagger className="grid gap-4">
