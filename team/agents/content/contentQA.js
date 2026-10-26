@@ -639,10 +639,10 @@ const BANNED_PHRASES = [
 
 // Mirrored in tests/positioning-copy.test.mjs — keep both in sync.
 const POSITIONING_PATTERNS = [
-  /\byour\s?qms\b/i,
+  /\byourqms\b/i,
   /\bquro\b/i,
   /yourqms\.com/i,
-  /\bAI[- ](?:powered |driven |assisted |led )?gap assessments?\b/i,
+  /\bAI[- ](?:powered |driven |assisted |led |generated )?gap (?:assessments?|analys[ie]s)\b/i,
   /\bAI[- ](?:suggested |generated |powered )?audit findings?\b/i,
 ];
 

@@ -111,13 +111,13 @@ test("spelling: British forms in prose fail and are rewritten; names and URLs ar
 });
 
 test("positioning terms: product names and AI audit claims fail", () => {
-  for (const text of ["Try YourQMS today.", "Ask Quro.", "See yourqms.com.", "An AI gap assessment scores every clause.", "AI-powered gap assessments save time.", "AI audit findings appear instantly.", "AI-suggested audit findings."]) {
+  for (const text of ["Try YourQMS today.", "Ask Quro.", "See yourqms.com.", "An AI gap assessment scores every clause.", "AI-powered gap assessments save time.", "AI audit findings appear instantly.", "AI-suggested audit findings.", "An AI gap analysis covers every clause.", "AI-generated gap assessments are instant.", "YourQMS keeps records."]) {
     assert.ok(qa.findPositioningTerms(text).length > 0, text);
   }
 });
 
 test("positioning terms: honest neighbors pass", () => {
-  for (const text of ["A person runs the gap assessment.", "Audit findings are recorded by the auditor.", "AI drafting is off until you turn it on.", "Quorum rules for the management review."]) {
+  for (const text of ["A person runs the gap assessment.", "Audit findings are recorded by the auditor.", "AI drafting is off until you turn it on.", "Quorum rules for the management review.", "Audit your QMS before the surveillance visit.", "Your QMS should fit how the plant runs."]) {
     assert.deepEqual(qa.findPositioningTerms(text), [], text);
   }
 });
