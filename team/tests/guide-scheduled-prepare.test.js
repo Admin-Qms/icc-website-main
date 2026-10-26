@@ -63,3 +63,26 @@ test('a brief lists the approved sources recorded on its topic so the writer ret
   for (const url of stocked.sources) assert.ok(brief.includes(`- ${url}`), url);
   assert.ok(brief.indexOf('## Approved sources') < brief.indexOf('## Research queries'));
 });
+test('a job reserved before its topic had sources gets them in its brief when it is resumed', t => {
+  const { manager, store } = setup(t);
+  const queue = JSON.parse(fs.readFileSync(path.join(__dirname, '../memory/guide-topic-queue.json'), 'utf8')).queue;
+  const stocked = queue.find(q => q.approval === 'approved' && Array.isArray(q.sources) && q.sources.length >= 2);
+  const { sources, ...frozen } = stocked;
+  const job = store.createJob(frozen, '2026-W43-slot-1');
+  const briefPath = path.join(job.directory, 'brief.md');
+  fs.writeFileSync(briefPath, '# Guide assignment written before the sources were stocked\n');
+  const result = manager.prepareGuide({ scheduled: true, now: TUESDAY });
+  assert.equal(result.resumed, true); assert.equal(result.job.id, job.id);
+  const brief = fs.readFileSync(briefPath, 'utf8');
+  for (const url of sources) assert.ok(brief.includes(`- ${url}`), url);
+  assert.equal(store.loadJob(job.id).topic.sources, undefined, 'the frozen topic is not rewritten');
+});
+test('a resumed job past the reserved stage keeps its brief', t => {
+  const { manager, store } = setup(t);
+  const started = manager.prepareGuide({ scheduled: true, now: MONDAY });
+  store.updateJob(started.job.id, { stage: 'research-ready' });
+  const briefPath = path.join(started.job.directory, 'brief.md');
+  fs.writeFileSync(briefPath, 'kept');
+  manager.prepareGuide({ scheduled: true, now: TUESDAY });
+  assert.equal(fs.readFileSync(briefPath, 'utf8'), 'kept');
+});

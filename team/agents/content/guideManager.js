@@ -14,6 +14,7 @@ const { sourceGuideImages } = require('./guideImages');
 const { localDay, weeklyGuideSlots, nextGuideSlot, dueGuideSlot } = require('../shared/guideCadence');
 const { slugify, listPosts } = require('../shared/contentStore');
 const editorial = require('./guideEditorial');
+const { loadGuideQueue } = require('../shared/guideTopics');
 
 function createGuideManager({ store = defaultStore, model, reviewer, editModel, revisionModel } = {}) {
   const readCapabilities = () => JSON.parse(fs.readFileSync(config.CAPABILITY_PATH, 'utf8'));
@@ -35,7 +36,16 @@ function createGuideManager({ store = defaultStore, model, reviewer, editModel, 
       const now = options.now || new Date();
       const publishedTopicIds = new Set(store.published().map(g => g.manifest.topicId));
       const open = store.listJobs().filter(j => j.productionSlotId && !publishedTopicIds.has(j.topic.id)).sort((a, b) => String(a.createdAt).localeCompare(String(b.createdAt)));
-      if (open.length) return { success: true, resumed: true, job: store.resumeJob(open[0].id) };
+      if (open.length) {
+        const job = store.resumeJob(open[0].id);
+        // A job reserved before the scout stocked its topic's sources keeps a brief without
+        // them; until research is checkpointed, rewrite the brief from the current queue.
+        if (job.stage === 'reserved') {
+          const queued = loadGuideQueue().find(q => q.id === job.topic.id);
+          writeBrief(job, { ...job.topic, sources: queued?.sources || job.topic.sources });
+        }
+        return { success: true, resumed: true, job };
+      }
       const due = dueGuideSlot(now);
       if (!due) return { skipped: true, reason: 'No guide production slot due today' };
       if (!nextGuideSlot([due], store.published(), [])) return { skipped: true, reason: 'Guide production slot already generated' };
@@ -46,11 +56,15 @@ function createGuideManager({ store = defaultStore, model, reviewer, editModel, 
       publishedTopicIds: new Set(store.published().map(g => g.manifest.topicId)), reservedTopicIds: store.reservedTopicIds() });
     if (!topic) return { skipped: true, reason: 'No eligible approved software guide topics' };
     const job = store.createJob(topic, options.productionSlotId);
+    const queries = writeBrief(job, topic);
+    store.atomic(path.join(job.directory, 'research-template.json'), { jobId: job.id, topicId: topic.id, sources: [], capabilityIds: [] });
+    return { success: true, job, queries };
+  }
+  function writeBrief(job, topic) {
     const queries = researcher.guideResearchQueries(topic);
     const approvedSources = Array.isArray(topic.sources) && topic.sources.length ? `## Approved sources\n\nThese link-bank URLs were fetched and reviewed for this topic; retrieve them first.\n\n${topic.sources.map(url => `- ${url}`).join('\n')}\n\n` : '';
     store.atomic(path.join(job.directory, 'brief.md'), `# Guide assignment: ${topic.topic}\n\nAudience: ${topic.audience}\nProblem: ${topic.problem}\n\n${approvedSources}## Research queries\n\n${queries.map(q => `- ${q.query} — primary domains: ${q.domains.join(', ')}`).join('\n')}\n\nRetrieve primary sources, checkpoint research through guide research, then use the final chapter briefs. No chapter is authorized before evidence is ready.\n`);
-    store.atomic(path.join(job.directory, 'research-template.json'), { jobId: job.id, topicId: topic.id, sources: [], capabilityIds: [] });
-    return { success: true, job, queries };
+    return queries;
   }
   function checkpointResearch(id, pack, { refresh = false } = {}) {
     const job = store.loadJob(id);
