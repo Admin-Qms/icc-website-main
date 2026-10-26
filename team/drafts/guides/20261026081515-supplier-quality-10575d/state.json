@@ -1,0 +1,27 @@
+{
+  "id": "20261026081515-supplier-quality-10575d",
+  "topic": {
+    "id": "supplier-quality",
+    "topic": "Supplier quality management software",
+    "aliases": [
+      "supplier quality software"
+    ],
+    "primaryKeyword": "supplier quality software",
+    "secondaryKeywords": [
+      "supplier approval",
+      "supplier corrective actions"
+    ],
+    "moduleSlugs": [
+      "supplier-quality"
+    ],
+    "audience": "Canadian quality and operations teams",
+    "problem": "Connecting supplier qualification, evidence and corrective actions",
+    "priority": 3,
+    "approval": "approved"
+  },
+  "productionSlotId": "2026-W44-slot-1",
+  "stage": "reserved",
+  "pages": {},
+  "createdAt": "2026-10-26T08:15:15.297Z",
+  "updatedAt": "2026-10-26T08:15:15.297Z"
+}
