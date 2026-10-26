@@ -70,10 +70,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-26T15:16:34.959Z"
+    },
+    "training-rollout": {
+      "hash": "177345ecb52ecb9f86bbd199a00844dfac3f55821778139335f3e5f40892a242",
+      "wordCount": 2072,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-26T15:19:33.012Z"
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T15:16:59.305Z",
+  "updatedAt": "2026-10-26T15:19:46.042Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -1482,7 +1489,7 @@
     "reviewedChapters": [],
     "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
   },
-  "contextHash": "d06c566a63c31defc415b90471aa99661dc8fda883da4eae89691f41598f5977",
+  "contextHash": "81ec78ad008dcb9a59b13ef8ee854fe45fec91a9482f7db8501122b363b96fb7",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2413,6 +2420,140 @@
       "inputHash": "172b92cef1ebd0a66e2a95417b7f09959dda2cbbf47aef037c5a1beb14e2d911",
       "outputContextHash": "d06c566a63c31defc415b90471aa99661dc8fda883da4eae89691f41598f5977",
       "reviewedAt": "2026-10-26T15:16:59.301Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "training-rollout": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The training and rollout guide chapter complies with the plan, research brief, and context governance. It structures role-specific training modules, sandbox workflow simulations, phased multi-site deployment protocols, and operational user adoption measurement. All required workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are properly integrated. Citations accurately reflect the ISO/IAF APG external provider guidance and ICC module capabilities (including human-in-the-loop review of AI suggestions and pending supplier portal features). Unassigned FAQ content is correctly omitted.",
+      "glossary": [
+        {
+          "term": "Hypercare",
+          "definition": "An intensive, temporary post-deployment operational support phase where technical and process specialists provide immediate assistance on-site or on-call to resolve user friction and procedural roadblocks."
+        }
+      ],
+      "roles": [
+        "Quality training coordinator",
+        "Buyer",
+        "Receiving inspector",
+        "Quality engineer",
+        "Quality manager",
+        "Lead systems trainer",
+        "Implementation project manager",
+        "Continuous improvement director",
+        "Supervisor"
+      ],
+      "recordNames": [
+        "Employee training completion log and practical competency assessment",
+        "Workflow simulation validation report",
+        "Facility deployment milestone sign-off and operational readiness log",
+        "Post-implementation adoption audit report"
+      ],
+      "decisions": [
+        "Certify operational staff as competent to perform live quality transactions in the new platform",
+        "Determine whether simulated workflow transactions satisfy internal operating procedures and data integrity standards",
+        "Authorize phased go-live progression from primary fabrication plant to secondary assembly facilities",
+        "Determine if system adoption meets operational readiness criteria or requires procedural adjustments"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Structuring role-specific training for buyers, receiving inspectors, and quality engineers",
+            "section": "Structuring role-specific training for buyers, receiving inspectors, and quality engineers"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Structuring role-specific training for buyers, receiving inspectors, and quality engineers; semantic review verifies support",
+            "section": "Structuring role-specific training for buyers, receiving inspectors, and quality engineers"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Conducting workflow simulations in a sandbox environment using representative records",
+            "section": "Conducting workflow simulations in a sandbox environment using representative records"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Conducting workflow simulations in a sandbox environment using representative records; semantic review verifies support",
+            "section": "Conducting workflow simulations in a sandbox environment using representative records"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Executing staged deployment across receiving bays and outsourced processors",
+            "section": "Executing staged deployment across receiving bays and outsourced processors"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Executing staged deployment across receiving bays and outsourced processors; semantic review verifies support",
+            "section": "Executing staged deployment across receiving bays and outsourced processors"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Measuring user adoption, procedural compliance, and operational throughput",
+            "section": "Measuring user adoption, procedural compliance, and operational throughput"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Measuring user adoption, procedural compliance, and operational throughput; semantic review verifies support",
+            "section": "Measuring user adoption, procedural compliance, and operational throughput"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "5e875340c1106e40824d2a0d0020e73d85a2f693337edc1a9c31e353b1af6a92",
+      "outputContextHash": "81ec78ad008dcb9a59b13ef8ee854fe45fec91a9482f7db8501122b363b96fb7",
+      "reviewedAt": "2026-10-26T15:19:46.038Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

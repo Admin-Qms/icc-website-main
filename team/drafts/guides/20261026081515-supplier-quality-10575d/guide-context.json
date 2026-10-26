@@ -73,6 +73,10 @@
     {
       "term": "Parallel run",
       "definition": "A risk-mitigation deployment protocol where incoming inspections and transactions are logged simultaneously in both legacy and new systems for a defined duration to verify operational consistency."
+    },
+    {
+      "term": "Hypercare",
+      "definition": "An intensive, temporary post-deployment operational support phase where technical and process specialists provide immediate assistance on-site or on-call to resolve user friction and procedural roadblocks."
     }
   ],
   "roles": [
@@ -107,7 +111,13 @@
     "Quality assurance director",
     "Quality Data Analyst",
     "Systems Integration Engineer",
-    "Operations Project Manager"
+    "Operations Project Manager",
+    "Quality training coordinator",
+    "Quality manager",
+    "Lead systems trainer",
+    "Implementation project manager",
+    "Continuous improvement director",
+    "Supervisor"
   ],
   "recordNames": [
     "Process gap assessment report",
@@ -137,7 +147,11 @@
     "Legacy data inventory register",
     "Data mapping specification document detailing field transformations and validation rules",
     "Pilot migration verification report",
-    "Signed cutover authorization and post-go-live operational support schedule"
+    "Signed cutover authorization and post-go-live operational support schedule",
+    "Employee training completion log and practical competency assessment",
+    "Workflow simulation validation report",
+    "Facility deployment milestone sign-off and operational readiness log",
+    "Post-implementation adoption audit report"
   ],
   "example": {
     "label": "Illustrative example",
@@ -226,6 +240,18 @@
         "Map legacy spreadsheet columns to target software schema fields and relational data structures",
         "Validate pilot import accuracy and approve migration script for enterprise execution",
         "Issue final Go/No-Go authorization for production system cutover across all manufacturing plants"
+      ]
+    },
+    {
+      "slug": "training-rollout",
+      "title": "Training teams and rolling out the system: Supplier quality management software",
+      "summary": "The training and rollout guide chapter complies with the plan, research brief, and context governance. It structures role-specific training modules, sandbox workflow simulations, phased multi-site deployment protocols, and operational user adoption measurement. All required workflow roles, inputs, decisions, records, exceptions, evaluation criteria, and labeled illustrative examples are properly integrated. Citations accurately reflect the ISO/IAF APG external provider guidance and ICC module capabilities (including human-in-the-loop review of AI suggestions and pending supplier portal features). Unassigned FAQ content is correctly omitted.",
+      "bodyHash": "73bc8828537a3a75214e1f5462c8103a54a3643f66235398b407a49667b66d56",
+      "decisions": [
+        "Certify operational staff as competent to perform live quality transactions in the new platform",
+        "Determine whether simulated workflow transactions satisfy internal operating procedures and data integrity standards",
+        "Authorize phased go-live progression from primary fabrication plant to secondary assembly facilities",
+        "Determine if system adoption meets operational readiness criteria or requires procedural adjustments"
       ]
     }
   ],
