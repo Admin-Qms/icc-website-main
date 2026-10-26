@@ -30,13 +30,36 @@
   "roles": [
     "Quality owner",
     "Process owner",
-    "Operator"
+    "Operator",
+    "Quality Assurance Manager",
+    "Procurement Lead",
+    "Director of Quality and Compliance",
+    "Supplier Quality Engineer",
+    "Receiving inspector"
   ],
-  "recordNames": [],
+  "recordNames": [
+    "Process gap assessment report",
+    "Order specification package with engineering sign-off",
+    "Controlled Approved Supplier List qualification authorization entry",
+    "Component quality inspection plan"
+  ],
   "example": {
     "label": "Illustrative example",
     "description": "An unnamed Canadian industrial machinery manufacturer evaluates supplier quality management software across incoming fabrication, machining, and electronic sub-assemblies. All workflows, audits, and nonconformance records described are illustrative and do not represent actual customer results."
   },
-  "reviewedChapters": [],
+  "reviewedChapters": [
+    {
+      "slug": "mapping-workflows",
+      "title": "Mapping the current workflow: Supplier quality management software",
+      "summary": "The guide chapter strictly aligns with the plan and research brief. It defines the operational workflow problem across qualification, receiving inspection, and corrective action handoffs; incorporates practical APG guidance with required disclaimers; notes the pending capability register status for ICC supplier portal functions; satisfies all assigned workflow roles, inputs, decisions, records, and exceptions; labels all hypothetical examples clearly; and excludes unassigned FAQ content.",
+      "bodyHash": "6fc3c1d4791f60d83ae372aaaf3606a873174c83b270fa1719c80f70386dad0d",
+      "decisions": [
+        "Determine whether handoff bottlenecks between purchasing and receiving quality require integrated workflow automation",
+        "Verify whether supplier purchase orders contain verified drawing numbers, acceptance standards, and statutory clauses",
+        "Authorize or deny placement of external provider on the controlled Approved Supplier List",
+        "Assign mandatory receiving inspection levels, sampling protocols, and required Mill Test Report validations"
+      ]
+    }
+  ],
   "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
 }

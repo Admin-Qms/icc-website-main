@@ -1,0 +1,125 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The guide chapter strictly aligns with the plan and research brief. It defines the operational workflow problem across qualification, receiving inspection, and corrective action handoffs; incorporates practical APG guidance with required disclaimers; notes the pending capability register status for ICC supplier portal functions; satisfies all assigned workflow roles, inputs, decisions, records, and exceptions; labels all hypothetical examples clearly; and excludes unassigned FAQ content.",
+  "glossary": [],
+  "roles": [
+    "Quality Assurance Manager",
+    "Procurement Lead",
+    "Director of Quality and Compliance",
+    "Supplier Quality Engineer",
+    "Receiving inspector"
+  ],
+  "recordNames": [
+    "Process gap assessment report",
+    "Order specification package with engineering sign-off",
+    "Controlled Approved Supplier List qualification authorization entry",
+    "Component quality inspection plan"
+  ],
+  "decisions": [
+    "Determine whether handoff bottlenecks between purchasing and receiving quality require integrated workflow automation",
+    "Verify whether supplier purchase orders contain verified drawing numbers, acceptance standards, and statutory clauses",
+    "Authorize or deny placement of external provider on the controlled Approved Supplier List",
+    "Assign mandatory receiving inspection levels, sampling protocols, and required Mill Test Report validations"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Defining the operational problem across qualification, receiving, and corrective actions",
+        "section": "Defining the operational problem across qualification, receiving, and corrective actions"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Defining the operational problem across qualification, receiving, and corrective actions; semantic review verifies support",
+        "section": "Defining the operational problem across qualification, receiving, and corrective actions"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Identifying records and cross-departmental handoffs between purchasing and quality",
+        "section": "Identifying records and cross-departmental handoffs between purchasing and quality"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Identifying records and cross-departmental handoffs between purchasing and quality; semantic review verifies support",
+        "section": "Identifying records and cross-departmental handoffs between purchasing and quality"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Assigning decision ownership and approval thresholds across the supply chain",
+        "section": "Assigning decision ownership and approval thresholds across the supply chain"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Assigning decision ownership and approval thresholds across the supply chain; semantic review verifies support",
+        "section": "Assigning decision ownership and approval thresholds across the supply chain"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Setting risk-based acceptance criteria for externally provided processes and materials",
+        "section": "Setting risk-based acceptance criteria for externally provided processes and materials"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Setting risk-based acceptance criteria for externally provided processes and materials; semantic review verifies support",
+        "section": "Setting risk-based acceptance criteria for externally provided processes and materials"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "2826c440cd427e90a04d5545f3c340bdf6273dbb5adbda1475e6ebedd8d65c4e",
+  "outputContextHash": "3ce23106d92c55b1f4291dcbe7c00579403abe6949f34ffec391dad280096414",
+  "reviewedAt": "2026-10-26T14:49:28.393Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
