@@ -9,7 +9,7 @@ export const SITE = {
   domain: "isocertificationconsultants.ca",
   url: "https://isocertificationconsultants.ca",
   tagline:
-    "ISO certification consulting for Canadian companies, with compliance management software configured by certified consultants",
+    "AI-powered compliance management software for quality and compliance, with certified consultants when you want them",
   // Shown on the contact page and in the footer; swap for a shared inbox when one exists.
   email: "anthony.mannella@isocertificationconsultants.ca",
   phone: "+1 (416) 622-0022",
@@ -1219,7 +1219,6 @@ export const PAIN_POINTS = [
       "Suppliers answer SCARs and PPAP requests in their own portal, and every response is on record.",
   },
 ];
-
 
 // How AI is kept in check. A person always signs off.
 export const AI_PRINCIPLES = [

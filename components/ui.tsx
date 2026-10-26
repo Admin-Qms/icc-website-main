@@ -193,8 +193,8 @@ export function GapCreditBanner() {
 }
 
 export function CTASection({
-  title = "Talk to an ISO consultant — no pressure, no obligation",
-  intro = "Tell us about your operation and what you're certifying for. You'll get a clear, honest read on scope and timeline from a certified lead consultant.",
+  title = "See how much compliance work you can take off your team",
+  intro = "Book a demo set up for your standards and processes. We'll show you where the manual work goes away and how you stay ready for every audit.",
 }: {
   title?: string;
   intro?: string;
@@ -208,7 +208,7 @@ export function CTASection({
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-300">{intro}</p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-primary">
-                Book a free consultation
+                Book a demo
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link href="/assessment" className="btn border-2 border-white/30 bg-transparent text-white hover:bg-white/10">

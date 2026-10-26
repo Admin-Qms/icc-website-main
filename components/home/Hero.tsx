@@ -190,7 +190,7 @@ function HeroContactPanel() {
             href="/contact/"
             className="font-semibold text-teal-700 underline"
           >
-            Contact a consultant
+            Book a demo
           </Link>
         </p>
       </noscript>
