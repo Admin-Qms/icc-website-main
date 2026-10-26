@@ -20,6 +20,19 @@ sourceIds:
   - apg-external-providers
   - icc-supplier-quality-module
 capabilityIds: []
+wordCount: 2012
+readTime: 11
+image:
+  src: /images/guides/supplier-quality-software/evaluating-software.webp
+  alt: >-
+    a machining supervisor comparing inspection records beside a CNC machine;
+    authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 59366de0fde2b8916c03ab7421b4c3a5fe53240892a575a86c7266c8c2c203d4
+  sha256: 59366de0fde2b8916c03ab7421b4c3a5fe53240892a575a86c7266c8c2c203d4
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Building a functional shortlist based on qualification, receiving, and SCAR integration
 

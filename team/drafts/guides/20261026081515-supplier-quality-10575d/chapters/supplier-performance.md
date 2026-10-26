@@ -19,6 +19,19 @@ sourceIds:
   - apg-external-providers
   - icc-supplier-quality-module
 capabilityIds: []
+wordCount: 2005
+readTime: 11
+image:
+  src: /images/guides/supplier-quality-software/supplier-performance.webp
+  alt: >-
+    a quality technician isolating a rejected component at a marked inspection
+    bench; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 2c524250ceda94076edd7ec430a1c40999c9bee04c1c473f8a60d055bbf2afe9
+  sha256: 2c524250ceda94076edd7ec430a1c40999c9bee04c1c473f8a60d055bbf2afe9
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Building scorecards grounded in receiving yields, SCARs, and concessions
 

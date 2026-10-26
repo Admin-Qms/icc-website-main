@@ -20,6 +20,19 @@ sourceIds:
   - apg-external-providers
   - icc-supplier-quality-module
 capabilityIds: []
+wordCount: 2014
+readTime: 11
+image:
+  src: /images/guides/supplier-quality-software/supplier-qualification.webp
+  alt: >-
+    a production operator completing a controlled checklist at an assembly
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: ddb568716bbb3c1e7a91a86304bca2652e665507ac39d05cc5240bd7c7dd0223
+  sha256: ddb568716bbb3c1e7a91a86304bca2652e665507ac39d05cc5240bd7c7dd0223
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Defining supplier risk tiers and criticality beyond commercial pricing
 

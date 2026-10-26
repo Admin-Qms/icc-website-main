@@ -1,5 +1,5 @@
 {
-  "pass": false,
+  "pass": true,
   "checks": [
     {
       "id": "schema-version",
@@ -363,7 +363,7 @@
     {
       "id": "chapter-words",
       "pass": true,
-      "message": "2009 visible words",
+      "message": "2011 visible words",
       "page": "receiving-controls"
     },
     {
@@ -657,7 +657,7 @@
     {
       "id": "total-words",
       "pass": true,
-      "message": "19958 total visible words; maximum 20,000 includes introduction"
+      "message": "19960 total visible words; maximum 20,000 includes introduction"
     },
     {
       "id": "cross-chapter-repetition",
@@ -1000,6 +1000,12 @@
       "page": "mapping-workflows"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/supplier-quality/",
+      "page": "mapping-workflows"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf",
@@ -1013,7 +1019,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "mapping-workflows"
     },
@@ -1194,6 +1200,12 @@
       "page": "evaluating-software"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/supplier-quality/",
+      "page": "evaluating-software"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf",
@@ -1201,7 +1213,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "evaluating-software"
     },
@@ -1358,6 +1370,12 @@
       "page": "supplier-qualification"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/supplier-quality/",
+      "page": "supplier-qualification"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf",
@@ -1389,7 +1407,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "supplier-qualification"
     },
@@ -1552,6 +1570,12 @@
       "page": "receiving-controls"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/supplier-quality/",
+      "page": "receiving-controls"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/supplier-quality/",
@@ -1577,7 +1601,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "receiving-controls"
     },
@@ -1740,6 +1764,12 @@
       "page": "supplier-actions"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/supplier-quality/",
+      "page": "supplier-actions"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/supplier-quality/",
@@ -1765,7 +1795,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "supplier-actions"
     },
@@ -1940,6 +1970,12 @@
       "page": "supplier-performance"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/supplier-quality/",
+      "page": "supplier-performance"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf",
@@ -1953,7 +1989,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "supplier-performance"
     },
@@ -2110,6 +2146,12 @@
       "page": "migration-planning"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/supplier-quality/",
+      "page": "migration-planning"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf",
@@ -2141,7 +2183,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "migration-planning"
     },
@@ -2298,6 +2340,12 @@
       "page": "training-rollout"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/supplier-quality/",
+      "page": "training-rollout"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf",
@@ -2329,7 +2377,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "training-rollout"
     },
@@ -2597,64 +2645,10 @@
     },
     {
       "id": "demonstration-invitation",
-      "pass": false,
+      "pass": true,
       "message": "The closing paragraph must invite a software demonstration at /contact/"
     }
   ],
-  "failures": [
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "mapping-workflows"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "evaluating-software"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "supplier-qualification"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "receiving-controls"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "supplier-actions"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "supplier-performance"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "migration-planning"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "training-rollout"
-    },
-    {
-      "id": "demonstration-invitation",
-      "pass": false,
-      "message": "The closing paragraph must invite a software demonstration at /contact/"
-    }
-  ],
-  "wordCount": 19958
+  "failures": [],
+  "wordCount": 19960
 }

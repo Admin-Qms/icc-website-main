@@ -18,6 +18,19 @@ sourceIds:
   - apg-external-providers
   - icc-supplier-quality-module
 capabilityIds: []
+wordCount: 1523
+readTime: 8
+image:
+  src: /images/guides/supplier-quality-software/supplier-quality-software.webp
+  alt: >-
+    A manufacturing quality technician confirming a controlled work instruction
+    at a production cell; authentic industrial setting, no text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 894a2969ff75ea03b2c17558b496581fe35cc9fb82979ac7366ae0faec435e12
+  sha256: 894a2969ff75ea03b2c17558b496581fe35cc9fb82979ac7366ae0faec435e12
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## The operational problem
 

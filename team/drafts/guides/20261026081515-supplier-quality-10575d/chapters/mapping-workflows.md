@@ -20,6 +20,19 @@ sourceIds:
   - apg-external-providers
   - icc-supplier-quality-module
 capabilityIds: []
+wordCount: 2184
+readTime: 11
+image:
+  src: /images/guides/supplier-quality-software/mapping-workflows.webp
+  alt: >-
+    a fabrication inspector tracing a paper work instruction at a cutting
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 50bdfc1c07909f87bc5e7bdd1393b1321ff19e4a7d5386098bdc7e91d97574ee
+  sha256: 50bdfc1c07909f87bc5e7bdd1393b1321ff19e4a7d5386098bdc7e91d97574ee
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Defining the operational problem across qualification, receiving, and corrective actions
 

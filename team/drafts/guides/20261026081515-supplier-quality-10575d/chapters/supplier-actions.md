@@ -1,20 +1,37 @@
 ---
-slug: 'supplier-actions'
+slug: supplier-actions
 title: 'Following supplier corrective actions: Supplier quality management software'
-description: 'Following supplier corrective actions in supplier quality software: describing the supplier finding and requesting supporting evidence.'
-primaryKeyword: 'supplier quality software'
+description: >-
+  Following supplier corrective actions in supplier quality software: describing
+  the supplier finding and requesting supporting evidence.
+primaryKeyword: supplier quality software
 keywords:
-  - 'supplier quality software following supplier corrective actions'
-  - 'supplier quality software'
-  - 'supplier approval'
-  - 'supplier corrective actions'
-author: 'ISO Certification Consultants Editorial Team'
+  - supplier quality software following supplier corrective actions
+  - supplier quality software
+  - supplier approval
+  - supplier corrective actions
+author: ISO Certification Consultants Editorial Team
 date: '2026-10-26'
-imageBrief: 'a line operator scanning an approved instruction beside a guarded press; authentic manufacturing environment, no readable text or logos'
+imageBrief: >-
+  a line operator scanning an approved instruction beside a guarded press;
+  authentic manufacturing environment, no readable text or logos
 sourceIds:
   - icc-supplier-quality-module
   - apg-external-providers
 capabilityIds: []
+wordCount: 2024
+readTime: 11
+image:
+  src: /images/guides/supplier-quality-software/supplier-actions.webp
+  alt: >-
+    a line operator scanning an approved instruction beside a guarded press;
+    authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: d99f43962d29e682ba7b797065555f9ca437b1a7292f4fad7b8fbc27d407cebe
+  sha256: d99f43962d29e682ba7b797065555f9ca437b1a7292f4fad7b8fbc27d407cebe
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Triggering SCARs directly from receiving and in-process nonconformance records
 

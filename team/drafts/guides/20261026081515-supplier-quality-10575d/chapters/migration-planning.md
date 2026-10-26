@@ -19,6 +19,19 @@ sourceIds:
   - apg-external-providers
   - icc-supplier-quality-module
 capabilityIds: []
+wordCount: 2105
+readTime: 11
+image:
+  src: /images/guides/supplier-quality-software/migration-planning.webp
+  alt: >-
+    a receiving inspector sorting traceability records beside incoming material
+    racks; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: a305ba0a06757f65b70ea896658befd7e18206650a22d6bdec7cf924e7cc5923
+  sha256: a305ba0a06757f65b70ea896658befd7e18206650a22d6bdec7cf924e7cc5923
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Auditing and classifying legacy supplier records and quality history
 

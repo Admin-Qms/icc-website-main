@@ -21,6 +21,19 @@ sourceIds:
   - apg-external-providers
   - icc-supplier-quality-module
 capabilityIds: []
+wordCount: 2010
+readTime: 11
+image:
+  src: /images/guides/supplier-quality-software/ongoing-operation.webp
+  alt: >-
+    a quality lead reviewing completed evidence beside a final inspection
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 5086ccc65f23c1cb6e7efcdb4d4e232c7524787aac86f25e56c6e1a6668dcdfa
+  sha256: 5086ccc65f23c1cb6e7efcdb4d4e232c7524787aac86f25e56c6e1a6668dcdfa
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Conducting periodic workflow audits and ISO 9001 external provider reviews
 

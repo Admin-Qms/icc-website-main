@@ -19,6 +19,20 @@ sourceIds:
   - apg-external-providers
   - icc-supplier-quality-module
 capabilityIds: []
+wordCount: 2011
+readTime: 11
+image:
+  src: /images/guides/supplier-quality-software/receiving-controls.webp
+  alt: >-
+    two quality inspectors reviewing a weld inspection record beside a
+    fabrication cell; authentic manufacturing environment, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: gemini
+  sourceId: 79718c51b15e382135ceac3bf5860c3016932a2dfec0f7b29c057716c9a20dc1
+  sha256: 79718c51b15e382135ceac3bf5860c3016932a2dfec0f7b29c057716c9a20dc1
+  licenseUrl: 'https://ai.google.dev/gemini-api/terms'
 ---
 ## Linking purchase orders, engineering revisions, and receiving inspection criteria
 
