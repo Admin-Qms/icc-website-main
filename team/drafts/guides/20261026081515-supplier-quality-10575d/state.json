@@ -20,7 +20,7 @@
     "approval": "approved"
   },
   "productionSlotId": "2026-W44-slot-1",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "61c5ed5ee2017ca32de224df322cff9f448b48abed3aed0dee66f44fe767a4f0",
@@ -94,7 +94,7 @@
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T15:33:02.005Z",
+  "updatedAt": "2026-10-26T15:33:26.288Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -2853,7 +2853,15 @@
   },
   "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf",
   "outlineHash": "d6e830059b19659da8310599d150077829ad696266f48c49847e49336c7e3906",
-  "audit": null,
+  "audit": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "unresolvedFindings": [],
+    "inputHash": "4f29d509259f5c7df32bb6f53358bb1b5d409c60dec7c71757bcd4b40222e61c",
+    "reviewer": "Configured gemini independent review",
+    "reviewedAt": "2026-10-26T15:33:26.286Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }
