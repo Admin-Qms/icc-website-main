@@ -36,7 +36,7 @@ const STEPS = [
   {
     title: "Set up your system",
     detail:
-      "Documents holds your procedures, Processes holds the process maps and their owners, and Training builds the competency matrix. Optional AI drafting helps with first versions, and a person reviews each one.",
+      "Documents holds your procedures, Processes holds the process maps and their owners, and Training builds the competency matrix. AI drafting, if you turn it on, helps with first versions, and a person reviews each one.",
   },
   {
     title: "Work as usual, records build themselves",
@@ -57,7 +57,7 @@ export default function PlatformPage() {
       <PageHeader
         eyebrow="The software"
         title={<>The AI-powered operating system for <span className="text-teal-700">quality and compliance</span></>}
-        intro="Our compliance management software puts eleven modules in one place and keeps the evidence a certification audit asks for as your team works, instead of leaving it to be assembled in a panic beforehand. AI does the paperwork and flags what is slipping. You stay ready for an audit any day, for any standard you certify against."
+        intro="Our compliance management software puts eleven modules in one place and keeps the evidence a certification audit asks for as your team works, instead of leaving it to be assembled in a panic beforehand. AI does the paperwork, and the software flags what is slipping before an auditor finds it. You stay ready for an audit any day, for any standard you certify against."
       >
         <Link href="/solutions" className="btn-primary">
           See the modules <ArrowRight className="h-4 w-4" />
@@ -100,7 +100,7 @@ export default function PlatformPage() {
           <SectionHeading
             eyebrow="What you get"
             title="Less manual work, and early warning before anything slips"
-            intro="An AI assistant, optional AI drafting, notifications, a home dashboard and a consultant on call. AI drafts and flags; a person reviews and signs off."
+            intro="An AI assistant, optional AI drafting, notifications, a home dashboard and a consultant on call. AI drafts when you turn it on, notifications and the dashboard flag what needs attention, and a person reviews and signs off."
           />
           <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {PLATFORM.map((f) => (
@@ -151,7 +151,7 @@ export default function PlatformPage() {
         <div className="container-page grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <SectionHeading
-              eyebrow="Expert help when you want it"
+              eyebrow="Optional consulting"
               title="Experts when you want them"
               intro="Use the software on its own, or bring in our certified consultants to set it up with you and guide you to certification. Either way the work is done and defensible, because the software holds the evidence. The certification body certifies; we prepare you."
             />
