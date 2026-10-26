@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "topicId": "supplier-quality",
+  "glossary": [
+    {
+      "term": "Workflow owner",
+      "definition": "The designated operational role responsible for authoring, reviewing, executing decisions, and archiving records in a defined supplier quality workflow."
+    },
+    {
+      "term": "Approved Supplier List (ASL)",
+      "definition": "Documented information identifying external providers authorized to supply specified parts, materials, or outsourced processes based on verified qualification criteria."
+    },
+    {
+      "term": "Supplier Corrective Action Request (SCAR)",
+      "definition": "A formal quality record issued to an external provider requiring root-cause investigation, containment, corrective action, and recurrence prevention evidence following a nonconformance."
+    },
+    {
+      "term": "Capability Register Pending Status",
+      "definition": "A governance classification denoting software modules or functions—such as external supplier portals—that are scheduled or under evaluation rather than verified, production-ready capabilities."
+    },
+    {
+      "term": "Concession",
+      "definition": "Formal authorization granted by an authorized technical authority to accept and use externally provided material or components that do not conform to initial specifications."
+    },
+    {
+      "term": "Human-in-the-Loop AI Review",
+      "definition": "A mandatory governance protocol requiring an authorized human owner to evaluate, validate, or reject automated or AI suggestions before commitment into a controlled quality record."
+    }
+  ],
+  "roles": [
+    "Quality owner",
+    "Process owner",
+    "Operator"
+  ],
+  "recordNames": [],
+  "example": {
+    "label": "Illustrative example",
+    "description": "An unnamed Canadian industrial machinery manufacturer evaluates supplier quality management software across incoming fabrication, machining, and electronic sub-assemblies. All workflows, audits, and nonconformance records described are illustrative and do not represent actual customer results."
+  },
+  "reviewedChapters": [],
+  "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
+}

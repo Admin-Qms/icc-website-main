@@ -1,0 +1,1323 @@
+# Training teams and rolling out the system: Supplier quality management software
+
+## Fixed frontmatter
+
+```json
+{
+  "slug": "training-rollout",
+  "title": "Training teams and rolling out the system: Supplier quality management software",
+  "description": "Training teams and rolling out the system in supplier quality software: set role-based learning tasks and pilot with representative users.",
+  "primaryKeyword": "supplier quality software",
+  "keywords": [
+    "supplier quality software training teams and rolling out the system",
+    "supplier quality software",
+    "supplier approval",
+    "supplier corrective actions"
+  ],
+  "author": "ISO Certification Consultants Editorial Team",
+  "date": "2026-10-26",
+  "imageBrief": "a trainer showing an operator the approved setup instruction on a shop floor; authentic manufacturing environment, no readable text or logos",
+  "sourceIds": [
+    "apg-external-providers",
+    "icc-supplier-quality-module"
+  ],
+  "capabilityIds": []
+}
+```
+
+Target: 2000 visible words.
+Scope: Cover training teams and rolling out the system for supplier quality software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope.
+
+## Subsections
+
+### Structuring role-specific training for buyers, receiving inspectors, and quality engineers
+{
+  "title": "Structuring role-specific training for buyers, receiving inspectors, and quality engineers",
+  "sourceIds": [
+    "apg-external-providers",
+    "icc-supplier-quality-module"
+  ],
+  "keyPoints": [
+    "Tailor training modules to distinct operational responsibilities rather than presenting generic system-wide walkthroughs.",
+    "Buyers require training on PO specification verification and Approved Supplier List status constraints.",
+    "Receiving inspectors must master fast-paced nonconformance logging, quarantine holds, and sampling plan execution.",
+    "Quality engineers require in-depth training on SCAR issuance, root-cause evaluation, and human review of automated suggestions."
+  ],
+  "workflow": {
+    "role": "Quality Training Coordinator",
+    "input": "Role descriptions, standard operating procedures, training sandbox environments, and workflow competency matrices.",
+    "decision": "Certify operational staff as competent to perform live quality transactions in the new platform.",
+    "record": "Employee training completion records and practical competency assessment logs.",
+    "exception": "Receiving dock staff fails practical inspection logging test, requiring targeted retraining before go-live."
+  },
+  "evaluationCriteria": [
+    "Verify that software includes contextual, role-based help guides and simplified user interfaces for shop-floor stations.",
+    "Examine availability of administrative tools to monitor user training progress and transaction error rates."
+  ],
+  "example": "Illustrative example: A hypothetical manufacturing facility conducts separate 90-minute practical workshops for purchasing agents and receiving inspectors."
+}
+
+### Conducting workflow simulations in a sandbox environment using representative records
+{
+  "title": "Conducting workflow simulations in a sandbox environment using representative records",
+  "sourceIds": [
+    "apg-external-providers",
+    "icc-supplier-quality-module"
+  ],
+  "keyPoints": [
+    "Run end-to-end operational simulations using realistic defect scenarios, material test report reviews, and urgent concession requests.",
+    "Ensure users practice evaluating AI-generated suggestions, verifying that human sign-offs are applied before record finalization.",
+    "Test exception pathways: rejected shipments, missing supplier certificates, and expired qualification statuses."
+  ],
+  "workflow": {
+    "role": "Lead Systems Trainer",
+    "input": "Simulated purchase orders, out-of-spec test pieces, flawed vendor certificates, and sandbox software instance.",
+    "decision": "Determine whether simulated workflow transactions satisfy internal operating procedures and data integrity standards.",
+    "record": "Workflow simulation validation report detailing user feedback and system configuration adjustments.",
+    "exception": "Simulation reveals confusion regarding concession sign-off authority, prompting workflow configuration refinement."
+  },
+  "evaluationCriteria": [
+    "Ensure the vendor provides a dedicated sandbox environment mirroring production configuration for ongoing training.",
+    "Confirm that sandbox testing encompasses full lifecycle testing from receiving hold to SCAR closure."
+  ],
+  "example": "Illustrative example: A hypothetical team runs a simulated intake of nonconforming structural steel to verify dock hold and automated notification triggers."
+}
+
+### Executing staged deployment across receiving bays and outsourced processors
+{
+  "title": "Executing staged deployment across receiving bays and outsourced processors",
+  "sourceIds": [
+    "apg-external-providers",
+    "icc-supplier-quality-module"
+  ],
+  "keyPoints": [
+    "Deploy software across operational facilities in controlled phases rather than an immediate big-bang launch.",
+    "Initiate rollout at primary receiving docks before extending to specialized sub-assembly cells and outsourced process providers.",
+    "Maintain hypercare technical support on-site during initial operational shifts to resolve procedural roadblocks immediately."
+  ],
+  "workflow": {
+    "role": "Implementation Project Manager",
+    "input": "Facility readiness checklists, local hardware setup validations, and staged rollout schedules.",
+    "decision": "Authorize phased go-live progression from primary fabrication plant to secondary assembly facilities.",
+    "record": "Facility deployment milestone sign-off and operational readiness log.",
+    "exception": "Hardware connectivity issues at secondary receiving warehouse delay site go-live by 48 hours."
+  },
+  "evaluationCriteria": [
+    "Assess vendor capability to support multi-site, phased rollouts without requiring separate database instances.",
+    "Verify software performance and responsiveness under concurrent transaction loads across multiple production locations."
+  ],
+  "example": "Illustrative example: A hypothetical equipment builder rolls out software to its main manufacturing plant first, addressing usability feedback before deploying to regional service centers."
+}
+
+### Measuring user adoption, procedural compliance, and operational throughput
+{
+  "title": "Measuring user adoption, procedural compliance, and operational throughput",
+  "sourceIds": [
+    "apg-external-providers",
+    "icc-supplier-quality-module"
+  ],
+  "keyPoints": [
+    "Track operational adoption metrics: time-to-log nonconformance, SCAR response cycle time, and data entry error frequencies.",
+    "Audit live records to confirm that inspectors attach required evidence and that managers complete mandatory reviews.",
+    "Identify friction points where users attempt workarounds outside the software, taking rapid corrective action."
+  ],
+  "workflow": {
+    "role": "Continuous Improvement Director",
+    "input": "System usage logs, nonconformance processing cycle times, user support ticket logs, and data completeness audits.",
+    "decision": "Determine if system adoption meets operational readiness criteria or requires procedural adjustments.",
+    "record": "Post-implementation adoption audit report presented to executive quality steering committee.",
+    "exception": "High frequency of incomplete inspection records identified on second shift prompts supervisor coaching."
+  },
+  "evaluationCriteria": [
+    "Review administrative dashboards for built-in analytics tracking user login activity, task completion, and pending bottlenecks.",
+    "Demonstrate how software flags orphaned or incomplete quality records for managerial review."
+  ],
+  "example": "Illustrative example: A hypothetical continuous improvement team discovers inspection throughput increased 20% once barcode scanners were integrated with receiving screens."
+}
+
+## Chapter boundaries
+Leave mapping the current workflow to its assigned chapter.
+Leave evaluating software capabilities to its assigned chapter.
+Leave qualifying and approving suppliers to its assigned chapter.
+Leave connecting receiving inspection records to its assigned chapter.
+Leave following supplier corrective actions to its assigned chapter.
+Leave reviewing supplier performance to its assigned chapter.
+Leave planning migration and configuration to its assigned chapter.
+Leave maintaining the system and choosing next steps to its assigned chapter.
+
+## Evidence
+
+{
+  "topicId": "supplier-quality",
+  "sources": [
+    {
+      "id": "apg-external-providers",
+      "title": "ISO 9001 Auditing Practices Group: Guidance on External Providers (Edition 1, 13 January 2016)",
+      "publisher": "ISO/TC 176 and IAF",
+      "sourceType": "primary",
+      "url": "https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf",
+      "retrievedAt": "2026-10-26",
+      "supportedClaims": [
+        "External providers can be any external source of processes, products or services: a supplier, partner, sister or parent organization, customer and so on.",
+        "Auditors may consider it sufficient to check that documented information, such as a list, shows which external providers are approved and is kept up to date; that orders were placed with providers satisfying the defined criteria; that performance of outsourced-process providers is monitored effectively; and that activities needed to ensure specified requirements are met are carried out.",
+        "Auditors have to verify that risk-based thinking has been applied in determining appropriate controls over external providers.",
+        "Checking those points may not be sufficient to ensure externally provided products, processes and services meet specifications, in which case a review of the wider procurement, outsourcing and supply chain processes is preferable.",
+        "Procurement starts during design and development, when a specification is prepared; the organization should ensure purchase requirements are correct before communicating them to the external provider and that statutory and regulatory requirements are included.",
+        "The degree of risk associated with a component, product or service part, and the controls needed to ensure it meets the design specification, should be assessed.",
+        "Practical checks include confirming that the specification on a purchase order matches the design or customer specification, whether specifications were discussed with suppliers of critical components, whether the specification was approved before the order was confirmed, and whether the purchase order refers to statutory or regulatory requirements.",
+        "A review of the approved external provider list at regular intervals may not be enough to show effective control of all external providers in the supply chain.",
+        "Questions to consider: whether providers of critical components or services are selected only on price or also on their ability to supply consistently to specification; whether outsourced processes are included in the supply chain with relevant controls; and whether providers are approved solely on registration to a recognized quality standard or the scope of that registration is reviewed.",
+        "It may be advantageous to audit the intended external provider to establish clear lines of communication, product specifications and delivery parameters.",
+        "How often credit notes are raised for products or services initially rejected then accepted, and how many concessions allow acceptance of previously rejected products or services, are indicators worth examining.",
+        "The paper is auditor guidance, was written for ISO 9001:2015, and carries a disclaimer that it has not been endorsed by ISO, ISO/TC 176 or IAF; it does not establish current edition requirements."
+      ]
+    },
+    {
+      "id": "icc-supplier-quality-module",
+      "title": "ICC Supplier Quality module page (as retrieved)",
+      "publisher": "ISO Certification Consultants Inc.",
+      "sourceType": "primary",
+      "url": "https://isocertificationconsultants.ca/solutions/supplier-quality/",
+      "retrievedAt": "2026-10-26",
+      "supportedClaims": [
+        "ICC's published Supplier Quality page describes onboarding through approval gates, supplier scorecards and performance reports, corrective action requests raised from nonconformances and sent to suppliers, scheduled and recorded supplier audits and self-assessments, and a supplier portal where suppliers answer tasks.",
+        "The page lists these topics as questions to confirm in a demonstration rather than verified product promises, because the capability register entry for the supplier portal is pending: supplier-facing tasks, approved supplier list with qualification status and document expiry dates, scorecards and evaluation history, SCAR response and closure decisions, and tracking of APQP, PPAP and FAI packages.",
+        "The page states that AI outputs are suggestions a person reviews before they enter a controlled record."
+      ]
+    }
+  ],
+  "capabilityIds": [],
+  "capabilities": [],
+  "researchSnapshotHash": "86ba159c2071d843705ed0d75ce162a4f78e5860b27ab8f483939897fb8e891a",
+  "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}
+
+## Entire outline
+
+{
+  "title": "Supplier quality management software for Canadian quality and operations teams",
+  "description": "How to choose and implement supplier quality software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.",
+  "primaryKeyword": "supplier quality software",
+  "introductionWords": 1500,
+  "estimatedWords": 19500,
+  "introductionImageBrief": "A manufacturing quality technician confirming a controlled work instruction at a production cell; authentic industrial setting, no text or logos",
+  "glossary": [
+    {
+      "term": "Workflow owner",
+      "definition": "The designated operational role responsible for authoring, reviewing, executing decisions, and archiving records in a defined supplier quality workflow."
+    },
+    {
+      "term": "Approved Supplier List (ASL)",
+      "definition": "Documented information identifying external providers authorized to supply specified parts, materials, or outsourced processes based on verified qualification criteria."
+    },
+    {
+      "term": "Supplier Corrective Action Request (SCAR)",
+      "definition": "A formal quality record issued to an external provider requiring root-cause investigation, containment, corrective action, and recurrence prevention evidence following a nonconformance."
+    },
+    {
+      "term": "Capability Register Pending Status",
+      "definition": "A governance classification denoting software modules or functions—such as external supplier portals—that are scheduled or under evaluation rather than verified, production-ready capabilities."
+    },
+    {
+      "term": "Concession",
+      "definition": "Formal authorization granted by an authorized technical authority to accept and use externally provided material or components that do not conform to initial specifications."
+    },
+    {
+      "term": "Human-in-the-Loop AI Review",
+      "definition": "A mandatory governance protocol requiring an authorized human owner to evaluate, validate, or reject automated or AI suggestions before commitment into a controlled quality record."
+    }
+  ],
+  "example": {
+    "label": "Illustrative example",
+    "description": "An unnamed Canadian industrial machinery manufacturer evaluates supplier quality management software across incoming fabrication, machining, and electronic sub-assemblies. All workflows, audits, and nonconformance records described are illustrative and do not represent actual customer results."
+  },
+  "chapters": [
+    {
+      "slug": "mapping-workflows",
+      "title": "Mapping the current workflow: Supplier quality management software",
+      "description": "Mapping the current workflow in supplier quality software: define the operational problem; identify records and handoffs; assign owners and decisions.",
+      "targetWords": 2000,
+      "chapterKeyword": "supplier quality software mapping the current workflow",
+      "boundaries": [
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave qualifying and approving suppliers to its assigned chapter.",
+        "Leave connecting receiving inspection records to its assigned chapter.",
+        "Leave following supplier corrective actions to its assigned chapter.",
+        "Leave reviewing supplier performance to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Defining the operational problem across qualification, receiving, and corrective actions",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Clarify that disconnected spreadsheets create blind spots between supplier qualification, receiving dock inspection records, and open corrective actions.",
+            "Auditing guidance emphasizes that relying solely on an approved vendor list is insufficient to ensure externally provided products satisfy engineering specifications.",
+            "Operational mapping must address how nonconformances identified at incoming inspection immediately inform provider risk levels and active approval states."
+          ],
+          "workflow": {
+            "role": "Quality Assurance Manager",
+            "input": "Current process flowcharts, vendor incident logs, and receiving nonconformance slips across manufacturing sites.",
+            "decision": "Determine whether handoff bottlenecks between purchasing and receiving quality require integrated workflow automation.",
+            "record": "Process gap assessment report identifying disconnected verification handoffs and risk exposure points.",
+            "exception": "Missing historical traceability data forces immediate containment through manual receiving hold gates."
+          },
+          "evaluationCriteria": [
+            "Demonstrate how software visualizes workflow progression from supplier qualification to dock inspection and corrective action issuance.",
+            "Confirm that system navigation flags disconnected processes without requiring custom programmatic scripting."
+          ],
+          "example": "Illustrative example: A hypothetical manufacturer maps delays caused by paper inspection sheets failing to trigger purchase order holds in procurement."
+        },
+        {
+          "title": "Identifying records and cross-departmental handoffs between purchasing and quality",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "External providers encompass direct material suppliers, corporate sister entities, and outsourced special process contractors.",
+            "Procurement controls start during design and development when engineering specifications and regulatory constraints are established.",
+            "Software workflows must link the purchase order specification directly to engineering revision levels before issuing orders to external vendors."
+          ],
+          "workflow": {
+            "role": "Procurement Lead",
+            "input": "Engineering design specifications, drawing revision packages, and proposed purchase order requisitions.",
+            "decision": "Verify whether supplier purchase orders contain verified drawing numbers, acceptance standards, and statutory clauses.",
+            "record": "Approved purchase order specification package with cross-departmental engineering sign-off.",
+            "exception": "Discrepancy between CAD models and purchasing requisitions halts requisition release pending engineering review."
+          },
+          "evaluationCriteria": [
+            "Verify that candidate software can attach and link engineering specifications to purchasing records.",
+            "Ensure cross-functional handoffs require explicit sign-offs between engineering, purchasing, and quality roles."
+          ],
+          "example": "Illustrative example: A hypothetical team tracks how revised drawing tolerances are communicated to an outsourced plating provider before PO confirmation."
+        },
+        {
+          "title": "Assigning decision ownership and approval thresholds across the supply chain",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Define explicit decision authority for adding, suspending, or reinstating external providers on the approved supplier register.",
+            "Guidance notes that critical component providers require technical evaluation beyond commercial price considerations.",
+            "AI-assisted risk assessments or summarization tools must remain informational suggestions that require an authorized human review prior to record entry."
+          ],
+          "workflow": {
+            "role": "Director of Quality and Compliance",
+            "input": "External provider audit scores, technical capability evaluations, and commercial pricing assessments.",
+            "decision": "Authorize or deny placement of external provider on the controlled Approved Supplier List.",
+            "record": "Controlled Approved Supplier List qualification authorization entry with assigned review interval.",
+            "exception": "Critical supplier selected solely on pricing without technical qualification triggers an executive risk escalation."
+          },
+          "evaluationCriteria": [
+            "Review role-based security configurations to confirm that only designated roles can modify supplier approval statuses.",
+            "Confirm that AI-generated data suggestions remain strictly draft recommendations until formally accepted by an authorized role."
+          ],
+          "example": "Illustrative example: A hypothetical plant assigns dual-approval thresholds between quality engineering and plant management for critical structural castings."
+        },
+        {
+          "title": "Setting risk-based acceptance criteria for externally provided processes and materials",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Risk-based controls must reflect the criticality of the component and its potential failure impact on end-product safety and conformity.",
+            "Auditing practices emphasize that statutory and Canadian regulatory requirements must be integrated into procurement acceptance thresholds.",
+            "Acceptance definitions must explicitly include sampling plans, first-article inspection standards, and material test report verification protocols."
+          ],
+          "workflow": {
+            "role": "Supplier Quality Engineer",
+            "input": "Product risk classification matrix, regulatory compliance requirements, and component technical specifications.",
+            "decision": "Assign mandatory receiving inspection levels, sampling protocols, and required Mill Test Report validations.",
+            "record": "Component quality inspection plan linked to part master data and external provider profiles.",
+            "exception": "High-risk structural components lacking specified impact-test criteria require immediate engineering revision."
+          },
+          "evaluationCriteria": [
+            "Examine whether candidate platforms support differentiated inspection criteria based on component risk classifications.",
+            "Evaluate capability to require specific compliance documentation uploads before material release."
+          ],
+          "example": "Illustrative example: A hypothetical equipment builder establishes 100% inspection for high-pressure hydraulic manifolds while using reduced sampling for standard hardware."
+        }
+      ],
+      "imageBrief": "a fabrication inspector tracing a paper work instruction at a cutting station; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover mapping the current workflow for supplier quality software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluating software capabilities: Supplier quality management software",
+      "description": "Evaluating supplier quality software: build a workflow-based functional matrix, verify core capabilities against pending portal features, and test audit trails.",
+      "targetWords": 2000,
+      "chapterKeyword": "supplier quality software evaluating software capabilities",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave qualifying and approving suppliers to its assigned chapter.",
+        "Leave connecting receiving inspection records to its assigned chapter.",
+        "Leave following supplier corrective actions to its assigned chapter.",
+        "Leave reviewing supplier performance to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Building a functional shortlist based on qualification, receiving, and SCAR integration",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Construct a functional evaluation matrix centered on operational continuity between qualification gates, receiving logs, and SCARs.",
+            "Differentiate verified, currently available software modules from features listed with pending capability register status.",
+            "Confirm whether external supplier collaboration requires a live vendor portal or relies on controlled internal task completion."
+          ],
+          "workflow": {
+            "role": "Quality Systems Lead",
+            "input": "Cross-functional software requirements specification, operational process maps, and vendor capability registers.",
+            "decision": "Determine which software vendors meet mandatory operational integration criteria for formal demonstration.",
+            "record": "Vendor evaluation matrix with capability validation statuses and architectural risk notes.",
+            "exception": "Vendor claims unverified capabilities that are still pending in their internal capability register."
+          },
+          "evaluationCriteria": [
+            "Inspect the vendor capability register to verify whether external supplier-facing portal tasks are production-ready or pending.",
+            "Validate that core internal nonconformance and corrective action workflows function independently of external portal modules."
+          ],
+          "example": "Illustrative example: A hypothetical evaluation team requests technical documentation to verify if automated supplier tasking is functional or pending release."
+        },
+        {
+          "title": "Testing decision gates and human-in-the-loop review for automated suggestions",
+          "sourceIds": [
+            "icc-supplier-quality-module",
+            "apg-external-providers"
+          ],
+          "keyPoints": [
+            "Verify how the software handles automated data extraction, scorecard compilation, and AI-suggested root-cause categorizations.",
+            "Enforce governance rules ensuring that AI outputs remain recommendations that an authorized human must approve before entering controlled records.",
+            "Test whether nonconformance escalation paths prevent unapproved material disposition without authorized human intervention."
+          ],
+          "workflow": {
+            "role": "Quality Operations Lead",
+            "input": "Simulated supplier nonconformance data, suggested root causes, and automated risk scoring recommendations.",
+            "decision": "Accept, modify, or reject AI-generated nonconformance descriptions and disposition recommendations.",
+            "record": "Controlled nonconformance disposition record with author identity, review timestamp, and electronic signature.",
+            "exception": "Automated system attempts to disposition nonconforming raw material without human sign-off, triggering system block."
+          },
+          "evaluationCriteria": [
+            "Test software demonstrations with nonconformance records to confirm that AI suggestions require manual sign-off before saving.",
+            "Examine system logs to ensure records explicitly capture human authorization rather than automated batch approval."
+          ],
+          "example": "Illustrative example: A hypothetical quality lead tests an AI suggestion for a machined bore defect, editing the root-cause code before saving the controlled record."
+        },
+        {
+          "title": "Examining audit trails, evidence attachments, and role-based access permissions",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Regulatory and ISO compliance requires immutable audit logs documenting all edits, status changes, and file uploads.",
+            "Auditing guidance highlights the necessity of reviewing whether external providers are evaluated on total quality capability rather than standard certificates alone.",
+            "Examine granular permission schemes ensuring external users or unauthorized internal roles cannot modify quality acceptance standards."
+          ],
+          "workflow": {
+            "role": "Information Technology Compliance Specialist",
+            "input": "Security profile definitions, user access matrices, and mock regulatory audit scenarios.",
+            "decision": "Determine if system audit trail meets electronic signature integrity and data tampering prevention standards.",
+            "record": "Security and access control validation protocol detailing permission test outcomes.",
+            "exception": "User permission bypass allows unauthorized role to alter supplier qualification expiration dates."
+          },
+          "evaluationCriteria": [
+            "Review audit logs to confirm changes to supplier approval status or inspection results record user identity and timestamp.",
+            "Verify role-based permission settings prevent purchasing personnel from overriding quality inspection rejections."
+          ],
+          "example": "Illustrative example: A hypothetical team verifies that attempting to backdate a supplier certificate of analysis is blocked and flagged in the audit log."
+        },
+        {
+          "title": "Evaluating licensing boundaries, deployment scope, and integration support",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Evaluate whether external supplier access, if deployed, incurs per-user licensing fees or operates under an enterprise licensing model.",
+            "Distinguish between standard API connectivity to enterprise ERP systems and custom middleware requiring ongoing developer support.",
+            "Assess total cost of deployment realistically by excluding speculative return-on-investment projections."
+          ],
+          "workflow": {
+            "role": "Operations Financial Analyst",
+            "input": "Software vendor licensing schedules, implementation service agreements, and internal IT infrastructure estimates.",
+            "decision": "Determine whether licensing models align with operational headcount across receiving bays and quality teams.",
+            "record": "Total cost of ownership evaluation sheet detailing implementation, licensing, and validation costs.",
+            "exception": "Hidden per-transaction fees discovered for external document submissions trigger commercial contract renegotiation."
+          },
+          "evaluationCriteria": [
+            "Demand transparent licensing documentation covering internal users, external supplier contacts, and receiving stations.",
+            "Verify vendor support boundaries for integrating supplier records with existing production and inventory systems."
+          ],
+          "example": "Illustrative example: A hypothetical manufacturing controller compares fixed enterprise licensing against named-user fees across three regional facilities."
+        }
+      ],
+      "imageBrief": "a machining supervisor comparing inspection records beside a CNC machine; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover evaluating software capabilities for supplier quality software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    {
+      "slug": "supplier-qualification",
+      "title": "Qualifying and approving suppliers: Supplier quality management software",
+      "description": "Qualifying and approving suppliers in supplier quality software: defining supplier risk, collecting qualification evidence and assigning approval authority.",
+      "targetWords": 2000,
+      "chapterKeyword": "supplier quality software qualifying and approving suppliers",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave connecting receiving inspection records to its assigned chapter.",
+        "Leave following supplier corrective actions to its assigned chapter.",
+        "Leave reviewing supplier performance to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Defining supplier risk tiers and criticality beyond commercial pricing",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Auditing practices emphasize that external providers must not be selected purely on price, but on their proven ability to supply to specification.",
+            "Software must classify providers into risk tiers based on product complexity, safety impact, and supply chain vulnerability.",
+            "Risk tiers determine the rigor of qualification gates, such as requiring on-site process audits versus remote questionnaire reviews."
+          ],
+          "workflow": {
+            "role": "Supplier Quality Specialist",
+            "input": "Vendor application, financial stability reports, part risk classification, and manufacturing capability survey.",
+            "decision": "Assign provider risk tier and establish mandatory qualification evidence requirements.",
+            "record": "Supplier risk assessment record documented within the quality management database.",
+            "exception": "Sole-source supplier for a critical structural component categorizes as high-risk, triggering an on-site audit requirement."
+          },
+          "evaluationCriteria": [
+            "Check that software enables user-defined risk categorization formulas linking component risk to vendor profiles.",
+            "Verify that high-risk tier assignments automatically mandate pre-configured qualification deliverables."
+          ],
+          "example": "Illustrative example: A hypothetical team classifies an outsourced heat treater as Tier 1 Critical, mandating pyrometry survey reviews prior to purchase order release."
+        },
+        {
+          "title": "Capturing qualification evidence and evaluating standard certification scopes",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Auditors warn that approving a supplier solely because they possess an ISO 9001 certificate is insufficient without examining the certificate's scope.",
+            "Software must capture objective evidence including quality manuals, special process certifications, and Canadian regulatory registrations.",
+            "Tracking capabilities must document expiry dates for certifications and trigger proactive renewal notifications."
+          ],
+          "workflow": {
+            "role": "Quality Assurance Coordinator",
+            "input": "Supplier ISO 9001 certificates, scope statements, welding procedure qualifications, and insurance certificates.",
+            "decision": "Evaluate whether supplier certified scope matches the specific manufacturing services contracted.",
+            "record": "Qualification document validation record with verified expiration dates and scope validation notes.",
+            "exception": "Supplier certificate scope covers distribution only but contracted work involves precision CNC machining."
+          },
+          "evaluationCriteria": [
+            "Demonstrate how software tracks certificate expiration dates and alerts administrators prior to lapse.",
+            "Confirm that qualification workflows require explicit manual verification of certificate scope text before approval."
+          ],
+          "example": "Illustrative example: A hypothetical coordinator identifies that a supplier's quality certificate excludes design, prompting an update to incoming inspection parameters."
+        },
+        {
+          "title": "Structuring multi-tiered approval authority and qualification gates",
+          "sourceIds": [
+            "icc-supplier-quality-module",
+            "apg-external-providers"
+          ],
+          "keyPoints": [
+            "Qualification workflows must feature gated approval sequences where purchasing, engineering, and quality provide independent sign-offs.",
+            "Onboarding through structured approval gates prevents unverified vendors from receiving live purchase orders.",
+            "The Approved Supplier List must reflect real-time qualification statuses: In-Review, Approved, Conditional, or Suspended."
+          ],
+          "workflow": {
+            "role": "Quality Director",
+            "input": "Completed technical evaluation, audit findings report, and purchasing commercial review.",
+            "decision": "Grant final approval for external provider addition to the active Approved Supplier List.",
+            "record": "Controlled Approved Supplier List record showing multi-signature sign-off and approval date.",
+            "exception": "Engineering approval missing from qualification package halts progression to the active supplier register."
+          },
+          "evaluationCriteria": [
+            "Verify that software prevents purchasing orders from being confirmed for suppliers lacking complete approval gate sign-offs.",
+            "Ensure the platform displays real-time supplier status across all procurement and receiving screens."
+          ],
+          "example": "Illustrative example: A hypothetical manufacturer configures a three-stage sequential approval requiring Quality Engineering, Procurement, and Operations sign-off."
+        },
+        {
+          "title": "Managing conditional approvals, document expiries, and temporary waivers",
+          "sourceIds": [
+            "icc-supplier-quality-module",
+            "apg-external-providers"
+          ],
+          "keyPoints": [
+            "Establish time-bound or lot-bound conditional approvals to accommodate urgent production requirements without compromising quality.",
+            "Auditing guidance recommends auditing intended providers to establish clear communication, product specifications, and delivery terms.",
+            "Conditional records must automatically expire unless extended by an authorized technical authority through documented justification."
+          ],
+          "workflow": {
+            "role": "Quality Systems Manager",
+            "input": "Emergency procurement requisition, preliminary supplier audit report, and risk mitigation plan.",
+            "decision": "Grant temporary conditional approval limited to a specific purchase order quantity or 60-day calendar window.",
+            "record": "Conditional approval authorization record with automated expiration triggers and enhanced inspection mandates.",
+            "exception": "Conditional expiration date reached without completion of open audit items automatically suspends provider status."
+          },
+          "evaluationCriteria": [
+            "Confirm that software automatically revokes conditional status upon expiration date without manual intervention.",
+            "Verify that conditional status enforces mandatory 100% receiving inspection on all incoming lots."
+          ],
+          "example": "Illustrative example: A hypothetical plant grants 45-day conditional approval to an alternate stamping vendor while awaiting final PPAP document submission."
+        }
+      ],
+      "imageBrief": "a production operator completing a controlled checklist at an assembly station; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover qualifying and approving suppliers for supplier quality software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    {
+      "slug": "receiving-controls",
+      "title": "Connecting receiving inspection records: Supplier quality management software",
+      "description": "Connecting receiving inspection records in supplier quality software: linking orders and inspection records; defining acceptance criteria.",
+      "targetWords": 2000,
+      "chapterKeyword": "supplier quality software connecting receiving inspection records",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave qualifying and approving suppliers to its assigned chapter.",
+        "Leave following supplier corrective actions to its assigned chapter.",
+        "Leave reviewing supplier performance to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Linking purchase orders, engineering revisions, and receiving inspection criteria",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Guidance emphasizes verifying that purchase order specifications match design and customer requirements before releasing orders.",
+            "Receiving inspection modules must display the exact engineering revision referenced on the confirmed purchase order.",
+            "Software must verify that the delivering vendor matches the Approved Supplier List qualification scope for that specific commodity."
+          ],
+          "workflow": {
+            "role": "Receiving Inspector",
+            "input": "Bill of lading, supplier packing slip, purchase order line items, and active engineering drawings.",
+            "decision": "Confirm whether arriving shipment matches approved purchase order specifications and drawing revisions.",
+            "record": "Electronic receiving inspection log entry linking shipment details to internal lot numbers.",
+            "exception": "Delivered parts reflect drawing Revision C while purchase order mandated Revision D, halting intake."
+          },
+          "evaluationCriteria": [
+            "Demonstrate how the receiving interface pulls active engineering revision levels directly from the controlled part record.",
+            "Ensure system flags unauthorized vendor substitutions immediately upon purchase order receipt entry."
+          ],
+          "example": "Illustrative example: A hypothetical receiving dock scans an arriving shipment of laser-cut brackets, immediately flagging an obsolete drawing revision on the packing slip."
+        },
+        {
+          "title": "Defining sampling plans and executing receiving verification against specifications",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Configure inspection routines reflecting component risk: reduced sampling, normal sampling, or 100% attribute verification.",
+            "Check that material test reports and certificates of conformance satisfy Canadian statutory, regulatory, and engineering requirements.",
+            "Inspection results must update supplier quality history immediately to feed operational performance dashboards."
+          ],
+          "workflow": {
+            "role": "Quality Control Inspector",
+            "input": "Sample components, calibrated measurement equipment, Mill Test Reports, and inspection work instructions.",
+            "decision": "Determine whether dimensional, mechanical, and material test results meet engineering acceptance criteria.",
+            "record": "Completed receiving inspection report with recorded dimensional data and attached MTR documents.",
+            "exception": "Material test report shows tensile strength below minimum engineering standard, triggering quarantine."
+          },
+          "evaluationCriteria": [
+            "Verify support for variable and attribute sampling plans adhering to established standards.",
+            "Confirm that mandatory inspection data fields block lot acceptance until all required measurements are recorded."
+          ],
+          "example": "Illustrative example: A hypothetical technician records hardness readings for a batch of fasteners, attaching the vendor laboratory certificate directly to the inspection record."
+        },
+        {
+          "title": "Quarantining nonconforming material and documenting technical concessions",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Rejected material must be placed into controlled quarantine status to prevent inadvertent production consumption.",
+            "Auditing practices highlight examining the number of concessions granted for initially rejected products as a critical risk indicator.",
+            "Software must enforce authorized engineering and quality approval for any concession or deviation permit prior to material release."
+          ],
+          "workflow": {
+            "role": "Material Review Board (MRB) Lead",
+            "input": "Receiving nonconformance report, physical quarantine location confirmation, and engineering concession request.",
+            "decision": "Authorize rework, reject to vendor, scrap, or grant formal concession with technical justification.",
+            "record": "Controlled Nonconformance Record (NCR) and Material Review Board disposition authorization.",
+            "exception": "Concession requested for safety-critical dimension requires engineering authority escalation and customer notification."
+          },
+          "evaluationCriteria": [
+            "Examine whether software electronically locks inventory in ERP/WMS when nonconforming status is flagged at receiving.",
+            "Verify that concession workflows require explicit technical justification and designated managerial sign-offs."
+          ],
+          "example": "Illustrative example: A hypothetical MRB dispositions undersized aluminum tubing as Return to Vendor, preventing warehouse release until vendor RMA is attached."
+        },
+        {
+          "title": "Tracking credit notes and maintaining end-to-end material traceability",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "ISO 9001 auditing guidance specifically recommends examining how often credit notes are raised for rejected material.",
+            "Software should link receiving rejection records to commercial debits and credit notes to reflect accurate cost of poor quality.",
+            "Traceability must connect supplier raw material heat lots to internal production batches and final assemblies."
+          ],
+          "workflow": {
+            "role": "Quality Systems Analyst",
+            "input": "Supplier nonconformance dispositions, return-to-vendor shipping records, and accounts payable credit memos.",
+            "decision": "Reconcile physical material returns against issued credit notes and update supplier evaluation metrics.",
+            "record": "Traceability link between supplier heat lot, internal nonconformance report, and accounting credit memo.",
+            "exception": "Supplier disputes rejection and withholds credit note, prompting quality engineering review of inspection methodology."
+          },
+          "evaluationCriteria": [
+            "Verify software capability to associate commercial credit notes and financial chargebacks directly with quality rejection records.",
+            "Ensure forward and backward traceability from supplier batch numbers through to downstream work orders."
+          ],
+          "example": "Illustrative example: A hypothetical manufacturer reconciles three credit notes for rejected weldments against monthly vendor scorecard calculations."
+        }
+      ],
+      "imageBrief": "two quality inspectors reviewing a weld inspection record beside a fabrication cell; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover connecting receiving inspection records for supplier quality software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    {
+      "slug": "supplier-actions",
+      "title": "Following supplier corrective actions: Supplier quality management software",
+      "description": "Following supplier corrective actions in supplier quality software: describing the supplier finding and requesting supporting evidence.",
+      "targetWords": 2000,
+      "chapterKeyword": "supplier quality software following supplier corrective actions",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave qualifying and approving suppliers to its assigned chapter.",
+        "Leave connecting receiving inspection records to its assigned chapter.",
+        "Leave reviewing supplier performance to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Triggering SCARs directly from receiving and in-process nonconformance records",
+          "sourceIds": [
+            "icc-supplier-quality-module",
+            "apg-external-providers"
+          ],
+          "keyPoints": [
+            "Corrective action requests (SCAR) should be spawned directly from verified nonconformance records to preserve technical evidence.",
+            "Auditing guidance emphasizes that systemic issues across the procurement chain require formal corrective action rather than isolated containment.",
+            "Software must capture defect codes, photographic evidence, inspection measurements, and rejected quantities in the SCAR initiation package."
+          ],
+          "workflow": {
+            "role": "Supplier Quality Engineer",
+            "input": "Verified nonconformance record, photographic evidence of defect, dimensional inspection log, and affected PO details.",
+            "decision": "Determine whether defect severity or recurring trend warrants issuing a formal SCAR to the external provider.",
+            "record": "Initiated SCAR record with pre-populated defect details, assigned response deadlines, and severity classification.",
+            "exception": "Isolated low-severity nonconformance resolved via standard vendor replacement without mandatory SCAR escalation."
+          },
+          "evaluationCriteria": [
+            "Test whether candidate software can generate a complete SCAR directly from an open nonconformance without re-keying data.",
+            "Confirm that system automatically notifies the vendor and tracks response due dates against contractual SLAs."
+          ],
+          "example": "Illustrative example: A hypothetical engineer elevates three consecutive dimensional rejections of a stamped bracket into a formal SCAR within the software."
+        },
+        {
+          "title": "Capturing supplier root-cause analysis and objective containment evidence",
+          "sourceIds": [
+            "icc-supplier-quality-module",
+            "apg-external-providers"
+          ],
+          "keyPoints": [
+            "Suppliers must submit disciplined root-cause analysis (such as 5-Why or Fishbone) and verifiable containment evidence.",
+            "Note that ICC's capability register lists external supplier portal tasking as pending, meaning confirmation in demonstration is required for portal-based response workflows.",
+            "Ensure software provides alternative internal mechanisms to upload vendor-provided 8D reports and objective evidence files."
+          ],
+          "workflow": {
+            "role": "Supplier Quality Coordinator",
+            "input": "Supplier 8D report, 5-Why analysis document, containment sort sheets, and certified replacement shipment tracking.",
+            "decision": "Assess whether supplier containment actions and proposed root-cause determination are technically credible and sufficient.",
+            "record": "SCAR response review record documenting acceptance or rejection of initial vendor analysis.",
+            "exception": "Vendor provides superficial root cause (e.g., 'operator error') without systemic process explanation, triggering SCAR rejection."
+          },
+          "evaluationCriteria": [
+            "Evaluate vendor submission capabilities, noting whether supplier interaction occurs via live portal or managed internal data entry.",
+            "Verify support for structured 8D fields and arbitrary evidence attachments (photographs, test certificates)."
+          ],
+          "example": "Illustrative example: A hypothetical coordinator rejects an outsourced coater's initial SCAR response because the containment plan lacked inspection of in-transit inventory."
+        },
+        {
+          "title": "Reviewing proposed corrective actions and human review of automated summaries",
+          "sourceIds": [
+            "icc-supplier-quality-module",
+            "apg-external-providers"
+          ],
+          "keyPoints": [
+            "Review proposed permanent corrective actions: tooling modifications, updated control plans, or revised work instructions.",
+            "Where software uses AI tools to summarize supplier responses or suggest action validity, human review must validate the findings before acceptance.",
+            "Software must enforce clear accountability by recording the exact identity and credentials of the reviewer approving the action plan."
+          ],
+          "workflow": {
+            "role": "Quality Assurance Manager",
+            "input": "Vendor proposed permanent corrective actions, updated process FMEA, modified work instructions, and AI summary recommendations.",
+            "decision": "Approve proposed corrective action plan or mandate revision and resubmission.",
+            "record": "Controlled SCAR action plan approval record with logged reviewer comments and verification milestones.",
+            "exception": "Proposed tooling modification requires customer engineering change approval before implementation."
+          },
+          "evaluationCriteria": [
+            "Demonstrate that software requires manual reviewer approval for AI-generated summaries before committing to controlled records.",
+            "Verify system audit logs capture reviewer identity, approval date, and exact revision of the approved action plan."
+          ],
+          "example": "Illustrative example: A hypothetical quality manager reviews an AI-generated summary of a vendor's revised CNC program, verifying the change manually before approval."
+        },
+        {
+          "title": "Verifying corrective action effectiveness and recurrence prevention",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "A SCAR cannot be closed upon implementation alone; effectiveness must be verified across subsequent production shipments.",
+            "Software should schedule follow-up verification audits or mandate enhanced sampling on the next three consecutive receipts.",
+            "Closure decisions must be retained with complete historical evidence to satisfy ISO 9001 and internal audit expectations."
+          ],
+          "workflow": {
+            "role": "Supplier Quality Engineer",
+            "input": "Receiving inspection logs for subsequent production lots, process capability data, and vendor audit check sheets.",
+            "decision": "Determine whether corrective action demonstrated sustained recurrence prevention over 90-day evaluation window.",
+            "record": "Formal SCAR closure record signed by Quality Engineering with attached effectiveness verification data.",
+            "exception": "Recurring defect detected during effectiveness monitoring immediately reopens SCAR and downgrades vendor status."
+          },
+          "evaluationCriteria": [
+            "Check that software schedules automated effectiveness verification tasks triggered by elapsed time or received lot counts.",
+            "Confirm that unresolved or recurring defects prevent automatic closure of corrective action records."
+          ],
+          "example": "Illustrative example: A hypothetical quality engineer monitors five consecutive receipts of modified wire harnesses over three months before officially closing the SCAR."
+        }
+      ],
+      "imageBrief": "a line operator scanning an approved instruction beside a guarded press; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover following supplier corrective actions for supplier quality software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    {
+      "slug": "supplier-performance",
+      "title": "Reviewing supplier performance: Supplier quality management software",
+      "description": "Reviewing supplier performance in supplier quality software: choosing supported measures, reviewing incomplete records and changing supplier status.",
+      "targetWords": 2000,
+      "chapterKeyword": "supplier quality software reviewing supplier performance",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave qualifying and approving suppliers to its assigned chapter.",
+        "Leave connecting receiving inspection records to its assigned chapter.",
+        "Leave following supplier corrective actions to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Building scorecards grounded in receiving yields, SCARs, and concessions",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Auditing guidance emphasizes that supplier performance monitoring must incorporate objective indicators such as rejected-then-accepted concessions and credit notes.",
+            "Software must compile quantitative metrics: lot acceptance rate, parts-per-million (PPM) defect rate, on-time delivery, and SCAR responsiveness.",
+            "Performance calculations should avoid arbitrary weightings and reflect actual operational risk to production schedules and product safety."
+          ],
+          "workflow": {
+            "role": "Supplier Quality Analyst",
+            "input": "Receiving inspection totals, logged nonconformance counts, approved concessions, credit memos, and SCAR cycle times.",
+            "decision": "Calculate monthly supplier performance scores and assign rating tiers (A, B, C, or Probationary).",
+            "record": "Published Supplier Scorecard report archived in the quality management system.",
+            "exception": "High delivery score masks critical quality defects due to unbalanced scorecard weighting, prompting metric re-alignment."
+          },
+          "evaluationCriteria": [
+            "Verify that software scorecards automatically pull data from receiving inspection, NCR, concession, and SCAR tables.",
+            "Examine whether users can configure specific metric weights and rating thresholds without vendor technical support."
+          ],
+          "example": "Illustrative example: A hypothetical manufacturer penalizes a supplier's monthly scorecard heavily due to two unapproved concessions and a late SCAR response."
+        },
+        {
+          "title": "Identifying incomplete records, audit nonconformances, and certificate gaps",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Periodic reviews must identify missing compliance documents, overdue audits, and unfulfilled supplier self-assessments.",
+            "Auditing practices highlight that relying solely on an initial audit or standard certificate without scheduled surveillance fails to demonstrate ongoing control.",
+            "Software must automatically flag suppliers with expired quality certifications or overdue corrective actions for management review."
+          ],
+          "workflow": {
+            "role": "Quality Compliance Auditor",
+            "input": "Supplier compliance registers, annual audit schedules, self-assessment questionnaires, and certificate logs.",
+            "decision": "Determine whether supplier record deficiencies represent critical compliance nonconformity requiring intervention.",
+            "record": "Supplier compliance gap report listing missing documents, overdue audits, and non-responsive contacts.",
+            "exception": "Expired ISO 9001 certificate for high-risk component provider triggers automated purchasing block."
+          },
+          "evaluationCriteria": [
+            "Confirm that software dashboards display real-time warnings for upcoming and overdue supplier audit milestones.",
+            "Demonstrate automated email escalations sent to supplier contacts and internal category managers for missing records."
+          ],
+          "example": "Illustrative example: A hypothetical compliance officer uses system filters to locate four suppliers operating with quality certificates expiring within 30 days."
+        },
+        {
+          "title": "Governing supplier status transitions from approved to probation or disqualification",
+          "sourceIds": [
+            "icc-supplier-quality-module",
+            "apg-external-providers"
+          ],
+          "keyPoints": [
+            "Transitions between Approved, Probation, Disqualified, or Conditional states must be governed by strict rule-based workflows.",
+            "Downgrading a supplier to Probation should trigger automated operational consequences, such as mandatory inspection hold flags.",
+            "Disqualification must immediately prevent the release of new purchase orders across connected enterprise procurement systems."
+          ],
+          "workflow": {
+            "role": "Supplier Review Committee Chair",
+            "input": "Quarterly performance scorecards, repeat SCAR history, executive risk reviews, and manufacturing defect costs.",
+            "decision": "Downgrade chronic low-performing supplier from Approved to Probationary status.",
+            "record": "Formal supplier status change authorization record detailing operational restrictions and probationary terms.",
+            "exception": "Purchasing attempts to bypass probationary hold for emergency parts, requiring Quality Director sign-off."
+          },
+          "evaluationCriteria": [
+            "Verify that changing a supplier's status to Probation automatically updates receiving rules to 100% inspection.",
+            "Check that software provides strict role-based permission preventing unauthorized reinstatement of disqualified suppliers."
+          ],
+          "example": "Illustrative example: A hypothetical manufacturer moves a machine shop to probationary status following three rejected batches, triggering mandatory managerial sign-offs on new orders."
+        },
+        {
+          "title": "Retaining defensible performance evidence for customer and ISO audits",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Auditors assess whether risk-based thinking has been systematically applied to determine external provider controls.",
+            "Software must maintain an unbroken historical record of all evaluations, audits, scorecards, and status changes.",
+            "Historical evidence must demonstrate that supplier evaluations drive tangible procurement and operational decisions."
+          ],
+          "workflow": {
+            "role": "Quality Assurance Director",
+            "input": "Historical supplier scorecards, completed audit reports, SCAR closure packages, and status change records.",
+            "decision": "Assemble comprehensive supplier governance evidence package for third-party registrar or customer audit.",
+            "record": "Controlled supplier governance audit package demonstrating compliance with ISO 9001 external provider requirements.",
+            "exception": "Incomplete audit trail for historical concession approval requires immediate corrective documentation prior to external audit."
+          },
+          "evaluationCriteria": [
+            "Demonstrate how software generates complete supplier audit histories spanning multi-year performance periods in a single report.",
+            "Confirm that archived records remain immutable and cannot be overwritten or purged without system administrative logging."
+          ],
+          "example": "Illustrative example: A hypothetical quality team extracts three years of audit, scorecard, and SCAR records to successfully satisfy an ISO 9001 surveillance audit."
+        }
+      ],
+      "imageBrief": "a quality technician isolating a rejected component at a marked inspection bench; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover reviewing supplier performance for supplier quality software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    {
+      "slug": "migration-planning",
+      "title": "Planning migration and configuration: Supplier quality management software",
+      "description": "Planning migration and configuration in supplier quality software: inventory and classify existing records; clean data and map relationships.",
+      "targetWords": 2000,
+      "chapterKeyword": "supplier quality software planning migration and configuration",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave qualifying and approving suppliers to its assigned chapter.",
+        "Leave connecting receiving inspection records to its assigned chapter.",
+        "Leave following supplier corrective actions to its assigned chapter.",
+        "Leave reviewing supplier performance to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Auditing and classifying legacy supplier records and quality history",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Identify legacy quality data across spreadsheets, ERP notes, paper inspection logs, and local file drives.",
+            "Auditing guidance notes that keeping an approved list up to date requires systematic purging of inactive and obsolete suppliers.",
+            "Classify historical data into active operational records (live SCARs, valid certificates) versus archive-only documentation."
+          ],
+          "workflow": {
+            "role": "Quality Data Analyst",
+            "input": "Legacy approved vendor lists, open nonconformance logs, active SCAR spreadsheets, and file share archives.",
+            "decision": "Determine which historical supplier quality records warrant migration into the active software database.",
+            "record": "Legacy data inventory register categorizing records as Active Migration, Reference Archive, or Obsolete Purge.",
+            "exception": "Discovery of legacy suppliers without active qualification documentation mandates temporary quarantine status."
+          },
+          "evaluationCriteria": [
+            "Review vendor-provided data import templates to confirm support for legacy quality attributes and certification histories.",
+            "Verify that candidate software differentiates active migrated records from historical, read-only archive data."
+          ],
+          "example": "Illustrative example: A hypothetical migration team inventories 450 legacy vendor files, designating 180 active providers for complete history migration."
+        },
+        {
+          "title": "Sanitizing data and mapping relational links between parts, vendors, and defects",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Standardize vendor names, part numbering, and defect classification taxonomies prior to software import.",
+            "Establish relational integrity connecting part numbers, approved manufacturing locations, and inspection standards.",
+            "Verify that outsourced process providers are accurately mapped to their specific qualified processes (e.g., plating, coating)."
+          ],
+          "workflow": {
+            "role": "Systems Integration Engineer",
+            "input": "Sanitized vendor master files, normalized defect categorization tables, and active part cross-reference lists.",
+            "decision": "Map legacy spreadsheet columns to target software schema fields and relational data structures.",
+            "record": "Data mapping specification document detailing field transformations and validation rules.",
+            "exception": "Duplicate supplier profiles with conflicting qualification statuses trigger manual review and consolidation."
+          },
+          "evaluationCriteria": [
+            "Confirm that software schema supports many-to-many relationships between suppliers, manufacturing sites, and qualified part numbers.",
+            "Examine data import validation tools for error-reporting capabilities during pre-load testing."
+          ],
+          "example": "Illustrative example: A hypothetical team merges three separate legacy vendor entries for a single multi-facility machining company into a unified corporate profile."
+        },
+        {
+          "title": "Executing phased pilot imports and verifying data integrity",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Execute a controlled pilot migration using a representative sample of high-risk and low-risk supplier datasets.",
+            "Verify that imported records preserve critical metadata: original sign-off dates, reviewer names, and attached test certificates.",
+            "Validate that relational links between historical nonconformances and closed SCARs remain intact and navigable."
+          ],
+          "workflow": {
+            "role": "Quality Systems Lead",
+            "input": "Pilot dataset encompassing 25 active suppliers, 100 historical inspection logs, and 30 closed SCAR files.",
+            "decision": "Validate pilot import accuracy and approve migration script for enterprise execution.",
+            "record": "Pilot migration verification report comparing legacy source data against imported software records.",
+            "exception": "Missing attachment files during pilot import halts cutover planning until file path errors are resolved."
+          },
+          "evaluationCriteria": [
+            "Perform line-by-line verification of pilot imported records against legacy source documents to confirm fidelity.",
+            "Check that imported timestamps and electronic signature notations clearly indicate migrated legacy status."
+          ],
+          "example": "Illustrative example: A hypothetical team validates a pilot import of 25 critical suppliers, discovering and correcting an error in certificate expiration dates."
+        },
+        {
+          "title": "Planning cutover sequences, fallback plans, and parallel run protocols",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Establish cutover timelines minimizing disruption to incoming receiving docks and daily procurement operations.",
+            "Define fallback contingencies detailing rollback procedures if critical integration or database errors emerge during go-live.",
+            "Operate a dual-entry parallel run for a defined period across critical inspection stations to ensure operational reliability."
+          ],
+          "workflow": {
+            "role": "Operations Project Manager",
+            "input": "Cutover task checklist, IT infrastructure readiness sign-offs, and parallel run testing protocols.",
+            "decision": "Issue final Go/No-Go authorization for production system cutover across all manufacturing plants.",
+            "record": "Cutover authorization milestone sign-off and post-go-live operational support schedule.",
+            "exception": "Integration timeout between ERP purchase orders and receiving inspection modules activates fallback protocol."
+          },
+          "evaluationCriteria": [
+            "Assess vendor deployment methodologies for explicit cutover checkpoints, rollback scripts, and support availability.",
+            "Verify that the software vendor provides dedicated technical escalation support during critical cutover windows."
+          ],
+          "example": "Illustrative example: A hypothetical plant executes system cutover over a scheduled maintenance weekend, conducting parallel inspection logging for five days."
+        }
+      ],
+      "imageBrief": "a receiving inspector sorting traceability records beside incoming material racks; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover planning migration and configuration for supplier quality software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    {
+      "slug": "training-rollout",
+      "title": "Training teams and rolling out the system: Supplier quality management software",
+      "description": "Training teams and rolling out the system in supplier quality software: set role-based learning tasks and pilot with representative users.",
+      "targetWords": 2000,
+      "chapterKeyword": "supplier quality software training teams and rolling out the system",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave qualifying and approving suppliers to its assigned chapter.",
+        "Leave connecting receiving inspection records to its assigned chapter.",
+        "Leave following supplier corrective actions to its assigned chapter.",
+        "Leave reviewing supplier performance to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave maintaining the system and choosing next steps to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Structuring role-specific training for buyers, receiving inspectors, and quality engineers",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Tailor training modules to distinct operational responsibilities rather than presenting generic system-wide walkthroughs.",
+            "Buyers require training on PO specification verification and Approved Supplier List status constraints.",
+            "Receiving inspectors must master fast-paced nonconformance logging, quarantine holds, and sampling plan execution.",
+            "Quality engineers require in-depth training on SCAR issuance, root-cause evaluation, and human review of automated suggestions."
+          ],
+          "workflow": {
+            "role": "Quality Training Coordinator",
+            "input": "Role descriptions, standard operating procedures, training sandbox environments, and workflow competency matrices.",
+            "decision": "Certify operational staff as competent to perform live quality transactions in the new platform.",
+            "record": "Employee training completion records and practical competency assessment logs.",
+            "exception": "Receiving dock staff fails practical inspection logging test, requiring targeted retraining before go-live."
+          },
+          "evaluationCriteria": [
+            "Verify that software includes contextual, role-based help guides and simplified user interfaces for shop-floor stations.",
+            "Examine availability of administrative tools to monitor user training progress and transaction error rates."
+          ],
+          "example": "Illustrative example: A hypothetical manufacturing facility conducts separate 90-minute practical workshops for purchasing agents and receiving inspectors."
+        },
+        {
+          "title": "Conducting workflow simulations in a sandbox environment using representative records",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Run end-to-end operational simulations using realistic defect scenarios, material test report reviews, and urgent concession requests.",
+            "Ensure users practice evaluating AI-generated suggestions, verifying that human sign-offs are applied before record finalization.",
+            "Test exception pathways: rejected shipments, missing supplier certificates, and expired qualification statuses."
+          ],
+          "workflow": {
+            "role": "Lead Systems Trainer",
+            "input": "Simulated purchase orders, out-of-spec test pieces, flawed vendor certificates, and sandbox software instance.",
+            "decision": "Determine whether simulated workflow transactions satisfy internal operating procedures and data integrity standards.",
+            "record": "Workflow simulation validation report detailing user feedback and system configuration adjustments.",
+            "exception": "Simulation reveals confusion regarding concession sign-off authority, prompting workflow configuration refinement."
+          },
+          "evaluationCriteria": [
+            "Ensure the vendor provides a dedicated sandbox environment mirroring production configuration for ongoing training.",
+            "Confirm that sandbox testing encompasses full lifecycle testing from receiving hold to SCAR closure."
+          ],
+          "example": "Illustrative example: A hypothetical team runs a simulated intake of nonconforming structural steel to verify dock hold and automated notification triggers."
+        },
+        {
+          "title": "Executing staged deployment across receiving bays and outsourced processors",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Deploy software across operational facilities in controlled phases rather than an immediate big-bang launch.",
+            "Initiate rollout at primary receiving docks before extending to specialized sub-assembly cells and outsourced process providers.",
+            "Maintain hypercare technical support on-site during initial operational shifts to resolve procedural roadblocks immediately."
+          ],
+          "workflow": {
+            "role": "Implementation Project Manager",
+            "input": "Facility readiness checklists, local hardware setup validations, and staged rollout schedules.",
+            "decision": "Authorize phased go-live progression from primary fabrication plant to secondary assembly facilities.",
+            "record": "Facility deployment milestone sign-off and operational readiness log.",
+            "exception": "Hardware connectivity issues at secondary receiving warehouse delay site go-live by 48 hours."
+          },
+          "evaluationCriteria": [
+            "Assess vendor capability to support multi-site, phased rollouts without requiring separate database instances.",
+            "Verify software performance and responsiveness under concurrent transaction loads across multiple production locations."
+          ],
+          "example": "Illustrative example: A hypothetical equipment builder rolls out software to its main manufacturing plant first, addressing usability feedback before deploying to regional service centers."
+        },
+        {
+          "title": "Measuring user adoption, procedural compliance, and operational throughput",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Track operational adoption metrics: time-to-log nonconformance, SCAR response cycle time, and data entry error frequencies.",
+            "Audit live records to confirm that inspectors attach required evidence and that managers complete mandatory reviews.",
+            "Identify friction points where users attempt workarounds outside the software, taking rapid corrective action."
+          ],
+          "workflow": {
+            "role": "Continuous Improvement Director",
+            "input": "System usage logs, nonconformance processing cycle times, user support ticket logs, and data completeness audits.",
+            "decision": "Determine if system adoption meets operational readiness criteria or requires procedural adjustments.",
+            "record": "Post-implementation adoption audit report presented to executive quality steering committee.",
+            "exception": "High frequency of incomplete inspection records identified on second shift prompts supervisor coaching."
+          },
+          "evaluationCriteria": [
+            "Review administrative dashboards for built-in analytics tracking user login activity, task completion, and pending bottlenecks.",
+            "Demonstrate how software flags orphaned or incomplete quality records for managerial review."
+          ],
+          "example": "Illustrative example: A hypothetical continuous improvement team discovers inspection throughput increased 20% once barcode scanners were integrated with receiving screens."
+        }
+      ],
+      "imageBrief": "a trainer showing an operator the approved setup instruction on a shop floor; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover training teams and rolling out the system for supplier quality software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Maintaining the system and choosing next steps: Supplier quality management software",
+      "description": "Maintaining the system and choosing next steps in supplier quality software: review the workflow and evidence; evaluate improvements without invented ROI.",
+      "targetWords": 2000,
+      "chapterKeyword": "supplier quality software maintaining the system and choosing next steps",
+      "boundaries": [
+        "Leave mapping the current workflow to its assigned chapter.",
+        "Leave evaluating software capabilities to its assigned chapter.",
+        "Leave qualifying and approving suppliers to its assigned chapter.",
+        "Leave connecting receiving inspection records to its assigned chapter.",
+        "Leave following supplier corrective actions to its assigned chapter.",
+        "Leave reviewing supplier performance to its assigned chapter.",
+        "Leave planning migration and configuration to its assigned chapter.",
+        "Leave training teams and rolling out the system to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Conducting periodic workflow audits and ISO 9001 external provider reviews",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Auditing guidance notes that checking the approved vendor list at intervals is not enough; periodic reviews must assess wider supply chain controls.",
+            "Conduct structured internal quality audits of software records: verify that orders matched design specs and that corrective actions achieved recurrence prevention.",
+            "Ensure that software configurations adapt as organizational risk levels and Canadian regulatory standards evolve."
+          ],
+          "workflow": {
+            "role": "Lead Internal Quality Auditor",
+            "input": "Annual quality audit schedule, completed supplier transaction records, purchase orders, and audit trail logs.",
+            "decision": "Assess whether operational supplier quality software practices conform to ISO 9001:2015 Clause 8.4 requirements.",
+            "record": "Internal audit finding report detailing software workflow compliance and opportunities for improvement.",
+            "exception": "Audit discovers purchase orders placed with expired conditional approvals, resulting in an internal corrective action."
+          },
+          "evaluationCriteria": [
+            "Verify that software provides robust reporting tools to pull comprehensive audit samples across procurement, inspection, and SCAR records.",
+            "Examine whether configuration rules (e.g., approval hierarchies, mandatory fields) can be updated without software vendor recoding."
+          ],
+          "example": "Illustrative example: A hypothetical internal audit team reviews 40 completed procurement files, verifying that every high-risk PO matched current engineering specifications."
+        },
+        {
+          "title": "Evaluating operational improvements and total cost without invented financial metrics",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Measure system value using tangible operational indicators: reduced receiving quarantine cycle times, lower PPM defect rates, and fewer unapproved concessions.",
+            "Avoid speculative return-on-investment formulas or unverified productivity claims.",
+            "Focus ongoing evaluation on risk reduction, audit defensibility, and elimination of undetected supplier defects from assembly lines."
+          ],
+          "workflow": {
+            "role": "Director of Operational Excellence",
+            "input": "Quarterly operational quality metrics, scrap reports, receiving throughput logs, and software maintenance expenses.",
+            "decision": "Determine whether software delivers demonstrated operational control and risk reduction justifying ongoing licensing.",
+            "record": "Annual supplier quality software governance report delivered to executive leadership.",
+            "exception": "Persistent data entry bottlenecks at incoming inspection prompt redesign of mobile inspection screens."
+          },
+          "evaluationCriteria": [
+            "Require vendors to demonstrate standard out-of-the-box operational metric dashboards rather than theoretical financial ROI models.",
+            "Evaluate total cost of ownership transparency, including routine upgrades, data storage, and technical support."
+          ],
+          "example": "Illustrative example: A hypothetical director presents a governance review demonstrating a 35% reduction in recurring supplier nonconformances over twelve months."
+        },
+        {
+          "title": "Addressing frequently asked implementation and compliance questions",
+          "sourceIds": [
+            "apg-external-providers",
+            "icc-supplier-quality-module"
+          ],
+          "keyPoints": [
+            "Clarify that software is an operational tool that supports compliance, but does not guarantee ISO 9001 certification on its own.",
+            "Auditing guidance emphasizes that third-party auditors verify actual risk-based practices, process consistency, and objective evidence.",
+            "Maintain clear organizational policies regarding data retention, role delegation, and the governance of external supplier interactions."
+          ],
+          "workflow": {
+            "role": "Quality Compliance Manager",
+            "input": "Operational inquiry log, external auditor feedback, customer questionnaires, and software governance guidelines.",
+            "decision": "Publish formal organizational guidance resolving operational ambiguities in supplier quality management.",
+            "record": "Standard operational Q&A bulletin and software governance policy update.",
+            "exception": "Uncertainty regarding electronic signature legality in Canadian operations prompts corporate legal counsel review."
+          },
+          "evaluationCriteria": [
+            "Review vendor compliance documentation and audit readiness packages.",
+            "Verify that vendor FAQs provide realistic implementation timelines based on manufacturing complexity rather than oversimplified promises."
+          ],
+          "example": "Illustrative example: A hypothetical quality compliance team distributes an internal FAQ clarifying that human review remains legally mandatory for all SCAR dispositions."
+        },
+        {
+          "title": "Preparing an evidence-based software demonstration script",
+          "sourceIds": [
+            "icc-supplier-quality-module",
+            "apg-external-providers"
+          ],
+          "keyPoints": [
+            "Do not allow software vendors to present generic marketing slide decks; demand a scripted demonstration using your actual operational data.",
+            "Script must test handoffs: intake of out-of-spec material, quarantine lock, SCAR generation, and scorecard updates.",
+            "Demand confirmation of capabilities marked as pending in the capability register, such as external supplier portal access and automated APQP/PPAP tracking.",
+            "Verify human-in-the-loop controls for AI-generated summaries and automated data extraction tools."
+          ],
+          "workflow": {
+            "role": "Software Evaluation Committee Chair",
+            "input": "Scripted demonstration protocol, masked operational test records (drawings, POs, defect photos), and evaluation scorecards.",
+            "decision": "Score vendor demonstrations against technical compliance criteria and determine final platform selection.",
+            "record": "Consolidated software demonstration evaluation matrix and final vendor selection recommendation.",
+            "exception": "Vendor fails to demonstrate live SCAR generation from a rejected lot, resulting in disqualification from selection."
+          },
+          "evaluationCriteria": [
+            "Execute a scripted demo test requiring the vendor to ingest an actual nonconforming test part and complete a full SCAR cycle.",
+            "Require the vendor to explicitly demonstrate whether supplier-facing task portals are currently functional or pending in their capability register."
+          ],
+          "example": "Illustrative example: A hypothetical evaluation committee scores three software vendors using a 10-step script featuring an urgent nonconforming casting scenario."
+        }
+      ],
+      "imageBrief": "a quality lead reviewing completed evidence beside a final inspection station; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover maintaining the system and choosing next steps for supplier quality software. Give actionable software evaluation or implementation advice. Explain only verified ICC capabilities; label hypothetical examples. Do not repeat another chapter's scope."
+    }
+  ],
+  "faqQuestions": [
+    "What operational problem should supplier quality software solve first?",
+    "Which historical supplier quality records should be migrated into a new system?",
+    "How should user permissions and decision authorities be assigned between purchasing and quality?",
+    "How should automated decision gates and approval workflows be tested before go-live?",
+    "How should an organization handle obsolete and inactive supplier records during migration?",
+    "What objective evidence must supplier quality software provide during an ISO 9001 audit?",
+    "How should user training and system adoption be measured across manufacturing operations?",
+    "Does implementing supplier quality management software guarantee ISO 9001 certification?",
+    "What realistic scenarios should be prepared for a vendor software demonstration?"
+  ]
+}
+
+# ICC software guide writing rules
+
+Write for Canadian quality and operations teams evaluating or implementing software. Explain roles, inputs, decisions, records, exceptions, evaluation criteria and rollout. Use ISO requirements as supporting context rather than the main structure.
+
+- Write the introduction and chapters in separate Markdown files. The page shell supplies the H1; body subsections use H2, and FAQ questions use H3.
+- Nine chapters, each 2,000–2,200 visible words. Introduction at least 1,500 words. Entire guide at most 20,000 words including introduction, FAQs and closing invitation. Target 19,500; never use repetitive filler.
+- Use third person or direct address, US spelling and naturally capitalized terminology. Avoid the blog rule file's banned filler phrases. Do not paste or bold raw SEO keywords.
+- Titles, descriptions, keywords and URLs are fixed by the final brief. Descriptions must be 120–160 characters. Chapter order comes from the manifest.
+- Use only the frozen primary sources and capability register entries. A primary source's existence is not proof of an unrelated claim. Cite the precise source that supports the point. Do not call historical ISO guidance the current edition; resolve edition conflicts before making edition claims.
+- Distinguish software evaluation criteria from product features. Pending or retired ICC capabilities cannot be advertised. Use verified ICC-specific evidence for every advertised capability.
+- Do not invent quotations, statistics, named clients, testimonials, client results or product behavior. Begin hypothetical scenarios with `**Illustrative example:**` and use unnamed businesses. Illustrative calculations must expose their assumptions and never describe actual results.
+- Cover each chapter's distinct scope. Use paragraphs, practical tables, steps and decision criteria where helpful. Avoid repeating definitions, introductions, examples or closing language across chapters.
+- Include 8–10 distinct FAQ answers across the guide. Put them in the assigned FAQ subsection; do not repeat the same FAQ on every chapter. The last chapter closes with an invitation to request a software demonstration at `/contact/`.
+- Each page has its own managed industrial hero brief. Use manufacturing workflow scenes; no generic office scenes, fabricated product screenshots, logos or readable invented interface text. Do not emit inline image markers or untracked image links; the guide pipeline rejects them until inline provenance is supported.
+- Use short paragraphs, clear role/input/decision/record/exception explanations and practical evaluation criteria. A table, list or Important/Key Consideration callout should help the decision, never fill a formatting quota. Each FAQ answer must give actionable detail, rather than a question heading with a token answer.
+- Read `guide-context.json` and the exact subsection brief. Preserve the reviewed glossary, example and decisions. Review each chapter before writing the next; edits to an earlier chapter require re-review of affected downstream chapters.
+- Aim near 2,000 chapter words, but use `guide budget` to determine the actual allowed maximum. Reserve at least 2,000 for each unwritten chapter and 1,500 for the introduction. Length or editorial corrections target named subsections; preserve exact citations and factual quantities.
+- Source and chapter reviews are required. Missing audit credentials, stale review hashes, unresolved accuracy/repetition findings or broken links block publication. Never edit checks or evidence to make a failed draft pass.
+
+Before checkpointing a page, count visible words, check its assigned scope and evidence, remove duplicate explanations, verify internal destinations and flag any statement the frozen evidence does not support.

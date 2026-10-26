@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "topicId": "supplier-quality",
+  "slug": "supplier-quality-software",
+  "title": "Supplier quality management software for Canadian quality and operations teams",
+  "description": "How to choose and implement supplier quality software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.",
+  "primaryKeyword": "supplier quality software",
+  "keywords": [
+    "supplier quality software",
+    "supplier approval",
+    "supplier corrective actions"
+  ],
+  "audience": "Canadian quality and operations teams",
+  "author": "ISO Certification Consultants Editorial Team",
+  "date": "2026-10-26",
+  "introductionFile": "introduction.md",
+  "chapters": [
+    {
+      "slug": "mapping-workflows",
+      "file": "chapters/mapping-workflows.md"
+    },
+    {
+      "slug": "evaluating-software",
+      "file": "chapters/evaluating-software.md"
+    },
+    {
+      "slug": "supplier-qualification",
+      "file": "chapters/supplier-qualification.md"
+    },
+    {
+      "slug": "receiving-controls",
+      "file": "chapters/receiving-controls.md"
+    },
+    {
+      "slug": "supplier-actions",
+      "file": "chapters/supplier-actions.md"
+    },
+    {
+      "slug": "supplier-performance",
+      "file": "chapters/supplier-performance.md"
+    },
+    {
+      "slug": "migration-planning",
+      "file": "chapters/migration-planning.md"
+    },
+    {
+      "slug": "training-rollout",
+      "file": "chapters/training-rollout.md"
+    },
+    {
+      "slug": "ongoing-operation",
+      "file": "chapters/ongoing-operation.md"
+    }
+  ],
+  "sources": [
+    {
+      "id": "apg-external-providers",
+      "title": "ISO 9001 Auditing Practices Group: Guidance on External Providers (Edition 1, 13 January 2016)",
+      "publisher": "ISO/TC 176 and IAF",
+      "sourceType": "primary",
+      "url": "https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-ExternalProviders.pdf",
+      "retrievedAt": "2026-10-26",
+      "supportedClaims": [
+        "External providers can be any external source of processes, products or services: a supplier, partner, sister or parent organization, customer and so on.",
+        "Auditors may consider it sufficient to check that documented information, such as a list, shows which external providers are approved and is kept up to date; that orders were placed with providers satisfying the defined criteria; that performance of outsourced-process providers is monitored effectively; and that activities needed to ensure specified requirements are met are carried out.",
+        "Auditors have to verify that risk-based thinking has been applied in determining appropriate controls over external providers.",
+        "Checking those points may not be sufficient to ensure externally provided products, processes and services meet specifications, in which case a review of the wider procurement, outsourcing and supply chain processes is preferable.",
+        "Procurement starts during design and development, when a specification is prepared; the organization should ensure purchase requirements are correct before communicating them to the external provider and that statutory and regulatory requirements are included.",
+        "The degree of risk associated with a component, product or service part, and the controls needed to ensure it meets the design specification, should be assessed.",
+        "Practical checks include confirming that the specification on a purchase order matches the design or customer specification, whether specifications were discussed with suppliers of critical components, whether the specification was approved before the order was confirmed, and whether the purchase order refers to statutory or regulatory requirements.",
+        "A review of the approved external provider list at regular intervals may not be enough to show effective control of all external providers in the supply chain.",
+        "Questions to consider: whether providers of critical components or services are selected only on price or also on their ability to supply consistently to specification; whether outsourced processes are included in the supply chain with relevant controls; and whether providers are approved solely on registration to a recognized quality standard or the scope of that registration is reviewed.",
+        "It may be advantageous to audit the intended external provider to establish clear lines of communication, product specifications and delivery parameters.",
+        "How often credit notes are raised for products or services initially rejected then accepted, and how many concessions allow acceptance of previously rejected products or services, are indicators worth examining.",
+        "The paper is auditor guidance, was written for ISO 9001:2015, and carries a disclaimer that it has not been endorsed by ISO, ISO/TC 176 or IAF; it does not establish current edition requirements."
+      ]
+    },
+    {
+      "id": "icc-supplier-quality-module",
+      "title": "ICC Supplier Quality module page (as retrieved)",
+      "publisher": "ISO Certification Consultants Inc.",
+      "sourceType": "primary",
+      "url": "https://isocertificationconsultants.ca/solutions/supplier-quality/",
+      "retrievedAt": "2026-10-26",
+      "supportedClaims": [
+        "ICC's published Supplier Quality page describes onboarding through approval gates, supplier scorecards and performance reports, corrective action requests raised from nonconformances and sent to suppliers, scheduled and recorded supplier audits and self-assessments, and a supplier portal where suppliers answer tasks.",
+        "The page lists these topics as questions to confirm in a demonstration rather than verified product promises, because the capability register entry for the supplier portal is pending: supplier-facing tasks, approved supplier list with qualification status and document expiry dates, scorecards and evaluation history, SCAR response and closure decisions, and tracking of APQP, PPAP and FAI packages.",
+        "The page states that AI outputs are suggestions a person reviews before they enter a controlled record."
+      ]
+    }
+  ],
+  "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "researchSnapshotHash": "86ba159c2071d843705ed0d75ce162a4f78e5860b27ab8f483939897fb8e891a",
+  "productionSlotId": "2026-W44-slot-1"
+}
