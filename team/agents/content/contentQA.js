@@ -637,6 +637,40 @@ const BANNED_PHRASES = [
   "documentation burden", "documentation maturity", "competitive advantage", "competitive edge",
 ];
 
+// Mirrored in tests/positioning-copy.test.mjs — keep both in sync.
+const POSITIONING_PATTERNS = [
+  /\byour\s?qms\b/i,
+  /\bquro\b/i,
+  /yourqms\.com/i,
+  /\bAI[- ](?:powered |driven |assisted |led )?gap assessments?\b/i,
+  /\bAI[- ](?:suggested |generated |powered )?audit findings?\b/i,
+];
+
+/** Product names and AI-audit claims found in the text (the matched strings). */
+function findPositioningTerms(text) {
+  const found = [];
+  for (const re of POSITIONING_PATTERNS) {
+    const m = String(text || "").match(re);
+    if (m) found.push(m[0]);
+  }
+  return found;
+}
+
+/** The last non-empty paragraph must invite a demo and link to /contact. */
+function checkClosingDemo(body) {
+  const { toRoute } = require('../shared/siteRoutes');
+  const { extractLinks } = require('../shared/contentStore');
+  const last = String(body || '').split(/\n\s*\n/).map((p) => p.trim()).filter((p) => p && !/^(\[IMAGE:[^\]]*\]|!\[[^\]]*\]\([^)]*\))$/.test(p)).at(-1) || '';
+  const hasDemo = /\bdemos?\b/i.test(last);
+  const hasLink = extractLinks(last).internal.some((l) => toRoute(l.url) === '/contact');
+  const pass = hasDemo && hasLink;
+  return {
+    id: 'closing-demo',
+    pass,
+    detail: pass ? 'Closing paragraph invites a demo at /contact/' : 'The closing paragraph must invite a demo and link to /contact/',
+  };
+}
+
 // ── US spelling ─────────────────────────────────────────────────
 // British forms that appear in prose, lowercase only: a capitalized form is
 // treated as a proper name (Canadian Centre for Occupational Health and Safety,
@@ -1024,6 +1058,16 @@ async function validateLocal(post, opts = {}) {
   const banned = countBannedPhrases(body);
   add('banned-phrases', { name: 'No banned phrases', pass: banned.length === 0, phrases: banned, message: banned.length ? `Banned phrase(s): ${banned.join(', ')}` : 'None found' });
 
+  const positioning = findPositioningTerms(`${post.title}\n${post.description}\n${body}`);
+  add('positioning-terms', {
+    name: 'No product names or AI audit claims',
+    pass: positioning.length === 0,
+    message: positioning.length ? `Remove: ${positioning.join(', ')}` : 'None found',
+  });
+
+  const closing = checkClosingDemo(body);
+  add('closing-demo', { name: 'Closing paragraph invites a demo', pass: closing.pass, message: closing.detail });
+
   const styling = findKeywordStyling(body, post.keywords || [post.primaryKeyword]);
   add('keyword-styling', {
     name: 'No pasted keywords or lowercase standard names',
@@ -1127,6 +1171,9 @@ module.exports = {
   findKeywordStyling,
   fixKeywordStyling,
   BANNED_PHRASES,
+  POSITIONING_PATTERNS,
+  findPositioningTerms,
+  checkClosingDemo,
   MIN_WORDS,
   // Legacy API (backward compat)
   reviewArticle,

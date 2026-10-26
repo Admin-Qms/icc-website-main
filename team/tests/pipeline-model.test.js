@@ -44,8 +44,6 @@ function reply(system, user) {
     draft = [
       `# ${TITLE}`,
       "",
-      goodPost().body.replace("](/assessment)", "](/resources)"),
-      "",
       FIRST_PERSON,
       "",
       PASTED_KEYWORD,
@@ -57,6 +55,9 @@ function reply(system, user) {
       "[IMAGE: a supervisor reviewing an audit checklist on a production floor]",
       "",
       "[IMAGE: a third scene that should be dropped because only two inline images are allowed]",
+      "",
+      // The article's own closing paragraph (with its demo invitation) stays last.
+      goodPost().body.replace("](/assessment)", "](/resources)"),
     ].join("\n");
     return draft;
   }

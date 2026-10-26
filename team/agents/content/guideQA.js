@@ -1,5 +1,5 @@
 const { validateGuideStructure, hashGuideInputs, countGuideWords, guideRoutes } = require('../../../lib/guide-contract.cjs');
-const { checkVoice, checkFabricatedQuotes, toBlocks, findBritishSpellings, countBannedPhrases } = require('./contentQA');
+const { checkVoice, checkFabricatedQuotes, toBlocks, findBritishSpellings, countBannedPhrases, findPositioningTerms } = require('./contentQA');
 const { getRoutes, toRoute } = require('../shared/siteRoutes');
 const { keywordCovered } = require('../shared/contentStore');
 const { checkPageContent, links } = require('./guideEditorial');
@@ -54,6 +54,7 @@ async function validateGuide(bundle, context = {}) {
     add('fabricated-quotes', quotes.pass, quotes.message || 'No fabricated quotes', page.slug);
     add('spelling', findBritishSpellings(page.body).length === 0, 'Use ICC US spelling while preserving proper names', page.slug);
     add('banned-filler', countBannedPhrases(page.body).length === 0, 'Remove banned filler phrases', page.slug);
+    add('positioning-terms', findPositioningTerms(`${page.title}\n${page.description}\n${page.body}`).length === 0, 'Remove product names and AI audit claims', page.slug);
     add('keyword-covered', keywordCovered(page.primaryKeyword, page.title) && keywordCovered(page.primaryKeyword, page.description), 'Assigned topic must be represented in both title and description', page.slug);
     add('page-title-unused', !titles.has(page.title?.trim().toLowerCase()), 'Title must not duplicate another published content page', page.slug);
     add('source-supported', page.sourceIds.every(id => sourceIds.has(id)), 'Every page source must appear in the manifest', page.slug);
