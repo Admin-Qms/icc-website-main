@@ -63,10 +63,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-26T15:13:42.970Z"
+    },
+    "migration-planning": {
+      "hash": "027dd717cc86efee714d88ba6e69d2543aa019e5a48ac0a90572691d499fd5e3",
+      "wordCount": 2105,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-26T15:16:34.959Z"
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T15:14:06.978Z",
+  "updatedAt": "2026-10-26T15:16:59.305Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -1475,7 +1482,7 @@
     "reviewedChapters": [],
     "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
   },
-  "contextHash": "dda4a45e4c714b5ccb7a62c6f5024cc4cbf239e976f77b593a5a2a88598db907",
+  "contextHash": "d06c566a63c31defc415b90471aa99661dc8fda883da4eae89691f41598f5977",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2272,6 +2279,140 @@
       "inputHash": "51634c1cfb185609ef346c24201fc47b5fc5d5ac3de48903bcbab307df4e64ca",
       "outputContextHash": "dda4a45e4c714b5ccb7a62c6f5024cc4cbf239e976f77b593a5a2a88598db907",
       "reviewedAt": "2026-10-26T15:14:06.973Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "migration-planning": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The migration planning guide page complies fully with the assigned brief, plan structure, and source research. It methodically establishes operational workflows for legacy data auditing, relational schema mapping, pilot import verification, and system cutover protocols. Each subsection explicitly defines the assigned workflow role, inputs, decisions, records, exception handling, and software evaluation criteria. Labeled illustrative examples are provided, APG auditor guidance is properly contextualized with disclaimers, ICC supplier portal capabilities are correctly treated as pending demonstration items, and unassigned FAQ content is excluded.",
+      "glossary": [
+        {
+          "term": "Pilot import",
+          "definition": "A controlled rehearsal and validation run using a representative sample of legacy supplier records to test data mapping, schema transformations, and import scripts prior to full production migration."
+        },
+        {
+          "term": "Parallel run",
+          "definition": "A risk-mitigation deployment protocol where incoming inspections and transactions are logged simultaneously in both legacy and new systems for a defined duration to verify operational consistency."
+        }
+      ],
+      "roles": [
+        "Quality Data Analyst",
+        "Systems Integration Engineer",
+        "Quality Systems Lead",
+        "Operations Project Manager",
+        "Quality owner"
+      ],
+      "recordNames": [
+        "Legacy data inventory register",
+        "Data mapping specification document detailing field transformations and validation rules",
+        "Pilot migration verification report",
+        "Signed cutover authorization and post-go-live operational support schedule"
+      ],
+      "decisions": [
+        "Determine which historical supplier quality records warrant migration into the active software database",
+        "Map legacy spreadsheet columns to target software schema fields and relational data structures",
+        "Validate pilot import accuracy and approve migration script for enterprise execution",
+        "Issue final Go/No-Go authorization for production system cutover across all manufacturing plants"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Auditing and classifying legacy supplier records and quality history",
+            "section": "Auditing and classifying legacy supplier records and quality history"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Auditing and classifying legacy supplier records and quality history; semantic review verifies support",
+            "section": "Auditing and classifying legacy supplier records and quality history"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Sanitizing data and mapping relational links between parts, vendors, and defects",
+            "section": "Sanitizing data and mapping relational links between parts, vendors, and defects"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Sanitizing data and mapping relational links between parts, vendors, and defects; semantic review verifies support",
+            "section": "Sanitizing data and mapping relational links between parts, vendors, and defects"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Executing phased pilot imports and verifying data integrity",
+            "section": "Executing phased pilot imports and verifying data integrity"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Executing phased pilot imports and verifying data integrity; semantic review verifies support",
+            "section": "Executing phased pilot imports and verifying data integrity"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Planning cutover sequences, fallback plans, and parallel run protocols",
+            "section": "Planning cutover sequences, fallback plans, and parallel run protocols"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Planning cutover sequences, fallback plans, and parallel run protocols; semantic review verifies support",
+            "section": "Planning cutover sequences, fallback plans, and parallel run protocols"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "172b92cef1ebd0a66e2a95417b7f09959dda2cbbf47aef037c5a1beb14e2d911",
+      "outputContextHash": "d06c566a63c31defc415b90471aa99661dc8fda883da4eae89691f41598f5977",
+      "reviewedAt": "2026-10-26T15:16:59.301Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

@@ -65,6 +65,14 @@
     {
       "term": "Disqualification",
       "definition": "The formal termination of an approved supplier relationship for a category or commodity that immediately blocks the placement of new purchase orders."
+    },
+    {
+      "term": "Pilot import",
+      "definition": "A controlled rehearsal and validation run using a representative sample of legacy supplier records to test data mapping, schema transformations, and import scripts prior to full production migration."
+    },
+    {
+      "term": "Parallel run",
+      "definition": "A risk-mitigation deployment protocol where incoming inspections and transactions are logged simultaneously in both legacy and new systems for a defined duration to verify operational consistency."
     }
   ],
   "roles": [
@@ -96,7 +104,10 @@
     "Supplier quality analyst",
     "Quality compliance auditor",
     "Supplier review committee chair",
-    "Quality assurance director"
+    "Quality assurance director",
+    "Quality Data Analyst",
+    "Systems Integration Engineer",
+    "Operations Project Manager"
   ],
   "recordNames": [
     "Process gap assessment report",
@@ -122,7 +133,11 @@
     "Published supplier scorecard",
     "Supplier compliance gap report",
     "Supplier status change authorization",
-    "Controlled supplier governance package"
+    "Controlled supplier governance package",
+    "Legacy data inventory register",
+    "Data mapping specification document detailing field transformations and validation rules",
+    "Pilot migration verification report",
+    "Signed cutover authorization and post-go-live operational support schedule"
   ],
   "example": {
     "label": "Illustrative example",
@@ -199,6 +214,18 @@
         "Determine whether compliance record deficiencies warrant operational intervention",
         "Authorize supplier status transition from approved to probation or disqualification",
         "Determine whether supplier governance evidence package is complete for third-party or customer audit"
+      ]
+    },
+    {
+      "slug": "migration-planning",
+      "title": "Planning migration and configuration: Supplier quality management software",
+      "summary": "The migration planning guide page complies fully with the assigned brief, plan structure, and source research. It methodically establishes operational workflows for legacy data auditing, relational schema mapping, pilot import verification, and system cutover protocols. Each subsection explicitly defines the assigned workflow role, inputs, decisions, records, exception handling, and software evaluation criteria. Labeled illustrative examples are provided, APG auditor guidance is properly contextualized with disclaimers, ICC supplier portal capabilities are correctly treated as pending demonstration items, and unassigned FAQ content is excluded.",
+      "bodyHash": "5be594031427edfc8893918c86285eee9f5563a3760ca9702d62e956126d3c42",
+      "decisions": [
+        "Determine which historical supplier quality records warrant migration into the active software database",
+        "Map legacy spreadsheet columns to target software schema fields and relational data structures",
+        "Validate pilot import accuracy and approve migration script for enterprise execution",
+        "Issue final Go/No-Go authorization for production system cutover across all manufacturing plants"
       ]
     }
   ],
