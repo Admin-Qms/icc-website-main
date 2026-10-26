@@ -4,9 +4,10 @@ import { PageHeader, IndustryCard, CTASection } from "@/components/ui";
 import { Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight } from "@/components/Icons";
 import { INDUSTRIES } from "@/lib/site";
+import { pageTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "ISO Certification by Industry",
+  title: pageTitle("ISO Certification by Industry"),
   description:
     "ISO certification consultants by industry across Canada, plus compliance management software for automotive, aerospace, food safety, medical devices and more.",
   alternates: { canonical: "/industries" },

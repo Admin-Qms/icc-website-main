@@ -10,9 +10,10 @@ import {
 import { Stagger, StaggerItem, Reveal } from "@/components/motion";
 import { ArrowRight } from "@/components/Icons";
 import { STANDARDS } from "@/lib/site";
+import { pageTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "ISO Certification Services & Consultants",
+  title: pageTitle("ISO Certification Services & Consultants"),
   description:
     "ISO certification consultants for ISO 9001, 14001, 45001, IATF 16949, AS9100 and ISO 13485, with compliance management software to keep you audit-ready.",
   alternates: { canonical: "/services" },
@@ -29,8 +30,8 @@ export default function ServicesPage() {
         <Link href="/contact" className="btn-primary">
           Book a demo <ArrowRight className="h-4 w-4" />
         </Link>
-        <Link href="/assessment" className="btn-ghost">
-          Which standard do you need?
+        <Link href="/contact" className="btn-ghost">
+          Onboard a custom standard
         </Link>
       </PageHeader>
 
