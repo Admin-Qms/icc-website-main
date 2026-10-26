@@ -44,7 +44,7 @@ export function Hero() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-500 opacity-60" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-600" />
                 </span>
-                ISO Certification Consulting · Canada
+                AI-Powered Operating System for Industrial Quality &amp; Compliance
               </span>
             </motion.div>
 
@@ -56,10 +56,11 @@ export function Hero() {
               variants={item}
               className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600"
             >
-              Certified consultants guide you from the first gap analysis to a
-              passed certification audit. Compliance management software holds
-              the evidence as a by-product of daily work, so nothing is
-              assembled in a panic beforehand. Any standard, one team.
+              Need to meet ISO 9001, IATF 16949, AS9100 or another standard? Our
+              compliance management software keeps your documents, audits,
+              training, suppliers and corrective actions in one place. AI does
+              the paperwork and warns you before anything slips, so you are
+              ready for an audit any day of the year.
             </motion.p>
 
             <motion.div
@@ -67,11 +68,11 @@ export function Hero() {
               className="mt-8 flex flex-wrap items-center gap-4"
             >
               <Link href="/contact" className="btn-primary group">
-                Book a free consultation
+                Book a demo
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link href="/process" className="btn-outline">
-                View our consulting approach
+              <Link href="/platform" className="btn-outline">
+                See how it works
               </Link>
             </motion.div>
 
@@ -80,9 +81,9 @@ export function Hero() {
               className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3"
             >
               {[
-                "Serving Ontario & all of Canada",
-                "10 standards in the catalogue, plus custom",
-                "Consultant-led, every step",
+                "Ready for an audit any day",
+                "Less paperwork for your team",
+                "You approve everything AI prepares",
               ].map((f) => (
                 <span
                   key={f}
@@ -123,8 +124,7 @@ export function Hero() {
             viewport={{ once: true }}
             className="mb-5 text-center text-xs font-bold uppercase tracking-[0.14em] text-slate-500"
           >
-            We prepare Canadian companies for the standards their customers
-            require
+            Ready for the standards your customers ask for
           </motion.p>
           <motion.div
             variants={{ show: { transition: { staggerChildren: 0.06 } } }}
@@ -168,7 +168,7 @@ function HeroContactPanel() {
   return (
     <section
       className="grid min-w-0 items-center"
-      aria-label="Consultation enquiry"
+      aria-label="Book a demo"
     >
       {!showForm && (
         <div className="min-w-0 [grid-area:1/1]" aria-hidden="true">
@@ -182,7 +182,7 @@ function HeroContactPanel() {
         animate={{ opacity: showForm ? 1 : 0 }}
         transition={{ duration: reduce ? 0 : 0.4 }}
       >
-        <ContactForm compact title="Book a free consultation" />
+        <ContactForm compact title="Book a demo" submitLabel="Book my demo" />
       </motion.div>
       <noscript>
         <p className="mt-4">
@@ -210,7 +210,7 @@ function AnimatedHeadline() {
       animate="show"
       className="inline"
     >
-      {["Get ISO certified without", "disrupting how your"].map((line, i) => (
+      {["Stop managing compliance."].map((line, i) => (
         <motion.span
           key={i}
           variants={{
@@ -239,7 +239,7 @@ function AnimatedHeadline() {
         }}
         className="relative inline-block text-teal-700"
       >
-        business runs.
+        Start automating it.
         <motion.svg
           className="absolute -bottom-1.5 left-0 w-full"
           height="10"

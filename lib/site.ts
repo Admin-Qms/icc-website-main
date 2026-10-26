@@ -563,24 +563,24 @@ export const STATS = [
 
 export const DIFFERENTIATORS = [
   {
-    title: "Configured, not templated",
+    title: "Fits how you work",
     detail:
-      "Every module adapts to your forms, fields, routing and terminology. The system fits how your business runs, not the other way around.",
+      "Forms, fields, approvals and terms match the way your business already runs.",
   },
   {
-    title: "Any standard, onboarded",
+    title: "Any standard",
     detail:
-      "ISO, IATF and AS are the start. Customer-specific, regulatory or internal standards are imported from a workbook as custom standards and tracked clause by clause.",
+      "Customer, regulatory or internal requirements are tracked clause by clause.",
   },
   {
     title: "Your processes first",
     detail:
-      "Processes are mapped as they run, with named owners and the documents and clauses linked to each one, instead of being forced into generic business software.",
+      "Each process has an owner, with its documents and clauses linked.",
   },
   {
-    title: "Hybrid delivery",
+    title: "Software plus experts",
     detail:
-      "Compliance management software plus certified consultants configuring it with you, from the first process map to a passed certification audit.",
+      "Use the software on your own, or with certified consultants beside you.",
   },
 ];
 
@@ -1184,41 +1184,42 @@ export const MODULES: Module[] = [
 // Home page: the buyer's pain, the module that answers it, the concrete capability.
 export const PAIN_POINTS = [
   {
-    pain: "Nobody knows which document revision is current.",
+    pain: "You are not sure which document version is current.",
     module: "Documents",
     slug: "document-control",
     capability:
-      "Approved copies are frozen and hash-verified. The revision an auditor opens is the one you approved.",
+      "Everyone sees only the latest approved version, and you can show the auditor exactly which version was approved and when.",
   },
   {
     pain: "Audit prep is a last-minute scramble.",
     module: "Audits",
     slug: "audits-management-review",
     capability:
-      "Checklist, findings and evidence sit in one workspace, and the PDF report comes out when the audit closes.",
+      "Checklists, findings and evidence are already in one place, and the audit report is ready when the audit closes.",
   },
   {
-    pain: "CAPAs stall with no owner.",
+    pain: "Corrective actions stall with no owner.",
     module: "Improvements",
     slug: "nonconformance-capa",
     capability:
-      "Every corrective action has an owner and a due date, and nothing closes without an effectiveness check.",
+      "Every corrective action has an owner, a due date and reminders, and it only closes once the fix is checked.",
   },
   {
-    pain: "Clause gaps show up only when the auditor points at them.",
+    pain: "Gaps show up only when the auditor points at them.",
     module: "Standards",
     slug: "standards",
     capability:
-      "A status per clause, coverage against a target, and the evidence linked behind each one.",
+      "You see your coverage clause by clause, so you find the gaps before the auditor does.",
   },
   {
-    pain: "SCARs and PPAP packages live in inbox threads.",
+    pain: "Supplier responses get lost in email.",
     module: "Supplier Quality",
     slug: "supplier-quality",
     capability:
-      "Suppliers answer from a portal task inbox with an email code, and never see your internal data.",
+      "Suppliers answer SCARs and PPAP requests in their own portal, and every response is on record.",
   },
 ];
+
 
 // How AI is kept in check. A person always signs off.
 export const AI_PRINCIPLES = [

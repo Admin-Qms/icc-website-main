@@ -100,9 +100,8 @@ export function ContactForm({
               Message received
             </h3>
             <p className="mt-3 max-w-sm text-slate-600">
-              A certified consultant will be in touch within one business day.
-              In the meantime, the free readiness assessment is a good next
-              step.
+              Thanks, we have got your request. We will reply within one
+              business day to set up your demo or call.
             </p>
           </motion.div>
         ) : (
