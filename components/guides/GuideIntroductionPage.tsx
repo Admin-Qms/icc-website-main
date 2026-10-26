@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { GuideHeader } from './GuideHeader';
 import { GuideBody } from './GuideBody';
+import { SoftwareDemoBox } from '@/components/SoftwareDemoBox';
 import { GuideContents } from '@/components/guides/GuideContents';
 import { getGuide } from '@/lib/guides';
 import { guidePageMetadata, guidePageSchema } from '@/lib/guide-metadata';
@@ -25,6 +26,7 @@ export default function GuideIntroduction({ params }: { params: { guide: string 
         <p className="mb-7 text-sm text-slate-500">{introduction.author} · {introduction.readTime} min read · {guide.chapters.length} chapters</p>
         {introduction.image && <Image src={introduction.image.src} alt={introduction.image.alt} width={1200} height={675} priority className="h-auto w-full rounded-xl" />}
         <GuideBody body={introduction.body} />
+        <SoftwareDemoBox />
         <nav aria-label="Begin guide" className="mt-12 border-t border-slate-200 pt-7"><Link href={`/guides/${manifest.slug}/${manifest.chapters[0].slug}/`} className="font-semibold text-teal-700 hover:underline">Begin chapter 1</Link></nav>
       </article>
       <aside className="row-start-1 lg:col-start-2 lg:row-start-auto"><GuideContents manifest={manifest} titles={Object.fromEntries(guide.chapters.map(c => [c.slug, c.title]))} /></aside>

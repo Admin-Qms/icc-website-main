@@ -8,6 +8,7 @@ import { ArrowRight } from "@/components/Icons";
 import { Markdown } from "@/components/Markdown";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { PostCard } from "@/components/PostCard";
+import { SoftwareDemoBox } from "@/components/SoftwareDemoBox";
 import {
   formatDate,
   getAllPosts,
@@ -152,6 +153,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 </div>
               )}
             </div>
+
+            <SoftwareDemoBox category={post.category} />
 
             <div className="mt-12 border-t border-slate-200 pt-6">
               <Link href="/blog" className="link-arrow">
