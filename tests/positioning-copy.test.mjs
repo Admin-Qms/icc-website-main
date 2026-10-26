@@ -67,3 +67,12 @@ test("hand-written meta descriptions are 120–160 characters", () => {
   }
   assert.deepEqual(offenders, [], `Descriptions outside 120–160 characters:\n${offenders.join("\n")}`);
 });
+
+test("module meta descriptions are 120–160 characters", async () => {
+  const { MODULES } = await import("../lib/site.ts");
+  const offenders = MODULES.filter((m) => m.metaDescription.length < 120 || m.metaDescription.length > 160).map(
+    (m) => `${m.slug} (${m.metaDescription.length}): ${m.metaDescription}`,
+  );
+  assert.equal(MODULES.length, 11);
+  assert.deepEqual(offenders, [], `Module descriptions outside 120–160 characters:\n${offenders.join("\n")}`);
+});

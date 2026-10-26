@@ -20,7 +20,11 @@ export function generateMetadata({
   const m = MODULES.find((x) => x.slug === params.module);
   if (!m) return {};
   return {
-    title: pageTitle(`${m.name} Module — Compliance Software`),
+    title: pageTitle(
+      m.name === "AI Assistant"
+        ? "AI Assistant for Compliance Management"
+        : `${m.name} Management Software`,
+    ),
     description: m.metaDescription,
     alternates: { canonical: `/solutions/${m.slug}` },
   };
@@ -265,7 +269,7 @@ export default function ModulePage({ params }: { params: { module: string } }) {
       )}
 
       <CTASection
-        title={`${m.cta.label} with a certified consultant`}
+        title={`See ${m.name} in a demo`}
         intro="Tell us how this part of your operation runs today. You will get a clear read on what the module changes on Monday morning, and what the auditor will see."
       />
     </>
