@@ -56,10 +56,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-26T15:07:13.849Z"
+    },
+    "supplier-performance": {
+      "hash": "87ac2d1f736047d0e305dcefd9378d12f853bf79254f43d752ae63c3467778f3",
+      "wordCount": 2005,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-26T15:13:42.970Z"
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T15:07:33.428Z",
+  "updatedAt": "2026-10-26T15:14:06.978Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -1468,7 +1475,7 @@
     "reviewedChapters": [],
     "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
   },
-  "contextHash": "89d065d42cde2d9f2915f6fd4b0dfacc82039b0d5606099aec5912cf869c2bf6",
+  "contextHash": "dda4a45e4c714b5ccb7a62c6f5024cc4cbf239e976f77b593a5a2a88598db907",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2131,6 +2138,140 @@
       "inputHash": "d7609aa9c393120aec372c90fde1bcddfa60a360283b4744f3af838bed30e25d",
       "outputContextHash": "89d065d42cde2d9f2915f6fd4b0dfacc82039b0d5606099aec5912cf869c2bf6",
       "reviewedAt": "2026-10-26T15:07:33.425Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "supplier-performance": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The chapter adheres strictly to the brief, plan, and research sources. It provides actionable guidance on supplier performance scorecards, compliance gap reviews, status transitions (probation and disqualification), and audit evidence retention. Workflow roles, inputs, decisions, records, exceptions, and software evaluation criteria are methodically presented. All ISO/IAF APG guidance is properly contextualized with standard advisory notes, ICC Supplier Quality module capabilities are framed accurately for demonstration testing, hypothetical examples are explicitly labeled, and unassigned FAQ content is correctly omitted.",
+      "glossary": [
+        {
+          "term": "Probation",
+          "definition": "A supervised qualification state applied to an external provider whose quality or delivery results have deteriorated, subject to mandatory operational restrictions and defined recovery conditions."
+        },
+        {
+          "term": "Disqualification",
+          "definition": "The formal termination of an approved supplier relationship for a category or commodity that immediately blocks the placement of new purchase orders."
+        }
+      ],
+      "roles": [
+        "Supplier quality analyst",
+        "Quality compliance auditor",
+        "Supplier review committee chair",
+        "Quality assurance director",
+        "Quality director"
+      ],
+      "recordNames": [
+        "Published supplier scorecard",
+        "Supplier compliance gap report",
+        "Supplier status change authorization",
+        "Controlled supplier governance package"
+      ],
+      "decisions": [
+        "Assign monthly supplier rating tier based on compiled scorecard metrics",
+        "Determine whether compliance record deficiencies warrant operational intervention",
+        "Authorize supplier status transition from approved to probation or disqualification",
+        "Determine whether supplier governance evidence package is complete for third-party or customer audit"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Building scorecards grounded in receiving yields, SCARs, and concessions",
+            "section": "Building scorecards grounded in receiving yields, SCARs, and concessions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Building scorecards grounded in receiving yields, SCARs, and concessions; semantic review verifies support",
+            "section": "Building scorecards grounded in receiving yields, SCARs, and concessions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Identifying incomplete records, audit nonconformances, and certificate gaps",
+            "section": "Identifying incomplete records, audit nonconformances, and certificate gaps"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Identifying incomplete records, audit nonconformances, and certificate gaps; semantic review verifies support",
+            "section": "Identifying incomplete records, audit nonconformances, and certificate gaps"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Governing supplier status transitions from approved to probation or disqualification",
+            "section": "Governing supplier status transitions from approved to probation or disqualification"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Governing supplier status transitions from approved to probation or disqualification; semantic review verifies support",
+            "section": "Governing supplier status transitions from approved to probation or disqualification"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Retaining defensible performance evidence for customer and ISO audits",
+            "section": "Retaining defensible performance evidence for customer and ISO audits"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Retaining defensible performance evidence for customer and ISO audits; semantic review verifies support",
+            "section": "Retaining defensible performance evidence for customer and ISO audits"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "51634c1cfb185609ef346c24201fc47b5fc5d5ac3de48903bcbab307df4e64ca",
+      "outputContextHash": "dda4a45e4c714b5ccb7a62c6f5024cc4cbf239e976f77b593a5a2a88598db907",
+      "reviewedAt": "2026-10-26T15:14:06.973Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

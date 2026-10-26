@@ -57,6 +57,14 @@
     {
       "term": "Effectiveness verification",
       "definition": "A documented evaluation conducted over an agreed production volume or calendar window to confirm that an implemented corrective action has successfully prevented defect recurrence."
+    },
+    {
+      "term": "Probation",
+      "definition": "A supervised qualification state applied to an external provider whose quality or delivery results have deteriorated, subject to mandatory operational restrictions and defined recovery conditions."
+    },
+    {
+      "term": "Disqualification",
+      "definition": "The formal termination of an approved supplier relationship for a category or commodity that immediately blocks the placement of new purchase orders."
     }
   ],
   "roles": [
@@ -84,7 +92,11 @@
     "Quality control inspector",
     "Material review board lead",
     "Quality systems analyst",
-    "Supplier Quality Coordinator"
+    "Supplier Quality Coordinator",
+    "Supplier quality analyst",
+    "Quality compliance auditor",
+    "Supplier review committee chair",
+    "Quality assurance director"
   ],
   "recordNames": [
     "Process gap assessment report",
@@ -106,7 +118,11 @@
     "Initiated SCAR record with pre-populated defect details, assigned response deadlines, and severity classification",
     "SCAR response review record",
     "Controlled SCAR action plan approval record with logged reviewer comments and verification milestones",
-    "Formal SCAR closure record signed by Quality Engineering with attached effectiveness verification data"
+    "Formal SCAR closure record signed by Quality Engineering with attached effectiveness verification data",
+    "Published supplier scorecard",
+    "Supplier compliance gap report",
+    "Supplier status change authorization",
+    "Controlled supplier governance package"
   ],
   "example": {
     "label": "Illustrative example",
@@ -171,6 +187,18 @@
         "Assess whether supplier containment actions and proposed root-cause determination are technically credible and sufficient",
         "Approve proposed corrective action plan or mandate revision and resubmission",
         "Determine whether corrective action demonstrated sustained recurrence prevention over 90-day evaluation window"
+      ]
+    },
+    {
+      "slug": "supplier-performance",
+      "title": "Reviewing supplier performance: Supplier quality management software",
+      "summary": "The chapter adheres strictly to the brief, plan, and research sources. It provides actionable guidance on supplier performance scorecards, compliance gap reviews, status transitions (probation and disqualification), and audit evidence retention. Workflow roles, inputs, decisions, records, exceptions, and software evaluation criteria are methodically presented. All ISO/IAF APG guidance is properly contextualized with standard advisory notes, ICC Supplier Quality module capabilities are framed accurately for demonstration testing, hypothetical examples are explicitly labeled, and unassigned FAQ content is correctly omitted.",
+      "bodyHash": "86eee86f8ba9f56c4e4513deca0b480e95f778b61c5735047d150beb15e09a5c",
+      "decisions": [
+        "Assign monthly supplier rating tier based on compiled scorecard metrics",
+        "Determine whether compliance record deficiencies warrant operational intervention",
+        "Authorize supplier status transition from approved to probation or disqualification",
+        "Determine whether supplier governance evidence package is complete for third-party or customer audit"
       ]
     }
   ],
