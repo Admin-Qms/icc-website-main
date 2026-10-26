@@ -86,15 +86,15 @@
       "checkpointedAt": "2026-10-26T15:31:09.035Z"
     },
     "supplier-quality-software": {
-      "hash": "4d8c5040919e4682b1f08f2dfb1fb26d1434af786388b7780547372a7e05cde2",
+      "hash": "593fde04d3ea4406f07a171868fc70bd9dc62d14b1e621591f64157bf78ec00f",
       "wordCount": 1523,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-10-26T15:28:35.274Z"
+      "checkpointedAt": "2026-10-26T15:32:47.516Z"
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T15:31:23.166Z",
+  "updatedAt": "2026-10-26T15:33:02.005Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -1503,7 +1503,7 @@
     "reviewedChapters": [],
     "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
   },
-  "contextHash": "e98f048176b8be08e3bf134a7c0da57917322de33dedb4b8fcd535b012dee8ab",
+  "contextHash": "750f240420ab251426a6daa4801290aa45e9a463a6cd44e47ce173698caa7650",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2746,6 +2746,108 @@
       "inputHash": "2207bd704755eceff4c4b044c1cd797a2ec5eae38f79c0e464fe9d8cc3f44e8c",
       "outputContextHash": "e98f048176b8be08e3bf134a7c0da57917322de33dedb4b8fcd535b012dee8ab",
       "reviewedAt": "2026-10-26T15:31:23.161Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "supplier-quality-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The introductory guide page strictly complies with the plan, research brief, and context parameters. It frames the operational disconnect between qualification, receiving inspection, and corrective action; reviews APG guidance on external providers with proper disclaimers; outlines the 9 subsequent chapters; treats ICC supplier quality module features (especially pending portal functions) as demonstration verification items rather than promises; and provides practical preparation guidance without unassigned FAQ sections.",
+      "glossary": [],
+      "roles": [
+        "Buyer",
+        "Engineering",
+        "Inspector",
+        "Information technology specialist",
+        "Purchasing representative",
+        "Quality project lead",
+        "Receiving lead"
+      ],
+      "recordNames": [
+        "Controlled Approved Supplier List",
+        "Decision rights table",
+        "Demonstration script and scoring matrix",
+        "Operational problem statement",
+        "Receiving inspection log",
+        "Supplier Corrective Action Request (SCAR)",
+        "Supplier risk classification matrix",
+        "Vendor evaluation matrix",
+        "Workflow map"
+      ],
+      "decisions": [
+        "Determine who holds authority to approve, suspend, or reinstate external providers",
+        "Determine authorized roles for granting technical concessions at defined risk levels",
+        "Determine whether external providers interact directly via a portal or through internal staff data entry",
+        "Score software capabilities during vendor demonstration using representative sample records"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: The operational problem",
+            "section": "The operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: How to use this guide",
+            "section": "How to use this guide"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+            "section": "Planning evaluation and implementation"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "ac1026562d539ced79d28fb4040f2c919ce489a9656c2359cb98bb6b47c391eb",
+      "outputContextHash": "750f240420ab251426a6daa4801290aa45e9a463a6cd44e47ce173698caa7650",
+      "reviewedAt": "2026-10-26T15:33:02.001Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

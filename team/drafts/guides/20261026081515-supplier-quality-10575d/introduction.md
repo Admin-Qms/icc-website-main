@@ -58,19 +58,19 @@ Start with people. Name a project lead from quality, a representative from purch
 Next, collect the material that the early chapters ask for. A useful starter pack has six items.
 
 - **A problem statement.** One or two sentences naming the gap you want to close, with an example of when it last cost you something.
-- **A workflow map.** The path from specification to purchase order, receipt, nonconformance and corrective action, with the records each step produces.
-- **A decision table.** Who may approve, suspend and reinstate suppliers, and who may grant concessions, at each risk level.
+- **A workflow map.** The path from specification to purchase order, receipt, nonconformance, and corrective action, with the records each step produces.
+- **A decision table.** Who may approve, suspend, and reinstate suppliers, and who may grant concessions, at each risk level.
 - **A risk classification.** Which parts and processes are critical, and what inspection and documents each level needs.
-- **A sample data set.** A masked selection of real orders, drawings, certificates, rejections and corrective actions for use in demonstrations.
+- **A sample data set.** A masked selection of real orders, drawings, certificates, rejections, and corrective actions for use in demonstrations.
 - **A baseline.** A few measures taken before the project, such as how long a rejection takes to reach the supplier record, so that later claims can be checked.
 
 With that material, the evaluation becomes a test of fit and not a tour of features. You write the script, supply the data, and score what you saw. Features a vendor describes but cannot show go into the matrix as pending.
 
 Several principles recur across the guide, and they are worth stating up front.
 
-1. **Automated suggestions are drafts.** Where software proposes a cause, a summary or a status, a named person must review and accept it before it becomes a record, and the log should show who did.
-2. **Controls beat lists.** A status that does not change what buyers, inspectors and engineers can do is only a label.
-3. **History must survive.** Approvals, evidence, decisions and corrections should stay retrievable, with the original and the change both visible.
+1. **Automated suggestions are drafts.** Where software proposes a cause, a summary, or a status, a named person must review and accept it before it becomes a record, and the log should show who did.
+2. **Controls beat lists.** A status that does not change what buyers, inspectors, and engineers can do is only a label.
+3. **History must survive.** Approvals, evidence, decisions, and corrections should stay retrievable, with the original and the change both visible.
 4. **Claims need evidence.** Benefits are reported from records you can show, and estimates are labeled as estimates.
 5. **Edition and customer requirements come first.** Check which version of the standard and which customer clauses apply before encoding them in software.
 

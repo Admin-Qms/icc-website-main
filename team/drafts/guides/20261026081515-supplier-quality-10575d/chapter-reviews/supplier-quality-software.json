@@ -6,35 +6,33 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The introductory guide page adheres strictly to the plan, research brief, and governance context. It articulates the operational disconnect between qualification, receiving inspection, and corrective action workflows for Canadian manufacturing teams; contextualizes ISO/IAF APG external provider guidance with the mandatory non-endorsement and standard-edition disclaimers; and accurately reflects the ICC Supplier Quality module's pending capability register status for external supplier portals. It provides an orderly breakdown of all subsequent chapters, details the six core artifacts required for vendor evaluation, explicitly labels hypothetical scenarios, excludes unassigned FAQ sections, and avoids unverified capability promises.",
+  "summary": "The introductory guide page strictly complies with the plan, research brief, and context parameters. It frames the operational disconnect between qualification, receiving inspection, and corrective action; reviews APG guidance on external providers with proper disclaimers; outlines the 9 subsequent chapters; treats ICC supplier quality module features (especially pending portal functions) as demonstration verification items rather than promises; and provides practical preparation guidance without unassigned FAQ sections.",
   "glossary": [],
   "roles": [
-    "Quality project lead",
-    "Purchasing representative",
-    "Receiving inspector",
-    "Engineering representative",
+    "Buyer",
+    "Engineering",
+    "Inspector",
     "Information technology specialist",
-    "Buyer"
+    "Purchasing representative",
+    "Quality project lead",
+    "Receiving lead"
   ],
   "recordNames": [
-    "Problem statement",
-    "Workflow map",
-    "Decision table",
-    "Risk classification",
-    "Sample data set",
-    "Baseline performance metrics",
-    "Functional capability matrix",
-    "Vendor demonstration script",
-    "Approved supplier list",
-    "Supplier corrective action request (SCAR)",
+    "Controlled Approved Supplier List",
+    "Decision rights table",
+    "Demonstration script and scoring matrix",
+    "Operational problem statement",
     "Receiving inspection log",
-    "Concession record"
+    "Supplier Corrective Action Request (SCAR)",
+    "Supplier risk classification matrix",
+    "Vendor evaluation matrix",
+    "Workflow map"
   ],
   "decisions": [
     "Determine who holds authority to approve, suspend, or reinstate external providers",
-    "Determine authorized approval thresholds for technical concessions",
-    "Evaluate and decide whether to accept or reject automated draft suggestions before committing to quality records",
-    "Determine operational fit and scoring of vendor capabilities against scripted sample workflows"
+    "Determine authorized roles for granting technical concessions at defined risk levels",
+    "Determine whether external providers interact directly via a portal or through internal staff data entry",
+    "Score software capabilities during vendor demonstration using representative sample records"
   ],
   "pass": true,
   "deterministic": {
@@ -97,8 +95,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "fedb0893480f7eaa82058ed85f0afbc718df22342db803ac42eed82d69d527a0",
-  "outputContextHash": "cf9a8d99b6e94b40523da7612a90a9f1d887b898f81b7b7a24df564c70caaf8a",
-  "reviewedAt": "2026-10-26T15:28:51.583Z",
+  "inputHash": "ac1026562d539ced79d28fb4040f2c919ce489a9656c2359cb98bb6b47c391eb",
+  "outputContextHash": "750f240420ab251426a6daa4801290aa45e9a463a6cd44e47ce173698caa7650",
+  "reviewedAt": "2026-10-26T15:33:02.001Z",
   "reviewer": "Configured independent chapter reviewer"
 }
