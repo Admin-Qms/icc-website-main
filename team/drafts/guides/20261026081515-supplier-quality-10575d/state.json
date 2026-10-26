@@ -84,10 +84,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-26T15:26:20.290Z"
+    },
+    "supplier-quality-software": {
+      "hash": "4d8c5040919e4682b1f08f2dfb1fb26d1434af786388b7780547372a7e05cde2",
+      "wordCount": 1523,
+      "readTime": 8,
+      "status": "written",
+      "checkpointedAt": "2026-10-26T15:28:35.274Z"
     }
   },
   "createdAt": "2026-10-26T08:15:15.297Z",
-  "updatedAt": "2026-10-26T15:26:39.988Z",
+  "updatedAt": "2026-10-26T15:28:51.585Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "supplier-quality",
@@ -1496,7 +1503,7 @@
     "reviewedChapters": [],
     "researchHash": "2b5195d2ce36eb636cff12353aea88a3fe0b03bda4000e276a7d6ce81758c2bf"
   },
-  "contextHash": "3293b11eb69798067df3d95f51a8840e632e3f9d66c18a268c2a1000abdd1ede",
+  "contextHash": "cf9a8d99b6e94b40523da7612a90a9f1d887b898f81b7b7a24df564c70caaf8a",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2739,6 +2746,110 @@
       "inputHash": "b4da001d3cf34ce757bc9eca5701e61e00b2ac9bb54dcdd0019f6a0b71d12db7",
       "outputContextHash": "3293b11eb69798067df3d95f51a8840e632e3f9d66c18a268c2a1000abdd1ede",
       "reviewedAt": "2026-10-26T15:26:39.985Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "supplier-quality-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The introductory guide page adheres strictly to the plan, research brief, and governance context. It articulates the operational disconnect between qualification, receiving inspection, and corrective action workflows for Canadian manufacturing teams; contextualizes ISO/IAF APG external provider guidance with the mandatory non-endorsement and standard-edition disclaimers; and accurately reflects the ICC Supplier Quality module's pending capability register status for external supplier portals. It provides an orderly breakdown of all subsequent chapters, details the six core artifacts required for vendor evaluation, explicitly labels hypothetical scenarios, excludes unassigned FAQ sections, and avoids unverified capability promises.",
+      "glossary": [],
+      "roles": [
+        "Quality project lead",
+        "Purchasing representative",
+        "Receiving inspector",
+        "Engineering representative",
+        "Information technology specialist",
+        "Buyer"
+      ],
+      "recordNames": [
+        "Problem statement",
+        "Workflow map",
+        "Decision table",
+        "Risk classification",
+        "Sample data set",
+        "Baseline performance metrics",
+        "Functional capability matrix",
+        "Vendor demonstration script",
+        "Approved supplier list",
+        "Supplier corrective action request (SCAR)",
+        "Receiving inspection log",
+        "Concession record"
+      ],
+      "decisions": [
+        "Determine who holds authority to approve, suspend, or reinstate external providers",
+        "Determine authorized approval thresholds for technical concessions",
+        "Evaluate and decide whether to accept or reject automated draft suggestions before committing to quality records",
+        "Determine operational fit and scoring of vendor capabilities against scripted sample workflows"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: The operational problem",
+            "section": "The operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: How to use this guide",
+            "section": "How to use this guide"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+            "section": "Planning evaluation and implementation"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "fedb0893480f7eaa82058ed85f0afbc718df22342db803ac42eed82d69d527a0",
+      "outputContextHash": "cf9a8d99b6e94b40523da7612a90a9f1d887b898f81b7b7a24df564c70caaf8a",
+      "reviewedAt": "2026-10-26T15:28:51.583Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
