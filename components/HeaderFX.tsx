@@ -74,46 +74,53 @@ export function AnimatedTitle({ text, accent }: { text: string; accent: string }
  */
 export function HeaderIconsFX({ icons }: { icons: string[] }) {
   const reduce = useReducedMotion();
-  // Deterministic scatter positions (percent of container) for up to 6 icons.
-  const POS = [
-    { right: "4%", top: "18%", size: 56, dur: 7 },
-    { right: "16%", top: "52%", size: 48, dur: 9 },
-    { right: "28%", top: "22%", size: 44, dur: 8 },
-    { right: "8%", top: "72%", size: 46, dur: 10 },
-    { right: "24%", top: "78%", size: 40, dur: 7.5 },
-    { right: "36%", top: "56%", size: 38, dur: 9.5 },
-  ];
+  // Up to 6 icons sit evenly on the dashed ring, starting at the top. The cluster lives
+  // below the fixed navbar (top-32 / lg:top-40 match PageHeader's top padding), so no
+  // icon slides under the menu.
+  const shown = icons.slice(0, 6);
+  const RADIUS = 128; // half of the 256px ring
+  const SIZES = [52, 46, 48, 44, 50, 42];
+  const DURS = [7, 9, 8, 10, 7.5, 9.5];
   return (
-    <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 lg:block" aria-hidden>
-      {/* slow rotating dashed ring anchoring the cluster */}
-      <motion.div
-        className="absolute right-[10%] top-1/2 h-64 w-64 -translate-y-1/2 rounded-full border-2 border-dashed border-teal-200/70"
-        animate={reduce ? undefined : { rotate: 360 }}
-        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-      />
-      {icons.slice(0, 6).map((name, i) => {
-        const p = POS[i];
-        return (
-          <motion.span
-            key={name}
-            className="absolute grid place-items-center rounded-2xl border border-slate-200 bg-white text-teal-700 shadow-[0_12px_30px_-12px_rgba(22,43,77,0.35)]"
-            style={{ right: p.right, top: p.top, width: p.size, height: p.size }}
-            initial={{ opacity: 0, scale: 0.6, y: 14 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: reduce ? 0 : [0, -9, 0],
-            }}
-            transition={{
-              opacity: { duration: 0.5, delay: 0.3 + i * 0.1 },
-              scale: { duration: 0.5, delay: 0.3 + i * 0.1, ease: easeOut },
-              y: { duration: p.dur, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 },
-            }}
-          >
-            <Icon name={name} style={{ width: p.size * 0.45, height: p.size * 0.45 }} />
-          </motion.span>
-        );
-      })}
+    <div className="pointer-events-none absolute bottom-0 right-0 top-32 hidden w-1/2 lg:top-40 lg:block" aria-hidden>
+      <div className="absolute right-[12%] top-1/2 h-64 w-64 -translate-y-1/2">
+        {/* slow rotating dashed ring anchoring the cluster */}
+        <motion.div
+          className="absolute inset-0 rounded-full border-2 border-dashed border-teal-200/70"
+          animate={reduce ? undefined : { rotate: 360 }}
+          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        />
+        {shown.map((name, i) => {
+          const angle = (i / shown.length) * 2 * Math.PI - Math.PI / 2;
+          const size = SIZES[i];
+          const p = {
+            left: RADIUS + RADIUS * Math.cos(angle) - size / 2,
+            top: RADIUS + RADIUS * Math.sin(angle) - size / 2,
+            size,
+            dur: DURS[i],
+          };
+          return (
+            <motion.span
+              key={name}
+              className="absolute grid place-items-center rounded-2xl border border-slate-200 bg-white text-teal-700 shadow-[0_12px_30px_-12px_rgba(22,43,77,0.35)]"
+              style={{ left: p.left, top: p.top, width: p.size, height: p.size }}
+              initial={{ opacity: 0, scale: 0.6, y: 14 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                y: reduce ? 0 : [0, -9, 0],
+              }}
+              transition={{
+                opacity: { duration: 0.5, delay: 0.3 + i * 0.1 },
+                scale: { duration: 0.5, delay: 0.3 + i * 0.1, ease: easeOut },
+                y: { duration: p.dur, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 },
+              }}
+            >
+              <Icon name={name} style={{ width: p.size * 0.45, height: p.size * 0.45 }} />
+            </motion.span>
+          );
+        })}
+      </div>
     </div>
   );
 }
