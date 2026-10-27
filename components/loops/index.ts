@@ -1,7 +1,11 @@
 import { AuditsLoop } from "./AuditsLoop";
 import { DocumentsLoop } from "./DocumentsLoop";
+import { ImprovementsLoop } from "./ImprovementsLoop";
 import { ProcessesLoop } from "./ProcessesLoop";
+import { SafetyLoop } from "./SafetyLoop";
 import { StandardsLoop } from "./StandardsLoop";
+import { SupplierQualityLoop } from "./SupplierQualityLoop";
+import { TrainingLoop } from "./TrainingLoop";
 
 export { PlatformLoop } from "./PlatformLoop";
 
@@ -14,6 +18,9 @@ export const MODULE_LOOPS: Record<string, () => JSX.Element> = {
   "document-control": DocumentsLoop,
   processes: ProcessesLoop,
   "audits-management-review": AuditsLoop,
-  // Task 3: improvements, safety, training, supplier quality
+  "nonconformance-capa": ImprovementsLoop,
+  safety: SafetyLoop,
+  "training-competence": TrainingLoop,
+  "supplier-quality": SupplierQualityLoop,
   // Task 4: assets, vendors, AI Assistant
 };

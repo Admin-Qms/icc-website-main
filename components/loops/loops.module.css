@@ -666,6 +666,273 @@
   margin-top: 8px;
 }
 
+/* ---------- improvements loop ---------- */
+
+.impSteps {
+  display: flex;
+  gap: 3px;
+  margin-top: 8px;
+}
+
+.impStep {
+  display: grid;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.impBase,
+.impDone {
+  grid-area: 1 / 1;
+  display: grid;
+  padding: 4px 0;
+  border-radius: 5px;
+  font-size: 8.5px;
+  font-weight: 700;
+  line-height: 1.15;
+  overflow-wrap: normal;
+  place-items: center;
+  text-align: center;
+}
+
+.impBase {
+  background: #eef2f6;
+  color: #94a3b8;
+}
+
+.impDone {
+  background: #cffafe;
+  color: var(--teal);
+}
+
+.impBody {
+  margin-top: 8px;
+}
+
+.impLine {
+  margin: 0;
+  padding: 3px 0;
+}
+
+.impLine b {
+  color: var(--navy);
+}
+
+.impWhy {
+  margin: 0 0 0 10px;
+  padding: 2px 0 2px 8px;
+  border-left: 2px solid var(--teal);
+  color: var(--soft);
+}
+
+.impOk {
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* ---------- safety loop ---------- */
+
+.safTop {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  gap: 10px;
+}
+
+.safPhone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.safScan {
+  margin: 0;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.safQr {
+  width: 62px;
+  height: 62px;
+  border: 4px solid #fff;
+  outline: 1px solid var(--line);
+  background:
+    conic-gradient(var(--navy) 25%, #fff 0 50%, var(--navy) 0 75%, #fff 0) 0 0 / 14px 14px;
+}
+
+.safLabel {
+  margin: 4px 0 2px;
+  color: var(--soft);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.safField {
+  min-height: 24px;
+  margin: 0;
+  padding: 4px 7px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #f8fafc;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.safSev {
+  min-height: 22px;
+  margin: 6px 0 0;
+}
+
+.safNew {
+  align-items: center;
+}
+
+.safText {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* ---------- training loop ---------- */
+
+.trnHead {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  color: var(--navy);
+}
+
+.trnChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-height: 46px;
+  margin-top: 6px;
+  align-content: flex-start;
+}
+
+.trnChips .pill {
+  white-space: normal;
+}
+
+.trnGrid {
+  display: grid;
+  grid-template-columns: 62px repeat(3, minmax(0, 1fr));
+  gap: 6px 4px;
+  align-items: center;
+}
+
+.trnSkill {
+  color: var(--soft);
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.trnWho {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.trnCell {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+}
+
+.trnCell.stack {
+  display: inline-grid;
+  justify-items: start;
+}
+
+.trnCell .pill {
+  padding: 2px 6px;
+  font-size: 9.5px;
+  white-space: nowrap;
+}
+
+.trnDots {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.trnDot {
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50%;
+}
+
+.trnFull {
+  border-color: var(--teal);
+  background: var(--teal);
+}
+
+/* ---------- supplier quality loop ---------- */
+
+.supTop {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.supPortal {
+  border-color: var(--teal);
+  background: #f4fcfd;
+}
+
+.supStatus {
+  margin: 4px 0 0;
+}
+
+.supStatus .pill {
+  white-space: normal;
+}
+
+.supLine {
+  margin: 4px 0 0;
+  color: var(--navy);
+}
+
+.supChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 46px;
+  margin-top: 5px;
+  align-content: flex-start;
+}
+
+.supChips .pill {
+  white-space: normal;
+}
+
+.supMarks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+}
+
+.supMark {
+  display: inline-flex;
+  gap: 5px;
+  color: var(--soft);
+}
+
+.supMark b {
+  color: var(--navy);
+}
+
+.supMark .supNew {
+  color: var(--gold);
+}
+
+.supLinked {
+  display: flex;
+  min-height: 24px;
+}
+
 /* ---------- step timeline (12 s) ---------- */
 
 .on1 { animation: on1 12s ease infinite; }
