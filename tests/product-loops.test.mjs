@@ -55,3 +55,17 @@ test("no loop uses the product name", () => {
   const hits = walk(LOOPS).filter((f) => /yourqms|quro/i.test(readFileSync(f, "utf8")));
   assert.deepEqual(hits, []);
 });
+
+test("every registered loop file exists and four modules are registered", () => {
+  const index = readFileSync(join(LOOPS, "index.ts"), "utf8");
+  const body = index.slice(index.indexOf("MODULE_LOOPS"));
+  const keys = [...body.matchAll(/^\s*(?:"([a-z0-9-]+)"|([a-z0-9]+))\s*:/gm)].map((m) => m[1] ?? m[2]);
+  for (const slug of ["standards", "document-control", "processes", "audits-management-review"]) {
+    assert.ok(keys.includes(slug), `MODULE_LOOPS is missing ${slug}`);
+  }
+  const files = [...index.matchAll(/from\s+"\.\/([A-Za-z0-9]+)"/g)].map((m) => m[1]);
+  assert.ok(files.length >= 5, "index.ts imports fewer loops than expected");
+  for (const f of files) {
+    assert.ok(statSync(join(LOOPS, `${f}.tsx`)).isFile(), `${f}.tsx does not exist`);
+  }
+});

@@ -1,3 +1,8 @@
+import { AuditsLoop } from "./AuditsLoop";
+import { DocumentsLoop } from "./DocumentsLoop";
+import { ProcessesLoop } from "./ProcessesLoop";
+import { StandardsLoop } from "./StandardsLoop";
+
 export { PlatformLoop } from "./PlatformLoop";
 
 /**
@@ -5,7 +10,10 @@ export { PlatformLoop } from "./PlatformLoop";
  * entry renders its header without a visual.
  */
 export const MODULE_LOOPS: Record<string, () => JSX.Element> = {
-  // Task 2: standards, document-control, processes, audits
+  standards: StandardsLoop,
+  "document-control": DocumentsLoop,
+  processes: ProcessesLoop,
+  "audits-management-review": AuditsLoop,
   // Task 3: improvements, safety, training, supplier quality
   // Task 4: assets, vendors, AI Assistant
 };
