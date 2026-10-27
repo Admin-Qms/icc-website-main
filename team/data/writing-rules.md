@@ -14,7 +14,7 @@ These rules apply to every article, whoever writes it: the API writer (`articleW
 
 - 1,800 to 2,100 words. Never under 1,700; anything under 1,500 is rejected.
 - Headings: `##` for sections, `###` inside them. No `#` heading; the page shows the title itself.
-- Open with a Key Takeaways callout (3 to 5 bullets), then the article. End with one closing paragraph that leads naturally to the call to action. It comes after the FAQ (when the type has one), carries no heading, and links `/contact`; the site shows the FAQ as collapsible questions and keeps that paragraph outside them.
+- Open with a Key Takeaways callout (3 to 5 bullets), then the article. End with one closing paragraph that leads naturally to the demo invitation (see "The closing demo invitation"). It comes after the FAQ (when the type has one), carries no heading, contains the word "demo" and links `/contact/`; the site shows the FAQ as collapsible questions and keeps that paragraph outside them.
 - Follow the structure for the article type in the brief:
   - **deep-guide:** Key Takeaways → 5-6 sections of increasing depth → Frequently Asked Questions (5) → close
   - **comparison:** Key Takeaways → both options → side-by-side table → the differences explained → "which fits you" decision framework → FAQ (5) → close
@@ -25,6 +25,15 @@ These rules apply to every article, whoever writes it: the API writer (`articleW
   - **how-to:** Key Takeaways → short intro → steps 1-7, each a `##` with what to do, what you need, the common mistake → close
 - Use at least two lists; every list item carries one or two full sentences, never a bare phrase.
 - Alternate paragraphs, lists, callouts and tables. Never three plain paragraphs in a row.
+
+## The closing demo invitation
+
+- The last non-empty paragraph of the article (image-only paragraphs do not count) frames the reader's problem as one that compliance management software removes, then invites the reader to book a demo. Example shape: "Keeping this evidence current by hand is the part that slips. ISO Certification Consultants' compliance management software keeps it in one place, and you can [book a demo](/contact/) to see how."
+- The example closing is a shape, not text to reuse. Each article's closing must be tied to its own topic and must differ from the recent closings listed in the brief.
+- It must contain the word "demo" and a link to `/contact/` (for example `[book a demo](/contact/)`). The quality gate (`closing-demo`) blocks the article otherwise.
+- Third person only: "ISO Certification Consultants", never "we", "our" or "us". Keep it to two to four sentences, with no pricing, no invented results and no claim beyond what the software pages say.
+- **Optional module mentions.** Where the topic fits, name one or two modules by their software name, each once, linked to its page, saying what the reader gains and nothing beyond what that module page states. This is allowed in the body or the closing paragraph; the body is still not a sales page. Module names and exact links: Standards `/solutions/standards/`, Documents `/solutions/document-control/`, Processes `/solutions/processes/`, Audits `/solutions/audits-management-review/`, Improvements `/solutions/nonconformance-capa/`, Safety `/solutions/safety/`, Training `/solutions/training-competence/`, Supplier Quality `/solutions/supplier-quality/`, Assets `/solutions/calibration-maintenance/`, Vendors `/solutions/vendors/`, AI Assistant `/solutions/ai-assistant/`. These links are extra to the 3 to 5 internal links from the brief and may not be invented or varied.
+- Call it "compliance management software" or the module's name (and "AI Assistant" for the AI module). Banned terms, blocked by the quality gate (`positioning-terms`): the brand name written as one word (the product brand with no space), "Quro", the product's own web address, "AI gap assessment" or "AI gap analysis" (also with powered, driven, assisted, led or generated after "AI", as in "AI-powered gap assessment"), and "AI audit finding" or "AI audit findings" (also with suggested, generated or powered). Describe AI only as preparing drafts that a person reviews and approves.
 
 ## Keywords are topics, not phrases to insert
 
@@ -46,7 +55,7 @@ An article that breaks any of these is rejected.
 
 ## Links
 
-- **Internal links:** 3 to 5, from the list in the brief, woven into sentences where the page helps the reader at that point. Always include one to `/contact`, in the closing paragraph. Anchor text describes the page ("the six-stage certification process"), never "click here". No "Related links" section.
+- **Internal links:** 3 to 5, from the list in the brief, woven into sentences where the page helps the reader at that point. Always include one to `/contact/`, in the closing paragraph, as the demo invitation. Anchor text describes the page ("the six-stage certification process"), never "click here". No "Related links" section.
 - **Outside links:** 2 to 4, only from the list in the brief, copied exactly. Each one goes where the source supports the sentence it sits in; at most one per paragraph. **Never write a sentence to hold a link.** Using fewer is fine; a link that does not fit is left out.
 - Links read naturally if the link were removed. Never append a link to the end of a paragraph as an afterthought.
 
@@ -71,13 +80,14 @@ The brief may include a DIVERSITY BRIEF listing openings, closings, cost figures
 
 ## Self-check before handing the article over
 
-- [ ] 1,800-2,100 words; no `#` heading; starts with Key Takeaways; ends with a closing paragraph linking to `/contact`
+- [ ] 1,800-2,100 words; no `#` heading; starts with Key Takeaways; ends with a closing paragraph that contains "demo" and links `/contact/`
 - [ ] No first person anywhere, including FAQ questions
 - [ ] US spelling
 - [ ] Primary keyword covered naturally in the opening; no pasted or bolded keywords; standard names capitalized
 - [ ] No named companies or people, quotes, statistics as fact, "most companies" claims, or track-record claims; any scenario begins with `**Illustrative example:**`
 - [ ] Editions as given; clauses cited with their edition
+- [ ] Closing paragraph invites the reader to book a demo of the compliance management software, in third person, with `[book a demo](/contact/)`; any module mention uses the exact `/solutions/<slug>/` link above
 - [ ] 3-5 internal links including `/contact`; 2-4 outside links from the list only, one per paragraph, each earning its place
 - [ ] 2-3 `[IMAGE: …]` markers, manufacturing scenes only
 - [ ] 5-8 bold phrases, 2-3 callouts of the allowed kinds, at least two lists with full-sentence items
-- [ ] Zero banned words or phrases
+- [ ] Zero banned words or phrases, including the positioning terms above

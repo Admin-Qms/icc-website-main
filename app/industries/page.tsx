@@ -4,11 +4,12 @@ import { PageHeader, IndustryCard, CTASection } from "@/components/ui";
 import { Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight } from "@/components/Icons";
 import { INDUSTRIES } from "@/lib/site";
+import { pageTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "ISO Consulting by Industry",
+  title: pageTitle("ISO Certification by Industry"),
   description:
-    "Industry-specific ISO consulting across Canada: automotive core tools, aerospace configuration control, food safety, medical device controls and more.",
+    "ISO certification consultants by industry across Canada, plus compliance management software for automotive, aerospace, food safety, medical devices and more.",
   alternates: { canonical: "/industries" },
 };
 
@@ -18,10 +19,10 @@ export default function IndustriesPage() {
       <PageHeader
         eyebrow="By industry"
         title={<>Depth where <span className="text-teal-700">it counts</span></>}
-        intro="Generic quality advice does not survive an automotive PPAP submission or an aerospace configuration audit. Every engagement is built around the realities of your sector."
+        intro="Generic quality advice does not survive an automotive PPAP submission or an aerospace configuration audit. Pick your sector to see the compliance pressures and the software that answers them."
       >
         <Link href="/contact" className="btn-primary">
-          Talk to a specialist <ArrowRight className="h-4 w-4" />
+          Book a demo <ArrowRight className="h-4 w-4" />
         </Link>
       </PageHeader>
 

@@ -48,7 +48,7 @@ ${(context.internalLinks?.blogPosts || []).map((p) => `- [${p.title}](${p.url})`
     : `AVAILABLE INTERNAL LINKS:
 - /services — All ISO standards
 - /process — The six-stage certification process
-- /contact — Book a consultation`;
+- /contact — Book a demo of the compliance management software`;
 
   const externalLinksSection = context?.externalLinks?.length
     ? `AVAILABLE OUTSIDE LINKS (use 2-4, copied exactly, only where the source supports the sentence; no other outside URL):
@@ -171,7 +171,7 @@ ${(outline.externalLinkTargets || []).slice((chapter.number - 1) * 2, chapter.nu
 ${previousChapterSummaries.length > 0 ? `PREVIOUS CHAPTERS (DO NOT repeat this content):
 ${previousChapterSummaries.map((s) => `- Ch${s.number}: ${s.title} — ${s.summary}`).join("\n")}` : "This is the FIRST chapter. Set the stage for the entire article."}
 
-${chapter.number === outline.chapters.length ? "This is the FINAL chapter. End with a strong CTA paragraph linking to /contact." : ""}
+${chapter.number === outline.chapters.length ? "This is the FINAL chapter. End with a closing paragraph that frames the reader's problem as one the compliance management software removes and invites them to book a demo: it must contain the word 'demo' and link to [book a demo](/contact/), in third person (never 'we')." : ""}
 
 Write the complete chapter now. Minimum 1,800 words, target 2,000-2,200. Start with ## heading.`,
     8192

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Check, ShieldCheck, Phone } from "../Icons";
 import { SITE } from "@/lib/site";
+import { PHOTO_ALT } from "@/lib/header-images";
 import { ContactForm } from "../ContactForm";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
@@ -44,7 +45,7 @@ export function Hero() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-500 opacity-60" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-600" />
                 </span>
-                ISO Certification Consulting · Canada
+                AI-Powered Operating System for Industrial Quality &amp; Compliance
               </span>
             </motion.div>
 
@@ -56,10 +57,11 @@ export function Hero() {
               variants={item}
               className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600"
             >
-              Certified consultants guide you from the first gap analysis to a
-              passed certification audit. Compliance management software holds
-              the evidence as a by-product of daily work, so nothing is
-              assembled in a panic beforehand. Any standard, one team.
+              Need to meet ISO 9001, IATF 16949, AS9100 or another standard? Our
+              compliance management software keeps your documents, audits,
+              training, suppliers and corrective actions in one place. AI does
+              the paperwork and warns you before anything slips, so you are
+              ready for an audit any day of the year.
             </motion.p>
 
             <motion.div
@@ -67,11 +69,11 @@ export function Hero() {
               className="mt-8 flex flex-wrap items-center gap-4"
             >
               <Link href="/contact" className="btn-primary group">
-                Book a free consultation
+                Book a demo
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link href="/process" className="btn-outline">
-                View our consulting approach
+              <Link href="/platform" className="btn-outline">
+                See how it works
               </Link>
             </motion.div>
 
@@ -80,9 +82,9 @@ export function Hero() {
               className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3"
             >
               {[
-                "Serving Ontario & all of Canada",
-                "10 standards in the catalogue, plus custom",
-                "Consultant-led, every step",
+                "Ready for an audit any day",
+                "Less paperwork for your team",
+                "You approve everything AI prepares",
               ].map((f) => (
                 <span
                   key={f}
@@ -123,8 +125,7 @@ export function Hero() {
             viewport={{ once: true }}
             className="mb-5 text-center text-xs font-bold uppercase tracking-[0.14em] text-slate-500"
           >
-            We prepare Canadian companies for the standards their customers
-            require
+            Ready for the standards your customers ask for
           </motion.p>
           <motion.div
             variants={{ show: { transition: { staggerChildren: 0.06 } } }}
@@ -168,7 +169,7 @@ function HeroContactPanel() {
   return (
     <section
       className="grid min-w-0 items-center"
-      aria-label="Consultation enquiry"
+      aria-label="Book a demo"
     >
       {!showForm && (
         <div className="min-w-0 [grid-area:1/1]" aria-hidden="true">
@@ -182,7 +183,7 @@ function HeroContactPanel() {
         animate={{ opacity: showForm ? 1 : 0 }}
         transition={{ duration: reduce ? 0 : 0.4 }}
       >
-        <ContactForm compact title="Book a free consultation" />
+        <ContactForm compact title="Book a demo" submitLabel="Book my demo" />
       </motion.div>
       <noscript>
         <p className="mt-4">
@@ -190,7 +191,7 @@ function HeroContactPanel() {
             href="/contact/"
             className="font-semibold text-teal-700 underline"
           >
-            Contact a consultant
+            Book a demo
           </Link>
         </p>
       </noscript>
@@ -210,7 +211,7 @@ function AnimatedHeadline() {
       animate="show"
       className="inline"
     >
-      {["Get ISO certified without", "disrupting how your"].map((line, i) => (
+      {["Stop managing compliance."].map((line, i) => (
         <motion.span
           key={i}
           variants={{
@@ -239,7 +240,7 @@ function AnimatedHeadline() {
         }}
         className="relative inline-block text-teal-700"
       >
-        business runs.
+        Start automating it.
         <motion.svg
           className="absolute -bottom-1.5 left-0 w-full"
           height="10"
@@ -284,56 +285,53 @@ function HeroBackground({ reduce }: { reduce: boolean }) {
   );
 }
 
-const HERO_IMAGES = [
+const HERO_IMAGE_DATA = [
   {
-    src: "/images/hero/qms-fabrication-diverse.png",
-    alt: "North American fabrication team implementing a compliance management system on a plant floor",
+    src: "/images/platform/platform-fabrication.webp",
     label: "Fabrication",
     standard: "ISO 9001",
   },
   {
-    src: "/images/hero/qms-automotive-diverse.png",
-    alt: "Automotive manufacturing team reviewing IATF inspection controls beside an assembly cell",
+    src: "/images/platform/platform-automotive.webp",
     label: "Automotive",
     standard: "IATF 16949",
   },
   {
-    src: "/images/hero/qms-medical-device-diverse.png",
-    alt: "Medical device manufacturing team reviewing ISO 13485 records at an inspection bench",
+    src: "/images/platform/platform-medical-device.webp",
     label: "Medical devices",
     standard: "ISO 13485",
   },
   {
-    src: "/images/hero/qms-aerospace-machining.png",
-    alt: "Aerospace precision machining team reviewing AS9100 inspection evidence",
+    src: "/images/platform/platform-aerospace.webp",
     label: "Aerospace",
     standard: "AS9100",
   },
   {
-    src: "/images/hero/qms-food-beverage.png",
-    alt: "Food and beverage manufacturing team reviewing quality records near a packaging line",
+    src: "/images/platform/platform-food-beverage.webp",
     label: "Food & beverage",
     standard: "ISO 22000",
   },
   {
-    src: "/images/hero/qms-electronics-controls.png",
-    alt: "Electronics manufacturing team reviewing quality controls at an assembly bench",
+    src: "/images/platform/platform-electronics.webp",
     label: "Electronics",
     standard: "ISO 9001",
   },
   {
-    src: "/images/hero/qms-warehouse-traceability.png",
-    alt: "Warehouse receiving team reviewing records during a compliance management system rollout",
+    src: "/images/platform/platform-receiving.webp",
     label: "Receiving",
     standard: "ISO 9001",
   },
   {
-    src: "/images/hero/qms-training-huddle.png",
-    alt: "Plant floor team in a compliance management system training huddle",
+    src: "/images/platform/platform-training.webp",
     label: "Training",
     standard: "Implementation",
   },
 ];
+
+const HERO_IMAGES = HERO_IMAGE_DATA.map((img) => ({
+  ...img,
+  alt: PHOTO_ALT[img.src.split("/").pop() as string],
+}));
 
 function IndustryImageWall() {
   const reduce = useReducedMotion();
@@ -392,6 +390,7 @@ function ScrollingImageRow({
   reduce: boolean;
 }) {
   const items = [...images, ...images];
+  const half = images.length;
 
   return (
     <div className="mask-fade-x overflow-hidden">
@@ -402,6 +401,7 @@ function ScrollingImageRow({
           <HeroImageCard
             key={`${img.src}-${index}`}
             img={img}
+            duplicate={index >= half}
             priority={!reverse && index === 0}
           />
         ))}
@@ -413,15 +413,19 @@ function ScrollingImageRow({
 function HeroImageCard({
   img,
   priority,
+  duplicate,
 }: {
   img: (typeof HERO_IMAGES)[number];
   priority?: boolean;
+  duplicate?: boolean;
 }) {
   return (
-    <article className="relative h-44 w-[280px] shrink-0 overflow-hidden rounded-xl border border-white bg-white shadow-[0_18px_46px_-24px_rgba(22,43,77,0.55)] sm:h-56 sm:w-[360px] lg:h-60 lg:w-[390px]">
+    <article
+      aria-hidden={duplicate ? true : undefined}
+      className="relative h-44 w-[280px] shrink-0 overflow-hidden rounded-xl border border-white bg-white shadow-[0_18px_46px_-24px_rgba(22,43,77,0.55)] sm:h-56 sm:w-[360px] lg:h-60 lg:w-[390px]">
       <Image
         src={img.src}
-        alt={img.alt}
+        alt={duplicate ? "" : img.alt}
         fill
         priority={priority}
         sizes="(min-width: 1024px) 390px, (min-width: 640px) 360px, 280px"

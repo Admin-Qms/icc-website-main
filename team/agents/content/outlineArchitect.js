@@ -89,7 +89,7 @@ Internal pages available to link to:
 - /services/as9100 — AS9100 Aerospace
 - /process — Our 4-step certification process
 - /about — About ISO Certification Consultant
-- /contact — Book consultation
+- /contact — Book a demo of the compliance management software
 - /blog — Blog & insights
 - /industries/manufacturing — Manufacturing industry page
 - /industries/automotive — Automotive industry page

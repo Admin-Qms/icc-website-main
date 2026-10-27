@@ -3,6 +3,7 @@ import { SITE, STANDARDS } from "../lib/site.ts";
 
 const MAX_BODY_BYTES = 24_000;
 const WINDOW_MS = 10 * 60_000;
+const REQUEST_LABELS: Record<string, string> = { demo: "Demo", consultation: "Consultation", assessment: "Assessment" };
 // Best-effort per-instance protection; Vercel Firewall can enforce a shared limit.
 const clients = new Map<string, { count: number; resetAt: number }>();
 
@@ -65,22 +66,24 @@ export default {
     if (!request.headers.get("content-type")?.startsWith("application/json")) return json({ error: "Send JSON." }, 415);
     if (Number(request.headers.get("content-length")) > MAX_BODY_BYTES) return json({ error: "Enquiry is too long." }, 413);
 
-    let enquiry: { name: string; email: string; phone: string; company: string; standard: string; message: string };
+    let enquiry: { name: string; email: string; phone: string; company: string; standard: string; request: string; message: string };
     try {
       const parsed = await readBody(request);
       if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error("Invalid body");
       const data = parsed as Record<string, unknown>;
       // A filled honeypot gets a harmless acknowledgement, without sending email.
       if (data.botcheck) return json({ success: true });
-      if (Object.keys(data).some((key) => !["name", "email", "phone", "company", "standard", "message", "botcheck"].includes(key))) throw new Error("Invalid fields");
+      if (Object.keys(data).some((key) => !["name", "email", "phone", "company", "standard", "request", "message", "botcheck"].includes(key))) throw new Error("Invalid fields");
       enquiry = {
         name: field(data, "name", 100),
         email: field(data, "email", 254),
         phone: field(data, "phone", 40, true),
         company: field(data, "company", 160),
         standard: field(data, "standard", 80, true),
+        request: field(data, "request", 20, true) || "demo",
         message: field(data, "message", 5000),
       };
+      if (!Object.hasOwn(REQUEST_LABELS, enquiry.request)) throw new Error("Invalid request");
       if (!/^[^\s<>@,;]+@[^\s<>@,;]+\.[^\s<>@,;]+$/.test(enquiry.email)) throw new Error("Invalid email");
       if (enquiry.standard && enquiry.standard !== "not-sure" && !STANDARDS.some((standard) => standard.code === enquiry.standard)) throw new Error("Invalid standard");
     } catch (error) {
@@ -94,17 +97,19 @@ export default {
     if (!apiKey || !from) return json({ error: "Online enquiries are being set up. Please email the team directly." }, 503);
 
     const standard = enquiry.standard === "not-sure" ? "Not sure yet" : enquiry.standard || "Not selected";
+    const requestLabel = REQUEST_LABELS[enquiry.request];
     const email = {
       from,
       to: [SITE.email],
       reply_to: enquiry.email,
-      subject: `Website enquiry — ${standard} — ${enquiry.company}`,
+      subject: `${requestLabel} request — ${standard} — ${enquiry.company}`,
       text: [
         `New enquiry from ${SITE.url}/contact/`,
         `Name: ${enquiry.name}`,
         `Email: ${enquiry.email}`,
         `Phone: ${enquiry.phone || "Not provided"}`,
         `Company: ${enquiry.company}`,
+        `Request: ${requestLabel}`,
         `Standard: ${standard}`,
         "",
         enquiry.message,

@@ -109,3 +109,23 @@ test("spelling: British forms in prose fail and are rewritten; names and URLs ar
   assert.deepEqual(qa.findBritishSpellings(fixed), []);
   assert.deepEqual(qa.findBritishSpellings(goodPost().body), [], "the seed article is already US spelling");
 });
+
+test("positioning terms: product names and AI audit claims fail", () => {
+  for (const text of ["Try YourQMS today.", "Ask Quro.", "See yourqms.com.", "An AI gap assessment scores every clause.", "AI-powered gap assessments save time.", "AI audit findings appear instantly.", "AI-suggested audit findings.", "An AI gap analysis covers every clause.", "AI-generated gap assessments are instant.", "YourQMS keeps records."]) {
+    assert.ok(qa.findPositioningTerms(text).length > 0, text);
+  }
+});
+
+test("positioning terms: honest neighbors pass", () => {
+  for (const text of ["A person runs the gap assessment.", "Audit findings are recorded by the auditor.", "AI drafting is off until you turn it on.", "Quorum rules for the management review.", "Audit your QMS before the surveillance visit.", "Your QMS should fit how the plant runs."]) {
+    assert.deepEqual(qa.findPositioningTerms(text), [], text);
+  }
+});
+
+test("closing demo: last paragraph must invite a demo at /contact", () => {
+  for (const link of ["/contact", "/contact/", "https://isocertificationconsultants.ca/contact/"]) {
+    assert.equal(qa.checkClosingDemo(`Intro.\n\nSee how it works: [a demo](${link}).\n`).pass, true, link);
+  }
+  assert.equal(qa.checkClosingDemo("Intro.\n\n[Get in touch](/contact/) with questions.").pass, false);
+  assert.equal(qa.checkClosingDemo("### FAQ?\n\nYes, [book a demo](/contact/).\n\nA closing paragraph with no invitation.").pass, false);
+});

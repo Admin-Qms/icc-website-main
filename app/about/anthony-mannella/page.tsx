@@ -86,7 +86,7 @@ export default function AnthonyMannellaPage() {
         intro={`${person.jobTitle} at ${SITE.legalName}, and a contributor to ${publisher.name}.`}
       >
         <Link href="/contact" className="btn-primary">
-          Talk to Anthony <ArrowRight className="h-4 w-4" />
+          Book a demo <ArrowRight className="h-4 w-4" />
         </Link>
       </PageHeader>
 

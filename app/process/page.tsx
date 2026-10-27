@@ -6,9 +6,9 @@ import { ArrowRight, Check } from "@/components/Icons";
 import { PROCESS } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "6-Stage ISO Certification Process",
+  title: "6-Step ISO Certification Process",
   description:
-    "A transparent, six-stage path from gap analysis to certification, typically 24 weeks. See how the software and consultants get Canadian companies audit-ready.",
+    "How you get ISO certified in six steps: consultants run the gap analysis and audits while the software keeps your evidence from day one. Typically 24 weeks.",
   alternates: { canonical: "/process" },
 };
 
@@ -16,12 +16,15 @@ export default function ProcessPage() {
   return (
     <>
       <PageHeader
-        eyebrow="The process"
-        title={<>Six stages to <span className="text-teal-700">certified</span></>}
-        intro="No mystery, no open-ended retainer. A transparent path from your first assessment to a passed certification audit — typically around 24 weeks."
+        eyebrow="How it works"
+        title={<>How you get certified, <span className="text-teal-700">in six steps</span></>}
+        intro="You always know where you are and what comes next. Consultants run the gap analysis and audits with you, and the software keeps the evidence from day one. Typically around 24 weeks."
       >
-        <Link href="/assessment" className="btn-primary">
-          Start with a free assessment <ArrowRight className="h-4 w-4" />
+        <Link href="/contact" className="btn-primary">
+          Book a demo <ArrowRight className="h-4 w-4" />
+        </Link>
+        <Link href="/assessment" className="btn-outline">
+          Take the free assessment
         </Link>
       </PageHeader>
 
@@ -56,7 +59,7 @@ export default function ProcessPage() {
             </h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {[
-                "A single point of contact — your lead consultant",
+                "A single point of contact: your lead consultant, with the software behind them",
                 "The software tracking every action and its owner",
                 "Lean documentation your team will actually use",
                 "No surprises before Stage 1 or Stage 2 audits",

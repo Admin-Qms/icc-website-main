@@ -28,3 +28,8 @@ test('copied substantial paragraphs are flagged independently of a passing model
   const report = await qa.validateGuide(bundle, context(bundle));
   assert.ok(report.failures.some(f => f.id === 'cross-chapter-repetition'));
 });
+test('product names and AI audit claims block a guide page', async () => {
+  assert.ok(qa); const bundle = structuralBundle(); bundle.chapters[0].body += '\n\nAsk Quro for help.';
+  const report = await qa.validateGuide(bundle, context(bundle));
+  assert.ok(report.failures.some(f => f.id === 'positioning-terms' && f.page === bundle.chapters[0].slug));
+});

@@ -140,7 +140,10 @@ export function Assessment() {
               <p className="mx-auto mt-3 max-w-md text-slate-600">{result.note}</p>
               <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
                 <Link href="/contact" className="btn-primary">
-                  Get a detailed gap analysis <ArrowRight className="h-4 w-4" />
+                  Book a demo <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link href="/contact" className="btn-outline">
+                  Get a detailed gap analysis
                 </Link>
                 <button onClick={restart} className="btn-ghost">
                   Retake assessment

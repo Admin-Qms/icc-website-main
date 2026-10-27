@@ -9,7 +9,7 @@ import { SITE, ADDRESS_LINE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Talk to a certified ISO consultant about your certification project. Serving companies across Canada and the USA. We reply within one business day.",
+    "Book a demo of our compliance management software, or ask for a consultation or readiness assessment. Serving Canada and the USA. We reply in one business day.",
   alternates: { canonical: "/contact" },
 };
 
@@ -21,26 +21,27 @@ export default function ContactPage() {
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-teal-700">
               <ShieldCheck className="h-3.5 w-3.5" />
-              Talk to an expert
+              Book a demo
             </span>
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.1] text-navy-900 sm:text-5xl">
-              Let&apos;s scope your <span className="text-teal-700">certification</span>
+              Book a demo of the <span className="text-teal-700">compliance management software</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-slate-600">
-              Tell us about your operation and what you&apos;re certifying for. A
-              certified lead consultant will get back to you within one business day —
-              no obligation.
+              See how the software keeps your documents, audits and corrective
+              actions in one place. Prefer to talk it through first? Ask for a
+              consultation or a readiness assessment instead. We reply within one
+              business day, with no obligation.
             </p>
           </Reveal>
 
           <Reveal delay={0.15} className="mt-8 space-y-4">
             {[
+              "A walkthrough of the software, using your own standards",
               "A clear, honest read on scope and timeline",
-              "The right standard — or combination — for your goals",
               "A free readiness assessment to start from",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
@@ -75,7 +76,7 @@ export default function ContactPage() {
         </div>
 
         <Reveal delay={0.1}>
-          <ContactForm />
+          <ContactForm askRequest title="Book a demo" submitLabel="Book my demo" />
         </Reveal>
       </div>
     </section>

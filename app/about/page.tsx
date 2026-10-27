@@ -11,7 +11,7 @@ import { ANTHONY_MANNELLA, personPath } from "@/lib/people";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "ISO Certification Consultants Inc. pairs compliance management software with certified consultants to get Canadian companies certified without disruption.",
+    "ISO Certification Consultants Inc. builds compliance management software and backs it with certified consultants, so Canadian companies stay audit-ready.",
   alternates: { canonical: "/about" },
 };
 
@@ -45,14 +45,14 @@ export default function AboutPage() {
         eyebrow="About us"
         title={
           <>
-            Certification,{" "}
-            <span className="text-teal-700">without the mystery</span>
+            Compliance software,{" "}
+            <span className="text-teal-700">backed by certified experts</span>
           </>
         }
-        intro="ISO Certification Consultants Inc. pairs compliance management software with certified consultants, a hybrid model that makes certification faster, more affordable and far less painful for Canadian companies."
+        intro="ISO Certification Consultants Inc. builds compliance management software and backs it with certified consultants. The software keeps you audit-ready every day, and the experts help when you want them."
       >
         <Link href="/contact" className="btn-primary">
-          Work with us <ArrowRight className="h-4 w-4" />
+          Book a demo <ArrowRight className="h-4 w-4" />
         </Link>
       </PageHeader>
 

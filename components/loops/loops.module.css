@@ -1,0 +1,1221 @@
+/*
+ * Product loops: an unbranded app window and one shared 12-second step timeline.
+ *
+ * Timeline (percent of the 12 s cycle):
+ *   step 0 = 0%   (resting frame, visible on first paint)
+ *   step 1 = 14%   step 2 = 28%   step 3 = 42%   step 4 = 56%   step 5 = 70%
+ *   hold until 92%, then a fade-out reset that lands back on step 0 at 100%.
+ *
+ *   .onK     hidden until step K, fades in over 3%, visible until 92%, fades out by 97%.
+ *   .untilK  visible from 0% until step K, fades out over 3%, fades back in 92% to 97%.
+ *   To show something from step a until step b, nest .on{a} around .until{b}:
+ *   the two opacities multiply.
+ *   .fill    scaleX(var(--from)) (fractions, origin left) at step 1, var(--to) at step 4, back to var(--from) at 100%.
+ *   .pulse   one soft ring at step 5.
+ *
+ * Reduced motion shows the final frame: .onK visible, .untilK hidden, .fill at var(--to).
+ */
+
+/* ---------- pause control (WCAG 2.2.2) ---------- */
+
+.loop {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.pauseInput {
+  position: absolute;
+  bottom: 5px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--teal, #0e7490);
+  cursor: pointer;
+}
+
+.pauseLabel {
+  display: block;
+  height: 24px;
+  margin-top: 4px;
+  padding-left: 24px;
+  color: #475569;
+  font-size: 12px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.pauseInput:focus-visible + .window ~ .pauseLabel {
+  border-radius: 4px;
+  outline: 2px solid #0e7490;
+  outline-offset: 1px;
+}
+
+.pauseInput:checked + .window,
+.pauseInput:checked + .window *,
+.pauseInput:checked + .window *::before,
+.pauseInput:checked + .window *::after {
+  animation-play-state: paused;
+}
+
+/* ---------- window ---------- */
+
+.window {
+  --line: #e3e8ef;
+  --ink: #334155;
+  --soft: #5b6b80;
+  --navy: #162b4d;
+  --teal: #0e7490;
+  --gold: #d97706;
+  --green: #15803d;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  /* Children never add to the window's min-content width, so it can't widen the page. */
+  contain: inline-size;
+  overflow: hidden;
+  border: 1px solid #d7dfe9;
+  border-radius: 12px;
+  background: #f5f7fb;
+  box-shadow: 0 22px 50px -28px rgba(13, 26, 48, 0.55);
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: left;
+  user-select: none;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.mark {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--teal), var(--navy));
+}
+
+.title {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--navy);
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search {
+  flex: 0 1 30%;
+  min-width: 24px;
+  height: 18px;
+  margin-left: auto;
+  border-radius: 5px;
+  background: #f1f4f8;
+}
+
+.avatar {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.tabList {
+  display: flex;
+  flex: 1 1 0;
+  gap: 14px;
+  width: 0;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  color: var(--soft);
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tab {
+  display: flex;
+  flex: none;
+  align-items: center;
+}
+
+.tabOn {
+  color: var(--teal);
+  box-shadow: inset 0 -2px 0 var(--teal);
+}
+
+.sample {
+  flex: none;
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #f8fafc;
+  color: var(--soft);
+  font-size: 10.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stage {
+  position: relative;
+  padding: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- building blocks ---------- */
+
+.card {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.cardTitle {
+  margin: 0 0 6px;
+  color: var(--soft);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 5px 0;
+  border-top: 1px solid #f0f3f7;
+}
+
+.row:first-child {
+  border-top: 0;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 100%;
+  padding: 3px 8px;
+  border: 1px solid var(--tone, var(--line));
+  border-radius: 6px;
+  background: #fff;
+  color: var(--tone, inherit);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--tone-bg, #eef2f6);
+  color: var(--tone, var(--soft));
+  font-size: 10.5px;
+  font-weight: 700;
+  overflow-wrap: normal;
+  word-break: normal;
+  white-space: nowrap;
+}
+
+.dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tone, #cbd5e1);
+}
+
+/* Tone modifiers: set the tone for .pill and .dot (and anything reading --tone). */
+.ok {
+  --tone: var(--green);
+  --tone-bg: #dcfce7;
+}
+
+.warn {
+  --tone: #b45309;
+  --tone-bg: #fef3c7;
+}
+
+.info {
+  --tone: var(--teal);
+  --tone-bg: #cffafe;
+}
+
+.muted {
+  --tone: #475569;
+  --tone-bg: #eef2f6;
+}
+
+/* Overlap children in one cell so .until / .on copies swap in place. */
+.stack {
+  display: inline-grid;
+}
+
+.stack > * {
+  grid-area: 1 / 1;
+}
+
+.meter {
+  height: 7px;
+  margin-top: 6px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #e8edf3;
+}
+
+.meter > .fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left;
+  border-radius: 5px;
+  background: linear-gradient(90deg, var(--teal), #22a6bf);
+}
+
+/* Bottom-left, over the Open and In progress columns (empty by step 5), so the
+   Verified card stays visible. */
+.toast {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  max-width: calc((100% - 36px) * 2 / 3 + 6px);
+  padding: 8px 11px;
+  border-radius: 8px;
+  background: var(--navy);
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 11.5px;
+}
+
+/* ---------- platform overview ---------- */
+
+.dash {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 10px;
+}
+
+.big {
+  color: var(--navy);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 8px;
+  margin-top: 6px;
+  color: var(--soft);
+  font-size: 11px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.board {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.boardTitle {
+  grid-column: 1 / -1;
+  margin: 2px 0 -4px;
+}
+
+.col {
+  min-width: 0;
+  padding: 6px;
+  border-radius: 7px;
+  background: #eef2f6;
+}
+
+.colTitle {
+  display: block;
+  overflow: hidden;
+  color: #475569;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.task {
+  margin-top: 5px;
+  padding: 6px 7px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 11px;
+}
+
+.task b {
+  color: var(--navy);
+}
+
+.sub {
+  color: var(--soft);
+}
+
+.task .pill {
+  margin-top: 4px;
+  white-space: normal;
+}
+
+/* ---------- shared by the module loops ---------- */
+
+/* Overlap children in one grid cell (e.g. a map and the flowchart that replaces it). */
+.swap {
+  display: grid;
+}
+
+.swap > * {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+
+.gap {
+  display: grid;
+  gap: 10px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.stackEnd {
+  display: inline-grid;
+  justify-items: end;
+}
+
+.stackEnd > * {
+  grid-area: 1 / 1;
+}
+
+/* ---------- standards loop ---------- */
+
+.stdRow {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  gap: 2px 8px;
+  align-items: center;
+  padding: 6px 0;
+  border-top: 1px solid #f0f3f7;
+}
+
+.stdRow:first-child {
+  border-top: 0;
+}
+
+.stdCode {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.stdEvid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  grid-column: 2 / -1;
+  min-height: 22px;
+}
+
+.stdTarget {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 95%;
+  width: 2px;
+  background: var(--navy);
+}
+
+.stdMeter {
+  position: relative;
+}
+
+.stdExport {
+  display: inline-flex;
+  max-width: 100%;
+  padding: 6px 10px;
+  border: 1px solid var(--teal);
+  border-radius: 7px;
+  background: #fff;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ---------- documents loop ---------- */
+
+.docRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.docName {
+  min-width: 0;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.docChain {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid #f0f3f7;
+}
+
+.docTick {
+  display: inline-grid;
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+  place-items: center;
+}
+
+.docTick > .on2,
+.docTick > .on3 {
+  grid-area: 1 / 1;
+}
+
+.docDone {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--green);
+  display: grid;
+  place-items: center;
+}
+
+.docFrozen {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 20px;
+  margin-top: 6px;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.docOld {
+  margin-top: 8px;
+}
+
+/* ---------- processes loop ---------- */
+
+.procLane {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 5px 0;
+  border-top: 1px solid #f0f3f7;
+}
+
+.procLane:first-child {
+  border-top: 0;
+}
+
+.procLabel {
+  color: var(--soft);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-transform: uppercase;
+}
+
+.procBoxes {
+  display: flex;
+  gap: 5px;
+  min-width: 0;
+}
+
+.procBox {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 5px 4px;
+  overflow: hidden;
+  border: 1px solid #d7dfe9;
+  border-radius: 5px;
+  background: #f8fafc;
+  color: var(--navy);
+  font-size: 10.5px;
+  font-weight: 600;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.procHi {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--teal);
+  border-radius: 5px;
+  background: rgba(14, 116, 144, 0.1);
+}
+
+.procFlow {
+  align-self: center;
+}
+
+.procNodes {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+}
+
+.procNode {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 7px 2px;
+  border: 1px solid var(--teal);
+  border-radius: 6px;
+  background: #ecfeff;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.procArrow {
+  flex: none;
+  width: 14px;
+  color: var(--teal);
+  font-weight: 700;
+  text-align: center;
+}
+
+.procChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-height: 52px;
+  margin-top: 8px;
+  align-content: flex-start;
+}
+
+/* ---------- audits loop ---------- */
+
+.audRow {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr);
+  gap: 2px 8px;
+  padding: 6px 0;
+  border-top: 1px solid #f0f3f7;
+}
+
+.audRow:first-child {
+  border-top: 0;
+}
+
+.audBox {
+  display: grid;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 4px;
+  place-items: center;
+}
+
+.audTick {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background: var(--green);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+  place-items: center;
+}
+
+.audCode {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.audExtra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  grid-column: 2;
+  min-height: 24px;
+}
+
+.audThumb {
+  display: grid;
+  flex: none;
+  width: 30px;
+  height: 22px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #64748b, #334155);
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+  place-items: center;
+}
+
+.audDone {
+  display: flex;
+  min-height: 24px;
+  margin-top: 8px;
+}
+
+/* ---------- improvements loop ---------- */
+
+.impSteps {
+  display: flex;
+  gap: 3px;
+  margin-top: 8px;
+}
+
+.impStep {
+  display: grid;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.impBase,
+.impDone {
+  grid-area: 1 / 1;
+  display: grid;
+  padding: 4px 0;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.15;
+  overflow-wrap: normal;
+  place-items: center;
+  text-align: center;
+}
+
+.impBase {
+  background: #eef2f6;
+  color: #475569;
+}
+
+.impDone {
+  background: #cffafe;
+  color: var(--teal);
+}
+
+.impBody {
+  margin-top: 8px;
+}
+
+.impLine {
+  margin: 0;
+  padding: 3px 0;
+}
+
+.impLine b {
+  color: var(--navy);
+}
+
+.impWhy {
+  margin: 0 0 0 10px;
+  padding: 2px 0 2px 8px;
+  border-left: 2px solid var(--teal);
+  color: var(--soft);
+}
+
+.impOk {
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* ---------- safety loop ---------- */
+
+.safTop {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  gap: 10px;
+}
+
+.safPhone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.safScan {
+  margin: 0;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.safQr {
+  width: 62px;
+  height: 62px;
+  border: 4px solid #fff;
+  outline: 1px solid var(--line);
+  background:
+    conic-gradient(var(--navy) 25%, #fff 0 50%, var(--navy) 0 75%, #fff 0) 0 0 / 14px 14px;
+}
+
+.safLabel {
+  margin: 4px 0 2px;
+  color: var(--soft);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.safField {
+  min-height: 24px;
+  margin: 0;
+  padding: 4px 7px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #f8fafc;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.safSev {
+  min-height: 22px;
+  margin: 6px 0 0;
+}
+
+.safNew {
+  align-items: center;
+}
+
+.safText {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* ---------- training loop ---------- */
+
+.trnHead {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  color: var(--navy);
+}
+
+.trnChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-height: 46px;
+  margin-top: 6px;
+  align-content: flex-start;
+}
+
+.trnChips .pill {
+  white-space: normal;
+}
+
+.trnGrid {
+  display: grid;
+  grid-template-columns: 62px repeat(3, minmax(0, 1fr));
+  gap: 6px 4px;
+  align-items: center;
+}
+
+.trnSkill {
+  color: var(--soft);
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.trnWho {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.trnCell {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+}
+
+.trnCell.stack {
+  display: inline-grid;
+  justify-items: start;
+}
+
+.trnCell .pill {
+  padding: 2px 6px;
+  font-size: 9.5px;
+  white-space: nowrap;
+}
+
+.trnDots {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.trnDot {
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50%;
+}
+
+.trnFull {
+  border-color: var(--teal);
+  background: var(--teal);
+}
+
+/* ---------- supplier quality loop ---------- */
+
+.supTop {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.supPortal {
+  border-color: var(--teal);
+  background: #f4fcfd;
+}
+
+.supStatus {
+  margin: 4px 0 0;
+}
+
+.supStatus .pill {
+  white-space: normal;
+}
+
+.supLine {
+  margin: 4px 0 0;
+  color: var(--navy);
+}
+
+.supChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 46px;
+  margin-top: 5px;
+  align-content: flex-start;
+}
+
+.supChips .pill {
+  white-space: normal;
+}
+
+.supMarks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+}
+
+.supMark {
+  display: inline-flex;
+  gap: 5px;
+  color: var(--soft);
+}
+
+.supMark b {
+  color: var(--navy);
+}
+
+.supMark .supNew {
+  color: #b45309;
+}
+
+.supLinked {
+  display: flex;
+  min-height: 24px;
+}
+
+/* ---------- assets loop ---------- */
+
+.astName {
+  min-width: 0;
+  flex: 1 1 auto;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.astState {
+  flex: none;
+}
+
+.astChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 46px;
+  align-content: flex-start;
+}
+
+.astChips .pill {
+  white-space: normal;
+}
+
+.astBottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+.astSign {
+  margin: 0;
+  min-height: 16px;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.astQr {
+  display: flex;
+  min-height: 24px;
+}
+
+/* ---------- vendors loop ---------- */
+
+.venDoc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+
+.venWhen .pill {
+  white-space: normal;
+}
+
+.venEval {
+  display: flex;
+  min-height: 24px;
+}
+
+/* ---------- AI Assistant loop ---------- */
+
+.aiAsk {
+  margin: 0;
+  margin-left: auto;
+  max-width: 88%;
+  padding: 7px 10px;
+  border-radius: 10px 10px 2px 10px;
+  background: var(--navy);
+  color: #fff;
+}
+
+.aiPlan {
+  margin: 0;
+  padding-left: 18px;
+  list-style: decimal;
+  color: var(--navy);
+}
+
+.aiAct {
+  display: flex;
+  min-height: 26px;
+  margin-top: 7px;
+}
+
+.aiBtn {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--teal);
+  color: #fff;
+  font-weight: 700;
+}
+
+.aiDraft {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 8px;
+  color: var(--navy);
+}
+
+.aiState .pill {
+  white-space: normal;
+}
+
+.aiNote {
+  margin: 0;
+  min-height: 16px;
+  color: var(--soft);
+  font-size: 11px;
+}
+
+/* ---------- step timeline (12 s) ---------- */
+
+.on1 { animation: on1 12s ease infinite; }
+.on2 { animation: on2 12s ease infinite; }
+.on3 { animation: on3 12s ease infinite; }
+.on4 { animation: on4 12s ease infinite; }
+.on5 { animation: on5 12s ease infinite; }
+
+.until1 { animation: until1 12s ease infinite; }
+.until2 { animation: until2 12s ease infinite; }
+.until3 { animation: until3 12s ease infinite; }
+.until4 { animation: until4 12s ease infinite; }
+.until5 { animation: until5 12s ease infinite; }
+
+.fill { transform: scaleX(var(--from)); animation: fill 12s ease-in-out infinite; }
+.pulse { animation: pulse 12s ease infinite; }
+
+@keyframes on1 {
+  0%, 14% { opacity: 0; transform: translateY(5px); }
+  17%, 92% { opacity: 1; transform: none; }
+  97%, 100% { opacity: 0; transform: none; }
+}
+
+@keyframes on2 {
+  0%, 28% { opacity: 0; transform: translateY(5px); }
+  31%, 92% { opacity: 1; transform: none; }
+  97%, 100% { opacity: 0; transform: none; }
+}
+
+@keyframes on3 {
+  0%, 42% { opacity: 0; transform: translateY(5px); }
+  45%, 92% { opacity: 1; transform: none; }
+  97%, 100% { opacity: 0; transform: none; }
+}
+
+@keyframes on4 {
+  0%, 56% { opacity: 0; transform: translateY(5px); }
+  59%, 92% { opacity: 1; transform: none; }
+  97%, 100% { opacity: 0; transform: none; }
+}
+
+@keyframes on5 {
+  0%, 70% { opacity: 0; transform: translateY(5px); }
+  73%, 92% { opacity: 1; transform: none; }
+  97%, 100% { opacity: 0; transform: none; }
+}
+
+@keyframes until1 {
+  0%, 14% { opacity: 1; }
+  17%, 92% { opacity: 0; }
+  97%, 100% { opacity: 1; }
+}
+
+@keyframes until2 {
+  0%, 28% { opacity: 1; }
+  31%, 92% { opacity: 0; }
+  97%, 100% { opacity: 1; }
+}
+
+@keyframes until3 {
+  0%, 42% { opacity: 1; }
+  45%, 92% { opacity: 0; }
+  97%, 100% { opacity: 1; }
+}
+
+@keyframes until4 {
+  0%, 56% { opacity: 1; }
+  59%, 92% { opacity: 0; }
+  97%, 100% { opacity: 1; }
+}
+
+@keyframes until5 {
+  0%, 70% { opacity: 1; }
+  73%, 92% { opacity: 0; }
+  97%, 100% { opacity: 1; }
+}
+
+@keyframes fill {
+  0%, 14% { transform: scaleX(var(--from)); }
+  56%, 92% { transform: scaleX(var(--to)); }
+  100% { transform: scaleX(var(--from)); }
+}
+
+@keyframes pulse {
+  0%, 70% { box-shadow: 0 0 0 0 rgba(14, 116, 144, 0); }
+  74% { box-shadow: 0 0 0 5px rgba(14, 116, 144, 0.28); }
+  80%, 100% { box-shadow: 0 0 0 0 rgba(14, 116, 144, 0); }
+}
+
+/* Final frame, no motion. Every step class needs a rule here. */
+@media (prefers-reduced-motion: reduce) {
+  .pauseInput,
+  .pauseLabel {
+    display: none;
+  }
+
+  .on1, .on2, .on3, .on4, .on5 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .until1, .until2, .until3, .until4, .until5 {
+    animation: none;
+    opacity: 0;
+  }
+
+  .fill {
+    animation: none;
+    transform: scaleX(var(--to));
+  }
+
+  .pulse {
+    animation: none;
+  }
+}

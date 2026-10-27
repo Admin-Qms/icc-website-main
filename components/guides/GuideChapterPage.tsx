@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { GuideHeader } from './GuideHeader';
 import { GuideBody } from './GuideBody';
+import { SoftwareDemoBox } from '@/components/SoftwareDemoBox';
 import { GuideContents } from '@/components/guides/GuideContents';
 import { GuideChapterNavigation } from '@/components/guides/GuideChapterNavigation';
 import { getGuide } from '@/lib/guides';
@@ -27,6 +28,7 @@ export default function GuideChapter({ params }: { params: { guide: string; chap
         <p className="mb-7 text-sm text-slate-500">{page.author} · {page.readTime} min read</p>
         {page.image && <Image src={page.image.src} alt={page.image.alt} width={1200} height={675} priority className="h-auto w-full rounded-xl" />}
         <GuideBody body={page.body} />
+        <SoftwareDemoBox />
         <GuideChapterNavigation manifest={guide.manifest} current={page.slug} />
       </article>
       <aside className="row-start-1 lg:col-start-2 lg:row-start-auto"><GuideContents manifest={guide.manifest} current={page.slug} titles={Object.fromEntries(guide.chapters.map(c => [c.slug, c.title]))} /></aside>

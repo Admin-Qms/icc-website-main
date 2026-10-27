@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHeader, CTASection } from "@/components/ui";
+import { HeaderPhoto } from "@/components/HeaderPhoto";
+import { INDUSTRY_PHOTOS, PHOTO_ALT } from "@/lib/header-images";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight, Check, Icon } from "@/components/Icons";
 import { INDUSTRIES, STANDARDS, MODULES, type Module } from "@/lib/site";
@@ -10,6 +12,7 @@ import { CopyOverview, CopyArticle } from "@/components/PageCopy";
 import { pageTitle } from "@/lib/seo";
 import { FurtherReading } from "@/components/FurtherReading";
 import { nextInList } from "@/lib/nextInList";
+import { industryMetaDescription } from "@/lib/seo-copy";
 
 export function generateStaticParams() {
   return INDUSTRIES.map((i) => ({ industry: i.slug }));
@@ -23,8 +26,8 @@ export function generateMetadata({
   const i = INDUSTRIES.find((x) => x.slug === params.industry);
   if (!i) return {};
   return {
-    title: pageTitle(`${i.name} ISO Consulting in Canada`),
-    description: `ISO consulting for ${i.name} in Canada: gap analysis, a compliance management system built around your processes, and evidence to prove it.`,
+    title: pageTitle(`${i.name} ISO Certification & Compliance Software`),
+    description: industryMetaDescription(i),
     alternates: { canonical: `/industries/${i.slug}` },
   };
 }
@@ -252,13 +255,18 @@ export default function IndustryPage({
         eyebrow="Industry focus"
         title={
           <>
-            ISO consulting for <span className="text-teal-700">{ind.name}</span>
+            Compliance management software for <span className="text-teal-700">{ind.name}</span> teams
           </>
         }
         intro={ind.blurb}
+        visual={
+          INDUSTRY_PHOTOS[ind.slug] ? (
+            <HeaderPhoto src={INDUSTRY_PHOTOS[ind.slug]} alt={PHOTO_ALT[INDUSTRY_PHOTOS[ind.slug]]} />
+          ) : undefined
+        }
       >
         <Link href="/contact" className="btn-primary">
-          Talk to an industry specialist <ArrowRight className="h-4 w-4" />
+          Book a demo <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/assessment" className="btn-ghost">
           Free readiness check
@@ -399,7 +407,7 @@ export default function IndustryPage({
       </section>
 
       <CTASection
-        title={`Get your ${ind.name.toLowerCase()} operation certified`}
+        title={`Book a demo for ${ind.name}`}
       />
     </>
   );

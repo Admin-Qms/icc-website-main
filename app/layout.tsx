@@ -24,13 +24,16 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} in Canada | ISO 9001, IATF 16949`,
+    default: "Compliance Management Software | ISO 9001, IATF 16949",
     template: `%s | ${SITE.name}`,
   },
   description:
-    "ISO certification consulting for Canadian companies, with compliance management software configured to your processes and mapped to any standard.",
+    "AI-powered compliance management software that unifies quality, documents, audits, training and suppliers. Stay audit-ready for ISO 9001, IATF 16949 and AS9100.",
   keywords: [
     "compliance management software",
+    "AI compliance software",
+    "ISO 9001 software",
+    "IATF 16949 software",
     "ISO management systems",
     "ISO certification consultant Canada",
     "document control software",
@@ -45,9 +48,9 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: SITE.name,
     title:
-      "ISO Certification Consulting for Canadian Companies — Any Standard, One System",
+      "AI Compliance Management Software for ISO 9001 & IATF 16949",
     description:
-      "Certified consultants plus compliance management software: eleven modules configured around your business and mapped to any standard you certify against.",
+      "AI-powered compliance management software that unifies quality, documents, audits, training and suppliers. Stay audit-ready for ISO 9001, IATF 16949 and AS9100.",
     images: [OG_IMAGE],
   },
   twitter: { card: "summary_large_image", images: [OG_IMAGE.url] },
@@ -80,7 +83,7 @@ const orgJsonLd = {
     url: `${SITE.url}${personPath(p)}`,
   })),
   description:
-    "ISO certification consulting for Canadian companies, with compliance management software configured to your processes and ready to onboard any standard.",
+    "AI-powered compliance management software for quality and compliance teams, with certified consultants when you want them. For ISO 9001 and IATF 16949.",
   areaServed: [
     { "@type": "Country", name: "Canada" },
     { "@type": "Country", name: "United States" },

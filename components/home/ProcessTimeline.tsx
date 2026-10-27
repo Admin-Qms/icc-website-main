@@ -8,7 +8,7 @@ import { PROCESS } from "@/lib/site";
 const easeOut = [0.22, 1, 0.36, 1] as const;
 const STAGE_ICONS = ["assessment", "design", "document", "rollout", "audit", "certificate"];
 
-export function ProcessTimeline() {
+export function ProcessTimeline({ summaries }: { summaries?: Record<string, string> }) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -67,7 +67,7 @@ export function ProcessTimeline() {
                   <span className="text-xs font-semibold text-slate-500">{p.duration}</span>
                 </div>
                 <h3 className="mt-1.5 font-heading text-xl font-bold text-navy-900">{p.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{p.detail}</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{summaries?.[p.title] ?? p.detail}</p>
               </motion.div>
             </li>
           );

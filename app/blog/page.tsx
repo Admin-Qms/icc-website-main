@@ -4,12 +4,13 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { FeaturedPostCard, PostCard } from "@/components/PostCard";
 import { getAllPosts, serializeJsonLd } from "@/lib/blog";
 import { SITE, OG_IMAGE } from "@/lib/site";
+import { pageTitle } from "@/lib/seo";
 
 const description =
-  "Practical guidance on ISO 9001, IATF 16949, ISO 14001 and ISO 45001 certification for Canadian companies: costs, timelines, audits and requirements.";
+  "Practical ISO 9001, IATF 16949 and AS9100 how-tos for quality teams, plus how compliance software automates the work. Book a demo to see it.";
 
 export const metadata: Metadata = {
-  title: "ISO Certification Blog",
+  title: pageTitle("Compliance Blog: ISO 9001, IATF 16949 and AS9100 Guidance"),
   description,
   alternates: { canonical: "/blog" },
   openGraph: {
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     locale: "en_CA",
     siteName: SITE.name,
     url: "/blog",
-    title: "ISO Certification Blog — Practical Guidance for Canadian Companies",
+    title: "Compliance Blog: ISO 9001, IATF 16949 and AS9100 Guidance",
     description,
     images: [OG_IMAGE],
   },
@@ -49,10 +50,10 @@ export default function BlogIndexPage() {
         eyebrow="Blog"
         title={
           <>
-            ISO certification, <span className="text-teal-700">explained plainly</span>
+            Practical compliance guidance, <span className="text-teal-700">and the software that automates it</span>
           </>
         }
-        intro="Costs, timelines, audit preparation and clause-by-clause requirements, written for the people who run quality on the shop floor."
+        intro="Standards how-tos for the people who run quality on the shop floor, and a demo of the software that automates the work."
       />
 
       <section className="bg-white py-16 lg:py-20">

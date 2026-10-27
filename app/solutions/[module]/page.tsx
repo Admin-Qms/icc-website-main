@@ -7,6 +7,7 @@ import { ArrowRight, Check, Icon } from "@/components/Icons";
 import { MODULES, CUSTOMIZATION, SITE, type Module } from "@/lib/site";
 import { pageTitle } from "@/lib/seo";
 import { FurtherReading } from "@/components/FurtherReading";
+import { MODULE_LOOPS } from "@/components/loops";
 
 export function generateStaticParams() {
   return MODULES.map((m) => ({ module: m.slug }));
@@ -20,7 +21,7 @@ export function generateMetadata({
   const m = MODULES.find((x) => x.slug === params.module);
   if (!m) return {};
   return {
-    title: pageTitle(`${m.name} Module — Compliance Software`),
+    title: pageTitle(m.seoTitle),
     description: m.metaDescription,
     alternates: { canonical: `/solutions/${m.slug}` },
   };
@@ -33,6 +34,8 @@ export default function ModulePage({ params }: { params: { module: string } }) {
   const related = m.related
     .map((slug) => MODULES.find((x) => x.slug === slug))
     .filter((x): x is Module => Boolean(x));
+
+  const Loop = MODULE_LOOPS[m.slug];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -61,6 +64,7 @@ export default function ModulePage({ params }: { params: { module: string } }) {
           </>
         }
         intro={m.summary}
+        visual={Loop ? <Loop /> : undefined}
       >
         <Link href={m.cta.href} className="btn-primary">
           {m.cta.label} <ArrowRight className="h-4 w-4" />
@@ -265,7 +269,7 @@ export default function ModulePage({ params }: { params: { module: string } }) {
       )}
 
       <CTASection
-        title={`${m.cta.label} with a certified consultant`}
+        title={`See ${m.name} in a demo`}
         intro="Tell us how this part of your operation runs today. You will get a clear read on what the module changes on Monday morning, and what the auditor will see."
       />
     </>

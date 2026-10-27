@@ -9,7 +9,7 @@ export const SITE = {
   domain: "isocertificationconsultants.ca",
   url: "https://isocertificationconsultants.ca",
   tagline:
-    "ISO certification consulting for Canadian companies, with compliance management software configured by certified consultants",
+    "AI-powered compliance management software for quality and compliance, with certified consultants when you want them",
   // Shown on the contact page and in the footer; swap for a shared inbox when one exists.
   email: "anthony.mannella@isocertificationconsultants.ca",
   phone: "+1 (416) 622-0022",
@@ -563,24 +563,24 @@ export const STATS = [
 
 export const DIFFERENTIATORS = [
   {
-    title: "Configured, not templated",
+    title: "Fits how you work",
     detail:
-      "Every module adapts to your forms, fields, routing and terminology. The system fits how your business runs, not the other way around.",
+      "Forms, fields, approvals and terms match the way your business already runs.",
   },
   {
-    title: "Any standard, onboarded",
+    title: "Any standard",
     detail:
-      "ISO, IATF and AS are the start. Customer-specific, regulatory or internal standards are imported from a workbook as custom standards and tracked clause by clause.",
+      "Customer, regulatory or internal requirements are tracked clause by clause.",
   },
   {
     title: "Your processes first",
     detail:
-      "Processes are mapped as they run, with named owners and the documents and clauses linked to each one, instead of being forced into generic business software.",
+      "Each process has an owner, with its documents and clauses linked.",
   },
   {
-    title: "Hybrid delivery",
+    title: "Software plus experts",
     detail:
-      "Compliance management software plus certified consultants configuring it with you, from the first process map to a passed certification audit.",
+      "Use the software on your own, or with certified consultants beside you.",
   },
 ];
 
@@ -601,6 +601,7 @@ export type Module = {
   summary: string;
   features: string[];
   standardsHint: string;
+  seoTitle: string;
   metaDescription: string;
   problem: string;
   howItWorks: string[];
@@ -625,8 +626,9 @@ export const MODULES: Module[] = [
       "Statement of applicability export (.xlsx)",
     ],
     standardsHint: "Supports every catalogue standard, plus custom standards",
+    seoTitle: "Standards and Clause Compliance Software",
     metaDescription:
-      "Standards module with a status for every clause, coverage against a target, evidence linked to each clause and a statement of applicability export.",
+      "See clause coverage for every standard before the auditor does. Track status per clause, coverage against a target, linked evidence and an SoA export.",
     problem:
       "You cannot see which clauses are covered until an auditor points at the gap. The standard lives in a spreadsheet someone built years ago, the evidence lives in a shared drive, and nobody can say with confidence how ready the business is.",
     howItWorks: [
@@ -666,7 +668,7 @@ export const MODULES: Module[] = [
       },
     ],
     related: ["document-control", "audits-management-review", "processes"],
-    cta: { label: "See the Standards workspace", href: "/contact" },
+    cta: { label: "See Standards in a demo", href: "/contact" },
   },
   {
     slug: "document-control",
@@ -682,8 +684,9 @@ export const MODULES: Module[] = [
       "Approved copies frozen and hash-verified",
     ],
     standardsHint: "Foundation for every standard",
+    seoTitle: "Document Management Software",
     metaDescription:
-      "Document control software: Draft to Obsolete lifecycle, sequential or parallel approvers, in-browser Word and Excel editing, hash-verified approved copies.",
+      "Know which revision is current and prove it. Documents move from Draft to Obsolete with set approvers, browser editing and hash-verified approved copies.",
     problem:
       "Nobody knows which revision is current. The procedure on the floor is two versions behind the one on the server, approvals happen by email, and the week before the audit someone has to reconstruct who approved what, and when.",
     howItWorks: [
@@ -729,7 +732,7 @@ export const MODULES: Module[] = [
       },
     ],
     related: ["standards", "processes", "training-competence"],
-    cta: { label: "Talk about document control", href: "/contact" },
+    cta: { label: "See Documents in a demo", href: "/contact" },
   },
   {
     slug: "processes",
@@ -745,8 +748,9 @@ export const MODULES: Module[] = [
       "Industry process templates; supported PDF charts imported for review",
     ],
     standardsHint: "Supports every management-system standard",
+    seoTitle: "Process Management Software",
     metaDescription:
-      "Process mapping software with a Level-1 process map, Level-2 flowcharts, named owners, linked documents and clauses, and industry process templates.",
+      "Show an auditor how any process runs. A Level-1 map, Level-2 flowcharts, named owners, and the documents and clauses linked to each process.",
     problem:
       "The process map was drawn for the last audit and has not been opened since. Nobody owns half the processes on it, and the documents that describe them are not connected to it, so the auditor's first question, show me how this process runs, takes an afternoon to answer.",
     howItWorks: [
@@ -775,7 +779,7 @@ export const MODULES: Module[] = [
       },
     ],
     related: ["document-control", "standards", "audits-management-review"],
-    cta: { label: "Map your processes with a consultant", href: "/contact" },
+    cta: { label: "See Processes in a demo", href: "/contact" },
   },
   {
     slug: "audits-management-review",
@@ -791,8 +795,9 @@ export const MODULES: Module[] = [
       "Branded PDF report, audit trends, reusable checklist library",
     ],
     standardsHint: "Supports every ISO, IATF and AS standard",
+    seoTitle: "Audit Management Software",
     metaDescription:
-      "Internal audit software with a scheduling wizard, annual programme, execution workspace for checklist, findings and evidence, and branded PDF reports.",
+      "Capture findings on the floor, not in a retype. Plan the annual programme, keep checklist, findings and evidence together, and issue a branded PDF report.",
     problem:
       "Checklists are on paper. Findings are retyped into a report afterwards, evidence photos are lost on a phone, and the annual programme is a spreadsheet that drifts from reality by the second quarter.",
     howItWorks: [
@@ -823,7 +828,7 @@ export const MODULES: Module[] = [
       },
     ],
     related: ["nonconformance-capa", "standards", "supplier-quality"],
-    cta: { label: "Plan your audit programme", href: "/contact" },
+    cta: { label: "See Audits in a demo", href: "/contact" },
   },
   {
     slug: "nonconformance-capa",
@@ -839,8 +844,9 @@ export const MODULES: Module[] = [
       "SCAR raised to a supplier directly; sealed, printable report after closure",
     ],
     standardsHint: "Supports ISO 9001, ISO 13485, IATF 16949",
+    seoTitle: "Nonconformance and Corrective Action Software",
     metaDescription:
-      "Nonconformance and CAPA software: containment, root cause analysis with 8D, 5 Whys, Fishbone or Fault tree, effectiveness verification and sealed reports.",
+      "Give every nonconformance an owner and a verified fix. Contain it, find root cause with 8D, 5 Whys, Fishbone or Fault tree, and close once the fix is verified.",
     problem:
       "CAPAs stall with no owner. A nonconformance is raised, a quick fix is applied, and the root cause analysis never happens because nothing forces it. At the audit, the open items list is longer than anyone expected.",
     howItWorks: [
@@ -886,7 +892,7 @@ export const MODULES: Module[] = [
       },
     ],
     related: ["audits-management-review", "supplier-quality", "safety"],
-    cta: { label: "See how CAPA closes the loop", href: "/contact" },
+    cta: { label: "See Improvements in a demo", href: "/contact" },
   },
   {
     slug: "safety",
@@ -903,8 +909,9 @@ export const MODULES: Module[] = [
       "Separate dashboard and permissions",
     ],
     standardsHint: "Supports ISO 45001",
+    seoTitle: "Safety Management Software",
     metaDescription:
-      "Health and safety reporting software: incident and near-miss reports, anonymous no-login QR-code reporting from the floor and harm-based severity.",
+      "Get near-misses reported before they become incidents. Anonymous no-login QR-code reporting, harm-based severity, and a dashboard with its own permissions.",
     problem:
       "Near-misses go unreported because reporting means finding a form and a supervisor. When an incident does happen, the investigation starts from a blank page, and the safety committee cannot see the pattern until it is too late.",
     howItWorks: [
@@ -939,7 +946,7 @@ export const MODULES: Module[] = [
       },
     ],
     related: ["nonconformance-capa", "training-competence"],
-    cta: { label: "Turn on safety reporting", href: "/contact" },
+    cta: { label: "See Safety in a demo", href: "/contact" },
   },
   {
     slug: "training-competence",
@@ -955,8 +962,9 @@ export const MODULES: Module[] = [
       "Competency matrix with custom levels, bulk updates and certificates",
     ],
     standardsHint: "Supports every management-system standard",
+    seoTitle: "Training Management Software",
     metaDescription:
-      "Training and competence software: workforce directory, training library with quizzes, online, classroom and on-the-job campaigns, competency matrix.",
+      "See who is qualified and prove it. A workforce directory, a training library with quizzes, campaigns with supervisor sign-off and a competency matrix.",
     problem:
       "Employees never know which training they still owe. Supervisors sign off on-the-job training from memory, certificates sit in a filing cabinet, and the auditor's question, show me this person is competent for this task, has no single answer.",
     howItWorks: [
@@ -980,7 +988,7 @@ export const MODULES: Module[] = [
       { standard: "ISO/IEC 17025:2017", clause: "6.2", label: "Personnel" },
     ],
     related: ["document-control", "calibration-maintenance"],
-    cta: { label: "Build your competency matrix", href: "/contact" },
+    cta: { label: "See Training in a demo", href: "/contact" },
   },
   {
     slug: "supplier-quality",
@@ -996,8 +1004,9 @@ export const MODULES: Module[] = [
       "PFMEA, Process Flow and Control Plan kept linked; change and deviation requests",
     ],
     standardsHint: "Supports ISO 9001, IATF 16949, AS9100, ISO 13485",
+    seoTitle: "Supplier Quality Management Software",
     metaDescription:
-      "Supplier quality software with approval gates, scorecards, SCAR, supplier audits, APQP, PPAP, FAI, linked PFMEA and Control Plan, and a supplier portal.",
+      "Answer SCARs in a portal, not an inbox. Approval gates, scorecards, supplier audits, APQP, PPAP and FAI, with suppliers responding without seeing your data.",
     problem:
       "SCARs, PPAP and FAI packages live in email threads. Supplier responses arrive late, in the wrong format, and the record of what was asked and when is scattered across three inboxes.",
     howItWorks: [
@@ -1053,7 +1062,7 @@ export const MODULES: Module[] = [
       "document-control",
       "audits-management-review",
     ],
-    cta: { label: "Talk about supplier quality", href: "/contact" },
+    cta: { label: "See Supplier Quality in a demo", href: "/contact" },
   },
   {
     slug: "calibration-maintenance",
@@ -1069,8 +1078,9 @@ export const MODULES: Module[] = [
       "QR labels and PIN access on the shop floor; bulk Excel import",
     ],
     standardsHint: "Supports ISO 9001, ISO 13485, ISO/IEC 17025",
+    seoTitle: "Equipment and Asset Management Software",
     metaDescription:
-      "Equipment, calibration and inspection software: equipment register, calibration intervals and certificates, inspection checklists, e-signatures and QR labels.",
+      "Keep every instrument in date and every inspection signed. An equipment register with calibration intervals and certificates, maintenance and e-signatures.",
     problem:
       "Calibration due dates live in a spreadsheet that is only checked when something fails. Inspection records are paper forms filed by month, and finding the one the auditor asks for means a trip to the cabinet.",
     howItWorks: [
@@ -1102,7 +1112,7 @@ export const MODULES: Module[] = [
       { standard: "ISO/IEC 17025:2017", clause: "6.4", label: "Equipment" },
     ],
     related: ["nonconformance-capa", "training-competence"],
-    cta: { label: "Set up your equipment register", href: "/contact" },
+    cta: { label: "See Assets in a demo", href: "/contact" },
   },
   {
     slug: "vendors",
@@ -1118,8 +1128,9 @@ export const MODULES: Module[] = [
       "Excel import from a generated template",
     ],
     standardsHint: "Supports ISO 9001, ISO 13485, ISO 22000",
+    seoTitle: "Vendor Management Software",
     metaDescription:
-      "Vendor management software with a vendor directory, qualification status, compliance documents with expiry dates, evaluations and Excel import from a template.",
+      "See every vendor's status and documents in one directory. Qualification status, compliance documents with expiry dates, evaluations and bulk Excel import.",
     problem:
       "Vendor certificates expire without anyone noticing. Evaluations are done once at onboarding and never repeated, and the question of whether a vendor is approved is answered from memory.",
     howItWorks: [
@@ -1143,7 +1154,7 @@ export const MODULES: Module[] = [
       { standard: "ISO 13485:2016", clause: "7.4", label: "Purchasing" },
     ],
     related: ["supplier-quality", "nonconformance-capa", "document-control"],
-    cta: { label: "Set up your vendor directory", href: "/contact" },
+    cta: { label: "See Vendors in a demo", href: "/contact" },
   },
   {
     slug: "ai-assistant",
@@ -1159,8 +1170,9 @@ export const MODULES: Module[] = [
       "Every AI output is a suggestion a person reviews",
     ],
     standardsHint: "Works across every module",
+    seoTitle: "AI Assistant for Compliance Management",
     metaDescription:
-      "An AI assistant for compliance management software that acts within the user's permissions, shows multi-step plans for approval and confirms destructive steps.",
+      "Hand routine tasks to an assistant while a person stays in control. It acts within your permissions, shows plans for approval and confirms destructive steps.",
     problem:
       "Compliance software is full of menus, and a quality manager's day is full of small tasks across all of them. An assistant helps only if it stays inside the rules the organization has already set, and only if a person stays in control of what it changes.",
     howItWorks: [
@@ -1177,46 +1189,46 @@ export const MODULES: Module[] = [
     ],
     clauses: [],
     related: ["standards", "audits-management-review", "document-control"],
-    cta: { label: "See the assistant in a walkthrough", href: "/contact" },
+    cta: { label: "See AI Assistant in a demo", href: "/contact" },
   },
 ];
 
 // Home page: the buyer's pain, the module that answers it, the concrete capability.
 export const PAIN_POINTS = [
   {
-    pain: "Nobody knows which document revision is current.",
+    pain: "You are not sure which document version is current.",
     module: "Documents",
     slug: "document-control",
     capability:
-      "Approved copies are frozen and hash-verified. The revision an auditor opens is the one you approved.",
+      "Everyone sees only the latest approved version, and you can show the auditor exactly which version was approved and when.",
   },
   {
     pain: "Audit prep is a last-minute scramble.",
     module: "Audits",
     slug: "audits-management-review",
     capability:
-      "Checklist, findings and evidence sit in one workspace, and the PDF report comes out when the audit closes.",
+      "Checklists, findings and evidence are already in one place, and the audit report is ready when the audit closes.",
   },
   {
-    pain: "CAPAs stall with no owner.",
+    pain: "Corrective actions stall with no owner.",
     module: "Improvements",
     slug: "nonconformance-capa",
     capability:
-      "Every corrective action has an owner and a due date, and nothing closes without an effectiveness check.",
+      "Every corrective action has an owner, a due date and reminders, and it only closes once the fix is checked.",
   },
   {
-    pain: "Clause gaps show up only when the auditor points at them.",
+    pain: "Gaps show up only when the auditor points at them.",
     module: "Standards",
     slug: "standards",
     capability:
-      "A status per clause, coverage against a target, and the evidence linked behind each one.",
+      "You see your coverage clause by clause, so you find the gaps before the auditor does.",
   },
   {
-    pain: "SCARs and PPAP packages live in inbox threads.",
+    pain: "Supplier responses get lost in email.",
     module: "Supplier Quality",
     slug: "supplier-quality",
     capability:
-      "Suppliers answer from a portal task inbox with an email code, and never see your internal data.",
+      "Suppliers answer SCARs and PPAP requests in their own portal, and every response is on record.",
   },
 ];
 
