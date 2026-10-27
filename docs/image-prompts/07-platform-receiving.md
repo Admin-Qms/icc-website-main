@@ -3,7 +3,7 @@
 - **Save as:** `platform-receiving.png`
 - **Generate at:** landscape, 1536×1024 or larger
 - **Final:** cropped to 1672×941 PNG (done by the site's image script)
-- **Used on:** Home wall · Supplier Quality context
+- **Used on:** Home wall only (the Supplier Quality module page header carries a product loop, not a photo)
 
 ## Prompt
 

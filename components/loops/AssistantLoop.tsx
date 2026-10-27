@@ -34,7 +34,7 @@ export function AssistantLoop() {
           <div className={s.aiDraft}>
             <b>WI-104 · Press brake setup</b>
             <span className={`${s.stack} ${s.aiState}`}>
-              <span className={`${s.pill} ${s.warn} ${s.until4}`}>AI draft · needs review</span>
+              <span className={`${s.pill} ${s.info} ${s.until4}`}>AI draft · needs review</span>
               <span className={`${s.pill} ${s.ok} ${s.on4}`}>Accepted by Quality manager</span>
             </span>
           </div>

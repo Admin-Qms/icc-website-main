@@ -3,7 +3,7 @@
 - **Save as:** `platform-fabrication.png`
 - **Generate at:** landscape, 1536×1024 or larger
 - **Final:** cropped to 1672×941 PNG (done by the site's image script)
-- **Used on:** Home wall · Fabrication industry page · ISO 9001 page
+- **Used on:** Home wall · Manufacturing industry page · ISO 9001 page (page header `visual` slot; no separate Fabrication page exists)
 
 ## Prompt
 

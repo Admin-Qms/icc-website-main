@@ -91,3 +91,27 @@ test("every MODULES slug is registered in MODULE_LOOPS", async () => {
   assert.deepEqual(missing, []);
   assert.equal(keys.length, MODULES.length);
 });
+
+test("every loop uses LoopFrame and defines a non-empty label", () => {
+  const files = readdirSync(LOOPS).filter((f) => /Loop\.tsx$/.test(f) && f !== "LoopFrame.tsx");
+  assert.ok(files.length >= 12, "expected 12 loop files");
+  for (const f of files) {
+    const text = readFileSync(join(LOOPS, f), "utf8");
+    assert.ok(text.includes("<LoopFrame"), `${f} does not use <LoopFrame`);
+    assert.match(text, /const\s+LABEL\s*=\s*["'`][^"'`]{20,}/, `${f} has no non-empty label`);
+    assert.match(text, /label=\{LABEL\}/, `${f} does not pass its label to LoopFrame`);
+  }
+});
+
+test("module pages render MODULE_LOOPS", () => {
+  const page = readFileSync(join(ROOT, "app/solutions/[module]/page.tsx"), "utf8");
+  assert.ok(page.includes("MODULE_LOOPS"), "module page does not reference MODULE_LOOPS");
+});
+
+test("LoopFrame has a CSS-only pause control that pauses animations", () => {
+  const tsx = readFileSync(join(LOOPS, "LoopFrame.tsx"), "utf8");
+  const css = readFileSync(join(LOOPS, "loops.module.css"), "utf8");
+  assert.match(tsx, /type="checkbox"/);
+  assert.ok(tsx.includes("Pause animation"));
+  assert.match(css, /:checked[^{]*\{[^}]*animation-play-state:\s*paused/);
+});

@@ -2,7 +2,7 @@ import { LoopFrame } from "./LoopFrame";
 import s from "./loops.module.css";
 
 const LABEL =
-  "Sample Audits screen for an internal audit of Production against ISO 9001: checklist items are ticked, a photo is attached as evidence, the auditor records a minor finding, and the audit closes with a PDF report ready.";
+  "Sample Audits screen for an internal audit of Production against ISO 9001: checklist items are ticked, a photo is attached as evidence, the auditor records a finding, and the audit closes with a PDF report ready.";
 
 function Box({ at }: { at?: "on1" | "on2" }) {
   return (
@@ -41,7 +41,7 @@ export function AuditsLoop() {
           <span className={s.audExtra}>
             <span className={`${s.audThumb} ${s.on3}`}>Photo</span>
             <span className={`${s.pill} ${s.warn} ${s.on4}`}>
-              Finding · Minor · recorded by auditor
+              Finding · recorded by auditor
             </span>
           </span>
         </div>

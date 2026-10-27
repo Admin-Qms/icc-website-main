@@ -10,18 +10,61 @@
  *   .untilK  visible from 0% until step K, fades out over 3%, fades back in 92% to 97%.
  *   To show something from step a until step b, nest .on{a} around .until{b}:
  *   the two opacities multiply.
- *   .fill    width var(--from) at step 1, var(--to) at step 4, back to var(--from) at 100%.
+ *   .fill    scaleX(var(--from)) (fractions, origin left) at step 1, var(--to) at step 4, back to var(--from) at 100%.
  *   .pulse   one soft ring at step 5.
  *
  * Reduced motion shows the final frame: .onK visible, .untilK hidden, .fill at var(--to).
  */
+
+/* ---------- pause control (WCAG 2.2.2) ---------- */
+
+.loop {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.pauseInput {
+  position: absolute;
+  bottom: 5px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--teal, #0e7490);
+  cursor: pointer;
+}
+
+.pauseLabel {
+  display: block;
+  height: 24px;
+  margin-top: 4px;
+  padding-left: 24px;
+  color: #475569;
+  font-size: 12px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.pauseInput:focus-visible + .window ~ .pauseLabel {
+  border-radius: 4px;
+  outline: 2px solid #0e7490;
+  outline-offset: 1px;
+}
+
+.pauseInput:checked + .window,
+.pauseInput:checked + .window *,
+.pauseInput:checked + .window *::before,
+.pauseInput:checked + .window *::after {
+  animation-play-state: paused;
+}
 
 /* ---------- window ---------- */
 
 .window {
   --line: #e3e8ef;
   --ink: #334155;
-  --soft: #64748b;
+  --soft: #5b6b80;
   --navy: #162b4d;
   --teal: #0e7490;
   --gold: #d97706;
@@ -180,9 +223,10 @@
   gap: 5px;
   max-width: 100%;
   padding: 3px 8px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--tone, var(--line));
   border-radius: 6px;
   background: #fff;
+  color: var(--tone, inherit);
   font-size: 11px;
   font-weight: 600;
 }
@@ -197,6 +241,8 @@
   color: var(--tone, var(--soft));
   font-size: 10.5px;
   font-weight: 700;
+  overflow-wrap: normal;
+  word-break: normal;
   white-space: nowrap;
 }
 
@@ -215,7 +261,7 @@
 }
 
 .warn {
-  --tone: var(--gold);
+  --tone: #b45309;
   --tone-bg: #fef3c7;
 }
 
@@ -225,7 +271,7 @@
 }
 
 .muted {
-  --tone: #94a3b8;
+  --tone: #475569;
   --tone-bg: #eef2f6;
 }
 
@@ -248,7 +294,9 @@
 
 .meter > .fill {
   display: block;
+  width: 100%;
   height: 100%;
+  transform-origin: left;
   border-radius: 5px;
   background: linear-gradient(90deg, var(--teal), #22a6bf);
 }
@@ -307,6 +355,11 @@
   gap: 6px;
 }
 
+.boardTitle {
+  grid-column: 1 / -1;
+  margin: 2px 0 -4px;
+}
+
 .col {
   min-width: 0;
   padding: 6px;
@@ -317,7 +370,7 @@
 .colTitle {
   display: block;
   overflow: hidden;
-  color: var(--soft);
+  color: #475569;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -506,7 +559,7 @@
 
 .procLane {
   display: grid;
-  grid-template-columns: 70px minmax(0, 1fr);
+  grid-template-columns: 84px minmax(0, 1fr);
   gap: 8px;
   align-items: center;
   padding: 5px 0;
@@ -521,7 +574,9 @@
   color: var(--soft);
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
+  overflow-wrap: normal;
+  word-break: normal;
   text-transform: uppercase;
 }
 
@@ -653,7 +708,7 @@
   width: 30px;
   height: 22px;
   border-radius: 4px;
-  background: linear-gradient(135deg, #94a3b8, #475569);
+  background: linear-gradient(135deg, #64748b, #334155);
   color: #fff;
   font-size: 8px;
   font-weight: 700;
@@ -1062,7 +1117,7 @@
 .until4 { animation: until4 12s ease infinite; }
 .until5 { animation: until5 12s ease infinite; }
 
-.fill { width: var(--from); animation: fill 12s ease-in-out infinite; }
+.fill { transform: scaleX(var(--from)); animation: fill 12s ease-in-out infinite; }
 .pulse { animation: pulse 12s ease infinite; }
 
 @keyframes on1 {
@@ -1126,9 +1181,9 @@
 }
 
 @keyframes fill {
-  0%, 14% { width: var(--from); }
-  56%, 92% { width: var(--to); }
-  100% { width: var(--from); }
+  0%, 14% { transform: scaleX(var(--from)); }
+  56%, 92% { transform: scaleX(var(--to)); }
+  100% { transform: scaleX(var(--from)); }
 }
 
 @keyframes pulse {
@@ -1139,6 +1194,11 @@
 
 /* Final frame, no motion. Every step class needs a rule here. */
 @media (prefers-reduced-motion: reduce) {
+  .pauseInput,
+  .pauseLabel {
+    display: none;
+  }
+
   .on1, .on2, .on3, .on4, .on5 {
     animation: none;
     opacity: 1;
@@ -1152,7 +1212,7 @@
 
   .fill {
     animation: none;
-    width: var(--to);
+    transform: scaleX(var(--to));
   }
 
   .pulse {

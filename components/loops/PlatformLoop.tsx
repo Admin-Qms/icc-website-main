@@ -4,7 +4,7 @@ import s from "./loops.module.css";
 const LABEL =
   "Sample dashboard: ISO 9001 clause coverage rises from 72 to 94 percent, due items appear, a corrective action moves from Open to Verified after its effectiveness check, and a daily summary notification arrives.";
 
-const COVERAGE = { "--from": "72%", "--to": "94%" } as React.CSSProperties;
+const COVERAGE = { "--from": "0.72", "--to": "0.94" } as React.CSSProperties;
 
 function Task({ done }: { done?: boolean }) {
   return (
@@ -60,6 +60,7 @@ export function PlatformLoop() {
           </ul>
         </div>
 
+        <p className={`${s.cardTitle} ${s.boardTitle}`}>Corrective actions</p>
         <div className={s.board}>
           <div className={s.col}>
             <span className={s.colTitle}>Open</span>

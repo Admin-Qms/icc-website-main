@@ -3,7 +3,7 @@
 - **Save as:** `platform-lab.png`
 - **Generate at:** landscape, 1536×1024 or larger
 - **Final:** cropped to 1672×941 PNG (done by the site's image script)
-- **Used on:** ISO/IEC 17025 page · Assets module context
+- **Used on:** ISO/IEC 17025 page (page header `visual` slot; the Assets module page header carries a product loop, not a photo)
 
 ## Prompt
 

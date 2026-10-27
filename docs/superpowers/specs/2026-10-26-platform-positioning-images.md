@@ -2,7 +2,7 @@
 
 Date: 2026-10-26 · For generation in Codex · Belongs to [the positioning design](2026-10-26-platform-positioning-design.md)
 
-Fifteen images are now listed: 8 replace the home page hero photo wall, 5 more (09 to 13) sit on standard, industry and module pages, 1 is the social share card background, and 1 sits in the new "Book a demo" box on blog and guide pages. The layout does not change; these fill slots that already exist or are already planned. The ready-to-paste prompt for each image is one file in [`docs/image-prompts/`](../../image-prompts/README.md), which also lists where each image is used.
+Fifteen images are now listed: 8 replace the home page hero photo wall, 5 more (09 to 13) sit on standard and industry pages, 1 is the social share card background, and 1 sits in the new "Book a demo" box on blog and guide pages. The layout does not change; these fill slots that already exist or are already planned. The ready-to-paste prompt for each image is one file in [`docs/image-prompts/`](../../image-prompts/README.md), which also lists where each image is used.
 
 **The story the images tell:** today's hero photos show people *talking about* compliance around a tablet. The new set shows the software *doing the work on the floor*: a check recorded at the machine, a sign-off on a tablet, a supplier pallet scanned at receiving. People stay in charge; the screen is a tool in their hands.
 
@@ -69,22 +69,24 @@ Size: square, **1024×1024**. Shown small (about 220 px) beside the demo box tex
 
 ## Final placement (done by Claude during implementation)
 
+The industry and standard page header images use the `PageHeader` `visual` slot and are added in the image step that follows the product-loops branch (the Owner generated the images for them). Industries are Manufacturing, Automotive, Aerospace & Defence, Healthcare & Medical Devices, Food & Beverage, Oil Gas & Energy, Construction, and Mining & Natural Resources. Module page headers (`/solutions/<module>/`) and `/platform/` carry product loops, not photos.
+
 All 15 images. Prompts: [`docs/image-prompts/`](../../image-prompts/README.md).
 
 | # | File | Final size | Goes to |
 | --- | --- | --- | --- |
-| 01 | `platform-fabrication.png` | 1672×941 PNG | `public/images/hero/` (old hero photos stay in the repo; only references change). Home wall, Fabrication industry page, ISO 9001 page |
+| 01 | `platform-fabrication.png` | 1672×941 PNG | `public/images/hero/` (old hero photos stay in the repo; only references change). Home wall, Manufacturing industry page, ISO 9001 page (no Fabrication page exists) |
 | 02 | `platform-automotive.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Automotive industry page, IATF 16949 page |
 | 03 | `platform-medical-device.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Healthcare & Medical Devices page, ISO 13485 page |
 | 04 | `platform-aerospace.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Aerospace & Defence page, AS9100 page |
 | 05 | `platform-food-beverage.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Food & Beverage page, ISO 22000 page |
-| 06 | `platform-electronics.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Manufacturing industry page |
-| 07 | `platform-receiving.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Supplier Quality context |
+| 06 | `platform-electronics.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Manufacturing industry page (alternate to 01) |
+| 07 | `platform-receiving.png` | 1672×941 PNG | `public/images/hero/`. Home wall only |
 | 08 | `platform-training.png` | 1672×941 PNG | `public/images/hero/`. Home wall |
 | 09 | `platform-environmental.png` | 1672×941 PNG | `public/images/hero/`. ISO 14001 page, Oil, Gas & Energy and Mining pages |
 | 10 | `platform-safety.png` | 1672×941 PNG | `public/images/hero/`. ISO 45001 page, Construction page |
 | 11 | `platform-infosec.png` | 1672×941 PNG | `public/images/hero/`. ISO/IEC 27001 page |
 | 12 | `platform-continuity.png` | 1672×941 PNG | `public/images/hero/`. ISO 22301 page |
-| 13 | `platform-lab.png` | 1672×941 PNG | `public/images/hero/`. ISO/IEC 17025 page, Assets module context |
+| 13 | `platform-lab.png` | 1672×941 PNG | `public/images/hero/`. ISO/IEC 17025 page |
 | 14 | `demo-box-tablet.png` | 600×600 WebP | `public/images/demo-box-tablet.webp`. End of every blog post and guide |
 | 15 | `og-platform-bg.png` | 1200×630 JPG with text | `public/images/og-default.jpg` is replaced by the new card |

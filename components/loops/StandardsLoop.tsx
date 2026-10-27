@@ -4,7 +4,7 @@ import s from "./loops.module.css";
 const LABEL =
   "Sample Standards screen for ISO 9001: an evidence record and a certificate are linked to clause 7.1.5, which moves from No evidence to Partial to Compliant, clause coverage rises from 86 to 92 percent against a 95 percent target, and the statement of applicability export is ready.";
 
-const COVERAGE = { "--from": "86%", "--to": "92%" } as React.CSSProperties;
+const COVERAGE = { "--from": "0.86", "--to": "0.92" } as React.CSSProperties;
 
 /** Standards: clause list, evidence linking and coverage against a target. */
 export function StandardsLoop() {

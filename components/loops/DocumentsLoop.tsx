@@ -31,7 +31,7 @@ export function DocumentsLoop() {
                 <span className={`${s.pill} ${s.info} ${s.until3}`}>In review</span>
               </span>
               <span className={s.on3}>
-                <span className={`${s.pill} ${s.warn} ${s.until4}`}>Approved</span>
+                <span className={`${s.pill} ${s.info} ${s.until4}`}>Approved</span>
               </span>
               <span className={`${s.pill} ${s.ok} ${s.on4}`}>Published</span>
             </span>

@@ -3,7 +3,7 @@
 - **Save as:** `platform-electronics.png`
 - **Generate at:** landscape, 1536×1024 or larger
 - **Final:** cropped to 1672×941 PNG (done by the site's image script)
-- **Used on:** Home wall · Manufacturing industry page
+- **Used on:** Home wall · Manufacturing industry page (alternate to 01; page header `visual` slot)
 
 ## Prompt
 
