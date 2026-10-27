@@ -69,24 +69,24 @@ Size: square, **1024×1024**. Shown small (about 220 px) beside the demo box tex
 
 ## Final placement (done by Claude during implementation)
 
-The industry and standard page header images use the `PageHeader` `visual` slot and are added in the image step that follows the product-loops branch (the Owner generated the images for them). Industries are Manufacturing, Automotive, Aerospace & Defence, Healthcare & Medical Devices, Food & Beverage, Oil Gas & Energy, Construction, and Mining & Natural Resources. Module page headers (`/solutions/<module>/`) and `/platform/` carry product loops, not photos.
+The industry and standard page headers carry the photos. They are in place: `lib/header-images.ts` maps each industry and standard slug to a photo and its alt text, and `components/HeaderPhoto.tsx` renders it in `PageHeader`'s `visual` slot. Industries are Manufacturing, Automotive, Aerospace & Defence, Healthcare & Medical Devices, Food & Beverage, Oil Gas & Energy, Construction, and Mining & Natural Resources. Module page headers (`/solutions/<module>/`) and `/platform/` carry product loops, not photos.
 
-All 15 images. Prompts: [`docs/image-prompts/`](../../image-prompts/README.md).
+All 15 images. Prompts: [`docs/image-prompts/`](../../image-prompts/README.md). The source PNGs live in `~/Downloads/icc-platform-images/`; `scripts/place-platform-images.mjs` converts them and composites the share card.
 
-| # | File | Final size | Goes to |
+| # | File | Shipped as | Goes to |
 | --- | --- | --- | --- |
-| 01 | `platform-fabrication.png` | 1672×941 PNG | `public/images/hero/` (old hero photos stay in the repo; only references change). Home wall, Manufacturing industry page (no Fabrication page exists) |
-| 02 | `platform-automotive.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Automotive industry page, IATF 16949 page |
-| 03 | `platform-medical-device.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Healthcare & Medical Devices page, ISO 13485 page |
-| 04 | `platform-aerospace.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Aerospace & Defence page, AS9100 page |
-| 05 | `platform-food-beverage.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Food & Beverage page, ISO 22000 page |
-| 06 | `platform-electronics.png` | 1672×941 PNG | `public/images/hero/`. Home wall, ISO 9001 page |
-| 07 | `platform-receiving.png` | 1672×941 PNG | `public/images/hero/`. Home wall only |
-| 08 | `platform-training.png` | 1672×941 PNG | `public/images/hero/`. Home wall |
-| 09 | `platform-environmental.png` | 1672×941 PNG | `public/images/hero/`. ISO 14001 page, Mining & Natural Resources page |
-| 10 | `platform-safety.png` | 1672×941 PNG | `public/images/hero/`. ISO 45001 page, Construction page |
-| 11 | `platform-infosec.png` | 1672×941 PNG | `public/images/hero/`. ISO/IEC 27001 page |
-| 12 | `platform-continuity.png` | 1672×941 PNG | `public/images/hero/`. ISO 22301 page, Oil, Gas & Energy page |
-| 13 | `platform-lab.png` | 1672×941 PNG | `public/images/hero/`. ISO/IEC 17025 page |
-| 14 | `demo-box-tablet.png` | 600×600 WebP | `public/images/demo-box-tablet.webp`. End of every blog post and guide |
-| 15 | `og-platform-bg.png` | 1200×630 JPG with text | `public/images/og-default.jpg` is replaced by the new card |
+| 01 | `platform-fabrication.png` | `public/images/platform/platform-fabrication.webp`, 1672×941 WebP | Home wall, Manufacturing industry page (no Fabrication page exists) |
+| 02 | `platform-automotive.png` | `public/images/platform/platform-automotive.webp`, 1672×941 WebP | Home wall, Automotive industry page, IATF 16949 page |
+| 03 | `platform-medical-device.png` | `public/images/platform/platform-medical-device.webp`, 1672×941 WebP | Home wall, Healthcare & Medical Devices page, ISO 13485 page |
+| 04 | `platform-aerospace.png` | `public/images/platform/platform-aerospace.webp`, 1672×941 WebP | Home wall, Aerospace & Defence page, AS9100 page |
+| 05 | `platform-food-beverage.png` | `public/images/platform/platform-food-beverage.webp`, 1672×941 WebP | Home wall, Food & Beverage page, ISO 22000 page |
+| 06 | `platform-electronics.png` | `public/images/platform/platform-electronics.webp`, 1672×941 WebP | Home wall, ISO 9001 page |
+| 07 | `platform-receiving.png` | `public/images/platform/platform-receiving.webp`, 1672×941 WebP | Home wall only |
+| 08 | `platform-training.png` | `public/images/platform/platform-training.webp`, 1672×941 WebP | Home wall |
+| 09 | `platform-environmental.png` | `public/images/platform/platform-environmental.webp`, 1672×941 WebP | ISO 14001 page, Mining & Natural Resources page |
+| 10 | `platform-safety.png` | `public/images/platform/platform-safety.webp`, 1672×941 WebP | ISO 45001 page, Construction page |
+| 11 | `platform-infosec.png` | `public/images/platform/platform-infosec.webp`, 1672×941 WebP | ISO/IEC 27001 page |
+| 12 | `platform-continuity.png` | `public/images/platform/platform-continuity.webp`, 1672×941 WebP | ISO 22301 page, Oil, Gas & Energy page |
+| 13 | `platform-lab.png` | `public/images/platform/platform-lab.webp`, 1672×941 WebP | ISO/IEC 17025 page |
+| 14 | `demo-box-tablet.png` | `public/images/platform/demo-box-tablet.webp`, 600×600 WebP | End of every blog post and guide |
+| 15 | `og-platform-bg.png` | `public/images/og-default.jpg`, 1200×630 JPG | Share card; the background is composited with the logo, headline and standards line by `scripts/place-platform-images.mjs` |

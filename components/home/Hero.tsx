@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Check, ShieldCheck, Phone } from "../Icons";
 import { SITE } from "@/lib/site";
+import { PHOTO_ALT } from "@/lib/header-images";
 import { ContactForm } from "../ContactForm";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
@@ -284,56 +285,53 @@ function HeroBackground({ reduce }: { reduce: boolean }) {
   );
 }
 
-const HERO_IMAGES = [
+const HERO_IMAGE_DATA = [
   {
     src: "/images/platform/platform-fabrication.webp",
-    alt: "A quality technician in safety glasses measures a laser-cut steel bracket with calipers at an inspection table, a rugged tablet beside the part, in a fabrication shop",
     label: "Fabrication",
     standard: "ISO 9001",
   },
   {
     src: "/images/platform/platform-automotive.webp",
-    alt: "An operator scans a machined aluminum housing with a handheld scanner at an inline inspection station beside an automotive assembly cell",
     label: "Automotive",
     standard: "IATF 16949",
   },
   {
     src: "/images/platform/platform-medical-device.webp",
-    alt: "A technician in a lab coat, hairnet and gloves signs off a record on a tablet at a clean bench in a controlled medical device assembly area",
     label: "Medical devices",
     standard: "ISO 13485",
   },
   {
     src: "/images/platform/platform-aerospace.webp",
-    alt: "An inspector holds a tablet beside a titanium bracket on a granite coordinate-measuring machine table in an aerospace machine shop",
     label: "Aerospace",
     standard: "AS9100",
   },
   {
     src: "/images/platform/platform-food-beverage.webp",
-    alt: "A worker in a white coat and hairnet takes a temperature reading with a probe and records it on a tablet beside a stainless-steel packaging line",
     label: "Food & beverage",
     standard: "ISO 22000",
   },
   {
     src: "/images/platform/platform-electronics.webp",
-    alt: "A technician in an ESD smock inspects a circuit board under a magnifier at an electronics bench, a monitor beside them showing a pass and fail list",
     label: "Electronics",
     standard: "ISO 9001",
   },
   {
     src: "/images/platform/platform-receiving.webp",
-    alt: "An inspector in a high-visibility vest scans the label on an incoming supplier pallet with a handheld scanner at a warehouse receiving dock",
     label: "Receiving",
     standard: "ISO 9001",
   },
   {
     src: "/images/platform/platform-training.webp",
-    alt: "A supervisor points to a wall-mounted work instruction screen while three operators in safety gear watch and one signs off training on a tablet",
     label: "Training",
     standard: "Implementation",
   },
 ];
+
+const HERO_IMAGES = HERO_IMAGE_DATA.map((img) => ({
+  ...img,
+  alt: PHOTO_ALT[img.src.split("/").pop() as string],
+}));
 
 function IndustryImageWall() {
   const reduce = useReducedMotion();
@@ -392,6 +390,7 @@ function ScrollingImageRow({
   reduce: boolean;
 }) {
   const items = [...images, ...images];
+  const half = images.length;
 
   return (
     <div className="mask-fade-x overflow-hidden">
@@ -402,6 +401,7 @@ function ScrollingImageRow({
           <HeroImageCard
             key={`${img.src}-${index}`}
             img={img}
+            duplicate={index >= half}
             priority={!reverse && index === 0}
           />
         ))}
@@ -413,15 +413,19 @@ function ScrollingImageRow({
 function HeroImageCard({
   img,
   priority,
+  duplicate,
 }: {
   img: (typeof HERO_IMAGES)[number];
   priority?: boolean;
+  duplicate?: boolean;
 }) {
   return (
-    <article className="relative h-44 w-[280px] shrink-0 overflow-hidden rounded-xl border border-white bg-white shadow-[0_18px_46px_-24px_rgba(22,43,77,0.55)] sm:h-56 sm:w-[360px] lg:h-60 lg:w-[390px]">
+    <article
+      aria-hidden={duplicate ? true : undefined}
+      className="relative h-44 w-[280px] shrink-0 overflow-hidden rounded-xl border border-white bg-white shadow-[0_18px_46px_-24px_rgba(22,43,77,0.55)] sm:h-56 sm:w-[360px] lg:h-60 lg:w-[390px]">
       <Image
         src={img.src}
-        alt={img.alt}
+        alt={duplicate ? "" : img.alt}
         fill
         priority={priority}
         sizes="(min-width: 1024px) 390px, (min-width: 640px) 360px, 280px"

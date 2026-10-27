@@ -34,7 +34,7 @@ export function SoftwareDemoBox({ category }: { category?: string }) {
             alt={DEMO_BOX_IMAGE.alt}
             width={600}
             height={600}
-            className="h-auto w-full rounded-lg"
+            className="h-auto w-full max-w-[220px] rounded-lg"
           />
         )}
       </div>

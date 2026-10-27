@@ -83,7 +83,7 @@ export function HeaderIconsFX({ icons }: { icons: string[] }) {
   const DURS = [7, 9, 8, 10, 7.5, 9.5];
   return (
     <div className="pointer-events-none absolute bottom-0 right-0 top-32 hidden w-1/2 lg:top-40 lg:block" aria-hidden>
-      <div className="absolute right-[12%] top-1/2 h-64 w-64 -translate-y-1/2">
+      <div className="absolute right-[8%] top-1/2 h-64 w-64 -translate-y-1/2">
         {/* slow rotating dashed ring anchoring the cluster */}
         <motion.div
           className="absolute inset-0 rounded-full border-2 border-dashed border-teal-200/70"
