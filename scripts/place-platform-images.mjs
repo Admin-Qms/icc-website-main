@@ -35,6 +35,8 @@ for (const n of NAMES) {
   else if (existsSync(b)) found.set(n, b);
   else missing.push(f);
 }
+const logoMark = path.join(root, "public/images/logo-mark.png");
+if (!existsSync(logoMark)) missing.push("public/images/logo-mark.png");
 if (missing.length) {
   console.error(`Missing source files (nothing written): ${missing.join(", ")}`);
   process.exit(1);
@@ -45,7 +47,7 @@ const report = (p) => console.log(`${path.relative(root, p)}  ${kb(p)}`);
 
 mkdirSync(outDir, { recursive: true });
 
-for (const n of PHOTOS.concat("og-platform-bg")) {
+for (const n of PHOTOS) {
   const out = path.join(outDir, `${n}.webp`);
   await sharp(found.get(n))
     .resize(1672, 941, { fit: "cover", position: sharp.strategy.attention })
@@ -64,7 +66,7 @@ const W = 1200, H = 630;
 const bg = await sharp(found.get("og-platform-bg"))
   .resize(W, H, { fit: "cover", position: sharp.strategy.attention })
   .toBuffer();
-const mark = await sharp(path.join(root, "public/images/logo-mark.png")).resize(80, 80).toBuffer();
+const mark = await sharp(logoMark).resize(80, 80).toBuffer();
 const FONT = "'DejaVu Sans', Helvetica, Arial, sans-serif";
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
 <rect width="${W}" height="${H}" fill="#0d1a30" fill-opacity="0.55"/>

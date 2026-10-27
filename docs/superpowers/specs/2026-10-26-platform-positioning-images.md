@@ -75,18 +75,18 @@ All 15 images. Prompts: [`docs/image-prompts/`](../../image-prompts/README.md).
 
 | # | File | Final size | Goes to |
 | --- | --- | --- | --- |
-| 01 | `platform-fabrication.png` | 1672×941 PNG | `public/images/hero/` (old hero photos stay in the repo; only references change). Home wall, Manufacturing industry page, ISO 9001 page (no Fabrication page exists) |
+| 01 | `platform-fabrication.png` | 1672×941 PNG | `public/images/hero/` (old hero photos stay in the repo; only references change). Home wall, Manufacturing industry page (no Fabrication page exists) |
 | 02 | `platform-automotive.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Automotive industry page, IATF 16949 page |
 | 03 | `platform-medical-device.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Healthcare & Medical Devices page, ISO 13485 page |
 | 04 | `platform-aerospace.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Aerospace & Defence page, AS9100 page |
 | 05 | `platform-food-beverage.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Food & Beverage page, ISO 22000 page |
-| 06 | `platform-electronics.png` | 1672×941 PNG | `public/images/hero/`. Home wall, Manufacturing industry page (alternate to 01) |
+| 06 | `platform-electronics.png` | 1672×941 PNG | `public/images/hero/`. Home wall, ISO 9001 page |
 | 07 | `platform-receiving.png` | 1672×941 PNG | `public/images/hero/`. Home wall only |
 | 08 | `platform-training.png` | 1672×941 PNG | `public/images/hero/`. Home wall |
-| 09 | `platform-environmental.png` | 1672×941 PNG | `public/images/hero/`. ISO 14001 page, Oil, Gas & Energy and Mining pages |
+| 09 | `platform-environmental.png` | 1672×941 PNG | `public/images/hero/`. ISO 14001 page, Mining & Natural Resources page |
 | 10 | `platform-safety.png` | 1672×941 PNG | `public/images/hero/`. ISO 45001 page, Construction page |
 | 11 | `platform-infosec.png` | 1672×941 PNG | `public/images/hero/`. ISO/IEC 27001 page |
-| 12 | `platform-continuity.png` | 1672×941 PNG | `public/images/hero/`. ISO 22301 page |
+| 12 | `platform-continuity.png` | 1672×941 PNG | `public/images/hero/`. ISO 22301 page, Oil, Gas & Energy page |
 | 13 | `platform-lab.png` | 1672×941 PNG | `public/images/hero/`. ISO/IEC 17025 page |
 | 14 | `demo-box-tablet.png` | 600×600 WebP | `public/images/demo-box-tablet.webp`. End of every blog post and guide |
 | 15 | `og-platform-bg.png` | 1200×630 JPG with text | `public/images/og-default.jpg` is replaced by the new card |

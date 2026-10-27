@@ -32,8 +32,8 @@ export function SoftwareDemoBox({ category }: { category?: string }) {
           <Image
             src={DEMO_BOX_IMAGE.src}
             alt={DEMO_BOX_IMAGE.alt}
-            width={400}
-            height={300}
+            width={600}
+            height={600}
             className="h-auto w-full rounded-lg"
           />
         )}

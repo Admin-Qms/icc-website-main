@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHeader, CTASection } from "@/components/ui";
+import { HeaderPhoto } from "@/components/HeaderPhoto";
+import { STANDARD_PHOTOS, PHOTO_ALT } from "@/lib/header-images";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion";
 import { ArrowRight, Check, Icon } from "@/components/Icons";
 import {
@@ -82,6 +84,11 @@ export default function StandardPage({
           </>
         }
         intro={s.summary}
+        visual={
+          STANDARD_PHOTOS[s.slug] ? (
+            <HeaderPhoto src={STANDARD_PHOTOS[s.slug]} alt={PHOTO_ALT[STANDARD_PHOTOS[s.slug]]} />
+          ) : undefined
+        }
       >
         <Link href="/contact" className="btn-primary">
           Book a demo <ArrowRight className="h-4 w-4" />
