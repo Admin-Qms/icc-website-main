@@ -1,0 +1,455 @@
+/*
+ * Product loops: an unbranded app window and one shared 12-second step timeline.
+ *
+ * Timeline (percent of the 12 s cycle):
+ *   step 0 = 0%   (resting frame, visible on first paint)
+ *   step 1 = 14%   step 2 = 28%   step 3 = 42%   step 4 = 56%   step 5 = 70%
+ *   hold until 92%, then a fade-out reset that lands back on step 0 at 100%.
+ *
+ *   .onK     hidden until step K, fades in over 3%, visible until 92%, fades out by 97%.
+ *   .untilK  visible from 0% until step K, fades out over 3%, fades back in 92% to 97%.
+ *   To show something from step a until step b, nest .on{a} around .until{b}:
+ *   the two opacities multiply.
+ *   .fill    width var(--from) at step 1, var(--to) at step 4, back to var(--from) at 100%.
+ *   .pulse   one soft ring at step 5.
+ *
+ * Reduced motion shows the final frame: .onK visible, .untilK hidden, .fill at var(--to).
+ */
+
+/* ---------- window ---------- */
+
+.window {
+  --line: #e3e8ef;
+  --ink: #334155;
+  --soft: #64748b;
+  --navy: #162b4d;
+  --teal: #0e7490;
+  --gold: #d97706;
+  --green: #15803d;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #d7dfe9;
+  border-radius: 12px;
+  background: #f5f7fb;
+  box-shadow: 0 22px 50px -28px rgba(13, 26, 48, 0.55);
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: left;
+  user-select: none;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.mark {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--teal), var(--navy));
+}
+
+.title {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--navy);
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.search {
+  flex: 0 1 30%;
+  min-width: 24px;
+  height: 18px;
+  margin-left: auto;
+  border-radius: 5px;
+  background: #f1f4f8;
+}
+
+.avatar {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.tabList {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 14px;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  color: var(--soft);
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tab {
+  display: flex;
+  flex: none;
+  align-items: center;
+}
+
+.tabOn {
+  color: var(--teal);
+  box-shadow: inset 0 -2px 0 var(--teal);
+}
+
+.sample {
+  flex: none;
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #f8fafc;
+  color: var(--soft);
+  font-size: 10.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stage {
+  position: relative;
+  padding: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- building blocks ---------- */
+
+.card {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.cardTitle {
+  margin: 0 0 6px;
+  color: var(--soft);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 5px 0;
+  border-top: 1px solid #f0f3f7;
+}
+
+.row:first-child {
+  border-top: 0;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 100%;
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--tone-bg, #eef2f6);
+  color: var(--tone, var(--soft));
+  font-size: 10.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tone, #cbd5e1);
+}
+
+/* Tone modifiers: set the tone for .pill and .dot (and anything reading --tone). */
+.ok {
+  --tone: var(--green);
+  --tone-bg: #dcfce7;
+}
+
+.warn {
+  --tone: var(--gold);
+  --tone-bg: #fef3c7;
+}
+
+.info {
+  --tone: var(--teal);
+  --tone-bg: #cffafe;
+}
+
+.muted {
+  --tone: #94a3b8;
+  --tone-bg: #eef2f6;
+}
+
+/* Overlap children in one cell so .until / .on copies swap in place. */
+.stack {
+  display: inline-grid;
+}
+
+.stack > * {
+  grid-area: 1 / 1;
+}
+
+.meter {
+  height: 7px;
+  margin-top: 6px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #e8edf3;
+}
+
+.meter > .fill {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, var(--teal), #22a6bf);
+}
+
+.toast {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  max-width: 64%;
+  padding: 8px 11px;
+  border-radius: 8px;
+  background: var(--navy);
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 11.5px;
+}
+
+/* ---------- platform overview ---------- */
+
+.dash {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 10px;
+}
+
+.big {
+  color: var(--navy);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 8px;
+  margin-top: 6px;
+  color: var(--soft);
+  font-size: 11px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.board {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.col {
+  min-width: 0;
+  padding: 6px;
+  border-radius: 7px;
+  background: #eef2f6;
+}
+
+.colTitle {
+  display: block;
+  overflow: hidden;
+  color: var(--soft);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.task {
+  margin-top: 5px;
+  padding: 6px 7px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 11px;
+}
+
+.task b {
+  color: var(--navy);
+}
+
+.sub {
+  color: var(--soft);
+}
+
+.task .pill {
+  margin-top: 4px;
+  white-space: normal;
+}
+
+/* ---------- step timeline (12 s) ---------- */
+
+.on1 { animation: on1 12s ease infinite; }
+.on2 { animation: on2 12s ease infinite; }
+.on3 { animation: on3 12s ease infinite; }
+.on4 { animation: on4 12s ease infinite; }
+.on5 { animation: on5 12s ease infinite; }
+
+.until1 { animation: until1 12s ease infinite; }
+.until2 { animation: until2 12s ease infinite; }
+.until3 { animation: until3 12s ease infinite; }
+.until4 { animation: until4 12s ease infinite; }
+.until5 { animation: until5 12s ease infinite; }
+
+.fill { width: var(--from); animation: fill 12s ease-in-out infinite; }
+.pulse { animation: pulse 12s ease infinite; }
+
+@keyframes on1 {
+  0%, 14% { opacity: 0; transform: translateY(5px); }
+  17%, 92% { opacity: 1; transform: none; }
+  97%, 100% { opacity: 0; transform: none; }
+}
+
+@keyframes on2 {
+  0%, 28% { opacity: 0; transform: translateY(5px); }
+  31%, 92% { opacity: 1; transform: none; }
+  97%, 100% { opacity: 0; transform: none; }
+}
+
+@keyframes on3 {
+  0%, 42% { opacity: 0; transform: translateY(5px); }
+  45%, 92% { opacity: 1; transform: none; }
+  97%, 100% { opacity: 0; transform: none; }
+}
+
+@keyframes on4 {
+  0%, 56% { opacity: 0; transform: translateY(5px); }
+  59%, 92% { opacity: 1; transform: none; }
+  97%, 100% { opacity: 0; transform: none; }
+}
+
+@keyframes on5 {
+  0%, 70% { opacity: 0; transform: translateY(5px); }
+  73%, 92% { opacity: 1; transform: none; }
+  97%, 100% { opacity: 0; transform: none; }
+}
+
+@keyframes until1 {
+  0%, 14% { opacity: 1; }
+  17%, 92% { opacity: 0; }
+  97%, 100% { opacity: 1; }
+}
+
+@keyframes until2 {
+  0%, 28% { opacity: 1; }
+  31%, 92% { opacity: 0; }
+  97%, 100% { opacity: 1; }
+}
+
+@keyframes until3 {
+  0%, 42% { opacity: 1; }
+  45%, 92% { opacity: 0; }
+  97%, 100% { opacity: 1; }
+}
+
+@keyframes until4 {
+  0%, 56% { opacity: 1; }
+  59%, 92% { opacity: 0; }
+  97%, 100% { opacity: 1; }
+}
+
+@keyframes until5 {
+  0%, 70% { opacity: 1; }
+  73%, 92% { opacity: 0; }
+  97%, 100% { opacity: 1; }
+}
+
+@keyframes fill {
+  0%, 14% { width: var(--from); }
+  56%, 92% { width: var(--to); }
+  100% { width: var(--from); }
+}
+
+@keyframes pulse {
+  0%, 70% { box-shadow: 0 0 0 0 rgba(14, 116, 144, 0); }
+  74% { box-shadow: 0 0 0 5px rgba(14, 116, 144, 0.28); }
+  80%, 100% { box-shadow: 0 0 0 0 rgba(14, 116, 144, 0); }
+}
+
+/* Final frame, no motion. Every step class needs a rule here. */
+@media (prefers-reduced-motion: reduce) {
+  .on1, .on2, .on3, .on4, .on5 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .until1, .until2, .until3, .until4, .until5 {
+    animation: none;
+    opacity: 0;
+  }
+
+  .fill {
+    animation: none;
+    width: var(--to);
+  }
+
+  .pulse {
+    animation: none;
+  }
+}

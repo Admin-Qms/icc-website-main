@@ -21,18 +21,27 @@ export function PageHeader({
   intro,
   children,
   fx,
+  visual,
 }: {
   eyebrow: string;
   title: React.ReactNode;
   intro: string;
   children?: React.ReactNode;
   fx?: React.ReactNode;
+  /** Optional product loop shown beside the text at lg and above, under it below lg. */
+  visual?: React.ReactNode;
 }) {
   return (
     <section className="relative overflow-hidden border-b border-slate-200 bg-blueprint pb-14 pt-32 lg:pb-20 lg:pt-40">
       <BannerDecor />
       {fx}
-      <div className="container-page relative">
+      <div
+        className={
+          visual
+            ? "container-page relative lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:items-center lg:gap-12"
+            : "container-page relative"
+        }
+      >
         <div className="max-w-3xl">
           <Reveal>
             <Label>{eyebrow}</Label>
@@ -51,6 +60,7 @@ export function PageHeader({
             </Reveal>
           )}
         </div>
+        {visual && <div className="mt-10 max-w-[520px] lg:mt-0 lg:max-w-none">{visual}</div>}
       </div>
     </section>
   );

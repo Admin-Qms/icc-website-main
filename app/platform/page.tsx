@@ -6,6 +6,7 @@ import { Icon, ArrowRight, Check } from "@/components/Icons";
 import { PLATFORM, DIFFERENTIATORS, AI_PRINCIPLES, SITE } from "@/lib/site";
 import { pageTitle } from "@/lib/seo";
 import { serializeJsonLd } from "@/lib/blog";
+import { PlatformLoop } from "@/components/loops";
 
 const DESCRIPTION =
   "Eleven modules and an AI Assistant for standards, documents, audits, training and suppliers. AI compliance software where a person reviews and signs off.";
@@ -58,6 +59,7 @@ export default function PlatformPage() {
         eyebrow="The software"
         title={<>The AI-powered operating system for <span className="text-teal-700">quality and compliance</span></>}
         intro="Our compliance management software puts eleven modules in one place and keeps the evidence a certification audit asks for as your team works, instead of leaving it to be assembled in a panic beforehand. AI does the paperwork, and the software flags what is slipping before an auditor finds it. You stay ready for an audit any day, for any standard you certify against."
+        visual={<PlatformLoop />}
       >
         <Link href="/solutions" className="btn-primary">
           See the modules <ArrowRight className="h-4 w-4" />
