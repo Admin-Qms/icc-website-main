@@ -149,6 +149,23 @@ New content carries the message through the rule files. Every page, old and new,
 | `content/chatbot-context.md` | "Who the company is" puts the platform first and consulting second, so the site's chat assistant answers software questions with the same message and points to a demo. |
 | Guide topic queue | Software-intent searches belong to guides (see keyword ownership). Add only the terms not already queued, such as "training matrix software", "audit management software" and "IATF 16949 compliance software". Add them as scout seeds so the weekly scout validates them. Approvals are never hand-edited. The blog keyword queue is unchanged. |
 
+## Product loops
+
+Added 2026-10-27 on Owner direction ("proceed with the implementation of the designed product loops, for all the modules we have and wherever necessary").
+
+**Where they show.** One loop on `/platform/` (the platform overview) and one on each of the 11 module pages, in the right half of the page header through the `PageHeader` `visual` slot. Below `lg` the loop sits under the buttons. The home page has none, by Owner decision (no home layout change). A module without a loop renders its header as before.
+
+**Rules.**
+- Unbranded: an app window titled "Compliance Management Software", no product name, logo or app link. The assistant is called "AI Assistant".
+- Accurate to `lib/site.ts`: a loop shows only steps, states and labels that module's entry names, using its exact status words.
+- AI rules hold: AI drafts and carries out tasks within the user's permissions, and a person reviews and accepts. AI never flags or warns, and never does gap assessments or audit findings.
+- Fictional sample data only: roles, not people's names; invented codes and "Ltd." company names. Every loop carries the "Sample data" chip.
+- Short, silent, CSS-only: one 12 s timeline shared by all loops, no video, no client JavaScript.
+- `prefers-reduced-motion: reduce` shows the final frame, with no animation.
+- Fits a 360px screen with no horizontal scroll. The loop root is `role="img"` with a one- or two-sentence label; its content is `aria-hidden`.
+
+Code and tests: `components/loops/`, `tests/product-loops.test.mjs`.
+
 ## Verification (per phase)
 
 - A text search of the changed files finds no "YourQMS", "Quro", "AI gap assessment" or "AI audit finding". No `href` points to yourqms.com.

@@ -1,3 +1,5 @@
+import { AssetsLoop } from "./AssetsLoop";
+import { AssistantLoop } from "./AssistantLoop";
 import { AuditsLoop } from "./AuditsLoop";
 import { DocumentsLoop } from "./DocumentsLoop";
 import { ImprovementsLoop } from "./ImprovementsLoop";
@@ -6,6 +8,7 @@ import { SafetyLoop } from "./SafetyLoop";
 import { StandardsLoop } from "./StandardsLoop";
 import { SupplierQualityLoop } from "./SupplierQualityLoop";
 import { TrainingLoop } from "./TrainingLoop";
+import { VendorsLoop } from "./VendorsLoop";
 
 export { PlatformLoop } from "./PlatformLoop";
 
@@ -22,5 +25,7 @@ export const MODULE_LOOPS: Record<string, () => JSX.Element> = {
   safety: SafetyLoop,
   "training-competence": TrainingLoop,
   "supplier-quality": SupplierQualityLoop,
-  // Task 4: assets, vendors, AI Assistant
+  "calibration-maintenance": AssetsLoop,
+  vendors: VendorsLoop,
+  "ai-assistant": AssistantLoop,
 };

@@ -56,7 +56,7 @@ test("no loop uses the product name", () => {
   assert.deepEqual(hits, []);
 });
 
-test("every registered loop file exists and four modules are registered", () => {
+test("every registered loop file exists and modules are registered", () => {
   const index = readFileSync(join(LOOPS, "index.ts"), "utf8");
   const body = index.slice(index.indexOf("MODULE_LOOPS"));
   const keys = [...body.matchAll(/^\s*(?:"([a-z0-9-]+)"|([a-z0-9]+))\s*:/gm)].map((m) => m[1] ?? m[2]);
@@ -80,4 +80,14 @@ test("LoopFrame puts the active tab right after Home", async () => {
     assert.equal(new Set(t).size, t.length, `duplicate tabs for ${a}`);
   }
   assert.match(readFileSync(join(LOOPS, "LoopFrame.tsx"), "utf8"), /orderTabs\(active\)/);
+});
+
+test("every MODULES slug is registered in MODULE_LOOPS", async () => {
+  const { MODULES } = await import("../lib/site.ts");
+  const index = readFileSync(join(LOOPS, "index.ts"), "utf8");
+  const body = index.slice(index.indexOf("MODULE_LOOPS"));
+  const keys = [...body.matchAll(/^\s*(?:"([a-z0-9-]+)"|([a-z0-9]+))\s*:/gm)].map((m) => m[1] ?? m[2]);
+  const missing = MODULES.map((m) => m.slug).filter((s) => !keys.includes(s));
+  assert.deepEqual(missing, []);
+  assert.equal(keys.length, MODULES.length);
 });
