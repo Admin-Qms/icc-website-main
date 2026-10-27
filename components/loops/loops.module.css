@@ -686,7 +686,7 @@
   display: grid;
   padding: 4px 0;
   border-radius: 5px;
-  font-size: 8.5px;
+  font-size: 10px;
   font-weight: 700;
   line-height: 1.15;
   overflow-wrap: normal;
@@ -696,7 +696,7 @@
 
 .impBase {
   background: #eef2f6;
-  color: #94a3b8;
+  color: #64748b;
 }
 
 .impDone {
@@ -925,7 +925,7 @@
 }
 
 .supMark .supNew {
-  color: var(--gold);
+  color: #b45309;
 }
 
 .supLinked {

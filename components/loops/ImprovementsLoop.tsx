@@ -5,10 +5,10 @@ const LABEL =
   "Sample Improvements screen for nonconformance NC-0217, a burr on a bracket edge: containment is recorded, root cause is worked with 5 Whys, a corrective action gets an owner and a due date, the effectiveness check is verified, and only then is the item closed.";
 
 const STEPS = [
-  ["Containment", "on1"],
+  ["Contain", "on1"],
   ["Root cause", "on2"],
   ["CAPA", "on3"],
-  ["Effectiveness", "on4"],
+  ["Verify", "on4"],
   ["Closed", "on5"],
 ] as const;
 

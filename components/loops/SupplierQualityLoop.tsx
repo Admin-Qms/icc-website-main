@@ -39,10 +39,7 @@ export function SupplierQualityLoop() {
           <div className={s.supMarks}>
             <span className={s.supMark}>
               Delivery{" "}
-              <span className={s.stack}>
-                <b className={s.until4}>96%</b>
-                <b className={`${s.supNew} ${s.on4}`}>94%</b>
-              </span>
+              <b>96%</b>
             </span>
             <span className={s.supMark}>
               Quality{" "}
