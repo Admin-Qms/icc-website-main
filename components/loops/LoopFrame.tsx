@@ -1,6 +1,5 @@
 import s from "./loops.module.css";
-
-const TABS = ["Home", "Standards", "Documents", "Audits", "Improvements", "Training"];
+import { orderTabs } from "./tabs";
 
 /**
  * Unbranded app window for a product loop. The root is one image for assistive
@@ -15,7 +14,7 @@ export function LoopFrame({
   label: string;
   children: React.ReactNode;
 }) {
-  const tabs = TABS.includes(active) ? TABS : [...TABS, active];
+  const tabs = orderTabs(active);
   return (
     <div role="img" aria-label={label} className={`${s.window} font-sans`}>
       <div aria-hidden="true">

@@ -69,3 +69,15 @@ test("every registered loop file exists and four modules are registered", () => 
     assert.ok(statSync(join(LOOPS, `${f}.tsx`)).isFile(), `${f}.tsx does not exist`);
   }
 });
+
+test("LoopFrame puts the active tab right after Home", async () => {
+  const { orderTabs } = await import("../components/loops/tabs.ts");
+  assert.equal(orderTabs("Audits")[1], "Audits");
+  assert.equal(orderTabs("Processes")[1], "Processes");
+  assert.equal(orderTabs("Home")[0], "Home");
+  for (const a of ["Home", "Audits", "AI Assistant"]) {
+    const t = orderTabs(a);
+    assert.equal(new Set(t).size, t.length, `duplicate tabs for ${a}`);
+  }
+  assert.match(readFileSync(join(LOOPS, "LoopFrame.tsx"), "utf8"), /orderTabs\(active\)/);
+});
