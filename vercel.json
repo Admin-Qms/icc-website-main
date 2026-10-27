@@ -6,6 +6,11 @@
   },
   "redirects": [
     {
+      "source": "/environment-energy/",
+      "destination": "/services/iso-14001/",
+      "statusCode": 301
+    },
+    {
       "source": "/npri-consultant-canada/",
       "destination": "/services/iso-14001/",
       "permanent": true
