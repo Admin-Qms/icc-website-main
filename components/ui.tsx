@@ -60,7 +60,7 @@ export function PageHeader({
             </Reveal>
           )}
         </div>
-        {visual && <div className="mt-10 max-w-[520px] lg:mt-0 lg:max-w-none">{visual}</div>}
+        {visual && <div className="mt-10 w-full min-w-0 max-w-[520px] lg:mt-0 lg:max-w-none">{visual}</div>}
       </div>
     </section>
   );

@@ -28,7 +28,10 @@
   --green: #15803d;
   position: relative;
   width: 100%;
+  max-width: 100%;
   min-width: 0;
+  /* Children never add to the window's min-content width, so it can't widen the page. */
+  contain: inline-size;
   overflow: hidden;
   border: 1px solid #d7dfe9;
   border-radius: 12px;
@@ -98,8 +101,9 @@
 
 .tabList {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 1 0;
   gap: 14px;
+  width: 0;
   min-width: 0;
   height: 100%;
   overflow: hidden;
@@ -249,11 +253,13 @@
   background: linear-gradient(90deg, var(--teal), #22a6bf);
 }
 
+/* Bottom-left, over the Open and In progress columns (empty by step 5), so the
+   Verified card stays visible. */
 .toast {
   position: absolute;
-  right: 12px;
+  left: 12px;
   bottom: 12px;
-  max-width: 64%;
+  max-width: calc((100% - 36px) * 2 / 3 + 6px);
   padding: 8px 11px;
   border-radius: 8px;
   background: var(--navy);
