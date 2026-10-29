@@ -41,6 +41,26 @@
     {
       "term": "Effectiveness check",
       "definition": "A check of whether an action worked, which may need to occur after the action is carried out."
+    },
+    {
+      "term": "Cutover",
+      "definition": "The point at which the new system becomes the working record."
+    },
+    {
+      "term": "Move and use",
+      "definition": "An inventory class for records needed for planning or follow-up."
+    },
+    {
+      "term": "Move and archive",
+      "definition": "An inventory class for records worth keeping and making searchable but not used in daily work."
+    },
+    {
+      "term": "Leave and reference",
+      "definition": "An inventory class for records kept in their existing location with a pointer from the new system."
+    },
+    {
+      "term": "Retire",
+      "definition": "An inventory class for records no longer needed, subject to retention rules."
     }
   ],
   "roles": [
@@ -73,7 +93,8 @@
     "Uninvolved person",
     "Checker",
     "Independent checker",
-    "Reviewer from another department"
+    "Reviewer from another department",
+    "Data steward"
   ],
   "recordNames": [
     "Audit schedule",
@@ -149,7 +170,20 @@
     "Reopening decision",
     "Finding history",
     "Program report",
-    "Calibration record"
+    "Calibration record",
+    "Inventory",
+    "Retention rules",
+    "Field list",
+    "Lookup table",
+    "Mapping table",
+    "Pilot set",
+    "Import rules",
+    "Verification checklist",
+    "Verification log",
+    "Access list",
+    "Cutover plan",
+    "Change log",
+    "Preserved copy of old records"
   ],
   "example": {
     "label": "Illustrative example",
@@ -244,6 +278,22 @@
         "Reopen or decline reopening a finding, including deciding ownership and timing.",
         "Delegate a reopening decision when the quality manager or original checker is involved in a dispute.",
         "Accept or hold a program report, resolve untraceable figures or missing coverage, and decide what actions follow."
+      ]
+    },
+    {
+      "slug": "migration-planning",
+      "title": "Planning migration and configuration: Internal audit management software",
+      "summary": "The page covers the assigned migration workflows, uses supported claims and labeled hypothetical examples, and adds no unassigned FAQ. Links match the supplied source records; live availability was not independently checked.",
+      "bodyHash": "6ebf8602be0cb93f5186de8c487c48c46101d0e70d5a9fff39858475f16d0e9e",
+      "decisions": [
+        "Classify each record type and accept or return the inventory.",
+        "Assign ownership and an interim class when ownership or retention rules are unclear.",
+        "Fix, defer or mark data gaps as unknown.",
+        "Establish relationship matches or seek approval for unknown links.",
+        "Accept or rerun the pilot, or approve progression with a documented gap.",
+        "Approve or postpone cutover based on verification, gap limits and access.",
+        "Roll back or continue with an approved, limited gap when a cutover trigger is met.",
+        "Determine how paper records and late changes will be handled."
       ]
     }
   ],

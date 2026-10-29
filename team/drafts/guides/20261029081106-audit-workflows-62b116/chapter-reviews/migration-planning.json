@@ -1,0 +1,172 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The page covers the assigned migration workflows, uses supported claims and labeled hypothetical examples, and adds no unassigned FAQ. Links match the supplied source records; live availability was not independently checked.",
+  "glossary": [
+    {
+      "term": "Cutover",
+      "definition": "The point at which the new system becomes the working record."
+    },
+    {
+      "term": "Move and use",
+      "definition": "An inventory class for records needed for planning or follow-up."
+    },
+    {
+      "term": "Move and archive",
+      "definition": "An inventory class for records worth keeping and making searchable but not used in daily work."
+    },
+    {
+      "term": "Leave and reference",
+      "definition": "An inventory class for records kept in their existing location with a pointer from the new system."
+    },
+    {
+      "term": "Retire",
+      "definition": "An inventory class for records no longer needed, subject to retention rules."
+    }
+  ],
+  "roles": [
+    "Quality manager",
+    "Process owner",
+    "Top management",
+    "Data steward",
+    "Auditor",
+    "Independent checker",
+    "System administrator",
+    "Vendor",
+    "Planner"
+  ],
+  "recordNames": [
+    "Record map",
+    "Inventory",
+    "Retention rules",
+    "Audit program",
+    "Audit schedule",
+    "Audit plan",
+    "Audit report",
+    "Finding",
+    "Corrective action log",
+    "Follow-up evidence",
+    "Field list",
+    "Lookup table",
+    "Mapping table",
+    "Pilot set",
+    "Import rules",
+    "Verification checklist",
+    "Verification log",
+    "Audit calendar",
+    "Access list",
+    "Cutover plan",
+    "Change log",
+    "Preserved copy of old records"
+  ],
+  "decisions": [
+    "Classify each record type and accept or return the inventory.",
+    "Assign ownership and an interim class when ownership or retention rules are unclear.",
+    "Fix, defer or mark data gaps as unknown.",
+    "Establish relationship matches or seek approval for unknown links.",
+    "Accept or rerun the pilot, or approve progression with a documented gap.",
+    "Approve or postpone cutover based on verification, gap limits and access.",
+    "Roll back or continue with an approved, limited gap when a cutover trigger is met.",
+    "Determine how paper records and late changes will be handled."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Inventory and classify existing records",
+        "section": "Inventory and classify existing records"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Inventory and classify existing records; semantic review verifies support",
+        "section": "Inventory and classify existing records"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Clean data and map relationships",
+        "section": "Clean data and map relationships"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Clean data and map relationships; semantic review verifies support",
+        "section": "Clean data and map relationships"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Pilot the import and verify results",
+        "section": "Pilot the import and verify results"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Pilot the import and verify results; semantic review verifies support",
+        "section": "Pilot the import and verify results"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Plan cutover and recovery",
+        "section": "Plan cutover and recovery"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Plan cutover and recovery; semantic review verifies support",
+        "section": "Plan cutover and recovery"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "4883db4f154293b52c98bdc84b36c346e13ce5e1063a3157365da5eb416a88c7",
+  "outputContextHash": "54cf6f2ea7d3bf8c3dab60bf115a4abbd77caa8fe7da6b7f070d974df591a14a",
+  "reviewedAt": "2026-10-29T19:40:26.453Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
