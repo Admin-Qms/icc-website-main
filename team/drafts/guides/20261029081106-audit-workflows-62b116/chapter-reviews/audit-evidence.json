@@ -1,0 +1,154 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The page covers the assigned evidence-collection workflows with supported citations, actionable demonstration tests and labeled hypothetical examples. No FAQ was assigned or included.",
+  "glossary": [
+    {
+      "term": "Observation",
+      "definition": "What an auditor saw, read or was told, recorded in enough detail for someone else to check it."
+    },
+    {
+      "term": "Workflow questions",
+      "definition": "Questions about how a process works, including who starts it, what record it creates, who checks it and what happens when something goes wrong."
+    }
+  ],
+  "roles": [
+    "Workflow owner",
+    "Quality manager",
+    "Lead auditor",
+    "Auditor",
+    "Auditee",
+    "Second reviewer",
+    "Process owner",
+    "System administrator",
+    "Top management",
+    "Contractor",
+    "Vendor"
+  ],
+  "recordNames": [
+    "Audit plan",
+    "Scope entry",
+    "Prior findings",
+    "Process map",
+    "Checklist",
+    "Observation record",
+    "Trial observations",
+    "Criteria list",
+    "Evidence-to-criterion links",
+    "Torque log",
+    "Work instruction",
+    "Customer requirement",
+    "Customer drawing",
+    "Access rules",
+    "Test log",
+    "Temporary-access decision",
+    "Shift pattern"
+  ],
+  "decisions": [
+    "Whether to accept or return the checklist and how to resolve unsuitable or disputed questions.",
+    "Whether the observation-recording method is acceptable and how to capture observations without a connection or device.",
+    "Whether each evidence-to-criterion link is sound and how to handle evidence without a matching criterion or a criterion without evidence.",
+    "Which user types may see or change each record type and whether the access configuration passes the approved rules.",
+    "Whether to grant, narrow or refuse temporary access and how to handle an access rule the product cannot enforce."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Preparing workflow questions",
+        "section": "Preparing workflow questions"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Preparing workflow questions; semantic review verifies support",
+        "section": "Preparing workflow questions"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Recording observations",
+        "section": "Recording observations"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Recording observations; semantic review verifies support",
+        "section": "Recording observations"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Linking evidence to criteria",
+        "section": "Linking evidence to criteria"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Linking evidence to criteria; semantic review verifies support",
+        "section": "Linking evidence to criteria"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Protecting sensitive records",
+        "section": "Protecting sensitive records"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Protecting sensitive records; semantic review verifies support",
+        "section": "Protecting sensitive records"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "5ca1aaada55277b0e84d346f4f5798ae53f460fab3ef4a40b5cb9a7c87b50550",
+  "outputContextHash": "de5287a3eafef22b9e08dc8222558e2f75cb5d881698ad2f08c33b78f7343a5b",
+  "reviewedAt": "2026-10-29T18:23:16.571Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

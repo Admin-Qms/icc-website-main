@@ -21,6 +21,14 @@
     {
       "term": "Criteria",
       "definition": "The requirements and internal procedures used as references for an audit."
+    },
+    {
+      "term": "Observation",
+      "definition": "What an auditor saw, read or was told, recorded in enough detail for someone else to check it."
+    },
+    {
+      "term": "Workflow questions",
+      "definition": "Questions about how a process works, including who starts it, what record it creates, who checks it and what happens when something goes wrong."
     }
   ],
   "roles": [
@@ -85,7 +93,21 @@
     "Priority list",
     "Sampling notes",
     "Reduced-frequency justification",
-    "Change entry"
+    "Change entry",
+    "Prior findings",
+    "Process map",
+    "Checklist",
+    "Observation record",
+    "Trial observations",
+    "Criteria list",
+    "Evidence-to-criterion links",
+    "Torque log",
+    "Work instruction",
+    "Customer requirement",
+    "Customer drawing",
+    "Access rules",
+    "Test log",
+    "Temporary-access decision"
   ],
   "example": {
     "label": "Illustrative example",
@@ -138,6 +160,19 @@
         "Reschedule or change sampling when an area is unavailable.",
         "Approve or reject moving, adding or canceling an audit based on the reason and effect on coverage.",
         "Decide how to handle short-notice change requests or requests from outside the quality function."
+      ]
+    },
+    {
+      "slug": "audit-evidence",
+      "title": "Collecting and connecting audit evidence: Internal audit management software",
+      "summary": "The page covers the assigned evidence-collection workflows with supported citations, actionable demonstration tests and labeled hypothetical examples. No FAQ was assigned or included.",
+      "bodyHash": "97573689dc4349e1cd010ff1f9e0bde8c24ff66e7153ecaee1822e1b8e86d879",
+      "decisions": [
+        "Whether to accept or return the checklist and how to resolve unsuitable or disputed questions.",
+        "Whether the observation-recording method is acceptable and how to capture observations without a connection or device.",
+        "Whether each evidence-to-criterion link is sound and how to handle evidence without a matching criterion or a criterion without evidence.",
+        "Which user types may see or change each record type and whether the access configuration passes the approved rules.",
+        "Whether to grant, narrow or refuse temporary access and how to handle an access rule the product cannot enforce."
       ]
     }
   ],
