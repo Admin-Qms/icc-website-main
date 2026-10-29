@@ -92,10 +92,17 @@
       "readTime": 10,
       "status": "written",
       "checkpointedAt": "2026-10-29T19:50:04.694Z"
+    },
+    "ongoing-operation": {
+      "hash": "6cb796f9cb56f67dd7948eed409e6f08ff1c144e6d70f40d091cf14431cdac75",
+      "wordCount": 2000,
+      "readTime": 10,
+      "status": "written",
+      "checkpointedAt": "2026-10-29T21:00:49.448Z"
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-10-29T19:50:28.304Z",
+  "updatedAt": "2026-10-29T21:01:13.494Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -2678,6 +2685,217 @@
       "inputHash": "658259a3ee8a56d0b1326dbb7f2b1d4a0191a01e3e6c3edfc8dce82478759f58",
       "outputContextHash": "eeb53f3a5c9d57c04e442df13ed51ed5ae6c656cdc80a6501a5f7dd78262cf69",
       "reviewedAt": "2026-10-29T19:50:28.302Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "ongoing-operation": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "failed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [
+        {
+          "section": "Links and final call to action",
+          "reason": "The cited source URLs match the supplied research, but live availability was not verified. The supplied context also does not establish that /contact/ is a valid demonstration-request destination.",
+          "action": "Check that each linked source opens and that /contact/ accepts demonstration requests; repair any unavailable or unsuitable links."
+        }
+      ],
+      "summary": "The page follows the assigned subsections, including the FAQ, and distinguishes sourced claims from proposed practices and hypothetical examples. Link destinations still need verification.",
+      "glossary": [],
+      "roles": [
+        "Workflow owner",
+        "Quality manager",
+        "Process owner",
+        "Top management",
+        "Vendor",
+        "Auditor",
+        "Planner",
+        "Owner",
+        "Checker",
+        "Note taker"
+      ],
+      "recordNames": [
+        "Audit plan",
+        "Finding",
+        "Action",
+        "Follow-up evidence",
+        "Issue log",
+        "Review report",
+        "Improvement list",
+        "Overdue-actions report",
+        "Approved answers",
+        "Audit program",
+        "Audit report",
+        "Inventory",
+        "Retention rules",
+        "Checklist",
+        "Observation",
+        "Problem statement",
+        "Acceptance criteria",
+        "Test script",
+        "Representative records",
+        "Demonstration pack",
+        "Customer drawing"
+      ],
+      "decisions": [
+        "Whether the workflow review meets the stated traceability and access criteria or is returned.",
+        "What correction and due date to assign to a review problem, and whether top management approves a time-limited exception.",
+        "Which improvement proposals are complete and which to prioritize.",
+        "Whether to support a claimed benefit with a method or proceed without a figure.",
+        "Whether an FAQ answer matches the procedure and evidence or needs correction.",
+        "How to resolve and record a conflict between an answer and a procedure.",
+        "Whether the demonstration pack meets the readiness criteria or is returned.",
+        "What substitute to use when a representative record cannot be shared."
+      ],
+      "pass": false,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Review the workflow and evidence",
+            "section": "Review the workflow and evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Review the workflow and evidence; semantic review verifies support",
+            "section": "Review the workflow and evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Evaluate improvements without invented ROI",
+            "section": "Evaluate improvements without invented ROI"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Evaluate improvements without invented ROI; semantic review verifies support",
+            "section": "Evaluate improvements without invented ROI"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Frequently asked questions",
+            "section": "Frequently asked questions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Frequently asked questions; semantic review verifies support",
+            "section": "Frequently asked questions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Prepare a software demonstration",
+            "section": "Prepare a software demonstration"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Prepare a software demonstration; semantic review verifies support",
+            "section": "Prepare a software demonstration"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What problem should internal audit software solve first?",
+            "section": "What problem should internal audit software solve first?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Which records should be migrated?",
+            "section": "Which records should be migrated?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should responsibilities and permissions be assigned?",
+            "section": "How should responsibilities and permissions be assigned?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should approval decisions be tested?",
+            "section": "How should approval decisions be tested?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should a team handle obsolete records?",
+            "section": "How should a team handle obsolete records?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What evidence should be available during an audit?",
+            "section": "What evidence should be available during an audit?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should training and rollout be evaluated?",
+            "section": "How should training and rollout be evaluated?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Does software guarantee ISO certification?",
+            "section": "Does software guarantee ISO certification?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What should be prepared for a software demonstration?",
+            "section": "What should be prepared for a software demonstration?"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "bbe0c1343e74c7eeed084c2498994b6b83220425ced865ef014cdd51a2ef082a",
+      "outputContextHash": "eeb53f3a5c9d57c04e442df13ed51ed5ae6c656cdc80a6501a5f7dd78262cf69",
+      "reviewedAt": "2026-10-29T21:01:13.492Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
