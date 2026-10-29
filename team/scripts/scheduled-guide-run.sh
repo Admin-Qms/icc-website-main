@@ -73,6 +73,7 @@ case "${1:-}" in
     git checkout -q -B main origin/main
     npm ci --prefix team --no-audit --no-fund
     npm ci --no-audit --no-fund
+    node team/scripts/provider-status.js >&2 || true
     restore_state
     out="$(mktemp)"
     node team/pm.js guide brief --scheduled 2>&1 | tee "$out" >&2 || true

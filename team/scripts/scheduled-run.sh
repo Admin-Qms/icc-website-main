@@ -19,6 +19,7 @@ case "${1:-}" in
     git checkout -q -B main origin/main
     npm ci --prefix team --no-audit --no-fund
     npm ci --no-audit --no-fund
+    node team/scripts/provider-status.js >&2 || true
     out="$(node team/pm.js blog brief 2>&1 | tee /dev/stderr | tail -n 20)" || true
     folder="$(printf '%s\n' "$out" | sed -n 's/^BRIEF //p' | tail -n 1)"
     if [ -n "$folder" ]; then

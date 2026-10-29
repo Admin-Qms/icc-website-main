@@ -211,7 +211,7 @@ async function pickKeyword() {
     const raw = await claudeCall(
       SYSTEM_PROMPT,
       problem ? `${userPrompt}\n\nYOUR PREVIOUS ANSWER WAS REJECTED: ${problem} Fix that and answer again.` : userPrompt,
-      2048
+      4096
     );
     result = parseJSONReply(raw);
 

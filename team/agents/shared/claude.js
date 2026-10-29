@@ -1,30 +1,46 @@
 const {
-  LLM_PROVIDER,
+  LLM_PROVIDERS,
   CLAUDE_API_KEY,
   CLAUDE_MODEL,
   CLAUDE_MODEL_FAST,
   GEMINI_API_KEY,
   GEMINI_TEXT_MODEL,
   GEMINI_TEXT_MODEL_FAST,
+  OPENAI_API_KEY,
+  OPENAI_TEXT_MODEL,
+  OPENAI_TEXT_MODEL_FAST,
 } = require("./config");
 
 // Every agent reaches the model through this file, so the provider switch lives here.
-// LLM_PROVIDER=claude|gemini (see config.js); "main" is the writing model, "fast" the helpers.
+// LLM_PROVIDERS=openai,gemini (see config.js) tries each provider in order and falls back
+// to the next when one fails; "main" is the writing model, "fast" the helpers.
 
 const RETRY_DELAY = 10000;
 const MAX_RETRIES = 3;
 
+const KEYS = { claude: CLAUDE_API_KEY, gemini: GEMINI_API_KEY, openai: OPENAI_API_KEY };
+const KEY_NAMES = { claude: "CLAUDE_API_KEY", gemini: "GEMINI_API_KEY", openai: "OPENAI_API_KEY" };
+
 let anthropicClient = null;
 let geminiClient = null;
 
+function readyProviders() {
+  return LLM_PROVIDERS.filter((p) => KEYS[p] && providers[p]);
+}
+
 function hasLLMKey() {
-  return LLM_PROVIDER === "gemini" ? Boolean(GEMINI_API_KEY) : Boolean(CLAUDE_API_KEY);
+  return readyProviders().length > 0;
 }
 
 function requireKey() {
   if (hasLLMKey()) return;
-  const name = LLM_PROVIDER === "gemini" ? "GEMINI_API_KEY" : "CLAUDE_API_KEY";
-  throw new Error(`${name} is not set (LLM_PROVIDER=${LLM_PROVIDER}) — add it to team/.env`);
+  const names = LLM_PROVIDERS.map((p) => KEY_NAMES[p] || `${p} (unknown provider)`).join(" or ");
+  throw new Error(`${names} is not set (LLM_PROVIDERS=${LLM_PROVIDERS.join(",")}) — add it to team/.env`);
+}
+
+/** One line per configured text provider: set or missing, never the key itself. */
+function providerSummary() {
+  return LLM_PROVIDERS.map((p) => `${p}: ${KEYS[p] ? "key set" : "key missing, skipped"}`).join("; ");
 }
 
 async function callClaude(tier, systemPrompt, userMessage, maxTokens) {
@@ -52,8 +68,7 @@ async function callGemini(tier, systemPrompt, userMessage, maxTokens) {
     contents: userMessage,
     config: {
       systemInstruction: systemPrompt,
-      // Gemini counts its thinking against this limit, so leave headroom above the answer size.
-      maxOutputTokens: Math.max(maxTokens * 2, 8192),
+      maxOutputTokens: withThinkingRoom(maxTokens),
     },
   });
   const finishReason = response.candidates?.[0]?.finishReason;
@@ -63,6 +78,43 @@ async function callGemini(tier, systemPrompt, userMessage, maxTokens) {
   }
   return { text, truncated: finishReason === "MAX_TOKENS" };
 }
+
+// Reasoning models count their hidden thinking against the output limit, so a short
+// answer can be cut off. Give them room well above the size of the answer itself.
+function withThinkingRoom(maxTokens) {
+  return Math.max(maxTokens * 4, 16384);
+}
+
+async function callOpenAI(tier, systemPrompt, userMessage, maxTokens) {
+  const res = await fetch("https://api.openai.com/v1/responses", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${OPENAI_API_KEY}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: tier === "fast" ? OPENAI_TEXT_MODEL_FAST : OPENAI_TEXT_MODEL,
+      instructions: systemPrompt,
+      input: userMessage,
+      max_output_tokens: withThinkingRoom(maxTokens),
+    }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    const err = new Error(`OpenAI ${res.status}: ${data.error?.message || res.statusText}`);
+    err.status = res.status;
+    throw err;
+  }
+  const text = (data.output || [])
+    .filter((item) => item.type === "message")
+    .flatMap((item) => item.content || [])
+    .filter((part) => part.type === "output_text")
+    .map((part) => part.text)
+    .join("");
+  const truncated = data.status === "incomplete" && data.incomplete_details?.reason === "max_output_tokens";
+  if (!text && !truncated) throw new Error(`OpenAI returned no text (status: ${data.status || "unknown"})`);
+  return { text, truncated };
+}
+
+// Tests replace entries here to stand in for the real APIs.
+const providers = { claude: callClaude, gemini: callGemini, openai: callOpenAI };
 
 function isRetryable(err) {
   const status = err.status || err.code;
@@ -75,13 +127,7 @@ function isRetryable(err) {
   );
 }
 
-/**
- * One model call with retries on transient errors.
- * @returns {Promise<{text: string, truncated: boolean}>}
- */
-async function callLLM(tier, systemPrompt, userMessage, maxTokens) {
-  requireKey();
-  const call = LLM_PROVIDER === "gemini" ? callGemini : callClaude;
+async function callWithRetries(call, tier, systemPrompt, userMessage, maxTokens) {
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
     try {
       return await call(tier, systemPrompt, userMessage, maxTokens);
@@ -90,6 +136,25 @@ async function callLLM(tier, systemPrompt, userMessage, maxTokens) {
       await new Promise((r) => setTimeout(r, RETRY_DELAY * attempt));
     }
   }
+}
+
+/**
+ * One model call: each configured provider with a key in turn, retrying transient
+ * errors, moving to the next provider when one fails (no credits, bad key, outage).
+ * @returns {Promise<{text: string, truncated: boolean}>}
+ */
+async function callLLM(tier, systemPrompt, userMessage, maxTokens) {
+  requireKey();
+  const failures = [];
+  for (const name of readyProviders()) {
+    try {
+      return await callWithRetries(providers[name], tier, systemPrompt, userMessage, maxTokens);
+    } catch (err) {
+      failures.push(`${name}: ${err.message}`);
+      console.warn(`[llm] ${name} failed (${err.message})${failures.length < readyProviders().length ? ", trying the next provider" : ""}`);
+    }
+  }
+  throw new Error(`Every text provider failed — ${failures.join(" | ")}`);
 }
 
 // A reply cut off at the token limit is an error for prose: publishing half an
@@ -186,4 +251,4 @@ async function claudeJSONFast(systemPrompt, userMessage, maxTokens = 4096) {
   return callJSON("fast", systemPrompt, userMessage, maxTokens);
 }
 
-module.exports = { claudeCall, claudeJSON, claudeCallFast, claudeJSONFast, hasLLMKey, LLM_PROVIDER };
+module.exports = { claudeCall, claudeJSON, claudeCallFast, claudeJSONFast, hasLLMKey, providerSummary, LLM_PROVIDER: LLM_PROVIDERS[0], _providers: providers };
