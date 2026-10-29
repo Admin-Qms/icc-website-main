@@ -1,0 +1,154 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The page covers the assigned planning decisions with supported citations, actionable evaluation questions and labeled hypothetical examples. No FAQ is assigned or included.",
+  "glossary": [
+    {
+      "term": "Audit scope",
+      "definition": "The coverage defined for an audit program or an individual audit, including the processes covered and, as relevant, sites, shifts and period."
+    },
+    {
+      "term": "Criteria",
+      "definition": "The requirements and internal procedures used as references for an audit."
+    }
+  ],
+  "roles": [
+    "Workflow owner",
+    "Quality manager",
+    "Process owner",
+    "Planner",
+    "Auditor",
+    "Auditee",
+    "Top management",
+    "Second reviewer",
+    "Vendor"
+  ],
+  "recordNames": [
+    "Scope entry",
+    "Process list",
+    "Audit report",
+    "Audit finding",
+    "Auditor list",
+    "Auditor assignment",
+    "Audit program",
+    "Audit plan",
+    "Audit calendar",
+    "Production calendar",
+    "Shift pattern",
+    "Priority list",
+    "Sampling notes",
+    "Reduced-frequency justification",
+    "Change entry",
+    "Follow-up evidence"
+  ],
+  "decisions": [
+    "Define and accept program and individual audit scopes, including exclusions and their reasons.",
+    "Resolve disputed or insufficiently described scope, escalating unresolved cases.",
+    "Assign auditors based on competence and impartiality.",
+    "Decide whether to apply an added control, delay an audit or seek outside help when no impartial auditor is available.",
+    "Accept audit dates and sampled activities based on priorities, relevant cycles and shifts, and reduced-frequency justifications.",
+    "Reschedule or change sampling when an area is unavailable.",
+    "Approve or reject moving, adding or canceling an audit based on the reason and effect on coverage.",
+    "Decide how to handle short-notice change requests or requests from outside the quality function."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Defining audit scope",
+        "section": "Defining audit scope"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Defining audit scope; semantic review verifies support",
+        "section": "Defining audit scope"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Assigning suitable auditors",
+        "section": "Assigning suitable auditors"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Assigning suitable auditors; semantic review verifies support",
+        "section": "Assigning suitable auditors"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Scheduling representative activities",
+        "section": "Scheduling representative activities"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Scheduling representative activities; semantic review verifies support",
+        "section": "Scheduling representative activities"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Handling changed priorities",
+        "section": "Handling changed priorities"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Handling changed priorities; semantic review verifies support",
+        "section": "Handling changed priorities"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "27de6f27f4fb58819f3a6676d3dded7fdfc4297abe308d3874dfd732f099b4a7",
+  "outputContextHash": "a3c493679e4cb90608ab7ad77ef7a14a1e68fd14d1b232d7004be559ebdef938",
+  "reviewedAt": "2026-10-29T18:06:28.737Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

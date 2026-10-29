@@ -13,6 +13,14 @@
     {
       "term": "Acceptance criteria",
       "definition": "Testable statements used to judge software against the team's workflow."
+    },
+    {
+      "term": "Audit scope",
+      "definition": "The coverage defined for an audit program or an individual audit, including the processes covered and, as relevant, sites, shifts and period."
+    },
+    {
+      "term": "Criteria",
+      "definition": "The requirements and internal procedures used as references for an audit."
     }
   ],
   "roles": [
@@ -36,7 +44,8 @@
     "System administrator",
     "Contractor",
     "Viewer",
-    "Finance or purchasing contact"
+    "Finance or purchasing contact",
+    "Vendor"
   ],
   "recordNames": [
     "Audit schedule",
@@ -64,7 +73,19 @@
     "Contract terms",
     "Support descriptions",
     "Comparison sheet",
-    "Written recommendation"
+    "Written recommendation",
+    "Scope entry",
+    "Process list",
+    "Auditor list",
+    "Auditor assignment",
+    "Audit program",
+    "Audit calendar",
+    "Production calendar",
+    "Shift pattern",
+    "Priority list",
+    "Sampling notes",
+    "Reduced-frequency justification",
+    "Change entry"
   ],
   "example": {
     "label": "Illustrative example",
@@ -101,6 +122,22 @@
         "Whether to reject a product, change a rule or accept a procedural control when a permission rule cannot be enforced",
         "Which product to recommend and whether top management accepts the recommendation",
         "How to handle an incomplete quote"
+      ]
+    },
+    {
+      "slug": "audit-planning",
+      "title": "Planning the internal audit program: Internal audit management software",
+      "summary": "The page covers the assigned planning decisions with supported citations, actionable evaluation questions and labeled hypothetical examples. No FAQ is assigned or included.",
+      "bodyHash": "f993816941d91eb52a03f42c12e79bcfcbd5b7aae43651223ad5a4b612b77fc0",
+      "decisions": [
+        "Define and accept program and individual audit scopes, including exclusions and their reasons.",
+        "Resolve disputed or insufficiently described scope, escalating unresolved cases.",
+        "Assign auditors based on competence and impartiality.",
+        "Decide whether to apply an added control, delay an audit or seek outside help when no impartial auditor is available.",
+        "Accept audit dates and sampled activities based on priorities, relevant cycles and shifts, and reduced-frequency justifications.",
+        "Reschedule or change sampling when an area is unavailable.",
+        "Approve or reject moving, adding or canceling an audit based on the reason and effect on coverage.",
+        "Decide how to handle short-notice change requests or requests from outside the quality function."
       ]
     }
   ],
