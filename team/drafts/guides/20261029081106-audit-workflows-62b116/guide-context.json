@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "topicId": "audit-workflows",
+  "glossary": [
+    {
+      "term": "Workflow owner",
+      "definition": "The role responsible for decisions and records in the defined workflow."
+    }
+  ],
+  "roles": [
+    "Quality owner",
+    "Process owner",
+    "Operator"
+  ],
+  "recordNames": [],
+  "example": {
+    "label": "Illustrative example",
+    "description": "An unnamed Canadian manufacturer evaluates internal audit management software for one production workflow; all situations and records are hypothetical, not customer results."
+  },
+  "reviewedChapters": [],
+  "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
+}

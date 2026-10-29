@@ -1,0 +1,52 @@
+{
+  "jobId": "20261029081106-audit-workflows-62b116",
+  "topicId": "audit-workflows",
+  "capabilityIds": [],
+  "sources": [
+    {
+      "id": "apg-internal-audit",
+      "title": "ISO 9001 Auditing Practices Group: Guidance on Internal Audits (Edition 1, Amd1, 2020-07-19)",
+      "publisher": "ISO/TC 176 and International Accreditation Forum (ISO 9001 Auditing Practices Group)",
+      "url": "https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf",
+      "sourceType": "primary",
+      "retrievedAt": "2026-10-29",
+      "supportedClaims": [
+        "ISO 9001 clause 9.2.2 requires the organization to plan, establish, implement and maintain an audit programme including frequency, methods, responsibilities, planning requirements and reporting, considering the importance of the processes concerned, changes affecting the organization and results of previous audits.",
+        "Risk-based thinking focuses the internal audit programme on processes where problems have occurred or are likely, and higher-risk processes or those with nonconformities should have priority.",
+        "Auditors of the internal audit process evaluate competence, objectivity and impartiality, risk-based planning, management involvement, and how audit outcomes are used to evaluate QMS effectiveness and identify improvement.",
+        "ISO 9001 does not specify audit frequency, duration or scope; the organization defines them, and should have a process for using past audit results in planning future audits.",
+        "ISO 9001 does not require use of ISO 19011.",
+        "The paper carries a disclaimer that it has not been through an ISO, TC 176 or IAF endorsement process and is for educational purposes."
+      ]
+    },
+    {
+      "id": "apg-audit-planning",
+      "title": "ISO 9001 Auditing Practices Group: Guidance on Audit Planning (Edition 1, 2017-01-13)",
+      "publisher": "ISO/TC 176 and International Accreditation Forum (ISO 9001 Auditing Practices Group)",
+      "url": "https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf",
+      "sourceType": "primary",
+      "retrievedAt": "2026-10-29",
+      "supportedClaims": [
+        "There are two levels of planning: the audit programme and the audit plan for a single audit.",
+        "Important areas, areas with recent change and areas with past nonconformity should be scheduled as a priority; a risk-based approach may audit some areas less often if the justification is recorded.",
+        "Audit timing may need to suit production cycles, and an audit programme can change with circumstances while still achieving its intent.",
+        "Plan around processes rather than clauses; audit linked processes together so linkages and interdependencies can be explored.",
+        "Review available documented information before the audit; checklists can improve audit quality if designed to promote it.",
+        "Consider what happens on evening and night shifts.",
+        "Audit plans should be developed with the auditee where possible; the audit of internal audit is best conducted last.",
+        "Areas with no standalone process, such as leadership commitment or competence, can be verified through related processes."
+      ]
+    },
+    {
+      "id": "icc-audits-module",
+      "title": "ICC solutions page: Audits and management review",
+      "publisher": "ISO Certification Consultants Inc.",
+      "url": "https://isocertificationconsultants.ca/solutions/audits-management-review/",
+      "sourceType": "primary",
+      "retrievedAt": "2026-10-29",
+      "supportedClaims": [
+        "ICC publishes a module description for audits that mentions an annual audit programme, a single audit workspace for checklist, findings and evidence, a checklist library, findings with owners and closure status, a PDF report and audit trends. These statements are published descriptions only; availability must be confirmed in a demonstration and they are treated as evaluation questions in this guide."
+      ]
+    }
+  ]
+}
