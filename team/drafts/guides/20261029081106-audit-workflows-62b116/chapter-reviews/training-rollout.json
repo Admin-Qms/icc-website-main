@@ -1,0 +1,160 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The page covers the assigned rollout decisions, labels its examples and matches cited claims to the supplied source records. No FAQ is assigned or included. Live link availability was not independently checked.",
+  "glossary": [
+    {
+      "term": "User pilot",
+      "definition": "A test of whether representative users can perform work in the system with their records and constraints."
+    },
+    {
+      "term": "Staged deployment",
+      "definition": "Bringing groups of users or parts of the audit program into the system in a planned order."
+    }
+  ],
+  "roles": [
+    "Workflow owner",
+    "Quality manager",
+    "Trainer",
+    "Planner",
+    "Auditor",
+    "Action owner",
+    "Checker",
+    "Management",
+    "Top management",
+    "Process owner",
+    "Pilot user",
+    "Vendor",
+    "Observer"
+  ],
+  "recordNames": [
+    "Responsibility table",
+    "Task list",
+    "Sample records",
+    "Shift pattern",
+    "Learning record",
+    "Audit plan",
+    "Prior findings",
+    "Finding",
+    "Follow-up evidence",
+    "Program report",
+    "Issue log",
+    "Pilot report",
+    "Stage plan",
+    "Known-issues list",
+    "Stage records",
+    "Workload log",
+    "User feedback",
+    "Evaluation report"
+  ],
+  "decisions": [
+    "Whether a person is accepted to use the system in a role or needs more practice.",
+    "Whether to reschedule training, provide another route or limit access when a person cannot attend or pass.",
+    "Whether to accept, extend or repeat the pilot, including approval of exceptions.",
+    "How to classify and resolve pilot task failures and whether a system problem blocks rollout.",
+    "Whether to approve or hold the start of a deployment stage.",
+    "Whether to pause, roll back or continue with a workaround when a serious problem occurs.",
+    "Whether to accept rollout as complete or request further action.",
+    "Whether retraining, reconfiguration or vendor help is needed for low adoption or increased workload."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Set role-based learning tasks",
+        "section": "Set role-based learning tasks"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Set role-based learning tasks; semantic review verifies support",
+        "section": "Set role-based learning tasks"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Pilot with representative users",
+        "section": "Pilot with representative users"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Pilot with representative users; semantic review verifies support",
+        "section": "Pilot with representative users"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Manage staged deployment",
+        "section": "Manage staged deployment"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Manage staged deployment; semantic review verifies support",
+        "section": "Manage staged deployment"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Evaluate adoption and workload",
+        "section": "Evaluate adoption and workload"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Evaluate adoption and workload; semantic review verifies support",
+        "section": "Evaluate adoption and workload"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "658259a3ee8a56d0b1326dbb7f2b1d4a0191a01e3e6c3edfc8dce82478759f58",
+  "outputContextHash": "eeb53f3a5c9d57c04e442df13ed51ed5ae6c656cdc80a6501a5f7dd78262cf69",
+  "reviewedAt": "2026-10-29T19:50:28.302Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

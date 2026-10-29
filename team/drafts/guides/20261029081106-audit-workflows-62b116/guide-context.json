@@ -61,6 +61,14 @@
     {
       "term": "Retire",
       "definition": "An inventory class for records no longer needed, subject to retention rules."
+    },
+    {
+      "term": "User pilot",
+      "definition": "A test of whether representative users can perform work in the system with their records and constraints."
+    },
+    {
+      "term": "Staged deployment",
+      "definition": "Bringing groups of users or parts of the audit program into the system in a planned order."
     }
   ],
   "roles": [
@@ -94,7 +102,11 @@
     "Checker",
     "Independent checker",
     "Reviewer from another department",
-    "Data steward"
+    "Data steward",
+    "Trainer",
+    "Management",
+    "Pilot user",
+    "Observer"
   ],
   "recordNames": [
     "Audit schedule",
@@ -183,7 +195,17 @@
     "Access list",
     "Cutover plan",
     "Change log",
-    "Preserved copy of old records"
+    "Preserved copy of old records",
+    "Task list",
+    "Learning record",
+    "Issue log",
+    "Pilot report",
+    "Stage plan",
+    "Known-issues list",
+    "Stage records",
+    "Workload log",
+    "User feedback",
+    "Evaluation report"
   ],
   "example": {
     "label": "Illustrative example",
@@ -294,6 +316,22 @@
         "Approve or postpone cutover based on verification, gap limits and access.",
         "Roll back or continue with an approved, limited gap when a cutover trigger is met.",
         "Determine how paper records and late changes will be handled."
+      ]
+    },
+    {
+      "slug": "training-rollout",
+      "title": "Training teams and rolling out the system: Internal audit management software",
+      "summary": "The page covers the assigned rollout decisions, labels its examples and matches cited claims to the supplied source records. No FAQ is assigned or included. Live link availability was not independently checked.",
+      "bodyHash": "5d30e0fada320a55a7552729957a54cfdeef8a3f65984d02747b926fe2195766",
+      "decisions": [
+        "Whether a person is accepted to use the system in a role or needs more practice.",
+        "Whether to reschedule training, provide another route or limit access when a person cannot attend or pass.",
+        "Whether to accept, extend or repeat the pilot, including approval of exceptions.",
+        "How to classify and resolve pilot task failures and whether a system problem blocks rollout.",
+        "Whether to approve or hold the start of a deployment stage.",
+        "Whether to pause, roll back or continue with a workaround when a serious problem occurs.",
+        "Whether to accept rollout as complete or request further action.",
+        "Whether retraining, reconfiguration or vendor help is needed for low adoption or increased workload."
       ]
     }
   ],
