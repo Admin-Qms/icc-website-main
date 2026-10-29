@@ -1,0 +1,42 @@
+{
+  "id": "20261029081106-audit-workflows-62b116",
+  "topic": {
+    "id": "audit-workflows",
+    "topic": "Internal audit management software",
+    "aliases": [
+      "audit software"
+    ],
+    "primaryKeyword": "internal audit software",
+    "secondaryKeywords": [
+      "audit scheduling",
+      "audit evidence"
+    ],
+    "moduleSlugs": [
+      "audits-management-review"
+    ],
+    "audience": "Canadian quality and operations teams",
+    "problem": "Linking audit plans, findings and follow-up evidence",
+    "priority": 4,
+    "approval": "approved",
+    "sources": [
+      "https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf",
+      "https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf",
+      "https://isocertificationconsultants.ca/solutions/audits-management-review/"
+    ],
+    "sourcesAddedBy": "scout-reviewer",
+    "sourcesAddedAt": "2026-10-25T15:55:26.495Z",
+    "sourceReviewRules": {
+      "R1_SCOPE": "pass",
+      "R2_DISTINCT": "pass",
+      "R3_SOURCES": "pass",
+      "R4_ACCURACY": "pass",
+      "R5_FIT": "pass"
+    },
+    "sourceReviewFindings": []
+  },
+  "productionSlotId": "2026-W44-slot-2",
+  "stage": "reserved",
+  "pages": {},
+  "createdAt": "2026-10-29T08:11:06.243Z",
+  "updatedAt": "2026-10-29T08:11:06.243Z"
+}
