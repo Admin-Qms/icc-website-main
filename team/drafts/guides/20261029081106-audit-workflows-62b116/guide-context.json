@@ -33,6 +33,14 @@
     {
       "term": "Finding",
       "definition": "A judgment drawn from observations and measured against criteria."
+    },
+    {
+      "term": "Follow-up criteria",
+      "definition": "The evidence, checker and timing specified for following up a finding."
+    },
+    {
+      "term": "Effectiveness check",
+      "definition": "A check of whether an action worked, which may need to occur after the action is carried out."
     }
   ],
   "roles": [
@@ -62,7 +70,10 @@
     "Response owner",
     "Response approver",
     "Machining supervisor",
-    "Uninvolved person"
+    "Uninvolved person",
+    "Checker",
+    "Independent checker",
+    "Reviewer from another department"
   ],
   "recordNames": [
     "Audit schedule",
@@ -125,7 +136,20 @@
     "Assignment",
     "Dispute entry",
     "Auditor's response",
-    "Recorded delegation"
+    "Recorded delegation",
+    "Follow-up criteria",
+    "Approved criteria",
+    "Past findings",
+    "Action evidence",
+    "Evidence submission",
+    "Checker's decision",
+    "Owner's response",
+    "Effectiveness check",
+    "Reopening request",
+    "Reopening decision",
+    "Finding history",
+    "Program report",
+    "Calibration record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -206,6 +230,20 @@
         "Who owns the response and by when, including reassignment or escalation when ownership is not accepted.",
         "Whether a disputed finding stands, is revised, is withdrawn or is held for more evidence.",
         "Who independently reviews and accepts a dispute decision when the quality manager is involved."
+      ]
+    },
+    {
+      "slug": "audit-follow-up",
+      "title": "Following findings through closure: Internal audit management software",
+      "summary": "The page covers the four assigned workflows, labels its examples as hypothetical and distinguishes proposed tests from published capabilities. Citations match the supplied source records; live link availability was not checked. No FAQ was assigned or included.",
+      "bodyHash": "43d0ba4926d9dd19b4255728a08e678fc7e256dd608e0dc27a686698df9cdb07",
+      "decisions": [
+        "Accept or return follow-up criteria and approve a criterion for a finding that fits no category.",
+        "Accept or reject implementation evidence and decide whether closure must wait for an effectiveness check.",
+        "Approve and record an alternative control when an independent checker is unavailable.",
+        "Reopen or decline reopening a finding, including deciding ownership and timing.",
+        "Delegate a reopening decision when the quality manager or original checker is involved in a dispute.",
+        "Accept or hold a program report, resolve untraceable figures or missing coverage, and decide what actions follow."
       ]
     }
   ],

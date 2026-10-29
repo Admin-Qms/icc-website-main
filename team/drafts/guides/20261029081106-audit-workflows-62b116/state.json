@@ -71,10 +71,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-29T18:40:36.714Z"
+    },
+    "audit-follow-up": {
+      "hash": "04a5e096da8b3c66ce788540cd47757e5666ca323fc48bb4ed9611870518b7a8",
+      "wordCount": 2004,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-29T18:55:27.203Z"
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-10-29T18:40:51.378Z",
+  "updatedAt": "2026-10-29T18:55:48.908Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1406,7 +1413,7 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "5fa4c48c48fa4d59258e9ea9f4cf1b62b5437a3ed449f8e8dac230d9f2bf8d81",
+  "contextHash": "5665cbb94982887f0bceb3de30eae5608a9269ea5f7134d921002fd99fcf8d98",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2168,6 +2175,163 @@
       "inputHash": "6a57ab88617184c6cc611fd4be532334a5d1528c09a64c12754ebeaf06d6fd52",
       "outputContextHash": "5fa4c48c48fa4d59258e9ea9f4cf1b62b5437a3ed449f8e8dac230d9f2bf8d81",
       "reviewedAt": "2026-10-29T18:40:51.376Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "audit-follow-up": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The page covers the four assigned workflows, labels its examples as hypothetical and distinguishes proposed tests from published capabilities. Citations match the supplied source records; live link availability was not checked. No FAQ was assigned or included.",
+      "glossary": [
+        {
+          "term": "Follow-up criteria",
+          "definition": "The evidence, checker and timing specified for following up a finding."
+        },
+        {
+          "term": "Effectiveness check",
+          "definition": "A check of whether an action worked, which may need to occur after the action is carried out."
+        }
+      ],
+      "roles": [
+        "Workflow owner",
+        "Quality manager",
+        "Process owner",
+        "Top management",
+        "Action owner",
+        "Checker",
+        "Independent checker",
+        "Planner",
+        "Vendor",
+        "Reviewer from another department",
+        "Uninvolved person",
+        "Auditor"
+      ],
+      "recordNames": [
+        "Follow-up criteria",
+        "Approved criteria",
+        "Past findings",
+        "Audit plan",
+        "Finding",
+        "Action evidence",
+        "Evidence submission",
+        "Checker's decision",
+        "Owner's response",
+        "Effectiveness check",
+        "Reopening request",
+        "Reopening decision",
+        "Finding history",
+        "Recorded delegation",
+        "Audit program",
+        "Program report",
+        "Calibration record",
+        "Work instruction"
+      ],
+      "decisions": [
+        "Accept or return follow-up criteria and approve a criterion for a finding that fits no category.",
+        "Accept or reject implementation evidence and decide whether closure must wait for an effectiveness check.",
+        "Approve and record an alternative control when an independent checker is unavailable.",
+        "Reopen or decline reopening a finding, including deciding ownership and timing.",
+        "Delegate a reopening decision when the quality manager or original checker is involved in a dispute.",
+        "Accept or hold a program report, resolve untraceable figures or missing coverage, and decide what actions follow."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Setting follow-up criteria",
+            "section": "Setting follow-up criteria"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Setting follow-up criteria; semantic review verifies support",
+            "section": "Setting follow-up criteria"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Checking action evidence",
+            "section": "Checking action evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Checking action evidence; semantic review verifies support",
+            "section": "Checking action evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Reopening unresolved findings",
+            "section": "Reopening unresolved findings"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Reopening unresolved findings; semantic review verifies support",
+            "section": "Reopening unresolved findings"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Reporting the audit program",
+            "section": "Reporting the audit program"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Reporting the audit program; semantic review verifies support",
+            "section": "Reporting the audit program"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "fcf428203b626450fca71756e6ec6d1049a4d18ec3cc46c059ab9dd986556481",
+      "outputContextHash": "5665cbb94982887f0bceb3de30eae5608a9269ea5f7134d921002fd99fcf8d98",
+      "reviewedAt": "2026-10-29T18:55:48.906Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
