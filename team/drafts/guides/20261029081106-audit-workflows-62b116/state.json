@@ -35,10 +35,18 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W44-slot-2",
-  "stage": "outlined",
-  "pages": {},
+  "stage": "writing",
+  "pages": {
+    "mapping-workflows": {
+      "hash": "69de69150c250cbd9d569286118940d5eb16a54a2b1a5b33f53e87cc7a982784",
+      "wordCount": 2167,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-29T17:47:15.581Z"
+    }
+  },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-10-29T08:11:55.327Z",
+  "updatedAt": "2026-10-29T17:47:35.450Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1370,8 +1378,164 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "73bdedda89c9ff9411b6e6d28f15385281e08b300166d5a16f83dc52aa99585b",
-  "chapterReviews": {},
+  "contextHash": "feb278185ba468839c3ca94ed8483dad805a298228d80b0f1e483af425a75ebd",
+  "chapterReviews": {
+    "mapping-workflows": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The page follows the assigned workflow-mapping brief, uses supported claims and nearby citations, and labels its examples as hypothetical. No FAQ is assigned or included.",
+      "glossary": [
+        {
+          "term": "Handoff",
+          "definition": "A point where a record moves from one person or system to another."
+        },
+        {
+          "term": "Acceptance criteria",
+          "definition": "Testable statements used to judge software against the team's workflow."
+        }
+      ],
+      "roles": [
+        "Workflow owner",
+        "Quality manager",
+        "Auditor",
+        "Lead auditor",
+        "Process owner",
+        "Auditee",
+        "Top management",
+        "Action owner",
+        "Backup owner",
+        "Second reviewer",
+        "Production manager"
+      ],
+      "recordNames": [
+        "Audit schedule",
+        "Audit plan",
+        "Audit report",
+        "Audit finding",
+        "Corrective action log",
+        "Follow-up evidence",
+        "Problem statement",
+        "Audit checklist and notes",
+        "Nonconforming product report",
+        "Record map",
+        "Responsibility table",
+        "Acceptance criteria list",
+        "Evaluation file",
+        "Organization chart",
+        "Internal audit procedure"
+      ],
+      "decisions": [
+        "Which workflow break to solve first and whether to accept the problem statement",
+        "How to dispose of missing or disputed records",
+        "Which records are authoritative and whether to accept the record map",
+        "How to resolve records without clear owners or stored in personal locations",
+        "Which roles own handoffs and decisions, including backup ownership",
+        "How to handle unfilled roles, conflicts of interest and unreachable owners",
+        "Which acceptance criteria are must-haves, should-haves or could-haves and what constitutes a pass",
+        "How to handle criteria that cannot be tested or conflict"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Define the operational problem",
+            "section": "Define the operational problem"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Define the operational problem; semantic review verifies support",
+            "section": "Define the operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Identify records and handoffs",
+            "section": "Identify records and handoffs"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Identify records and handoffs; semantic review verifies support",
+            "section": "Identify records and handoffs"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assign owners and decisions",
+            "section": "Assign owners and decisions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assign owners and decisions; semantic review verifies support",
+            "section": "Assign owners and decisions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Set acceptance criteria",
+            "section": "Set acceptance criteria"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Set acceptance criteria; semantic review verifies support",
+            "section": "Set acceptance criteria"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "3382206a18a959b2dd21bee3b537783e1e180072bf64e32b74d9a179db27ca47",
+      "outputContextHash": "feb278185ba468839c3ca94ed8483dad805a298228d80b0f1e483af425a75ebd",
+      "reviewedAt": "2026-10-29T17:47:35.448Z",
+      "reviewer": "Configured independent chapter reviewer"
+    }
+  },
   "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883",
   "outlineHash": "9a0993bb78e37f48a9899644df0efc4fdc9325c541b676c1994825e821f68297",
   "audit": null,
