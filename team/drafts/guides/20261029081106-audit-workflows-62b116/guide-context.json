@@ -29,6 +29,10 @@
     {
       "term": "Workflow questions",
       "definition": "Questions about how a process works, including who starts it, what record it creates, who checks it and what happens when something goes wrong."
+    },
+    {
+      "term": "Finding",
+      "definition": "A judgment drawn from observations and measured against criteria."
     }
   ],
   "roles": [
@@ -53,7 +57,12 @@
     "Contractor",
     "Viewer",
     "Finance or purchasing contact",
-    "Vendor"
+    "Vendor",
+    "Independent reviewer",
+    "Response owner",
+    "Response approver",
+    "Machining supervisor",
+    "Uninvolved person"
   ],
   "recordNames": [
     "Audit schedule",
@@ -107,7 +116,16 @@
     "Customer drawing",
     "Access rules",
     "Test log",
-    "Temporary-access decision"
+    "Temporary-access decision",
+    "Observation",
+    "Finding",
+    "Category definitions",
+    "Confirmation entry",
+    "Evidence",
+    "Assignment",
+    "Dispute entry",
+    "Auditor's response",
+    "Recorded delegation"
   ],
   "example": {
     "label": "Illustrative example",
@@ -173,6 +191,21 @@
         "Whether each evidence-to-criterion link is sound and how to handle evidence without a matching criterion or a criterion without evidence.",
         "Which user types may see or change each record type and whether the access configuration passes the approved rules.",
         "Whether to grant, narrow or refuse temporary access and how to handle an access rule the product cannot enforce."
+      ]
+    },
+    {
+      "slug": "audit-findings",
+      "title": "Recording and reviewing findings: Internal audit management software",
+      "summary": "The page follows the assigned workflow brief, uses the supplied source claims appropriately, and labels its examples as hypothetical. No FAQ is assigned or included.",
+      "bodyHash": "8b1d150d1a323374f0535bef4493e26fadaa0a98abc577c3054f3b51d74b7aac",
+      "decisions": [
+        "Whether an observation becomes a finding and which category applies.",
+        "Whether to request more evidence, hold or escalate an observation that does not fit a category.",
+        "Whether supporting evidence is relevant, sufficient and retrievable, or the finding should be returned.",
+        "Whether to collect more evidence, hold or withdraw a finding when evidence is inaccessible or disputed.",
+        "Who owns the response and by when, including reassignment or escalation when ownership is not accepted.",
+        "Whether a disputed finding stands, is revised, is withdrawn or is held for more evidence.",
+        "Who independently reviews and accepts a dispute decision when the quality manager is involved."
       ]
     }
   ],

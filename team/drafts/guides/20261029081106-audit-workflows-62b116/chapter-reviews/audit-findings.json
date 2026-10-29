@@ -1,0 +1,152 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The page follows the assigned workflow brief, uses the supplied source claims appropriately, and labels its examples as hypothetical. No FAQ is assigned or included.",
+  "glossary": [
+    {
+      "term": "Finding",
+      "definition": "A judgment drawn from observations and measured against criteria."
+    }
+  ],
+  "roles": [
+    "Workflow owner",
+    "Quality manager",
+    "Lead auditor",
+    "Auditor",
+    "Second reviewer",
+    "Independent reviewer",
+    "Process owner",
+    "Response owner",
+    "Response approver",
+    "Backup owner",
+    "Auditee",
+    "Top management",
+    "Machining supervisor",
+    "Uninvolved person",
+    "Vendor"
+  ],
+  "recordNames": [
+    "Observation",
+    "Finding",
+    "Audit plan",
+    "Follow-up evidence",
+    "Category definitions",
+    "Confirmation entry",
+    "Evidence",
+    "Responsibility table",
+    "Production calendar",
+    "Assignment",
+    "Dispute entry",
+    "Auditor's response",
+    "Recorded delegation"
+  ],
+  "decisions": [
+    "Whether an observation becomes a finding and which category applies.",
+    "Whether to request more evidence, hold or escalate an observation that does not fit a category.",
+    "Whether supporting evidence is relevant, sufficient and retrievable, or the finding should be returned.",
+    "Whether to collect more evidence, hold or withdraw a finding when evidence is inaccessible or disputed.",
+    "Who owns the response and by when, including reassignment or escalation when ownership is not accepted.",
+    "Whether a disputed finding stands, is revised, is withdrawn or is held for more evidence.",
+    "Who independently reviews and accepts a dispute decision when the quality manager is involved."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Distinguishing findings and observations",
+        "section": "Distinguishing findings and observations"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Distinguishing findings and observations; semantic review verifies support",
+        "section": "Distinguishing findings and observations"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Confirming supporting evidence",
+        "section": "Confirming supporting evidence"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Confirming supporting evidence; semantic review verifies support",
+        "section": "Confirming supporting evidence"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Assigning action ownership",
+        "section": "Assigning action ownership"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Assigning action ownership; semantic review verifies support",
+        "section": "Assigning action ownership"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Resolving disputed findings",
+        "section": "Resolving disputed findings"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Resolving disputed findings; semantic review verifies support",
+        "section": "Resolving disputed findings"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "6a57ab88617184c6cc611fd4be532334a5d1528c09a64c12754ebeaf06d6fd52",
+  "outputContextHash": "5fa4c48c48fa4d59258e9ea9f4cf1b62b5437a3ed449f8e8dac230d9f2bf8d81",
+  "reviewedAt": "2026-10-29T18:40:51.376Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
