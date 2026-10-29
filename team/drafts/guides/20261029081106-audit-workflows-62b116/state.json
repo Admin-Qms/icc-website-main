@@ -43,10 +43,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-10-29T17:47:15.581Z"
+    },
+    "evaluating-software": {
+      "hash": "e9762420ed2d180076a909dc52ecde39b41842e520402af8c564a47f777f0673",
+      "wordCount": 2187,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-10-29T17:56:01.434Z"
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-10-29T17:47:35.450Z",
+  "updatedAt": "2026-10-29T17:56:15.239Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1378,7 +1385,7 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "feb278185ba468839c3ca94ed8483dad805a298228d80b0f1e483af425a75ebd",
+  "contextHash": "75e0adcedd37b7c4d899b6bb76626742efefa86920492aed09b1c72b5b39f3e7",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1533,6 +1540,153 @@
       "inputHash": "3382206a18a959b2dd21bee3b537783e1e180072bf64e32b74d9a179db27ca47",
       "outputContextHash": "feb278185ba468839c3ca94ed8483dad805a298228d80b0f1e483af425a75ebd",
       "reviewedAt": "2026-10-29T17:47:35.448Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "evaluating-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The page covers the assigned evaluation steps, uses the supplied sources appropriately, and labels its examples as hypothetical. No FAQ is assigned or included.",
+      "glossary": [],
+      "roles": [
+        "Workflow owner",
+        "Quality manager",
+        "Process owner",
+        "Auditor",
+        "Backup owner",
+        "Reviewer",
+        "Verifier",
+        "Planner",
+        "IT contact",
+        "System administrator",
+        "Top management",
+        "Contractor",
+        "Viewer",
+        "Finance or purchasing contact"
+      ],
+      "recordNames": [
+        "Acceptance criteria",
+        "Record map",
+        "Vendor questionnaire responses",
+        "Screening sheet",
+        "Test script",
+        "Sample records",
+        "Responsibility table",
+        "Permissions test log",
+        "Written quotes",
+        "Contract terms",
+        "Support descriptions",
+        "Comparison sheet",
+        "Written recommendation"
+      ],
+      "decisions": [
+        "Which candidates proceed to demonstration",
+        "Whether to request a trial or drop a candidate with a must-have not shown",
+        "Whether each demonstration scenario passed, failed or was not shown",
+        "How to handle a scenario that cannot be run live",
+        "Whether evidence and permission tests meet the team's criteria",
+        "Whether to reject a product, change a rule or accept a procedural control when a permission rule cannot be enforced",
+        "Which product to recommend and whether top management accepts the recommendation",
+        "How to handle an incomplete quote"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Build a workflow-based shortlist",
+            "section": "Build a workflow-based shortlist"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Build a workflow-based shortlist; semantic review verifies support",
+            "section": "Build a workflow-based shortlist"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Test the decision points",
+            "section": "Test the decision points"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Test the decision points; semantic review verifies support",
+            "section": "Test the decision points"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Examine evidence and permissions",
+            "section": "Examine evidence and permissions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Examine evidence and permissions; semantic review verifies support",
+            "section": "Examine evidence and permissions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Compare cost and support",
+            "section": "Compare cost and support"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Compare cost and support; semantic review verifies support",
+            "section": "Compare cost and support"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "970be4e7b523f138d287d857eba1ce494a42ee67ba9182f898a253ca6e225278",
+      "outputContextHash": "75e0adcedd37b7c4d899b6bb76626742efefa86920492aed09b1c72b5b39f3e7",
+      "reviewedAt": "2026-10-29T17:56:15.236Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

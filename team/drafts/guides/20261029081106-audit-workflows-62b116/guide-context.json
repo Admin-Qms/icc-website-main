@@ -28,7 +28,15 @@
     "Action owner",
     "Backup owner",
     "Second reviewer",
-    "Production manager"
+    "Production manager",
+    "Reviewer",
+    "Verifier",
+    "Planner",
+    "IT contact",
+    "System administrator",
+    "Contractor",
+    "Viewer",
+    "Finance or purchasing contact"
   ],
   "recordNames": [
     "Audit schedule",
@@ -45,7 +53,18 @@
     "Acceptance criteria list",
     "Evaluation file",
     "Organization chart",
-    "Internal audit procedure"
+    "Internal audit procedure",
+    "Acceptance criteria",
+    "Vendor questionnaire responses",
+    "Screening sheet",
+    "Test script",
+    "Sample records",
+    "Permissions test log",
+    "Written quotes",
+    "Contract terms",
+    "Support descriptions",
+    "Comparison sheet",
+    "Written recommendation"
   ],
   "example": {
     "label": "Illustrative example",
@@ -66,6 +85,22 @@
         "How to handle unfilled roles, conflicts of interest and unreachable owners",
         "Which acceptance criteria are must-haves, should-haves or could-haves and what constitutes a pass",
         "How to handle criteria that cannot be tested or conflict"
+      ]
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluating software capabilities: Internal audit management software",
+      "summary": "The page covers the assigned evaluation steps, uses the supplied sources appropriately, and labels its examples as hypothetical. No FAQ is assigned or included.",
+      "bodyHash": "0473b5a383dabebc3ac20a5b1c35af377f670930dc449f044548a895f1179739",
+      "decisions": [
+        "Which candidates proceed to demonstration",
+        "Whether to request a trial or drop a candidate with a must-have not shown",
+        "Whether each demonstration scenario passed, failed or was not shown",
+        "How to handle a scenario that cannot be run live",
+        "Whether evidence and permission tests meet the team's criteria",
+        "Whether to reject a product, change a rule or accept a procedural control when a permission rule cannot be enforced",
+        "Which product to recommend and whether top management accepts the recommendation",
+        "How to handle an incomplete quote"
       ]
     }
   ],
