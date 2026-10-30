@@ -54,7 +54,7 @@ A clear finding statement names the process, the criterion, and the evidence in 
 
 ## Confirming supporting evidence
 
-Before a finding is issued, the team should confirm that the evidence supports it. The [internal audit guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf) describes the organization as responsible for how its audits are carried out, and it notes that auditors of the audit process look at objectivity and impartiality. A confirmation step gives the team a way to show that findings rest on evidence, not on impressions.
+Before a finding is issued, the team should confirm that the evidence supports it. The [internal audit guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf) notes that the organization defines audit frequency, duration, and scope, and that auditors of the audit process look at objectivity and impartiality. A confirmation step gives the team a way to show that findings rest on evidence, not on impressions.
 
 The confirmation should also keep the audit plan reference, so the finding stays tied to the audit that produced it and to the follow-up evidence that will later answer it.
 

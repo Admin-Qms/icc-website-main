@@ -56,7 +56,7 @@ Once the problem is stated, list every record the audit workflow creates, reads,
 
 Start from the audit program and walk forward through one complete audit. At each step, write down what record exists, who creates it, where it is stored today, and who needs it next. A handoff is any point where a record moves from one person or system to another.
 
-The [audit planning guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf) recommends that the team review available documented information before the audit and notes that checklists can improve audit quality if they are designed to promote it. Documents and checklists differ from retained records, but each may move between people. Where it does, map that handoff. As practical advice, get the prior documents to the auditor in time and prepare the checklist before the audit. Map where each one comes from today and who is responsible for getting it to the auditor.
+The [audit planning guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf) recommends that the team review available documented information before the audit and notes that checklists can improve audit quality if they are designed to promote it. As practical advice, get the prior documents to the auditor in time and prepare the checklist before the audit. Map each handoff between people, including where each document, checklist, or record comes from today and who is responsible for getting it to the auditor.
 
 The guidance also advises planning around processes rather than clauses, and auditing linked processes together so that linkages and interdependencies can be explored. For mapping, this has a practical consequence. A record may belong to more than one process. A nonconforming product report might matter to an incoming inspection audit and to a production audit. Note these shared records now, and test in demonstrations whether a product can link one record to more than one process.
 
@@ -114,7 +114,7 @@ Common separations include separating the person who raises a finding from the p
 | Record | A responsibility table that lists roles, current holders, and backup holders |
 | Exception | Unfilled roles, conflicts of interest, or owners who cannot be reached; top management decides the disposition and the quality manager records it |
 
-**Illustrative example:** The hypothetical manufacturer finds that the quality manager both raises findings and accepts their closure. The team decides that a second reviewer, such as a production manager, will verify closure for any finding the quality manager raised. The rule is recorded as a decision owner on the responsibility table, ready to be configured later.
+**Illustrative example:** The hypothetical manufacturer finds that the quality manager both raises findings and accepts their closure. The team decides that a second reviewer, such as a production manager, will verify closure for any finding the quality manager raised. The responsibility table records the closure-verification rule and names the second reviewer as its decision owner, ready to be configured later.
 
 When you evaluate software, ask to see role-based assignment with representative users. Check whether the product can represent a backup owner, and whether it records who made each decision and when. Ask what happens when a role is empty, since a role can be empty in real operations.
 

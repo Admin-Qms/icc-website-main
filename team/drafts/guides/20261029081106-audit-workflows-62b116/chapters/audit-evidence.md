@@ -82,7 +82,7 @@ Test the offline case in the evaluation, since the plan may include evening or n
 
 ## Linking evidence to criteria
 
-An observation becomes useful when it is tied to something it is measured against. In audit terms, that is a criterion: a requirement, a procedure, or a stated expectation. The product should let the auditor link each item of evidence to the relevant criterion, recording whether it supports or contradicts it, and let a reviewer see the chain. Review evidence that fits no criterion for relevance, recording a gap only if the review finds one.
+An observation becomes useful when it is tied to something it is measured against. In audit terms, that is a criterion: a requirement, a procedure, or a stated expectation. The product should let the auditor link each item of evidence to the relevant criterion, recording whether it supports or contradicts it, and let a reviewer see the chain. Treat evidence that fits no criterion as an exception: review it for relevance and record the disposition.
 
 The ICC [module description](https://isocertificationconsultants.ca/solutions/audits-management-review/) mentions a single audit workspace for checklist, findings, and evidence, which suggests a place where the three are held together. Whether the workspace links them, and how, should be confirmed in a demonstration. Ask the vendor to open a finding and move to the evidence behind it, then to the criterion the evidence was measured against, without leaving the audit.
 

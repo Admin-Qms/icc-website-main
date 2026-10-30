@@ -35,81 +35,81 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W44-slot-2",
-  "stage": "reviewing",
+  "stage": "writing",
   "pages": {
     "mapping-workflows": {
-      "hash": "69de69150c250cbd9d569286118940d5eb16a54a2b1a5b33f53e87cc7a982784",
-      "wordCount": 2167,
+      "hash": "6784e998765bbe3a627b5033f84082308e530d9902add971ddb21a68b041848d",
+      "wordCount": 2160,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-29T17:47:15.581Z"
+      "checkpointedAt": "2026-10-30T15:10:28.327Z"
     },
     "evaluating-software": {
       "hash": "e9762420ed2d180076a909dc52ecde39b41842e520402af8c564a47f777f0673",
       "wordCount": 2187,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-29T17:56:01.434Z"
+      "checkpointedAt": "2026-10-30T15:08:11.212Z"
     },
     "audit-planning": {
       "hash": "3a4e8ef055c231e89ebf3a6f85a8fe7833a21eb2ab39931bfce8f9264af9b762",
       "wordCount": 2050,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-29T18:05:59.257Z"
+      "checkpointedAt": "2026-10-30T15:08:11.440Z"
     },
     "audit-evidence": {
-      "hash": "9883eae8c854bdce1d04749880415a4a7c6a444409d34566d080000ad2123e95",
+      "hash": "17ce1b48d222c278356b2e31295a0ae836d9219480664b0d113883486d4a16be",
       "wordCount": 2058,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-29T18:23:02.765Z"
+      "checkpointedAt": "2026-10-30T15:08:11.625Z"
     },
     "audit-findings": {
-      "hash": "25d4a60b1540556c541adb84f7049796396d4c69c26febf745e8fec9cf6ba9af",
-      "wordCount": 2032,
+      "hash": "cb2203c180b0b20f19604951e1c830b895f171d83dac3ece62e3b7788744f363",
+      "wordCount": 2028,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-29T18:40:36.714Z"
+      "checkpointedAt": "2026-10-30T15:08:11.808Z"
     },
     "audit-follow-up": {
       "hash": "04a5e096da8b3c66ce788540cd47757e5666ca323fc48bb4ed9611870518b7a8",
       "wordCount": 2004,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-29T18:55:27.203Z"
+      "checkpointedAt": "2026-10-30T15:08:12.040Z"
     },
     "migration-planning": {
       "hash": "01d497ab7c95ae2437b5e06104ea7ad29bb8632e163aef95d08b73bd9a37963b",
       "wordCount": 2001,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-10-29T19:40:03.270Z"
+      "checkpointedAt": "2026-10-30T15:08:12.290Z"
     },
     "training-rollout": {
       "hash": "82886ea2ac3c5be3a68b59fa3277d4ab56d420a204c5f19c87894c8761353166",
       "wordCount": 2000,
       "readTime": 10,
       "status": "written",
-      "checkpointedAt": "2026-10-29T19:50:04.694Z"
+      "checkpointedAt": "2026-10-30T15:08:12.545Z"
     },
     "ongoing-operation": {
       "hash": "6cb796f9cb56f67dd7948eed409e6f08ff1c144e6d70f40d091cf14431cdac75",
       "wordCount": 2000,
       "readTime": 10,
       "status": "written",
-      "checkpointedAt": "2026-10-30T14:56:29.638Z"
+      "checkpointedAt": "2026-10-30T15:08:12.791Z"
     },
     "internal-audit-software": {
       "hash": "302cfa7871605fedc9091cd4971fa02bf85e9815667290f12f9c44a9b7848a3b",
       "wordCount": 1501,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-10-30T15:06:47.834Z"
+      "checkpointedAt": "2026-10-30T15:08:12.994Z"
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-10-30T15:07:54.261Z",
+  "updatedAt": "2026-10-30T15:10:51.103Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1441,21 +1441,31 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "2df8ad69c15ccf21512800a35836910ea89625673c675d0712956eacf24c9457",
+  "contextHash": "73bdedda89c9ff9411b6e6d28f15385281e08b300166d5a16f83dc52aa99585b",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
-      "scope": "passed",
+      "scope": "failed",
       "readability": "passed",
       "links": "passed",
       "repetition": "passed",
       "faq": "passed",
-      "findings": [],
-      "summary": "The page follows the assigned workflow-mapping brief, uses supported claims and nearby citations, and labels its examples as hypothetical. No FAQ is assigned or included.",
+      "findings": [
+        {
+          "section": "Assign owners and decisions",
+          "reason": "The demonstration asks for representative users and an empty-role exception, but does not explicitly ask the vendor to use representative records when showing assignments and decisions.",
+          "action": "Ask the vendor to demonstrate assignments and decision history on a representative audit record, including an exception such as an empty owner role."
+        }
+      ],
+      "summary": "The page is well sourced and stays focused on workflow mapping. One assigned demonstration detail needs to be made explicit.",
       "glossary": [
         {
           "term": "Handoff",
           "definition": "A point where a record moves from one person or system to another."
+        },
+        {
+          "term": "Record map",
+          "definition": "A map of workflow records, their sources, storage, recipients and handoffs."
         },
         {
           "term": "Acceptance criteria",
@@ -1468,41 +1478,47 @@
         "Auditor",
         "Lead auditor",
         "Process owner",
+        "Person who files the paperwork",
         "Auditee",
         "Top management",
         "Action owner",
-        "Backup owner",
         "Second reviewer",
         "Production manager"
       ],
       "recordNames": [
+        "Audit program",
         "Audit schedule",
         "Audit plan",
         "Audit report",
-        "Audit finding",
+        "Finding",
         "Corrective action log",
         "Follow-up evidence",
         "Problem statement",
-        "Audit checklist and notes",
+        "Checklist",
+        "Audit notes",
         "Nonconforming product report",
         "Record map",
+        "Organization chart",
+        "Internal audit procedure",
         "Responsibility table",
         "Acceptance criteria list",
-        "Evaluation file",
-        "Organization chart",
-        "Internal audit procedure"
+        "Evaluation file"
       ],
       "decisions": [
-        "Which workflow break to solve first and whether to accept the problem statement",
-        "How to dispose of missing or disputed records",
-        "Which records are authoritative and whether to accept the record map",
-        "How to resolve records without clear owners or stored in personal locations",
+        "Which workflow break to solve first",
+        "Whether the problem statement names records and handoffs",
+        "How to resolve missing records or disagreement over their location",
+        "Which records are authoritative and which are copies or working notes",
+        "Whether each mapped handoff has a source and destination",
+        "How to handle records without clear owners or stored in personal locations",
         "Which roles own handoffs and decisions, including backup ownership",
-        "How to handle unfilled roles, conflicts of interest and unreachable owners",
-        "Which acceptance criteria are must-haves, should-haves or could-haves and what constitutes a pass",
-        "How to handle criteria that cannot be tested or conflict"
+        "How to address unfilled roles, conflicts of interest and unreachable owners",
+        "Who verifies closure of a finding",
+        "Which acceptance criteria are must-haves, should-haves or could-haves",
+        "What constitutes a pass for each criterion",
+        "How to resolve untestable or conflicting criteria"
       ],
-      "pass": true,
+      "pass": false,
       "deterministic": {
         "pass": true,
         "checks": [
@@ -1593,1449 +1609,15 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "3382206a18a959b2dd21bee3b537783e1e180072bf64e32b74d9a179db27ca47",
-      "outputContextHash": "feb278185ba468839c3ca94ed8483dad805a298228d80b0f1e483af425a75ebd",
-      "reviewedAt": "2026-10-29T17:47:35.448Z",
-      "reviewer": "Configured independent chapter reviewer"
-    },
-    "evaluating-software": {
-      "claims": "passed",
-      "scope": "passed",
-      "readability": "passed",
-      "links": "passed",
-      "repetition": "passed",
-      "faq": "passed",
-      "findings": [],
-      "summary": "The page covers the assigned evaluation steps, uses the supplied sources appropriately, and labels its examples as hypothetical. No FAQ is assigned or included.",
-      "glossary": [],
-      "roles": [
-        "Workflow owner",
-        "Quality manager",
-        "Process owner",
-        "Auditor",
-        "Backup owner",
-        "Reviewer",
-        "Verifier",
-        "Planner",
-        "IT contact",
-        "System administrator",
-        "Top management",
-        "Contractor",
-        "Viewer",
-        "Finance or purchasing contact"
-      ],
-      "recordNames": [
-        "Acceptance criteria",
-        "Record map",
-        "Vendor questionnaire responses",
-        "Screening sheet",
-        "Test script",
-        "Sample records",
-        "Responsibility table",
-        "Permissions test log",
-        "Written quotes",
-        "Contract terms",
-        "Support descriptions",
-        "Comparison sheet",
-        "Written recommendation"
-      ],
-      "decisions": [
-        "Which candidates proceed to demonstration",
-        "Whether to request a trial or drop a candidate with a must-have not shown",
-        "Whether each demonstration scenario passed, failed or was not shown",
-        "How to handle a scenario that cannot be run live",
-        "Whether evidence and permission tests meet the team's criteria",
-        "Whether to reject a product, change a rule or accept a procedural control when a permission rule cannot be enforced",
-        "Which product to recommend and whether top management accepts the recommendation",
-        "How to handle an incomplete quote"
-      ],
-      "pass": true,
-      "deterministic": {
-        "pass": true,
-        "checks": [
-          {
-            "id": "unresolved-marker",
-            "pass": true,
-            "message": "Resolve image and processing markers before review"
-          },
-          {
-            "id": "inline-image-provenance",
-            "pass": true,
-            "message": "Guide inline assets are not supported; use the managed hero image brief"
-          },
-          {
-            "id": "voice",
-            "pass": true,
-            "message": "All blocks use third-person voice"
-          },
-          {
-            "id": "fabricated-quotes",
-            "pass": true,
-            "message": "No fabricated quotes detected"
-          },
-          {
-            "id": "spelling",
-            "pass": true,
-            "message": "Use US spelling"
-          },
-          {
-            "id": "banned-filler",
-            "pass": true,
-            "message": "Remove banned filler"
-          },
-          {
-            "id": "single-h1",
-            "pass": true,
-            "message": "The page shell supplies H1"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Build a workflow-based shortlist",
-            "section": "Build a workflow-based shortlist"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Build a workflow-based shortlist; semantic review verifies support",
-            "section": "Build a workflow-based shortlist"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Test the decision points",
-            "section": "Test the decision points"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Test the decision points; semantic review verifies support",
-            "section": "Test the decision points"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Examine evidence and permissions",
-            "section": "Examine evidence and permissions"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Examine evidence and permissions; semantic review verifies support",
-            "section": "Examine evidence and permissions"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Compare cost and support",
-            "section": "Compare cost and support"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Compare cost and support; semantic review verifies support",
-            "section": "Compare cost and support"
-          }
-        ],
-        "failures": []
-      },
-      "glossaryVariantsIgnored": [],
-      "inputHash": "970be4e7b523f138d287d857eba1ce494a42ee67ba9182f898a253ca6e225278",
-      "outputContextHash": "75e0adcedd37b7c4d899b6bb76626742efefa86920492aed09b1c72b5b39f3e7",
-      "reviewedAt": "2026-10-29T17:56:15.236Z",
-      "reviewer": "Configured independent chapter reviewer"
-    },
-    "audit-planning": {
-      "claims": "passed",
-      "scope": "passed",
-      "readability": "passed",
-      "links": "passed",
-      "repetition": "passed",
-      "faq": "passed",
-      "findings": [],
-      "summary": "The page covers the assigned planning decisions with supported citations, actionable evaluation questions and labeled hypothetical examples. No FAQ is assigned or included.",
-      "glossary": [
-        {
-          "term": "Audit scope",
-          "definition": "The coverage defined for an audit program or an individual audit, including the processes covered and, as relevant, sites, shifts and period."
-        },
-        {
-          "term": "Criteria",
-          "definition": "The requirements and internal procedures used as references for an audit."
-        }
-      ],
-      "roles": [
-        "Workflow owner",
-        "Quality manager",
-        "Process owner",
-        "Planner",
-        "Auditor",
-        "Auditee",
-        "Top management",
-        "Second reviewer",
-        "Vendor"
-      ],
-      "recordNames": [
-        "Scope entry",
-        "Process list",
-        "Audit report",
-        "Audit finding",
-        "Auditor list",
-        "Auditor assignment",
-        "Audit program",
-        "Audit plan",
-        "Audit calendar",
-        "Production calendar",
-        "Shift pattern",
-        "Priority list",
-        "Sampling notes",
-        "Reduced-frequency justification",
-        "Change entry",
-        "Follow-up evidence"
-      ],
-      "decisions": [
-        "Define and accept program and individual audit scopes, including exclusions and their reasons.",
-        "Resolve disputed or insufficiently described scope, escalating unresolved cases.",
-        "Assign auditors based on competence and impartiality.",
-        "Decide whether to apply an added control, delay an audit or seek outside help when no impartial auditor is available.",
-        "Accept audit dates and sampled activities based on priorities, relevant cycles and shifts, and reduced-frequency justifications.",
-        "Reschedule or change sampling when an area is unavailable.",
-        "Approve or reject moving, adding or canceling an audit based on the reason and effect on coverage.",
-        "Decide how to handle short-notice change requests or requests from outside the quality function."
-      ],
-      "pass": true,
-      "deterministic": {
-        "pass": true,
-        "checks": [
-          {
-            "id": "unresolved-marker",
-            "pass": true,
-            "message": "Resolve image and processing markers before review"
-          },
-          {
-            "id": "inline-image-provenance",
-            "pass": true,
-            "message": "Guide inline assets are not supported; use the managed hero image brief"
-          },
-          {
-            "id": "voice",
-            "pass": true,
-            "message": "All blocks use third-person voice"
-          },
-          {
-            "id": "fabricated-quotes",
-            "pass": true,
-            "message": "No fabricated quotes detected"
-          },
-          {
-            "id": "spelling",
-            "pass": true,
-            "message": "Use US spelling"
-          },
-          {
-            "id": "banned-filler",
-            "pass": true,
-            "message": "Remove banned filler"
-          },
-          {
-            "id": "single-h1",
-            "pass": true,
-            "message": "The page shell supplies H1"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Defining audit scope",
-            "section": "Defining audit scope"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Defining audit scope; semantic review verifies support",
-            "section": "Defining audit scope"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Assigning suitable auditors",
-            "section": "Assigning suitable auditors"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Assigning suitable auditors; semantic review verifies support",
-            "section": "Assigning suitable auditors"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Scheduling representative activities",
-            "section": "Scheduling representative activities"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Scheduling representative activities; semantic review verifies support",
-            "section": "Scheduling representative activities"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Handling changed priorities",
-            "section": "Handling changed priorities"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Handling changed priorities; semantic review verifies support",
-            "section": "Handling changed priorities"
-          }
-        ],
-        "failures": []
-      },
-      "glossaryVariantsIgnored": [],
-      "inputHash": "27de6f27f4fb58819f3a6676d3dded7fdfc4297abe308d3874dfd732f099b4a7",
-      "outputContextHash": "a3c493679e4cb90608ab7ad77ef7a14a1e68fd14d1b232d7004be559ebdef938",
-      "reviewedAt": "2026-10-29T18:06:28.737Z",
-      "reviewer": "Configured independent chapter reviewer"
-    },
-    "audit-evidence": {
-      "claims": "passed",
-      "scope": "passed",
-      "readability": "passed",
-      "links": "passed",
-      "repetition": "passed",
-      "faq": "passed",
-      "findings": [],
-      "summary": "The page covers the assigned evidence-collection workflows with supported citations, actionable demonstration tests and labeled hypothetical examples. No FAQ was assigned or included.",
-      "glossary": [
-        {
-          "term": "Observation",
-          "definition": "What an auditor saw, read or was told, recorded in enough detail for someone else to check it."
-        },
-        {
-          "term": "Workflow questions",
-          "definition": "Questions about how a process works, including who starts it, what record it creates, who checks it and what happens when something goes wrong."
-        }
-      ],
-      "roles": [
-        "Workflow owner",
-        "Quality manager",
-        "Lead auditor",
-        "Auditor",
-        "Auditee",
-        "Second reviewer",
-        "Process owner",
-        "System administrator",
-        "Top management",
-        "Contractor",
-        "Vendor"
-      ],
-      "recordNames": [
-        "Audit plan",
-        "Scope entry",
-        "Prior findings",
-        "Process map",
-        "Checklist",
-        "Observation record",
-        "Trial observations",
-        "Criteria list",
-        "Evidence-to-criterion links",
-        "Torque log",
-        "Work instruction",
-        "Customer requirement",
-        "Customer drawing",
-        "Access rules",
-        "Test log",
-        "Temporary-access decision",
-        "Shift pattern"
-      ],
-      "decisions": [
-        "Whether to accept or return the checklist and how to resolve unsuitable or disputed questions.",
-        "Whether the observation-recording method is acceptable and how to capture observations without a connection or device.",
-        "Whether each evidence-to-criterion link is sound and how to handle evidence without a matching criterion or a criterion without evidence.",
-        "Which user types may see or change each record type and whether the access configuration passes the approved rules.",
-        "Whether to grant, narrow or refuse temporary access and how to handle an access rule the product cannot enforce."
-      ],
-      "pass": true,
-      "deterministic": {
-        "pass": true,
-        "checks": [
-          {
-            "id": "unresolved-marker",
-            "pass": true,
-            "message": "Resolve image and processing markers before review"
-          },
-          {
-            "id": "inline-image-provenance",
-            "pass": true,
-            "message": "Guide inline assets are not supported; use the managed hero image brief"
-          },
-          {
-            "id": "voice",
-            "pass": true,
-            "message": "All blocks use third-person voice"
-          },
-          {
-            "id": "fabricated-quotes",
-            "pass": true,
-            "message": "No fabricated quotes detected"
-          },
-          {
-            "id": "spelling",
-            "pass": true,
-            "message": "Use US spelling"
-          },
-          {
-            "id": "banned-filler",
-            "pass": true,
-            "message": "Remove banned filler"
-          },
-          {
-            "id": "single-h1",
-            "pass": true,
-            "message": "The page shell supplies H1"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Preparing workflow questions",
-            "section": "Preparing workflow questions"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Preparing workflow questions; semantic review verifies support",
-            "section": "Preparing workflow questions"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Recording observations",
-            "section": "Recording observations"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Recording observations; semantic review verifies support",
-            "section": "Recording observations"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Linking evidence to criteria",
-            "section": "Linking evidence to criteria"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Linking evidence to criteria; semantic review verifies support",
-            "section": "Linking evidence to criteria"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Protecting sensitive records",
-            "section": "Protecting sensitive records"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Protecting sensitive records; semantic review verifies support",
-            "section": "Protecting sensitive records"
-          }
-        ],
-        "failures": []
-      },
-      "glossaryVariantsIgnored": [],
-      "inputHash": "5ca1aaada55277b0e84d346f4f5798ae53f460fab3ef4a40b5cb9a7c87b50550",
-      "outputContextHash": "de5287a3eafef22b9e08dc8222558e2f75cb5d881698ad2f08c33b78f7343a5b",
-      "reviewedAt": "2026-10-29T18:23:16.571Z",
-      "reviewer": "Configured independent chapter reviewer"
-    },
-    "audit-findings": {
-      "claims": "passed",
-      "scope": "passed",
-      "readability": "passed",
-      "links": "passed",
-      "repetition": "passed",
-      "faq": "passed",
-      "findings": [],
-      "summary": "The page follows the assigned workflow brief, uses the supplied source claims appropriately, and labels its examples as hypothetical. No FAQ is assigned or included.",
-      "glossary": [
-        {
-          "term": "Finding",
-          "definition": "A judgment drawn from observations and measured against criteria."
-        }
-      ],
-      "roles": [
-        "Workflow owner",
-        "Quality manager",
-        "Lead auditor",
-        "Auditor",
-        "Second reviewer",
-        "Independent reviewer",
-        "Process owner",
-        "Response owner",
-        "Response approver",
-        "Backup owner",
-        "Auditee",
-        "Top management",
-        "Machining supervisor",
-        "Uninvolved person",
-        "Vendor"
-      ],
-      "recordNames": [
-        "Observation",
-        "Finding",
-        "Audit plan",
-        "Follow-up evidence",
-        "Category definitions",
-        "Confirmation entry",
-        "Evidence",
-        "Responsibility table",
-        "Production calendar",
-        "Assignment",
-        "Dispute entry",
-        "Auditor's response",
-        "Recorded delegation"
-      ],
-      "decisions": [
-        "Whether an observation becomes a finding and which category applies.",
-        "Whether to request more evidence, hold or escalate an observation that does not fit a category.",
-        "Whether supporting evidence is relevant, sufficient and retrievable, or the finding should be returned.",
-        "Whether to collect more evidence, hold or withdraw a finding when evidence is inaccessible or disputed.",
-        "Who owns the response and by when, including reassignment or escalation when ownership is not accepted.",
-        "Whether a disputed finding stands, is revised, is withdrawn or is held for more evidence.",
-        "Who independently reviews and accepts a dispute decision when the quality manager is involved."
-      ],
-      "pass": true,
-      "deterministic": {
-        "pass": true,
-        "checks": [
-          {
-            "id": "unresolved-marker",
-            "pass": true,
-            "message": "Resolve image and processing markers before review"
-          },
-          {
-            "id": "inline-image-provenance",
-            "pass": true,
-            "message": "Guide inline assets are not supported; use the managed hero image brief"
-          },
-          {
-            "id": "voice",
-            "pass": true,
-            "message": "All blocks use third-person voice"
-          },
-          {
-            "id": "fabricated-quotes",
-            "pass": true,
-            "message": "No fabricated quotes detected"
-          },
-          {
-            "id": "spelling",
-            "pass": true,
-            "message": "Use US spelling"
-          },
-          {
-            "id": "banned-filler",
-            "pass": true,
-            "message": "Remove banned filler"
-          },
-          {
-            "id": "single-h1",
-            "pass": true,
-            "message": "The page shell supplies H1"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Distinguishing findings and observations",
-            "section": "Distinguishing findings and observations"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Distinguishing findings and observations; semantic review verifies support",
-            "section": "Distinguishing findings and observations"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Confirming supporting evidence",
-            "section": "Confirming supporting evidence"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Confirming supporting evidence; semantic review verifies support",
-            "section": "Confirming supporting evidence"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Assigning action ownership",
-            "section": "Assigning action ownership"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Assigning action ownership; semantic review verifies support",
-            "section": "Assigning action ownership"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Resolving disputed findings",
-            "section": "Resolving disputed findings"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Resolving disputed findings; semantic review verifies support",
-            "section": "Resolving disputed findings"
-          }
-        ],
-        "failures": []
-      },
-      "glossaryVariantsIgnored": [],
-      "inputHash": "6a57ab88617184c6cc611fd4be532334a5d1528c09a64c12754ebeaf06d6fd52",
-      "outputContextHash": "5fa4c48c48fa4d59258e9ea9f4cf1b62b5437a3ed449f8e8dac230d9f2bf8d81",
-      "reviewedAt": "2026-10-29T18:40:51.376Z",
-      "reviewer": "Configured independent chapter reviewer"
-    },
-    "audit-follow-up": {
-      "claims": "passed",
-      "scope": "passed",
-      "readability": "passed",
-      "links": "passed",
-      "repetition": "passed",
-      "faq": "passed",
-      "findings": [],
-      "summary": "The page covers the four assigned workflows, labels its examples as hypothetical and distinguishes proposed tests from published capabilities. Citations match the supplied source records; live link availability was not checked. No FAQ was assigned or included.",
-      "glossary": [
-        {
-          "term": "Follow-up criteria",
-          "definition": "The evidence, checker and timing specified for following up a finding."
-        },
-        {
-          "term": "Effectiveness check",
-          "definition": "A check of whether an action worked, which may need to occur after the action is carried out."
-        }
-      ],
-      "roles": [
-        "Workflow owner",
-        "Quality manager",
-        "Process owner",
-        "Top management",
-        "Action owner",
-        "Checker",
-        "Independent checker",
-        "Planner",
-        "Vendor",
-        "Reviewer from another department",
-        "Uninvolved person",
-        "Auditor"
-      ],
-      "recordNames": [
-        "Follow-up criteria",
-        "Approved criteria",
-        "Past findings",
-        "Audit plan",
-        "Finding",
-        "Action evidence",
-        "Evidence submission",
-        "Checker's decision",
-        "Owner's response",
-        "Effectiveness check",
-        "Reopening request",
-        "Reopening decision",
-        "Finding history",
-        "Recorded delegation",
-        "Audit program",
-        "Program report",
-        "Calibration record",
-        "Work instruction"
-      ],
-      "decisions": [
-        "Accept or return follow-up criteria and approve a criterion for a finding that fits no category.",
-        "Accept or reject implementation evidence and decide whether closure must wait for an effectiveness check.",
-        "Approve and record an alternative control when an independent checker is unavailable.",
-        "Reopen or decline reopening a finding, including deciding ownership and timing.",
-        "Delegate a reopening decision when the quality manager or original checker is involved in a dispute.",
-        "Accept or hold a program report, resolve untraceable figures or missing coverage, and decide what actions follow."
-      ],
-      "pass": true,
-      "deterministic": {
-        "pass": true,
-        "checks": [
-          {
-            "id": "unresolved-marker",
-            "pass": true,
-            "message": "Resolve image and processing markers before review"
-          },
-          {
-            "id": "inline-image-provenance",
-            "pass": true,
-            "message": "Guide inline assets are not supported; use the managed hero image brief"
-          },
-          {
-            "id": "voice",
-            "pass": true,
-            "message": "All blocks use third-person voice"
-          },
-          {
-            "id": "fabricated-quotes",
-            "pass": true,
-            "message": "No fabricated quotes detected"
-          },
-          {
-            "id": "spelling",
-            "pass": true,
-            "message": "Use US spelling"
-          },
-          {
-            "id": "banned-filler",
-            "pass": true,
-            "message": "Remove banned filler"
-          },
-          {
-            "id": "single-h1",
-            "pass": true,
-            "message": "The page shell supplies H1"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Setting follow-up criteria",
-            "section": "Setting follow-up criteria"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Setting follow-up criteria; semantic review verifies support",
-            "section": "Setting follow-up criteria"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Checking action evidence",
-            "section": "Checking action evidence"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Checking action evidence; semantic review verifies support",
-            "section": "Checking action evidence"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Reopening unresolved findings",
-            "section": "Reopening unresolved findings"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Reopening unresolved findings; semantic review verifies support",
-            "section": "Reopening unresolved findings"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Reporting the audit program",
-            "section": "Reporting the audit program"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Reporting the audit program; semantic review verifies support",
-            "section": "Reporting the audit program"
-          }
-        ],
-        "failures": []
-      },
-      "glossaryVariantsIgnored": [],
-      "inputHash": "fcf428203b626450fca71756e6ec6d1049a4d18ec3cc46c059ab9dd986556481",
-      "outputContextHash": "5665cbb94982887f0bceb3de30eae5608a9269ea5f7134d921002fd99fcf8d98",
-      "reviewedAt": "2026-10-29T18:55:48.906Z",
-      "reviewer": "Configured independent chapter reviewer"
-    },
-    "migration-planning": {
-      "claims": "passed",
-      "scope": "passed",
-      "readability": "passed",
-      "links": "passed",
-      "repetition": "passed",
-      "faq": "passed",
-      "findings": [],
-      "summary": "The page covers the assigned migration workflows, uses supported claims and labeled hypothetical examples, and adds no unassigned FAQ. Links match the supplied source records; live availability was not independently checked.",
-      "glossary": [
-        {
-          "term": "Cutover",
-          "definition": "The point at which the new system becomes the working record."
-        },
-        {
-          "term": "Move and use",
-          "definition": "An inventory class for records needed for planning or follow-up."
-        },
-        {
-          "term": "Move and archive",
-          "definition": "An inventory class for records worth keeping and making searchable but not used in daily work."
-        },
-        {
-          "term": "Leave and reference",
-          "definition": "An inventory class for records kept in their existing location with a pointer from the new system."
-        },
-        {
-          "term": "Retire",
-          "definition": "An inventory class for records no longer needed, subject to retention rules."
-        }
-      ],
-      "roles": [
-        "Quality manager",
-        "Process owner",
-        "Top management",
-        "Data steward",
-        "Auditor",
-        "Independent checker",
-        "System administrator",
-        "Vendor",
-        "Planner"
-      ],
-      "recordNames": [
-        "Record map",
-        "Inventory",
-        "Retention rules",
-        "Audit program",
-        "Audit schedule",
-        "Audit plan",
-        "Audit report",
-        "Finding",
-        "Corrective action log",
-        "Follow-up evidence",
-        "Field list",
-        "Lookup table",
-        "Mapping table",
-        "Pilot set",
-        "Import rules",
-        "Verification checklist",
-        "Verification log",
-        "Audit calendar",
-        "Access list",
-        "Cutover plan",
-        "Change log",
-        "Preserved copy of old records"
-      ],
-      "decisions": [
-        "Classify each record type and accept or return the inventory.",
-        "Assign ownership and an interim class when ownership or retention rules are unclear.",
-        "Fix, defer or mark data gaps as unknown.",
-        "Establish relationship matches or seek approval for unknown links.",
-        "Accept or rerun the pilot, or approve progression with a documented gap.",
-        "Approve or postpone cutover based on verification, gap limits and access.",
-        "Roll back or continue with an approved, limited gap when a cutover trigger is met.",
-        "Determine how paper records and late changes will be handled."
-      ],
-      "pass": true,
-      "deterministic": {
-        "pass": true,
-        "checks": [
-          {
-            "id": "unresolved-marker",
-            "pass": true,
-            "message": "Resolve image and processing markers before review"
-          },
-          {
-            "id": "inline-image-provenance",
-            "pass": true,
-            "message": "Guide inline assets are not supported; use the managed hero image brief"
-          },
-          {
-            "id": "voice",
-            "pass": true,
-            "message": "All blocks use third-person voice"
-          },
-          {
-            "id": "fabricated-quotes",
-            "pass": true,
-            "message": "No fabricated quotes detected"
-          },
-          {
-            "id": "spelling",
-            "pass": true,
-            "message": "Use US spelling"
-          },
-          {
-            "id": "banned-filler",
-            "pass": true,
-            "message": "Remove banned filler"
-          },
-          {
-            "id": "single-h1",
-            "pass": true,
-            "message": "The page shell supplies H1"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Inventory and classify existing records",
-            "section": "Inventory and classify existing records"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Inventory and classify existing records; semantic review verifies support",
-            "section": "Inventory and classify existing records"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Clean data and map relationships",
-            "section": "Clean data and map relationships"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Clean data and map relationships; semantic review verifies support",
-            "section": "Clean data and map relationships"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Pilot the import and verify results",
-            "section": "Pilot the import and verify results"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Pilot the import and verify results; semantic review verifies support",
-            "section": "Pilot the import and verify results"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Plan cutover and recovery",
-            "section": "Plan cutover and recovery"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Plan cutover and recovery; semantic review verifies support",
-            "section": "Plan cutover and recovery"
-          }
-        ],
-        "failures": []
-      },
-      "glossaryVariantsIgnored": [],
-      "inputHash": "4883db4f154293b52c98bdc84b36c346e13ce5e1063a3157365da5eb416a88c7",
-      "outputContextHash": "54cf6f2ea7d3bf8c3dab60bf115a4abbd77caa8fe7da6b7f070d974df591a14a",
-      "reviewedAt": "2026-10-29T19:40:26.453Z",
-      "reviewer": "Configured independent chapter reviewer"
-    },
-    "training-rollout": {
-      "claims": "passed",
-      "scope": "passed",
-      "readability": "passed",
-      "links": "passed",
-      "repetition": "passed",
-      "faq": "passed",
-      "findings": [],
-      "summary": "The page covers the assigned rollout decisions, labels its examples and matches cited claims to the supplied source records. No FAQ is assigned or included. Live link availability was not independently checked.",
-      "glossary": [
-        {
-          "term": "User pilot",
-          "definition": "A test of whether representative users can perform work in the system with their records and constraints."
-        },
-        {
-          "term": "Staged deployment",
-          "definition": "Bringing groups of users or parts of the audit program into the system in a planned order."
-        }
-      ],
-      "roles": [
-        "Workflow owner",
-        "Quality manager",
-        "Trainer",
-        "Planner",
-        "Auditor",
-        "Action owner",
-        "Checker",
-        "Management",
-        "Top management",
-        "Process owner",
-        "Pilot user",
-        "Vendor",
-        "Observer"
-      ],
-      "recordNames": [
-        "Responsibility table",
-        "Task list",
-        "Sample records",
-        "Shift pattern",
-        "Learning record",
-        "Audit plan",
-        "Prior findings",
-        "Finding",
-        "Follow-up evidence",
-        "Program report",
-        "Issue log",
-        "Pilot report",
-        "Stage plan",
-        "Known-issues list",
-        "Stage records",
-        "Workload log",
-        "User feedback",
-        "Evaluation report"
-      ],
-      "decisions": [
-        "Whether a person is accepted to use the system in a role or needs more practice.",
-        "Whether to reschedule training, provide another route or limit access when a person cannot attend or pass.",
-        "Whether to accept, extend or repeat the pilot, including approval of exceptions.",
-        "How to classify and resolve pilot task failures and whether a system problem blocks rollout.",
-        "Whether to approve or hold the start of a deployment stage.",
-        "Whether to pause, roll back or continue with a workaround when a serious problem occurs.",
-        "Whether to accept rollout as complete or request further action.",
-        "Whether retraining, reconfiguration or vendor help is needed for low adoption or increased workload."
-      ],
-      "pass": true,
-      "deterministic": {
-        "pass": true,
-        "checks": [
-          {
-            "id": "unresolved-marker",
-            "pass": true,
-            "message": "Resolve image and processing markers before review"
-          },
-          {
-            "id": "inline-image-provenance",
-            "pass": true,
-            "message": "Guide inline assets are not supported; use the managed hero image brief"
-          },
-          {
-            "id": "voice",
-            "pass": true,
-            "message": "All blocks use third-person voice"
-          },
-          {
-            "id": "fabricated-quotes",
-            "pass": true,
-            "message": "No fabricated quotes detected"
-          },
-          {
-            "id": "spelling",
-            "pass": true,
-            "message": "Use US spelling"
-          },
-          {
-            "id": "banned-filler",
-            "pass": true,
-            "message": "Remove banned filler"
-          },
-          {
-            "id": "single-h1",
-            "pass": true,
-            "message": "The page shell supplies H1"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Set role-based learning tasks",
-            "section": "Set role-based learning tasks"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Set role-based learning tasks; semantic review verifies support",
-            "section": "Set role-based learning tasks"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Pilot with representative users",
-            "section": "Pilot with representative users"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Pilot with representative users; semantic review verifies support",
-            "section": "Pilot with representative users"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Manage staged deployment",
-            "section": "Manage staged deployment"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Manage staged deployment; semantic review verifies support",
-            "section": "Manage staged deployment"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Evaluate adoption and workload",
-            "section": "Evaluate adoption and workload"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Evaluate adoption and workload; semantic review verifies support",
-            "section": "Evaluate adoption and workload"
-          }
-        ],
-        "failures": []
-      },
-      "glossaryVariantsIgnored": [],
-      "inputHash": "658259a3ee8a56d0b1326dbb7f2b1d4a0191a01e3e6c3edfc8dce82478759f58",
-      "outputContextHash": "eeb53f3a5c9d57c04e442df13ed51ed5ae6c656cdc80a6501a5f7dd78262cf69",
-      "reviewedAt": "2026-10-29T19:50:28.302Z",
-      "reviewer": "Configured independent chapter reviewer"
-    },
-    "ongoing-operation": {
-      "claims": "passed",
-      "scope": "passed",
-      "readability": "passed",
-      "links": "passed",
-      "repetition": "passed",
-      "faq": "passed",
-      "findings": [],
-      "summary": "The page covers all assigned subsections, including the FAQ, with actionable decisions and labeled hypothetical examples. Citations match the supplied source records; live availability was not checked.",
-      "glossary": [],
-      "roles": [
-        "Workflow owner",
-        "Quality manager",
-        "Process owner",
-        "Top management",
-        "Auditor",
-        "Planner",
-        "Owner",
-        "Checker",
-        "Vendor",
-        "Note taker"
-      ],
-      "recordNames": [
-        "Audit plan",
-        "Finding",
-        "Action",
-        "Follow-up evidence",
-        "Issue log",
-        "Review report",
-        "Improvement list",
-        "User feedback",
-        "Improvement proposal",
-        "Approved answers",
-        "Problem statement",
-        "Acceptance criteria",
-        "Test script",
-        "Representative records",
-        "Attendee list",
-        "Demonstration pack"
-      ],
-      "decisions": [
-        "Accept or return the workflow review based on traceability, access, ownership, due dates and recorded exceptions.",
-        "Decide corrections and due dates for workflow problems and approve or decline time-limited exceptions.",
-        "Choose which complete improvement proposals to pursue based on evidence, priority and effort.",
-        "Return an unsupported benefit claim or decide whether to proceed without a figure.",
-        "Accept or return FAQ answers based on their consistency with procedure and evidence.",
-        "Correct an answer or change the procedure through the approval process when they conflict.",
-        "Accept or return the demonstration pack based on scenario, exception, record and attendee readiness.",
-        "Choose and record a substitute for a demonstration record that cannot be shared.",
-        "Mark the result of each demonstration scenario."
-      ],
-      "pass": true,
-      "deterministic": {
-        "pass": true,
-        "checks": [
-          {
-            "id": "unresolved-marker",
-            "pass": true,
-            "message": "Resolve image and processing markers before review"
-          },
-          {
-            "id": "inline-image-provenance",
-            "pass": true,
-            "message": "Guide inline assets are not supported; use the managed hero image brief"
-          },
-          {
-            "id": "voice",
-            "pass": true,
-            "message": "All blocks use third-person voice"
-          },
-          {
-            "id": "fabricated-quotes",
-            "pass": true,
-            "message": "No fabricated quotes detected"
-          },
-          {
-            "id": "spelling",
-            "pass": true,
-            "message": "Use US spelling"
-          },
-          {
-            "id": "banned-filler",
-            "pass": true,
-            "message": "Remove banned filler"
-          },
-          {
-            "id": "single-h1",
-            "pass": true,
-            "message": "The page shell supplies H1"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Review the workflow and evidence",
-            "section": "Review the workflow and evidence"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Review the workflow and evidence; semantic review verifies support",
-            "section": "Review the workflow and evidence"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Evaluate improvements without invented ROI",
-            "section": "Evaluate improvements without invented ROI"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Evaluate improvements without invented ROI; semantic review verifies support",
-            "section": "Evaluate improvements without invented ROI"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Frequently asked questions",
-            "section": "Frequently asked questions"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Frequently asked questions; semantic review verifies support",
-            "section": "Frequently asked questions"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Prepare a software demonstration",
-            "section": "Prepare a software demonstration"
-          },
-          {
-            "id": "subsection-evidence",
-            "pass": true,
-            "message": "Cite assigned evidence in Prepare a software demonstration; semantic review verifies support",
-            "section": "Prepare a software demonstration"
-          },
-          {
-            "id": "faq-answer",
-            "pass": true,
-            "message": "Answer with actionable detail: What problem should internal audit software solve first?",
-            "section": "What problem should internal audit software solve first?"
-          },
-          {
-            "id": "faq-answer",
-            "pass": true,
-            "message": "Answer with actionable detail: Which records should be migrated?",
-            "section": "Which records should be migrated?"
-          },
-          {
-            "id": "faq-answer",
-            "pass": true,
-            "message": "Answer with actionable detail: How should responsibilities and permissions be assigned?",
-            "section": "How should responsibilities and permissions be assigned?"
-          },
-          {
-            "id": "faq-answer",
-            "pass": true,
-            "message": "Answer with actionable detail: How should approval decisions be tested?",
-            "section": "How should approval decisions be tested?"
-          },
-          {
-            "id": "faq-answer",
-            "pass": true,
-            "message": "Answer with actionable detail: How should a team handle obsolete records?",
-            "section": "How should a team handle obsolete records?"
-          },
-          {
-            "id": "faq-answer",
-            "pass": true,
-            "message": "Answer with actionable detail: What evidence should be available during an audit?",
-            "section": "What evidence should be available during an audit?"
-          },
-          {
-            "id": "faq-answer",
-            "pass": true,
-            "message": "Answer with actionable detail: How should training and rollout be evaluated?",
-            "section": "How should training and rollout be evaluated?"
-          },
-          {
-            "id": "faq-answer",
-            "pass": true,
-            "message": "Answer with actionable detail: Does software guarantee ISO certification?",
-            "section": "Does software guarantee ISO certification?"
-          },
-          {
-            "id": "faq-answer",
-            "pass": true,
-            "message": "Answer with actionable detail: What should be prepared for a software demonstration?",
-            "section": "What should be prepared for a software demonstration?"
-          }
-        ],
-        "failures": []
-      },
-      "glossaryVariantsIgnored": [],
-      "inputHash": "bbe0c1343e74c7eeed084c2498994b6b83220425ced865ef014cdd51a2ef082a",
-      "outputContextHash": "ec46f7677ce540267a09fcaa05b72e7fbc168b0f88b3ee4a7feceb3f4a91bec3",
-      "reviewedAt": "2026-10-30T14:56:44.890Z",
-      "reviewer": "Configured independent chapter reviewer"
-    },
-    "internal-audit-software": {
-      "claims": "passed",
-      "scope": "passed",
-      "readability": "passed",
-      "links": "passed",
-      "repetition": "passed",
-      "faq": "passed",
-      "findings": [],
-      "summary": "The introduction meets its brief, uses supported claims and labeled hypothetical examples, and includes no unassigned FAQ. Cited links match supplied sources or allowed internal paths; live availability was not checked.",
-      "glossary": [
-        {
-          "term": "Audit program",
-          "definition": "The level of audit planning that covers a period as a whole."
-        },
-        {
-          "term": "Audit plan",
-          "definition": "The plan for a single audit."
-        }
-      ],
-      "roles": [
-        "Workflow owner",
-        "Quality manager",
-        "Auditor",
-        "Lead auditor",
-        "Process owner",
-        "Production representative",
-        "Production manager",
-        "IT contact",
-        "Auditee",
-        "Management",
-        "Certification body"
-      ],
-      "recordNames": [
-        "Audit schedule",
-        "Checklist",
-        "Audit notes",
-        "Finding",
-        "Corrective action log",
-        "Observation",
-        "Closure evidence",
-        "Audit program",
-        "Audit plan",
-        "Problem statement",
-        "List of owners",
-        "Requirements sheet",
-        "Audit calendar",
-        "Acceptance criteria",
-        "Sample records"
-      ],
-      "decisions": [
-        "What operational problem to solve and who owns the workflow.",
-        "Who schedules audits and may close findings, and what evidence is acceptable.",
-        "How to set audit frequency, duration and scope.",
-        "Which software capabilities to test and how to compare products.",
-        "Whether each project stage should proceed, repeat or stop.",
-        "How to configure the workflow, migrate records, train users and stage deployment.",
-        "How to measure success and review the workflow after launch."
-      ],
-      "pass": true,
-      "deterministic": {
-        "pass": true,
-        "checks": [
-          {
-            "id": "unresolved-marker",
-            "pass": true,
-            "message": "Resolve image and processing markers before review"
-          },
-          {
-            "id": "inline-image-provenance",
-            "pass": true,
-            "message": "Guide inline assets are not supported; use the managed hero image brief"
-          },
-          {
-            "id": "voice",
-            "pass": true,
-            "message": "All blocks use third-person voice"
-          },
-          {
-            "id": "fabricated-quotes",
-            "pass": true,
-            "message": "No fabricated quotes detected"
-          },
-          {
-            "id": "spelling",
-            "pass": true,
-            "message": "Use US spelling"
-          },
-          {
-            "id": "banned-filler",
-            "pass": true,
-            "message": "Remove banned filler"
-          },
-          {
-            "id": "single-h1",
-            "pass": true,
-            "message": "The page shell supplies H1"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: The operational problem",
-            "section": "The operational problem"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: How to use this guide",
-            "section": "How to use this guide"
-          },
-          {
-            "id": "subsection-coverage",
-            "pass": true,
-            "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
-            "section": "Planning evaluation and implementation"
-          }
-        ],
-        "failures": []
-      },
-      "glossaryVariantsIgnored": [],
-      "inputHash": "efe3b332ad4253c6f4bc87d6ef6941c4cc7ca81c87cbd3c3b63acaacdc6d46be",
-      "outputContextHash": "2df8ad69c15ccf21512800a35836910ea89625673c675d0712956eacf24c9457",
-      "reviewedAt": "2026-10-30T15:06:58.104Z",
+      "inputHash": "92da34871d0579d74902c74090937a5666487e83353256cef77fcc72927f33e7",
+      "outputContextHash": "73bdedda89c9ff9411b6e6d28f15385281e08b300166d5a16f83dc52aa99585b",
+      "reviewedAt": "2026-10-30T15:10:51.100Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
   "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883",
   "outlineHash": "9a0993bb78e37f48a9899644df0efc4fdc9325c541b676c1994825e821f68297",
-  "audit": {
-    "claims": "failed",
-    "consistency": "failed",
-    "repetition": "failed",
-    "unresolvedFindings": [
-      "A cited factual claim is not established by the supplied evidence: the internal-audit guidance is described as saying that the organization is responsible for how its audits are carried out. The evidence provided does not support that wording. The statement that documents and checklists differ from retained records is also not supported by the supplied sources.",
-      "The evidence-linking section contains an unclear instruction: “Review evidence that fits no criterion for relevance, recording a gap only if the review finds one.” Later, it treats evidence that fits no criterion as an exception requiring a recorded disposition. Clarify the intended review and recording workflow.",
-      "The guide repeatedly restates the same plan-to-finding-to-follow-up chain, source caveats about ICC’s published descriptions, and similar role/input/decision/record/exception tables. Consolidate repeated explanations while preserving necessary chapter handoffs.",
-      "The FAQ questions in the outline are all answered, and the guide includes demonstration preparation and evaluation scenarios. The supplied evidence does not verify any specific ISO edition, and the guide does not name one; retain the clause 9.2.2 reference without implying an edition not established by evidence."
-    ],
-    "inputHash": "c34fbea62eaf24a186e748cb43a84306b78ded8624c5e90ad95e137e59003f3a",
-    "reviewer": "Configured openai independent review",
-    "reviewedAt": "2026-10-30T15:07:54.258Z"
-  },
+  "audit": null,
   "generationCompletedAt": null,
   "finalReport": null
 }
