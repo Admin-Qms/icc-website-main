@@ -6,51 +6,55 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The introduction follows the brief, uses supported citations, labels its examples as hypothetical, and includes no unassigned FAQ.",
+  "summary": "The introduction meets its brief, uses supported claims and labeled hypothetical examples, and includes no unassigned FAQ. Cited links match supplied sources or allowed internal paths; live availability was not checked.",
   "glossary": [
     {
       "term": "Audit program",
-      "definition": "Planning that covers the audit period as a whole."
+      "definition": "The level of audit planning that covers a period as a whole."
     },
     {
       "term": "Audit plan",
-      "definition": "A plan for a single audit."
+      "definition": "The plan for a single audit."
     }
   ],
   "roles": [
     "Workflow owner",
+    "Quality manager",
     "Auditor",
     "Lead auditor",
-    "Quality manager",
     "Process owner",
     "Production representative",
     "Production manager",
     "IT contact",
     "Auditee",
-    "Finding owner"
+    "Management",
+    "Certification body"
   ],
   "recordNames": [
-    "Audit program",
-    "Audit plan",
     "Audit schedule",
     "Checklist",
     "Audit notes",
-    "Observations",
-    "Findings",
+    "Finding",
     "Corrective action log",
-    "Follow-up evidence",
+    "Observation",
+    "Closure evidence",
+    "Audit program",
+    "Audit plan",
     "Problem statement",
-    "Acceptance criteria",
+    "List of owners",
     "Requirements sheet",
+    "Audit calendar",
+    "Acceptance criteria",
     "Sample records"
   ],
   "decisions": [
-    "Which operational problem the team will address.",
-    "Who schedules audits and who may close a finding.",
-    "What evidence is acceptable.",
-    "Which acceptance criteria will be used to evaluate software.",
-    "Whether to proceed, repeat or stop after each project stage.",
-    "Whether demonstrated capabilities meet the team's criteria."
+    "What operational problem to solve and who owns the workflow.",
+    "Who schedules audits and may close findings, and what evidence is acceptable.",
+    "How to set audit frequency, duration and scope.",
+    "Which software capabilities to test and how to compare products.",
+    "Whether each project stage should proceed, repeat or stop.",
+    "How to configure the workflow, migrate records, train users and stage deployment.",
+    "How to measure success and review the workflow after launch."
   ],
   "pass": true,
   "deterministic": {
@@ -113,8 +117,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "0778f286a2a088ad5f96733f85c384fd89158c4ccba60b410c5268b9ee564b0a",
-  "outputContextHash": "de915cea58089ddb818c60afb713bfaa10330c96f2fe48ad4b0650d477557ea6",
-  "reviewedAt": "2026-10-30T15:03:32.308Z",
+  "inputHash": "efe3b332ad4253c6f4bc87d6ef6941c4cc7ca81c87cbd3c3b63acaacdc6d46be",
+  "outputContextHash": "2df8ad69c15ccf21512800a35836910ea89625673c675d0712956eacf24c9457",
+  "reviewedAt": "2026-10-30T15:06:58.104Z",
   "reviewer": "Configured independent chapter reviewer"
 }

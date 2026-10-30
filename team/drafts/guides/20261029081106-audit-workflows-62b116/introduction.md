@@ -82,13 +82,13 @@ Decide what success looks like before choosing a product. Success is not the sys
 
 Measure these from your own records, and be wary of any promise of savings or improvements that is not based on your own data.
 
-Be careful about what software can and cannot do for certification. Confirm certification requirements with your certification body, since the sources used in this guide do not address them. No tool guarantees an outcome.
+Be careful about what software can and cannot do for certification. Confirm certification requirements with your certification body, since the sources used in this guide do not address them. The audit guidance cited above says the organization, not the tool, defines audit frequency, duration, and scope.
 
 Treat the software as a way to keep consistent, retrievable records, and judge it by whether it meets your acceptance criteria.
 
 ICC publishes a description of its [audits and management review module](/solutions/audits-management-review/) as one option to examine when comparing products. The published description mentions an annual audit program, a single audit workspace for checklist, findings, and evidence, a checklist library, findings with owners and closure status, a PDF report, and audit trends.
 
-These are published descriptions only. As with any vendor, availability and configuration of a capability should be confirmed in a demonstration with your own scenarios before a team relies on it, so this guide treats each item as a question to ask. The final chapter explains how to prepare for that session, and it closes with an invitation to request a software demonstration.
+These are published descriptions only. As with any vendor, availability and configuration of a capability should be confirmed in a demonstration with your own scenarios before a team relies on it. The evaluation chapter shows how to script a session, and the final chapter lists what to prepare for a later one.
 
 **Illustrative example:** The unnamed machining manufacturer assigns its quality manager as workflow owner and adds a lead auditor, a production manager, a process owner, and an IT contact to the project group. The group sets a three-stage plan and agrees to judge success by whether each audit has a plan on file, whether each finding links to its observations, and whether each closure has checked evidence.
 

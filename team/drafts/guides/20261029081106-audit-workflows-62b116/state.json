@@ -35,7 +35,7 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W44-slot-2",
-  "stage": "reviewing",
+  "stage": "writing",
   "pages": {
     "mapping-workflows": {
       "hash": "69de69150c250cbd9d569286118940d5eb16a54a2b1a5b33f53e87cc7a982784",
@@ -101,15 +101,15 @@
       "checkpointedAt": "2026-10-30T14:56:29.638Z"
     },
     "internal-audit-software": {
-      "hash": "dd26198aa43dd8e74e736fe877c7f713475d8ee7fb2d19291735fed3f0a9301c",
-      "wordCount": 1500,
+      "hash": "302cfa7871605fedc9091cd4971fa02bf85e9815667290f12f9c44a9b7848a3b",
+      "wordCount": 1501,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-10-30T15:03:20.299Z"
+      "checkpointedAt": "2026-10-30T15:06:47.834Z"
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-10-30T15:04:19.729Z",
+  "updatedAt": "2026-10-30T15:06:58.107Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1441,7 +1441,7 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "de915cea58089ddb818c60afb713bfaa10330c96f2fe48ad4b0650d477557ea6",
+  "contextHash": "2df8ad69c15ccf21512800a35836910ea89625673c675d0712956eacf24c9457",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2903,51 +2903,55 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The introduction follows the brief, uses supported citations, labels its examples as hypothetical, and includes no unassigned FAQ.",
+      "summary": "The introduction meets its brief, uses supported claims and labeled hypothetical examples, and includes no unassigned FAQ. Cited links match supplied sources or allowed internal paths; live availability was not checked.",
       "glossary": [
         {
           "term": "Audit program",
-          "definition": "Planning that covers the audit period as a whole."
+          "definition": "The level of audit planning that covers a period as a whole."
         },
         {
           "term": "Audit plan",
-          "definition": "A plan for a single audit."
+          "definition": "The plan for a single audit."
         }
       ],
       "roles": [
         "Workflow owner",
+        "Quality manager",
         "Auditor",
         "Lead auditor",
-        "Quality manager",
         "Process owner",
         "Production representative",
         "Production manager",
         "IT contact",
         "Auditee",
-        "Finding owner"
+        "Management",
+        "Certification body"
       ],
       "recordNames": [
-        "Audit program",
-        "Audit plan",
         "Audit schedule",
         "Checklist",
         "Audit notes",
-        "Observations",
-        "Findings",
+        "Finding",
         "Corrective action log",
-        "Follow-up evidence",
+        "Observation",
+        "Closure evidence",
+        "Audit program",
+        "Audit plan",
         "Problem statement",
-        "Acceptance criteria",
+        "List of owners",
         "Requirements sheet",
+        "Audit calendar",
+        "Acceptance criteria",
         "Sample records"
       ],
       "decisions": [
-        "Which operational problem the team will address.",
-        "Who schedules audits and who may close a finding.",
-        "What evidence is acceptable.",
-        "Which acceptance criteria will be used to evaluate software.",
-        "Whether to proceed, repeat or stop after each project stage.",
-        "Whether demonstrated capabilities meet the team's criteria."
+        "What operational problem to solve and who owns the workflow.",
+        "Who schedules audits and may close findings, and what evidence is acceptable.",
+        "How to set audit frequency, duration and scope.",
+        "Which software capabilities to test and how to compare products.",
+        "Whether each project stage should proceed, repeat or stop.",
+        "How to configure the workflow, migrate records, train users and stage deployment.",
+        "How to measure success and review the workflow after launch."
       ],
       "pass": true,
       "deterministic": {
@@ -3010,26 +3014,15 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "0778f286a2a088ad5f96733f85c384fd89158c4ccba60b410c5268b9ee564b0a",
-      "outputContextHash": "de915cea58089ddb818c60afb713bfaa10330c96f2fe48ad4b0650d477557ea6",
-      "reviewedAt": "2026-10-30T15:03:32.308Z",
+      "inputHash": "efe3b332ad4253c6f4bc87d6ef6941c4cc7ca81c87cbd3c3b63acaacdc6d46be",
+      "outputContextHash": "2df8ad69c15ccf21512800a35836910ea89625673c675d0712956eacf24c9457",
+      "reviewedAt": "2026-10-30T15:06:58.104Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
   "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883",
   "outlineHash": "9a0993bb78e37f48a9899644df0efc4fdc9325c541b676c1994825e821f68297",
-  "audit": {
-    "claims": "failed",
-    "consistency": "passed",
-    "repetition": "failed",
-    "unresolvedFindings": [
-      "Unsupported absolute claim: “No tool guarantees an outcome.” The supplied evidence does not establish this certification claim; the guide should remove it or support it with an appropriate primary source.",
-      "Repeated explanations are extensive: the plan-to-finding-to-follow-up chain, audit-plan references, ICC module-description caveats, and similar role/input/decision tables recur across chapters. Consolidate repeated material or keep only brief cross-references."
-    ],
-    "inputHash": "60f2ba39f0036b58cca30d68750a780476fab0807e2ddc474a4c7ef7f590a905",
-    "reviewer": "Configured openai independent review",
-    "reviewedAt": "2026-10-30T15:04:19.728Z"
-  },
+  "audit": null,
   "generationCompletedAt": null,
   "finalReport": null
 }

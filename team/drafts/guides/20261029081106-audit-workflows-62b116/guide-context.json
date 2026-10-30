@@ -72,11 +72,11 @@
     },
     {
       "term": "Audit program",
-      "definition": "Planning that covers the audit period as a whole."
+      "definition": "The level of audit planning that covers a period as a whole."
     },
     {
       "term": "Audit plan",
-      "definition": "A plan for a single audit."
+      "definition": "The plan for a single audit."
     }
   ],
   "roles": [
@@ -118,7 +118,7 @@
     "Owner",
     "Note taker",
     "Production representative",
-    "Finding owner"
+    "Certification body"
   ],
   "recordNames": [
     "Audit schedule",
@@ -227,8 +227,8 @@
     "Attendee list",
     "Demonstration pack",
     "Audit notes",
-    "Observations",
-    "Findings",
+    "Closure evidence",
+    "List of owners",
     "Requirements sheet"
   ],
   "example": {
@@ -378,15 +378,16 @@
     {
       "slug": "internal-audit-software",
       "title": "Internal audit management software for Canadian quality and operations teams",
-      "summary": "The introduction follows the brief, uses supported citations, labels its examples as hypothetical, and includes no unassigned FAQ.",
-      "bodyHash": "f2098924f095484156350b1b293f9646517a7807290417545bd2aecc2ca2158a",
+      "summary": "The introduction meets its brief, uses supported claims and labeled hypothetical examples, and includes no unassigned FAQ. Cited links match supplied sources or allowed internal paths; live availability was not checked.",
+      "bodyHash": "a6fcbf1af56a731ad86ac29c55a8046d396d772ba9c72164de54d381aff8f34f",
       "decisions": [
-        "Which operational problem the team will address.",
-        "Who schedules audits and who may close a finding.",
-        "What evidence is acceptable.",
-        "Which acceptance criteria will be used to evaluate software.",
-        "Whether to proceed, repeat or stop after each project stage.",
-        "Whether demonstrated capabilities meet the team's criteria."
+        "What operational problem to solve and who owns the workflow.",
+        "Who schedules audits and may close findings, and what evidence is acceptable.",
+        "How to set audit frequency, duration and scope.",
+        "Which software capabilities to test and how to compare products.",
+        "Whether each project stage should proceed, repeat or stop.",
+        "How to configure the workflow, migrate records, train users and stage deployment.",
+        "How to measure success and review the workflow after launch."
       ]
     }
   ],
