@@ -69,6 +69,14 @@
     {
       "term": "Staged deployment",
       "definition": "Bringing groups of users or parts of the audit program into the system in a planned order."
+    },
+    {
+      "term": "Audit program",
+      "definition": "Planning that covers the audit period as a whole."
+    },
+    {
+      "term": "Audit plan",
+      "definition": "A plan for a single audit."
     }
   ],
   "roles": [
@@ -108,7 +116,9 @@
     "Pilot user",
     "Observer",
     "Owner",
-    "Note taker"
+    "Note taker",
+    "Production representative",
+    "Finding owner"
   ],
   "recordNames": [
     "Audit schedule",
@@ -215,7 +225,11 @@
     "Approved answers",
     "Representative records",
     "Attendee list",
-    "Demonstration pack"
+    "Demonstration pack",
+    "Audit notes",
+    "Observations",
+    "Findings",
+    "Requirements sheet"
   ],
   "example": {
     "label": "Illustrative example",
@@ -359,6 +373,20 @@
         "Accept or return the demonstration pack based on scenario, exception, record and attendee readiness.",
         "Choose and record a substitute for a demonstration record that cannot be shared.",
         "Mark the result of each demonstration scenario."
+      ]
+    },
+    {
+      "slug": "internal-audit-software",
+      "title": "Internal audit management software for Canadian quality and operations teams",
+      "summary": "The introduction follows the brief, uses supported citations, labels its examples as hypothetical, and includes no unassigned FAQ.",
+      "bodyHash": "f2098924f095484156350b1b293f9646517a7807290417545bd2aecc2ca2158a",
+      "decisions": [
+        "Which operational problem the team will address.",
+        "Who schedules audits and who may close a finding.",
+        "What evidence is acceptable.",
+        "Which acceptance criteria will be used to evaluate software.",
+        "Whether to proceed, repeat or stop after each project stage.",
+        "Whether demonstrated capabilities meet the team's criteria."
       ]
     }
   ],

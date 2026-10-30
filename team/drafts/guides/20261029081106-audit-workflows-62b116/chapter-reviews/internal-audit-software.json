@@ -1,0 +1,120 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The introduction follows the brief, uses supported citations, labels its examples as hypothetical, and includes no unassigned FAQ.",
+  "glossary": [
+    {
+      "term": "Audit program",
+      "definition": "Planning that covers the audit period as a whole."
+    },
+    {
+      "term": "Audit plan",
+      "definition": "A plan for a single audit."
+    }
+  ],
+  "roles": [
+    "Workflow owner",
+    "Auditor",
+    "Lead auditor",
+    "Quality manager",
+    "Process owner",
+    "Production representative",
+    "Production manager",
+    "IT contact",
+    "Auditee",
+    "Finding owner"
+  ],
+  "recordNames": [
+    "Audit program",
+    "Audit plan",
+    "Audit schedule",
+    "Checklist",
+    "Audit notes",
+    "Observations",
+    "Findings",
+    "Corrective action log",
+    "Follow-up evidence",
+    "Problem statement",
+    "Acceptance criteria",
+    "Requirements sheet",
+    "Sample records"
+  ],
+  "decisions": [
+    "Which operational problem the team will address.",
+    "Who schedules audits and who may close a finding.",
+    "What evidence is acceptable.",
+    "Which acceptance criteria will be used to evaluate software.",
+    "Whether to proceed, repeat or stop after each project stage.",
+    "Whether demonstrated capabilities meet the team's criteria."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: The operational problem",
+        "section": "The operational problem"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: How to use this guide",
+        "section": "How to use this guide"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+        "section": "Planning evaluation and implementation"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "0778f286a2a088ad5f96733f85c384fd89158c4ccba60b410c5268b9ee564b0a",
+  "outputContextHash": "de915cea58089ddb818c60afb713bfaa10330c96f2fe48ad4b0650d477557ea6",
+  "reviewedAt": "2026-10-30T15:03:32.308Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

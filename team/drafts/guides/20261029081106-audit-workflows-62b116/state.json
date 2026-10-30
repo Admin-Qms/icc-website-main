@@ -101,15 +101,15 @@
       "checkpointedAt": "2026-10-30T14:56:29.638Z"
     },
     "internal-audit-software": {
-      "hash": "412a728535b8cae164ab903a9d602530315c4d794244bf00ab37ff594f8c8b9a",
+      "hash": "dd26198aa43dd8e74e736fe877c7f713475d8ee7fb2d19291735fed3f0a9301c",
       "wordCount": 1500,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-10-30T14:55:32.720Z"
+      "checkpointedAt": "2026-10-30T15:03:20.299Z"
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-10-30T14:56:44.893Z",
+  "updatedAt": "2026-10-30T15:03:32.313Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1441,7 +1441,7 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "ec46f7677ce540267a09fcaa05b72e7fbc168b0f88b3ee4a7feceb3f4a91bec3",
+  "contextHash": "de915cea58089ddb818c60afb713bfaa10330c96f2fe48ad4b0650d477557ea6",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2893,6 +2893,126 @@
       "inputHash": "bbe0c1343e74c7eeed084c2498994b6b83220425ced865ef014cdd51a2ef082a",
       "outputContextHash": "ec46f7677ce540267a09fcaa05b72e7fbc168b0f88b3ee4a7feceb3f4a91bec3",
       "reviewedAt": "2026-10-30T14:56:44.890Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "internal-audit-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The introduction follows the brief, uses supported citations, labels its examples as hypothetical, and includes no unassigned FAQ.",
+      "glossary": [
+        {
+          "term": "Audit program",
+          "definition": "Planning that covers the audit period as a whole."
+        },
+        {
+          "term": "Audit plan",
+          "definition": "A plan for a single audit."
+        }
+      ],
+      "roles": [
+        "Workflow owner",
+        "Auditor",
+        "Lead auditor",
+        "Quality manager",
+        "Process owner",
+        "Production representative",
+        "Production manager",
+        "IT contact",
+        "Auditee",
+        "Finding owner"
+      ],
+      "recordNames": [
+        "Audit program",
+        "Audit plan",
+        "Audit schedule",
+        "Checklist",
+        "Audit notes",
+        "Observations",
+        "Findings",
+        "Corrective action log",
+        "Follow-up evidence",
+        "Problem statement",
+        "Acceptance criteria",
+        "Requirements sheet",
+        "Sample records"
+      ],
+      "decisions": [
+        "Which operational problem the team will address.",
+        "Who schedules audits and who may close a finding.",
+        "What evidence is acceptable.",
+        "Which acceptance criteria will be used to evaluate software.",
+        "Whether to proceed, repeat or stop after each project stage.",
+        "Whether demonstrated capabilities meet the team's criteria."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: The operational problem",
+            "section": "The operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: How to use this guide",
+            "section": "How to use this guide"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+            "section": "Planning evaluation and implementation"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "0778f286a2a088ad5f96733f85c384fd89158c4ccba60b410c5268b9ee564b0a",
+      "outputContextHash": "de915cea58089ddb818c60afb713bfaa10330c96f2fe48ad4b0650d477557ea6",
+      "reviewedAt": "2026-10-30T15:03:32.308Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
