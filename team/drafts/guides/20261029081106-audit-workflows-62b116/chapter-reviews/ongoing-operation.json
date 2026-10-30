@@ -2,28 +2,22 @@
   "claims": "passed",
   "scope": "passed",
   "readability": "passed",
-  "links": "failed",
+  "links": "passed",
   "repetition": "passed",
   "faq": "passed",
-  "findings": [
-    {
-      "section": "Links and final call to action",
-      "reason": "The cited source URLs match the supplied research, but live availability was not verified. The supplied context also does not establish that /contact/ is a valid demonstration-request destination.",
-      "action": "Check that each linked source opens and that /contact/ accepts demonstration requests; repair any unavailable or unsuitable links."
-    }
-  ],
-  "summary": "The page follows the assigned subsections, including the FAQ, and distinguishes sourced claims from proposed practices and hypothetical examples. Link destinations still need verification.",
+  "findings": [],
+  "summary": "The page covers all assigned subsections, including the FAQ, with actionable decisions and labeled hypothetical examples. Citations match the supplied source records; live availability was not checked.",
   "glossary": [],
   "roles": [
     "Workflow owner",
     "Quality manager",
     "Process owner",
     "Top management",
-    "Vendor",
     "Auditor",
     "Planner",
     "Owner",
     "Checker",
+    "Vendor",
     "Note taker"
   ],
   "recordNames": [
@@ -34,32 +28,28 @@
     "Issue log",
     "Review report",
     "Improvement list",
-    "Overdue-actions report",
+    "User feedback",
+    "Improvement proposal",
     "Approved answers",
-    "Audit program",
-    "Audit report",
-    "Inventory",
-    "Retention rules",
-    "Checklist",
-    "Observation",
     "Problem statement",
     "Acceptance criteria",
     "Test script",
     "Representative records",
-    "Demonstration pack",
-    "Customer drawing"
+    "Attendee list",
+    "Demonstration pack"
   ],
   "decisions": [
-    "Whether the workflow review meets the stated traceability and access criteria or is returned.",
-    "What correction and due date to assign to a review problem, and whether top management approves a time-limited exception.",
-    "Which improvement proposals are complete and which to prioritize.",
-    "Whether to support a claimed benefit with a method or proceed without a figure.",
-    "Whether an FAQ answer matches the procedure and evidence or needs correction.",
-    "How to resolve and record a conflict between an answer and a procedure.",
-    "Whether the demonstration pack meets the readiness criteria or is returned.",
-    "What substitute to use when a representative record cannot be shared."
+    "Accept or return the workflow review based on traceability, access, ownership, due dates and recorded exceptions.",
+    "Decide corrections and due dates for workflow problems and approve or decline time-limited exceptions.",
+    "Choose which complete improvement proposals to pursue based on evidence, priority and effort.",
+    "Return an unsupported benefit claim or decide whether to proceed without a figure.",
+    "Accept or return FAQ answers based on their consistency with procedure and evidence.",
+    "Correct an answer or change the procedure through the approval process when they conflict.",
+    "Accept or return the demonstration pack based on scenario, exception, record and attendee readiness.",
+    "Choose and record a substitute for a demonstration record that cannot be shared.",
+    "Mark the result of each demonstration scenario."
   ],
-  "pass": false,
+  "pass": true,
   "deterministic": {
     "pass": true,
     "checks": [
@@ -205,7 +195,7 @@
   },
   "glossaryVariantsIgnored": [],
   "inputHash": "bbe0c1343e74c7eeed084c2498994b6b83220425ced865ef014cdd51a2ef082a",
-  "outputContextHash": "eeb53f3a5c9d57c04e442df13ed51ed5ae6c656cdc80a6501a5f7dd78262cf69",
-  "reviewedAt": "2026-10-29T21:01:13.492Z",
+  "outputContextHash": "ec46f7677ce540267a09fcaa05b72e7fbc168b0f88b3ee4a7feceb3f4a91bec3",
+  "reviewedAt": "2026-10-30T14:56:44.890Z",
   "reviewer": "Configured independent chapter reviewer"
 }

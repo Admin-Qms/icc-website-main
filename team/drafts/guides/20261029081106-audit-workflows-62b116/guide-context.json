@@ -106,7 +106,9 @@
     "Trainer",
     "Management",
     "Pilot user",
-    "Observer"
+    "Observer",
+    "Owner",
+    "Note taker"
   ],
   "recordNames": [
     "Audit schedule",
@@ -205,7 +207,15 @@
     "Stage records",
     "Workload log",
     "User feedback",
-    "Evaluation report"
+    "Evaluation report",
+    "Action",
+    "Review report",
+    "Improvement list",
+    "Improvement proposal",
+    "Approved answers",
+    "Representative records",
+    "Attendee list",
+    "Demonstration pack"
   ],
   "example": {
     "label": "Illustrative example",
@@ -332,6 +342,23 @@
         "Whether to pause, roll back or continue with a workaround when a serious problem occurs.",
         "Whether to accept rollout as complete or request further action.",
         "Whether retraining, reconfiguration or vendor help is needed for low adoption or increased workload."
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Maintaining the system and choosing next steps: Internal audit management software",
+      "summary": "The page covers all assigned subsections, including the FAQ, with actionable decisions and labeled hypothetical examples. Citations match the supplied source records; live availability was not checked.",
+      "bodyHash": "e2d9bcfc1577cebf05268f8f0ae2fb6f0cc1771533ef8bb66fa8b6a06442bee1",
+      "decisions": [
+        "Accept or return the workflow review based on traceability, access, ownership, due dates and recorded exceptions.",
+        "Decide corrections and due dates for workflow problems and approve or decline time-limited exceptions.",
+        "Choose which complete improvement proposals to pursue based on evidence, priority and effort.",
+        "Return an unsupported benefit claim or decide whether to proceed without a figure.",
+        "Accept or return FAQ answers based on their consistency with procedure and evidence.",
+        "Correct an answer or change the procedure through the approval process when they conflict.",
+        "Accept or return the demonstration pack based on scenario, exception, record and attendee readiness.",
+        "Choose and record a substitute for a demonstration record that cannot be shared.",
+        "Mark the result of each demonstration scenario."
       ]
     }
   ],
