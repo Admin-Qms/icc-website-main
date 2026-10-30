@@ -9,7 +9,11 @@ function pageWordBudget(job, slug) {
   const spent = completed.reduce((sum, [, p]) => sum + p.wordCount, 0);
   const done = new Set(completed.map(([s]) => s));
   const reserve = pages.filter(s => s !== slug && !done.has(s)).reduce((sum, s) => sum + minimum(s), 0);
-  const min = minimum(slug); const max = Math.min(slug === job.manifest.slug ? POLICY.totalMax : POLICY.chapterMax, POLICY.totalMax - spent - reserve);
+  // Spare words above the minimums are shared across the pages still to write, so early chapters
+  // cannot use them all and squeeze the last pages into a one-word window.
+  const min = minimum(slug); const slack = POLICY.totalMax - spent - reserve - min;
+  const share = slack > 0 ? Math.ceil(slack / pages.filter(s => !done.has(s)).length) : slack;
+  const max = Math.min(slug === job.manifest.slug ? POLICY.totalMax : POLICY.chapterMax, min + share);
   return { min, max, possible: max >= min, spent, reserve, target: min };
 }
 function links(body, referenceBody = body) {

@@ -24,17 +24,17 @@ test('a failed semantic review or changed citation cannot advance the context', 
   assert.equal(store.loadJob(job.id).chapterReviews[first].pass, false);
   assert.throws(() => service.getGuideContext(job.id, job.manifest.chapters[1].slug), /review/i);
 });
-test('a 2150-word chapter is accepted when it leaves a valid guide budget', async t => {
+test('a 2050-word chapter is accepted when it leaves a valid guide budget', async t => {
   const { service, job, writePage } = setupReview(t); assert.equal(typeof service.reviewChapter, 'function');
-  const first = job.manifest.chapters[0].slug; writePage(first, 2150);
+  const first = job.manifest.chapters[0].slug; writePage(first, 2050);
   assert.equal((await service.reviewChapter(job.id, first)).pass, true);
 });
 test('reviewing a manually saved page records its actual word budget before advancement', async t => {
   const { service, job, store, writePage } = setupReview(t);
-  const first = job.manifest.chapters[0].slug; writePage(first, 2150);
+  const first = job.manifest.chapters[0].slug; writePage(first, 2050);
   store.updateJob(job.id, { pages: {} });
   assert.equal((await service.reviewChapter(job.id, first)).pass, true);
-  assert.equal(store.loadJob(job.id).pages[first].wordCount, 2150);
+  assert.equal(store.loadJob(job.id).pages[first].wordCount, 2050);
 });
 test('a real copy edit saves a draft with absent optional metadata', async t => {
   const { service, job, store, writePage } = setupReview(t, {
@@ -60,4 +60,28 @@ test('a targeted revision saves a draft with absent optional metadata', async t 
   assert.equal((await service.reviseGuidePage(job.id, first)).pass, true);
   assert.ok(fs.readFileSync(filename, 'utf8').includes('Verify evidence before release.'));
   assert.ok(store.loadJob(job.id).pages[first].wordCount > 2000);
+});
+test('a copy edit that leaves the word range is dropped and the written page is reviewed', async t => {
+  const padding = Array.from({ length: 60 }, (_, n) => `padword${n}`).join(' ');
+  const { service, job, writePage } = setupReview(t, {
+    editModel: async (_system, message) => message.split('ARTICLE BODY:\n').at(-1) + ' ' + padding
+  });
+  const first = job.manifest.chapters[0].slug; const filename = writePage(first);
+  assert.equal((await service.reviewChapter(job.id, first)).pass, true);
+  assert.ok(!fs.readFileSync(filename, 'utf8').includes('padword'));
+});
+test('a page outside its word range fails before any edit or review call', async t => {
+  const { service, job, writePage } = setupReview(t, {
+    editModel: async () => { throw new Error('Editor must not run'); }, reviewer: async () => { throw new Error('Reviewer must not run'); }
+  });
+  const first = job.manifest.chapters[0].slug; writePage(first, 2100);
+  await assert.rejects(() => service.reviewChapter(job.id, first), /must fit 2000–2050 words/);
+});
+test('the reviewer judges links on the supplied sources, not live availability', async t => {
+  let instructions = '';
+  const { service, job, writePage } = setupReview(t, { reviewer: async (system) => { instructions = system; return passedReview(); } });
+  const first = job.manifest.chapters[0].slug; writePage(first);
+  await service.reviewChapter(job.id, first);
+  assert.match(instructions, /internal site paths such as \/contact\/ are allowed/);
+  assert.match(instructions, /never fail links over live availability/);
 });
