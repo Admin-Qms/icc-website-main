@@ -35,7 +35,7 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W44-slot-2",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "69de69150c250cbd9d569286118940d5eb16a54a2b1a5b33f53e87cc7a982784",
@@ -109,7 +109,7 @@
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-10-30T15:06:58.107Z",
+  "updatedAt": "2026-10-30T15:07:54.261Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -3022,7 +3022,20 @@
   },
   "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883",
   "outlineHash": "9a0993bb78e37f48a9899644df0efc4fdc9325c541b676c1994825e821f68297",
-  "audit": null,
+  "audit": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "A cited factual claim is not established by the supplied evidence: the internal-audit guidance is described as saying that the organization is responsible for how its audits are carried out. The evidence provided does not support that wording. The statement that documents and checklists differ from retained records is also not supported by the supplied sources.",
+      "The evidence-linking section contains an unclear instruction: “Review evidence that fits no criterion for relevance, recording a gap only if the review finds one.” Later, it treats evidence that fits no criterion as an exception requiring a recorded disposition. Clarify the intended review and recording workflow.",
+      "The guide repeatedly restates the same plan-to-finding-to-follow-up chain, source caveats about ICC’s published descriptions, and similar role/input/decision/record/exception tables. Consolidate repeated explanations while preserving necessary chapter handoffs.",
+      "The FAQ questions in the outline are all answered, and the guide includes demonstration preparation and evaluation scenarios. The supplied evidence does not verify any specific ISO edition, and the guide does not name one; retain the clause 9.2.2 reference without implying an edition not established by evidence."
+    ],
+    "inputHash": "c34fbea62eaf24a186e748cb43a84306b78ded8624c5e90ad95e137e59003f3a",
+    "reviewer": "Configured openai independent review",
+    "reviewedAt": "2026-10-30T15:07:54.258Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }

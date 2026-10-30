@@ -1,12 +1,14 @@
 {
   "claims": "failed",
-  "consistency": "passed",
+  "consistency": "failed",
   "repetition": "failed",
   "unresolvedFindings": [
-    "Unsupported absolute claim: “No tool guarantees an outcome.” The supplied evidence does not establish this certification claim; the guide should remove it or support it with an appropriate primary source.",
-    "Repeated explanations are extensive: the plan-to-finding-to-follow-up chain, audit-plan references, ICC module-description caveats, and similar role/input/decision tables recur across chapters. Consolidate repeated material or keep only brief cross-references."
+    "A cited factual claim is not established by the supplied evidence: the internal-audit guidance is described as saying that the organization is responsible for how its audits are carried out. The evidence provided does not support that wording. The statement that documents and checklists differ from retained records is also not supported by the supplied sources.",
+    "The evidence-linking section contains an unclear instruction: “Review evidence that fits no criterion for relevance, recording a gap only if the review finds one.” Later, it treats evidence that fits no criterion as an exception requiring a recorded disposition. Clarify the intended review and recording workflow.",
+    "The guide repeatedly restates the same plan-to-finding-to-follow-up chain, source caveats about ICC’s published descriptions, and similar role/input/decision/record/exception tables. Consolidate repeated explanations while preserving necessary chapter handoffs.",
+    "The FAQ questions in the outline are all answered, and the guide includes demonstration preparation and evaluation scenarios. The supplied evidence does not verify any specific ISO edition, and the guide does not name one; retain the clause 9.2.2 reference without implying an edition not established by evidence."
   ],
-  "inputHash": "60f2ba39f0036b58cca30d68750a780476fab0807e2ddc474a4c7ef7f590a905",
+  "inputHash": "c34fbea62eaf24a186e748cb43a84306b78ded8624c5e90ad95e137e59003f3a",
   "reviewer": "Configured openai independent review",
-  "reviewedAt": "2026-10-30T15:04:19.728Z"
+  "reviewedAt": "2026-10-30T15:07:54.258Z"
 }
