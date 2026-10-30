@@ -1,0 +1,12 @@
+{
+  "claims": "failed",
+  "consistency": "passed",
+  "repetition": "failed",
+  "unresolvedFindings": [
+    "Unsupported absolute claim: “No tool guarantees an outcome.” The supplied evidence does not establish this certification claim; the guide should remove it or support it with an appropriate primary source.",
+    "Repeated explanations are extensive: the plan-to-finding-to-follow-up chain, audit-plan references, ICC module-description caveats, and similar role/input/decision tables recur across chapters. Consolidate repeated material or keep only brief cross-references."
+  ],
+  "inputHash": "60f2ba39f0036b58cca30d68750a780476fab0807e2ddc474a4c7ef7f590a905",
+  "reviewer": "Configured openai independent review",
+  "reviewedAt": "2026-10-30T15:04:19.728Z"
+}

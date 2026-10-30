@@ -35,7 +35,7 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W44-slot-2",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "69de69150c250cbd9d569286118940d5eb16a54a2b1a5b33f53e87cc7a982784",
@@ -109,7 +109,7 @@
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-10-30T15:03:32.313Z",
+  "updatedAt": "2026-10-30T15:04:19.729Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -3018,7 +3018,18 @@
   },
   "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883",
   "outlineHash": "9a0993bb78e37f48a9899644df0efc4fdc9325c541b676c1994825e821f68297",
-  "audit": null,
+  "audit": {
+    "claims": "failed",
+    "consistency": "passed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "Unsupported absolute claim: “No tool guarantees an outcome.” The supplied evidence does not establish this certification claim; the guide should remove it or support it with an appropriate primary source.",
+      "Repeated explanations are extensive: the plan-to-finding-to-follow-up chain, audit-plan references, ICC module-description caveats, and similar role/input/decision tables recur across chapters. Consolidate repeated material or keep only brief cross-references."
+    ],
+    "inputHash": "60f2ba39f0036b58cca30d68750a780476fab0807e2ddc474a4c7ef7f590a905",
+    "reviewer": "Configured openai independent review",
+    "reviewedAt": "2026-10-30T15:04:19.728Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }
