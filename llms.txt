@@ -1,0 +1,98 @@
+# ISO Certification Consultants Inc.
+
+> ISO certification consulting for Canadian companies, with compliance management software configured by certified consultants. Based in Ontario, Canada, serving companies across Canada.
+
+ISO Certification Consultants help manufacturing and service companies prepare for and pass ISO and sector certification audits: gap analysis, management system build, internal audits and support through the certification body's Stage 1 and Stage 2 audits. Engagements pair a certified lead consultant with compliance management software that tracks every clause, document, audit and corrective action.
+
+- Contact: anthony.mannella@isocertificationconsultants.ca, +1 (416) 622-0022
+- Office: 20 Bay St., 11th Floor, Toronto, ON M5J 2N8
+- Free readiness check: https://isocertificationconsultants.ca/assessment/
+- Certification process: https://isocertificationconsultants.ca/process/
+
+## Certification consulting by standard
+
+- [ISO 9001 — Quality Management](https://isocertificationconsultants.ca/services/iso-9001/): The foundation of every certified operation. Risk-based thinking, document control, and continual improvement built around your real production floor.
+- [IATF 16949 — Automotive Quality](https://isocertificationconsultants.ca/services/iatf-16949/): The automotive supplement to ISO 9001, with the core tools your OEM customers audit against: APQP, PPAP, FMEA, MSA and SPC.
+- [AS9100 — Aerospace Quality](https://isocertificationconsultants.ca/services/as9100/): Aerospace, space and defence quality with configuration management, counterfeit-part prevention and FOD control layered onto ISO 9001.
+- [ISO 13485 — Medical Devices](https://isocertificationconsultants.ca/services/iso-13485/): Design controls, MDSAP readiness and Health Canada MDEL alignment for device makers who cannot afford a nonconformance.
+- [ISO 14001 — Environmental Management](https://isocertificationconsultants.ca/services/iso-14001/): Environmental aspects, lifecycle thinking and legal-compliance tracking that stand up to regulators and customer sustainability audits.
+- [ISO 45001 — OH&S Management](https://isocertificationconsultants.ca/services/iso-45001/): Occupational health and safety built on hazard identification, the hierarchy of controls and worker participation — not just paperwork.
+- [ISO 27001 — Information Security](https://isocertificationconsultants.ca/services/iso-27001/): An information security management system with a risk-driven Statement of Applicability, ready for the customers demanding proof.
+- [ISO 22000 — Food Safety](https://isocertificationconsultants.ca/services/iso-22000/): Food safety management integrating HACCP, prerequisite programs and CFIA compliance for Canadian processors and manufacturers.
+- [ISO 22301 — Business Continuity](https://isocertificationconsultants.ca/services/iso-22301/): Business continuity management — impact analysis, recovery strategies and tested plans that keep production running through disruption.
+- [ISO/IEC 17025 — Lab Accreditation](https://isocertificationconsultants.ca/services/iso-17025/): Testing and calibration laboratory accreditation with measurement traceability, method validation and competence you can defend.
+
+## Industries
+
+- [Manufacturing](https://isocertificationconsultants.ca/industries/manufacturing/): Discrete and process manufacturers building a compliance management system that survives customer audits and scales with the line.
+- [Automotive](https://isocertificationconsultants.ca/industries/automotive/): Tier 1 and Tier 2 suppliers meeting IATF 16949 and the core tools their OEM customers demand.
+- [Aerospace & Defence](https://isocertificationconsultants.ca/industries/aerospace-defence/): Precision machine shops and assemblies achieving AS9100 with configuration control and first article evidence their primes accept.
+- [Healthcare & Medical Devices](https://isocertificationconsultants.ca/industries/healthcare-medical-devices/): Device manufacturers navigating ISO 13485, MDSAP and Health Canada licensing without stalling the pipeline.
+- [Food & Beverage](https://isocertificationconsultants.ca/industries/food-beverage/): Processors and packagers integrating ISO 22000, HACCP and CFIA requirements into one auditable system.
+- [Oil, Gas & Energy](https://isocertificationconsultants.ca/industries/oil-gas-energy/): Energy operators managing quality, environment and safety across high-consequence, heavily-regulated operations.
+- [Construction](https://isocertificationconsultants.ca/industries/construction/): Contractors and fabricators winning tenders with integrated quality, safety and environmental management.
+- [Mining & Natural Resources](https://isocertificationconsultants.ca/industries/mining-natural-resources/): Extractive and resource operations proving environmental stewardship and safety leadership under scrutiny.
+
+## Compliance management software
+
+- [Platform overview](https://isocertificationconsultants.ca/platform/)
+- [Standards](https://isocertificationconsultants.ca/solutions/standards/): Know your clause coverage before the auditor does
+- [Documents](https://isocertificationconsultants.ca/solutions/document-control/): One current revision, and proof of which one it is
+- [Processes](https://isocertificationconsultants.ca/solutions/processes/): Your processes, with owners, drawn once
+- [Audits](https://isocertificationconsultants.ca/solutions/audits-management-review/): Findings captured on the floor, not retyped later
+- [Improvements](https://isocertificationconsultants.ca/solutions/nonconformance-capa/): Every finding has an owner and a verified fix
+- [Safety](https://isocertificationconsultants.ca/solutions/safety/): Near-misses reported from the floor, before they become incidents
+- [Training](https://isocertificationconsultants.ca/solutions/training-competence/): Who is qualified, and the record that proves it
+- [Supplier Quality](https://isocertificationconsultants.ca/solutions/supplier-quality/): SCARs answered in a portal, not an inbox
+- [Assets](https://isocertificationconsultants.ca/solutions/calibration-maintenance/): Every instrument in date, every inspection signed
+- [Vendors](https://isocertificationconsultants.ca/solutions/vendors/): Every vendor's status and documents in one directory
+- [AI Assistant](https://isocertificationconsultants.ca/solutions/ai-assistant/): Does the task, within your permissions, with you signing off
+
+## Guides
+
+- [Supplier quality management software for Canadian quality and operations teams](https://isocertificationconsultants.ca/guides/supplier-quality-software/): How to choose and implement supplier quality software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.
+- [CAPA software workflows for Canadian quality and operations teams](https://isocertificationconsultants.ca/guides/capa-software/): How to choose and implement CAPA software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.
+- [Document control software for Canadian quality and operations teams](https://isocertificationconsultants.ca/guides/document-control-software/): Evaluate document control software through revision, approval, retrieval and migration workflows, with practical tests for Canadian quality teams.
+
+## Articles
+
+- [9-Point ISO Gap Analysis Checklist for Manufacturers Before Certification](https://isocertificationconsultants.ca/blog/9-point-iso-gap-analysis-checklist-for-manufacturers-before-certification/): An ISO gap analysis for manufacturers reveals where processes, records and controls fall short—and helps prioritize fixes before certification audits.
+- [FSSC 22000 Certification Requirements in Canada: 10 Checks for Food Manufacturers](https://isocertificationconsultants.ca/blog/fssc-22000-certification-requirements-in-canada-10-checks-for-food-manufacturers/): Understand FSSC 22000 certification requirements in Canada, from food safety controls and audits to documentation, site readiness, and ongoing certification.
+- [How to Meet ISO 45001 Worker Participation Requirements in 6 Steps](https://isocertificationconsultants.ca/blog/how-to-meet-iso-45001-worker-participation-requirements-in-6-steps/): Learn how manufacturers can meet ISO 45001 worker participation requirements with consultation, safety committees, hazard reporting, and follow-up.
+- [ISO 17025 vs ISO 9001 for Laboratories: Which Standard Does Your Facility Need?](https://isocertificationconsultants.ca/blog/iso-17025-vs-iso-9001-for-laboratories-which-standard-does-your-facility-need/): Evaluate ISO 17025 vs ISO 9001 for laboratories. Compare technical competence requirements, scope differences, and audit rigor to choose the right standard.
+- [How to Choose an ISO Certification Body in Canada in 6 Steps](https://isocertificationconsultants.ca/blog/how-to-choose-an-iso-certification-body-in-canada-in-6-steps/): Learn how to choose an ISO certification body in Canada in 6 steps. Evaluate registrar accreditation, auditor industry competency, and hidden audit fees.
+- [The Plant Manager's Playbook for ISO 45001 Certification in Ontario](https://isocertificationconsultants.ca/blog/the-plant-managers-playbook-for-iso-45001-certification-in-ontario/): Navigate ISO 45001 certification in Ontario with a structured roadmap covering gap analysis, OHSA alignment, worker consultation, and audit preparation.
+- [What IATF 16949 Certification Demands of Windsor Automotive Parts Suppliers](https://isocertificationconsultants.ca/blog/what-iatf-16949-certification-demands-of-windsor-automotive-parts-suppliers/): Explore critical challenges and roadmap requirements for IATF 16949 certification in Windsor, helping automotive suppliers satisfy OEM customer mandates.
+- [6 ISO Certification Myths Small Manufacturers in Canada Must Stop Believing](https://isocertificationconsultants.ca/blog/6-iso-certification-myths-small-manufacturers-in-canada-must-stop-believing/): Explore the reality of ISO certification for small manufacturers in Canada. Debunk costly myths around overhead, audit timelines, and consultant fees.
+- [10-Point ISO 14001 Requirements Checklist for Manufacturing Operations](https://isocertificationconsultants.ca/blog/10-point-iso-14001-requirements-checklist-for-manufacturing-operations/): Evaluate your plant with this 10-point ISO 14001 requirements checklist. Verify aspects, legal compliance, and operational controls before your audit.
+- [ISO 13485 vs ISO 9001 Differences: Which Standard Does Your Plant Need?](https://isocertificationconsultants.ca/blog/iso-13485-vs-iso-9001-differences-which-standard-does-your-plant-need/): Explore the key ISO 13485 vs ISO 9001 differences to determine regulatory compliance requirements, risk management scope, and quality system fit for your shop.
+- [The Quality Engineer's Playbook for IATF 16949 Core Tools: APQP, PPAP, and FMEA](https://isocertificationconsultants.ca/blog/the-quality-engineers-playbook-for-iatf-16949-core-tools-apqp-ppap-and-fmea/): Master IATF 16949 core tools like APQP, PPAP, and FMEA to satisfy Tier-1 OEM expectations and prevent costly product launch defects.
+- [FSSC 22000 vs SQF Comparison: Which Food Safety Standard Fits Your Plant?](https://isocertificationconsultants.ca/blog/fssc-22000-vs-sqf-comparison-which-food-safety-standard-fits-your-plant/): Understand this FSSC 22000 vs SQF comparison to select the right GFSI-recognized food safety certification for your manufacturing plant and buyer mandates.
+- [How to Implement ISO 13485 Design Controls Requirements in 6 Steps](https://isocertificationconsultants.ca/blog/how-to-implement-iso-13485-design-controls-requirements-in-6-steps/): Master ISO 13485 design controls requirements in 6 practical steps, from planning and design inputs to verification, validation, and design transfer.
+- [10-Point ISO 45001 Internal Audit Checklist for Manufacturing Plants](https://isocertificationconsultants.ca/blog/10-point-iso-45001-internal-audit-checklist-for-manufacturing-plants/): Review occupational health and safety systems with this 10-point ISO 45001 internal audit checklist tailored for Ontario manufacturing operations.
+- [What IATF 16949 Customer Specific Requirements Demand from Ontario Automotive Suppliers](https://isocertificationconsultants.ca/blog/what-iatf-16949-customer-specific-requirements-demand-from-ontario-automotive/): Understand how IATF 16949 customer specific requirements impact Ontario auto suppliers. Master OEM matrices, compliance audits, and Tier-2 supplier flowdown.
+- [How to Execute the ISO 9001 Corrective Action Process in 6 Steps](https://isocertificationconsultants.ca/blog/how-to-execute-the-iso-9001-corrective-action-process-in-6-steps/): Master the ISO 9001 corrective action process steps to resolve nonconformances, perform root cause analysis, and prove effectiveness to auditors.
+- [Navigating ISO 14001 Compliance Obligations in Canada: The Plant Manager's Playbook](https://isocertificationconsultants.ca/blog/navigating-iso-14001-compliance-obligations-in-canada-the-plant-manager-s/): Master ISO 14001 compliance obligations in Canada. Learn how Ontario industrial facilities identify legal requirements, track updates, and satisfy Clause 6.1.3.
+- [ISO 9001 Requirements for Machine Shops: Precision Quality in Contract Machining](https://isocertificationconsultants.ca/blog/iso-9001-requirements-for-machine-shops-precision-quality-in-contract-machining/): Explore critical ISO 9001 requirements for machine shops, from calibration and material traceability to scrap reduction and CNC setup controls.
+- [9-Point ISO Surveillance Audit Preparation Checklist for Manufacturers](https://isocertificationconsultants.ca/blog/9-point-iso-surveillance-audit-preparation-checklist-for-manufacturers/): Prepare your plant for annual registrar visits with this 9-point ISO surveillance audit preparation checklist built for manufacturing quality leaders.
+- [ISO 22000 vs HACCP Differences: Which Framework Fits Your Food Facility?](https://isocertificationconsultants.ca/blog/iso-22000-vs-haccp-differences-which-framework-fits-your-food-facility/): Explore key ISO 22000 vs HACCP differences to determine which food safety standard satisfies Canadian regulations and buyer requirements for your plant.
+- [The Medical Device Manufacturer's Roadmap to ISO 13485 Certification in Canada](https://isocertificationconsultants.ca/blog/the-medical-device-manufacturer-s-roadmap-to-iso-13485-certification-in-canada/): Navigate ISO 13485 certification for Canada medical device makers. Learn Health Canada MDR alignment, quality manual prep, and audit expectations.
+- [How to Build an ISO 45001 Hazard Identification and Risk Assessment Process in 6 Steps](https://isocertificationconsultants.ca/blog/how-to-build-an-iso-45001-hazard-identification-and-risk-assessment-process-in/): Master ISO 45001 hazard identification and risk assessment in 6 steps. Apply proactive hazard scoring and hierarchy of controls in manufacturing plants.
+- [Navigating IATF 16949 Requirements: What Tier 2 Suppliers Must Deliver](https://isocertificationconsultants.ca/blog/navigating-iatf-16949-requirements-what-tier-2-suppliers-must-deliver/): Understand IATF 16949 requirements for tier 2 suppliers in Ontario. Learn customer specific rules, Core Tools expectations, and certification roadmaps.
+- [12-Point ISO 9001 Internal Audit Checklist for Manufacturing Plants](https://isocertificationconsultants.ca/blog/12-point-iso-9001-internal-audit-checklist-for-manufacturing-plants/): Streamline verification with this 12-point ISO 9001 internal audit checklist tailored for Ontario manufacturing plants and quality management teams.
+- [How to Build an ISO 14001 Environmental Aspects and Impacts Register in 6 Steps](https://isocertificationconsultants.ca/blog/how-to-build-an-iso-14001-environmental-aspects-and-impacts-register-in-6-steps/): Build a compliant ISO 14001 environmental aspects and impacts register with this 6-step practical method designed for Ontario manufacturing facilities.
+- [ISO 9001 Certification Cost in Ontario: Budgeting Breakdown for Manufacturers](https://isocertificationconsultants.ca/blog/iso-9001-certification-cost-in-ontario-budgeting-breakdown-for-manufacturers/): Calculate realistic ISO 9001 certification cost in Ontario. Explore registrar fees, internal labor hours, consulting rates, and practical budgeting tips.
+- [ISO Certification Audit Stage 1 vs Stage 2: What Each Audit Checks](https://isocertificationconsultants.ca/blog/iso-certification-audit-stage-1-vs-stage-2-what-each-audit-checks/): How an ISO certification audit works: what the Stage 1 vs Stage 2 audits each check, what auditors ask to see, and how to prepare a plant for both.
+
+## Company
+
+- [About](https://isocertificationconsultants.ca/about/)
+- [Anthony Mannella, CEO and Consultant](https://isocertificationconsultants.ca/about/anthony-mannella/)
+  - Canadian Metalworking: [Strong processes build strong quality systems](https://www.canadianmetalworking.com/canadianmetalworking/blog/management/strong-processes-build-strong-quality-systems) (2026-08-24)
+  - Canadian Metalworking: [Supplied products and services must meet your end requirements](https://www.canadianmetalworking.com/canadianmetalworking/blog/management/supplied-products-and-services-must-meet-your-end-requirements) (2026-04-24)
+  - Canadian Metalworking: [Lean manufacturing and ISO 9001](https://www.canadianmetalworking.com/canadianmetalworking/blog/management/lean-manufacturing-and-iso-9001) (2026-03-27)
+  - Canadian Metalworking: [A primer on metrology: Part II](https://www.canadianmetalworking.com/canadianmetalworking/article/measurement/a-primer-on-metrology-part-ii) (2026-01-21)
+  - Canadian Metalworking: [A primer on metrology: Part I](https://www.canadianmetalworking.com/canadianmetalworking/blog/measurement/a-primer-on-metrology-part-i) (2025-12-31)
+  - Canadian Metalworking: [Why become ISO 9001 certified?](https://www.canadianmetalworking.com/canadianmetalworking/article/management/why-become-iso-9001-certified) (2025-10-24)
+- [Contact](https://isocertificationconsultants.ca/contact/)
+- [Better Business Bureau profile](https://www.bbb.org/ca/on/toronto/profile/compliance-consulting/iso-certification-consultants-inc-0107-1408097)
