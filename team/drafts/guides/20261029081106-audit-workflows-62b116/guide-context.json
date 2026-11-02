@@ -29,6 +29,30 @@
     {
       "term": "Follow-up criterion",
       "definition": "A statement of what evidence must exist, who checks it and by when."
+    },
+    {
+      "term": "Move and use",
+      "definition": "A record class for material needed in planning or follow-up."
+    },
+    {
+      "term": "Move and archive",
+      "definition": "A record class for material worth keeping and searchable, but not used in daily work."
+    },
+    {
+      "term": "Leave and reference",
+      "definition": "A record class for material kept in its existing location with a pointer from the new system."
+    },
+    {
+      "term": "Retire",
+      "definition": "A record class for material no longer needed, subject to retention rules."
+    },
+    {
+      "term": "Cutover",
+      "definition": "The point at which the new system becomes the working record."
+    },
+    {
+      "term": "Recovery",
+      "definition": "Deciding in advance what would trigger a rollback and how it would work."
     }
   ],
   "roles": [
@@ -62,7 +86,9 @@
     "Machining supervisor",
     "Checker",
     "Reviewer from another department",
-    "Uninvolved decision-maker"
+    "Uninvolved decision-maker",
+    "Data steward",
+    "Independent checker"
   ],
   "recordNames": [
     "Audit program",
@@ -133,7 +159,19 @@
     "Effectiveness check",
     "Reopening decision",
     "Finding history",
-    "Program report"
+    "Program report",
+    "Inventory",
+    "Retention rules",
+    "Lookup table",
+    "Mapping table",
+    "Pilot set",
+    "Import rules",
+    "Verification checklist",
+    "Verification log",
+    "Access list",
+    "Cutover plan",
+    "Late-change log",
+    "Rollback entry"
   ],
   "example": {
     "label": "Illustrative example",
@@ -235,6 +273,21 @@
         "Approve an alternative control when an independent checker is unavailable.",
         "Reopen or decline to reopen a finding, and appoint an uninvolved decision-maker when there is a dispute.",
         "Accept or hold a program report, correct or withdraw untraceable figures, and decide what follows from the report."
+      ]
+    },
+    {
+      "slug": "migration-planning",
+      "title": "Planning migration and configuration: Internal audit management software",
+      "summary": "The page covers the assigned migration workflows with supported citations, labeled hypothetical examples, and actionable decisions and demonstration requests. No FAQ was assigned or included.",
+      "bodyHash": "e46fe312d57a4d92b5432a21c5dbd21cfd1fb94e479387ef19a981ea74009bd2",
+      "decisions": [
+        "Classify each record type and accept or return the inventory.",
+        "Assign an owner and interim class when ownership or retention rules are unclear.",
+        "Fix data gaps before import, defer them, or accept them as unknown.",
+        "Accept or return relationship mappings and decide how to handle links that cannot be established.",
+        "Accept the pilot, repeat it, or seek approval to progress with a documented gap.",
+        "Choose the cutover date and approve or postpone progression based on verification and access.",
+        "Roll back or continue with an approved, documented gap when a cutover trigger is met."
       ]
     }
   ],

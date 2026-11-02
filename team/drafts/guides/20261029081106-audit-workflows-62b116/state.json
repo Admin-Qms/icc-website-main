@@ -80,11 +80,11 @@
       "checkpointedAt": "2026-11-02T15:00:31.602Z"
     },
     "migration-planning": {
-      "hash": "01d497ab7c95ae2437b5e06104ea7ad29bb8632e163aef95d08b73bd9a37963b",
-      "wordCount": 2001,
-      "readTime": 11,
+      "hash": "48a7b3cb168a10bc331486cbd6ebd4d902ff2bbeac180f068815f6199347aecb",
+      "wordCount": 2000,
+      "readTime": 10,
       "status": "written",
-      "checkpointedAt": "2026-11-02T08:25:37.376Z"
+      "checkpointedAt": "2026-11-02T15:01:43.594Z"
     },
     "training-rollout": {
       "hash": "82886ea2ac3c5be3a68b59fa3277d4ab56d420a204c5f19c87894c8761353166",
@@ -109,7 +109,7 @@
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-11-02T15:00:40.412Z",
+  "updatedAt": "2026-11-02T15:02:02.540Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1441,7 +1441,7 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "7dcf03efaab908a9158dfd5bbb7eb5a1e0df7a42c4db88093f8d08def2263d44",
+  "contextHash": "947d28671c1f779b974c03a719d144056943216c938eeaf384d92b4b223c643d",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2586,6 +2586,228 @@
       ],
       "outputContextHash": "7dcf03efaab908a9158dfd5bbb7eb5a1e0df7a42c4db88093f8d08def2263d44",
       "reviewedAt": "2026-11-02T15:00:40.409Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "migration-planning": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The page covers the assigned migration workflows with supported citations, labeled hypothetical examples, and actionable decisions and demonstration requests. No FAQ was assigned or included.",
+      "glossary": [
+        {
+          "term": "Move and use",
+          "definition": "A record class for material needed in planning or follow-up."
+        },
+        {
+          "term": "Move and archive",
+          "definition": "A record class for material worth keeping and searchable, but not used in daily work."
+        },
+        {
+          "term": "Leave and reference",
+          "definition": "A record class for material kept in its existing location with a pointer from the new system."
+        },
+        {
+          "term": "Retire",
+          "definition": "A record class for material no longer needed, subject to retention rules."
+        },
+        {
+          "term": "Cutover",
+          "definition": "The point at which the new system becomes the working record."
+        },
+        {
+          "term": "Recovery",
+          "definition": "Deciding in advance what would trigger a rollback and how it would work."
+        }
+      ],
+      "roles": [
+        "Quality manager",
+        "Process owner",
+        "Top management",
+        "Data steward",
+        "Independent checker",
+        "Auditor",
+        "Planner",
+        "System administrator",
+        "Vendor"
+      ],
+      "recordNames": [
+        "Record map",
+        "Inventory",
+        "Retention rules",
+        "Audit program",
+        "Audit plan",
+        "Audit schedule",
+        "Audit report",
+        "Finding",
+        "Corrective action log",
+        "Follow-up evidence",
+        "Lookup table",
+        "Mapping table",
+        "Pilot set",
+        "Import rules",
+        "Verification checklist",
+        "Verification log",
+        "Audit calendar",
+        "Access list",
+        "Cutover plan",
+        "Late-change log",
+        "Rollback entry"
+      ],
+      "decisions": [
+        "Classify each record type and accept or return the inventory.",
+        "Assign an owner and interim class when ownership or retention rules are unclear.",
+        "Fix data gaps before import, defer them, or accept them as unknown.",
+        "Accept or return relationship mappings and decide how to handle links that cannot be established.",
+        "Accept the pilot, repeat it, or seek approval to progress with a documented gap.",
+        "Choose the cutover date and approve or postpone progression based on verification and access.",
+        "Roll back or continue with an approved, documented gap when a cutover trigger is met."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Inventory and classify existing records",
+            "section": "Inventory and classify existing records"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Inventory and classify existing records; semantic review verifies support",
+            "section": "Inventory and classify existing records"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Clean data and map relationships",
+            "section": "Clean data and map relationships"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Clean data and map relationships; semantic review verifies support",
+            "section": "Clean data and map relationships"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Pilot the import and verify results",
+            "section": "Pilot the import and verify results"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Pilot the import and verify results; semantic review verifies support",
+            "section": "Pilot the import and verify results"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Plan cutover and recovery",
+            "section": "Plan cutover and recovery"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Plan cutover and recovery; semantic review verifies support",
+            "section": "Plan cutover and recovery"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "a2d1078aad0168610b3772ef6e7dcf5d267cb8cb8c18f3304ba165cb2914cee2",
+      "contentHash": "d84ad4c0f9e9c33448da268a9e7568e2fed35b5b9f09d4bee83aaedf90004ba4",
+      "paragraphHashes": [
+        "794070b0f40548009f6c28df4e55d3c0602ffd26d416c15c238f9af190ff7589",
+        "56172b63196994108153ed5c76b60d1bf2d9f8408377b888503b224d23a66bf7",
+        "83a90a982e52e0b0430e4f5078ee5723ea8cd4e80b72d0b6239075e2c7fb277d",
+        "d418556fbf91d4c4f883464103cd464ab5bc7fae430771bb05de5577cf44fedb",
+        "a33a12b96ec580644e065865d8b79ac29756d56b6247c03e68856d648d8016bf",
+        "cfcd35391ed703ae9464ce00e365759ce890f110c8d1b88e41a59f181dcabf20",
+        "970052fb7992b17e54294abbd36291fb0a0cd8f47cbf4a13f50510b59825bb0c",
+        "52ed54373cc22e96b29e3c255188f7db43cccecc06beb7dbc150db14c0999bb2",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "a86bce29c05360c3983ed773de4830b7b314456dfe15fc0a6f718578ac159dd6",
+        "ee9c17eeedbea1642fd27f059d078d8e0747acc24542a21918994137d61add8a",
+        "d4bad0650c5bc0da3927b014f6731b9cac8ce59da7af77ec5c9b05bfdb08586f",
+        "2f3fe813c858eb6ddd51fba542d477f2d8e8dfc69a9b4e6787517daf582b07c1",
+        "ad8131265c54b679fd3379dcdc01fe17b832059141e871c1d30eae1aecdf427a",
+        "b7b49c73f5b2de63973ff5de85c110645b92659e0a9dca30205cb663cf2102e1",
+        "670688ef8d8cb78cd782b0f625746110f0e4afbf570d2f371889b1b1e64bb499",
+        "effe53fffe25724af5217e14ed3efea1594a7871d3fc9849e308d7137ff28b1d",
+        "ea987a7721d6a1f769eeae6f2c98f439c7600e29858178e5f4dfa33bb78193c3",
+        "091dedee8de8ae29c0e175afa71cb1f77c84ff20952e6c2fda7b7365dc7322f8",
+        "df5574313cf9d13850bf7b6cc37f69963291fa948586f5eab3fd81877e65d9ab",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "b2190863c3c909253d01ff359278eb2b433e8bb4877ee9415e84ae7adfa12c4b",
+        "0c0fd8b7dea0e07b859ea7e0b5e47a6662bc81e53eb7ab346445028dba34844e",
+        "f4e2442ced52e93a251dc3b75e7fe2b1b7fa203ce867009636a93c15322a0cfd",
+        "e185c6d5285c068859c908df565a39d56d81b3a3b6af67610df26f7262cf0be3",
+        "368c7874412a0efb3218fff4697a9dd6e0f54b1f58042d277128f27d4ee4850f",
+        "47ab2b70b48158f2fdc0c289eadfe07c217424e1c0f698d18fcecd5cf4dee839",
+        "83717836fb6da2b6895499c1f6ee0e1738f36baef82f2b459577228a45006897",
+        "5bc21698ead3f357ffd993230cf4829840815e3ee263c72c688c02914118f17e",
+        "3c617e9a402e969298211b879a316bff41c55fdb8b09d60689603cd7a8560e5d",
+        "e8a26e06e4c3d68c57298c353c0a410e92364e41ca56c55e28258ce7c5d557d0",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "b5e2702de40142976ba56a5a01122718302b2e6cfb851a1b3746989cfd5db44e",
+        "aa84931e07044c2d560b80d3bbb56fde1a71ec7c7f7e36dc8bf0f30d5ce81589",
+        "446df22a930e76d98f18abc496c064879535eb5303904075fe5baee659e61e24",
+        "fe4ada5145d1b8fed88e4ae4cf38c58c746d2ee4f068325056e23ec76a598798",
+        "b037e577e02b9b1f924df1c9c724794f246dff5dbb5a72cef1c08179ea8895c1",
+        "292e2f7d60923d58b2cd7501dc60784f279ba98d8922b34eaf9635d5812f71c8",
+        "a4f3d781620f0bab0a76ed309b0938099680e908841e1a1c56430b87902fd12f",
+        "43a387097db3dd17f9d22468248b355860a15db73d5fb40837cf5cca97670f01",
+        "be311167ae17e92ca43cf43e1b4d1febda433d6137aac26fd2a7b9b1e39bfbba",
+        "283a24d7858ffe456d455e7cf8d6daa5a12721ff455173ad0e9f34d94dc5fd22",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "954368615fc687af3b60b690d547cef3c813903c7d3fb4b14f769540e6bb8678",
+        "21af1f50728c853f5bc302239f4d332d939e68c98a482aad8d9ec3e8bd2b3151"
+      ],
+      "outputContextHash": "947d28671c1f779b974c03a719d144056943216c938eeaf384d92b4b223c643d",
+      "reviewedAt": "2026-11-02T15:02:02.537Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

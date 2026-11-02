@@ -132,7 +132,7 @@ Recovery means deciding in advance what would trigger a rollback and how it woul
 
 Tell users where records now live, how to sign in, and whom to ask. Changes made during a freeze can go in one simple log, entered after the import and checked against the log.
 
-After cutover, compare overall counts and sample accuracy and connections within an agreed time. Record who accepted the cutover and when.
+After cutover, compare overall counts, sample accuracy, and connections within an agreed time. Record who accepted the cutover and when.
 
 ### Roles, inputs and decisions for this step
 
