@@ -29,7 +29,7 @@ Once the system is running, the first job is to check that it still matches the 
 
 The [audit planning guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf) says an audit program can change with circumstances while still achieving its intent. One proposed practice is to schedule a regular review of the audit workflow in the system, at a frequency the team sets and after any significant change to processes, roles, or procedures.
 
-A review can follow the chain the team has used throughout: audit plan, finding, action, and follow-up evidence. Pick a sample of recent audits and trace each from its plan reference to closure, or to its current state if still open. Look for broken links, overdue items, findings without owners, evidence that cannot be opened, and records still kept in side files.
+A review can follow the chain the team has used throughout: audit plan, finding, action, and follow-up evidence. Pick a sample of recent audits and trace each from its plan reference to closure, or to its current state if still open. Look for broken links, overdue items, ownerless findings, evidence that cannot be opened, and records still kept in side files.
 
 The ICC [module description](https://isocertificationconsultants.ca/solutions/audits-management-review/) mentions audit trends and findings with owners and closure status. Treat these as questions about reports: do the reports the team relies on still draw from the system, and do their figures trace to records?
 
@@ -47,7 +47,7 @@ Also review use on every shift. The audit planning guidance asks teams to consid
 |---|---|
 | Role | The workflow owner, here the quality manager, with process owners confirming their areas |
 | Inputs | A sample of recent audits, the configuration, the issue log, and any changes to processes or procedures |
-| Decision | Whether the workflow still fits. The quality manager accepts the review when completed work traces from plan to follow-up evidence; work in progress has every existing record accessible, plus an owner and a future due date; and overdue follow-up is accepted only under an exception approved by top management with a new due date. Other identified problems are corrected or covered by a recorded exception. Otherwise the review is returned |
+| Decision | Whether the workflow still fits. The quality manager accepts the review when completed work traces from plan to its recorded outcome, including follow-up evidence where follow-up is needed; work in progress has every existing record accessible, plus an owner and a future due date; and overdue follow-up is accepted only under an exception approved by top management with a new due date. Other identified problems are corrected or covered by a recorded exception. Otherwise the review is returned |
 | Record | The review report with sample, findings, corrections, owners, outcome, and decision-maker |
 | Exception | A broken chain, a role with outdated access, or a report or configuration problem: the quality manager decides the correction and due date; top management may approve a time-limited exception with a recorded rationale and due date, and the review stays open if it is not recorded |
 
@@ -85,7 +85,7 @@ These answers summarize the guide, drawing on the [internal audit guidance](http
 
 ### What problem should internal audit software solve first?
 
-Start with the broken link in the current workflow, for example between findings and follow-up evidence. State it as a testable sentence and write acceptance criteria that a demonstration can show. The mapping chapter covers this step.
+Start with the broken link in the current workflow, for example between findings and follow-up evidence. State it as a testable sentence and write acceptance criteria that a demonstration can show.
 
 ### Which records should be migrated?
 

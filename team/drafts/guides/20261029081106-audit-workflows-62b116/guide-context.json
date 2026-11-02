@@ -102,7 +102,10 @@
     "Data steward",
     "Independent checker",
     "Trainer",
-    "Pilot user"
+    "Pilot user",
+    "Owner",
+    "Note taker",
+    "Decision-maker"
   ],
   "recordNames": [
     "Audit program",
@@ -195,7 +198,15 @@
     "Workload log",
     "User feedback",
     "Stage records",
-    "Evaluation report"
+    "Evaluation report",
+    "Action",
+    "Review report",
+    "Improvement list",
+    "Approved answers",
+    "Representative records",
+    "Demonstration pack",
+    "Attendee list",
+    "Observations"
   ],
   "example": {
     "label": "Illustrative example",
@@ -328,6 +339,18 @@
         "Whether to pause, roll back or continue a stage with a workaround after a serious problem.",
         "Whether rollout is complete based on adoption and workload targets, approved deviations and ownership of open issues.",
         "Whether to retrain, reconfigure or request vendor help when adoption or workload results need attention."
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Maintaining the system and choosing next steps: Internal audit management software",
+      "summary": "The earlier finding is resolved: the review accepts a recorded outcome when no follow-up is needed and requires follow-up evidence where it is needed. No clear problem was found in the changed paragraphs. The FAQ is assigned in the plan.",
+      "bodyHash": "41e14661c80c6c155403d57fa6b4395b680d9558921e3e59d0fbad5c7fc71645",
+      "decisions": [
+        "Whether to accept or return the workflow review, and how to correct or record exceptions.",
+        "Which improvements to pursue and whether to proceed without an unsupported benefit figure.",
+        "Whether to accept or return an FAQ answer and how to resolve a conflict with procedure.",
+        "Whether the demonstration pack is ready and what substitute to use for a record that cannot be shared."
       ]
     }
   ],
