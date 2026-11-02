@@ -1,13 +1,23 @@
 ---
-slug: "training-rollout"
-title: "Training teams and rolling out the system: Internal audit management software"
-description: "Training teams and rolling out the system in internal audit software: set role-based learning tasks and pilot with representative users."
-primaryKeyword: "internal audit software"
-keywords: ["internal audit software training teams and rolling out the system", "internal audit software", "audit scheduling", "audit evidence"]
-author: "ISO Certification Consultants Editorial Team"
-date: "2026-10-29"
-imageBrief: "a trainer showing an operator the approved setup instruction on a shop floor; authentic manufacturing environment, no readable text or logos"
-sourceIds: ["apg-internal-audit", "apg-audit-planning"]
+slug: training-rollout
+title: 'Training teams and rolling out the system: Internal audit management software'
+description: >-
+  Training teams and rolling out the system in internal audit software: set
+  role-based learning tasks and pilot with representative users.
+primaryKeyword: internal audit software
+keywords:
+  - internal audit software training teams and rolling out the system
+  - internal audit software
+  - audit scheduling
+  - audit evidence
+author: ISO Certification Consultants Editorial Team
+date: '2026-10-29'
+imageBrief: >-
+  a trainer showing an operator the approved setup instruction on a shop floor;
+  authentic manufacturing environment, no readable text or logos
+sourceIds:
+  - apg-internal-audit
+  - apg-audit-planning
 capabilityIds: []
 ---
 ## Set role-based learning tasks
@@ -80,7 +90,7 @@ Decide in advance how each stage will be judged, for example by the number of us
 
 Name a person users can ask first. Ask the vendor what support is available during rollout, which channels exist, and how urgent problems are handled. Keep a list of known issues and workarounds.
 
-For each stage, tell affected users what changes, from what date and where to get help. Confirm that audit plan references carry across, so findings and follow-up evidence already in progress stay linked.
+For each stage, tell affected users what changes, from what date, and where to get help. Confirm that audit plan references carry across, so findings and follow-up evidence already in progress stay linked.
 
 The [internal audit guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf) points to management involvement. Rollout is a reasonable place for it: management can approve each stage, read the status, and decide when a problem is serious enough to pause.
 
@@ -98,11 +108,11 @@ The [internal audit guidance](https://committee.iso.org/files/live/sites/tc176/f
 
 ## Evaluate adoption and workload
 
-After rollout, the team needs to know whether the system is used as intended and whether it has changed the effort of audit work. This guide does not claim any time saving, cost reduction, or other result for any product, so the team should measure its own.
+After rollout, the team needs to know whether the system is used as intended and whether it has changed the effort of audit work. This guide claims no time saving or other result for any product, so the team should measure its own.
 
-A proposed adoption indicator is that records are created in the system, not in side files, apart from approved exceptions. Before evaluating, define the measures, targets, review period and treatment of approved exceptions. Useful measures include whether a plan reference leads to its findings and follow-up evidence. Useful indicators include whether audits are planned in the system, whether findings have linked evidence, whether actions are submitted and checked there, and whether reports are drawn from it. Side spreadsheets and email threads suggest part of the workflow has not moved.
+A proposed adoption indicator is that records are created in the system, not in side files, apart from approved exceptions. Before evaluating, define the measures, targets, review period and treatment of approved exceptions. Useful measures include whether a plan reference leads to its findings and follow-up evidence. Useful indicators include whether audits are planned in the system, whether findings have linked evidence, whether actions are submitted and checked there, and whether reports are drawn from it. Side spreadsheets and email threads suggest part of the work has not moved.
 
-Workload is harder. Before the rollout, estimate how long the main tasks took, using the team's own records or a short log, and repeat the log afterward. Label numbers as the team's own estimates and state the method. Two weeks of logging by a few people is a possible starting point, but the team should check that its sample and both periods are comparable in audit activity. Do not generalize from one team.
+Workload is harder. Before the rollout, estimate how long the main tasks took, using the team's own records or a short log, and repeat the log afterward. Label numbers as the team's own estimates and state the method. Two weeks of logging by a few people is a possible starting point, but the team should check that its sample and both periods are comparable in audit activity.
 
 Ask users directly, too. A short survey or conversation can show which tasks still feel awkward and why. Combine the answers with the issue log, and decide which items need training, configuration or a request to the vendor.
 
@@ -114,7 +124,7 @@ Review the rollout against the [audit planning guidance](https://committee.iso.o
 |---|---|
 | Role | The workflow owner, here the quality manager, with top management reviewing the results |
 | Inputs | Adoption indicators, workload logs, user feedback, the issue log and the stage records |
-| Decision | Whether rollout is complete; top management accepts it when the adoption indicators are met and open issues have owners and dates, and requests further action otherwise |
+| Decision | Whether rollout is complete; top management accepts it when adoption indicators and workload results meet the agreed targets, or any deviation is approved and recorded, and open issues have owners and dates; otherwise it requests further action |
 | Record | The evaluation report with indicators, workload method and estimates, outcome, decision-maker, rationale, approved exceptions and actions agreed |
 | Exception | A group still using side files or a workload that rose; the quality manager decides whether to retrain, reconfigure or ask the vendor for help, and records the disposition |
 

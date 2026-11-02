@@ -87,11 +87,11 @@
       "checkpointedAt": "2026-11-02T15:01:43.594Z"
     },
     "training-rollout": {
-      "hash": "82886ea2ac3c5be3a68b59fa3277d4ab56d420a204c5f19c87894c8761353166",
-      "wordCount": 2000,
-      "readTime": 10,
+      "hash": "d1ea0a01c6b2543624c56af38a0dfd28a22c6a3beccacf5781d48b24f8732381",
+      "wordCount": 2001,
+      "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-02T08:25:37.802Z"
+      "checkpointedAt": "2026-11-02T15:04:33.271Z"
     },
     "ongoing-operation": {
       "hash": "6cb796f9cb56f67dd7948eed409e6f08ff1c144e6d70f40d091cf14431cdac75",
@@ -109,7 +109,7 @@
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-11-02T15:02:02.540Z",
+  "updatedAt": "2026-11-02T15:04:43.709Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1441,7 +1441,7 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "947d28671c1f779b974c03a719d144056943216c938eeaf384d92b4b223c643d",
+  "contextHash": "99299464c64abdad436799ee06ee43f86bbccbc30125b8d9ecc2626de5a0f082",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2808,6 +2808,213 @@
       ],
       "outputContextHash": "947d28671c1f779b974c03a719d144056943216c938eeaf384d92b4b223c643d",
       "reviewedAt": "2026-11-02T15:02:02.537Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "training-rollout": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The earlier finding is resolved: the rollout-completion decision now accounts for workload targets and approved deviations. No new issue was found in the changed paragraphs.",
+      "glossary": [
+        {
+          "term": "Learning task",
+          "definition": "A role-specific exercise using sample records whose result is shown to someone who can judge it."
+        },
+        {
+          "term": "User pilot",
+          "definition": "A test of whether real users can do real work in the system with their records and constraints."
+        },
+        {
+          "term": "Staged deployment",
+          "definition": "A rollout that brings in groups of users or parts of the program in a planned order."
+        }
+      ],
+      "roles": [
+        "Workflow owner",
+        "Quality manager",
+        "Trainer",
+        "Observer",
+        "Planner",
+        "Auditor",
+        "Action owner",
+        "Checker",
+        "Management",
+        "Top management",
+        "Pilot user",
+        "Process owner",
+        "Vendor"
+      ],
+      "recordNames": [
+        "Responsibility table",
+        "Task list",
+        "Sample records",
+        "Learning record",
+        "Audit plan",
+        "Finding",
+        "Evidence",
+        "Follow-up evidence",
+        "Program report",
+        "Issue log",
+        "Pilot report",
+        "Stage plan",
+        "Known-issues list",
+        "Workload log",
+        "User feedback",
+        "Stage records",
+        "Evaluation report"
+      ],
+      "decisions": [
+        "Whether a person may use the system for a role or needs more practice.",
+        "Whether to reschedule, provide another learning route or limit access when a person cannot attend or pass a task.",
+        "Whether the pilot succeeded, should be extended or repeated, or may proceed with an approved exception.",
+        "Whether a pilot problem requires training, configuration changes or a system fix, and whether a system problem blocks rollout.",
+        "Whether to start or hold the next deployment stage.",
+        "Whether to pause, roll back or continue a stage with a workaround after a serious problem.",
+        "Whether rollout is complete based on adoption and workload targets, approved deviations and ownership of open issues.",
+        "Whether to retrain, reconfigure or request vendor help when adoption or workload results need attention."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Set role-based learning tasks",
+            "section": "Set role-based learning tasks"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Set role-based learning tasks; semantic review verifies support",
+            "section": "Set role-based learning tasks"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Pilot with representative users",
+            "section": "Pilot with representative users"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Pilot with representative users; semantic review verifies support",
+            "section": "Pilot with representative users"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Manage staged deployment",
+            "section": "Manage staged deployment"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Manage staged deployment; semantic review verifies support",
+            "section": "Manage staged deployment"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Evaluate adoption and workload",
+            "section": "Evaluate adoption and workload"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Evaluate adoption and workload; semantic review verifies support",
+            "section": "Evaluate adoption and workload"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "ed1472a97783436db333202e5ad46dc3f4dc1ae27cc84bec860ffd5086782602",
+      "contentHash": "73abeba4e6d12cfaa8fea465e89cfca86a81ee6c5917af7bcf033d078d089b83",
+      "paragraphHashes": [
+        "52bcab03b85d77505e17d3633afc1e875fe50ea2a3160d3ecd708e1802ca09ae",
+        "6bf8134185f65a968ac9af285c224940b72cbba95d7f1fba269c7989f715453c",
+        "559eb73b641e84a63c322c2cbcd4a332bc5373eda7311c08ebf4ce17da1dce6e",
+        "e52b55f565978faab2a3439c26605f80351153c4a0342a41c8d6a6bbabea2144",
+        "a6b34a4960139b01c74f8e22aa2c55935d003fb32511f31d279130136019d050",
+        "53a7b932c2bd0c26fa8869dc65359f369c7106573220b1c68a644d637161036d",
+        "51d1e52e6f002155a165208bec76f5f0a93b57649f36cebbd2369f0d734c8a14",
+        "50a8fbe7aefbf2d8263baf28060e0d1ec6b473bed76b06682800b5a709b78c56",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "5e98267cbe460101c6f6c50d3be9bfd4281f5db0acd00f7ca26264e3d9c70414",
+        "8efaa8f0c005ec1b663d5cfe58a8c2f9e5636c79008379ab4b86bf4870406eef",
+        "6e68bbc29fb75d740be4cbdda41e97aa9014651425ef98414926443e716257df",
+        "73f567cac003237e55063643b93b4fc915446cfc56c40a781cf2a518886e0914",
+        "4c1affccccd78b49a4a8c3e5f44a9698caac892a7db85c3a33b3fd3c80376196",
+        "ded76dc95b6d6cd8ab1606ae525c8271388b300c742f70e6e1c0c58749300e92",
+        "a38d5948e85378167f991a199755a3555a6b58162e3719c31d0bc6cdbf1a38b9",
+        "4c86d9591adc03ed09cf428305d77737fec43b4815fb02076acf32cc5251fbf8",
+        "aff868f305d8cc3be4d265a09fa9d74d30f26789a8edd2a39e437ff0e71551cc",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "5fb21241bff2ef50377449e5889e5f69369485133d99908a3fe77ad2f74297c4",
+        "6ae53967952aad1bdf9056063dbac95048f15b4c219f3fdd4e73ff3233def54d",
+        "10a164bf22446f3c5a9f50bd6df0eb263523adb30578dad22fe45cdc74a15153",
+        "154fba35dc885f1305c0b3b00932db622bce7c77ad89adc812f1ee0cb70b62a7",
+        "776c0dc394033796a0214c58da705e3c910223bdfb4ca1a279b533755b98659b",
+        "08e6edd4a3debae34fa9eb12a12c1a223f17f755dd4e5d57c3b218646abe616d",
+        "3ea15c1eda88271933f2ff990a0bdaebdda2e20a1d432b85f5264f4e0d85a788",
+        "7309f1b826758f21b00f23d397528ad4383b9939a4d958fbf54c90ac745219e7",
+        "6881943b8b204c76eef62d45544150b6773f5ece860dd814ae55a9fd80fefc47",
+        "bd6d7eff8ff29765028b8c55d87bebe4139da23e31873b69200e602aef0a9e71",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "11a081206d48140c07dc3183c04708205b1cb39606e6e5106d42ddbea2246f4a",
+        "5184d9414960b7d89aa58214932ac3c711ecc46a57281cdf3a80769879f14bcf",
+        "3a54ac679d01e7f0af8f1287beed3d2f522e27b1214874a867649df59dc9851b",
+        "69d38eff380c48d1a4c5c8e2ce3f5ddcc605ce291a3a099ae3be28aff00b0a5c",
+        "6ff4e965a10ecf24f19e8a90b394722671dc9287841a6ba338fed4564a607564",
+        "156b45bb8903a38ea563e8e427f13834129e4233196dac495d17bf6b02eff777",
+        "63458817916dadfc7f047e293a9c9cdaf73fc45973ac96c134ae262addfb74bd",
+        "ccb714938527ae1125a5228579fd9d9e55439f8edee9e7e6047747ef6b23af6a",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "db01235b3fb04ee84872dc19b9046f87a28a6eec7bde86200bfb4682e4397ae9",
+        "147b5463ccb30e4bab5f2b9479aa2f3d6e1c73179aec3bf3001fe397bfd1d4c5"
+      ],
+      "outputContextHash": "99299464c64abdad436799ee06ee43f86bbccbc30125b8d9ecc2626de5a0f082",
+      "reviewedAt": "2026-11-02T15:04:43.704Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

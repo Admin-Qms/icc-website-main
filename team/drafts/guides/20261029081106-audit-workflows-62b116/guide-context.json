@@ -53,6 +53,18 @@
     {
       "term": "Recovery",
       "definition": "Deciding in advance what would trigger a rollback and how it would work."
+    },
+    {
+      "term": "Learning task",
+      "definition": "A role-specific exercise using sample records whose result is shown to someone who can judge it."
+    },
+    {
+      "term": "User pilot",
+      "definition": "A test of whether real users can do real work in the system with their records and constraints."
+    },
+    {
+      "term": "Staged deployment",
+      "definition": "A rollout that brings in groups of users or parts of the program in a planned order."
     }
   ],
   "roles": [
@@ -88,7 +100,9 @@
     "Reviewer from another department",
     "Uninvolved decision-maker",
     "Data steward",
-    "Independent checker"
+    "Independent checker",
+    "Trainer",
+    "Pilot user"
   ],
   "recordNames": [
     "Audit program",
@@ -171,7 +185,17 @@
     "Access list",
     "Cutover plan",
     "Late-change log",
-    "Rollback entry"
+    "Rollback entry",
+    "Task list",
+    "Learning record",
+    "Issue log",
+    "Pilot report",
+    "Stage plan",
+    "Known-issues list",
+    "Workload log",
+    "User feedback",
+    "Stage records",
+    "Evaluation report"
   ],
   "example": {
     "label": "Illustrative example",
@@ -288,6 +312,22 @@
         "Accept the pilot, repeat it, or seek approval to progress with a documented gap.",
         "Choose the cutover date and approve or postpone progression based on verification and access.",
         "Roll back or continue with an approved, documented gap when a cutover trigger is met."
+      ]
+    },
+    {
+      "slug": "training-rollout",
+      "title": "Training teams and rolling out the system: Internal audit management software",
+      "summary": "The earlier finding is resolved: the rollout-completion decision now accounts for workload targets and approved deviations. No new issue was found in the changed paragraphs.",
+      "bodyHash": "5c22502461c043df5caf61ffe48fbf66e2f58244238b0451896f8c5f88e5480e",
+      "decisions": [
+        "Whether a person may use the system for a role or needs more practice.",
+        "Whether to reschedule, provide another learning route or limit access when a person cannot attend or pass a task.",
+        "Whether the pilot succeeded, should be extended or repeated, or may proceed with an approved exception.",
+        "Whether a pilot problem requires training, configuration changes or a system fix, and whether a system problem blocks rollout.",
+        "Whether to start or hold the next deployment stage.",
+        "Whether to pause, roll back or continue a stage with a workaround after a serious problem.",
+        "Whether rollout is complete based on adoption and workload targets, approved deviations and ownership of open issues.",
+        "Whether to retrain, reconfigure or request vendor help when adoption or workload results need attention."
       ]
     }
   ],
