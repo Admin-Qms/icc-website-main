@@ -22,7 +22,7 @@ node pm.js blog brief                       # picks the topic, writes drafts/<da
 node pm.js blog publish --fixture drafts/<date>-<slug>/draft.json
 ```
 
-**A model writes it** (needs `LLM_PROVIDER` and its key in `.env`):
+**A model writes it** (needs `LLM_PROVIDERS` and a key for one of them in `.env`):
 
 ```bash
 node pm.js blog publish --dry-run   # full run, every check, writes nothing; preview lands in reports/preview/
@@ -65,7 +65,7 @@ Nothing is written to the site before step 8, so a failed run leaves the repo un
 | `data/standards-facts.json` | Current edition of each standard. The writing models predate the 2026 editions, so this file is what keeps articles current |
 | `data/writing-rules.md` | The rules every article follows, whoever writes it |
 | `data/image-style.json` | The house style every generated image uses |
-| `.env` | Keys, `LLM_PROVIDER` (`gemini` or `claude`), `IMAGE_PROVIDERS` (`openai,gemini`; add `codex` on a Mac with Codex logged in) |
+| `.env` | Keys, `LLM_PROVIDERS` (text providers in fallback order, e.g. `openai,gemini`), `IMAGE_PROVIDERS` (`openai,gemini`; add `codex` on a Mac with Codex logged in). Each scheduled run prints which providers have a key at the start of its log |
 
 The published posts are the pipeline's memory: there is no separate "published" list to keep in step.
 

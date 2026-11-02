@@ -9,6 +9,7 @@ const root = fs.mkdtempSync(path.join(os.tmpdir(), "icc-blog-test-"));
 process.env.ICC_ENV_FILE = path.join(root, "no-env-file"); // keep team/.env (real keys) out of tests
 process.env.BLOG_CONTENT_DIR = path.join(root, "content", "blog");
 process.env.BLOG_IMAGE_DIR = path.join(root, "public", "images", "blog");
+process.env.CLAIMS_AUDIT_CACHE_DIR = path.join(root, "claims-audit"); // retries narrow per slug; keep test runs independent
 process.env.LLM_PROVIDER = "claude";
 for (const key of ["CLAUDE_API_KEY", "GEMINI_API_KEY", "PEXELS_API_KEY", "OPENAI_API_KEY", "TELEGRAM_BOT_TOKEN", "TELEGRAM_ADMIN_ID"]) {
   process.env[key] = "";

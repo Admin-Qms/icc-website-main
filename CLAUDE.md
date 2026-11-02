@@ -17,7 +17,7 @@ You report to **the Owner (CEO)** — the human. the Owner sets vision, approves
 **Tech Stack (current as of 2026-10-03):**
 - Frontend: Next.js 14 (App Router), React, TypeScript, Tailwind CSS — a static export (`output: "export"`); all site content is in `lib/site.ts`
 - Blog: Markdown files in the repo — `content/blog/<slug>.md`, images in `public/images/blog/<slug>/`, read at build time by `lib/blog.ts`. There is no CMS.
-- Writing: on the schedule, the Claude Code session writes the article from a brief (`node team/pm.js blog brief`, then `.claude/skills/write-blog-article/SKILL.md`, then `blog publish --fixture`). The API writer still exists: `LLM_PROVIDER=gemini|claude` in `team/agents/shared/claude.js`; Gemini also runs the helper passes (topic pick, originality, claims audit). The rules every writer follows are in `team/data/writing-rules.md`.
+- Writing: on the schedule, the Claude Code session writes the article from a brief (`node team/pm.js blog brief`, then `.claude/skills/write-blog-article/SKILL.md`, then `blog publish --fixture`). The API writer still exists: `LLM_PROVIDERS=openai,gemini` in `team/agents/shared/claude.js` tries OpenAI first and falls back to Gemini; the same providers run the helper passes (topic pick, originality, claims audit, guide chapter review and audit). The rules every writer follows are in `team/data/writing-rules.md`.
 - Images: `IMAGE_PROVIDERS` (default `openai,gemini`; `pexels`, and `codex` on a Mac with Codex logged in). Every generated image uses the house style in `team/data/image-style.json` and is cropped to 1200x675 WebP by `sharp`. Used images are recorded in each post's frontmatter.
 - Deployment: repo `https://github.com/Admin-Qms/icc-website-main`. The live site (isocertificationconsultants.ca) is a Vercel project; once it is connected to this repo, every push to `main` deploys. The GitHub Action that builds the export to the `deploy` branch (for cPanel) is kept as a backup.
 - Brand: the company is **ISO Certification Consultants Inc.** (plural) — `SITE` in `lib/site.ts` is the source for name, domain, email, logo path, the Web3Forms key and the BBB profile. The contact form posts to Web3Forms (no server in a static export).
@@ -244,7 +244,7 @@ Every piece of content must pass ALL 10 standards before publishing. No exceptio
 
 **If any standard fails, the article goes back to the responsible agent. Nothing is written to `content/blog/`.**
 
-These ten are enforced, with further checks (1,500-word minimum, keyword in title and meta description, internal links that resolve, external links only from `team/data/external-link-bank.json`, a claims audit for invented names and statistics), by `contentQA.validateLocal` before anything is written. Current standard editions come from `team/data/standards-facts.json` — keep that file accurate.
+These ten are enforced, with further checks (1,500-word minimum, keyword in title and meta description, internal links that resolve, external links only from `team/data/external-link-bank.json`, a claims audit for invented names and statistics; on a retry it blocks only on paragraphs edited since an earlier clean audit, and never on the pipeline-fixed title or meta description), by `contentQA.validateLocal` before anything is written. Current standard editions come from `team/data/standards-facts.json` — keep that file accurate.
 
 ### PROTOCOL 3: SITE QUALITY GATES — WEB DEVELOPMENT
 

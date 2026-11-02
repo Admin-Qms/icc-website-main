@@ -9,7 +9,11 @@ function pageWordBudget(job, slug) {
   const spent = completed.reduce((sum, [, p]) => sum + p.wordCount, 0);
   const done = new Set(completed.map(([s]) => s));
   const reserve = pages.filter(s => s !== slug && !done.has(s)).reduce((sum, s) => sum + minimum(s), 0);
-  const min = minimum(slug); const max = Math.min(slug === job.manifest.slug ? POLICY.totalMax : POLICY.chapterMax, POLICY.totalMax - spent - reserve);
+  // Spare words above the minimums are shared across the pages still to write, so early chapters
+  // cannot use them all and squeeze the last pages into a one-word window.
+  const min = minimum(slug); const slack = POLICY.totalMax - spent - reserve - min;
+  const share = slack > 0 ? Math.ceil(slack / pages.filter(s => !done.has(s)).length) : slack;
+  const max = Math.min(slug === job.manifest.slug ? POLICY.totalMax : POLICY.chapterMax, min + share);
   return { min, max, possible: max >= min, spent, reserve, target: min };
 }
 function links(body, referenceBody = body) {
@@ -57,7 +61,14 @@ function initialGuideContext(topic, outline, research) {
     example: outline.example || { label: 'Illustrative example', description: `An unnamed Canadian manufacturer evaluates ${topic.topic.toLowerCase()} for one production workflow. All records and decisions are hypothetical; no customer results or product promises.` },
     reviewedChapters: [], researchHash: hashValue(research) };
 }
-function chapterInputHash(page, plan, research, context) { return hashValue({ body: page.body, metadata: { slug: page.slug, title: page.title, description: page.description, sourceIds: page.sourceIds, capabilityIds: page.capabilityIds }, plan, research, context }); }
+const pageMetadata = page => ({ slug: page.slug, title: page.title, description: page.description, sourceIds: page.sourceIds, capabilityIds: page.capabilityIds });
+function chapterInputHash(page, plan, research, context) { return hashValue({ body: page.body, metadata: pageMetadata(page), plan, research, context }); }
+// The page's own inputs without the shared context, so a pass can survive edits to earlier chapters.
+function pageContentHash(page, plan, research) { return hashValue({ body: page.body, metadata: pageMetadata(page), plan, research }); }
+// Paragraph fingerprints let a re-review see which text changed since the last review.
+const paragraphs = body => String(body).split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+const paragraphHashes = body => paragraphs(body).map(p => hashValue(p.replace(/\s+/g, ' ')));
+function changedParagraphs(body, previousHashes) { const seen = new Set(previousHashes); return paragraphs(body).filter(p => !seen.has(hashValue(p.replace(/\s+/g, ' ')))); }
 // Reviewer glossary entries that are usable: a non-empty term and definition.
 function usableGlossary(review) {
   return (Array.isArray(review?.glossary) ? review.glossary : []).filter(e => e && typeof e.term === 'string' && e.term.trim() && typeof e.definition === 'string' && e.definition.trim());
@@ -79,4 +90,4 @@ function updateGuideContext(context, page, review) {
   return { ...context, glossary: [...glossary.values()], roles: [...new Set([...context.roles, ...(review.roles || [])])], recordNames: [...new Set([...context.recordNames, ...(review.recordNames || [])])],
     reviewedChapters: [...context.reviewedChapters.filter(c => c.slug !== page.slug), { slug: page.slug, title: page.title, summary: review.summary, bodyHash: hashValue(page.body), decisions: review.decisions || [] }] };
 }
-module.exports = { pageWordBudget, preserveCopyEdit, checkPageContent, initialGuideContext, chapterInputHash, updateGuideContext, glossaryVariants, normalize, links };
+module.exports = { pageWordBudget, preserveCopyEdit, checkPageContent, initialGuideContext, chapterInputHash, pageContentHash, paragraphHashes, changedParagraphs, updateGuideContext, glossaryVariants, normalize, links };

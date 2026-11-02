@@ -12,11 +12,15 @@ const BLOG_IMAGE_DIR = process.env.BLOG_IMAGE_DIR || path.join(SITE_ROOT, "publi
 
 const CLAUDE_API_KEY = process.env.CLAUDE_API_KEY || "";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 
-// Which API writes the text. Explicit setting wins; otherwise use whichever key is present.
-const LLM_PROVIDER = (
-  process.env.LLM_PROVIDER || (CLAUDE_API_KEY ? "claude" : GEMINI_API_KEY ? "gemini" : "claude")
-).toLowerCase();
+// Which APIs answer the text calls, tried in order: LLM_PROVIDERS=openai,gemini falls back
+// to Gemini when OpenAI fails. The older single LLM_PROVIDER still works; with neither set,
+// use whichever key is present.
+const LLM_PROVIDERS = (
+  process.env.LLM_PROVIDERS || process.env.LLM_PROVIDER || (CLAUDE_API_KEY ? "claude" : GEMINI_API_KEY ? "gemini" : "claude")
+).split(",").map((p) => p.trim().toLowerCase()).filter(Boolean);
+const LLM_PROVIDER = LLM_PROVIDERS[0];
 
 module.exports = {
   TEAM_ROOT,
@@ -32,13 +36,16 @@ module.exports = {
   BLOG_TIMEZONE: "America/Toronto",
 
   LLM_PROVIDER,
+  LLM_PROVIDERS,
   CLAUDE_API_KEY,
   CLAUDE_MODEL: "claude-sonnet-4-6",
   CLAUDE_MODEL_FAST: "claude-haiku-4-5-20251001",
   GEMINI_TEXT_MODEL: process.env.GEMINI_TEXT_MODEL || "gemini-3.8-flash",
   GEMINI_TEXT_MODEL_FAST: process.env.GEMINI_TEXT_MODEL_FAST || process.env.GEMINI_TEXT_MODEL || "gemini-3.8-flash",
   GEMINI_IMAGE_MODEL: process.env.GEMINI_IMAGE_MODEL || "gemini-3.1-flash-image",
-  OPENAI_API_KEY: process.env.OPENAI_API_KEY || "",
+  OPENAI_API_KEY,
+  OPENAI_TEXT_MODEL: process.env.OPENAI_TEXT_MODEL || "gpt-6.1-terra",
+  OPENAI_TEXT_MODEL_FAST: process.env.OPENAI_TEXT_MODEL_FAST || "gpt-6-luna",
   OPENAI_IMAGE_MODEL: process.env.OPENAI_IMAGE_MODEL || "gpt-image-2",
   OPENAI_IMAGE_QUALITY: process.env.OPENAI_IMAGE_QUALITY || "medium",
   // Image sources in order of preference: openai, gemini, pexels, codex (codex = local Codex CLI login only)

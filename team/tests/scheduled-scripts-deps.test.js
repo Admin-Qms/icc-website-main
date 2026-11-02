@@ -15,4 +15,10 @@ for (const name of SCRIPTS) {
     assert.match(prepare, /npm ci --prefix team/, `${name}: team dependencies not installed in prepare`);
     assert.match(prepare, /^\s*npm ci (?!--prefix)/m, `${name}: root dependencies not installed in prepare`);
   });
+
+  test(`${name} prepare prints which providers have keys`, () => {
+    const src = fs.readFileSync(path.join(__dirname, '../scripts', name), 'utf8');
+    const prepare = src.slice(src.indexOf('prepare)'), src.indexOf(';;', src.indexOf('prepare)')));
+    assert.match(prepare, /node team\/scripts\/provider-status\.js/, `${name}: provider status not printed in prepare`);
+  });
 }

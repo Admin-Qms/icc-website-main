@@ -129,3 +129,33 @@ test("closing demo: last paragraph must invite a demo at /contact", () => {
   assert.equal(qa.checkClosingDemo("Intro.\n\n[Get in touch](/contact/) with questions.").pass, false);
   assert.equal(qa.checkClosingDemo("### FAQ?\n\nYes, [book a demo](/contact/).\n\nA closing paragraph with no invitation.").pass, false);
 });
+
+const claimsPost = (body) => ({ slug: "claims-fixture", title: "ISO 14001 Internal Audits in Manufacturing", description: "What environmental managers need to know.", body });
+const claimsDir = (t) => { const dir = require("node:fs").mkdtempSync(require("node:path").join(require("node:os").tmpdir(), "icc-claims-")); t.after(() => require("node:fs").rmSync(dir, { recursive: true, force: true })); return dir; };
+
+test("claims audit: a finding on the fixed title or meta description does not block the body", async (t) => {
+  const call = async () => ({ findings: [{ rule: "STANDARD ACCURACY", text: "TITLE: ISO 14001 Internal Audits in Manufacturing", reason: "No edition" }] });
+  const result = await qa.auditClaims(claimsPost("A plant plans its audits by risk.\n\nRecords show the result."), { call, cacheDir: claimsDir(t) });
+  assert.deepEqual(result.findings, []);
+  assert.equal(result.advisory.length, 1);
+});
+
+test("claims audit: a retry only blocks on paragraphs that changed since an earlier clean audit", async (t) => {
+  const cacheDir = claimsDir(t);
+  const first = async () => ({ findings: [{ rule: "STATISTICS", text: "Most plants fail their first audit.", reason: "Unsupported generalization" }] });
+  await qa.auditClaims(claimsPost("A plant plans its audits by risk.\n\nMost plants fail their first audit."), { call: first, cacheDir });
+  const second = async () => ({ findings: [
+    { rule: "EXAMPLES", text: "A plant plans its audits by risk.", reason: "Unlabelled scenario" },
+    { rule: "STATISTICS", text: "Nearly all plants fail at first.", reason: "Unsupported generalization" },
+  ] });
+  const result = await qa.auditClaims(claimsPost("A plant plans its audits by risk.\n\nNearly all plants fail at first."), { call: second, cacheDir });
+  assert.deepEqual(result.findings.map((f) => f.text), ["Nearly all plants fail at first."]);
+  assert.deepEqual(result.advisory.map((f) => f.text), ["A plant plans its audits by risk."]);
+});
+
+test("claims audit: the rules match the writing rules on generic business descriptions and the fixed title", async (t) => {
+  let prompt = "";
+  await qa.auditClaims(claimsPost("A plant plans its audits by risk."), { call: async (system) => { prompt = system; return { findings: [] }; }, cacheDir: claimsDir(t) });
+  assert.match(prompt, /a 60-person stamping plant/);
+  assert.match(prompt, /TITLE and META DESCRIPTION are fixed/);
+});
