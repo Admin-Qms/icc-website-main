@@ -21,6 +21,10 @@
     {
       "term": "Observation",
       "definition": "What the auditor saw, read or was told, recorded with enough detail for someone else to check it."
+    },
+    {
+      "term": "Finding",
+      "definition": "A judgment drawn from observations and measured against criteria."
     }
   ],
   "roles": [
@@ -47,7 +51,11 @@
     "Viewer",
     "Finance or purchasing contact",
     "Audit-program planner",
-    "Planner"
+    "Planner",
+    "Independent reviewer",
+    "Response owner",
+    "Backup owner",
+    "Machining supervisor"
   ],
   "recordNames": [
     "Audit program",
@@ -105,7 +113,11 @@
     "Customer drawing",
     "Access rules",
     "Test log",
-    "Temporary-access decision"
+    "Temporary-access decision",
+    "Observation",
+    "Category definitions",
+    "Confirmation entry",
+    "Dispute entry"
   ],
   "example": {
     "label": "Illustrative example",
@@ -178,6 +190,22 @@
         "Whether to accept or return the access configuration",
         "Whether to grant, narrow or refuse temporary access",
         "How to apply the previously taken evaluation decision when a product cannot enforce an access rule"
+      ]
+    },
+    {
+      "slug": "audit-findings",
+      "title": "Recording and reviewing findings: Internal audit management software",
+      "summary": "The page covers all four assigned workflows with supported citations, actionable evaluation questions and labeled hypothetical examples. No FAQ was assigned or included.",
+      "bodyHash": "8eb8bf6ab2ec7253030b1cf07d520f0ff9fd7f7dd23188a031408e451efa0f3f",
+      "decisions": [
+        "Whether an observation becomes a finding and which category applies.",
+        "Whether to request more evidence or escalate an observation that does not fit a category.",
+        "Whether evidence is relevant, sufficient and retrievable, or the finding should be returned.",
+        "Whether to collect more evidence, hold or withdraw a finding when evidence is inaccessible or disputed.",
+        "Who owns the response and by when, and whether to reassign or escalate ownership.",
+        "Whether a disputed finding stands, is revised, is withdrawn or is held for more evidence.",
+        "Whether a dispute decision has a recorded basis or should be returned for more detail.",
+        "Who reviews and accepts a dispute decision when the quality manager is involved."
       ]
     }
   ],

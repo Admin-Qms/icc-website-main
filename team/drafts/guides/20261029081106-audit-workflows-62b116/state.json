@@ -70,7 +70,7 @@
       "wordCount": 2028,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-02T08:25:36.412Z"
+      "checkpointedAt": "2026-11-02T14:56:45.493Z"
     },
     "audit-follow-up": {
       "hash": "04a5e096da8b3c66ce788540cd47757e5666ca323fc48bb4ed9611870518b7a8",
@@ -109,7 +109,7 @@
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-11-02T14:55:47.500Z",
+  "updatedAt": "2026-11-02T14:56:54.055Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1441,7 +1441,7 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "28cd60140e6ef71130dcb0fc7da4732d4790480cf2a485769bf10038752886a6",
+  "contextHash": "fd87e3cd1fb9231062a98b47e646b2a3ea76276fec0da55315dea0d5af5e2cd4",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2197,6 +2197,203 @@
       ],
       "outputContextHash": "28cd60140e6ef71130dcb0fc7da4732d4790480cf2a485769bf10038752886a6",
       "reviewedAt": "2026-11-02T14:55:47.497Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "audit-findings": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The page covers all four assigned workflows with supported citations, actionable evaluation questions and labeled hypothetical examples. No FAQ was assigned or included.",
+      "glossary": [
+        {
+          "term": "Finding",
+          "definition": "A judgment drawn from observations and measured against criteria."
+        }
+      ],
+      "roles": [
+        "Quality manager",
+        "Lead auditor",
+        "Auditor",
+        "Second reviewer",
+        "Reviewer",
+        "Independent reviewer",
+        "Process owner",
+        "Response owner",
+        "Backup owner",
+        "Auditee",
+        "Top management",
+        "Vendor",
+        "Machining supervisor"
+      ],
+      "recordNames": [
+        "Observation",
+        "Finding",
+        "Audit plan",
+        "Evidence",
+        "Follow-up evidence",
+        "Category definitions",
+        "Confirmation entry",
+        "Responsibility table",
+        "Production calendar",
+        "Assignment",
+        "Dispute entry"
+      ],
+      "decisions": [
+        "Whether an observation becomes a finding and which category applies.",
+        "Whether to request more evidence or escalate an observation that does not fit a category.",
+        "Whether evidence is relevant, sufficient and retrievable, or the finding should be returned.",
+        "Whether to collect more evidence, hold or withdraw a finding when evidence is inaccessible or disputed.",
+        "Who owns the response and by when, and whether to reassign or escalate ownership.",
+        "Whether a disputed finding stands, is revised, is withdrawn or is held for more evidence.",
+        "Whether a dispute decision has a recorded basis or should be returned for more detail.",
+        "Who reviews and accepts a dispute decision when the quality manager is involved."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Distinguishing findings and observations",
+            "section": "Distinguishing findings and observations"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Distinguishing findings and observations; semantic review verifies support",
+            "section": "Distinguishing findings and observations"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Confirming supporting evidence",
+            "section": "Confirming supporting evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Confirming supporting evidence; semantic review verifies support",
+            "section": "Confirming supporting evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assigning action ownership",
+            "section": "Assigning action ownership"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assigning action ownership; semantic review verifies support",
+            "section": "Assigning action ownership"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Resolving disputed findings",
+            "section": "Resolving disputed findings"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Resolving disputed findings; semantic review verifies support",
+            "section": "Resolving disputed findings"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "300c43b93c2eed94464650eb09d1c193c95601fde2bd7595b48b4138bb6a36f5",
+      "contentHash": "a0a48a4f2aba541ee6703893b25061cf4234c830c3b8bf27fe0a4399ffb3291a",
+      "paragraphHashes": [
+        "19a1f6399f31d5537264005ed71f75abbdb72f1c88c8a6dcce493cf6c3bb89ab",
+        "ac9a7c7096a2870c9dfb589b7bb2abbfe761b38faf61b47244e7fccd166530bb",
+        "98e93ab0532c3312ce041b578fee462ea1e6489ebe20be5dca19dbaa9d1b3238",
+        "76921d4a556c38c8d468600775265db9c2930b23b856e65d77b4cdb844aceaa4",
+        "57bfb5ec75b1bd5e1364a80178ddd9de7f0c3c301852a1fc5b9ab3b50ee79c98",
+        "0e8568775a4ed6ae6cee82127ebcd1a52183f5a1c4310ef8529d9a7bf29e4c7c",
+        "58cc194bcf71684054781b33bbdf03eed324924e0782031bc75ad8407c5e1574",
+        "b2b7a7e4b8709fde8397985cff25dc4d8b2ff07fc7b2c3d4a0aa4b6923bc762f",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "4f3d0e4a82378e523a1d1b11e00370d45a45d80b77c025c503e97666eb345fe3",
+        "6bac821549bbd1a599f4931f6e79810f2b2d8897ac1fa12197e8fe957bcfc27b",
+        "84106aa38216fc6ee8b5a35dd583fe65669ffe18cdd2a4947e4090e04bbcbec1",
+        "d67658ae293ebbbc4860568244b030d85d7cf5f7809bd60fde0c63689b58b542",
+        "99b5bb8670577b1d6c0b6eeff4d256a930330a09805fe91fdbb395ea450a7874",
+        "593d74b0a5d91d739ef49c35c8fa486f58b186f9d22d9ef22b83d581f2a7658a",
+        "7071d48e9c6926e3f264a48fb0e72dc24bc40bc8c83708c06ca296d2eab5a6ce",
+        "8f3a9afb0dfa52815a14426c8b5c53385c1cb506d98bc1c93880090e11995599",
+        "b7ea1c487e6e703434ca69e7525a970174a35d5f5c5bd3516f796874dd1174b2",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "8f88552d5f723d24e06c32fa7fafd11551c8bed69030751e3dc9f540c9aa385f",
+        "7d14733d398a515e3754b324b7c02b5e65153f300c7e13c27e175acc82bc0ea8",
+        "3473ecb84bb2f72ffb0ab628bcefee42cdf611d868c10c90a6631cf826a9c8cb",
+        "09e7e0c6368bf4dc0cfdfe0ab5320579e5e3306cc5f586ad637d10508f622c53",
+        "539df510e3eeb4f20fcf4a8ef78a998dab6e32ef27f9acee2b8d04de4322e70d",
+        "a260a399e1ad6771b8da55bf2469fa2cd26e08a055aff11166a13dab527b3fdf",
+        "b478218fa47dee10304099f4da7569ed751b8b09e84f6e0b4caabe1018964024",
+        "010849de473a6de84273d08638a57f7fb3fece976293996a0dcfa91a71f9f745",
+        "e2491c16ee377ff1cdd766b8f59834b419dffe603eb492485659363f124aa0fc",
+        "391ddefa4cda7062e7f41efff654baa67e42460430aef5f208ebba5919ad4e8c",
+        "c9f59f68898c2f0a5e0ea274f971c9384aebcee1842f0efbf42b5c8dffddca21",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "db191af64c9d6762a7f097bde6b0f207904bfffb04b4fdf019134e98c736e5d9",
+        "137268912eaf89ea9a3516fd8de81bf10b357d2aa1673821f6c1f1d9a822b1ee",
+        "a5be2f9ca2aa18503122f92cc67d72bf8492c8113047ec2b0ce9fc42d27fe492",
+        "df0346ca334f4ecac048b208098189a79d5baba9e34c6624f3a27af562bf95b1",
+        "411c9281d53e82930cf88f9d76031603e1ef452453d13461926016f87d1270da",
+        "7becc63cb33993c38ae30f00a78029eccad38f9ec5a18c61e51c7ca66f9897cd",
+        "dce002f676b05b34529dfba231180dfe3f5dd61554acf64ae0c08d8c1a14d07e",
+        "5b817e9ceee8edce85bb6b9ce501a90107f315f45ac4cec3a812501acd403eb5",
+        "cd597a8c16464b78c70530fc1c515f1c18683814fc3f62c3403652725aa5c6ac",
+        "3b1c1c8fa6b51dbef81293bc8b86dfc77be72daf2351d27ab33f7c7df4a86693",
+        "389e2295589ed5d28adc160d285479a8196e39acc57e1c68e5d81c7bc8033b46",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "3223deab756d71788214135d71491dc209fb8e3328e1dfe90c2ef452fcadeabd",
+        "aa8766c8c6424d487bce3654c3edf81a92bfc3c242b09c01c20e9a1f77a257d7"
+      ],
+      "outputContextHash": "fd87e3cd1fb9231062a98b47e646b2a3ea76276fec0da55315dea0d5af5e2cd4",
+      "reviewedAt": "2026-11-02T14:56:54.052Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
