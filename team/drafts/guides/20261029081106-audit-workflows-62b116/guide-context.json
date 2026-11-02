@@ -29,7 +29,16 @@
     "Production manager",
     "Second reviewer",
     "Action owner",
-    "Vendor"
+    "Vendor",
+    "Reviewer",
+    "Verifier",
+    "Observer",
+    "IT contact",
+    "System administrator",
+    "Contractor",
+    "Viewer",
+    "Finance or purchasing contact",
+    "Audit-program planner"
   ],
   "recordNames": [
     "Audit program",
@@ -47,7 +56,25 @@
     "Internal audit procedure",
     "Responsibility table",
     "Acceptance criteria list",
-    "Evaluation file"
+    "Evaluation file",
+    "Acceptance criteria",
+    "Vendor questionnaire responses",
+    "Screening sheet",
+    "Cost list",
+    "Test script",
+    "Sample records",
+    "Test results",
+    "Separation rules",
+    "Permissions test log",
+    "Written quotes",
+    "Contract terms",
+    "Support descriptions",
+    "Comparison sheet",
+    "Written recommendation",
+    "Audit schedule",
+    "Corrective action",
+    "Evidence",
+    "Checklist"
   ],
   "example": {
     "label": "Illustrative example",
@@ -69,6 +96,23 @@
         "Who confirms auditor competence and objectivity and reviews results",
         "Which acceptance criteria are must-haves, should-haves or could-haves and what counts as a pass",
         "How to resolve untestable or conflicting criteria"
+      ]
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluating software capabilities: Internal audit management software",
+      "summary": "The page covers the assigned evaluation steps with supported citations, actionable workflow decisions and labeled hypothetical examples. It does not include an unassigned FAQ.",
+      "bodyHash": "b033a546b7eb6cdb2eaa195604ced60483ee3a723a26026d2ebd0b51f906a669",
+      "decisions": [
+        "Which candidates proceed to demonstration or are removed from the shortlist",
+        "Whether to request a trial or drop a promising candidate with an undemonstrated must-have",
+        "Whether each test scenario passed, failed or was not shown",
+        "How to handle a scenario that cannot be run live",
+        "Whether evidence and permissions meet the team's criteria and separation rules",
+        "Whether to reject a product, change a rule or accept a procedural control when a permission rule cannot be enforced",
+        "How to handle an incomplete quote",
+        "Which product to recommend and whether the recommendation is provisional",
+        "Whether top management approves the final choice"
       ]
     }
   ],

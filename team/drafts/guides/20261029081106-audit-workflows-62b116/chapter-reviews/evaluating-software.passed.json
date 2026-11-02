@@ -1,0 +1,207 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The page covers the assigned evaluation steps with supported citations, actionable workflow decisions and labeled hypothetical examples. It does not include an unassigned FAQ.",
+  "glossary": [],
+  "roles": [
+    "Workflow owner",
+    "Quality manager",
+    "Process owner",
+    "Auditor",
+    "Reviewer",
+    "Action owner",
+    "Verifier",
+    "Observer",
+    "IT contact",
+    "System administrator",
+    "Contractor",
+    "Viewer",
+    "Finance or purchasing contact",
+    "Top management",
+    "Vendor",
+    "Audit-program planner"
+  ],
+  "recordNames": [
+    "Acceptance criteria",
+    "Record map",
+    "Vendor questionnaire responses",
+    "Screening sheet",
+    "Cost list",
+    "Test script",
+    "Sample records",
+    "Test results",
+    "Responsibility table",
+    "Separation rules",
+    "Permissions test log",
+    "Written quotes",
+    "Contract terms",
+    "Support descriptions",
+    "Comparison sheet",
+    "Written recommendation",
+    "Audit program",
+    "Audit plan",
+    "Audit schedule",
+    "Audit report",
+    "Finding",
+    "Corrective action",
+    "Evidence",
+    "Checklist"
+  ],
+  "decisions": [
+    "Which candidates proceed to demonstration or are removed from the shortlist",
+    "Whether to request a trial or drop a promising candidate with an undemonstrated must-have",
+    "Whether each test scenario passed, failed or was not shown",
+    "How to handle a scenario that cannot be run live",
+    "Whether evidence and permissions meet the team's criteria and separation rules",
+    "Whether to reject a product, change a rule or accept a procedural control when a permission rule cannot be enforced",
+    "How to handle an incomplete quote",
+    "Which product to recommend and whether the recommendation is provisional",
+    "Whether top management approves the final choice"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Build a workflow-based shortlist",
+        "section": "Build a workflow-based shortlist"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Build a workflow-based shortlist; semantic review verifies support",
+        "section": "Build a workflow-based shortlist"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Test the decision points",
+        "section": "Test the decision points"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Test the decision points; semantic review verifies support",
+        "section": "Test the decision points"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Examine evidence and permissions",
+        "section": "Examine evidence and permissions"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Examine evidence and permissions; semantic review verifies support",
+        "section": "Examine evidence and permissions"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Compare cost and support",
+        "section": "Compare cost and support"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Compare cost and support; semantic review verifies support",
+        "section": "Compare cost and support"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "db6dc2531b8eefb8852289d50e7d8cb03aeeeace275bfa34d448c0634eae0953",
+  "contentHash": "09168580dbadb150d85e6366d4dc18bb1d624c36a8382978b4e1521b67dbda96",
+  "paragraphHashes": [
+    "34a2c737b52c6404cb6f0e763283301e4ff93d9d3750e57fc9a6711454a4c8ad",
+    "dc87b9b07f8c4eb35ef6e9f0e7303fe59739f2a99dbed5882e489a13625c5a03",
+    "5de6fe5c288a238a25917c5ec0af9b037cea8d2e4eb755c2519d977847fabc2f",
+    "e00a9f7e37cfea96472e33e1f4f5d4bd236bde097ef3d59eb1fd72c390e08048",
+    "859e7940d1aa55d5e9dfbd8ba3ea7e5b805ccf26b54e8aa914dbcd12305af995",
+    "9f0f6d8165f24cfecb0d91fade2f94ffb581146b38750cf100e27540886e6c44",
+    "10b13f67338c0f6acdba342586f63fb50cb9ca2cec35407fa0c59d8d9e629150",
+    "4d9a335623cde024b3ee6f5dcdf89ec584a3dc1c102920b810e2ab96107b9e65",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "2d8aaeadd8dc93b7f2c0b097444272cd5256a049d2c184944b35dc4df9ab8a7d",
+    "aa5050f333eeb2e95c90d749d913e8b4141e7465a710750363a2607e866e92c0",
+    "09c5a13508681f88a4128cf7cc058720fe4ba6952ebb71a1ace8ab5d004b3ce2",
+    "565e5ea9fff297d0983b6d0a30d253f2d39bc78939cf4a7b1756b1147b4a9f1f",
+    "8e8a278a1a4d0dab5f6927ec4dba3d4a25426a16db331f5000ae05b6fb8fb2f5",
+    "cc0300f41af4117c1223c968e63fc3bdbdac26f47fefe53c2d7910b1d60de040",
+    "741dfc41426d0450972ff0f8e7f8acb15a2289cb25c85820eb51fdd385243b87",
+    "a0df660b691ca4faf0cf02d410aa9d00813b9dcf001928b13bbc83f92fb79887",
+    "88d8bfcdcba266dc47409fb3c6f427f4159389b96d8af8fce471c87aa09c2644",
+    "8a5d626b1f548401340c7bbe8bfb107e82b9d9abff8e808bd186b2a13a765b0f",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "57acd36745ed78da5cc49a9b4842a78210751864d9ceb521db3b6b3b0b4add59",
+    "41475bb1313b1f850ef111ae07adf593926b3b14e4f71abbdb2fa5c7c40dc2c7",
+    "6bcb021bb2bbe34d5a80be1b667e6a6ae45e6c9bc7f5b806489b8319378a9b67",
+    "7d4b72dc5b0a56f38a146eaab9faafd211052fc7403ded5f03233cd420329f46",
+    "fc759e3f52a045d69a11f0d66ad6c807cf2b68805542fb2d967aa12167ede8d5",
+    "4b98145d39d78643dd366629913cd2a37de97f7dd664a30476cf97498d3554b7",
+    "daa2d4728bf404a3217916900b23b52c2d7f87b8c74d9c40e43f9b0cdaa6451e",
+    "97c63fd749656b81e9ed12f543950c611c6c4f356e346ceb2a83802300ecd866",
+    "56b73c134f5465d5e2dbe8d78d17b0d96f9d6cb58a13d31773f06d210bc4fc07",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "eaf6d79e884e561512d4b4016d1939d6ad2db9cf996ca7eefb02c0c28c0042db",
+    "396195d18f424e5446a773708b8668fe1ea31c3f6154cb91640d02c17d38b603",
+    "42fa928d62e2bb40c0af0137a2b62db78597798cd4793cb6daca995ef0f43d98",
+    "83dd295eac6db8f8fcd340da4e980abc7dfe542bfb3c73d5dd2b0dfc43728d58",
+    "d5b89f4c0aef438f86c79114f290a63e9c863c00fd3c3af5aa3542afef7e5a0d",
+    "9e5bf1911db5497f0bbae0e0123fd1a0cc2aedbef873efed2718b0e8ab343036",
+    "c167f513cce71228917586d9d94e76973206aeb4c9d81a20590fb4fbe37b36c8",
+    "f79e6d23bc2510c1916d14c7d8e002e0a1eb9f432211b5a6c1eca70fff723c9d",
+    "107c85a6327388ee2db8bdfb89393cf23ae13c5dc3cb72d7349ccf39cedea18c",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "3836b6b040f4573e1495f758b2f77bf2750739eedbe090415bc69bd1cda2204f",
+    "5649e4a03872f3e98151258cac17bd3e7e8f9a4a46ad8c00208432c40a231e12",
+    "45e57e44db824dc1b30afbfc5b162d45f274e2ed2f5aa8fdcbeb6fab84ff0ed0"
+  ],
+  "outputContextHash": "bf606c1d14b00154376286417da54edf556502083a2e3bdf0d5460a78030f69a",
+  "reviewedAt": "2026-11-02T14:49:26.469Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

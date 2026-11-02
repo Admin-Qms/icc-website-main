@@ -52,7 +52,7 @@ Keep a scoring sheet, but avoid false precision. Mark each must-have as demonstr
 | Record | The screening sheet with the status of each must-have, the reason for each removal, and the name of the decision-maker |
 | Exception | A promising product with one must-have not shown; the workflow owner decides whether to request a trial or drop it, and records the reason |
 
-**Illustrative example:** An unnamed Canadian manufacturer screens five candidates against four must-haves. Two products cannot show how a rejected action is reassigned, so they are removed with that reason recorded. A third offers the feature but only through a separate paid service, so the team marks it "claimed but not shown" and asks for a trial. All scenarios here are hypothetical.
+**Illustrative example:** An unnamed Canadian manufacturer screens five candidates against four must-haves. Two products cannot show how a rejected action is reassigned, so they are removed with that reason recorded. A third describes the feature in writing but never demonstrates it, so the team marks it "claimed but not shown" and asks for a trial. Its separate charge goes on the cost list.
 
 ## Test the decision points
 
