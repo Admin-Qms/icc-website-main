@@ -35,7 +35,7 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W44-slot-2",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "6784e998765bbe3a627b5033f84082308e530d9902add971ddb21a68b041848d",
@@ -109,7 +109,7 @@
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-11-02T15:11:12.699Z",
+  "updatedAt": "2026-11-02T15:11:24.880Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -3440,7 +3440,27 @@
   },
   "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883",
   "outlineHash": "9a0993bb78e37f48a9899644df0efc4fdc9325c541b676c1994825e821f68297",
-  "audit": null,
+  "audit": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "unresolvedFindings": [],
+    "inputHash": "b6df2cd02a17aeb17e8f81a2d495594e2c86c2b5068af13095b6f177f88656be",
+    "pageHashes": {
+      "internal-audit-software": "a6fcbf1af56a731ad86ac29c55a8046d396d772ba9c72164de54d381aff8f34f",
+      "mapping-workflows": "7100bb386c7185a342f819703ec087f4a1d370ceda470656c80fcf7770239616",
+      "evaluating-software": "b033a546b7eb6cdb2eaa195604ced60483ee3a723a26026d2ebd0b51f906a669",
+      "audit-planning": "18c9e340fd74b1772fdf05c5f29ce94d201d70ccf0f1b58c19d34a5db1d99a12",
+      "audit-evidence": "74d578847cc04bdd36f0f2761a5bc1e8c7640efd5cb9c0174cc7df6882678459",
+      "audit-findings": "8eb8bf6ab2ec7253030b1cf07d520f0ff9fd7f7dd23188a031408e451efa0f3f",
+      "audit-follow-up": "18f1405c2435db698aef4c20f70d1cb37de178eff09fdf86268e262ddfb0cc69",
+      "migration-planning": "e46fe312d57a4d92b5432a21c5dbd21cfd1fb94e479387ef19a981ea74009bd2",
+      "training-rollout": "5c22502461c043df5caf61ffe48fbf66e2f58244238b0451896f8c5f88e5480e",
+      "ongoing-operation": "2b08f451085208f0b4b06799f6cced0ef89c472758db7dc58ce49e97ec6f93f6"
+    },
+    "reviewer": "Configured openai independent review",
+    "reviewedAt": "2026-11-02T15:11:24.877Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }

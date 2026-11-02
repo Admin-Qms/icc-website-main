@@ -1,11 +1,9 @@
 {
-  "claims": "failed",
+  "claims": "passed",
   "consistency": "passed",
   "repetition": "passed",
-  "unresolvedFindings": [
-    "The FAQ asks whether software guarantees ISO certification, but its answer draws a conclusion about certification responsibility from audit-program guidance. The supplied evidence explicitly does not address certification requirements, and the introduction acknowledges that limitation. Revise the FAQ to state that the evidence does not establish whether software guarantees certification and direct readers to their certification body."
-  ],
-  "inputHash": "8509221efb2bde6852e169fcf4d14439fb3f0da4d5cdbcb8cc695aa9c8714ee1",
+  "unresolvedFindings": [],
+  "inputHash": "b6df2cd02a17aeb17e8f81a2d495594e2c86c2b5068af13095b6f177f88656be",
   "pageHashes": {
     "internal-audit-software": "a6fcbf1af56a731ad86ac29c55a8046d396d772ba9c72164de54d381aff8f34f",
     "mapping-workflows": "7100bb386c7185a342f819703ec087f4a1d370ceda470656c80fcf7770239616",
@@ -16,8 +14,8 @@
     "audit-follow-up": "18f1405c2435db698aef4c20f70d1cb37de178eff09fdf86268e262ddfb0cc69",
     "migration-planning": "e46fe312d57a4d92b5432a21c5dbd21cfd1fb94e479387ef19a981ea74009bd2",
     "training-rollout": "5c22502461c043df5caf61ffe48fbf66e2f58244238b0451896f8c5f88e5480e",
-    "ongoing-operation": "41e14661c80c6c155403d57fa6b4395b680d9558921e3e59d0fbad5c7fc71645"
+    "ongoing-operation": "2b08f451085208f0b4b06799f6cced0ef89c472758db7dc58ce49e97ec6f93f6"
   },
   "reviewer": "Configured openai independent review",
-  "reviewedAt": "2026-11-02T15:09:33.207Z"
+  "reviewedAt": "2026-11-02T15:11:24.877Z"
 }
