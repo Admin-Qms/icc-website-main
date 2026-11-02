@@ -90,7 +90,7 @@ export function Navbar() {
         <div className="container-page flex h-10 items-center justify-between text-[13px]">
           <p className="flex items-center gap-2">
             <ShieldCheck className="h-4 w-4 text-teal-400" />
-            AI-powered compliance management software · {SITE.region}
+            Audit-ready quality and compliance · {SITE.region}
           </p>
           <div className="flex items-center gap-6">
             <a
@@ -195,7 +195,7 @@ export function Navbar() {
               Free Assessment
             </Link>
             <Link href="/contact" className="btn-primary whitespace-nowrap px-4 py-2.5 text-sm">
-              Book a demo
+              See it live
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -290,7 +290,7 @@ export function Navbar() {
                 Free Assessment
               </Link>
               <Link href="/contact" onClick={() => setOpen(false)} className="btn-primary w-full">
-                Book a demo
+                See it live
               </Link>
             </div>
           </motion.div>

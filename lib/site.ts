@@ -1396,7 +1396,7 @@ export const ROI_PLATFORM = {
   eyebrow: "The return — the software",
   title: "Compliance management sized for your business",
   intro:
-    "Family-owned shops and growing operations rarely have a quality department. They have a few overloaded people and a wall of binders. The compliance management software gives them a working system without an enterprise price tag or headcount.",
+    "Family-owned shops and growing operations rarely have a quality department. They have a few overloaded people and a wall of binders. The platform gives them a working system without an enterprise price tag or headcount.",
   cta: { href: "/assessment", label: "Start the free readiness assessment" },
   footnote: "Free, no signup — see where you stand in minutes.",
   drivers: [

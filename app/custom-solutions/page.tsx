@@ -43,7 +43,7 @@ export default function CustomSolutionsPage() {
         fx={<HeaderIconsFX icons={["design", "audit", "loop", "rollout", "expert", "assessment"]} />}
       >
         <Link href="/contact" className="btn-primary">
-          Book a demo <ArrowRight className="h-4 w-4" />
+          Talk through your project <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/solutions" className="btn-outline">
           Browse standard modules
@@ -138,7 +138,7 @@ export default function CustomSolutionsPage() {
           <Reveal delay={0.1} className="mt-10 text-center">
             <p className="text-slate-600">Don&apos;t see your situation? Tell us what you are facing and we will say plainly whether a module fits or something has to be built.</p>
             <Link href="/contact" className="btn-primary mt-4">
-              Book a demo <ArrowRight className="h-4 w-4" />
+              Talk through your project <ArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>
         </div>
@@ -171,7 +171,7 @@ export default function CustomSolutionsPage() {
 
       <CTASection
         title="See how a module built around your process would work"
-        intro="Book a demo and tell us the challenge you're facing. We'll show the software, say plainly whether a module fits or something has to be built, and credit any onsite assessment toward what we build."
+        intro="Book a call and tell us the challenge you're facing. We'll show the software, say plainly whether a module fits or something has to be built, and credit any onsite assessment toward what we build."
       />
     </>
   );

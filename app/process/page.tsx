@@ -21,7 +21,7 @@ export default function ProcessPage() {
         intro="You always know where you are and what comes next. Consultants run the gap analysis and audits with you, and the software keeps the evidence from day one. Typically around 24 weeks."
       >
         <Link href="/contact" className="btn-primary">
-          Book a demo <ArrowRight className="h-4 w-4" />
+          Talk to a consultant <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/assessment" className="btn-outline">
           Take the free assessment

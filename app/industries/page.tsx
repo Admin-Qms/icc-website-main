@@ -22,7 +22,7 @@ export default function IndustriesPage() {
         intro="Generic quality advice does not survive an automotive PPAP submission or an aerospace configuration audit. Pick your sector to see the compliance pressures and the software that answers them."
       >
         <Link href="/contact" className="btn-primary">
-          Book a demo <ArrowRight className="h-4 w-4" />
+          See it for your industry <ArrowRight className="h-4 w-4" />
         </Link>
       </PageHeader>
 

@@ -91,7 +91,7 @@ export default function StandardPage({
         }
       >
         <Link href="/contact" className="btn-primary">
-          Book a demo <ArrowRight className="h-4 w-4" />
+          See it set up for {s.code} <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/assessment" className="btn-ghost">
           Free readiness check
@@ -110,7 +110,7 @@ export default function StandardPage({
               </h2>
               <p className="mt-4 text-slate-600">
                 Every {s.code} project runs on the same hybrid model: the
-                compliance management software holds and tracks the system, and
+                platform holds and tracks the system, and
                 a certified lead consultant reviews the work and stands with you
                 through the certification audit. The core elements below are
                 tailored to how your operation actually runs.
@@ -235,7 +235,7 @@ export default function StandardPage({
                   </div>
                 </dl>
                 <Link href="/contact" className="btn-primary mt-6 w-full">
-                  Book a demo
+                  See it set up for {s.code}
                 </Link>
               </div>
             </Reveal>
@@ -292,7 +292,7 @@ export default function StandardPage({
         </div>
       </section>
 
-      <CTASection title={`Ready to meet ${s.code}? Book a demo`} />
+      <CTASection title={`Ready to meet ${s.code}? See it set up for your team`} />
     </>
   );
 }

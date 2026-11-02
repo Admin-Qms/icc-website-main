@@ -69,7 +69,7 @@ export function Hero() {
               className="mt-8 flex flex-wrap items-center gap-4"
             >
               <Link href="/contact" className="btn-primary group">
-                Book a demo
+                Get a walkthrough
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link href="/platform" className="btn-outline">
@@ -169,7 +169,7 @@ function HeroContactPanel() {
   return (
     <section
       className="grid min-w-0 items-center"
-      aria-label="Book a demo"
+      aria-label="Get a walkthrough"
     >
       {!showForm && (
         <div className="min-w-0 [grid-area:1/1]" aria-hidden="true">
@@ -183,7 +183,7 @@ function HeroContactPanel() {
         animate={{ opacity: showForm ? 1 : 0 }}
         transition={{ duration: reduce ? 0 : 0.4 }}
       >
-        <ContactForm compact title="Book a demo" submitLabel="Book my demo" />
+        <ContactForm compact title="Get a walkthrough" submitLabel="Book my walkthrough" />
       </motion.div>
       <noscript>
         <p className="mt-4">
@@ -191,7 +191,7 @@ function HeroContactPanel() {
             href="/contact/"
             className="font-semibold text-teal-700 underline"
           >
-            Book a demo
+            Get a walkthrough
           </Link>
         </p>
       </noscript>

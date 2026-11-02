@@ -7,7 +7,7 @@ import { SITE, OG_IMAGE } from "@/lib/site";
 import { pageTitle } from "@/lib/seo";
 
 const description =
-  "Practical ISO 9001, IATF 16949 and AS9100 how-tos for quality teams, plus how compliance software automates the work. Book a demo to see it.";
+  "Practical ISO 9001, IATF 16949 and AS9100 how-tos for quality teams, plus how compliance software automates the work. Get a walkthrough to see it.";
 
 export const metadata: Metadata = {
   title: pageTitle("Compliance Blog: ISO 9001, IATF 16949 and AS9100 Guidance"),

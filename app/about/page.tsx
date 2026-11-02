@@ -52,7 +52,7 @@ export default function AboutPage() {
         intro="ISO Certification Consultants Inc. builds compliance management software and backs it with certified consultants. The software keeps you audit-ready every day, and the experts help when you want them."
       >
         <Link href="/contact" className="btn-primary">
-          Book a demo <ArrowRight className="h-4 w-4" />
+          See it live <ArrowRight className="h-4 w-4" />
         </Link>
       </PageHeader>
 
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 set no one maintains. It should not be that way.
               </p>
               <p>
-                The compliance management software does the mechanical work:
+                The platform does the mechanical work:
                 clause tracking, controlled documents, audit records and
                 corrective actions. Certified consultants make sure the system
                 is right and stand with you through the audit. Broad standard

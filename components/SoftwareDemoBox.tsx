@@ -20,7 +20,7 @@ export function SoftwareDemoBox({ category }: { category?: string }) {
           </p>
           <div className="mt-5 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <Link href="/contact/" className="btn-primary">
-              Book a demo
+              See this in the platform
             </Link>
             <Link href="/assessment/" className="link-arrow">
               Take the free assessment

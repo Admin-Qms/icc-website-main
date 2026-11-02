@@ -86,7 +86,7 @@ export default function AnthonyMannellaPage() {
         intro={`${person.jobTitle} at ${SITE.legalName}, and a contributor to ${publisher.name}.`}
       >
         <Link href="/contact" className="btn-primary">
-          Book a demo <ArrowRight className="h-4 w-4" />
+          Talk to a consultant <ArrowRight className="h-4 w-4" />
         </Link>
       </PageHeader>
 
@@ -107,7 +107,7 @@ export default function AnthonyMannellaPage() {
                 Anthony Mannella is the CEO of {SITE.legalName}, a Toronto-based
                 firm that prepares Canadian companies for ISO and sector
                 certification audits. He also works as a consultant on client
-                engagements, alongside the compliance management software the
+                engagements, alongside the platform the
                 company configures for each client.
               </p>
               {person.experience && (

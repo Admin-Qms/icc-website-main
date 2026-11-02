@@ -15,9 +15,9 @@ export function Footer() {
               <Logo variant="light" />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-slate-400">
-              AI-powered compliance management software that keeps quality,
-              compliance, people, suppliers and operations audit-ready every
-              day, with certified consultants when you want them.
+              One platform that keeps quality, compliance, people, suppliers
+              and operations audit-ready every day, with certified consultants
+              when you want them.
             </p>
             <a
               href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
@@ -106,7 +106,7 @@ export function Footer() {
             href="/contact"
             className="inline-flex items-center gap-1.5 font-semibold text-teal-300 hover:text-teal-200"
           >
-            Book a demo <ArrowRight className="h-4 w-4" />
+            Get a walkthrough <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

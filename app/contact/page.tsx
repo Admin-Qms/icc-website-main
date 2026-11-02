@@ -21,12 +21,12 @@ export default function ContactPage() {
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-teal-700">
               <ShieldCheck className="h-3.5 w-3.5" />
-              Book a demo
+              Live walkthrough
             </span>
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.1] text-navy-900 sm:text-5xl">
-              Book a demo of the <span className="text-teal-700">compliance management software</span>
+              See the platform on <span className="text-teal-700">your own standard</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
@@ -76,7 +76,7 @@ export default function ContactPage() {
         </div>
 
         <Reveal delay={0.1}>
-          <ContactForm askRequest title="Book a demo" submitLabel="Book my demo" />
+          <ContactForm askRequest title="Get a walkthrough" submitLabel="Book my walkthrough" />
         </Reveal>
       </div>
     </section>

@@ -28,7 +28,7 @@ export default function ServicesPage() {
         intro="The standards below are the ones Canadian companies ask for most, and ten of them sit in the software catalogue. Customer-specific requirements, regulatory frameworks and internal quality standards are imported from a workbook as custom standards, so if you are audited against it, it can be tracked clause by clause."
       >
         <Link href="/contact" className="btn-primary">
-          Book a demo <ArrowRight className="h-4 w-4" />
+          Talk to a consultant <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/contact" className="btn-ghost">
           Onboard a custom standard

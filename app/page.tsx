@@ -153,7 +153,7 @@ export default function Home() {
         <div className="container-page">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
-              eyebrow="The compliance management software"
+              eyebrow="The platform"
               title="One platform for quality, compliance, people, processes, suppliers and operations"
               intro="Turn on the modules you need now and add more as you grow. Each one is set up to match the forms and approvals your team already uses."
             />

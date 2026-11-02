@@ -266,7 +266,7 @@ export default function IndustryPage({
         }
       >
         <Link href="/contact" className="btn-primary">
-          Book a demo <ArrowRight className="h-4 w-4" />
+          See it set up for {ind.name} <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/assessment" className="btn-ghost">
           Free readiness check
@@ -407,7 +407,7 @@ export default function IndustryPage({
       </section>
 
       <CTASection
-        title={`Book a demo for ${ind.name}`}
+        title={`Get a walkthrough for ${ind.name}`}
       />
     </>
   );
