@@ -19,6 +19,19 @@ sourceIds:
   - apg-internal-audit
   - apg-audit-planning
 capabilityIds: []
+wordCount: 2000
+readTime: 10
+image:
+  src: /images/guides/internal-audit-software/migration-planning.webp
+  alt: >-
+    a receiving inspector sorting traceability records beside incoming material
+    racks; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: e6fcf55bfb5b13123bba956662939c5beafd48c02b369c109e0833948fa49cde
+  sha256: e6fcf55bfb5b13123bba956662939c5beafd48c02b369c109e0833948fa49cde
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Inventory and classify existing records
 

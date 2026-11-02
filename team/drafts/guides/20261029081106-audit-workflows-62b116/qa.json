@@ -1,5 +1,5 @@
 {
-  "pass": false,
+  "pass": true,
   "checks": [
     {
       "id": "schema-version",
@@ -831,19 +831,19 @@
     },
     {
       "id": "hero-image",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs a 1200×675 hero and alt text",
       "page": "internal-audit-software"
     },
     {
       "id": "image-provenance",
-      "pass": false,
+      "pass": true,
       "message": "Hero needs a safe path, source identity, hash and licensing reference",
       "page": "internal-audit-software"
     },
     {
       "id": "image-unique",
-      "pass": false,
+      "pass": true,
       "message": "Hero must be unique across all content pages",
       "page": "internal-audit-software"
     },
@@ -1018,6 +1018,12 @@
       "page": "mapping-workflows"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/evaluating-software/",
+      "page": "mapping-workflows"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf",
@@ -1037,25 +1043,25 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "mapping-workflows"
     },
     {
       "id": "hero-image",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs a 1200×675 hero and alt text",
       "page": "mapping-workflows"
     },
     {
       "id": "image-provenance",
-      "pass": false,
+      "pass": true,
       "message": "Hero needs a safe path, source identity, hash and licensing reference",
       "page": "mapping-workflows"
     },
     {
       "id": "image-unique",
-      "pass": false,
+      "pass": true,
       "message": "Hero must be unique across all content pages",
       "page": "mapping-workflows"
     },
@@ -1254,26 +1260,32 @@
       "page": "evaluating-software"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/mapping-workflows/",
+      "page": "evaluating-software"
+    },
+    {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "evaluating-software"
     },
     {
       "id": "hero-image",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs a 1200×675 hero and alt text",
       "page": "evaluating-software"
     },
     {
       "id": "image-provenance",
-      "pass": false,
+      "pass": true,
       "message": "Hero needs a safe path, source identity, hash and licensing reference",
       "page": "evaluating-software"
     },
     {
       "id": "image-unique",
-      "pass": false,
+      "pass": true,
       "message": "Hero must be unique across all content pages",
       "page": "evaluating-software"
     },
@@ -1442,6 +1454,12 @@
       "page": "audit-planning"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/evaluating-software/",
+      "page": "audit-planning"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf",
@@ -1473,25 +1491,25 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "audit-planning"
     },
     {
       "id": "hero-image",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs a 1200×675 hero and alt text",
       "page": "audit-planning"
     },
     {
       "id": "image-provenance",
-      "pass": false,
+      "pass": true,
       "message": "Hero needs a safe path, source identity, hash and licensing reference",
       "page": "audit-planning"
     },
     {
       "id": "image-unique",
-      "pass": false,
+      "pass": true,
       "message": "Hero must be unique across all content pages",
       "page": "audit-planning"
     },
@@ -1684,6 +1702,12 @@
       "page": "audit-evidence"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/evaluating-software/",
+      "page": "audit-evidence"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/audits-management-review/",
@@ -1709,25 +1733,25 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "audit-evidence"
     },
     {
       "id": "hero-image",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs a 1200×675 hero and alt text",
       "page": "audit-evidence"
     },
     {
       "id": "image-provenance",
-      "pass": false,
+      "pass": true,
       "message": "Hero needs a safe path, source identity, hash and licensing reference",
       "page": "audit-evidence"
     },
     {
       "id": "image-unique",
-      "pass": false,
+      "pass": true,
       "message": "Hero must be unique across all content pages",
       "page": "audit-evidence"
     },
@@ -1920,6 +1944,12 @@
       "page": "audit-findings"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/audit-follow-up/",
+      "page": "audit-findings"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf",
@@ -1933,25 +1963,25 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "audit-findings"
     },
     {
       "id": "hero-image",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs a 1200×675 hero and alt text",
       "page": "audit-findings"
     },
     {
       "id": "image-provenance",
-      "pass": false,
+      "pass": true,
       "message": "Hero needs a safe path, source identity, hash and licensing reference",
       "page": "audit-findings"
     },
     {
       "id": "image-unique",
-      "pass": false,
+      "pass": true,
       "message": "Hero must be unique across all content pages",
       "page": "audit-findings"
     },
@@ -2120,6 +2150,12 @@
       "page": "audit-follow-up"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/audit-planning/",
+      "page": "audit-follow-up"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/audits-management-review/",
@@ -2163,25 +2199,25 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "audit-follow-up"
     },
     {
       "id": "hero-image",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs a 1200×675 hero and alt text",
       "page": "audit-follow-up"
     },
     {
       "id": "image-provenance",
-      "pass": false,
+      "pass": true,
       "message": "Hero needs a safe path, source identity, hash and licensing reference",
       "page": "audit-follow-up"
     },
     {
       "id": "image-unique",
-      "pass": false,
+      "pass": true,
       "message": "Hero must be unique across all content pages",
       "page": "audit-follow-up"
     },
@@ -2356,6 +2392,12 @@
       "page": "migration-planning"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/training-rollout/",
+      "page": "migration-planning"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf",
@@ -2375,25 +2417,25 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "migration-planning"
     },
     {
       "id": "hero-image",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs a 1200×675 hero and alt text",
       "page": "migration-planning"
     },
     {
       "id": "image-provenance",
-      "pass": false,
+      "pass": true,
       "message": "Hero needs a safe path, source identity, hash and licensing reference",
       "page": "migration-planning"
     },
     {
       "id": "image-unique",
-      "pass": false,
+      "pass": true,
       "message": "Hero must be unique across all content pages",
       "page": "migration-planning"
     },
@@ -2562,6 +2604,12 @@
       "page": "training-rollout"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/migration-planning/",
+      "page": "training-rollout"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf",
@@ -2587,25 +2635,25 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "training-rollout"
     },
     {
       "id": "hero-image",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs a 1200×675 hero and alt text",
       "page": "training-rollout"
     },
     {
       "id": "image-provenance",
-      "pass": false,
+      "pass": true,
       "message": "Hero needs a safe path, source identity, hash and licensing reference",
       "page": "training-rollout"
     },
     {
       "id": "image-unique",
-      "pass": false,
+      "pass": true,
       "message": "Hero must be unique across all content pages",
       "page": "training-rollout"
     },
@@ -2886,19 +2934,19 @@
     },
     {
       "id": "hero-image",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs a 1200×675 hero and alt text",
       "page": "ongoing-operation"
     },
     {
       "id": "image-provenance",
-      "pass": false,
+      "pass": true,
       "message": "Hero needs a safe path, source identity, hash and licensing reference",
       "page": "ongoing-operation"
     },
     {
       "id": "image-unique",
-      "pass": false,
+      "pass": true,
       "message": "Hero must be unique across all content pages",
       "page": "ongoing-operation"
     },
@@ -2919,235 +2967,6 @@
       "message": "The closing paragraph must invite a software demonstration at /contact/"
     }
   ],
-  "failures": [
-    {
-      "id": "hero-image",
-      "pass": false,
-      "message": "Each page needs a 1200×675 hero and alt text",
-      "page": "internal-audit-software"
-    },
-    {
-      "id": "image-provenance",
-      "pass": false,
-      "message": "Hero needs a safe path, source identity, hash and licensing reference",
-      "page": "internal-audit-software"
-    },
-    {
-      "id": "image-unique",
-      "pass": false,
-      "message": "Hero must be unique across all content pages",
-      "page": "internal-audit-software"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "mapping-workflows"
-    },
-    {
-      "id": "hero-image",
-      "pass": false,
-      "message": "Each page needs a 1200×675 hero and alt text",
-      "page": "mapping-workflows"
-    },
-    {
-      "id": "image-provenance",
-      "pass": false,
-      "message": "Hero needs a safe path, source identity, hash and licensing reference",
-      "page": "mapping-workflows"
-    },
-    {
-      "id": "image-unique",
-      "pass": false,
-      "message": "Hero must be unique across all content pages",
-      "page": "mapping-workflows"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "evaluating-software"
-    },
-    {
-      "id": "hero-image",
-      "pass": false,
-      "message": "Each page needs a 1200×675 hero and alt text",
-      "page": "evaluating-software"
-    },
-    {
-      "id": "image-provenance",
-      "pass": false,
-      "message": "Hero needs a safe path, source identity, hash and licensing reference",
-      "page": "evaluating-software"
-    },
-    {
-      "id": "image-unique",
-      "pass": false,
-      "message": "Hero must be unique across all content pages",
-      "page": "evaluating-software"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "audit-planning"
-    },
-    {
-      "id": "hero-image",
-      "pass": false,
-      "message": "Each page needs a 1200×675 hero and alt text",
-      "page": "audit-planning"
-    },
-    {
-      "id": "image-provenance",
-      "pass": false,
-      "message": "Hero needs a safe path, source identity, hash and licensing reference",
-      "page": "audit-planning"
-    },
-    {
-      "id": "image-unique",
-      "pass": false,
-      "message": "Hero must be unique across all content pages",
-      "page": "audit-planning"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "audit-evidence"
-    },
-    {
-      "id": "hero-image",
-      "pass": false,
-      "message": "Each page needs a 1200×675 hero and alt text",
-      "page": "audit-evidence"
-    },
-    {
-      "id": "image-provenance",
-      "pass": false,
-      "message": "Hero needs a safe path, source identity, hash and licensing reference",
-      "page": "audit-evidence"
-    },
-    {
-      "id": "image-unique",
-      "pass": false,
-      "message": "Hero must be unique across all content pages",
-      "page": "audit-evidence"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "audit-findings"
-    },
-    {
-      "id": "hero-image",
-      "pass": false,
-      "message": "Each page needs a 1200×675 hero and alt text",
-      "page": "audit-findings"
-    },
-    {
-      "id": "image-provenance",
-      "pass": false,
-      "message": "Hero needs a safe path, source identity, hash and licensing reference",
-      "page": "audit-findings"
-    },
-    {
-      "id": "image-unique",
-      "pass": false,
-      "message": "Hero must be unique across all content pages",
-      "page": "audit-findings"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "audit-follow-up"
-    },
-    {
-      "id": "hero-image",
-      "pass": false,
-      "message": "Each page needs a 1200×675 hero and alt text",
-      "page": "audit-follow-up"
-    },
-    {
-      "id": "image-provenance",
-      "pass": false,
-      "message": "Hero needs a safe path, source identity, hash and licensing reference",
-      "page": "audit-follow-up"
-    },
-    {
-      "id": "image-unique",
-      "pass": false,
-      "message": "Hero must be unique across all content pages",
-      "page": "audit-follow-up"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "migration-planning"
-    },
-    {
-      "id": "hero-image",
-      "pass": false,
-      "message": "Each page needs a 1200×675 hero and alt text",
-      "page": "migration-planning"
-    },
-    {
-      "id": "image-provenance",
-      "pass": false,
-      "message": "Hero needs a safe path, source identity, hash and licensing reference",
-      "page": "migration-planning"
-    },
-    {
-      "id": "image-unique",
-      "pass": false,
-      "message": "Hero must be unique across all content pages",
-      "page": "migration-planning"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "training-rollout"
-    },
-    {
-      "id": "hero-image",
-      "pass": false,
-      "message": "Each page needs a 1200×675 hero and alt text",
-      "page": "training-rollout"
-    },
-    {
-      "id": "image-provenance",
-      "pass": false,
-      "message": "Hero needs a safe path, source identity, hash and licensing reference",
-      "page": "training-rollout"
-    },
-    {
-      "id": "image-unique",
-      "pass": false,
-      "message": "Hero must be unique across all content pages",
-      "page": "training-rollout"
-    },
-    {
-      "id": "hero-image",
-      "pass": false,
-      "message": "Each page needs a 1200×675 hero and alt text",
-      "page": "ongoing-operation"
-    },
-    {
-      "id": "image-provenance",
-      "pass": false,
-      "message": "Hero needs a safe path, source identity, hash and licensing reference",
-      "page": "ongoing-operation"
-    },
-    {
-      "id": "image-unique",
-      "pass": false,
-      "message": "Hero must be unique across all content pages",
-      "page": "ongoing-operation"
-    }
-  ],
+  "failures": [],
   "wordCount": 19998
 }

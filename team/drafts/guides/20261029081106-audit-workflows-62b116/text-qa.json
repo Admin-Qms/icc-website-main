@@ -1,5 +1,5 @@
 {
-  "pass": false,
+  "pass": true,
   "checks": [
     {
       "id": "schema-version",
@@ -1000,6 +1000,12 @@
       "page": "mapping-workflows"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/evaluating-software/",
+      "page": "mapping-workflows"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf",
@@ -1019,7 +1025,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "mapping-workflows"
     },
@@ -1218,8 +1224,14 @@
       "page": "evaluating-software"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/mapping-workflows/",
+      "page": "evaluating-software"
+    },
+    {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "evaluating-software"
     },
@@ -1388,6 +1400,12 @@
       "page": "audit-planning"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/evaluating-software/",
+      "page": "audit-planning"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf",
@@ -1419,7 +1437,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "audit-planning"
     },
@@ -1612,6 +1630,12 @@
       "page": "audit-evidence"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/evaluating-software/",
+      "page": "audit-evidence"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/audits-management-review/",
@@ -1637,7 +1661,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "audit-evidence"
     },
@@ -1830,6 +1854,12 @@
       "page": "audit-findings"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/audit-follow-up/",
+      "page": "audit-findings"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf",
@@ -1843,7 +1873,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "audit-findings"
     },
@@ -2012,6 +2042,12 @@
       "page": "audit-follow-up"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/audit-planning/",
+      "page": "audit-follow-up"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/audits-management-review/",
@@ -2055,7 +2091,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "audit-follow-up"
     },
@@ -2230,6 +2266,12 @@
       "page": "migration-planning"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/training-rollout/",
+      "page": "migration-planning"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf",
@@ -2249,7 +2291,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "migration-planning"
     },
@@ -2418,6 +2460,12 @@
       "page": "training-rollout"
     },
     {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /guides/internal-audit-software/migration-planning/",
+      "page": "training-rollout"
+    },
+    {
       "id": "external-link",
       "pass": true,
       "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf",
@@ -2443,7 +2491,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "training-rollout"
     },
@@ -2739,55 +2787,6 @@
       "message": "The closing paragraph must invite a software demonstration at /contact/"
     }
   ],
-  "failures": [
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "mapping-workflows"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "evaluating-software"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "audit-planning"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "audit-evidence"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "audit-findings"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "audit-follow-up"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "migration-planning"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "training-rollout"
-    }
-  ],
+  "failures": [],
   "wordCount": 19998
 }

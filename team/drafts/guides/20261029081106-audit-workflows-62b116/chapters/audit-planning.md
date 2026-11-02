@@ -19,6 +19,19 @@ sourceIds:
   - apg-internal-audit
   - apg-audit-planning
 capabilityIds: []
+wordCount: 2040
+readTime: 11
+image:
+  src: /images/guides/internal-audit-software/audit-planning.webp
+  alt: >-
+    a production operator completing a controlled checklist at an assembly
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 99d0b44f8d442a24a96264ec35b23a38dcf982a636ec4fb34523cc293573023d
+  sha256: 99d0b44f8d442a24a96264ec35b23a38dcf982a636ec4fb34523cc293573023d
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Defining audit scope
 

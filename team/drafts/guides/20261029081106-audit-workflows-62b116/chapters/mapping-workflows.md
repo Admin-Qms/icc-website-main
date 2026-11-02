@@ -21,6 +21,19 @@ sourceIds:
   - apg-audit-planning
   - icc-audits-module
 capabilityIds: []
+wordCount: 2160
+readTime: 11
+image:
+  src: /images/guides/internal-audit-software/mapping-workflows.webp
+  alt: >-
+    a fabrication inspector tracing a paper work instruction at a cutting
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: b9c5aca032877a522c11ab2e8083c65d07e32d27a9ca311966685f49c0cd06ee
+  sha256: b9c5aca032877a522c11ab2e8083c65d07e32d27a9ca311966685f49c0cd06ee
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Define the operational problem
 

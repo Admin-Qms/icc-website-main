@@ -20,6 +20,19 @@ sourceIds:
   - apg-internal-audit
   - apg-audit-planning
 capabilityIds: []
+wordCount: 2028
+readTime: 11
+image:
+  src: /images/guides/internal-audit-software/audit-findings.webp
+  alt: >-
+    a line operator scanning an approved instruction beside a guarded press;
+    authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 6a0178885ffaf746569b20655151e32f23b1b6de3107af4cea0b2523af232863
+  sha256: 6a0178885ffaf746569b20655151e32f23b1b6de3107af4cea0b2523af232863
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Distinguishing findings and observations
 

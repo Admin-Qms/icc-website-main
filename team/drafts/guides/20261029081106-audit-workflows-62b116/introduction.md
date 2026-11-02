@@ -19,6 +19,19 @@ sourceIds:
   - apg-audit-planning
   - icc-audits-module
 capabilityIds: []
+wordCount: 1501
+readTime: 8
+image:
+  src: /images/guides/internal-audit-software/internal-audit-software.webp
+  alt: >-
+    A manufacturing quality technician confirming a controlled work instruction
+    at a production cell; authentic industrial setting, no text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 39fea8bb8005f8f82a027ec47ad1d695f157e3c1b12b5aa76ebc55f6f2d91b88
+  sha256: 39fea8bb8005f8f82a027ec47ad1d695f157e3c1b12b5aa76ebc55f6f2d91b88
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## The operational problem
 

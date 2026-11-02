@@ -21,6 +21,19 @@ sourceIds:
   - apg-audit-planning
   - icc-audits-module
 capabilityIds: []
+wordCount: 2195
+readTime: 11
+image:
+  src: /images/guides/internal-audit-software/evaluating-software.webp
+  alt: >-
+    a machining supervisor comparing inspection records beside a CNC machine;
+    authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: f90b96234675a1f2ec709a767a358a49d696b77aa1b9a2156a6feb7edf40fba1
+  sha256: f90b96234675a1f2ec709a767a358a49d696b77aa1b9a2156a6feb7edf40fba1
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Build a workflow-based shortlist
 

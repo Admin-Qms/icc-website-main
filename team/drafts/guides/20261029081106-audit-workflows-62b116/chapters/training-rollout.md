@@ -19,6 +19,19 @@ sourceIds:
   - apg-internal-audit
   - apg-audit-planning
 capabilityIds: []
+wordCount: 2001
+readTime: 11
+image:
+  src: /images/guides/internal-audit-software/training-rollout.webp
+  alt: >-
+    a trainer showing an operator the approved setup instruction on a shop
+    floor; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 8f06858edc3cb6e4cdc9811d3205dae0dc208aacda6178c5b29a4cc87364859f
+  sha256: 8f06858edc3cb6e4cdc9811d3205dae0dc208aacda6178c5b29a4cc87364859f
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Set role-based learning tasks
 

@@ -21,6 +21,19 @@ sourceIds:
   - apg-audit-planning
   - icc-audits-module
 capabilityIds: []
+wordCount: 2015
+readTime: 11
+image:
+  src: /images/guides/internal-audit-software/audit-follow-up.webp
+  alt: >-
+    a quality technician isolating a rejected component at a marked inspection
+    bench; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 452eb66f85fd0a1b677ab602e79fa74bfa035f39a52241aaf0c1a1a7c8a1fbea
+  sha256: 452eb66f85fd0a1b677ab602e79fa74bfa035f39a52241aaf0c1a1a7c8a1fbea
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Setting follow-up criteria
 
