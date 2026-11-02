@@ -17,6 +17,10 @@
     {
       "term": "Audit criteria",
       "definition": "Requirements and internal procedures used as a reference for an audit."
+    },
+    {
+      "term": "Observation",
+      "definition": "What the auditor saw, read or was told, recorded with enough detail for someone else to check it."
     }
   ],
   "roles": [
@@ -87,7 +91,21 @@
     "Audit calendar",
     "Production calendar",
     "Priority list",
-    "Change entry"
+    "Change entry",
+    "Prior findings",
+    "Process map",
+    "Approved checklist",
+    "Observation records",
+    "Trial set of observations",
+    "Criteria list",
+    "Evidence-to-criterion links",
+    "Torque log",
+    "Work instruction",
+    "Customer requirement",
+    "Customer drawing",
+    "Access rules",
+    "Test log",
+    "Temporary-access decision"
   ],
   "example": {
     "label": "Illustrative example",
@@ -142,6 +160,24 @@
         "Change dates or sampling when an area is unavailable.",
         "Accept or reject requests to move, add or cancel audits.",
         "Decide on short-notice or outside-quality change requests."
+      ]
+    },
+    {
+      "slug": "audit-evidence",
+      "title": "Collecting and connecting audit evidence: Internal audit management software",
+      "summary": "The page covers the assigned evidence workflows with supported citations, actionable decisions and labeled hypothetical examples. It does not include an unassigned FAQ.",
+      "bodyHash": "74d578847cc04bdd36f0f2761a5bc1e8c7640efd5cb9c0174cc7df6882678459",
+      "decisions": [
+        "Whether to accept or return the checklist",
+        "Whether to write or revise a question when library items are unsuitable or a question is disputed",
+        "Whether the observation-recording method is acceptable",
+        "Whether to use paper capture when a connection or device is unavailable, and who enters it and when",
+        "Whether to accept or return each evidence-to-criterion link",
+        "Whether to add a criterion, collect more evidence or note a gap",
+        "Which user types may see or change each record type",
+        "Whether to accept or return the access configuration",
+        "Whether to grant, narrow or refuse temporary access",
+        "How to apply the previously taken evaluation decision when a product cannot enforce an access rule"
       ]
     }
   ],
