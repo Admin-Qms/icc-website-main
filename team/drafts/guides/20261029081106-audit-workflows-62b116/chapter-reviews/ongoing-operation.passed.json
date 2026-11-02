@@ -6,10 +6,9 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The earlier finding is resolved: the review accepts a recorded outcome when no follow-up is needed and requires follow-up evidence where it is needed. No clear problem was found in the changed paragraphs. The FAQ is assigned in the plan.",
+  "summary": "The changed paragraph raises no clear issue, and there are no earlier findings to resolve.",
   "glossary": [],
   "roles": [
-    "Workflow owner",
     "Quality manager",
     "Process owner",
     "Top management",
@@ -18,37 +17,31 @@
     "Auditor",
     "Owner",
     "Checker",
-    "Note taker",
-    "Decision-maker"
+    "Note taker"
   ],
   "recordNames": [
     "Audit plan",
     "Finding",
     "Action",
     "Follow-up evidence",
-    "Issue log",
     "Review report",
+    "Issue log",
     "Improvement list",
-    "User feedback",
     "Approved answers",
     "Problem statement",
     "Acceptance criteria",
     "Test script",
     "Representative records",
-    "Demonstration pack",
-    "Attendee list",
-    "Checklist",
-    "Observations",
-    "Evidence",
-    "Inventory",
-    "Retention rules",
-    "Customer drawing"
+    "Demonstration pack"
   ],
   "decisions": [
-    "Whether to accept or return the workflow review, and how to correct or record exceptions.",
-    "Which improvements to pursue and whether to proceed without an unsupported benefit figure.",
-    "Whether to accept or return an FAQ answer and how to resolve a conflict with procedure.",
-    "Whether the demonstration pack is ready and what substitute to use for a record that cannot be shared."
+    "Whether the workflow review is accepted or returned",
+    "What correction or time-limited exception applies to a review problem",
+    "Which improvements to pursue and whether a proposal is complete",
+    "Whether to proceed without an unsupported benefit figure",
+    "Whether an FAQ answer is ready or needs correction",
+    "Whether the demonstration pack is ready",
+    "What substitute record to use when a record cannot be shared"
   ],
   "pass": true,
   "deterministic": {
@@ -195,8 +188,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "25bf3cef20521901beb94273dc5783f09719e023f73f33faffe6d97a4670c28a",
-  "contentHash": "c050deb9f62f8973266af166d4e19b29529eac193148214b7bc9d2e1ebf9cfa0",
+  "inputHash": "6042cd3e1b2dbd9f3543e6a43f50173eb526c7e56b2b3d229e77f988b54719b1",
+  "contentHash": "0c82fc023c8d76746b3e6fffdbb768e904a74b953b654edc2996dc9a72d935b6",
   "paragraphHashes": [
     "2bc931bc3c3b35b7daa7d442f6f176389d11af5145d5a5aab237cf206fe58b5d",
     "01eba8ec26abd85d686d4248023e37ba41b69f65a9645e4a32d1c4540db3f124",
@@ -237,7 +230,7 @@
     "c77e1cc4ce951a9d7f60c993c19b411994f7aa957b57f10b8ace4dfe1e84e509",
     "53427b051c75ed0e9d64529de0b7d0fc5be87c251a19094b58d2568f49781c8c",
     "00f48486f5328451ebb5cf2d66883ddcf451c31bda245bf29650a8ecbed0585d",
-    "3d1a09059a04a9306fc4300bee240fea6c12ac473a1432998e17a53cda62828e",
+    "4938de8f924658e8627d7629c48304d904f9f13a713c70af051973a34df2bf4a",
     "bd3a3593cc22147298aa13e1113c82a7c8065dfaeb1240d028caac656ee3461b",
     "3eb67289de3a93886c3202d03e6afcdcc2969496be6b6fbcfc20c3afa71b3616",
     "7bf04ce7040e72976bef65ceda0288c26b3bb4a8829b063b72c1e0e0ea1ac15b",
@@ -253,7 +246,7 @@
     "c61f229ccc38e55471f7158b55a6b5ff6c5f37240694aef089be863982c3c391",
     "ec79eaf1124c74d25e06759f72537c12bbcf5f6b3c1b475d7391952df11ff584"
   ],
-  "outputContextHash": "f7321fd4c29d6b748e15e39c83263eb39cfa277224cc3db9c0a820a33ee3c377",
-  "reviewedAt": "2026-11-02T15:07:31.139Z",
+  "outputContextHash": "fbad6a5c577fa7042386273645b30407424f200418576e9522c69f5183af6a0d",
+  "reviewedAt": "2026-11-02T15:11:03.006Z",
   "reviewer": "Configured independent chapter reviewer"
 }

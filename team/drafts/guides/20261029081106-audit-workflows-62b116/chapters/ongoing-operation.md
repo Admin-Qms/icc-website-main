@@ -113,7 +113,7 @@ Define measures and a review period before each stage, and track task completion
 
 ### Does software guarantee ISO certification?
 
-Do not assume a software purchase guarantees certification. The guidance says the organization defines audit frequency, duration, and scope, and uses past results in planning, so responsibility stays with the organization, whatever holds the records.
+The evidence in this guide does not establish that software guarantees certification, so do not assume it. Confirm requirements with the certification body. Record the answer, the date, and the person who asked it.
 
 ### What should be prepared for a software demonstration?
 

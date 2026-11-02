@@ -65,14 +65,6 @@
     {
       "term": "Staged deployment",
       "definition": "A rollout that brings in groups of users or parts of the program in a planned order."
-    },
-    {
-      "term": "Audit program",
-      "definition": "The level of audit planning that covers the period as a whole."
-    },
-    {
-      "term": "Audit plan",
-      "definition": "The level of planning for a single audit."
     }
   ],
   "roles": [
@@ -112,9 +104,7 @@
     "Trainer",
     "Pilot user",
     "Owner",
-    "Note taker",
-    "Decision-maker",
-    "Production representative"
+    "Note taker"
   ],
   "recordNames": [
     "Audit program",
@@ -213,14 +203,7 @@
     "Improvement list",
     "Approved answers",
     "Representative records",
-    "Demonstration pack",
-    "Attendee list",
-    "Observations",
-    "Notes",
-    "List of owners",
-    "Requirements sheet",
-    "PDF report",
-    "Audit trends"
+    "Demonstration pack"
   ],
   "example": {
     "label": "Illustrative example",
@@ -358,31 +341,16 @@
     {
       "slug": "ongoing-operation",
       "title": "Maintaining the system and choosing next steps: Internal audit management software",
-      "summary": "The earlier finding is resolved: the review accepts a recorded outcome when no follow-up is needed and requires follow-up evidence where it is needed. No clear problem was found in the changed paragraphs. The FAQ is assigned in the plan.",
-      "bodyHash": "41e14661c80c6c155403d57fa6b4395b680d9558921e3e59d0fbad5c7fc71645",
+      "summary": "The changed paragraph raises no clear issue, and there are no earlier findings to resolve.",
+      "bodyHash": "2b08f451085208f0b4b06799f6cced0ef89c472758db7dc58ce49e97ec6f93f6",
       "decisions": [
-        "Whether to accept or return the workflow review, and how to correct or record exceptions.",
-        "Which improvements to pursue and whether to proceed without an unsupported benefit figure.",
-        "Whether to accept or return an FAQ answer and how to resolve a conflict with procedure.",
-        "Whether the demonstration pack is ready and what substitute to use for a record that cannot be shared."
-      ]
-    },
-    {
-      "slug": "internal-audit-software",
-      "title": "Internal audit management software for Canadian quality and operations teams",
-      "summary": "The introduction covers the assigned scope, gives an ordered guide overview, uses supported sources and labels its examples as hypothetical. No FAQ was assigned or included.",
-      "bodyHash": "a6fcbf1af56a731ad86ac29c55a8046d396d772ba9c72164de54d381aff8f34f",
-      "decisions": [
-        "Who schedules audits, who may close findings, and what evidence is acceptable.",
-        "Which problem and acceptance criteria will guide the software evaluation.",
-        "Which roles own workflow decisions and project stages.",
-        "Whether to proceed, repeat or stop at each project stage.",
-        "How to set audit frequency, duration and scope.",
-        "How to assign auditors and change the schedule when production or risk changes.",
-        "How to classify and confirm findings and handle disputes.",
-        "What follow-up is required and when a finding should be reopened.",
-        "How to migrate records, configure the system, train users and deploy it.",
-        "How to measure success and review improvements using the team's own records."
+        "Whether the workflow review is accepted or returned",
+        "What correction or time-limited exception applies to a review problem",
+        "Which improvements to pursue and whether a proposal is complete",
+        "Whether to proceed without an unsupported benefit figure",
+        "Whether an FAQ answer is ready or needs correction",
+        "Whether the demonstration pack is ready",
+        "What substitute record to use when a record cannot be shared"
       ]
     }
   ],
