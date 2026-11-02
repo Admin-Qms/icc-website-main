@@ -13,6 +13,10 @@
     {
       "term": "Acceptance criteria",
       "definition": "Statements the team can test when judging software."
+    },
+    {
+      "term": "Audit criteria",
+      "definition": "Requirements and internal procedures used as a reference for an audit."
     }
   ],
   "roles": [
@@ -38,7 +42,8 @@
     "Contractor",
     "Viewer",
     "Finance or purchasing contact",
-    "Audit-program planner"
+    "Audit-program planner",
+    "Planner"
   ],
   "recordNames": [
     "Audit program",
@@ -74,7 +79,15 @@
     "Audit schedule",
     "Corrective action",
     "Evidence",
-    "Checklist"
+    "Checklist",
+    "Scope entry",
+    "Process list",
+    "Auditor list",
+    "Assignment",
+    "Audit calendar",
+    "Production calendar",
+    "Priority list",
+    "Change entry"
   ],
   "example": {
     "label": "Illustrative example",
@@ -113,6 +126,22 @@
         "How to handle an incomplete quote",
         "Which product to recommend and whether the recommendation is provisional",
         "Whether top management approves the final choice"
+      ]
+    },
+    {
+      "slug": "audit-planning",
+      "title": "Planning the internal audit program: Internal audit management software",
+      "summary": "The earlier findings are resolved: each planning step records acceptance or rejection and its decision-maker, and the assignment and scheduling steps identify who revises returned work. No unassigned FAQ is present.",
+      "bodyHash": "18c9e340fd74b1772fdf05c5f29ce94d201d70ccf0f1b58c19d34a5db1d99a12",
+      "decisions": [
+        "Define and accept or return program and audit scopes.",
+        "Resolve disputed or unclear scope and escalate unresolved issues.",
+        "Assign auditors based on competence and impartiality, or return unsuitable assignments.",
+        "Choose an added control, delay or outside help when no impartial auditor is available.",
+        "Accept or return the calendar based on priorities, representative coverage and reduced-frequency justifications.",
+        "Change dates or sampling when an area is unavailable.",
+        "Accept or reject requests to move, add or cancel audits.",
+        "Decide on short-notice or outside-quality change requests."
       ]
     }
   ],

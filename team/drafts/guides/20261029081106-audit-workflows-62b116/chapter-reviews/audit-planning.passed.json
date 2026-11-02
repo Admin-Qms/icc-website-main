@@ -1,0 +1,190 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The earlier findings are resolved: each planning step records acceptance or rejection and its decision-maker, and the assignment and scheduling steps identify who revises returned work. No unassigned FAQ is present.",
+  "glossary": [
+    {
+      "term": "Audit criteria",
+      "definition": "Requirements and internal procedures used as a reference for an audit."
+    }
+  ],
+  "roles": [
+    "Workflow owner",
+    "Quality manager",
+    "Planner",
+    "Process owner",
+    "Auditor",
+    "Auditee",
+    "Top management",
+    "Second reviewer",
+    "Vendor"
+  ],
+  "recordNames": [
+    "Audit program",
+    "Audit plan",
+    "Scope entry",
+    "Process list",
+    "Audit report",
+    "Finding",
+    "Auditor list",
+    "Assignment",
+    "Audit calendar",
+    "Production calendar",
+    "Priority list",
+    "Change entry",
+    "Follow-up evidence"
+  ],
+  "decisions": [
+    "Define and accept or return program and audit scopes.",
+    "Resolve disputed or unclear scope and escalate unresolved issues.",
+    "Assign auditors based on competence and impartiality, or return unsuitable assignments.",
+    "Choose an added control, delay or outside help when no impartial auditor is available.",
+    "Accept or return the calendar based on priorities, representative coverage and reduced-frequency justifications.",
+    "Change dates or sampling when an area is unavailable.",
+    "Accept or reject requests to move, add or cancel audits.",
+    "Decide on short-notice or outside-quality change requests."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Defining audit scope",
+        "section": "Defining audit scope"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Defining audit scope; semantic review verifies support",
+        "section": "Defining audit scope"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Assigning suitable auditors",
+        "section": "Assigning suitable auditors"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Assigning suitable auditors; semantic review verifies support",
+        "section": "Assigning suitable auditors"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Scheduling representative activities",
+        "section": "Scheduling representative activities"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Scheduling representative activities; semantic review verifies support",
+        "section": "Scheduling representative activities"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Handling changed priorities",
+        "section": "Handling changed priorities"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Handling changed priorities; semantic review verifies support",
+        "section": "Handling changed priorities"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "0d014816c6afde016788c9e6eb83877aa37efe31a93c5ff2349a1733807235a4",
+  "contentHash": "3d9de79cfb62dcac871895c46fdd99aaac2c474269f40917f70de120e1e6d08c",
+  "paragraphHashes": [
+    "1d23ff70d4ef2d25cb2c20b99d1d6dc7f73f24175cf6112f0ef2367c6e2c8b18",
+    "00b6fbe9d09d785a570eb5752db7e71d489cf7074d072647540a48de6b515f00",
+    "7b1494ddba854cb70d3b5cd256cfbcd408f04365f414124e28aa1f3c1f6fceed",
+    "a23bfad0d2f1392edf7d369c97da1d1b65c8ccb8dcd299c2bdfce1c8c7fc35de",
+    "21ffd34fea90f45415ec72185a5b1c64c5dcbdffd6c7bc5b9fdedac1652e88fe",
+    "522edf516d3eacb3390690f65d6a2399e8f07ed7bf9fccb04c0ad8439d31976b",
+    "e7e42e85a809decd5c5e2dd2c49b7d1b665493ef0748df326379f2ac935c9c68",
+    "240ab1e3bb7e3c505a0f099b68d80fe1565b8467ec4d2add43240e0c08310617",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "fefaf68b3c2873274f2b902d83fd7f8efc1fc81d4d37d52dd7e2b7894393b079",
+    "1da2504a4aff4bc1344ed72605fb5d1c915aa51dd397f354919a1dc278955d22",
+    "5b2982590b341781224d2104d1e88a15c9f8adbea4a7820d1a6b2b22028a9148",
+    "6f8e658e3f1b1601ac7f3a3a8d2960443050fc1e20944fc910e8268fb56246e9",
+    "b03e3c1493c08833c00139f2a6d9a354d65aa1500bcdfb6e94b9c0471a439071",
+    "89dcdd7ea3b45ea1ac6bf5a4830eedc728157cbf5eb252b33a709d17d5fd930e",
+    "65e5f526bde1eaced86b859ed0d995b2e3a23c43186c97b0e78d914a91a4e5fc",
+    "146848e70ea0f4b2030d25f9ea1faf6a4d13afab12b5e7fbef22450aa9a74bd8",
+    "9130b2ae6023fc2a60ac3b8333e562ee5ad751fc854f607253e13f14c96f74b5",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "0d9f3ba76b257209b6e9d9bec8da038c217837d5aca40f0fd50cf0663bc9d72b",
+    "6578441b7b7263afda9ff732e4a75db56781143e65e4ba9b2348b30b2759cc50",
+    "8c864dce7f42ec8a4af2e3e3bce138843affc081608d3214a0ee221963715e69",
+    "f4f40adefa3da72f110fec4b029748dd39fd2cd361cdb75aaeede7d7da6b0ea8",
+    "abf18d696338f21175ebcae724973977695b546b36848cae1e14d7ddac323db9",
+    "9e582f2e333d4111e6f53b19d4a20f51d9e1f8bb55e244f75fba600e9358ac61",
+    "35e27c0ca77a14837e05c29fee2d1a2d98f210c26a4bfe2ed80a9f7e8e8eb57f",
+    "be3b0ee875d1886ae3d1af86a892dc90eef709a1923bd8a6956c2902637bff9e",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "32e33496260dfeb3652ccb444995192c5e690e135363cefe8d3bcb87a8bf0ef4",
+    "265f814d89fb332a006a08d8339c2e8ea6b2e3d54fd809bc60480f8a9171111b",
+    "75358428a12598a89dda72b6f91eb89d2513eeed259a6db21badc3157e9e41ab",
+    "210e946a7621940a65f01d98cca0d3da81abdafaf7ac7084e1eefb717412921f",
+    "406df6c88baa45063177c58c639e9a08f8450aede4169fb264e9330b43e2c7b5",
+    "1966aab4f99c99009636fe8e9e451341b8be72c644d5ca24c888e9c8b9f417e9",
+    "068d4e679eab514d4579b6915225ff00a9476f1941f86c62ae9f27e91ba93770",
+    "c749a58ce93ec0504f39310a71696d24e1b820d990700c64e8c46bfa1689beea",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "7ea4d4fb39f0ef9644f0bd12080373ec1554b0be7e377406c02171c3556b2949",
+    "c892e58872cd2724dd2b9709950fadecc0597e653672a593c26b6223a24a1566",
+    "06aa32423556a843ab195fe7ff79fa54ad9fd570a19d1c2f0b92e75edc03ce43"
+  ],
+  "outputContextHash": "5c7af1ccbb8bcfac316a55a049ecc10f1302bcbbd5426bddff75ab06ca06d988",
+  "reviewedAt": "2026-11-02T14:54:32.022Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
