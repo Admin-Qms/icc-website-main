@@ -244,7 +244,7 @@ Every piece of content must pass ALL 10 standards before publishing. No exceptio
 
 **If any standard fails, the article goes back to the responsible agent. Nothing is written to `content/blog/`.**
 
-These ten are enforced, with further checks (1,500-word minimum, keyword in title and meta description, internal links that resolve, external links only from `team/data/external-link-bank.json`, a claims audit for invented names and statistics), by `contentQA.validateLocal` before anything is written. Current standard editions come from `team/data/standards-facts.json` — keep that file accurate.
+These ten are enforced, with further checks (1,500-word minimum, keyword in title and meta description, internal links that resolve, external links only from `team/data/external-link-bank.json`, a claims audit for invented names and statistics; on a retry it blocks only on paragraphs edited since an earlier clean audit, and never on the pipeline-fixed title or meta description), by `contentQA.validateLocal` before anything is written. Current standard editions come from `team/data/standards-facts.json` — keep that file accurate.
 
 ### PROTOCOL 3: SITE QUALITY GATES — WEB DEVELOPMENT
 

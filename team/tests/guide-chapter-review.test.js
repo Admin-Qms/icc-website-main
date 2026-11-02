@@ -85,3 +85,44 @@ test('the reviewer judges links on the supplied sources, not live availability',
   assert.match(instructions, /internal site paths such as \/contact\/ are allowed/);
   assert.match(instructions, /never fail links over live availability/);
 });
+test('an unchanged chapter keeps its pass after an earlier chapter is re-reviewed, without another reviewer call', async t => {
+  let calls = 0;
+  const { service, job, writePage } = setupReview(t, { reviewer: async () => { calls++; return passedReview(); } });
+  const [first, second, third] = job.manifest.chapters.map(c => c.slug);
+  const filename = writePage(first); await service.reviewChapter(job.id, first);
+  writePage(second); await service.reviewChapter(job.id, second);
+  fs.appendFileSync(filename, ' Changed decision.');
+  assert.equal((await service.reviewChapter(job.id, first)).pass, true);
+  assert.throws(() => service.getGuideContext(job.id, third), /review/i);
+  const before = calls; const carried = await service.reviewChapter(job.id, second);
+  assert.equal(carried.pass, true); assert.equal(carried.carried, true); assert.equal(calls, before);
+  assert.doesNotThrow(() => service.getGuideContext(job.id, third));
+});
+test('a re-review sends the earlier findings and only the changed paragraphs', async t => {
+  const payloads = []; const prompts = [];
+  const finding = { section: 'Inputs', reason: 'Unsupported claim', action: 'Remove the unsupported claim' };
+  const { service, job, writePage } = setupReview(t, { reviewer: async (prompt, message) => { prompts.push(prompt); payloads.push(JSON.parse(message)); return payloads.length === 1 ? { ...passedReview(), claims: 'failed', findings: [finding] } : passedReview(); } });
+  const first = job.manifest.chapters[0].slug; const filename = writePage(first);
+  assert.equal((await service.reviewChapter(job.id, first)).pass, false);
+  assert.equal(payloads[0].previousReview, undefined);
+  fs.appendFileSync(filename, ' Revised closing sentence.');
+  assert.equal((await service.reviewChapter(job.id, first)).pass, true);
+  assert.deepEqual(payloads[1].previousReview.findings, [finding]);
+  assert.equal(payloads[1].previousReview.changedParagraphs.length, 1);
+  assert.match(payloads[1].previousReview.changedParagraphs[0], /Revised closing sentence\.$/);
+  assert.match(prompts[1], /do not raise new points about unchanged text/i);
+});
+test('a re-audit of the whole guide sends earlier findings and the changed pages', async t => {
+  const audits = [];
+  const { service, job, writePage } = setupReview(t, { auditor: async (prompt, message) => { audits.push({ prompt, payload: JSON.parse(message) }); return { claims: 'failed', consistency: 'passed', repetition: 'passed', unresolvedFindings: ['Unsupported claim in chapter one'] }; } });
+  const order = [...job.manifest.chapters.map(c => c.slug), job.manifest.slug]; let firstFile;
+  for (const slug of order) { const file = writePage(slug, slug === job.manifest.slug ? 1500 : 2000); firstFile ||= file; await service.reviewChapter(job.id, slug); }
+  await service.reviewGuide(job.id);
+  assert.equal(audits[0].payload.previousAudit, undefined);
+  assert.match(audits[0].prompt, /recap/i);
+  fs.appendFileSync(firstFile, ' Revised.');
+  for (const slug of order) assert.equal((await service.reviewChapter(job.id, slug)).pass, true);
+  await service.reviewGuide(job.id);
+  assert.deepEqual(audits[1].payload.previousAudit.unresolvedFindings, ['Unsupported claim in chapter one']);
+  assert.deepEqual(audits[1].payload.previousAudit.changedPages, [job.manifest.chapters[0].title || audits[1].payload.pages[1].title]);
+});

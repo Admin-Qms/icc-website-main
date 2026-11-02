@@ -823,12 +823,13 @@ const CLAIMS_AUDIT_PROMPT = `You are a compliance editor for a Canadian ISO cons
 RULES THE DRAFT MUST FOLLOW:
 1. NAMED ENTITIES — The draft must not name any company, client or individual person. Allowed names: ISO Certification Consultants itself, standards bodies and regulators (ISO, IATF, IAF, SCC, ANAB, Health Canada, CFIA, Ministry of Labour and similar), and well-known public organizations cited as sources.
 2. QUOTES — No quotations, testimonials or reported speech attributed to any person.
-3. STATISTICS AND GENERALIZATIONS — No statistic, percentage, survey result, dollar figure or measured outcome stated as fact, and no claim about what "most", "the majority of" or "nearly all" companies, plants, auditors or registrars do. Allowed: clause numbers; requirements written in the standard; ranges clearly framed as typical or estimated ("typically 4 to 6 months", "often costs between"); and hedged generalizations ("many plants", "a common approach").
-4. EXAMPLES — Any scenario about a business must be openly hypothetical: its paragraph starts with "Illustrative example:" and it names no company. A story told as something that really happened is a violation.
+3. STATISTICS AND GENERALIZATIONS — No statistic, percentage, survey result, dollar figure or measured outcome stated as fact, and no claim about what "most", "the majority of" or "nearly all" companies, plants, auditors or registrars do. Allowed: clause numbers; requirements written in the standard; ranges clearly framed as typical or estimated ("typically 4 to 6 months", "often costs between"); hedged generalizations ("many plants", "a common approach"); and the generic size, place or timing details the publisher asks for when describing an unnamed business ("a 60-person stamping plant in Windsor", "the review takes an afternoon").
+4. EXAMPLES — Any scenario about a business must be openly hypothetical: its paragraph starts with "Illustrative example:" and it names no company. A story told as something that really happened is a violation. A general description of how a practice works ("an operator explains the procedure while the auditor watches") is not a scenario.
 5. TRACK RECORD — No claims about ISO Certification Consultants' results (pass rates, number of audits or clients, years in business).
 6. STANDARD ACCURACY — ISO/IATF clause numbers and standard names must be correct for the standard cited (for example, ISO 9001:2015 clause 9.2 is internal audit; clause 6.1 is actions to address risks and opportunities). Flag a reference only when you are confident it is wrong.
 
 Flag only clear violations. When unsure, do not flag. Hedged estimates and general professional observations are fine.
+TITLE and META DESCRIPTION are fixed by the publisher and shown for context only: report text from DRAFT, copied exactly.
 
 Return ONLY JSON:
 {
@@ -838,21 +839,51 @@ Return ONLY JSON:
 }
 Return {"findings": []} when the draft is clean.`;
 
+// Paragraphs that already passed a claims audit unchanged, per slug, so a retry re-checks only edited text.
+const CLAIMS_CACHE_DIR = process.env.CLAIMS_AUDIT_CACHE_DIR || require('path').join(require('os').tmpdir(), 'icc-claims-audit');
+const claimText = (text) => String(text || '').replace(/^\s*(?:title|meta description|draft)\s*:\s*/i, '').replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+  .replace(/[*_`#>]/g, '').replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/\s+/g, ' ').trim().toLowerCase();
+const claimParagraphs = (body) => String(body || '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
+  .map((p) => ({ text: claimText(p), hash: require('crypto').createHash('sha256').update(p.replace(/\s+/g, ' ')).digest('hex') }));
+
 /**
  * One fast-model pass for what regex can't see: invented companies, people,
  * statistics and unlabelled examples, and wrong clause references.
+ * Findings on the fixed title or meta description, and on paragraphs that passed an
+ * earlier audit unchanged, are returned as advisory: the model reports different
+ * sentences on each pass, so blocking on them keeps a corrected draft from ever passing.
  */
-async function auditClaims(post) {
-  const { claudeJSONFast } = require('../shared/claude');
+async function auditClaims(post, { call, cacheDir = CLAIMS_CACHE_DIR } = {}) {
+  const fs = require('fs'); const path = require('path');
   const { loadStandardsFacts } = require('./contextLoader');
   const facts = loadStandardsFacts();
-  const result = await claudeJSONFast(
+  const result = await (call || require('../shared/claude').claudeJSONFast)(
     CLAIMS_AUDIT_PROMPT,
     `${facts ? `${facts}\n\nFor rule 6, treat this table as correct even where it differs from what you remember: a draft that calls a superseded edition "current" is a violation.\n\n` : ''}TITLE: ${post.title}\nMETA DESCRIPTION: ${post.description}\n\nDRAFT:\n${post.body}`,
     4096
   );
-  const findings = Array.isArray(result?.findings) ? result.findings.filter((f) => f && f.text) : [];
-  return { findings };
+  const raw = Array.isArray(result?.findings) ? result.findings.filter((f) => f && f.text) : [];
+  const paragraphs = claimParagraphs(post.body);
+  const head = [claimText(post.title), claimText(post.description)].filter(Boolean);
+  const cacheFile = post.slug ? path.join(cacheDir, `${post.slug}.json`) : null;
+  let cleared = new Set();
+  try { if (cacheFile) cleared = new Set(JSON.parse(fs.readFileSync(cacheFile, 'utf8')).cleared); } catch { /* first audit for this slug */ }
+
+  const findings = []; const advisory = []; const flagged = new Set();
+  for (const finding of raw) {
+    const needle = claimText(finding.text).split(/\.\.\.|…/).sort((a, b) => b.length - a.length)[0].trim();
+    const where = needle && (paragraphs.find((p) => p.text.includes(needle)) || paragraphs.find((p) => p.text.includes(needle.slice(0, 60))));
+    if (!where && needle && head.some((h) => h.includes(needle) || needle.includes(h))) advisory.push({ ...finding, note: 'fixed title or meta description' });
+    else if (where && cleared.has(where.hash)) advisory.push({ ...finding, note: 'paragraph passed an earlier audit unchanged' });
+    else { findings.push(finding); if (where) flagged.add(where.hash); }
+  }
+  if (cacheFile) {
+    try {
+      fs.mkdirSync(cacheDir, { recursive: true });
+      fs.writeFileSync(cacheFile, JSON.stringify({ cleared: [...new Set([...cleared, ...paragraphs.filter((p) => !flagged.has(p.hash)).map((p) => p.hash)])] }));
+    } catch { /* the cache only narrows retries; an audit without it still runs in full */ }
+  }
+  return { findings, advisory };
 }
 
 function countBannedPhrases(body) {
@@ -907,7 +938,8 @@ async function validateLocal(post, opts = {}) {
     add('claims-audit', { standard: 2, name: 'Claims audit', pass: true, skipped: true, message: 'Skipped — no model key configured, so invented names and statistics were not checked' });
   } else {
     try {
-      ({ findings } = await auditClaims(post));
+      let advisory;
+      ({ findings, advisory } = await auditClaims(post, { call: opts.claimsModel }));
       add('claims-audit', {
         standard: 2,
         name: 'Claims audit',
@@ -916,6 +948,7 @@ async function validateLocal(post, opts = {}) {
         message: findings.length === 0
           ? 'No invented names, quotes, statistics or unlabelled examples found'
           : `${findings.length} finding(s): ${findings.slice(0, 3).map((f) => `[${f.rule}] "${String(f.text).slice(0, 70)}"`).join('; ')}`,
+        advisory,
       });
     } catch (err) {
       add('claims-audit', { standard: 2, name: 'Claims audit', pass: false, message: `Claims audit could not run: ${err.message}` });

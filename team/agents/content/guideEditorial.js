@@ -61,7 +61,14 @@ function initialGuideContext(topic, outline, research) {
     example: outline.example || { label: 'Illustrative example', description: `An unnamed Canadian manufacturer evaluates ${topic.topic.toLowerCase()} for one production workflow. All records and decisions are hypothetical; no customer results or product promises.` },
     reviewedChapters: [], researchHash: hashValue(research) };
 }
-function chapterInputHash(page, plan, research, context) { return hashValue({ body: page.body, metadata: { slug: page.slug, title: page.title, description: page.description, sourceIds: page.sourceIds, capabilityIds: page.capabilityIds }, plan, research, context }); }
+const pageMetadata = page => ({ slug: page.slug, title: page.title, description: page.description, sourceIds: page.sourceIds, capabilityIds: page.capabilityIds });
+function chapterInputHash(page, plan, research, context) { return hashValue({ body: page.body, metadata: pageMetadata(page), plan, research, context }); }
+// The page's own inputs without the shared context, so a pass can survive edits to earlier chapters.
+function pageContentHash(page, plan, research) { return hashValue({ body: page.body, metadata: pageMetadata(page), plan, research }); }
+// Paragraph fingerprints let a re-review see which text changed since the last review.
+const paragraphs = body => String(body).split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+const paragraphHashes = body => paragraphs(body).map(p => hashValue(p.replace(/\s+/g, ' ')));
+function changedParagraphs(body, previousHashes) { const seen = new Set(previousHashes); return paragraphs(body).filter(p => !seen.has(hashValue(p.replace(/\s+/g, ' ')))); }
 // Reviewer glossary entries that are usable: a non-empty term and definition.
 function usableGlossary(review) {
   return (Array.isArray(review?.glossary) ? review.glossary : []).filter(e => e && typeof e.term === 'string' && e.term.trim() && typeof e.definition === 'string' && e.definition.trim());
@@ -83,4 +90,4 @@ function updateGuideContext(context, page, review) {
   return { ...context, glossary: [...glossary.values()], roles: [...new Set([...context.roles, ...(review.roles || [])])], recordNames: [...new Set([...context.recordNames, ...(review.recordNames || [])])],
     reviewedChapters: [...context.reviewedChapters.filter(c => c.slug !== page.slug), { slug: page.slug, title: page.title, summary: review.summary, bodyHash: hashValue(page.body), decisions: review.decisions || [] }] };
 }
-module.exports = { pageWordBudget, preserveCopyEdit, checkPageContent, initialGuideContext, chapterInputHash, updateGuideContext, glossaryVariants, normalize, links };
+module.exports = { pageWordBudget, preserveCopyEdit, checkPageContent, initialGuideContext, chapterInputHash, pageContentHash, paragraphHashes, changedParagraphs, updateGuideContext, glossaryVariants, normalize, links };
