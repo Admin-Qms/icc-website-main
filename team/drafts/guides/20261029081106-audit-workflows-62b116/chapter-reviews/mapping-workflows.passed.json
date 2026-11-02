@@ -1,0 +1,204 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The page follows the assigned workflow, distinguishes sourced claims from advice and hypothetical examples, and stays within the chapter boundary. No FAQ is assigned or included.",
+  "glossary": [
+    {
+      "term": "Handoff",
+      "definition": "A point where a record moves from one person or system to another."
+    },
+    {
+      "term": "Acceptance criteria",
+      "definition": "Statements the team can test when judging software."
+    }
+  ],
+  "roles": [
+    "Workflow owner",
+    "Quality manager",
+    "Auditor",
+    "Lead auditor",
+    "Process owner",
+    "Auditee",
+    "Management",
+    "Top management",
+    "Second reviewer",
+    "Production manager"
+  ],
+  "recordNames": [
+    "Audit schedule",
+    "Audit plan",
+    "Audit report",
+    "Finding",
+    "Corrective action log",
+    "Follow-up evidence",
+    "Problem statement",
+    "Record map",
+    "Audit checklist",
+    "Audit notes",
+    "Nonconforming product report",
+    "Organization chart",
+    "Internal audit procedure",
+    "Responsibility table",
+    "Acceptance criteria list",
+    "Evaluation file"
+  ],
+  "decisions": [
+    "Which workflow break to solve first and whether to accept the problem statement.",
+    "How to handle missing records or disagreements about the authoritative record.",
+    "Which records are authoritative, copies, or working notes, and whether to accept the record map.",
+    "How to handle records without a clear owner or stored in a personal location.",
+    "Which roles own handoffs and decisions, including primary and backup owners.",
+    "How to handle unfilled roles, conflicts of interest, or unreachable owners.",
+    "Which acceptance criteria are must-haves, should-haves, or could-haves and what counts as a pass.",
+    "How to handle criteria that cannot be tested or conflict with each other."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Define the operational problem",
+        "section": "Define the operational problem"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Define the operational problem; semantic review verifies support",
+        "section": "Define the operational problem"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Identify records and handoffs",
+        "section": "Identify records and handoffs"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Identify records and handoffs; semantic review verifies support",
+        "section": "Identify records and handoffs"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Assign owners and decisions",
+        "section": "Assign owners and decisions"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Assign owners and decisions; semantic review verifies support",
+        "section": "Assign owners and decisions"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Set acceptance criteria",
+        "section": "Set acceptance criteria"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Set acceptance criteria; semantic review verifies support",
+        "section": "Set acceptance criteria"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "ae43afc5c7ee2c2617b64b653bf7881c2b6a7d0a9ebffcb8a9f0396c8ceab4e1",
+  "contentHash": "88d42a2a0a6a99f517fe3f146430749605b86d0f996653734c48bd04febe4609",
+  "paragraphHashes": [
+    "1a659dbeeb43975fd4f580b2d2ae51608842c4830da540c2a9e373642a11cddf",
+    "2af3f459b605490f6f6215c6de820d87b971e45eb4128de4d6185294b28b2685",
+    "04ce4366e05dc9e1d61a6228becea549af2ed3527685fc8db95be5c4a8b34c0a",
+    "4883ff1a6a36b654f98e62a1ac02c6755a7fcd84d84d3c727881d29aceed42a0",
+    "62e83484792a304884fd926ce6678d5e4c0c68161bc319f299eb5ed50bff5c92",
+    "7d2c071ab68c49b7225fdba088e30224a5e73cb0fdf4e3c006644b5b8392167c",
+    "f56a1d86e1bc66648f03140aabeb72d408acfc9c71e5728da7654dd658603884",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "96edb91dac06e4da3b65083ec0cfa3c084788e5e9976002ddecd1bb1fdc1904a",
+    "4b3674d5d808bd7888596a81b0b50f7c7d17ad2905673b039174f30d60353d05",
+    "7adb01d0df87b5f749ba547433830ad20526fd2fe9ba6fd0a7a5573d00f898e3",
+    "ec6c208bb5625b35d5751ef15aef6fbf4489bd7a33dfab66414c36a02c5da634",
+    "344a2f4f5a7646054b7245f1b6cff5733106ecc53433ccf925daec8af15ae2b3",
+    "c760294a67cd147f65e0c0665830e8a90554a3b4afb6b28bf0bf7d9e2db63a41",
+    "eb567b9155e1d241b596d8b67b9ab9daa9305ef23e095ac1085849bc450d50de",
+    "5c666b0e52aa6a528a37907baefc152f0b36f41eaf04f7dbc24fe9c6c33dd945",
+    "7d262606b740a517a09f05c34808db8b20070b1ce181fb31afcf46a8425784a2",
+    "15185b75ca6f18e19f2e1f9cac930c03fab4bb502cdf2c398d29ebd72d1dc82d",
+    "b8a9eb90a00aaf560384167253a4e8d70cf0db958ab85a804d3a32813daead68",
+    "fd11689a5783d9285ac465434ea7325dcbe0f04912d556dd47f42c1644174851",
+    "1f47bd6a47211af4176aa815489118394881841c1faf598b4a9bb3b7fadf153e",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "0b66e23a1870bd380cd654892be6ccc6fbbde51980eb632628173512d8882977",
+    "7663e52cfd646aa0bb176dbde606f70729ced963ade803e509ae4a77706f2c69",
+    "eabfb64c4a168bc929c787d60949718f4a080fdfe087ecdf254eb135c8d4198c",
+    "99c0f50d392afd169b7433a4bdb011777e9e155623214092743e6075f21a0214",
+    "e4c45814a2858f79468e3d7e7c030ce943d39bda0cacc8f9accd69dde30856f9",
+    "ab8805bd72c8ac5fb097613f8da5b1ac8e1ce96b600467265d5a3ffb70e423c4",
+    "0e93a20a01a7103cea574823eefd52887e8737879d1399d16ac7d6e3bb777b62",
+    "7b4956bce8200682eb003f34ebb4629e9cfc4d340257e8353fe59f7684712dca",
+    "b615839b75a568227c9d2b8381efcf6f22416057e11eea2bc7f88acc3274331f",
+    "129fa5435d4788a6abdfddd58e4346f68a874a5df81f83e8760cf934cf7062bf",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "8c4e742a63ccdcde3812dabfdaa7a49181e82cd132bc25378fbfe95cf7a3b6a9",
+    "d4292290c7754e92a5bce82c85118124d5ec96ed5adf17517029e1d16b5ada96",
+    "c00a4fb82ffabf35be9a4a2421cedda8da128f8911466a218b5310acd56b2ff1",
+    "b47069b15a6673f9c7470d44e51980f8e9106f15742ad2dd96f89e38c895d759",
+    "60104df846a8c0a6a7c6aeb567b97f414c440b1d15fe2cbdf6ad85d551dd72cc",
+    "310f5945a05d41f5815813201f4a325d391a05e021774afdfadaa8ffb7667430",
+    "fee52236692b3ab9c3b99210197bf64cbefd32944ffca5a5a75ef866a33ab4cf",
+    "8f82e45e8155bbf530ad85da34e2127977b3e5eb92e5559636e07a1bbd3cdbc1",
+    "732361dac4f9a9cbefae53dc209cde26854f8370c45852cdb0cb8054090640ae",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "32c870dabcc67c573ae25964b09550d98e8c0c769da146d7e242ce2a421ec6e8",
+    "831ec5aa8314aab31f6688e058d87b2e98a6f30067f7eba48919dc2760a75ec0",
+    "95b9ab8076221ff3f4724e179a1746075e4d3ac61613d1ad5a05cc599b0ee5c0"
+  ],
+  "outputContextHash": "06031f3fb1ecca0ad547677d2b9a885d20462476db06a8f088d6e6d307aa2f08",
+  "reviewedAt": "2026-11-02T15:14:08.033Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

@@ -40,7 +40,7 @@ Questions worth settling in the criteria include the following:
 - When is the effectiveness check due?
 - What happens if the owner misses the date?
 
-Due dates should allow for production cycles, which the planning guidance says can affect audit timing. A date set without regard to the plant calendar may be missed.
+Due dates should allow for production cycles, which the [planning guidance](/guides/internal-audit-software/audit-planning/) says can affect audit timing. A date set without regard to the plant calendar may be missed.
 
 Ask the vendor how criteria are held. Can they be defined by category? Can they differ by finding category and still appear on each finding? Can a due date follow from the criterion? Can the team change a criterion for future findings without altering the criterion on findings already open?
 

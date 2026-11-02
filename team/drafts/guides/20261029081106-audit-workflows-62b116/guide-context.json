@@ -15,36 +15,24 @@
       "definition": "Statements the team can test when judging software."
     },
     {
-      "term": "Audit criteria",
-      "definition": "Requirements and internal procedures used as a reference for an audit."
+      "term": "Observation",
+      "definition": "What an auditor saw, read or was told, recorded in enough detail for someone else to check."
     },
     {
-      "term": "Observation",
-      "definition": "What the auditor saw, read or was told, recorded with enough detail for someone else to check it."
+      "term": "Criterion",
+      "definition": "A requirement, procedure or stated expectation against which evidence is measured."
     },
     {
       "term": "Finding",
       "definition": "A judgment drawn from observations and measured against criteria."
     },
     {
-      "term": "Follow-up criterion",
-      "definition": "A statement of what evidence must exist, who checks it and by when."
+      "term": "Follow-up criteria",
+      "definition": "Statements of the evidence, checker and timing required for a finding's follow-up."
     },
     {
-      "term": "Move and use",
-      "definition": "A record class for material needed in planning or follow-up."
-    },
-    {
-      "term": "Move and archive",
-      "definition": "A record class for material worth keeping and searchable, but not used in daily work."
-    },
-    {
-      "term": "Leave and reference",
-      "definition": "A record class for material kept in its existing location with a pointer from the new system."
-    },
-    {
-      "term": "Retire",
-      "definition": "A record class for material no longer needed, subject to retention rules."
+      "term": "Pilot",
+      "definition": "An import using a limited, representative set of records to reveal problems before a wider import."
     },
     {
       "term": "Cutover",
@@ -52,19 +40,15 @@
     },
     {
       "term": "Recovery",
-      "definition": "Deciding in advance what would trigger a rollback and how it would work."
-    },
-    {
-      "term": "Learning task",
-      "definition": "A role-specific exercise using sample records whose result is shown to someone who can judge it."
+      "definition": "Planning what would trigger a rollback and how it would work."
     },
     {
       "term": "User pilot",
-      "definition": "A test of whether real users can do real work in the system with their records and constraints."
+      "definition": "A test of whether representative users can perform work in the system with the relevant records and constraints."
     },
     {
       "term": "Staged deployment",
-      "definition": "A rollout that brings in groups of users or parts of the program in a planned order."
+      "definition": "Introducing groups of users or parts of the audit program in a planned order."
     },
     {
       "term": "Audit program",
@@ -86,27 +70,26 @@
     "Auditee",
     "Management",
     "Top management",
-    "Production manager",
     "Second reviewer",
-    "Action owner",
-    "Vendor",
+    "Production manager",
     "Reviewer",
+    "Action owner",
     "Verifier",
-    "Observer",
+    "Planner",
     "IT contact",
     "System administrator",
-    "Contractor",
-    "Viewer",
     "Finance or purchasing contact",
+    "Observer",
     "Audit-program planner",
-    "Planner",
+    "Delegate",
+    "Vendor",
+    "Contractor",
     "Independent reviewer",
     "Response owner",
     "Backup owner",
+    "Approver",
     "Machining supervisor",
     "Checker",
-    "Reviewer from another department",
-    "Uninvolved decision-maker",
     "Data steward",
     "Independent checker",
     "Trainer",
@@ -116,17 +99,17 @@
     "Production representative"
   ],
   "recordNames": [
-    "Audit program",
-    "Annual audit schedule",
+    "Audit schedule",
     "Audit plan",
     "Audit report",
     "Finding",
     "Corrective action log",
     "Follow-up evidence",
     "Problem statement",
-    "Checklist and notes",
-    "Nonconforming product report",
     "Record map",
+    "Audit checklist",
+    "Audit notes",
+    "Nonconforming product report",
     "Organization chart",
     "Internal audit procedure",
     "Responsibility table",
@@ -135,77 +118,59 @@
     "Acceptance criteria",
     "Vendor questionnaire responses",
     "Screening sheet",
-    "Cost list",
     "Test script",
-    "Sample records",
-    "Test results",
-    "Separation rules",
     "Permissions test log",
-    "Written quotes",
-    "Contract terms",
-    "Support descriptions",
+    "Written quote",
     "Comparison sheet",
     "Written recommendation",
-    "Audit schedule",
-    "Corrective action",
-    "Evidence",
-    "Checklist",
     "Scope entry",
     "Process list",
     "Auditor list",
     "Assignment",
-    "Audit calendar",
+    "Calendar",
     "Production calendar",
+    "Shift pattern",
     "Priority list",
     "Change entry",
     "Prior findings",
     "Process map",
-    "Approved checklist",
-    "Observation records",
-    "Trial set of observations",
+    "Observation",
     "Criteria list",
-    "Evidence-to-criterion links",
+    "Evidence-to-criterion link",
     "Torque log",
-    "Work instruction",
-    "Customer requirement",
     "Customer drawing",
     "Access rules",
     "Test log",
     "Temporary-access decision",
-    "Observation",
-    "Category definitions",
+    "Evidence",
     "Confirmation entry",
     "Dispute entry",
     "Approved follow-up criteria",
     "Action evidence",
     "Evidence submission",
     "Checker's decision",
-    "Owner's response",
     "Effectiveness check",
-    "Reopening decision",
-    "Finding history",
-    "Program report",
+    "Reopening request",
+    "Reopening delegation",
+    "Audit program report",
+    "Revised work instruction",
+    "Calibration record",
     "Inventory",
-    "Retention rules",
+    "Audit program",
     "Lookup table",
     "Mapping table",
     "Pilot set",
-    "Import rules",
     "Verification checklist",
     "Verification log",
-    "Access list",
     "Cutover plan",
     "Late-change log",
-    "Rollback entry",
-    "Task list",
+    "Task list per role",
     "Learning record",
     "Issue log",
     "Pilot report",
     "Stage plan",
     "Known-issues list",
     "Workload log",
-    "User feedback",
-    "Stage records",
     "Evaluation report",
     "Action",
     "Review report",
@@ -213,9 +178,13 @@
     "Approved answers",
     "Representative records",
     "Demonstration pack",
+    "Audit calendar",
+    "Checklist",
     "Notes",
     "List of owners",
     "Requirements sheet",
+    "Category definitions",
+    "Sample records",
     "PDF report",
     "Audit trends"
   ],
@@ -227,129 +196,106 @@
     {
       "slug": "mapping-workflows",
       "title": "Mapping the current workflow: Internal audit management software",
-      "summary": "The page covers the assigned workflow decisions, uses supported citations and clearly labels its hypothetical examples. No FAQ subsection was assigned or included.",
-      "bodyHash": "7100bb386c7185a342f819703ec087f4a1d370ceda470656c80fcf7770239616",
+      "summary": "The page follows the assigned workflow, distinguishes sourced claims from advice and hypothetical examples, and stays within the chapter boundary. No FAQ is assigned or included.",
+      "bodyHash": "e5229036d74a2f555226c18c068bf438a75f89b85759aa90067a140e998257fc",
       "decisions": [
-        "Which workflow break to solve first and whether to accept the problem statement",
-        "How to handle missing or disputed records",
-        "Which records are authoritative, copies or working notes",
-        "How to resolve records without clear owners or in personal storage",
-        "Which roles own handoffs and decisions, including backups",
-        "How to handle unfilled roles, conflicts of interest and unreachable owners",
-        "Who confirms auditor competence and objectivity and reviews results",
-        "Which acceptance criteria are must-haves, should-haves or could-haves and what counts as a pass",
-        "How to resolve untestable or conflicting criteria"
+        "Which workflow break to solve first and whether to accept the problem statement.",
+        "How to handle missing records or disagreements about the authoritative record.",
+        "Which records are authoritative, copies, or working notes, and whether to accept the record map.",
+        "How to handle records without a clear owner or stored in a personal location.",
+        "Which roles own handoffs and decisions, including primary and backup owners.",
+        "How to handle unfilled roles, conflicts of interest, or unreachable owners.",
+        "Which acceptance criteria are must-haves, should-haves, or could-haves and what counts as a pass.",
+        "How to handle criteria that cannot be tested or conflict with each other."
       ]
     },
     {
       "slug": "evaluating-software",
       "title": "Evaluating software capabilities: Internal audit management software",
-      "summary": "The page covers the assigned evaluation steps with supported citations, actionable workflow decisions and labeled hypothetical examples. It does not include an unassigned FAQ.",
-      "bodyHash": "b033a546b7eb6cdb2eaa195604ced60483ee3a723a26026d2ebd0b51f906a669",
+      "summary": "The changed paragraph presents a provisional recommendation and final approval without introducing a clear problem. No earlier findings remain unresolved.",
+      "bodyHash": "6162e02910a60b5552ad952644af2daa69869960d31d0dc2c08a40fe50861144",
       "decisions": [
-        "Which candidates proceed to demonstration or are removed from the shortlist",
-        "Whether to request a trial or drop a promising candidate with an undemonstrated must-have",
-        "Whether each test scenario passed, failed or was not shown",
-        "How to handle a scenario that cannot be run live",
-        "Whether evidence and permissions meet the team's criteria and separation rules",
-        "Whether to reject a product, change a rule or accept a procedural control when a permission rule cannot be enforced",
-        "How to handle an incomplete quote",
-        "Which product to recommend and whether the recommendation is provisional",
-        "Whether top management approves the final choice"
+        "Which candidates proceed to demonstration and whether to request a trial for a missing must-have demonstration.",
+        "Whether each test scenario passed, failed, or was not shown, and how to handle a scenario that cannot be run live.",
+        "Whether permissions enforce the team's separation rules and how to handle an unenforceable rule.",
+        "Which product to recommend, how to address missing cost or support information, and whether to approve the recommendation."
       ]
     },
     {
       "slug": "audit-planning",
       "title": "Planning the internal audit program: Internal audit management software",
-      "summary": "The earlier findings are resolved: each planning step records acceptance or rejection and its decision-maker, and the assignment and scheduling steps identify who revises returned work. No unassigned FAQ is present.",
-      "bodyHash": "18c9e340fd74b1772fdf05c5f29ce94d201d70ccf0f1b58c19d34a5db1d99a12",
+      "summary": "The changed paragraphs present no clear problems, and there are no earlier findings to resolve. No FAQ is assigned or included.",
+      "bodyHash": "21524d528312d47f70f7776b2c826e61a334b20e8a5d723e78c2bd4b0d652697",
       "decisions": [
-        "Define and accept or return program and audit scopes.",
-        "Resolve disputed or unclear scope and escalate unresolved issues.",
-        "Assign auditors based on competence and impartiality, or return unsuitable assignments.",
-        "Choose an added control, delay or outside help when no impartial auditor is available.",
-        "Accept or return the calendar based on priorities, representative coverage and reduced-frequency justifications.",
-        "Change dates or sampling when an area is unavailable.",
-        "Accept or reject requests to move, add or cancel audits.",
-        "Decide on short-notice or outside-quality change requests."
+        "Accept or return the program and individual audit scopes; resolve or escalate scope disputes.",
+        "Accept or reject auditor assignments and decide how to handle an unavailable impartial auditor.",
+        "Accept or return the calendar and decide how to respond when an area is unavailable.",
+        "Accept or reject changes to move, add or cancel audits, including short-notice requests."
       ]
     },
     {
       "slug": "audit-evidence",
       "title": "Collecting and connecting audit evidence: Internal audit management software",
-      "summary": "The page covers the assigned evidence workflows with supported citations, actionable decisions and labeled hypothetical examples. It does not include an unassigned FAQ.",
-      "bodyHash": "74d578847cc04bdd36f0f2761a5bc1e8c7640efd5cb9c0174cc7df6882678459",
+      "summary": "The changed paragraph presents a practical offline test and fallback without introducing a clear problem. No previous findings remain unresolved.",
+      "bodyHash": "def7d72fd655b2c7990d799751c52d870e88c4d380bbbc401f604b15125284f9",
       "decisions": [
-        "Whether to accept or return the checklist",
-        "Whether to write or revise a question when library items are unsuitable or a question is disputed",
-        "Whether the observation-recording method is acceptable",
-        "Whether to use paper capture when a connection or device is unavailable, and who enters it and when",
-        "Whether to accept or return each evidence-to-criterion link",
-        "Whether to add a criterion, collect more evidence or note a gap",
-        "Which user types may see or change each record type",
-        "Whether to accept or return the access configuration",
-        "Whether to grant, narrow or refuse temporary access",
-        "How to apply the previously taken evaluation decision when a product cannot enforce an access rule"
+        "Accept or return the checklist and decide how to handle unsuitable or disputed questions.",
+        "Accept or reject the observation recording method and decide how to handle unavailable connectivity or devices.",
+        "Accept or return evidence-to-criterion links and decide how to address evidence without a criterion or a criterion without evidence.",
+        "Approve access rules and accept or return their configuration after testing.",
+        "Grant, narrow or refuse temporary access and record the disposition of an unenforceable rule."
       ]
     },
     {
       "slug": "audit-findings",
       "title": "Recording and reviewing findings: Internal audit management software",
-      "summary": "The page covers all four assigned workflows with supported citations, actionable evaluation questions and labeled hypothetical examples. No FAQ was assigned or included.",
-      "bodyHash": "8eb8bf6ab2ec7253030b1cf07d520f0ff9fd7f7dd23188a031408e451efa0f3f",
+      "summary": "The changed paragraph presents no clear problem, and there are no earlier findings to resolve. No FAQ is assigned or included.",
+      "bodyHash": "198112d53405e2c7ddcf7cde2feaf67b4872389b36eb752114be2bb6420a4aeb",
       "decisions": [
         "Whether an observation becomes a finding and which category applies.",
-        "Whether to request more evidence or escalate an observation that does not fit a category.",
-        "Whether evidence is relevant, sufficient and retrievable, or the finding should be returned.",
-        "Whether to collect more evidence, hold or withdraw a finding when evidence is inaccessible or disputed.",
-        "Who owns the response and by when, and whether to reassign or escalate ownership.",
+        "Whether evidence supports a finding or the finding should be returned, held or withdrawn.",
+        "Who owns the response and when it is due.",
         "Whether a disputed finding stands, is revised, is withdrawn or is held for more evidence.",
-        "Whether a dispute decision has a recorded basis or should be returned for more detail.",
-        "Who reviews and accepts a dispute decision when the quality manager is involved."
+        "Who independently reviews and accepts a dispute decision when the quality manager is involved."
       ]
     },
     {
       "slug": "audit-follow-up",
       "title": "Following findings through closure: Internal audit management software",
-      "summary": "The earlier finding is resolved. The changed table presents a workable criteria decision and exception process. No FAQ was assigned or included.",
-      "bodyHash": "18f1405c2435db698aef4c20f70d1cb37de178eff09fdf86268e262ddfb0cc69",
+      "summary": "The changed paragraph presents no clear problem, and there are no earlier findings to resolve. No FAQ is assigned or included.",
+      "bodyHash": "9631558b9f0561c458c5d9b3d5a43c67a92caeb4d6d6995cc957bbb017a7e8d7",
       "decisions": [
-        "Accept or return follow-up criteria and approve a criterion for an uncategorized finding.",
-        "Accept or reject implementation evidence and decide whether to close, hold or keep a finding open.",
-        "Approve an alternative control when an independent checker is unavailable.",
-        "Reopen or decline to reopen a finding, and appoint an uninvolved decision-maker when there is a dispute.",
-        "Accept or hold a program report, correct or withdraw untraceable figures, and decide what follows from the report."
+        "Approve or return follow-up criteria and resolve findings that fit no criterion.",
+        "Accept or reject implementation evidence, and approve an alternative control when no independent checker is available.",
+        "Close, hold or keep a finding open based on required effectiveness checks.",
+        "Accept or decline a reopening request, with an uninvolved decision-maker appointed for disputes.",
+        "Accept or hold a program report, correct or withdraw untraceable figures, and decide what actions follow."
       ]
     },
     {
       "slug": "migration-planning",
       "title": "Planning migration and configuration: Internal audit management software",
-      "summary": "The page covers the assigned migration workflows with supported citations, labeled hypothetical examples, and actionable decisions and demonstration requests. No FAQ was assigned or included.",
-      "bodyHash": "e46fe312d57a4d92b5432a21c5dbd21cfd1fb94e479387ef19a981ea74009bd2",
+      "summary": "The changed paragraphs introduce no clear problems, and there are no earlier findings to resolve. No FAQ is assigned or included.",
+      "bodyHash": "d585a199cfd5e678a0f3fd6bee8bf61e42fa5a9b81ae99d84a9760331898d7f3",
       "decisions": [
-        "Classify each record type and accept or return the inventory.",
-        "Assign an owner and interim class when ownership or retention rules are unclear.",
-        "Fix data gaps before import, defer them, or accept them as unknown.",
-        "Accept or return relationship mappings and decide how to handle links that cannot be established.",
-        "Accept the pilot, repeat it, or seek approval to progress with a documented gap.",
-        "Choose the cutover date and approve or postpone progression based on verification and access.",
-        "Roll back or continue with an approved, documented gap when a cutover trigger is met."
+        "Classify each record type and accept or return the inventory; assign an owner and interim class when ownership or retention is unclear.",
+        "Fix, defer or mark data gaps as unknown; accept or return relationship mappings and decide how to handle unestablished links.",
+        "Accept the pilot, rerun it or progress with a documented gap approved by top management.",
+        "Approve or postpone cutover and decide whether to roll back or continue with an approved, documented gap."
       ]
     },
     {
       "slug": "training-rollout",
       "title": "Training teams and rolling out the system: Internal audit management software",
-      "summary": "The earlier finding is resolved: the rollout-completion decision now accounts for workload targets and approved deviations. No new issue was found in the changed paragraphs.",
-      "bodyHash": "5c22502461c043df5caf61ffe48fbf66e2f58244238b0451896f8c5f88e5480e",
+      "summary": "No previous findings remain unresolved. The changed paragraph clearly distinguishes the user pilot from the migration data pilot.",
+      "bodyHash": "9b62d72dbc002971a141e76a73fb3124ebf753577897b2ee4b52e362799997d3",
       "decisions": [
-        "Whether a person may use the system for a role or needs more practice.",
-        "Whether to reschedule, provide another learning route or limit access when a person cannot attend or pass a task.",
-        "Whether the pilot succeeded, should be extended or repeated, or may proceed with an approved exception.",
-        "Whether a pilot problem requires training, configuration changes or a system fix, and whether a system problem blocks rollout.",
-        "Whether to start or hold the next deployment stage.",
-        "Whether to pause, roll back or continue a stage with a workaround after a serious problem.",
-        "Whether rollout is complete based on adoption and workload targets, approved deviations and ownership of open issues.",
-        "Whether to retrain, reconfigure or request vendor help when adoption or workload results need attention."
+        "Whether a person may use the system for a role and how to handle missed or unsuccessful training.",
+        "Whether the pilot succeeded, needs extension or repetition, or may proceed with an approved exception.",
+        "Whether a pilot problem is a training, configuration or system problem and whether it blocks rollout.",
+        "Whether to start the next deployment stage.",
+        "Whether to pause, roll back or continue a stage with a workaround.",
+        "Whether rollout is complete and how to address low adoption or increased workload."
       ]
     },
     {

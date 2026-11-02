@@ -86,9 +86,9 @@ A useful answer says what the import does, reports, and lets a person correct.
 
 ## Pilot the import and verify results
 
-Avoid importing everything at once. A pilot with a limited, representative set can reveal problems while the cost is small, though not every problem.
+Avoid importing everything at once. A [pilot](/guides/internal-audit-software/training-rollout/) with a limited, representative set can reveal problems while the cost is small, though not every problem.
 
-Choose a pilot set that includes at least one complete chain from program to follow-up evidence, one open finding, one reopened or disputed finding if any exist, and the awkward cases found during cleaning. The [audit planning guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf) recommends reviewing available documented information before an audit, so include records that an auditor would actually open when preparing.
+Choose a pilot set that includes at least one complete chain from program to follow-up evidence, one open finding, one reopened or disputed finding, if any exist, and the awkward cases found during cleaning. The [audit planning guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf) recommends reviewing available documented information before an audit, so include records that an auditor would actually open when preparing.
 
 Include users in the pilot. Ask an auditor and a process owner to find last year's findings for one process and open the evidence behind a closed action.
 

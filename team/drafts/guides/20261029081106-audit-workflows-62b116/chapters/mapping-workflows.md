@@ -88,7 +88,7 @@ Replace these generic stages with the ones your team uses.
 
 **Illustrative example:** In the hypothetical manufacturer's map, the team finds that the audit checklist is created by one auditor on a laptop and emailed to the lead auditor. The completed checklist comes back as a scanned image. No one has a rule about which version is the record. The map marks this as an exception to resolve before any software configuration begins.
 
-For the software evaluation, the record map becomes a test script. Each row can be turned into a question: can the product hold this record, link it to the next one, and show who handled it? Ask a vendor to walk through the rows with sample data, including a late record and a rejected one.
+For the [software evaluation](/guides/internal-audit-software/evaluating-software/), the record map becomes a test script. Each row can be turned into a question: can the product hold this record, link it to the next one, and show who handled it? Ask a vendor to walk through the rows with sample data, including a late record and a rejected one.
 
 ## Assign owners and decisions
 
@@ -96,7 +96,7 @@ A record map shows what moves. This step shows who decides. Every handoff should
 
 Roles are easier to maintain than names. Assign decisions to roles such as lead auditor, process owner, and quality manager, then list the people currently in each role.
 
-The [internal audit guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf) describes what an auditor of the internal audit process would look at: competence, objectivity, and impartiality, risk-based planning, management involvement, and how audit outcomes are used to evaluate QMS effectiveness and identify improvement. Each of those becomes a role question. Who confirms an auditor is competent for a given audit? Who confirms the auditor is not auditing their own work? Who in management reviews the results? Name the role for each, and record the decision where it can be found later.
+The [internal audit guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf) describes what an auditor of the internal audit process would look at: competence, objectivity, and impartiality; risk-based planning; management involvement; and how audit outcomes are used to evaluate QMS effectiveness and identify improvement. Each of those becomes a role question. Who confirms an auditor is competent for a given audit? Who confirms the auditor is not auditing their own work? Who in management reviews the results? Name the role for each, and record the decision where it can be found later.
 
 ICC publishes a [description of its audits and management review module](https://isocertificationconsultants.ca/solutions/audits-management-review/) that mentions findings with owners and closure status. This is a published description only. Treat it as a question for a demonstration: can findings carry an owner, and is closure status visible to the people who need it? Availability and behavior should be confirmed in the demonstration, not assumed from a web page, and the same standard applies to any other vendor.
 

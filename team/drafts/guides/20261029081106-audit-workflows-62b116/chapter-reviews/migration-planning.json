@@ -6,23 +6,11 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The page covers the assigned migration workflows with supported citations, labeled hypothetical examples, and actionable decisions and demonstration requests. No FAQ was assigned or included.",
+  "summary": "The changed paragraphs introduce no clear problems, and there are no earlier findings to resolve. No FAQ is assigned or included.",
   "glossary": [
     {
-      "term": "Move and use",
-      "definition": "A record class for material needed in planning or follow-up."
-    },
-    {
-      "term": "Move and archive",
-      "definition": "A record class for material worth keeping and searchable, but not used in daily work."
-    },
-    {
-      "term": "Leave and reference",
-      "definition": "A record class for material kept in its existing location with a pointer from the new system."
-    },
-    {
-      "term": "Retire",
-      "definition": "A record class for material no longer needed, subject to retention rules."
+      "term": "Pilot",
+      "definition": "An import using a limited, representative set of records to reveal problems before a wider import."
     },
     {
       "term": "Cutover",
@@ -30,7 +18,7 @@
     },
     {
       "term": "Recovery",
-      "definition": "Deciding in advance what would trigger a rollback and how it would work."
+      "definition": "Planning what would trigger a rollback and how it would work."
     }
   ],
   "roles": [
@@ -38,16 +26,14 @@
     "Process owner",
     "Top management",
     "Data steward",
-    "Independent checker",
     "Auditor",
-    "Planner",
+    "Independent checker",
     "System administrator",
     "Vendor"
   ],
   "recordNames": [
-    "Record map",
     "Inventory",
-    "Retention rules",
+    "Record map",
     "Audit program",
     "Audit plan",
     "Audit schedule",
@@ -58,23 +44,16 @@
     "Lookup table",
     "Mapping table",
     "Pilot set",
-    "Import rules",
     "Verification checklist",
     "Verification log",
-    "Audit calendar",
-    "Access list",
     "Cutover plan",
-    "Late-change log",
-    "Rollback entry"
+    "Late-change log"
   ],
   "decisions": [
-    "Classify each record type and accept or return the inventory.",
-    "Assign an owner and interim class when ownership or retention rules are unclear.",
-    "Fix data gaps before import, defer them, or accept them as unknown.",
-    "Accept or return relationship mappings and decide how to handle links that cannot be established.",
-    "Accept the pilot, repeat it, or seek approval to progress with a documented gap.",
-    "Choose the cutover date and approve or postpone progression based on verification and access.",
-    "Roll back or continue with an approved, documented gap when a cutover trigger is met."
+    "Classify each record type and accept or return the inventory; assign an owner and interim class when ownership or retention is unclear.",
+    "Fix, defer or mark data gaps as unknown; accept or return relationship mappings and decide how to handle unestablished links.",
+    "Accept the pilot, rerun it or progress with a documented gap approved by top management.",
+    "Approve or postpone cutover and decide whether to roll back or continue with an approved, documented gap."
   ],
   "pass": true,
   "deterministic": {
@@ -167,8 +146,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "a2d1078aad0168610b3772ef6e7dcf5d267cb8cb8c18f3304ba165cb2914cee2",
-  "contentHash": "d84ad4c0f9e9c33448da268a9e7568e2fed35b5b9f09d4bee83aaedf90004ba4",
+  "inputHash": "933df076e62354017a2d531f384c7ade922cd31b22d6acbe83222e4131abe96c",
+  "contentHash": "548aac55cdddf5f0555f5a679146adf4ff0e2d6c5643cfa098d469e50d0b959c",
   "paragraphHashes": [
     "794070b0f40548009f6c28df4e55d3c0602ffd26d416c15c238f9af190ff7589",
     "56172b63196994108153ed5c76b60d1bf2d9f8408377b888503b224d23a66bf7",
@@ -194,8 +173,8 @@
     "b2190863c3c909253d01ff359278eb2b433e8bb4877ee9415e84ae7adfa12c4b",
     "0c0fd8b7dea0e07b859ea7e0b5e47a6662bc81e53eb7ab346445028dba34844e",
     "f4e2442ced52e93a251dc3b75e7fe2b1b7fa203ce867009636a93c15322a0cfd",
-    "e185c6d5285c068859c908df565a39d56d81b3a3b6af67610df26f7262cf0be3",
-    "368c7874412a0efb3218fff4697a9dd6e0f54b1f58042d277128f27d4ee4850f",
+    "4b985a2485ecbc93d8b728091d0cd53e2f7613d490fbc6ac64ac63e530fe42eb",
+    "e92b32ae789f2986e9de328add38fdc4cdb38a691279202c736617df1de4d461",
     "47ab2b70b48158f2fdc0c289eadfe07c217424e1c0f698d18fcecd5cf4dee839",
     "83717836fb6da2b6895499c1f6ee0e1738f36baef82f2b459577228a45006897",
     "5bc21698ead3f357ffd993230cf4829840815e3ee263c72c688c02914118f17e",
@@ -216,7 +195,7 @@
     "954368615fc687af3b60b690d547cef3c813903c7d3fb4b14f769540e6bb8678",
     "21af1f50728c853f5bc302239f4d332d939e68c98a482aad8d9ec3e8bd2b3151"
   ],
-  "outputContextHash": "947d28671c1f779b974c03a719d144056943216c938eeaf384d92b4b223c643d",
-  "reviewedAt": "2026-11-02T15:02:02.537Z",
+  "outputContextHash": "c209e8799be032450b78eca1b90ebd0e4080cf49856916c2b576dfbd130c5c1d",
+  "reviewedAt": "2026-11-02T15:20:32.866Z",
   "reviewer": "Configured independent chapter reviewer"
 }

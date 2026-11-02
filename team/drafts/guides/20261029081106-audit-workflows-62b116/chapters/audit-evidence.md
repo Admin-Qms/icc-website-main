@@ -66,7 +66,7 @@ Useful observation records usually have the following parts, and the product sho
 
 The [internal audit guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf) says auditors of the internal audit process look at competence, objectivity, and impartiality. The [audit planning guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf) adds that areas without a standalone process, such as leadership commitment or competence, can be verified through related processes. A product should let an auditor note which related process an observation came from.
 
-Test the offline case in the evaluation, since the plan may include evening or night work. Ask the vendor to show how an observation is recorded without a connection, how it reaches the audit record afterward, and what happens if two people edit the same item. If there is no such mode, the team decides whether a paper capture step is acceptable and who enters it.
+Test the offline case in the [evaluation](/guides/internal-audit-software/evaluating-software/), since the plan may include evening or night work. Ask the vendor to show how an observation is recorded without a connection, how it reaches the audit record afterward, and what happens if two people edit the same item. If there is no such mode, the team decides whether a paper capture step is acceptable and who enters it.
 
 ### Roles, inputs and decisions for this step
 

@@ -6,11 +6,15 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The page covers the assigned evidence workflows with supported citations, actionable decisions and labeled hypothetical examples. It does not include an unassigned FAQ.",
+  "summary": "The changed paragraph presents a practical offline test and fallback without introducing a clear problem. No previous findings remain unresolved.",
   "glossary": [
     {
       "term": "Observation",
-      "definition": "What the auditor saw, read or was told, recorded with enough detail for someone else to check it."
+      "definition": "What an auditor saw, read or was told, recorded in enough detail for someone else to check."
+    },
+    {
+      "term": "Criterion",
+      "definition": "A requirement, procedure or stated expectation against which evidence is measured."
     }
   ],
   "roles": [
@@ -19,46 +23,33 @@
     "Lead auditor",
     "Auditor",
     "Auditee",
-    "Vendor",
     "Second reviewer",
-    "Reviewer",
     "Process owner",
     "System administrator",
     "Top management",
+    "Vendor",
     "Contractor"
   ],
   "recordNames": [
     "Audit plan",
-    "Scope entry",
+    "Audit checklist",
     "Prior findings",
     "Process map",
-    "Approved checklist",
-    "Observation records",
-    "Trial set of observations",
+    "Observation",
     "Criteria list",
-    "Evidence",
-    "Evidence-to-criterion links",
-    "Finding",
-    "Follow-up evidence",
+    "Evidence-to-criterion link",
     "Torque log",
-    "Work instruction",
-    "Customer requirement",
     "Customer drawing",
     "Access rules",
     "Test log",
     "Temporary-access decision"
   ],
   "decisions": [
-    "Whether to accept or return the checklist",
-    "Whether to write or revise a question when library items are unsuitable or a question is disputed",
-    "Whether the observation-recording method is acceptable",
-    "Whether to use paper capture when a connection or device is unavailable, and who enters it and when",
-    "Whether to accept or return each evidence-to-criterion link",
-    "Whether to add a criterion, collect more evidence or note a gap",
-    "Which user types may see or change each record type",
-    "Whether to accept or return the access configuration",
-    "Whether to grant, narrow or refuse temporary access",
-    "How to apply the previously taken evaluation decision when a product cannot enforce an access rule"
+    "Accept or return the checklist and decide how to handle unsuitable or disputed questions.",
+    "Accept or reject the observation recording method and decide how to handle unavailable connectivity or devices.",
+    "Accept or return evidence-to-criterion links and decide how to address evidence without a criterion or a criterion without evidence.",
+    "Approve access rules and accept or return their configuration after testing.",
+    "Grant, narrow or refuse temporary access and record the disposition of an unenforceable rule."
   ],
   "pass": true,
   "deterministic": {
@@ -151,8 +142,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "6085e9223dbfae9c9b456b7f501d54732a72544656653a11b0b7259f43caeb7f",
-  "contentHash": "d985a5f7223c432318c45de15ffdb74da6684d36368b065ecd1703ce2d7bd488",
+  "inputHash": "ba545bff00ff51e7ee24ca120a57c3b2d6351051f96ae5d9681a2a6242a37fa3",
+  "contentHash": "d14e95a6ca3c75f73d8f75d093935400654e870195ecb8677f5257ede6238558",
   "paragraphHashes": [
     "1dc77eb46ff0c4f14e9390cd2b4d3e80c8ced9da4526e9a19bf8017bb33ffea5",
     "19fea0eb1d0c6a8bad43bcd708bcffbd66fa1414d821bfa5086e29134040ac39",
@@ -170,7 +161,7 @@
     "1cf64e617b8325703575553f6f2969cb46b06dedc7851d9e977b0a1c5b39e8ee",
     "6943bb08bdc3a99e2cfb2f0f3a9d5aba3211d114b38bd7ec9e20d9b711810c50",
     "0b69107dcd67fd21ccd92b58f64872a886d297a7ec1dd925fb526389d7028524",
-    "099fd2cfd94b0f35cf087474ec2f4197a664e26bc57105b6a1f02b8e8370fb9e",
+    "3e93c7c2fb7779d5ea7ced55b63d0fa7f8b56caedd51d9801d044b2911e0ea17",
     "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
     "63ab4d8f2fdbdd285ab6ab16a556830850e565e23077075f7f76302165b5fffa",
     "ea9c79262382a068362f3c3f5b1c653b73250017fed68ac2a8c2a469617afaef",
@@ -195,7 +186,7 @@
     "a100bf348e56ec0a495f9acae182263197c7c5adb7eddde37288ab70e6549ac4",
     "4dc290135d0b84a2675015835efee770855b0e63435128a3b1c39179f6b83de2"
   ],
-  "outputContextHash": "28cd60140e6ef71130dcb0fc7da4732d4790480cf2a485769bf10038752886a6",
-  "reviewedAt": "2026-11-02T14:55:47.497Z",
+  "outputContextHash": "f805cb12c509fa576a40dd098d273ec6181d675916b41a64b2dd55c40533f795",
+  "reviewedAt": "2026-11-02T15:17:06.969Z",
   "reviewer": "Configured independent chapter reviewer"
 }

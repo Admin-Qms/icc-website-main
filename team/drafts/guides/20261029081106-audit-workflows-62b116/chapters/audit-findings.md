@@ -84,7 +84,7 @@ A finding needs someone responsible for the response. The [audit planning guidan
 
 Ownership has several parts that software should keep separate: the person who owns the area, the person who owns the response, and the person who approves it. In some organizations these are the same person; in others they differ. The product should allow the team's pattern, and it should show the current owner without hiding earlier ones.
 
-Each assignment should carry the finding and audit plan references, so follow-up evidence added later attaches to the same chain.
+Each assignment should carry the finding and audit plan references, so [follow-up evidence](/guides/internal-audit-software/audit-follow-up/) added later attaches to the same chain.
 
 Ask the vendor to show the following with representative records:
 

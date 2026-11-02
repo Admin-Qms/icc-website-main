@@ -6,64 +6,55 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The earlier finding is resolved: the rollout-completion decision now accounts for workload targets and approved deviations. No new issue was found in the changed paragraphs.",
+  "summary": "No previous findings remain unresolved. The changed paragraph clearly distinguishes the user pilot from the migration data pilot.",
   "glossary": [
     {
-      "term": "Learning task",
-      "definition": "A role-specific exercise using sample records whose result is shown to someone who can judge it."
-    },
-    {
       "term": "User pilot",
-      "definition": "A test of whether real users can do real work in the system with their records and constraints."
+      "definition": "A test of whether representative users can perform work in the system with the relevant records and constraints."
     },
     {
       "term": "Staged deployment",
-      "definition": "A rollout that brings in groups of users or parts of the program in a planned order."
+      "definition": "Introducing groups of users or parts of the audit program in a planned order."
     }
   ],
   "roles": [
     "Workflow owner",
     "Quality manager",
     "Trainer",
-    "Observer",
     "Planner",
     "Auditor",
     "Action owner",
     "Checker",
     "Management",
-    "Top management",
-    "Pilot user",
+    "Observer",
+    "Vendor",
     "Process owner",
-    "Vendor"
+    "Pilot user",
+    "Top management"
   ],
   "recordNames": [
     "Responsibility table",
-    "Task list",
-    "Sample records",
+    "Task list per role",
+    "Shift pattern",
     "Learning record",
     "Audit plan",
     "Finding",
-    "Evidence",
     "Follow-up evidence",
-    "Program report",
+    "Audit program report",
     "Issue log",
     "Pilot report",
     "Stage plan",
     "Known-issues list",
     "Workload log",
-    "User feedback",
-    "Stage records",
     "Evaluation report"
   ],
   "decisions": [
-    "Whether a person may use the system for a role or needs more practice.",
-    "Whether to reschedule, provide another learning route or limit access when a person cannot attend or pass a task.",
-    "Whether the pilot succeeded, should be extended or repeated, or may proceed with an approved exception.",
-    "Whether a pilot problem requires training, configuration changes or a system fix, and whether a system problem blocks rollout.",
-    "Whether to start or hold the next deployment stage.",
-    "Whether to pause, roll back or continue a stage with a workaround after a serious problem.",
-    "Whether rollout is complete based on adoption and workload targets, approved deviations and ownership of open issues.",
-    "Whether to retrain, reconfigure or request vendor help when adoption or workload results need attention."
+    "Whether a person may use the system for a role and how to handle missed or unsuccessful training.",
+    "Whether the pilot succeeded, needs extension or repetition, or may proceed with an approved exception.",
+    "Whether a pilot problem is a training, configuration or system problem and whether it blocks rollout.",
+    "Whether to start the next deployment stage.",
+    "Whether to pause, roll back or continue a stage with a workaround.",
+    "Whether rollout is complete and how to address low adoption or increased workload."
   ],
   "pass": true,
   "deterministic": {
@@ -156,8 +147,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "ed1472a97783436db333202e5ad46dc3f4dc1ae27cc84bec860ffd5086782602",
-  "contentHash": "73abeba4e6d12cfaa8fea465e89cfca86a81ee6c5917af7bcf033d078d089b83",
+  "inputHash": "4843c9d0f05e5afc9a15a6b708a37de1c152828613532eb71254d494b11a8a5e",
+  "contentHash": "1862073f0caad0ec0789f892a5dade696f7c1f185732f11a3a523fb3fe0fe4c5",
   "paragraphHashes": [
     "52bcab03b85d77505e17d3633afc1e875fe50ea2a3160d3ecd708e1802ca09ae",
     "6bf8134185f65a968ac9af285c224940b72cbba95d7f1fba269c7989f715453c",
@@ -171,7 +162,7 @@
     "5e98267cbe460101c6f6c50d3be9bfd4281f5db0acd00f7ca26264e3d9c70414",
     "8efaa8f0c005ec1b663d5cfe58a8c2f9e5636c79008379ab4b86bf4870406eef",
     "6e68bbc29fb75d740be4cbdda41e97aa9014651425ef98414926443e716257df",
-    "73f567cac003237e55063643b93b4fc915446cfc56c40a781cf2a518886e0914",
+    "75deba02ef683d3a933dfc7b1896e76c6fbb0338821f805cbc788955675470f3",
     "4c1affccccd78b49a4a8c3e5f44a9698caac892a7db85c3a33b3fd3c80376196",
     "ded76dc95b6d6cd8ab1606ae525c8271388b300c742f70e6e1c0c58749300e92",
     "a38d5948e85378167f991a199755a3555a6b58162e3719c31d0bc6cdbf1a38b9",
@@ -201,7 +192,7 @@
     "db01235b3fb04ee84872dc19b9046f87a28a6eec7bde86200bfb4682e4397ae9",
     "147b5463ccb30e4bab5f2b9479aa2f3d6e1c73179aec3bf3001fe397bfd1d4c5"
   ],
-  "outputContextHash": "99299464c64abdad436799ee06ee43f86bbccbc30125b8d9ecc2626de5a0f082",
-  "reviewedAt": "2026-11-02T15:04:43.704Z",
+  "outputContextHash": "dc58bfbe380b7a1004633f77190fbccecdf539d3bcfe3e9d2ca387c8145bf11b",
+  "reviewedAt": "2026-11-02T15:21:49.658Z",
   "reviewer": "Configured independent chapter reviewer"
 }

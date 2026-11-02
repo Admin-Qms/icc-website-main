@@ -54,7 +54,7 @@ The [audit planning guidance](https://committee.iso.org/files/live/sites/tc176/f
 
 ## Pilot with representative users
 
-A user pilot differs from the data pilot used for migration. Here the question is whether real people can do real work in the system, with the records and constraints they actually have.
+A user pilot differs from the data pilot used for [migration](/guides/internal-audit-software/migration-planning/). Here the question is whether real people can do real work in the system, with the records and constraints they actually have.
 
 Choose pilot users who represent the roles, shifts, and varied comfort with software. The [audit planning guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf) says plans should be developed with the auditee where possible, so include at least one process owner who will be audited, not only the quality team. Include someone from an evening or night shift if the audit program covers those shifts.
 

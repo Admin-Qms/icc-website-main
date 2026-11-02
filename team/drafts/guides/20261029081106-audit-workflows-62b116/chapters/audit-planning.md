@@ -24,7 +24,7 @@ capabilityIds: []
 
 Scope is the first planning decision. A product may offer a single free-text field for scope, or structured fields for processes, sites, shifts and periods.
 
-The [ISO 9001 Auditing Practices Group guidance on internal audits](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf) states that ISO 9001 does not specify audit frequency, duration or scope. The organization defines them, and it should have a process for using past audit results in planning future audits. Software cannot supply these choices, but it can hold them where planners and auditors can find, compare and revise them.
+The [ISO 9001 Auditing Practices Group guidance on internal audits](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf) states that ISO 9001 does not specify audit frequency, duration or scope. The organization defines them, and it should have a process for using past audit results to plan future audits. Software cannot supply these choices, but it can hold them where planners and auditors can find, compare and revise them.
 
 The [audit planning guidance](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Audit_Planning.pdf) describes two levels of planning: the audit program and the audit plan for a single audit. Define scope at both levels. At the program level, scope answers which processes, sites and shifts are covered across the cycle. At the audit level, it answers what the audit covers and in what period; the criteria are listed separately in the same record.
 
@@ -41,7 +41,7 @@ The same guidance advises planning around processes rather than clauses, and aud
 | Areas covered indirectly | Records where topics without their own process are verified |
 | Exclusions and reasons | Keeps a visible reason when something is left out |
 
-Treat this table as a prompt for evaluation, not a statement of what any product holds. In a demonstration, ask the vendor to create a scope for two linked processes, add a night shift and record an exclusion with a reason. Then ask how the planner starts next year's scope from this one: whether the earlier scope can be copied, edited and compared, and whether the copy keeps a link to the original so that changes between cycles stay visible.
+Treat this table as a prompt for [evaluation](/guides/internal-audit-software/evaluating-software/), not a statement of what any product holds. In a demonstration, ask the vendor to create a scope for two linked processes, add a night shift and record an exclusion with a reason. Then ask how the planner starts next year's scope from this one: whether the earlier scope can be copied, edited and compared, and whether the copy keeps a link to the original so that changes between cycles stay visible.
 
 ### Roles, inputs and decisions for this step
 
@@ -102,7 +102,7 @@ The word representative matters. A schedule that samples only the day shift, or 
 |---|---|
 | Role | The workflow owner, here the quality manager, who builds the calendar; process owners confirm timing |
 | Inputs | The scope entries, auditor assignments, production calendar, shift pattern and the priority list |
-| Decision | The dates and sampled activities; the quality manager accepts the calendar when each priority area is scheduled, the sampled activities cover the relevant production cycles and shifts, and each reduced-frequency area carries a recorded reason; otherwise it returns to the planner, with the rejection and reason recorded on the calendar entry; the quality manager revises it personally when acting as planner |
+| Decision | The dates and sampled activities; the quality manager accepts the calendar when each priority area is scheduled, the sampled activities cover the relevant production cycles and shifts, and each reduced-frequency area carries a recorded reason; otherwise returns it to the planner, with the rejection and reason recorded on the calendar entry; the quality manager revises it personally when acting as planner |
 | Record | The calendar, with its acceptance or return, the sampling notes, the justification for reduced frequency and the decision-maker |
 | Exception | A process owner cannot release the area on the proposed date; the quality manager decides the new date or a sampling change, records the disposition and informs the auditor |
 

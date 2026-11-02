@@ -35,81 +35,81 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W44-slot-2",
-  "stage": "reviewing",
+  "stage": "writing",
   "pages": {
     "mapping-workflows": {
-      "hash": "6784e998765bbe3a627b5033f84082308e530d9902add971ddb21a68b041848d",
+      "hash": "1fef7a71b4163e28b485477a26b339d98648a3c761c84d9c6aedc35d7c31803c",
       "wordCount": 2160,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-02T08:20:10.405Z"
+      "checkpointedAt": "2026-11-02T15:13:48.824Z"
     },
     "evaluating-software": {
-      "hash": "2fc465177a761364a0f3d70419a10add334749bbe3cfb59da6eed906eff0eab6",
+      "hash": "e5bf2309e97ab110a30725f796fbb71aa96d642b0166bf1629f8565c5be80223",
       "wordCount": 2195,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-02T14:49:04.578Z"
+      "checkpointedAt": "2026-11-02T15:15:00.608Z"
     },
     "audit-planning": {
-      "hash": "9e40c6ffe7814e72d1680d4a58b06599e83fa994c10a49c59dd6b04abd01cbc8",
+      "hash": "ad535bdabfa1399a398927c785906163c783e539cd8977eb74036f3c47c844e1",
       "wordCount": 2040,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-02T14:54:15.120Z"
+      "checkpointedAt": "2026-11-02T15:16:00.481Z"
     },
     "audit-evidence": {
-      "hash": "17ce1b48d222c278356b2e31295a0ae836d9219480664b0d113883486d4a16be",
+      "hash": "b67999316784c804a1b022c1a730e29a9fbaecdd8c7e6bb57b60cee9153134e9",
       "wordCount": 2058,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-02T14:55:29.135Z"
+      "checkpointedAt": "2026-11-02T15:16:59.375Z"
     },
     "audit-findings": {
-      "hash": "cb2203c180b0b20f19604951e1c830b895f171d83dac3ece62e3b7788744f363",
+      "hash": "9523c073c18c18c012782382d14247943e68a8c0b844210f1e9e7198c84b7867",
       "wordCount": 2028,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-02T14:56:45.493Z"
+      "checkpointedAt": "2026-11-02T15:17:58.582Z"
     },
     "audit-follow-up": {
-      "hash": "3c10617a7b2a40d01c490f59c5f6db8864adaa260fa3426d7225c8d6ebf58ec9",
+      "hash": "9e01a0114605ecfc03b2b4cc65e66d3df258d1596e38b5d17c998bf71fe23daf",
       "wordCount": 2015,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-02T15:00:31.602Z"
+      "checkpointedAt": "2026-11-02T15:19:18.087Z"
     },
     "migration-planning": {
-      "hash": "48a7b3cb168a10bc331486cbd6ebd4d902ff2bbeac180f068815f6199347aecb",
+      "hash": "edd0ff1eb4f238d5064cca70984c8a8dd0244b8006b85000b14356106afc8607",
       "wordCount": 2000,
       "readTime": 10,
       "status": "written",
-      "checkpointedAt": "2026-11-02T15:01:43.594Z"
+      "checkpointedAt": "2026-11-02T15:20:23.418Z"
     },
     "training-rollout": {
-      "hash": "d1ea0a01c6b2543624c56af38a0dfd28a22c6a3beccacf5781d48b24f8732381",
+      "hash": "c6baee9e637a8481146003d36e835b0d7186ba33875a9610a69c3a9d9a468f41",
       "wordCount": 2001,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-02T15:04:33.271Z"
+      "checkpointedAt": "2026-11-02T15:21:38.259Z"
     },
     "ongoing-operation": {
       "hash": "efc452674d7ad231069ce22b6e0d48da79267195f17c941faa9ee835543eff62",
       "wordCount": 2000,
       "readTime": 10,
       "status": "written",
-      "checkpointedAt": "2026-11-02T15:10:57.340Z"
+      "checkpointedAt": "2026-11-02T15:21:49.907Z"
     },
     "internal-audit-software": {
       "hash": "302cfa7871605fedc9091cd4971fa02bf85e9815667290f12f9c44a9b7848a3b",
       "wordCount": 1501,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-11-02T15:11:12.693Z"
+      "checkpointedAt": "2026-11-02T15:21:50.186Z"
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-11-02T15:11:24.880Z",
+  "updatedAt": "2026-11-02T15:21:50.194Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1441,7 +1441,7 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "480a58f81e444e88cc750e3f56a5f216e4a432f669d9737040e7038219db76b0",
+  "contextHash": "9370738a74c3b595b3622274773d6f9295161f587d3c1493de81c49fe40990cc",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1451,7 +1451,7 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The page covers the assigned workflow decisions, uses supported citations and clearly labels its hypothetical examples. No FAQ subsection was assigned or included.",
+      "summary": "The page follows the assigned workflow, distinguishes sourced claims from advice and hypothetical examples, and stays within the chapter boundary. No FAQ is assigned or included.",
       "glossary": [
         {
           "term": "Handoff",
@@ -1471,23 +1471,21 @@
         "Auditee",
         "Management",
         "Top management",
-        "Production manager",
         "Second reviewer",
-        "Action owner",
-        "Vendor"
+        "Production manager"
       ],
       "recordNames": [
-        "Audit program",
-        "Annual audit schedule",
+        "Audit schedule",
         "Audit plan",
         "Audit report",
         "Finding",
         "Corrective action log",
         "Follow-up evidence",
         "Problem statement",
-        "Checklist and notes",
-        "Nonconforming product report",
         "Record map",
+        "Audit checklist",
+        "Audit notes",
+        "Nonconforming product report",
         "Organization chart",
         "Internal audit procedure",
         "Responsibility table",
@@ -1495,15 +1493,14 @@
         "Evaluation file"
       ],
       "decisions": [
-        "Which workflow break to solve first and whether to accept the problem statement",
-        "How to handle missing or disputed records",
-        "Which records are authoritative, copies or working notes",
-        "How to resolve records without clear owners or in personal storage",
-        "Which roles own handoffs and decisions, including backups",
-        "How to handle unfilled roles, conflicts of interest and unreachable owners",
-        "Who confirms auditor competence and objectivity and reviews results",
-        "Which acceptance criteria are must-haves, should-haves or could-haves and what counts as a pass",
-        "How to resolve untestable or conflicting criteria"
+        "Which workflow break to solve first and whether to accept the problem statement.",
+        "How to handle missing records or disagreements about the authoritative record.",
+        "Which records are authoritative, copies, or working notes, and whether to accept the record map.",
+        "How to handle records without a clear owner or stored in a personal location.",
+        "Which roles own handoffs and decisions, including primary and backup owners.",
+        "How to handle unfilled roles, conflicts of interest, or unreachable owners.",
+        "Which acceptance criteria are must-haves, should-haves, or could-haves and what counts as a pass.",
+        "How to handle criteria that cannot be tested or conflict with each other."
       ],
       "pass": true,
       "deterministic": {
@@ -1596,9 +1593,58 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "92da34871d0579d74902c74090937a5666487e83353256cef77fcc72927f33e7",
-      "outputContextHash": "85d1406acd43fbf9293b55b0570892ad3d11ef3d247f230b741612db63418a80",
-      "reviewedAt": "2026-11-02T08:20:31.176Z",
+      "inputHash": "ae43afc5c7ee2c2617b64b653bf7881c2b6a7d0a9ebffcb8a9f0396c8ceab4e1",
+      "contentHash": "88d42a2a0a6a99f517fe3f146430749605b86d0f996653734c48bd04febe4609",
+      "paragraphHashes": [
+        "1a659dbeeb43975fd4f580b2d2ae51608842c4830da540c2a9e373642a11cddf",
+        "2af3f459b605490f6f6215c6de820d87b971e45eb4128de4d6185294b28b2685",
+        "04ce4366e05dc9e1d61a6228becea549af2ed3527685fc8db95be5c4a8b34c0a",
+        "4883ff1a6a36b654f98e62a1ac02c6755a7fcd84d84d3c727881d29aceed42a0",
+        "62e83484792a304884fd926ce6678d5e4c0c68161bc319f299eb5ed50bff5c92",
+        "7d2c071ab68c49b7225fdba088e30224a5e73cb0fdf4e3c006644b5b8392167c",
+        "f56a1d86e1bc66648f03140aabeb72d408acfc9c71e5728da7654dd658603884",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "96edb91dac06e4da3b65083ec0cfa3c084788e5e9976002ddecd1bb1fdc1904a",
+        "4b3674d5d808bd7888596a81b0b50f7c7d17ad2905673b039174f30d60353d05",
+        "7adb01d0df87b5f749ba547433830ad20526fd2fe9ba6fd0a7a5573d00f898e3",
+        "ec6c208bb5625b35d5751ef15aef6fbf4489bd7a33dfab66414c36a02c5da634",
+        "344a2f4f5a7646054b7245f1b6cff5733106ecc53433ccf925daec8af15ae2b3",
+        "c760294a67cd147f65e0c0665830e8a90554a3b4afb6b28bf0bf7d9e2db63a41",
+        "eb567b9155e1d241b596d8b67b9ab9daa9305ef23e095ac1085849bc450d50de",
+        "5c666b0e52aa6a528a37907baefc152f0b36f41eaf04f7dbc24fe9c6c33dd945",
+        "7d262606b740a517a09f05c34808db8b20070b1ce181fb31afcf46a8425784a2",
+        "15185b75ca6f18e19f2e1f9cac930c03fab4bb502cdf2c398d29ebd72d1dc82d",
+        "b8a9eb90a00aaf560384167253a4e8d70cf0db958ab85a804d3a32813daead68",
+        "fd11689a5783d9285ac465434ea7325dcbe0f04912d556dd47f42c1644174851",
+        "1f47bd6a47211af4176aa815489118394881841c1faf598b4a9bb3b7fadf153e",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "0b66e23a1870bd380cd654892be6ccc6fbbde51980eb632628173512d8882977",
+        "7663e52cfd646aa0bb176dbde606f70729ced963ade803e509ae4a77706f2c69",
+        "eabfb64c4a168bc929c787d60949718f4a080fdfe087ecdf254eb135c8d4198c",
+        "99c0f50d392afd169b7433a4bdb011777e9e155623214092743e6075f21a0214",
+        "e4c45814a2858f79468e3d7e7c030ce943d39bda0cacc8f9accd69dde30856f9",
+        "ab8805bd72c8ac5fb097613f8da5b1ac8e1ce96b600467265d5a3ffb70e423c4",
+        "0e93a20a01a7103cea574823eefd52887e8737879d1399d16ac7d6e3bb777b62",
+        "7b4956bce8200682eb003f34ebb4629e9cfc4d340257e8353fe59f7684712dca",
+        "b615839b75a568227c9d2b8381efcf6f22416057e11eea2bc7f88acc3274331f",
+        "129fa5435d4788a6abdfddd58e4346f68a874a5df81f83e8760cf934cf7062bf",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "8c4e742a63ccdcde3812dabfdaa7a49181e82cd132bc25378fbfe95cf7a3b6a9",
+        "d4292290c7754e92a5bce82c85118124d5ec96ed5adf17517029e1d16b5ada96",
+        "c00a4fb82ffabf35be9a4a2421cedda8da128f8911466a218b5310acd56b2ff1",
+        "b47069b15a6673f9c7470d44e51980f8e9106f15742ad2dd96f89e38c895d759",
+        "60104df846a8c0a6a7c6aeb567b97f414c440b1d15fe2cbdf6ad85d551dd72cc",
+        "310f5945a05d41f5815813201f4a325d391a05e021774afdfadaa8ffb7667430",
+        "fee52236692b3ab9c3b99210197bf64cbefd32944ffca5a5a75ef866a33ab4cf",
+        "8f82e45e8155bbf530ad85da34e2127977b3e5eb92e5559636e07a1bbd3cdbc1",
+        "732361dac4f9a9cbefae53dc209cde26854f8370c45852cdb0cb8054090640ae",
+        "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+        "32c870dabcc67c573ae25964b09550d98e8c0c769da146d7e242ce2a421ec6e8",
+        "831ec5aa8314aab31f6688e058d87b2e98a6f30067f7eba48919dc2760a75ec0",
+        "95b9ab8076221ff3f4724e179a1746075e4d3ac61613d1ad5a05cc599b0ee5c0"
+      ],
+      "outputContextHash": "06031f3fb1ecca0ad547677d2b9a885d20462476db06a8f088d6e6d307aa2f08",
+      "reviewedAt": "2026-11-02T15:14:08.033Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "evaluating-software": {
@@ -1609,7 +1655,7 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The page covers the assigned evaluation steps with supported citations, actionable workflow decisions and labeled hypothetical examples. It does not include an unassigned FAQ.",
+      "summary": "The changed paragraph presents a provisional recommendation and final approval without introducing a clear problem. No earlier findings remain unresolved.",
       "glossary": [],
       "roles": [
         "Workflow owner",
@@ -1619,14 +1665,12 @@
         "Reviewer",
         "Action owner",
         "Verifier",
-        "Observer",
+        "Planner",
         "IT contact",
         "System administrator",
-        "Contractor",
-        "Viewer",
-        "Finance or purchasing contact",
         "Top management",
-        "Vendor",
+        "Finance or purchasing contact",
+        "Observer",
         "Audit-program planner"
       ],
       "recordNames": [
@@ -1634,37 +1678,18 @@
         "Record map",
         "Vendor questionnaire responses",
         "Screening sheet",
-        "Cost list",
         "Test script",
-        "Sample records",
-        "Test results",
-        "Responsibility table",
-        "Separation rules",
         "Permissions test log",
-        "Written quotes",
-        "Contract terms",
-        "Support descriptions",
+        "Responsibility table",
+        "Written quote",
         "Comparison sheet",
-        "Written recommendation",
-        "Audit program",
-        "Audit plan",
-        "Audit schedule",
-        "Audit report",
-        "Finding",
-        "Corrective action",
-        "Evidence",
-        "Checklist"
+        "Written recommendation"
       ],
       "decisions": [
-        "Which candidates proceed to demonstration or are removed from the shortlist",
-        "Whether to request a trial or drop a promising candidate with an undemonstrated must-have",
-        "Whether each test scenario passed, failed or was not shown",
-        "How to handle a scenario that cannot be run live",
-        "Whether evidence and permissions meet the team's criteria and separation rules",
-        "Whether to reject a product, change a rule or accept a procedural control when a permission rule cannot be enforced",
-        "How to handle an incomplete quote",
-        "Which product to recommend and whether the recommendation is provisional",
-        "Whether top management approves the final choice"
+        "Which candidates proceed to demonstration and whether to request a trial for a missing must-have demonstration.",
+        "Whether each test scenario passed, failed, or was not shown, and how to handle a scenario that cannot be run live.",
+        "Whether permissions enforce the team's separation rules and how to handle an unenforceable rule.",
+        "Which product to recommend, how to address missing cost or support information, and whether to approve the recommendation."
       ],
       "pass": true,
       "deterministic": {
@@ -1757,8 +1782,8 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "db6dc2531b8eefb8852289d50e7d8cb03aeeeace275bfa34d448c0634eae0953",
-      "contentHash": "09168580dbadb150d85e6366d4dc18bb1d624c36a8382978b4e1521b67dbda96",
+      "inputHash": "4e0a9589303947338f5e0e377f6a3405f85981c538fe3b0854d5cea1f88755da",
+      "contentHash": "e0312b96a42f3394af47f15fa820fa1cefa8618c76eddf07d949b51ed8ce3b83",
       "paragraphHashes": [
         "34a2c737b52c6404cb6f0e763283301e4ff93d9d3750e57fc9a6711454a4c8ad",
         "dc87b9b07f8c4eb35ef6e9f0e7303fe59739f2a99dbed5882e489a13625c5a03",
@@ -1802,10 +1827,10 @@
         "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
         "3836b6b040f4573e1495f758b2f77bf2750739eedbe090415bc69bd1cda2204f",
         "5649e4a03872f3e98151258cac17bd3e7e8f9a4a46ad8c00208432c40a231e12",
-        "45e57e44db824dc1b30afbfc5b162d45f274e2ed2f5aa8fdcbeb6fab84ff0ed0"
+        "299715aa14c2370270c92e3efce93e8a30e026952b72fef17eef39a5fd9e7250"
       ],
-      "outputContextHash": "bf606c1d14b00154376286417da54edf556502083a2e3bdf0d5460a78030f69a",
-      "reviewedAt": "2026-11-02T14:49:26.469Z",
+      "outputContextHash": "a96e3815cf44ad199e26f2d825245e755e3a2d3f21dc40f4c7fd88ecb7bb7f6f",
+      "reviewedAt": "2026-11-02T15:15:08.200Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "audit-planning": {
@@ -1816,48 +1841,39 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The earlier findings are resolved: each planning step records acceptance or rejection and its decision-maker, and the assignment and scheduling steps identify who revises returned work. No unassigned FAQ is present.",
-      "glossary": [
-        {
-          "term": "Audit criteria",
-          "definition": "Requirements and internal procedures used as a reference for an audit."
-        }
-      ],
+      "summary": "The changed paragraphs present no clear problems, and there are no earlier findings to resolve. No FAQ is assigned or included.",
+      "glossary": [],
       "roles": [
-        "Workflow owner",
         "Quality manager",
         "Planner",
+        "Delegate",
         "Process owner",
         "Auditor",
         "Auditee",
-        "Top management",
         "Second reviewer",
+        "Top management",
         "Vendor"
       ],
       "recordNames": [
-        "Audit program",
-        "Audit plan",
         "Scope entry",
         "Process list",
         "Audit report",
         "Finding",
         "Auditor list",
         "Assignment",
-        "Audit calendar",
+        "Audit plan",
+        "Calendar",
         "Production calendar",
+        "Shift pattern",
         "Priority list",
         "Change entry",
         "Follow-up evidence"
       ],
       "decisions": [
-        "Define and accept or return program and audit scopes.",
-        "Resolve disputed or unclear scope and escalate unresolved issues.",
-        "Assign auditors based on competence and impartiality, or return unsuitable assignments.",
-        "Choose an added control, delay or outside help when no impartial auditor is available.",
-        "Accept or return the calendar based on priorities, representative coverage and reduced-frequency justifications.",
-        "Change dates or sampling when an area is unavailable.",
-        "Accept or reject requests to move, add or cancel audits.",
-        "Decide on short-notice or outside-quality change requests."
+        "Accept or return the program and individual audit scopes; resolve or escalate scope disputes.",
+        "Accept or reject auditor assignments and decide how to handle an unavailable impartial auditor.",
+        "Accept or return the calendar and decide how to respond when an area is unavailable.",
+        "Accept or reject changes to move, add or cancel audits, including short-notice requests."
       ],
       "pass": true,
       "deterministic": {
@@ -1950,17 +1966,17 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "0d014816c6afde016788c9e6eb83877aa37efe31a93c5ff2349a1733807235a4",
-      "contentHash": "3d9de79cfb62dcac871895c46fdd99aaac2c474269f40917f70de120e1e6d08c",
+      "inputHash": "ff4e7bd6b979c94fd169e3bc45b9932050253902118081fc9f2767c724100c6e",
+      "contentHash": "1da4a3da0d5e7824907811dbf38ffef9f1b7b7ca1216267fb596d0a6917ee93c",
       "paragraphHashes": [
         "1d23ff70d4ef2d25cb2c20b99d1d6dc7f73f24175cf6112f0ef2367c6e2c8b18",
         "00b6fbe9d09d785a570eb5752db7e71d489cf7074d072647540a48de6b515f00",
-        "7b1494ddba854cb70d3b5cd256cfbcd408f04365f414124e28aa1f3c1f6fceed",
+        "5c410ec211c36f6dee4b7385568866e529124f039cd84e09a1cc058520b9dd11",
         "a23bfad0d2f1392edf7d369c97da1d1b65c8ccb8dcd299c2bdfce1c8c7fc35de",
         "21ffd34fea90f45415ec72185a5b1c64c5dcbdffd6c7bc5b9fdedac1652e88fe",
         "522edf516d3eacb3390690f65d6a2399e8f07ed7bf9fccb04c0ad8439d31976b",
         "e7e42e85a809decd5c5e2dd2c49b7d1b665493ef0748df326379f2ac935c9c68",
-        "240ab1e3bb7e3c505a0f099b68d80fe1565b8467ec4d2add43240e0c08310617",
+        "b82af30347e142450e2ddb3014a65c4a8788646bef36be1ea22eda14aee8a96a",
         "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
         "fefaf68b3c2873274f2b902d83fd7f8efc1fc81d4d37d52dd7e2b7894393b079",
         "1da2504a4aff4bc1344ed72605fb5d1c915aa51dd397f354919a1dc278955d22",
@@ -1981,7 +1997,7 @@
         "35e27c0ca77a14837e05c29fee2d1a2d98f210c26a4bfe2ed80a9f7e8e8eb57f",
         "be3b0ee875d1886ae3d1af86a892dc90eef709a1923bd8a6956c2902637bff9e",
         "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
-        "32e33496260dfeb3652ccb444995192c5e690e135363cefe8d3bcb87a8bf0ef4",
+        "b0bb1a755a76d06c20c63dc5d750ea79d5fe784352f5da453f0c9c2df2a02392",
         "265f814d89fb332a006a08d8339c2e8ea6b2e3d54fd809bc60480f8a9171111b",
         "75358428a12598a89dda72b6f91eb89d2513eeed259a6db21badc3157e9e41ab",
         "210e946a7621940a65f01d98cca0d3da81abdafaf7ac7084e1eefb717412921f",
@@ -1994,8 +2010,8 @@
         "c892e58872cd2724dd2b9709950fadecc0597e653672a593c26b6223a24a1566",
         "06aa32423556a843ab195fe7ff79fa54ad9fd570a19d1c2f0b92e75edc03ce43"
       ],
-      "outputContextHash": "5c7af1ccbb8bcfac316a55a049ecc10f1302bcbbd5426bddff75ab06ca06d988",
-      "reviewedAt": "2026-11-02T14:54:32.022Z",
+      "outputContextHash": "3a6bfebde75def118e3e20eca4600d30cf4990ad367a4e8c5e1240ace06fe8f3",
+      "reviewedAt": "2026-11-02T15:16:07.724Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "audit-evidence": {
@@ -2006,11 +2022,15 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The page covers the assigned evidence workflows with supported citations, actionable decisions and labeled hypothetical examples. It does not include an unassigned FAQ.",
+      "summary": "The changed paragraph presents a practical offline test and fallback without introducing a clear problem. No previous findings remain unresolved.",
       "glossary": [
         {
           "term": "Observation",
-          "definition": "What the auditor saw, read or was told, recorded with enough detail for someone else to check it."
+          "definition": "What an auditor saw, read or was told, recorded in enough detail for someone else to check."
+        },
+        {
+          "term": "Criterion",
+          "definition": "A requirement, procedure or stated expectation against which evidence is measured."
         }
       ],
       "roles": [
@@ -2019,46 +2039,33 @@
         "Lead auditor",
         "Auditor",
         "Auditee",
-        "Vendor",
         "Second reviewer",
-        "Reviewer",
         "Process owner",
         "System administrator",
         "Top management",
+        "Vendor",
         "Contractor"
       ],
       "recordNames": [
         "Audit plan",
-        "Scope entry",
+        "Audit checklist",
         "Prior findings",
         "Process map",
-        "Approved checklist",
-        "Observation records",
-        "Trial set of observations",
+        "Observation",
         "Criteria list",
-        "Evidence",
-        "Evidence-to-criterion links",
-        "Finding",
-        "Follow-up evidence",
+        "Evidence-to-criterion link",
         "Torque log",
-        "Work instruction",
-        "Customer requirement",
         "Customer drawing",
         "Access rules",
         "Test log",
         "Temporary-access decision"
       ],
       "decisions": [
-        "Whether to accept or return the checklist",
-        "Whether to write or revise a question when library items are unsuitable or a question is disputed",
-        "Whether the observation-recording method is acceptable",
-        "Whether to use paper capture when a connection or device is unavailable, and who enters it and when",
-        "Whether to accept or return each evidence-to-criterion link",
-        "Whether to add a criterion, collect more evidence or note a gap",
-        "Which user types may see or change each record type",
-        "Whether to accept or return the access configuration",
-        "Whether to grant, narrow or refuse temporary access",
-        "How to apply the previously taken evaluation decision when a product cannot enforce an access rule"
+        "Accept or return the checklist and decide how to handle unsuitable or disputed questions.",
+        "Accept or reject the observation recording method and decide how to handle unavailable connectivity or devices.",
+        "Accept or return evidence-to-criterion links and decide how to address evidence without a criterion or a criterion without evidence.",
+        "Approve access rules and accept or return their configuration after testing.",
+        "Grant, narrow or refuse temporary access and record the disposition of an unenforceable rule."
       ],
       "pass": true,
       "deterministic": {
@@ -2151,8 +2158,8 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "6085e9223dbfae9c9b456b7f501d54732a72544656653a11b0b7259f43caeb7f",
-      "contentHash": "d985a5f7223c432318c45de15ffdb74da6684d36368b065ecd1703ce2d7bd488",
+      "inputHash": "ba545bff00ff51e7ee24ca120a57c3b2d6351051f96ae5d9681a2a6242a37fa3",
+      "contentHash": "d14e95a6ca3c75f73d8f75d093935400654e870195ecb8677f5257ede6238558",
       "paragraphHashes": [
         "1dc77eb46ff0c4f14e9390cd2b4d3e80c8ced9da4526e9a19bf8017bb33ffea5",
         "19fea0eb1d0c6a8bad43bcd708bcffbd66fa1414d821bfa5086e29134040ac39",
@@ -2170,7 +2177,7 @@
         "1cf64e617b8325703575553f6f2969cb46b06dedc7851d9e977b0a1c5b39e8ee",
         "6943bb08bdc3a99e2cfb2f0f3a9d5aba3211d114b38bd7ec9e20d9b711810c50",
         "0b69107dcd67fd21ccd92b58f64872a886d297a7ec1dd925fb526389d7028524",
-        "099fd2cfd94b0f35cf087474ec2f4197a664e26bc57105b6a1f02b8e8370fb9e",
+        "3e93c7c2fb7779d5ea7ced55b63d0fa7f8b56caedd51d9801d044b2911e0ea17",
         "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
         "63ab4d8f2fdbdd285ab6ab16a556830850e565e23077075f7f76302165b5fffa",
         "ea9c79262382a068362f3c3f5b1c653b73250017fed68ac2a8c2a469617afaef",
@@ -2195,8 +2202,8 @@
         "a100bf348e56ec0a495f9acae182263197c7c5adb7eddde37288ab70e6549ac4",
         "4dc290135d0b84a2675015835efee770855b0e63435128a3b1c39179f6b83de2"
       ],
-      "outputContextHash": "28cd60140e6ef71130dcb0fc7da4732d4790480cf2a485769bf10038752886a6",
-      "reviewedAt": "2026-11-02T14:55:47.497Z",
+      "outputContextHash": "f805cb12c509fa576a40dd098d273ec6181d675916b41a64b2dd55c40533f795",
+      "reviewedAt": "2026-11-02T15:17:06.969Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "audit-findings": {
@@ -2207,7 +2214,7 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The page covers all four assigned workflows with supported citations, actionable evaluation questions and labeled hypothetical examples. No FAQ was assigned or included.",
+      "summary": "The changed paragraph presents no clear problem, and there are no earlier findings to resolve. No FAQ is assigned or included.",
       "glossary": [
         {
           "term": "Finding",
@@ -2215,15 +2222,17 @@
         }
       ],
       "roles": [
+        "Workflow owner",
         "Quality manager",
         "Lead auditor",
         "Auditor",
-        "Second reviewer",
         "Reviewer",
+        "Second reviewer",
         "Independent reviewer",
         "Process owner",
         "Response owner",
         "Backup owner",
+        "Approver",
         "Auditee",
         "Top management",
         "Vendor",
@@ -2235,7 +2244,6 @@
         "Audit plan",
         "Evidence",
         "Follow-up evidence",
-        "Category definitions",
         "Confirmation entry",
         "Responsibility table",
         "Production calendar",
@@ -2244,13 +2252,10 @@
       ],
       "decisions": [
         "Whether an observation becomes a finding and which category applies.",
-        "Whether to request more evidence or escalate an observation that does not fit a category.",
-        "Whether evidence is relevant, sufficient and retrievable, or the finding should be returned.",
-        "Whether to collect more evidence, hold or withdraw a finding when evidence is inaccessible or disputed.",
-        "Who owns the response and by when, and whether to reassign or escalate ownership.",
+        "Whether evidence supports a finding or the finding should be returned, held or withdrawn.",
+        "Who owns the response and when it is due.",
         "Whether a disputed finding stands, is revised, is withdrawn or is held for more evidence.",
-        "Whether a dispute decision has a recorded basis or should be returned for more detail.",
-        "Who reviews and accepts a dispute decision when the quality manager is involved."
+        "Who independently reviews and accepts a dispute decision when the quality manager is involved."
       ],
       "pass": true,
       "deterministic": {
@@ -2343,8 +2348,8 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "300c43b93c2eed94464650eb09d1c193c95601fde2bd7595b48b4138bb6a36f5",
-      "contentHash": "a0a48a4f2aba541ee6703893b25061cf4234c830c3b8bf27fe0a4399ffb3291a",
+      "inputHash": "0d33bc4482b0b599340861cd3bca53fbb1225a21848e23d13274d6c16427548d",
+      "contentHash": "f22a3cdf20a1a90e628bf5ed17068560672dfe97b9f120e2e98ad19ec10d9641",
       "paragraphHashes": [
         "19a1f6399f31d5537264005ed71f75abbdb72f1c88c8a6dcce493cf6c3bb89ab",
         "ac9a7c7096a2870c9dfb589b7bb2abbfe761b38faf61b47244e7fccd166530bb",
@@ -2370,7 +2375,7 @@
         "3473ecb84bb2f72ffb0ab628bcefee42cdf611d868c10c90a6631cf826a9c8cb",
         "09e7e0c6368bf4dc0cfdfe0ab5320579e5e3306cc5f586ad637d10508f622c53",
         "539df510e3eeb4f20fcf4a8ef78a998dab6e32ef27f9acee2b8d04de4322e70d",
-        "a260a399e1ad6771b8da55bf2469fa2cd26e08a055aff11166a13dab527b3fdf",
+        "0d85bd8828b787642659ae7213895cebf362b715c68e1c5d5c10bafaa7ea493f",
         "b478218fa47dee10304099f4da7569ed751b8b09e84f6e0b4caabe1018964024",
         "010849de473a6de84273d08638a57f7fb3fece976293996a0dcfa91a71f9f745",
         "e2491c16ee377ff1cdd766b8f59834b419dffe603eb492485659363f124aa0fc",
@@ -2392,8 +2397,8 @@
         "3223deab756d71788214135d71491dc209fb8e3328e1dfe90c2ef452fcadeabd",
         "aa8766c8c6424d487bce3654c3edf81a92bfc3c242b09c01c20e9a1f77a257d7"
       ],
-      "outputContextHash": "fd87e3cd1fb9231062a98b47e646b2a3ea76276fec0da55315dea0d5af5e2cd4",
-      "reviewedAt": "2026-11-02T14:56:54.052Z",
+      "outputContextHash": "75d581cd6d828bd039bed472f4dd32f6bff0db58960599b086b7829a9bc5d580",
+      "reviewedAt": "2026-11-02T15:18:05.515Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "audit-follow-up": {
@@ -2404,11 +2409,11 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The earlier finding is resolved. The changed table presents a workable criteria decision and exception process. No FAQ was assigned or included.",
+      "summary": "The changed paragraph presents no clear problem, and there are no earlier findings to resolve. No FAQ is assigned or included.",
       "glossary": [
         {
-          "term": "Follow-up criterion",
-          "definition": "A statement of what evidence must exist, who checks it and by when."
+          "term": "Follow-up criteria",
+          "definition": "Statements of the evidence, checker and timing required for a finding's follow-up."
         }
       ],
       "roles": [
@@ -2419,10 +2424,9 @@
         "Action owner",
         "Checker",
         "Planner",
-        "Vendor",
+        "Reviewer",
         "Auditor",
-        "Reviewer from another department",
-        "Uninvolved decision-maker"
+        "Vendor"
       ],
       "recordNames": [
         "Approved follow-up criteria",
@@ -2431,19 +2435,19 @@
         "Action evidence",
         "Evidence submission",
         "Checker's decision",
-        "Owner's response",
         "Effectiveness check",
-        "Reopening decision",
-        "Finding history",
-        "Audit program",
-        "Program report"
+        "Reopening request",
+        "Reopening delegation",
+        "Audit program report",
+        "Revised work instruction",
+        "Calibration record"
       ],
       "decisions": [
-        "Accept or return follow-up criteria and approve a criterion for an uncategorized finding.",
-        "Accept or reject implementation evidence and decide whether to close, hold or keep a finding open.",
-        "Approve an alternative control when an independent checker is unavailable.",
-        "Reopen or decline to reopen a finding, and appoint an uninvolved decision-maker when there is a dispute.",
-        "Accept or hold a program report, correct or withdraw untraceable figures, and decide what follows from the report."
+        "Approve or return follow-up criteria and resolve findings that fit no criterion.",
+        "Accept or reject implementation evidence, and approve an alternative control when no independent checker is available.",
+        "Close, hold or keep a finding open based on required effectiveness checks.",
+        "Accept or decline a reopening request, with an uninvolved decision-maker appointed for disputes.",
+        "Accept or hold a program report, correct or withdraw untraceable figures, and decide what actions follow."
       ],
       "pass": true,
       "deterministic": {
@@ -2536,8 +2540,8 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "ceaed65afc7a8ed2d4f2fdec84240eeb80eecdc5d55c1e1e3c57e184f5dc2a69",
-      "contentHash": "77d78efbeba2467f5afb94a96df158f2b94884277e771c45510e4dd991377c8e",
+      "inputHash": "474da0d8eeb2cfe9c8420413e330e25bced1c2ea66b4883b99f45d126974286e",
+      "contentHash": "5e6b9f8a1d36cb6041b0526ab1aeb87d66dd2ad85435d3567f0f7a16554b6794",
       "paragraphHashes": [
         "21722cbb29c99664c3dec51574e88d423c438c4e2916bbdfa36dc5db97e475b9",
         "491e387243615fabe78cc836f11a4af6cf1bd197df3d8139291ce2b3da940be3",
@@ -2546,7 +2550,7 @@
         "90c19882ec14cc0da271b3a3f8213c7c6046f8955969336ce99b1a5e92a68a4e",
         "acf285dd6b46d7723293dc6cbfbf28d01362b66439ea1575af16054c3ba8f9a5",
         "a7d3d79a2fc8216b1a7a3b7b3a9c7536f252d72531212e6ab0a60e08a6f3f380",
-        "1f534e32c2e64ef09ce10f8ebf8327d8a330d525d2e634d1e70b99658515962a",
+        "205dcbe9efeefb05c6cf909dc36809e80720fc6946c868312c29e46620b139b8",
         "ab8803eec568d6b4a447122a436ca2bb2c2f353642f8e4aae9dee7f2b7784dfd",
         "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
         "762e48693f1ed8e66184a1e8b906518e650b4659cf236270b2e0f33e2a42d971",
@@ -2584,8 +2588,8 @@
         "6c99e1af25ea6eb12d6a964ea4a6214dcc3746758581150aa925a509f312eac5",
         "643ac76b711590752582adbe1ff3a53c1aa1257c967846dae7274b85d1f89c79"
       ],
-      "outputContextHash": "7dcf03efaab908a9158dfd5bbb7eb5a1e0df7a42c4db88093f8d08def2263d44",
-      "reviewedAt": "2026-11-02T15:00:40.409Z",
+      "outputContextHash": "5ad7b053078e1b4de4e1d07bd3c5d1c17325d3e73054dbaa49c4ecb7095cf839",
+      "reviewedAt": "2026-11-02T15:19:29.375Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "migration-planning": {
@@ -2596,23 +2600,11 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The page covers the assigned migration workflows with supported citations, labeled hypothetical examples, and actionable decisions and demonstration requests. No FAQ was assigned or included.",
+      "summary": "The changed paragraphs introduce no clear problems, and there are no earlier findings to resolve. No FAQ is assigned or included.",
       "glossary": [
         {
-          "term": "Move and use",
-          "definition": "A record class for material needed in planning or follow-up."
-        },
-        {
-          "term": "Move and archive",
-          "definition": "A record class for material worth keeping and searchable, but not used in daily work."
-        },
-        {
-          "term": "Leave and reference",
-          "definition": "A record class for material kept in its existing location with a pointer from the new system."
-        },
-        {
-          "term": "Retire",
-          "definition": "A record class for material no longer needed, subject to retention rules."
+          "term": "Pilot",
+          "definition": "An import using a limited, representative set of records to reveal problems before a wider import."
         },
         {
           "term": "Cutover",
@@ -2620,7 +2612,7 @@
         },
         {
           "term": "Recovery",
-          "definition": "Deciding in advance what would trigger a rollback and how it would work."
+          "definition": "Planning what would trigger a rollback and how it would work."
         }
       ],
       "roles": [
@@ -2628,16 +2620,14 @@
         "Process owner",
         "Top management",
         "Data steward",
-        "Independent checker",
         "Auditor",
-        "Planner",
+        "Independent checker",
         "System administrator",
         "Vendor"
       ],
       "recordNames": [
-        "Record map",
         "Inventory",
-        "Retention rules",
+        "Record map",
         "Audit program",
         "Audit plan",
         "Audit schedule",
@@ -2648,23 +2638,16 @@
         "Lookup table",
         "Mapping table",
         "Pilot set",
-        "Import rules",
         "Verification checklist",
         "Verification log",
-        "Audit calendar",
-        "Access list",
         "Cutover plan",
-        "Late-change log",
-        "Rollback entry"
+        "Late-change log"
       ],
       "decisions": [
-        "Classify each record type and accept or return the inventory.",
-        "Assign an owner and interim class when ownership or retention rules are unclear.",
-        "Fix data gaps before import, defer them, or accept them as unknown.",
-        "Accept or return relationship mappings and decide how to handle links that cannot be established.",
-        "Accept the pilot, repeat it, or seek approval to progress with a documented gap.",
-        "Choose the cutover date and approve or postpone progression based on verification and access.",
-        "Roll back or continue with an approved, documented gap when a cutover trigger is met."
+        "Classify each record type and accept or return the inventory; assign an owner and interim class when ownership or retention is unclear.",
+        "Fix, defer or mark data gaps as unknown; accept or return relationship mappings and decide how to handle unestablished links.",
+        "Accept the pilot, rerun it or progress with a documented gap approved by top management.",
+        "Approve or postpone cutover and decide whether to roll back or continue with an approved, documented gap."
       ],
       "pass": true,
       "deterministic": {
@@ -2757,8 +2740,8 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "a2d1078aad0168610b3772ef6e7dcf5d267cb8cb8c18f3304ba165cb2914cee2",
-      "contentHash": "d84ad4c0f9e9c33448da268a9e7568e2fed35b5b9f09d4bee83aaedf90004ba4",
+      "inputHash": "933df076e62354017a2d531f384c7ade922cd31b22d6acbe83222e4131abe96c",
+      "contentHash": "548aac55cdddf5f0555f5a679146adf4ff0e2d6c5643cfa098d469e50d0b959c",
       "paragraphHashes": [
         "794070b0f40548009f6c28df4e55d3c0602ffd26d416c15c238f9af190ff7589",
         "56172b63196994108153ed5c76b60d1bf2d9f8408377b888503b224d23a66bf7",
@@ -2784,8 +2767,8 @@
         "b2190863c3c909253d01ff359278eb2b433e8bb4877ee9415e84ae7adfa12c4b",
         "0c0fd8b7dea0e07b859ea7e0b5e47a6662bc81e53eb7ab346445028dba34844e",
         "f4e2442ced52e93a251dc3b75e7fe2b1b7fa203ce867009636a93c15322a0cfd",
-        "e185c6d5285c068859c908df565a39d56d81b3a3b6af67610df26f7262cf0be3",
-        "368c7874412a0efb3218fff4697a9dd6e0f54b1f58042d277128f27d4ee4850f",
+        "4b985a2485ecbc93d8b728091d0cd53e2f7613d490fbc6ac64ac63e530fe42eb",
+        "e92b32ae789f2986e9de328add38fdc4cdb38a691279202c736617df1de4d461",
         "47ab2b70b48158f2fdc0c289eadfe07c217424e1c0f698d18fcecd5cf4dee839",
         "83717836fb6da2b6895499c1f6ee0e1738f36baef82f2b459577228a45006897",
         "5bc21698ead3f357ffd993230cf4829840815e3ee263c72c688c02914118f17e",
@@ -2806,8 +2789,8 @@
         "954368615fc687af3b60b690d547cef3c813903c7d3fb4b14f769540e6bb8678",
         "21af1f50728c853f5bc302239f4d332d939e68c98a482aad8d9ec3e8bd2b3151"
       ],
-      "outputContextHash": "947d28671c1f779b974c03a719d144056943216c938eeaf384d92b4b223c643d",
-      "reviewedAt": "2026-11-02T15:02:02.537Z",
+      "outputContextHash": "c209e8799be032450b78eca1b90ebd0e4080cf49856916c2b576dfbd130c5c1d",
+      "reviewedAt": "2026-11-02T15:20:32.866Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "training-rollout": {
@@ -2818,64 +2801,55 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The earlier finding is resolved: the rollout-completion decision now accounts for workload targets and approved deviations. No new issue was found in the changed paragraphs.",
+      "summary": "No previous findings remain unresolved. The changed paragraph clearly distinguishes the user pilot from the migration data pilot.",
       "glossary": [
         {
-          "term": "Learning task",
-          "definition": "A role-specific exercise using sample records whose result is shown to someone who can judge it."
-        },
-        {
           "term": "User pilot",
-          "definition": "A test of whether real users can do real work in the system with their records and constraints."
+          "definition": "A test of whether representative users can perform work in the system with the relevant records and constraints."
         },
         {
           "term": "Staged deployment",
-          "definition": "A rollout that brings in groups of users or parts of the program in a planned order."
+          "definition": "Introducing groups of users or parts of the audit program in a planned order."
         }
       ],
       "roles": [
         "Workflow owner",
         "Quality manager",
         "Trainer",
-        "Observer",
         "Planner",
         "Auditor",
         "Action owner",
         "Checker",
         "Management",
-        "Top management",
-        "Pilot user",
+        "Observer",
+        "Vendor",
         "Process owner",
-        "Vendor"
+        "Pilot user",
+        "Top management"
       ],
       "recordNames": [
         "Responsibility table",
-        "Task list",
-        "Sample records",
+        "Task list per role",
+        "Shift pattern",
         "Learning record",
         "Audit plan",
         "Finding",
-        "Evidence",
         "Follow-up evidence",
-        "Program report",
+        "Audit program report",
         "Issue log",
         "Pilot report",
         "Stage plan",
         "Known-issues list",
         "Workload log",
-        "User feedback",
-        "Stage records",
         "Evaluation report"
       ],
       "decisions": [
-        "Whether a person may use the system for a role or needs more practice.",
-        "Whether to reschedule, provide another learning route or limit access when a person cannot attend or pass a task.",
-        "Whether the pilot succeeded, should be extended or repeated, or may proceed with an approved exception.",
-        "Whether a pilot problem requires training, configuration changes or a system fix, and whether a system problem blocks rollout.",
-        "Whether to start or hold the next deployment stage.",
-        "Whether to pause, roll back or continue a stage with a workaround after a serious problem.",
-        "Whether rollout is complete based on adoption and workload targets, approved deviations and ownership of open issues.",
-        "Whether to retrain, reconfigure or request vendor help when adoption or workload results need attention."
+        "Whether a person may use the system for a role and how to handle missed or unsuccessful training.",
+        "Whether the pilot succeeded, needs extension or repetition, or may proceed with an approved exception.",
+        "Whether a pilot problem is a training, configuration or system problem and whether it blocks rollout.",
+        "Whether to start the next deployment stage.",
+        "Whether to pause, roll back or continue a stage with a workaround.",
+        "Whether rollout is complete and how to address low adoption or increased workload."
       ],
       "pass": true,
       "deterministic": {
@@ -2968,8 +2942,8 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "ed1472a97783436db333202e5ad46dc3f4dc1ae27cc84bec860ffd5086782602",
-      "contentHash": "73abeba4e6d12cfaa8fea465e89cfca86a81ee6c5917af7bcf033d078d089b83",
+      "inputHash": "4843c9d0f05e5afc9a15a6b708a37de1c152828613532eb71254d494b11a8a5e",
+      "contentHash": "1862073f0caad0ec0789f892a5dade696f7c1f185732f11a3a523fb3fe0fe4c5",
       "paragraphHashes": [
         "52bcab03b85d77505e17d3633afc1e875fe50ea2a3160d3ecd708e1802ca09ae",
         "6bf8134185f65a968ac9af285c224940b72cbba95d7f1fba269c7989f715453c",
@@ -2983,7 +2957,7 @@
         "5e98267cbe460101c6f6c50d3be9bfd4281f5db0acd00f7ca26264e3d9c70414",
         "8efaa8f0c005ec1b663d5cfe58a8c2f9e5636c79008379ab4b86bf4870406eef",
         "6e68bbc29fb75d740be4cbdda41e97aa9014651425ef98414926443e716257df",
-        "73f567cac003237e55063643b93b4fc915446cfc56c40a781cf2a518886e0914",
+        "75deba02ef683d3a933dfc7b1896e76c6fbb0338821f805cbc788955675470f3",
         "4c1affccccd78b49a4a8c3e5f44a9698caac892a7db85c3a33b3fd3c80376196",
         "ded76dc95b6d6cd8ab1606ae525c8271388b300c742f70e6e1c0c58749300e92",
         "a38d5948e85378167f991a199755a3555a6b58162e3719c31d0bc6cdbf1a38b9",
@@ -3013,8 +2987,8 @@
         "db01235b3fb04ee84872dc19b9046f87a28a6eec7bde86200bfb4682e4397ae9",
         "147b5463ccb30e4bab5f2b9479aa2f3d6e1c73179aec3bf3001fe397bfd1d4c5"
       ],
-      "outputContextHash": "99299464c64abdad436799ee06ee43f86bbccbc30125b8d9ecc2626de5a0f082",
-      "reviewedAt": "2026-11-02T15:04:43.704Z",
+      "outputContextHash": "dc58bfbe380b7a1004633f77190fbccecdf539d3bcfe3e9d2ca387c8145bf11b",
+      "reviewedAt": "2026-11-02T15:21:49.658Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "ongoing-operation": {
@@ -3207,7 +3181,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "6042cd3e1b2dbd9f3543e6a43f50173eb526c7e56b2b3d229e77f988b54719b1",
+      "inputHash": "b7b0c12c9d6f05a5c53d429fa1b90ed9c541dee6eab5709fdb52b0e600b0a1f9",
       "contentHash": "0c82fc023c8d76746b3e6fffdbb768e904a74b953b654edc2996dc9a72d935b6",
       "paragraphHashes": [
         "2bc931bc3c3b35b7daa7d442f6f176389d11af5145d5a5aab237cf206fe58b5d",
@@ -3265,9 +3239,11 @@
         "c61f229ccc38e55471f7158b55a6b5ff6c5f37240694aef089be863982c3c391",
         "ec79eaf1124c74d25e06759f72537c12bbcf5f6b3c1b475d7391952df11ff584"
       ],
-      "outputContextHash": "fbad6a5c577fa7042386273645b30407424f200418576e9522c69f5183af6a0d",
-      "reviewedAt": "2026-11-02T15:11:03.006Z",
-      "reviewer": "Configured independent chapter reviewer"
+      "outputContextHash": "50858791b85906024c1bb4c3128265fbd4658d5747b81231a3ae196456b90eb1",
+      "reviewedAt": "2026-11-02T15:21:49.911Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-02T15:11:03.006Z"
     },
     "internal-audit-software": {
       "claims": "passed",
@@ -3392,7 +3368,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "03de201d8bfa8aceeb0bddbef90b34def6553f9578eafd7fc9cbb5fef94ec3fe",
+      "inputHash": "c8a9b45be028bec31bc02ba3bdf38c4c5316a9d0a0b6c572a38d746c9770ce5e",
       "contentHash": "69a04c483409fb744a9f15f3d0bac559ef2c082e772e73384f7fb9f6caa9179e",
       "paragraphHashes": [
         "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
@@ -3431,8 +3407,8 @@
         "050663467ab157305997658f85ea883297cc9fd611c3b2f422c2f109874f2770",
         "92a8c0f9b32a620cd3475f7aa1b731132062f24c433e9824594778f2342770a8"
       ],
-      "outputContextHash": "480a58f81e444e88cc750e3f56a5f216e4a432f669d9737040e7038219db76b0",
-      "reviewedAt": "2026-11-02T15:11:12.697Z",
+      "outputContextHash": "9370738a74c3b595b3622274773d6f9295161f587d3c1493de81c49fe40990cc",
+      "reviewedAt": "2026-11-02T15:21:50.192Z",
       "reviewer": "Configured independent chapter reviewer",
       "carried": true,
       "carriedFrom": "2026-11-02T15:08:36.920Z"
@@ -3440,27 +3416,7 @@
   },
   "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883",
   "outlineHash": "9a0993bb78e37f48a9899644df0efc4fdc9325c541b676c1994825e821f68297",
-  "audit": {
-    "claims": "passed",
-    "consistency": "passed",
-    "repetition": "passed",
-    "unresolvedFindings": [],
-    "inputHash": "b6df2cd02a17aeb17e8f81a2d495594e2c86c2b5068af13095b6f177f88656be",
-    "pageHashes": {
-      "internal-audit-software": "a6fcbf1af56a731ad86ac29c55a8046d396d772ba9c72164de54d381aff8f34f",
-      "mapping-workflows": "7100bb386c7185a342f819703ec087f4a1d370ceda470656c80fcf7770239616",
-      "evaluating-software": "b033a546b7eb6cdb2eaa195604ced60483ee3a723a26026d2ebd0b51f906a669",
-      "audit-planning": "18c9e340fd74b1772fdf05c5f29ce94d201d70ccf0f1b58c19d34a5db1d99a12",
-      "audit-evidence": "74d578847cc04bdd36f0f2761a5bc1e8c7640efd5cb9c0174cc7df6882678459",
-      "audit-findings": "8eb8bf6ab2ec7253030b1cf07d520f0ff9fd7f7dd23188a031408e451efa0f3f",
-      "audit-follow-up": "18f1405c2435db698aef4c20f70d1cb37de178eff09fdf86268e262ddfb0cc69",
-      "migration-planning": "e46fe312d57a4d92b5432a21c5dbd21cfd1fb94e479387ef19a981ea74009bd2",
-      "training-rollout": "5c22502461c043df5caf61ffe48fbf66e2f58244238b0451896f8c5f88e5480e",
-      "ongoing-operation": "2b08f451085208f0b4b06799f6cced0ef89c472758db7dc58ce49e97ec6f93f6"
-    },
-    "reviewer": "Configured openai independent review",
-    "reviewedAt": "2026-11-02T15:11:24.877Z"
-  },
+  "audit": null,
   "generationCompletedAt": null,
   "finalReport": null
 }

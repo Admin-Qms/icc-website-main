@@ -6,11 +6,11 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The earlier finding is resolved. The changed table presents a workable criteria decision and exception process. No FAQ was assigned or included.",
+  "summary": "The changed paragraph presents no clear problem, and there are no earlier findings to resolve. No FAQ is assigned or included.",
   "glossary": [
     {
-      "term": "Follow-up criterion",
-      "definition": "A statement of what evidence must exist, who checks it and by when."
+      "term": "Follow-up criteria",
+      "definition": "Statements of the evidence, checker and timing required for a finding's follow-up."
     }
   ],
   "roles": [
@@ -21,10 +21,9 @@
     "Action owner",
     "Checker",
     "Planner",
-    "Vendor",
+    "Reviewer",
     "Auditor",
-    "Reviewer from another department",
-    "Uninvolved decision-maker"
+    "Vendor"
   ],
   "recordNames": [
     "Approved follow-up criteria",
@@ -33,19 +32,19 @@
     "Action evidence",
     "Evidence submission",
     "Checker's decision",
-    "Owner's response",
     "Effectiveness check",
-    "Reopening decision",
-    "Finding history",
-    "Audit program",
-    "Program report"
+    "Reopening request",
+    "Reopening delegation",
+    "Audit program report",
+    "Revised work instruction",
+    "Calibration record"
   ],
   "decisions": [
-    "Accept or return follow-up criteria and approve a criterion for an uncategorized finding.",
-    "Accept or reject implementation evidence and decide whether to close, hold or keep a finding open.",
-    "Approve an alternative control when an independent checker is unavailable.",
-    "Reopen or decline to reopen a finding, and appoint an uninvolved decision-maker when there is a dispute.",
-    "Accept or hold a program report, correct or withdraw untraceable figures, and decide what follows from the report."
+    "Approve or return follow-up criteria and resolve findings that fit no criterion.",
+    "Accept or reject implementation evidence, and approve an alternative control when no independent checker is available.",
+    "Close, hold or keep a finding open based on required effectiveness checks.",
+    "Accept or decline a reopening request, with an uninvolved decision-maker appointed for disputes.",
+    "Accept or hold a program report, correct or withdraw untraceable figures, and decide what actions follow."
   ],
   "pass": true,
   "deterministic": {
@@ -138,8 +137,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "ceaed65afc7a8ed2d4f2fdec84240eeb80eecdc5d55c1e1e3c57e184f5dc2a69",
-  "contentHash": "77d78efbeba2467f5afb94a96df158f2b94884277e771c45510e4dd991377c8e",
+  "inputHash": "474da0d8eeb2cfe9c8420413e330e25bced1c2ea66b4883b99f45d126974286e",
+  "contentHash": "5e6b9f8a1d36cb6041b0526ab1aeb87d66dd2ad85435d3567f0f7a16554b6794",
   "paragraphHashes": [
     "21722cbb29c99664c3dec51574e88d423c438c4e2916bbdfa36dc5db97e475b9",
     "491e387243615fabe78cc836f11a4af6cf1bd197df3d8139291ce2b3da940be3",
@@ -148,7 +147,7 @@
     "90c19882ec14cc0da271b3a3f8213c7c6046f8955969336ce99b1a5e92a68a4e",
     "acf285dd6b46d7723293dc6cbfbf28d01362b66439ea1575af16054c3ba8f9a5",
     "a7d3d79a2fc8216b1a7a3b7b3a9c7536f252d72531212e6ab0a60e08a6f3f380",
-    "1f534e32c2e64ef09ce10f8ebf8327d8a330d525d2e634d1e70b99658515962a",
+    "205dcbe9efeefb05c6cf909dc36809e80720fc6946c868312c29e46620b139b8",
     "ab8803eec568d6b4a447122a436ca2bb2c2f353642f8e4aae9dee7f2b7784dfd",
     "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
     "762e48693f1ed8e66184a1e8b906518e650b4659cf236270b2e0f33e2a42d971",
@@ -186,7 +185,7 @@
     "6c99e1af25ea6eb12d6a964ea4a6214dcc3746758581150aa925a509f312eac5",
     "643ac76b711590752582adbe1ff3a53c1aa1257c967846dae7274b85d1f89c79"
   ],
-  "outputContextHash": "7dcf03efaab908a9158dfd5bbb7eb5a1e0df7a42c4db88093f8d08def2263d44",
-  "reviewedAt": "2026-11-02T15:00:40.409Z",
+  "outputContextHash": "5ad7b053078e1b4de4e1d07bd3c5d1c17325d3e73054dbaa49c4ecb7095cf839",
+  "reviewedAt": "2026-11-02T15:19:29.375Z",
   "reviewer": "Configured independent chapter reviewer"
 }

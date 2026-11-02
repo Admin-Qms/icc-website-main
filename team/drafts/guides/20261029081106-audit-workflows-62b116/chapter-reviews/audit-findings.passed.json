@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The page covers all four assigned workflows with supported citations, actionable evaluation questions and labeled hypothetical examples. No FAQ was assigned or included.",
+  "summary": "The changed paragraph presents no clear problem, and there are no earlier findings to resolve. No FAQ is assigned or included.",
   "glossary": [
     {
       "term": "Finding",
@@ -14,15 +14,17 @@
     }
   ],
   "roles": [
+    "Workflow owner",
     "Quality manager",
     "Lead auditor",
     "Auditor",
-    "Second reviewer",
     "Reviewer",
+    "Second reviewer",
     "Independent reviewer",
     "Process owner",
     "Response owner",
     "Backup owner",
+    "Approver",
     "Auditee",
     "Top management",
     "Vendor",
@@ -34,7 +36,6 @@
     "Audit plan",
     "Evidence",
     "Follow-up evidence",
-    "Category definitions",
     "Confirmation entry",
     "Responsibility table",
     "Production calendar",
@@ -43,13 +44,10 @@
   ],
   "decisions": [
     "Whether an observation becomes a finding and which category applies.",
-    "Whether to request more evidence or escalate an observation that does not fit a category.",
-    "Whether evidence is relevant, sufficient and retrievable, or the finding should be returned.",
-    "Whether to collect more evidence, hold or withdraw a finding when evidence is inaccessible or disputed.",
-    "Who owns the response and by when, and whether to reassign or escalate ownership.",
+    "Whether evidence supports a finding or the finding should be returned, held or withdrawn.",
+    "Who owns the response and when it is due.",
     "Whether a disputed finding stands, is revised, is withdrawn or is held for more evidence.",
-    "Whether a dispute decision has a recorded basis or should be returned for more detail.",
-    "Who reviews and accepts a dispute decision when the quality manager is involved."
+    "Who independently reviews and accepts a dispute decision when the quality manager is involved."
   ],
   "pass": true,
   "deterministic": {
@@ -142,8 +140,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "300c43b93c2eed94464650eb09d1c193c95601fde2bd7595b48b4138bb6a36f5",
-  "contentHash": "a0a48a4f2aba541ee6703893b25061cf4234c830c3b8bf27fe0a4399ffb3291a",
+  "inputHash": "0d33bc4482b0b599340861cd3bca53fbb1225a21848e23d13274d6c16427548d",
+  "contentHash": "f22a3cdf20a1a90e628bf5ed17068560672dfe97b9f120e2e98ad19ec10d9641",
   "paragraphHashes": [
     "19a1f6399f31d5537264005ed71f75abbdb72f1c88c8a6dcce493cf6c3bb89ab",
     "ac9a7c7096a2870c9dfb589b7bb2abbfe761b38faf61b47244e7fccd166530bb",
@@ -169,7 +167,7 @@
     "3473ecb84bb2f72ffb0ab628bcefee42cdf611d868c10c90a6631cf826a9c8cb",
     "09e7e0c6368bf4dc0cfdfe0ab5320579e5e3306cc5f586ad637d10508f622c53",
     "539df510e3eeb4f20fcf4a8ef78a998dab6e32ef27f9acee2b8d04de4322e70d",
-    "a260a399e1ad6771b8da55bf2469fa2cd26e08a055aff11166a13dab527b3fdf",
+    "0d85bd8828b787642659ae7213895cebf362b715c68e1c5d5c10bafaa7ea493f",
     "b478218fa47dee10304099f4da7569ed751b8b09e84f6e0b4caabe1018964024",
     "010849de473a6de84273d08638a57f7fb3fece976293996a0dcfa91a71f9f745",
     "e2491c16ee377ff1cdd766b8f59834b419dffe603eb492485659363f124aa0fc",
@@ -191,7 +189,7 @@
     "3223deab756d71788214135d71491dc209fb8e3328e1dfe90c2ef452fcadeabd",
     "aa8766c8c6424d487bce3654c3edf81a92bfc3c242b09c01c20e9a1f77a257d7"
   ],
-  "outputContextHash": "fd87e3cd1fb9231062a98b47e646b2a3ea76276fec0da55315dea0d5af5e2cd4",
-  "reviewedAt": "2026-11-02T14:56:54.052Z",
+  "outputContextHash": "75d581cd6d828bd039bed472f4dd32f6bff0db58960599b086b7829a9bc5d580",
+  "reviewedAt": "2026-11-02T15:18:05.515Z",
   "reviewer": "Configured independent chapter reviewer"
 }
