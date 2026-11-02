@@ -65,6 +65,14 @@
     {
       "term": "Staged deployment",
       "definition": "A rollout that brings in groups of users or parts of the program in a planned order."
+    },
+    {
+      "term": "Audit program",
+      "definition": "The level of audit planning that covers the period as a whole."
+    },
+    {
+      "term": "Audit plan",
+      "definition": "The level of planning for a single audit."
     }
   ],
   "roles": [
@@ -105,7 +113,8 @@
     "Pilot user",
     "Owner",
     "Note taker",
-    "Decision-maker"
+    "Decision-maker",
+    "Production representative"
   ],
   "recordNames": [
     "Audit program",
@@ -206,7 +215,12 @@
     "Representative records",
     "Demonstration pack",
     "Attendee list",
-    "Observations"
+    "Observations",
+    "Notes",
+    "List of owners",
+    "Requirements sheet",
+    "PDF report",
+    "Audit trends"
   ],
   "example": {
     "label": "Illustrative example",
@@ -351,6 +365,24 @@
         "Which improvements to pursue and whether to proceed without an unsupported benefit figure.",
         "Whether to accept or return an FAQ answer and how to resolve a conflict with procedure.",
         "Whether the demonstration pack is ready and what substitute to use for a record that cannot be shared."
+      ]
+    },
+    {
+      "slug": "internal-audit-software",
+      "title": "Internal audit management software for Canadian quality and operations teams",
+      "summary": "The introduction covers the assigned scope, gives an ordered guide overview, uses supported sources and labels its examples as hypothetical. No FAQ was assigned or included.",
+      "bodyHash": "a6fcbf1af56a731ad86ac29c55a8046d396d772ba9c72164de54d381aff8f34f",
+      "decisions": [
+        "Who schedules audits, who may close findings, and what evidence is acceptable.",
+        "Which problem and acceptance criteria will guide the software evaluation.",
+        "Which roles own workflow decisions and project stages.",
+        "Whether to proceed, repeat or stop at each project stage.",
+        "How to set audit frequency, duration and scope.",
+        "How to assign auditors and change the schedule when production or risk changes.",
+        "How to classify and confirm findings and handle disputes.",
+        "What follow-up is required and when a finding should be reopened.",
+        "How to migrate records, configure the system, train users and deploy it.",
+        "How to measure success and review improvements using the team's own records."
       ]
     }
   ],

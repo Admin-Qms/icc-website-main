@@ -105,11 +105,11 @@
       "wordCount": 1501,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-10-30T15:08:12.994Z"
+      "checkpointedAt": "2026-11-02T15:08:18.864Z"
     }
   },
   "createdAt": "2026-10-29T08:11:06.243Z",
-  "updatedAt": "2026-11-02T15:07:31.142Z",
+  "updatedAt": "2026-11-02T15:08:36.922Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "audit-workflows",
@@ -1441,7 +1441,7 @@
     "reviewedChapters": [],
     "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
   },
-  "contextHash": "f7321fd4c29d6b748e15e39c83263eb39cfa277224cc3db9c0a820a33ee3c377",
+  "contextHash": "2580267671124f03d8911640a72e695fbfa530b35632f0bc38f8360cf1d5b72d",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -3274,6 +3274,172 @@
       ],
       "outputContextHash": "f7321fd4c29d6b748e15e39c83263eb39cfa277224cc3db9c0a820a33ee3c377",
       "reviewedAt": "2026-11-02T15:07:31.139Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "internal-audit-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The introduction covers the assigned scope, gives an ordered guide overview, uses supported sources and labels its examples as hypothetical. No FAQ was assigned or included.",
+      "glossary": [
+        {
+          "term": "Audit program",
+          "definition": "The level of audit planning that covers the period as a whole."
+        },
+        {
+          "term": "Audit plan",
+          "definition": "The level of planning for a single audit."
+        }
+      ],
+      "roles": [
+        "Workflow owner",
+        "Auditor",
+        "Process owner",
+        "Production representative",
+        "IT contact",
+        "Quality manager",
+        "Lead auditor",
+        "Production manager",
+        "Auditee"
+      ],
+      "recordNames": [
+        "Audit program",
+        "Audit plan",
+        "Audit schedule",
+        "Audit calendar",
+        "Checklist",
+        "Notes",
+        "Observation",
+        "Finding",
+        "Evidence",
+        "Corrective action log",
+        "Problem statement",
+        "List of owners",
+        "Acceptance criteria",
+        "Requirements sheet",
+        "Category definitions",
+        "Sample records",
+        "PDF report",
+        "Audit trends"
+      ],
+      "decisions": [
+        "Who schedules audits, who may close findings, and what evidence is acceptable.",
+        "Which problem and acceptance criteria will guide the software evaluation.",
+        "Which roles own workflow decisions and project stages.",
+        "Whether to proceed, repeat or stop at each project stage.",
+        "How to set audit frequency, duration and scope.",
+        "How to assign auditors and change the schedule when production or risk changes.",
+        "How to classify and confirm findings and handle disputes.",
+        "What follow-up is required and when a finding should be reopened.",
+        "How to migrate records, configure the system, train users and deploy it.",
+        "How to measure success and review improvements using the team's own records."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: The operational problem",
+            "section": "The operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: How to use this guide",
+            "section": "How to use this guide"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+            "section": "Planning evaluation and implementation"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "6b225d50bfad8f4e1c5940bdff8ea4fb75ea5061446adacb60878d32131b9a93",
+      "contentHash": "69a04c483409fb744a9f15f3d0bac559ef2c082e772e73384f7fb9f6caa9179e",
+      "paragraphHashes": [
+        "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
+        "18cdeff9fd9f3a20079978e3b5de203e4e8a1347b89a45f9919e1e9400f8f7a3",
+        "61fbade73fafaf67e74cdf058b4b19d33039e31449e9fb8e34e37cf830f13798",
+        "e80599edae53f67dd459236e5d3ae82f4d3f75979d75dbb06cc02439dda025c2",
+        "195da5e7b31e19be68da2f19f57b5a6c84b06a8def3c139460e5e2436d55f390",
+        "03f9f3e0c3ee6bfa9a22c783f7076c713b12c9fd7545b4db61bc429fd7cf1c9a",
+        "e5a220d096418be4bb9504a87db694764a8bacaee8c196b49d101c2a875e15da",
+        "d54af3099d005c53bf78da579eb62c24e1d21d827b084865e940810ce5b648fb",
+        "8fdd82ace5f0654e408c647be8cfdec4e05c7cb2dd2bd66f8caae9a0280c8571",
+        "a101eff8997ae30392624fe358767a4d4531bcd5ad293e5f613378a8b7dddaa1",
+        "11601fcd2fb205da42dcb6ffc071128a71775c5e486d42ddaed54192e24c938d",
+        "00c1a9e2a2f66370e50a8f05f365f3bdd2651643fbc00e8673893cd061f0b1a5",
+        "045cee0b8808026ce5a945e9de50efc744cf01ade867c1cf5c2267a222b1a04c",
+        "cfddb6ca6d34072d80d1059d5265eacfcb470f610ee041e224b4fde2f4a6ebd7",
+        "f1e738161a7a4ec53202aac0ef3c844de52305b30c58a6922e517b890fc534b8",
+        "2b5cbb1725656b5a997ddd6b56eaa73a45a7486f2803daf21324299ec4a46ae4",
+        "677fdd9c16c99b469ee942eaa4d6b479536f1f7da2ec11c5c8313c75e3be39b4",
+        "da1ce59b5bc480d9e659623dbe508dfbf55c181b04631b417df5455cc2961eb2",
+        "24535125162b8282e8673c4531de9c5a6ef3e7474317d56f2cbdc71825a59045",
+        "89c9cb1bb99c92ad2ba6e58763dc49c3d16e949b0b12a1697b90bbf820e87e55",
+        "5ec8f69c9415a65a3d13873da2182925538afe6200e48a538c31b7819766ae14",
+        "e8ee00f15befdeb7005ab08ef1c4d76e4f354e621bf52353178d20b6659521f1",
+        "4b64f939bdc35fcff0f89fb4d967d3b2eae9ab9ada0782ba843b16147be96d32",
+        "4b2d6ecb59b79ec9f793cf9b60e6c608dfcfd9e4c2818e26c56242e31d782a21",
+        "e0737d060a3919c650029cb5d25fe4c50883bde93ee5dfd3409eac8b8a25d501",
+        "a53eb6736460dc4484983d4ac590a2b2c90eef353e7649fb59dd062850abcc50",
+        "317623024147b2da7057295c231fb4e35b97d01ce411778250042a0742ff8bfd",
+        "4b5f79727ade0cd0dd594c38c8b8395630c6376d33c539d8ae7914364ccead97",
+        "82edeeecab08b67c681142cde96f951967ea98a1e3008ee4b1e8112b43f35934",
+        "2766e40aec2c917d24bd86dfcf12b0643477036157f5155503628c2c81be675c",
+        "8bfec65734d353fc7a2eb181e4c2485495fbfadff280cdc6db2fbb5341c40eb9",
+        "752bc4d51be98d19a59169eb04b6cecb548cba42876af96451cb82a19531d541",
+        "32919821fb71ed7358a6ddb5ea43e16ff3d7495a692844612e23d6cbd232b80f",
+        "050663467ab157305997658f85ea883297cc9fd611c3b2f422c2f109874f2770",
+        "92a8c0f9b32a620cd3475f7aa1b731132062f24c433e9824594778f2342770a8"
+      ],
+      "outputContextHash": "2580267671124f03d8911640a72e695fbfa530b35632f0bc38f8360cf1d5b72d",
+      "reviewedAt": "2026-11-02T15:08:36.920Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
