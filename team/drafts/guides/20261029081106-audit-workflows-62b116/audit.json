@@ -1,14 +1,23 @@
 {
   "claims": "failed",
-  "consistency": "failed",
-  "repetition": "failed",
+  "consistency": "passed",
+  "repetition": "passed",
   "unresolvedFindings": [
-    "A cited factual claim is not established by the supplied evidence: the internal-audit guidance is described as saying that the organization is responsible for how its audits are carried out. The evidence provided does not support that wording. The statement that documents and checklists differ from retained records is also not supported by the supplied sources.",
-    "The evidence-linking section contains an unclear instruction: “Review evidence that fits no criterion for relevance, recording a gap only if the review finds one.” Later, it treats evidence that fits no criterion as an exception requiring a recorded disposition. Clarify the intended review and recording workflow.",
-    "The guide repeatedly restates the same plan-to-finding-to-follow-up chain, source caveats about ICC’s published descriptions, and similar role/input/decision/record/exception tables. Consolidate repeated explanations while preserving necessary chapter handoffs.",
-    "The FAQ questions in the outline are all answered, and the guide includes demonstration preparation and evaluation scenarios. The supplied evidence does not verify any specific ISO edition, and the guide does not name one; retain the clause 9.2.2 reference without implying an edition not established by evidence."
+    "The FAQ asks whether software guarantees ISO certification, but its answer draws a conclusion about certification responsibility from audit-program guidance. The supplied evidence explicitly does not address certification requirements, and the introduction acknowledges that limitation. Revise the FAQ to state that the evidence does not establish whether software guarantees certification and direct readers to their certification body."
   ],
-  "inputHash": "c34fbea62eaf24a186e748cb43a84306b78ded8624c5e90ad95e137e59003f3a",
+  "inputHash": "8509221efb2bde6852e169fcf4d14439fb3f0da4d5cdbcb8cc695aa9c8714ee1",
+  "pageHashes": {
+    "internal-audit-software": "a6fcbf1af56a731ad86ac29c55a8046d396d772ba9c72164de54d381aff8f34f",
+    "mapping-workflows": "7100bb386c7185a342f819703ec087f4a1d370ceda470656c80fcf7770239616",
+    "evaluating-software": "b033a546b7eb6cdb2eaa195604ced60483ee3a723a26026d2ebd0b51f906a669",
+    "audit-planning": "18c9e340fd74b1772fdf05c5f29ce94d201d70ccf0f1b58c19d34a5db1d99a12",
+    "audit-evidence": "74d578847cc04bdd36f0f2761a5bc1e8c7640efd5cb9c0174cc7df6882678459",
+    "audit-findings": "8eb8bf6ab2ec7253030b1cf07d520f0ff9fd7f7dd23188a031408e451efa0f3f",
+    "audit-follow-up": "18f1405c2435db698aef4c20f70d1cb37de178eff09fdf86268e262ddfb0cc69",
+    "migration-planning": "e46fe312d57a4d92b5432a21c5dbd21cfd1fb94e479387ef19a981ea74009bd2",
+    "training-rollout": "5c22502461c043df5caf61ffe48fbf66e2f58244238b0451896f8c5f88e5480e",
+    "ongoing-operation": "41e14661c80c6c155403d57fa6b4395b680d9558921e3e59d0fbad5c7fc71645"
+  },
   "reviewer": "Configured openai independent review",
-  "reviewedAt": "2026-10-30T15:07:54.258Z"
+  "reviewedAt": "2026-11-02T15:09:33.207Z"
 }
