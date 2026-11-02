@@ -6,15 +6,11 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The page covers the four assigned workflows, labels its examples as hypothetical and distinguishes proposed tests from published capabilities. Citations match the supplied source records; live link availability was not checked. No FAQ was assigned or included.",
+  "summary": "The earlier finding is resolved. The changed table presents a workable criteria decision and exception process. No FAQ was assigned or included.",
   "glossary": [
     {
-      "term": "Follow-up criteria",
-      "definition": "The evidence, checker and timing specified for following up a finding."
-    },
-    {
-      "term": "Effectiveness check",
-      "definition": "A check of whether an action worked, which may need to occur after the action is carried out."
+      "term": "Follow-up criterion",
+      "definition": "A statement of what evidence must exist, who checks it and by when."
     }
   ],
   "roles": [
@@ -24,40 +20,32 @@
     "Top management",
     "Action owner",
     "Checker",
-    "Independent checker",
     "Planner",
     "Vendor",
+    "Auditor",
     "Reviewer from another department",
-    "Uninvolved person",
-    "Auditor"
+    "Uninvolved decision-maker"
   ],
   "recordNames": [
-    "Follow-up criteria",
-    "Approved criteria",
-    "Past findings",
-    "Audit plan",
+    "Approved follow-up criteria",
     "Finding",
+    "Audit plan",
     "Action evidence",
     "Evidence submission",
     "Checker's decision",
     "Owner's response",
     "Effectiveness check",
-    "Reopening request",
     "Reopening decision",
     "Finding history",
-    "Recorded delegation",
     "Audit program",
-    "Program report",
-    "Calibration record",
-    "Work instruction"
+    "Program report"
   ],
   "decisions": [
-    "Accept or return follow-up criteria and approve a criterion for a finding that fits no category.",
-    "Accept or reject implementation evidence and decide whether closure must wait for an effectiveness check.",
-    "Approve and record an alternative control when an independent checker is unavailable.",
-    "Reopen or decline reopening a finding, including deciding ownership and timing.",
-    "Delegate a reopening decision when the quality manager or original checker is involved in a dispute.",
-    "Accept or hold a program report, resolve untraceable figures or missing coverage, and decide what actions follow."
+    "Accept or return follow-up criteria and approve a criterion for an uncategorized finding.",
+    "Accept or reject implementation evidence and decide whether to close, hold or keep a finding open.",
+    "Approve an alternative control when an independent checker is unavailable.",
+    "Reopen or decline to reopen a finding, and appoint an uninvolved decision-maker when there is a dispute.",
+    "Accept or hold a program report, correct or withdraw untraceable figures, and decide what follows from the report."
   ],
   "pass": true,
   "deterministic": {
@@ -150,8 +138,55 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "fcf428203b626450fca71756e6ec6d1049a4d18ec3cc46c059ab9dd986556481",
-  "outputContextHash": "5665cbb94982887f0bceb3de30eae5608a9269ea5f7134d921002fd99fcf8d98",
-  "reviewedAt": "2026-10-29T18:55:48.906Z",
+  "inputHash": "ceaed65afc7a8ed2d4f2fdec84240eeb80eecdc5d55c1e1e3c57e184f5dc2a69",
+  "contentHash": "77d78efbeba2467f5afb94a96df158f2b94884277e771c45510e4dd991377c8e",
+  "paragraphHashes": [
+    "21722cbb29c99664c3dec51574e88d423c438c4e2916bbdfa36dc5db97e475b9",
+    "491e387243615fabe78cc836f11a4af6cf1bd197df3d8139291ce2b3da940be3",
+    "ec0c66b252ed1d7c3adb2f68d43301cc41db1d2a5eed59c692c379af20aa0191",
+    "452f6e9ca9c15d78f51aa6e09f038d9ae23c2d1f3eed9829f6c634e7631ab39e",
+    "90c19882ec14cc0da271b3a3f8213c7c6046f8955969336ce99b1a5e92a68a4e",
+    "acf285dd6b46d7723293dc6cbfbf28d01362b66439ea1575af16054c3ba8f9a5",
+    "a7d3d79a2fc8216b1a7a3b7b3a9c7536f252d72531212e6ab0a60e08a6f3f380",
+    "1f534e32c2e64ef09ce10f8ebf8327d8a330d525d2e634d1e70b99658515962a",
+    "ab8803eec568d6b4a447122a436ca2bb2c2f353642f8e4aae9dee7f2b7784dfd",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "762e48693f1ed8e66184a1e8b906518e650b4659cf236270b2e0f33e2a42d971",
+    "27951389baf554c2ce1f9ddc56aba968b2d9d7a1d83f9564494d0097ca97bee4",
+    "53014dc9211fe25c942017908058879284543138368d34ba1732ab44b972dd98",
+    "d80afec5a11e738adc1edc88d0e1379b56402002ff21e0d8b65463afcc49d7c7",
+    "6de0de5c5cc4a1059dee95f103a5b1ec54fdb0c4ccfcd79abbf7d83bd45cd776",
+    "1bffa4d98f1fc98e8435cad795e1e0996961ac1372bf23af3a9d7c4e8a348b9f",
+    "5fd05e93456bce8920c1d1982a310ecd49f0070efd437b1376a062faa1aad4ae",
+    "804aad83bd8cb096613367eb8a5037495bac6de81c4f8fbf44d67c8f52224dd4",
+    "0ff83e549073d85f4d1e6c71e7c859d2a4b3c3617b46c3d7b55f266ab63804c3",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "1f092bc769d9bf295dd43012c1e3412e028b689754bb821b9819b760804a5760",
+    "04ff2057efaa7f32da8826088af1fc05b9dfb739e745c3b1e624dd91985bec1f",
+    "5bc492798fd581e22bb4855c6e535cdbe05fedc0cad68e7b4d7e65bdb168ade7",
+    "5a30d318ee4895f011758503156dbf4d62406e1c931596aa1c7bbdbe326bb250",
+    "223fd3747377ab6559ad12cee274585cdae91165edbdc05e8823f669a159a257",
+    "6da54939ada3af270d1caaa942c963733329f418b68b701906f5409c6075cb32",
+    "34c54708263f281867eabf994be3e1d4de857a3965028136c253a29fd06e932d",
+    "648bece7e897cf9c28fbc4bd28462466e8eca920f27d28631fec7ed371d3b267",
+    "6f2ae0aec72d2aafa38b72a13d3fcd5e2dd6977db9d033ebdd72cd9472f2e172",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "564ff83c94e5d6e6719d1557a0538e599a15168e109a9e8aeb0b29dffe83537e",
+    "77730a50eb500d78e866961d53ec336a968201839b0f8978adeed91ddeb50481",
+    "d6c7b5d7d5a228f06ea18310e7ef70019dfdbb81d12df124d6f4b986f8026a6f",
+    "a746f2863b0fbf247d002c0736c8986aef48efda1c96c9940bab2bbc6d15020d",
+    "c82e89a42e0fb60e282dd63dadc88740e632870ad5d7921bb28a11dd56518d02",
+    "b764495cb48ca95152b13ae48d863e144946da9d9091989592e42769f405ead4",
+    "74670752093b56f41b250e8b79b5bc03dc58b9c730e762df7458675f5335ecd3",
+    "fd1a30e82ccf458b604a206562cb15d67201263593f6388f334137a16ad597d2",
+    "1924f1ff3ec52662ce2d2e1a301c14ac3704777563a87a7507f134408ea3da51",
+    "ea96075e74243d39ac7baacdc2ad8688a2df3c583d755db66c8cbdad995fd2c0",
+    "3c28942192e6e22f67047cb21314178c22ad4c6caae45f77bb7e123e8caffa70",
+    "2307717a8e6c8b95fec3727c67dcc1e74938caab2ab88f3155e66836efe894d0",
+    "6c99e1af25ea6eb12d6a964ea4a6214dcc3746758581150aa925a509f312eac5",
+    "643ac76b711590752582adbe1ff3a53c1aa1257c967846dae7274b85d1f89c79"
+  ],
+  "outputContextHash": "7dcf03efaab908a9158dfd5bbb7eb5a1e0df7a42c4db88093f8d08def2263d44",
+  "reviewedAt": "2026-11-02T15:00:40.409Z",
   "reviewer": "Configured independent chapter reviewer"
 }

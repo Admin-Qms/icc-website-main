@@ -25,6 +25,10 @@
     {
       "term": "Finding",
       "definition": "A judgment drawn from observations and measured against criteria."
+    },
+    {
+      "term": "Follow-up criterion",
+      "definition": "A statement of what evidence must exist, who checks it and by when."
     }
   ],
   "roles": [
@@ -55,7 +59,10 @@
     "Independent reviewer",
     "Response owner",
     "Backup owner",
-    "Machining supervisor"
+    "Machining supervisor",
+    "Checker",
+    "Reviewer from another department",
+    "Uninvolved decision-maker"
   ],
   "recordNames": [
     "Audit program",
@@ -117,7 +124,16 @@
     "Observation",
     "Category definitions",
     "Confirmation entry",
-    "Dispute entry"
+    "Dispute entry",
+    "Approved follow-up criteria",
+    "Action evidence",
+    "Evidence submission",
+    "Checker's decision",
+    "Owner's response",
+    "Effectiveness check",
+    "Reopening decision",
+    "Finding history",
+    "Program report"
   ],
   "example": {
     "label": "Illustrative example",
@@ -206,6 +222,19 @@
         "Whether a disputed finding stands, is revised, is withdrawn or is held for more evidence.",
         "Whether a dispute decision has a recorded basis or should be returned for more detail.",
         "Who reviews and accepts a dispute decision when the quality manager is involved."
+      ]
+    },
+    {
+      "slug": "audit-follow-up",
+      "title": "Following findings through closure: Internal audit management software",
+      "summary": "The earlier finding is resolved. The changed table presents a workable criteria decision and exception process. No FAQ was assigned or included.",
+      "bodyHash": "18f1405c2435db698aef4c20f70d1cb37de178eff09fdf86268e262ddfb0cc69",
+      "decisions": [
+        "Accept or return follow-up criteria and approve a criterion for an uncategorized finding.",
+        "Accept or reject implementation evidence and decide whether to close, hold or keep a finding open.",
+        "Approve an alternative control when an independent checker is unavailable.",
+        "Reopen or decline to reopen a finding, and appoint an uninvolved decision-maker when there is a dispute.",
+        "Accept or hold a program report, correct or withdraw untraceable figures, and decide what follows from the report."
       ]
     }
   ],

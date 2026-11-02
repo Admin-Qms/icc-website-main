@@ -24,9 +24,9 @@ capabilityIds: []
 ---
 ## Setting follow-up criteria
 
-Follow-up shows whether an audit changed anything. Before software is configured, the team should decide what counts as a completed response. Without that decision, closure becomes whatever the owner reports.
+Follow-up helps show whether responses were implemented and effective. Before software is configured, the team should decide what counts as a completed response. Without that decision, closure can become inconsistent or rely too heavily on the owner's report.
 
-The [ISO 9001 Auditing Practices Group guidance on internal audits](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf) says the organization should have a process for using past audit results in planning future audits, and that the program should consider the results of previous audits. Follow-up criteria support that use. A closed finding with no record of the action helps no later planner.
+The [ISO 9001 Auditing Practices Group guidance on internal audits](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-InternalAudit.pdf) says the organization should have a process for using past audit results in planning future audits, and that the program should consider the results of previous audits. Follow-up criteria support that use. A closed finding with no record of the action is less useful to later planners.
 
 As a proposed approach, write follow-up criteria for each finding category the team uses. A criterion states what evidence must exist, who checks it and by when. For example, a response to a nonconformity might require a description of the action taken, a record that the action was carried out, and a later check that the problem has not recurred. The team's procedure sets the exact wording.
 
@@ -52,7 +52,7 @@ Ask the vendor how criteria are held. Can they be defined by category? Can they 
 | Inputs | The finding categories, the team's procedure, past findings and the audit plan references |
 | Decision | The criteria for each category; top management approves them, and the quality manager accepts a criterion when it names the evidence, the checker and the timing, and returns it otherwise |
 | Record | The approved criteria with version, date and decision-maker; open findings keep the version that applied when they were raised |
-| Exception | A finding that fits no criterion; the quality manager sets a criterion for that case, top management confirms it, and the disposition is recorded |
+| Exception | A finding that fits no criterion; the quality manager sets a criterion for that case; top management confirms it, and the disposition is recorded |
 
 **Illustrative example:** An unnamed Canadian manufacturer asks a vendor to configure follow-up criteria for a nonconformity category, using representative records. The team then edits the criteria and checks that a finding already open keeps the earlier version. For the exception, the team asks the vendor to run a finding that fits no category, with the quality manager setting a criterion, top management confirming it, and the outcome recorded. The scenario is hypothetical and describes no customer result.
 
@@ -92,7 +92,7 @@ The [internal audit guidance](https://committee.iso.org/files/live/sites/tc176/f
 
 As a proposed team approach, decide in advance what triggers a reopening and who decides. Possible triggers include a failed effectiveness check on an already closed finding (a failed check before closure simply keeps it open), a repeat of the same problem, and evidence that the original verification was wrong. Also decide whether the owner stays or changes, and who is told.
 
-Notification matters here. The owner, the checker and the planner should each see the reopened item in the place they normally work. Ask whether it appears in an owner's open list, and whether the product tells people or the team must send its own message.
+Notification matters here. The owner, the checker and the planner should each see the reopened item in the place they normally work. Ask whether it appears in an owner's open list and whether the product tells people or the team must send its own message.
 
 Test with a representative case: close a finding, enter a recurrence, reopen it with a reason and confirm that the original response, the checker's decision and the new entry all appear in one history. Ask whether the due date restarts and the earlier date stays visible.
 
@@ -103,7 +103,7 @@ Test with a representative case: close a finding, enter a recurrence, reopen it 
 | Role | The workflow owner, here the quality manager, who decides reopening; the process owner is informed |
 | Inputs | The closed finding, its history, its audit plan reference, the recurrence or failed check and the team's reopening rules |
 | Decision | Whether to reopen; the quality manager accepts the request when a trigger in the team's rules is met and the reason is recorded, and declines it with a reason otherwise |
-| Record | An approved reopening records trigger, reason, decision-maker, new owner and due date; a declined request records trigger information, reason and decision-maker and keeps the status; both link to the history and audit plan reference |
+| Record | An approved reopening records the trigger, reason, decision-maker, new owner and due date; a declined request records trigger information, reason and decision-maker and keeps the status; both link to the history and audit plan reference |
 | Exception | The quality manager or the original checker is involved in the dispute over reopening; top management appoints an uninvolved person to decide, and the delegation is recorded |
 
 **Illustrative example:** The hypothetical team asks a vendor to close a calibration finding, enter a repeat of the problem and reopen it with a reason. The history should show the original response and the checker's decision. For the exception, the team asks the vendor to run a case where the original checker disputes the reopening, and to show top management appointing an uninvolved person, with the delegation recorded.
