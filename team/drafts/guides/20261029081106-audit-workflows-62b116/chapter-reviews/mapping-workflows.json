@@ -1,30 +1,20 @@
 {
   "claims": "passed",
-  "scope": "failed",
+  "scope": "passed",
   "readability": "passed",
   "links": "passed",
   "repetition": "passed",
   "faq": "passed",
-  "findings": [
-    {
-      "section": "Assign owners and decisions",
-      "reason": "The demonstration asks for representative users and an empty-role exception, but does not explicitly ask the vendor to use representative records when showing assignments and decisions.",
-      "action": "Ask the vendor to demonstrate assignments and decision history on a representative audit record, including an exception such as an empty owner role."
-    }
-  ],
-  "summary": "The page is well sourced and stays focused on workflow mapping. One assigned demonstration detail needs to be made explicit.",
+  "findings": [],
+  "summary": "The page covers the assigned workflow decisions, uses supported citations and clearly labels its hypothetical examples. No FAQ subsection was assigned or included.",
   "glossary": [
     {
       "term": "Handoff",
       "definition": "A point where a record moves from one person or system to another."
     },
     {
-      "term": "Record map",
-      "definition": "A map of workflow records, their sources, storage, recipients and handoffs."
-    },
-    {
       "term": "Acceptance criteria",
-      "definition": "Testable statements used to judge software against the team's workflow."
+      "definition": "Statements the team can test when judging software."
     }
   ],
   "roles": [
@@ -33,24 +23,24 @@
     "Auditor",
     "Lead auditor",
     "Process owner",
-    "Person who files the paperwork",
     "Auditee",
+    "Management",
     "Top management",
-    "Action owner",
+    "Production manager",
     "Second reviewer",
-    "Production manager"
+    "Action owner",
+    "Vendor"
   ],
   "recordNames": [
     "Audit program",
-    "Audit schedule",
+    "Annual audit schedule",
     "Audit plan",
     "Audit report",
     "Finding",
     "Corrective action log",
     "Follow-up evidence",
     "Problem statement",
-    "Checklist",
-    "Audit notes",
+    "Checklist and notes",
     "Nonconforming product report",
     "Record map",
     "Organization chart",
@@ -60,20 +50,17 @@
     "Evaluation file"
   ],
   "decisions": [
-    "Which workflow break to solve first",
-    "Whether the problem statement names records and handoffs",
-    "How to resolve missing records or disagreement over their location",
-    "Which records are authoritative and which are copies or working notes",
-    "Whether each mapped handoff has a source and destination",
-    "How to handle records without clear owners or stored in personal locations",
-    "Which roles own handoffs and decisions, including backup ownership",
-    "How to address unfilled roles, conflicts of interest and unreachable owners",
-    "Who verifies closure of a finding",
-    "Which acceptance criteria are must-haves, should-haves or could-haves",
-    "What constitutes a pass for each criterion",
+    "Which workflow break to solve first and whether to accept the problem statement",
+    "How to handle missing or disputed records",
+    "Which records are authoritative, copies or working notes",
+    "How to resolve records without clear owners or in personal storage",
+    "Which roles own handoffs and decisions, including backups",
+    "How to handle unfilled roles, conflicts of interest and unreachable owners",
+    "Who confirms auditor competence and objectivity and reviews results",
+    "Which acceptance criteria are must-haves, should-haves or could-haves and what counts as a pass",
     "How to resolve untestable or conflicting criteria"
   ],
-  "pass": false,
+  "pass": true,
   "deterministic": {
     "pass": true,
     "checks": [
@@ -165,7 +152,7 @@
   },
   "glossaryVariantsIgnored": [],
   "inputHash": "92da34871d0579d74902c74090937a5666487e83353256cef77fcc72927f33e7",
-  "outputContextHash": "73bdedda89c9ff9411b6e6d28f15385281e08b300166d5a16f83dc52aa99585b",
-  "reviewedAt": "2026-10-30T15:10:51.100Z",
+  "outputContextHash": "85d1406acd43fbf9293b55b0570892ad3d11ef3d247f230b741612db63418a80",
+  "reviewedAt": "2026-11-02T08:20:31.176Z",
   "reviewer": "Configured independent chapter reviewer"
 }

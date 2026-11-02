@@ -5,18 +5,72 @@
     {
       "term": "Workflow owner",
       "definition": "The role responsible for decisions and records in the defined workflow."
+    },
+    {
+      "term": "Handoff",
+      "definition": "A point where a record moves from one person or system to another."
+    },
+    {
+      "term": "Acceptance criteria",
+      "definition": "Statements the team can test when judging software."
     }
   ],
   "roles": [
     "Quality owner",
     "Process owner",
-    "Operator"
+    "Operator",
+    "Workflow owner",
+    "Quality manager",
+    "Auditor",
+    "Lead auditor",
+    "Auditee",
+    "Management",
+    "Top management",
+    "Production manager",
+    "Second reviewer",
+    "Action owner",
+    "Vendor"
   ],
-  "recordNames": [],
+  "recordNames": [
+    "Audit program",
+    "Annual audit schedule",
+    "Audit plan",
+    "Audit report",
+    "Finding",
+    "Corrective action log",
+    "Follow-up evidence",
+    "Problem statement",
+    "Checklist and notes",
+    "Nonconforming product report",
+    "Record map",
+    "Organization chart",
+    "Internal audit procedure",
+    "Responsibility table",
+    "Acceptance criteria list",
+    "Evaluation file"
+  ],
   "example": {
     "label": "Illustrative example",
     "description": "An unnamed Canadian manufacturer evaluates internal audit management software for one production workflow; all situations and records are hypothetical, not customer results."
   },
-  "reviewedChapters": [],
+  "reviewedChapters": [
+    {
+      "slug": "mapping-workflows",
+      "title": "Mapping the current workflow: Internal audit management software",
+      "summary": "The page covers the assigned workflow decisions, uses supported citations and clearly labels its hypothetical examples. No FAQ subsection was assigned or included.",
+      "bodyHash": "7100bb386c7185a342f819703ec087f4a1d370ceda470656c80fcf7770239616",
+      "decisions": [
+        "Which workflow break to solve first and whether to accept the problem statement",
+        "How to handle missing or disputed records",
+        "Which records are authoritative, copies or working notes",
+        "How to resolve records without clear owners or in personal storage",
+        "Which roles own handoffs and decisions, including backups",
+        "How to handle unfilled roles, conflicts of interest and unreachable owners",
+        "Who confirms auditor competence and objectivity and reviews results",
+        "Which acceptance criteria are must-haves, should-haves or could-haves and what counts as a pass",
+        "How to resolve untestable or conflicting criteria"
+      ]
+    }
+  ],
   "researchHash": "f0ee2cb7c44c81d48d21b4fb2d54fa6610d7bf7274f921610b9c8e7102605883"
 }
