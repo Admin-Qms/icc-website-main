@@ -1,28 +1,37 @@
 {
   "claims": "passed",
-  "scope": "passed",
+  "scope": "failed",
   "readability": "passed",
   "links": "passed",
   "repetition": "passed",
   "faq": "passed",
-  "findings": [],
-  "summary": "The page covers the assigned evaluation steps, uses the supplied sources appropriately, and labels its examples as hypothetical. No FAQ is assigned or included.",
+  "findings": [
+    {
+      "section": "Build a workflow-based shortlist — illustrative example",
+      "reason": "The example treats a feature’s availability through a separate paid service as the reason to mark it “claimed but not shown.” A separate charge does not establish whether the feature was demonstrated.",
+      "action": "State explicitly that the feature was not demonstrated, and record the separate charge as a cost issue. Otherwise, assign the status based on what the team actually saw."
+    }
+  ],
+  "summary": "The page covers the assigned evaluation workflow and uses the supplied sources appropriately. Revise the shortlist example so its status follows the stated scoring rule. No FAQ was assigned or included.",
   "glossary": [],
   "roles": [
     "Workflow owner",
     "Quality manager",
     "Process owner",
     "Auditor",
-    "Backup owner",
     "Reviewer",
+    "Owner",
     "Verifier",
     "Planner",
     "IT contact",
     "System administrator",
     "Top management",
+    "Finance or purchasing contact",
+    "Vendor",
     "Contractor",
     "Viewer",
-    "Finance or purchasing contact"
+    "Observer",
+    "Decision-maker"
   ],
   "recordNames": [
     "Acceptance criteria",
@@ -36,20 +45,23 @@
     "Written quotes",
     "Contract terms",
     "Support descriptions",
+    "Test results",
     "Comparison sheet",
-    "Written recommendation"
+    "Recommendation"
   ],
   "decisions": [
-    "Which candidates proceed to demonstration",
+    "Which candidates proceed to a demonstration",
     "Whether to request a trial or drop a candidate with a must-have not shown",
-    "Whether each demonstration scenario passed, failed or was not shown",
-    "How to handle a scenario that cannot be run live",
-    "Whether evidence and permission tests meet the team's criteria",
-    "Whether to reject a product, change a rule or accept a procedural control when a permission rule cannot be enforced",
+    "Whether each test scenario passed, failed, or was not shown",
+    "Whether to request a recording, a trial period, or a failed result for a scenario not run live",
+    "Whether evidence test results are accepted or rejected",
+    "Whether permissions enforce each separation rule",
+    "Whether to reject a product, change a rule, or accept a procedural control when a rule cannot be enforced",
     "Which product to recommend and whether top management accepts the recommendation",
-    "How to handle an incomplete quote"
+    "How to handle a quote that omits a requested item",
+    "Whether a recommendation must remain provisional pending evidence"
   ],
-  "pass": true,
+  "pass": false,
   "deterministic": {
     "pass": true,
     "checks": [
@@ -140,8 +152,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "970be4e7b523f138d287d857eba1ce494a42ee67ba9182f898a253ca6e225278",
-  "outputContextHash": "75e0adcedd37b7c4d899b6bb76626742efefa86920492aed09b1c72b5b39f3e7",
-  "reviewedAt": "2026-10-29T17:56:15.236Z",
+  "inputHash": "bcd00cc378e6a8f01b0860538c7781974e29630fbb8a9b76442179ec305bbb61",
+  "outputContextHash": "85d1406acd43fbf9293b55b0570892ad3d11ef3d247f230b741612db63418a80",
+  "reviewedAt": "2026-11-02T08:25:35.186Z",
   "reviewer": "Configured independent chapter reviewer"
 }
