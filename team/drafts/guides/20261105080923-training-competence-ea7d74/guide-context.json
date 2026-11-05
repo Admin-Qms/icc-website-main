@@ -45,6 +45,10 @@
     {
       "term": "Level",
       "definition": "A statement of what a person has demonstrated for a task."
+    },
+    {
+      "term": "Completion record",
+      "definition": "A record documenting that an action took place; it does not by itself prove that a person can perform the task."
     }
   ],
   "roles": [
@@ -71,7 +75,13 @@
     "Authorized assessor",
     "Qualified colleague",
     "Matrix owner",
-    "Alternate"
+    "Alternate",
+    "Trainer",
+    "Authorized coach",
+    "Coach",
+    "Learner",
+    "Management",
+    "Provider"
   ],
   "recordNames": [
     "Task schedule",
@@ -107,7 +117,17 @@
     "Practical evaluation",
     "Change decision",
     "Affected task list",
-    "Matrix review checklist"
+    "Matrix review checklist",
+    "Assignment record",
+    "Completion record",
+    "Training plan",
+    "Training record",
+    "Quiz result",
+    "Certificate",
+    "Exception record",
+    "Revised plan",
+    "Purchase order",
+    "Agreement"
   ],
   "example": {
     "label": "Illustrative example",
@@ -152,6 +172,20 @@
         "Approve revised requirements and identify affected people.",
         "Determine whether existing evidence covers changed work and apply an interim rule when the effect is unresolved.",
         "Record open software evaluation questions and any needed manual steps."
+      ]
+    },
+    {
+      "slug": "training-assignments",
+      "title": "Choose actions to close competence gaps",
+      "summary": "Both previous findings are resolved, and the changed paragraphs present no clear new problems.",
+      "bodyHash": "ceceb011781ea5d5367a400fe723ea32581181c42480b727a82e7c0f4c636f4a",
+      "decisions": [
+        "Select a proportionate action and responsible trainer or provider for the gap.",
+        "Record an exception and decide on interim staffing and escalation when no suitable action is available.",
+        "Confirm completion or record incomplete work and outstanding assessment.",
+        "Resolve disputed or incomplete sign-off while controlling independent assignment.",
+        "Reschedule overdue learning and select an evidenced replacement or hold the work.",
+        "Communicate competence requirements to external providers and retain relevant evidence."
       ]
     }
   ],
