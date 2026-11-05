@@ -1,0 +1,248 @@
+{
+  "claims": "failed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [
+    {
+      "section": "Prepare a focused ICC demonstration — close the loop",
+      "reason": "The previously flagged compliance-automation slogan remains. The new qualification does not resolve its implied outcome, and the supplied research does not substantiate the attribution of the slogan as ICC’s core message.",
+      "action": "Remove the slogan and replace it with a measured invitation to demonstrate the workflow and verify supplier claims."
+    }
+  ],
+  "summary": "The assigned FAQ and workflows are covered. The prior finding about the unsupported compliance-automation slogan remains unresolved.",
+  "glossary": [],
+  "roles": [
+    "Quality owner",
+    "Operations owner",
+    "Quality lead",
+    "Supervisor",
+    "Assessor",
+    "Quality reviewer",
+    "IT representative",
+    "Evaluation lead",
+    "Migration lead",
+    "Exception owner",
+    "Operator",
+    "Auditor",
+    "Supplier",
+    "Qualified adviser"
+  ],
+  "recordNames": [
+    "Review record",
+    "Review findings",
+    "Migration exception list",
+    "Competency matrix",
+    "Assessment record",
+    "Training records",
+    "Training plans",
+    "Completion certificate",
+    "Task definition",
+    "Evidence rules",
+    "Approved FAQ answers and source references",
+    "Results sheet",
+    "Evaluation record",
+    "Configuration plan",
+    "Pilot scenarios",
+    "Open questions"
+  ],
+  "decisions": [
+    "Prioritize corrective action or workflow improvement from sampled decisions, exceptions and audit findings.",
+    "Record an evidence gap when decision quality cannot be assessed.",
+    "Answer FAQ questions within the available evidence and refer questions requiring further interpretation.",
+    "Choose supported replacement coverage, permitted supervision or a hold when assessment or staffing evidence is missing.",
+    "Decide whether legacy records are candidates for migration, need review or must remain outside the system.",
+    "Classify demonstration results as shown, shown with configuration, described but not shown, or not available.",
+    "Proceed, seek clarification or reject the option based on demonstrated fit and unresolved conditions."
+  ],
+  "pass": false,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Review decision quality and improve",
+        "section": "Review decision quality and improve"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Review decision quality and improve; semantic review verifies support",
+        "section": "Review decision quality and improve"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Answer common questions without overstating compliance",
+        "section": "Answer common questions without overstating compliance"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Answer common questions without overstating compliance; semantic review verifies support",
+        "section": "Answer common questions without overstating compliance"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Prepare a focused ICC demonstration",
+        "section": "Prepare a focused ICC demonstration"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Prepare a focused ICC demonstration; semantic review verifies support",
+        "section": "Prepare a focused ICC demonstration"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: What operational question should competency management software answer first?",
+        "section": "What operational question should competency management software answer first?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: How is training completion different from demonstrated competence?",
+        "section": "How is training completion different from demonstrated competence?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: When is a formal qualification required in addition to competence?",
+        "section": "When is a formal qualification required in addition to competence?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: What evidence should support a competency matrix entry?",
+        "section": "What evidence should support a competency matrix entry?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: How should a supervisor handle a missing assessment or an absent qualified worker?",
+        "section": "How should a supervisor handle a missing assessment or an absent qualified worker?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: Which legacy training records should be migrated, reviewed or retained separately?",
+        "section": "Which legacy training records should be migrated, reviewed or retained separately?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: What might an auditor ask to see beyond training plans and records?",
+        "section": "What might an auditor ask to see beyond training plans and records?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: Does ICC's standards mapping mean the software guarantees conformity or certification?",
+        "section": "Does ICC's standards mapping mean the software guarantees conformity or certification?"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: What should the team ask ICC to demonstrate and confirm in writing?",
+        "section": "What should the team ask ICC to demonstrate and confirm in writing?"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "ca6efab9d4858876bc9c77822ee9464128e690d24db3eea253b7a3d0b09c50ae",
+  "contentHash": "cdcf9a0e895146ad45713ebb4f8afe6b0569cbd9f100564c27404e7b622845a1",
+  "paragraphHashes": [
+    "9378d461bfe860273c2d15a24e9e4ae83116d365785a0442e4deff73f3d81d43",
+    "a2b03864a2f3971edaa399f39956c9f16827e851a1397a982ab61d2fe900bab7",
+    "ab176daec66927563313e2fac5210c729f3ed1d82a9fb2c5c0797b659f779b09",
+    "f1ee23d104d97fe859a5165bbc43a53ab250d033649c93d19943515b56681fd7",
+    "6314f33d76c8e5924ac740abdf6ef35831c214fe98fa9218c4b4c0cc6a4b2ecf",
+    "0e65d4b6f6194dc1b7768003bdf367cd69d6000e8525db245e9792505f3cc1e9",
+    "58ba0174d9a53a9f522c9bea81cb1cd0f8a6a1cd693357cd72b6a9f0fc56c86a",
+    "28756decb988082a40766c61839dcc0b8f5a19be762bb5325a08731a73e08f25",
+    "050f1c4a0fa7e79a5e9c9d9d3da5b75475f90a6ad535fcd52672cab6c35734f2",
+    "85c8bfc21861606bd30960813b9f0c657a6fcf4191434f16b55b23aa19421a0c",
+    "3cf175ad1f0974b465882d4eb9578e8b849dcd76064907c7804c7e8d9e74e85b",
+    "b3ce9b31fdba14e232c4a09f1d8b4ae9f32062072697ed2ab65a19ae2539a976",
+    "48e15812c04bb37718b8598eb4644230fdfc262a9f8e466b06bbc38ed4ab2ff9",
+    "ccaeb8ad102e22587cb260fa7e080a0ca7b7ca6599d01e426727f21f29b939d6",
+    "75776ec8690249896429faf0fa415f9e77ea8cad2fb240c46fbc8e3852b81310",
+    "b62bdb066accf9c4d609bb6b071c9bdd4f6d05b71ced947e00cc731b7c5241cd",
+    "23b1fa71b5651e8d1ff25da0e4c35bcb63b96102f6bec878d2707a54299373df",
+    "7df73b91c284e8127151235a18ffe357e562b791eb39425700682d606abaf818",
+    "e97b7b62789da328df62ef3b8f184240440032757185233460773c7f5cc484e2",
+    "7d179b672c494ca6d6193221aeb0b51b173025d71b57406596360993ff11e2de",
+    "202924aa17eb7af690d38ba19735f04d2deb2c206b273a18c179ea93b651dad2",
+    "cc74b8d250de436011a100781fa9f3bed659f4ae7c9ab2e9aed1f4e616136019",
+    "5950b8798fb384b8efa8b4f80db2535020fe6def9f9f26a8ba856dd8055ed9ff",
+    "bdcb4290cb57f437fa7f89000fbb136e86c69c4817e5eb166f7c458bdf1372cf",
+    "64a359f45f3f18f0a1fd3118b414a8bfa4ad1b18a895c1cf8e76506fd78076c8",
+    "300b90d0d1664ce2d9216ed9d3c85f60d675e0ae037eeec9f4d25bf7549f1280",
+    "bc273499d2a9e1db815ba3a8725c754d39beafa4209ccd9cfd5d9974ec38d381",
+    "433049bb3fe34ec17fc01578d43417970afe5276dc163d8f3bf352bfe935d05b",
+    "66928a38f5d79b5cccb07c2883d212311900ac57cf6fe3040e5bec1ba7ba546e",
+    "32dd949161cb95f448837d195867feb6bb5361b7e40e3457c03c1ff2ebf8d0bb",
+    "bcef0ca437b0503b7848f16ea80369d6303a458c2d4d43c138ec7edf97e39947",
+    "c74d46e4bb25b65384534e19e4b2ddd0d84c0543927d4bad468b3db5e206a327",
+    "e51b59274b2ff9b01921ec14a87ab76c3b472e0dded23b76e8c3e2c4afa0c12e",
+    "7119430395a3e8ef8cf77df429285acb66322f833607076bc6384d7e571f772d",
+    "ac43e547805a25abcabae23250e3e118d94cd32d666214991c6e40d3b3e789f6",
+    "a09601fb410e05014ef0c9bc4d87554d68236e2da93d7c997b8e90220a3826ad",
+    "f1097b00430076cdb05bae0951659f67ef56c96b6bac668d23dbdf81c5d0e584",
+    "2b35d51e40e6fda9d21830bd66cd9923f7c807377e37647081afc6108a0db323",
+    "6a6f056648394ceb246ef6eafb0764b8bf4805800565fcc923480c141a4d6388",
+    "33fa3a0b18d15dd44b6d7df0936e84f5b8fd364393b6c475aa431effa5e89e80",
+    "de836117a8347f7c7021a12dfe08fdedce86f94b57e27a4e1a7bf1cb684b2ff3",
+    "6f2f4b6d54f88e3903099d63067fb4aa3258a783d015038a24535b7673314f7e",
+    "32ed0ab51fc6f6f611fc9d19df425527676516d0b1a15102656460365f33643b",
+    "fcf5e45dc7d55b98013096a19ca3cb6c0d5164e7736cdaeffdc4ed20f8802c5a",
+    "0c21307b4cb65e448ad178f5be1c110fa56781b2ef3bcb7de5e01ba0cbbc12d5",
+    "88ce69b742672f322c2cdb4f2cdf9429a4b83fe6688fa61938b3e29c1790f860",
+    "2e315bdb67dc540fc1faafbb3216a21829545d71499febb8ad2aea62bed3b72c",
+    "dd1780b3ea7b7531df8b57e1c24c6009cdea5adf7bcbd8d97849e6c0cc63c53e"
+  ],
+  "outputContextHash": "7c666c54c5a2030eafdfd83351a02437d28d59fb335f38862aca51ce37bf1673",
+  "reviewedAt": "2026-11-05T09:03:58.757Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
