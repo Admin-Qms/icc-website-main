@@ -57,6 +57,26 @@
     {
       "term": "Effectiveness",
       "definition": "Whether the action produced the competence needed for the task."
+    },
+    {
+      "term": "Cutover",
+      "definition": "The moment the new system becomes the place where staffing decisions are made."
+    },
+    {
+      "term": "Usable",
+      "definition": "A record disposition for evidence that has the context its kind needs and refers to a requirement the team still recognizes."
+    },
+    {
+      "term": "Needs review",
+      "definition": "A record disposition for evidence that is plausible but incomplete."
+    },
+    {
+      "term": "Unsuitable for reliance",
+      "definition": "A record disposition for evidence that cannot be tied to a person or task, conflicts with another record, or has no evident source."
+    },
+    {
+      "term": "Practical assessment",
+      "definition": "A record of demonstrated performance at a point in time."
     }
   ],
   "roles": [
@@ -95,7 +115,11 @@
     "Peer reviewer",
     "Qualification owner",
     "Quality representative",
-    "Reviewer"
+    "Reviewer",
+    "Records owner",
+    "Migration lead",
+    "Second reviewer",
+    "IT owner"
   ],
   "recordNames": [
     "Task schedule",
@@ -156,7 +180,15 @@
     "Location list",
     "Evidence references",
     "Unresolved gaps",
-    "Retrieval measurement"
+    "Retrieval measurement",
+    "Inventory and disposition",
+    "Classification guide",
+    "Field mapping",
+    "Reconciliation results",
+    "Unresolved errors",
+    "Exception list",
+    "Cutover approval",
+    "Fallback plan"
   ],
   "example": {
     "label": "Illustrative example",
@@ -244,6 +276,21 @@
         "Identify and explain evidence for a sampled person.",
         "Record and resolve missing or inconsistent evidence.",
         "Determine how to track reviews if system notifications are unavailable."
+      ]
+    },
+    {
+      "slug": "migration-planning",
+      "title": "Migrate records without creating false qualifications",
+      "summary": "Both earlier findings are resolved. The changed paragraphs present no clear new problems.",
+      "bodyHash": "5bbcd33e09cac7516f9bcdf46f76242c244fa1d60fba1ed15e00793b29f7ba24",
+      "decisions": [
+        "Classify legacy records as usable, needing review, or unsuitable for reliance.",
+        "Decide whether each record is transferred or retained outside the system.",
+        "Accept the pilot transfer or correct the mapping and repeat it.",
+        "Designate the authoritative source during transition and assign discrepancy resolution.",
+        "Authorize or delay cutover, including a partial cutover for reconciled tasks.",
+        "Define when to roll back or use the fallback route.",
+        "Restrict or hold work when sufficient alternative evidence or required qualifications cannot be confirmed."
       ]
     }
   ],
