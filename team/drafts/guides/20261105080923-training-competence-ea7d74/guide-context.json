@@ -77,6 +77,14 @@
     {
       "term": "Practical assessment",
       "definition": "A record of demonstrated performance at a point in time."
+    },
+    {
+      "term": "Pilot",
+      "definition": "A limited-scope test of the workflow under conditions close to real use."
+    },
+    {
+      "term": "Pilot log",
+      "definition": "A record of observed decisions, issues, owners and dates for resolution."
     }
   ],
   "roles": [
@@ -119,7 +127,12 @@
     "Records owner",
     "Migration lead",
     "Second reviewer",
-    "IT owner"
+    "IT owner",
+    "Rollout lead",
+    "Pilot supervisor",
+    "Rollout sponsor",
+    "Exception owner",
+    "First point of contact"
   ],
   "recordNames": [
     "Task schedule",
@@ -188,7 +201,12 @@
     "Unresolved errors",
     "Exception list",
     "Cutover approval",
-    "Fallback plan"
+    "Fallback plan",
+    "Practice completion record",
+    "One-page role reference",
+    "Pilot log",
+    "Workflow document",
+    "Expansion decision"
   ],
   "example": {
     "label": "Illustrative example",
@@ -291,6 +309,21 @@
         "Authorize or delay cutover, including a partial cutover for reconciled tasks.",
         "Define when to roll back or use the fallback route.",
         "Restrict or hold work when sufficient alternative evidence or required qualifications cannot be confirmed."
+      ]
+    },
+    {
+      "slug": "training-rollout",
+      "title": "Pilot the workflow with supervisors and learners",
+      "summary": "All previous findings are resolved. The changed paragraphs present no clear new problems.",
+      "bodyHash": "27ec3390fa8506c68f770fe7e836d7f10db955db451263ee514bd6fb567b51ad",
+      "decisions": [
+        "Select role-specific practice tasks and support.",
+        "Assign ownership and decide whether the pilot waits when a role cannot access or complete a required task.",
+        "Compare pilot decisions with locally approved rules.",
+        "Accept the pilot, accept it with conditions, or assign corrective actions before another trial.",
+        "Set local acceptance thresholds and determine how missed thresholds affect expansion.",
+        "Expand, repeat the pilot or pause based on readiness and support capacity.",
+        "Assign support contacts and action owners after expansion."
       ]
     }
   ],
