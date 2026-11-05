@@ -92,7 +92,10 @@
     "Provider",
     "Alternate inspector",
     "Second assessor",
-    "Peer reviewer"
+    "Peer reviewer",
+    "Qualification owner",
+    "Quality representative",
+    "Reviewer"
   ],
   "recordNames": [
     "Task schedule",
@@ -145,7 +148,15 @@
     "Employment records",
     "Training plans",
     "Completion certificate",
-    "Reassessment plan"
+    "Reassessment plan",
+    "Qualification review outcome",
+    "Qualification evidence",
+    "Review trigger and planned action",
+    "Review calendar",
+    "Location list",
+    "Evidence references",
+    "Unresolved gaps",
+    "Retrieval measurement"
   ],
   "example": {
     "label": "Illustrative example",
@@ -219,6 +230,20 @@
         "Plan further action and reassessment after an unsuccessful assessment.",
         "Arrange interim coverage or escalate when no evidenced person is available.",
         "Decide what to retain outside the system if it cannot show the assessment history."
+      ]
+    },
+    {
+      "slug": "qualification-renewal",
+      "title": "Maintain validity and retrieve evidence",
+      "summary": "The previous finding is resolved: every unresolved gap must now have an owner and due date. No clear problems were found in the changed paragraphs.",
+      "bodyHash": "2892f7dde2757f2d3ab7b4bd6a8dfd16a785022d93fd67c894470f46e0421385",
+      "decisions": [
+        "Confirm qualification validity and scope or withhold reliance.",
+        "Determine when a change or interval requires review.",
+        "Choose supervised work, an evidenced colleague or a delay when a review is late, subject to qualification conditions.",
+        "Identify and explain evidence for a sampled person.",
+        "Record and resolve missing or inconsistent evidence.",
+        "Determine how to track reviews if system notifications are unavailable."
       ]
     }
   ],
