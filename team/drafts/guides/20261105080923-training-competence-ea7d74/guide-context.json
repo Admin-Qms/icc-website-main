@@ -37,6 +37,14 @@
     {
       "term": "Results sheet",
       "definition": "A record of each claim, its test, what was observed and its disposition."
+    },
+    {
+      "term": "Operating scope",
+      "definition": "The product families, equipment, shifts or conditions covered by a task definition."
+    },
+    {
+      "term": "Level",
+      "definition": "A statement of what a person has demonstrated for a task."
     }
   ],
   "roles": [
@@ -59,7 +67,11 @@
     "Administrator",
     "Supplier",
     "Decision-maker",
-    "Auditor"
+    "Auditor",
+    "Authorized assessor",
+    "Qualified colleague",
+    "Matrix owner",
+    "Alternate"
   ],
   "recordNames": [
     "Task schedule",
@@ -87,7 +99,15 @@
     "Practical assessment",
     "Written supplier statement",
     "Implementation outline",
-    "Recommendation"
+    "Recommendation",
+    "Task definition",
+    "Approved level definitions",
+    "Evidence thresholds",
+    "Applicable qualification conditions",
+    "Practical evaluation",
+    "Change decision",
+    "Affected task list",
+    "Matrix review checklist"
   ],
   "example": {
     "label": "Illustrative example",
@@ -117,6 +137,21 @@
         "Determine whether evidence review and access arrangements meet local needs.",
         "Classify demonstration outcomes and record limitations or outstanding questions.",
         "Accept, clarify or reject unresolved conditions before a purchasing decision."
+      ]
+    },
+    {
+      "slug": "competency-matrix",
+      "title": "Define task requirements and the competency matrix",
+      "summary": "The earlier attribution finding is resolved: the change triggers are presented as local guidance, and the APG statement is supported. The changed paragraphs present no clear new problems.",
+      "bodyHash": "3542593e0dd7ad95e34fa7ad04a62481f3362ed78f8aafe28dfc4ce69636a7eb",
+      "decisions": [
+        "Approve the competence needed for each task and resolve unclear task scope or intended results.",
+        "Define level meanings, evidence thresholds and required qualification conditions.",
+        "Block assignment when a required qualification or its scope cannot be confirmed.",
+        "Assign separate ownership for task requirements and individual competence status.",
+        "Approve revised requirements and identify affected people.",
+        "Determine whether existing evidence covers changed work and apply an interim rule when the effect is unresolved.",
+        "Record open software evaluation questions and any needed manual steps."
       ]
     }
   ],

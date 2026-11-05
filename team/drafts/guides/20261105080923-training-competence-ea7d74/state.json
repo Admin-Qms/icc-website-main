@@ -49,10 +49,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-11-05T08:27:21.829Z"
+    },
+    "competency-matrix": {
+      "hash": "69d3b7f92bab7c91f62de6281b88a51ae20c917f978ca8126ed612d00d95817e",
+      "wordCount": 2038,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-05T08:33:20.356Z"
     }
   },
   "createdAt": "2026-11-05T08:09:23.578Z",
-  "updatedAt": "2026-11-05T08:27:32.121Z",
+  "updatedAt": "2026-11-05T08:33:30.880Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "training-competence",
@@ -1118,7 +1125,7 @@
     "reviewedChapters": [],
     "researchHash": "583553686e535b26f91965e206907c901e554261a7b7a6ca05be80f831789dcb"
   },
-  "contextHash": "c7cd60fc3c139ff0dd9ca0d1a9f48b3fe0c5843494e7eb1813538001aafeb144",
+  "contextHash": "7f32b3b77afb516c830152e914ab496f199e79668bf5abfab024ee05caabf9b1",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1478,6 +1485,194 @@
       ],
       "outputContextHash": "c7cd60fc3c139ff0dd9ca0d1a9f48b3fe0c5843494e7eb1813538001aafeb144",
       "reviewedAt": "2026-11-05T08:27:32.119Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "competency-matrix": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The earlier attribution finding is resolved: the change triggers are presented as local guidance, and the APG statement is supported. The changed paragraphs present no clear new problems.",
+      "glossary": [
+        {
+          "term": "Operating scope",
+          "definition": "The product families, equipment, shifts or conditions covered by a task definition."
+        },
+        {
+          "term": "Level",
+          "definition": "A statement of what a person has demonstrated for a task."
+        }
+      ],
+      "roles": [
+        "Process owner",
+        "Supervisor",
+        "Quality lead",
+        "Authorized assessor",
+        "Qualified colleague",
+        "Workflow owner",
+        "Administrator",
+        "Matrix owner",
+        "Supplier",
+        "Inspector",
+        "Alternate"
+      ],
+      "recordNames": [
+        "Task definition",
+        "Competency matrix",
+        "Approved level definitions",
+        "Evidence thresholds",
+        "Applicable qualification conditions",
+        "Practical evaluation",
+        "Change decision",
+        "Affected task list",
+        "Matrix review checklist",
+        "Results sheet"
+      ],
+      "decisions": [
+        "Approve the competence needed for each task and resolve unclear task scope or intended results.",
+        "Define level meanings, evidence thresholds and required qualification conditions.",
+        "Block assignment when a required qualification or its scope cannot be confirmed.",
+        "Assign separate ownership for task requirements and individual competence status.",
+        "Approve revised requirements and identify affected people.",
+        "Determine whether existing evidence covers changed work and apply an interim rule when the effect is unresolved.",
+        "Record open software evaluation questions and any needed manual steps."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Map tasks to necessary competence",
+            "section": "Map tasks to necessary competence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Map tasks to necessary competence; semantic review verifies support",
+            "section": "Map tasks to necessary competence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Define levels and qualification conditions",
+            "section": "Define levels and qualification conditions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Define levels and qualification conditions; semantic review verifies support",
+            "section": "Define levels and qualification conditions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assign ownership and control changes",
+            "section": "Assign ownership and control changes"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assign ownership and control changes; semantic review verifies support",
+            "section": "Assign ownership and control changes"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "4537a44f8ce1284d8b3c275b8095e883955fef094f72bf31d8057e95ff52304c",
+      "contentHash": "370830aabcfc89b139ecd0f5294013f51021b8aff26009102c821ebe73e90840",
+      "paragraphHashes": [
+        "ccf97829ca01d05b616db0af1dbe892e1cfeb0886ebb585a2a8444285a0f3a36",
+        "b3c3fd455b205d74bf13a273b739d2e1bc2dd390d324b77998457a21c27f7430",
+        "cef9a1c1caf7daaab8aa52e4d480caa341785d996f082fb3dc78567be3b69072",
+        "f074722213353e4240740853b2948ffc3358a93ca8a3faa35e63489a23991afc",
+        "1b55de30519f9f6145575ca3da0d25ac13a896c2ab2f1fd2e4a7a08ab9c1e0e2",
+        "c18d1514906f92b145ca539450f9b15c2faffc470ae41eb74f286e471134efc1",
+        "0bb62b781ad4d0672ee4286e57d545af1b22f87c7fdb6a7b97fd509b96aa1674",
+        "011f7eb21c54b97c2a7757be7218010c6cf62af3589f67af57b5ced0eb3cc442",
+        "b15a65082327e0e54bedf3e70b7c5de6af0180018ec8f8a3e87e577bddc45f9f",
+        "24a29db304977bfacd2bc0d69586f936f534f5813b55627a8f39c7c6ab939709",
+        "20c8db4b67cd0786c2feaa14a80a83be4b49238d32a94dc72d1a87a2b3d81d90",
+        "40400e8d9a2e156d92f3af8cd40ef81267e95b3a146cfc2cf5ae7b69b67d40b2",
+        "17720975fa8c2198ae4aa43ab6767c5acc1514dbea27611261ef7c6955a742d2",
+        "db9960522af5ac782812ed608322234a8f84b749c4f37aafdec2340824b7a3e7",
+        "d82723e31b740e26d2d218ef21c5103af93a46e4e29c672cc34624d72c3ed68d",
+        "a77609ac9fdb7e1929bbf90b408f2c0b21e1c53c3a42c200a0736b3a23f12e55",
+        "8585c0836ecde7f318bb4cf549fc908589da83f67ce12d03576ebf231d8ddc25",
+        "9f0685ebd5673e2a7a6ed097590b6b31b6c4078a0231890f466e83c167917857",
+        "29360c6dd6520e442c563c3da6b34a62d0d6251f9c6bb02e2058afcbc99d000d",
+        "32a6e0b1ad8c67bf893f08e4122986de0f327cf846e3914428677b9a06209251",
+        "a950bcb6cf0163438fbdb1181c0ee19f3c757947f8f77906ce74b96dc59ae76d",
+        "a014acf82bd77d8ad0474e0a12b7280811a4eb0860e478c22394e1a0712b58f8",
+        "7b849573604a3b2dc657227316e1634318ac228bb90dc486cb51775a23a67f69",
+        "c4a1cad3416bcdf4345f9186a339586f68a6731dd110af9e75c76872b620491f",
+        "cd8bc2b3b375143b25bbcf35b3cd68a04a924969826b31d4e3326761e16f6297",
+        "124ac3465767f34d36ba71dd4afae638a32d5e47eda84eade1d93584accea868",
+        "83c03b533cf086f3d05c74efa604596450824813a7ad1569a04c80a4f2c65d19",
+        "3919501378912045552edc227d4403d0ec24406e129be47ccb47ea6d8e4d8853",
+        "f1d000710f7d8f6df0e0b97bae7e947351d5d03f3ccbccb9dcc75be78d592fd3",
+        "7ac7dea8770ced1c84f36d843ae55753fff4a63c15010ff55b92927c68538fa2",
+        "fafcbd0186f6714635fe84e0be4c85440fb5afecc9b6f0c0855845ee6efdf3a9",
+        "7e7709812f31ca8850de0802ee4aca0e2f4bbf67f67ca44708b8ea9fd2e84f4a",
+        "36734b398254b534130da24e6d272b8f5accd8d92ff45179e81b072263394650",
+        "613c0faf6b94572ec5c4fce6b89c8bbd806529d475fd5305b5042e02ce096477",
+        "f917c5fddcbbd564b74d9e6968bd9c2a5083481c4c75e832b50bd796b86c52a5",
+        "ad855bbf05d3b4d60b70463b078e85e433c8b969b8b27ee06b281227736e93b8",
+        "99db914f3d59f9cce599fcdbf6ddf24e51e2036b94125163d504d4bdd6320db4",
+        "da88c5122f83ad2edb1f26bd79be0d1597f45b5c26a5916b6e32bd90f3ee8b73",
+        "6da0913ee06575fbd6c0829d9d27c4b29f9f21f7b23bb5e590788acec3bc23f3",
+        "3b2d0b1bebcf225b36ac21888621fbc1c3a64588cc56407bc82b1a02c704a284",
+        "31feeba36860e085dd19e7031e97e784caa964319aead2ddd44887a32315659b",
+        "1b7770ab4d203e9073ba513015c5592cb81d0c101adf9f486f84ddd41ee2b57a",
+        "63119cb37d7d93bfab925708d42f2684f0db67bf04fff9b0b66bf0f2fdd02704",
+        "e38f1e954ca180618b7189d7a058d5e40295a3d2bdd2d07e5d3275aa3e713f44",
+        "bacc52c4bf004921857397661b3582a0c506d985fa42dc94ee8584553e744e5c",
+        "d1f4e39c826b72549aa921fe3de1c419e3b10960e8fcfa30fc1dd00a2340326d",
+        "d85117389ec97fef97ff587866d445105a91e0a7e668e6cedb609690176b86a1",
+        "1471590237b1d2fc212cb6db6598f2941e1b885a95618147538895e0a967c768"
+      ],
+      "outputContextHash": "7f32b3b77afb516c830152e914ab496f199e79668bf5abfab024ee05caabf9b1",
+      "reviewedAt": "2026-11-05T08:33:30.877Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
