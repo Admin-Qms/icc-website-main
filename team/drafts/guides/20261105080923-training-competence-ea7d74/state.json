@@ -34,10 +34,18 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W45-slot-2",
-  "stage": "outlined",
-  "pages": {},
+  "stage": "writing",
+  "pages": {
+    "mapping-workflows": {
+      "hash": "6ecb3c6351acc618857740bd9a1db75dfa300495491911085c954218cbfa30c2",
+      "wordCount": 2044,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-05T08:14:18.626Z"
+    }
+  },
   "createdAt": "2026-11-05T08:09:23.578Z",
-  "updatedAt": "2026-11-05T08:11:40.536Z",
+  "updatedAt": "2026-11-05T08:14:18.632Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "training-competence",
@@ -1104,7 +1112,167 @@
     "researchHash": "583553686e535b26f91965e206907c901e554261a7b7a6ca05be80f831789dcb"
   },
   "contextHash": "efd1eaa1a36992740ee03f84255c9ad32257fad630dcf479e55bb8b2bfa7b59b",
-  "chapterReviews": {},
+  "chapterReviews": {
+    "mapping-workflows": {
+      "claims": "failed",
+      "scope": "failed",
+      "readability": "failed",
+      "links": "failed",
+      "repetition": "failed",
+      "faq": "failed",
+      "findings": [
+        {
+          "section": "Trace evidence and handoffs",
+          "reason": "Cite assigned evidence in Trace evidence and handoffs; semantic review verifies support",
+          "action": "Correct the indicated subsection while preserving verified facts"
+        },
+        {
+          "section": "Define decision states and acceptance",
+          "reason": "Cite assigned evidence in Define decision states and acceptance; semantic review verifies support",
+          "action": "Correct the indicated subsection while preserving verified facts"
+        }
+      ],
+      "summary": "",
+      "glossary": [],
+      "roles": [],
+      "recordNames": [],
+      "decisions": [],
+      "pass": false,
+      "deterministic": {
+        "pass": false,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Start with the staffing question",
+            "section": "Start with the staffing question"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Start with the staffing question; semantic review verifies support",
+            "section": "Start with the staffing question"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Trace evidence and handoffs",
+            "section": "Trace evidence and handoffs"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": false,
+            "message": "Cite assigned evidence in Trace evidence and handoffs; semantic review verifies support",
+            "section": "Trace evidence and handoffs"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Define decision states and acceptance",
+            "section": "Define decision states and acceptance"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": false,
+            "message": "Cite assigned evidence in Define decision states and acceptance; semantic review verifies support",
+            "section": "Define decision states and acceptance"
+          }
+        ],
+        "failures": [
+          {
+            "id": "subsection-evidence",
+            "pass": false,
+            "message": "Cite assigned evidence in Trace evidence and handoffs; semantic review verifies support",
+            "section": "Trace evidence and handoffs"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": false,
+            "message": "Cite assigned evidence in Define decision states and acceptance; semantic review verifies support",
+            "section": "Define decision states and acceptance"
+          }
+        ]
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "a7627fd0bdad668e137a4974bbf92465c1ad9214791c1e87f8d051f382389fb5",
+      "contentHash": "a310f26551a1eb6fb6453ff1c8ca5a6ce7c4498be2ca6a065462df61809946e5",
+      "paragraphHashes": [
+        "30a42c1c87b2d3a7f0e2c844b7a12e6c79061276ff24ee39580fc6d5337e18f7",
+        "20b17d87ef67394a84ff008d82852ab2af5d14b9c4e0168c33af9954dd665e22",
+        "717a82db9f9d4084e17c394706014b55047e43622b4815fca9886fca0c8e2d6e",
+        "4393ce1d8e8a9fcd2c446951c7c5f9e62b02cb2a14d09e43a25984bde1666df6",
+        "7711f86368399bb6dbf61462250126560e644f2151309721fdf3ca829c9dc42e",
+        "9add49a046c856ee90305e71482edb7b9aec782fade242b561a5d71ec7814533",
+        "b1ce4f118099ae363c2f7be586e3bc3c77f4062bff96157fe151ef11b90d0c15",
+        "806198f283c16d94152bb059a958c9bf4079a6a7bef4fb4b6e598a31a4433de6",
+        "2fe7dffc5af255fe10d6641ab05496ad6a8b6e9661744681202c976a652b86c3",
+        "198886705612f1253e4067c970fae5d4f00519afd1083ec02f0a719b29f151bc",
+        "98bf189f9f8024e6bb9c4543e40d1dbfd8abb55e8c128d8145c09bddb522fe2f",
+        "bf6af88b2f1c85016fc1aea6695d21c2dffde4c756b2fc71b25702d72f3c26f2",
+        "59301cab84cf1e5c80300a07352585acf5cca30b2354100439814002534c7771",
+        "b543975ca0d3c91e7bed7611a8fbf37e15ff6eb88070bb671c9241d3d7971191",
+        "dab814780e4a56102758aec8769a6d7c29a32b3f5cda35a3038869642af56a50",
+        "2d13d8c5db275d49831c4b54175b41e0da7ac8e7d56b21f0c4fc70fd0ddf574c",
+        "2a4cdd650b6458cb44d75b216d15a77533aaac208a557aedec27df071de8086c",
+        "3d38eb9b7c277e4a73dd40d1c9e18f19b3fac5bebfde6405c816048631f0becb",
+        "e7bfaa041f2bc8a57a56d634dc17234ef56c752bcefdcbdd38067be5bf8d1e94",
+        "16d8066a06555780fdb8a16b8d497fe799517a8e12d780285c87c540b136a4de",
+        "2507982598290a7311e9d65a85094364ac9a45bda31dae2956a49418dbe5ee98",
+        "924e1a803027059d4739102fdf88836d1a8ecdd2191dcb235e986f325a909e75",
+        "c154aaa1e00bcd5b44682737606bd5b6e1f4d7f10a07b62fd0913be75fff501c",
+        "509f5af1046b7464c8d70e6f7a475cb42811db77c90a6f8830b575ab5a88f7c3",
+        "73f2e50e25bcd148b3bb7775ce3d4e1d1f055fd8157171163efd7fe16e9465e0",
+        "916cf6d0e7b0d44a6a8f8cee85b5b47b90ad6d264c79f5196c18138fc96cf02d",
+        "8d231fbcae75e7988ebb8b1523ad32f83d17340abf5950e158e3db481e9939bd",
+        "b1a133b306512ad4d4fed8b27262095d34d8acbd3868be78c2ca33a8469b4148",
+        "6418cb0832afb5445ca07f230a6613ac46fb7cf8e7cf3f9e3eb22c77377b8aeb",
+        "e931e2ce1f5897b2d86a524cdd8520cf8be094b9e616f6753640843fb0e26546",
+        "f1cd861bf2cf8970d18bffb195aefce07459736ccee7bf39831a5f8c28d96e95",
+        "85fb64e7b5487aca63bda898d07c6c272650529f3cf3e3f9e8f94af01bfe41a2",
+        "8f7977f1b4b0dcad422ed2fbfe152f09d0603f1a02ae5352c251e9e0e1eb8f9d",
+        "55c6b0260fc87041fc8832713c263e7ec0327d908d2eeecf9a9fee324f13babc",
+        "3357dd6d07e75772d2b368399429532b6371143a5723d92d17afae840ae86f9d"
+      ],
+      "outputContextHash": "efd1eaa1a36992740ee03f84255c9ad32257fad630dcf479e55bb8b2bfa7b59b",
+      "reviewedAt": "2026-11-05T08:14:18.631Z",
+      "reviewer": "Configured independent chapter reviewer"
+    }
+  },
   "researchHash": "583553686e535b26f91965e206907c901e554261a7b7a6ca05be80f831789dcb",
   "outlineHash": "da5bebd501b6042a6aff37cff11d43f5253471496a188952e4760db41a343353",
   "audit": null,
