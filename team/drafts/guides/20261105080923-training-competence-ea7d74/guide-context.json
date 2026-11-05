@@ -21,18 +21,68 @@
     {
       "term": "Workflow owner",
       "definition": "The role accountable for decisions and records in a defined workflow."
+    },
+    {
+      "term": "Evidenced",
+      "definition": "A local decision state indicating that a person’s record set for a task meets the team’s agreed rules."
+    },
+    {
+      "term": "Awaiting assessment",
+      "definition": "A local decision state for a person whose learning is complete or under way but whose required practical evaluation is missing or not yet recorded."
+    },
+    {
+      "term": "Evidence missing",
+      "definition": "A local decision state indicating that no record supports the assignment."
     }
   ],
   "roles": [
     "Quality owner",
     "Process owner",
-    "Operator"
+    "Operator",
+    "Production supervisor",
+    "Shift lead",
+    "Cell coordinator",
+    "Training coordinator",
+    "Assessor",
+    "Quality lead",
+    "Workflow owner",
+    "Inspector"
   ],
-  "recordNames": [],
+  "recordNames": [
+    "Task schedule",
+    "Availability list",
+    "Competence evidence",
+    "Current-state map",
+    "Job descriptions",
+    "Work instructions",
+    "Process specifications",
+    "Training records",
+    "Training sign-in sheets",
+    "Quiz results",
+    "Supervisor checklists",
+    "Certificates",
+    "Practical assessment records",
+    "Cross-training charts",
+    "Decision rules"
+  ],
   "example": {
     "label": "Illustrative example",
     "description": "An unnamed Canadian manufacturer evaluates training and competency management software for one production workflow; all situations and records are hypothetical, not customer results."
   },
-  "reviewedChapters": [],
+  "reviewedChapters": [
+    {
+      "slug": "mapping-workflows",
+      "title": "Map the qualification decision at the production cell",
+      "summary": "The previous finding is resolved: an expired required qualification now blocks assignment until resolved. The changed paragraph presents no clear new problem.",
+      "bodyHash": "15c71e0e5577e1f38e5fe95c6c24a1a56a8f4310cd2f9a56bdfa65096c69707d",
+      "decisions": [
+        "Assign a person supported by current evidence or hold the assignment.",
+        "Identify evidence locations and handoff owners.",
+        "Classify a person’s evidence and define state transitions.",
+        "Resolve uncertain evidence and choose an interim safe action.",
+        "Block assignment when a required qualification has expired."
+      ]
+    }
+  ],
   "researchHash": "583553686e535b26f91965e206907c901e554261a7b7a6ca05be80f831789dcb"
 }

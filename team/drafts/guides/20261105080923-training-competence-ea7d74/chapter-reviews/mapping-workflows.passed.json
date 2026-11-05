@@ -1,0 +1,179 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The previous finding is resolved: an expired required qualification now blocks assignment until resolved. The changed paragraph presents no clear new problem.",
+  "glossary": [
+    {
+      "term": "Evidenced",
+      "definition": "A local decision state indicating that a person’s record set for a task meets the team’s agreed rules."
+    },
+    {
+      "term": "Awaiting assessment",
+      "definition": "A local decision state for a person whose learning is complete or under way but whose required practical evaluation is missing or not yet recorded."
+    },
+    {
+      "term": "Evidence missing",
+      "definition": "A local decision state indicating that no record supports the assignment."
+    }
+  ],
+  "roles": [
+    "Production supervisor",
+    "Shift lead",
+    "Cell coordinator",
+    "Training coordinator",
+    "Assessor",
+    "Quality lead",
+    "Workflow owner",
+    "Inspector"
+  ],
+  "recordNames": [
+    "Task schedule",
+    "Availability list",
+    "Competence evidence",
+    "Current-state map",
+    "Job descriptions",
+    "Work instructions",
+    "Process specifications",
+    "Training records",
+    "Training sign-in sheets",
+    "Quiz results",
+    "Supervisor checklists",
+    "Certificates",
+    "Practical assessment records",
+    "Cross-training charts",
+    "Decision rules"
+  ],
+  "decisions": [
+    "Assign a person supported by current evidence or hold the assignment.",
+    "Identify evidence locations and handoff owners.",
+    "Classify a person’s evidence and define state transitions.",
+    "Resolve uncertain evidence and choose an interim safe action.",
+    "Block assignment when a required qualification has expired."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Start with the staffing question",
+        "section": "Start with the staffing question"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Start with the staffing question; semantic review verifies support",
+        "section": "Start with the staffing question"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Trace evidence and handoffs",
+        "section": "Trace evidence and handoffs"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Trace evidence and handoffs; semantic review verifies support",
+        "section": "Trace evidence and handoffs"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Define decision states and acceptance",
+        "section": "Define decision states and acceptance"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Define decision states and acceptance; semantic review verifies support",
+        "section": "Define decision states and acceptance"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "9da8874bbad0d4f3a6c33069d787653cb6cebacb1e06f5b7ef4c5d27589f5f4d",
+  "contentHash": "e46945ae7cc16a3a8808d9e3cc8e28050808548c33f75aede895363c587573b5",
+  "paragraphHashes": [
+    "30a42c1c87b2d3a7f0e2c844b7a12e6c79061276ff24ee39580fc6d5337e18f7",
+    "20b17d87ef67394a84ff008d82852ab2af5d14b9c4e0168c33af9954dd665e22",
+    "717a82db9f9d4084e17c394706014b55047e43622b4815fca9886fca0c8e2d6e",
+    "4393ce1d8e8a9fcd2c446951c7c5f9e62b02cb2a14d09e43a25984bde1666df6",
+    "7711f86368399bb6dbf61462250126560e644f2151309721fdf3ca829c9dc42e",
+    "9add49a046c856ee90305e71482edb7b9aec782fade242b561a5d71ec7814533",
+    "b1ce4f118099ae363c2f7be586e3bc3c77f4062bff96157fe151ef11b90d0c15",
+    "806198f283c16d94152bb059a958c9bf4079a6a7bef4fb4b6e598a31a4433de6",
+    "2fe7dffc5af255fe10d6641ab05496ad6a8b6e9661744681202c976a652b86c3",
+    "198886705612f1253e4067c970fae5d4f00519afd1083ec02f0a719b29f151bc",
+    "98bf189f9f8024e6bb9c4543e40d1dbfd8abb55e8c128d8145c09bddb522fe2f",
+    "90eaa0679db148a58b5a49c1e32ab28399a0bf08302cb28b5293dbbce004a496",
+    "59301cab84cf1e5c80300a07352585acf5cca30b2354100439814002534c7771",
+    "b543975ca0d3c91e7bed7611a8fbf37e15ff6eb88070bb671c9241d3d7971191",
+    "dab814780e4a56102758aec8769a6d7c29a32b3f5cda35a3038869642af56a50",
+    "2d13d8c5db275d49831c4b54175b41e0da7ac8e7d56b21f0c4fc70fd0ddf574c",
+    "2a4cdd650b6458cb44d75b216d15a77533aaac208a557aedec27df071de8086c",
+    "3d38eb9b7c277e4a73dd40d1c9e18f19b3fac5bebfde6405c816048631f0becb",
+    "e7bfaa041f2bc8a57a56d634dc17234ef56c752bcefdcbdd38067be5bf8d1e94",
+    "16d8066a06555780fdb8a16b8d497fe799517a8e12d780285c87c540b136a4de",
+    "2507982598290a7311e9d65a85094364ac9a45bda31dae2956a49418dbe5ee98",
+    "924e1a803027059d4739102fdf88836d1a8ecdd2191dcb235e986f325a909e75",
+    "fc6f2a5da1fec5dbdc7e9bf70f6b5bc00b4fb4c3164e42e902696dbcc1c935ae",
+    "509f5af1046b7464c8d70e6f7a475cb42811db77c90a6f8830b575ab5a88f7c3",
+    "73f2e50e25bcd148b3bb7775ce3d4e1d1f055fd8157171163efd7fe16e9465e0",
+    "916cf6d0e7b0d44a6a8f8cee85b5b47b90ad6d264c79f5196c18138fc96cf02d",
+    "8d231fbcae75e7988ebb8b1523ad32f83d17340abf5950e158e3db481e9939bd",
+    "299870ae4726eaf220d40781f8f81d6f91db99dfad60cd27bf18baaeb046b053",
+    "6418cb0832afb5445ca07f230a6613ac46fb7cf8e7cf3f9e3eb22c77377b8aeb",
+    "e931e2ce1f5897b2d86a524cdd8520cf8be094b9e616f6753640843fb0e26546",
+    "f1cd861bf2cf8970d18bffb195aefce07459736ccee7bf39831a5f8c28d96e95",
+    "85fb64e7b5487aca63bda898d07c6c272650529f3cf3e3f9e8f94af01bfe41a2",
+    "8f7977f1b4b0dcad422ed2fbfe152f09d0603f1a02ae5352c251e9e0e1eb8f9d",
+    "55c6b0260fc87041fc8832713c263e7ec0327d908d2eeecf9a9fee324f13babc",
+    "3357dd6d07e75772d2b368399429532b6371143a5723d92d17afae840ae86f9d"
+  ],
+  "outputContextHash": "01a350c301092bdf1c84ecfb4581b78b10125fe81d008a2ca4efa04c5216abbd",
+  "reviewedAt": "2026-11-05T08:17:43.975Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

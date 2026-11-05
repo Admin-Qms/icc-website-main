@@ -48,7 +48,7 @@ Two questions expose most weak points. Who is allowed to say a person may do the
 
 ## Trace evidence and handoffs
 
-With the decision described, follow the evidence behind it. The goal is a current-state map showing how a task requirement becomes a trained, assessed, and recorded person, and who handles each step. The APG paper describes a cycle that makes a useful skeleton: determine the necessary competence, take actions to acquire it, evaluate whether those actions worked, and retain documented information. Draw those four boxes and fill them with what actually happens at the chosen cell.
+With the decision described, follow the evidence behind it. The goal is a current-state map showing how a task requirement becomes a trained, assessed, and recorded person, and who handles each step. The [APG paper](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf) describes a cycle that makes a useful skeleton: determine the necessary competence, take actions to acquire it, evaluate whether those actions worked, and retain documented information. Draw those four boxes and fill them with what actually happens at the chosen cell.
 
 For each step, collect the document, system, or conversation that carries it today, and name the person who owns the handoff to the next step.
 
@@ -80,7 +80,7 @@ Three states are enough to start for most cells.
 - **Awaiting assessment.** Learning is complete or under way, but the practical evaluation required by the team's rules is missing or not yet recorded. The person may work only under conditions the team defines, such as with a qualified colleague present, or not at all.
 - **Evidence missing.** No record supports the assignment. The supervisor must not treat this as approval.
 
-Resist adding states until the team has used these for a few weeks; a long list invites arguments about which one applies. Treat expiry of a recognized qualification as a separate flag.
+Resist adding states early. Treat expiration of a required qualification as a separate flag that blocks assignment until resolved, even for an otherwise evidenced person.
 
 A state is only useful when the rule for entering it is clear. Write each rule in a sentence that a supervisor can apply without interpretation.
 
@@ -95,7 +95,7 @@ The third row connects to a point in the APG paper: competence verification may 
 
 Every workflow needs a person who resolves uncertainty. When a supervisor cannot tell whether a record set is complete, who decides? If the answer is "whoever is around," the workflow has no owner. Name one role and one backup, and write down how long the operational team waits for a ruling before it uses a safe alternative, such as reassigning the task to a person already in the evidenced state or stopping the job.
 
-The APG paper says an organization may need to ensure adequate replacements, and gives cross-training charts among the records that can help mitigate risks from staff shortages. A cross-training view is the practical tool here: it lets a supervisor see at a glance who else is evidenced for the task. If no one is, that is a staffing risk to escalate, not a gap to paper over.
+The [APG paper](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf) says an organization may need to ensure adequate replacements, and gives cross-training charts among the records that can help mitigate risks from staff shortages. A cross-training view is the practical tool here: it lets a supervisor see at a glance who else is evidenced for the task. If no one is, that is a staffing risk to escalate, not a gap to paper over.
 
 Before accepting the definitions, run them against real, imperfect examples. Pull four or five records from the chosen cell and ask two people independently to assign each a state. Compare answers. Where they differ, the rule is unclear, and the team should rewrite it. Include at least one record with learning complete but no practical assessment, one with an assessment against an outdated instruction, and one with a qualification of unknown expiry.
 
