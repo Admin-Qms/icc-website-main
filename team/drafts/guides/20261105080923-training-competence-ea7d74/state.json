@@ -42,10 +42,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-11-05T08:17:36.781Z"
+    },
+    "evaluating-software": {
+      "hash": "f04ea4c3e463b0e52c2d0fb7a20032f9ef6595265de456df606de601056cea6b",
+      "wordCount": 2023,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-05T08:27:21.829Z"
     }
   },
   "createdAt": "2026-11-05T08:09:23.578Z",
-  "updatedAt": "2026-11-05T08:17:43.977Z",
+  "updatedAt": "2026-11-05T08:27:32.121Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "training-competence",
@@ -1111,7 +1118,7 @@
     "reviewedChapters": [],
     "researchHash": "583553686e535b26f91965e206907c901e554261a7b7a6ca05be80f831789dcb"
   },
-  "contextHash": "01a350c301092bdf1c84ecfb4581b78b10125fe81d008a2ca4efa04c5216abbd",
+  "contextHash": "c7cd60fc3c139ff0dd9ca0d1a9f48b3fe0c5843494e7eb1813538001aafeb144",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1290,6 +1297,187 @@
       ],
       "outputContextHash": "01a350c301092bdf1c84ecfb4581b78b10125fe81d008a2ca4efa04c5216abbd",
       "reviewedAt": "2026-11-05T08:17:43.975Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "evaluating-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The prior page-heading finding is resolved: the body begins with an H2 and does not duplicate the page-shell H1. No changed paragraphs were submitted for review.",
+      "glossary": [
+        {
+          "term": "Results sheet",
+          "definition": "A record of each claim, its test, what was observed and its disposition."
+        }
+      ],
+      "roles": [
+        "Evaluation lead",
+        "Supervisor",
+        "Quality lead",
+        "Quality reviewer",
+        "IT reviewer",
+        "Employee",
+        "Administrator",
+        "Supplier",
+        "Decision-maker",
+        "Auditor"
+      ],
+      "recordNames": [
+        "Workflow map",
+        "Demonstration script",
+        "Results sheet",
+        "Unknowns list",
+        "Employee roster",
+        "Competency matrix",
+        "Supervisor sign-off",
+        "Practical assessment",
+        "Quiz results",
+        "Certificates",
+        "Written supplier statement",
+        "Implementation outline",
+        "Recommendation"
+      ],
+      "decisions": [
+        "Select published claims to verify in a demonstration.",
+        "Determine whether evidence review and access arrangements meet local needs.",
+        "Classify demonstration outcomes and record limitations or outstanding questions.",
+        "Accept, clarify or reject unresolved conditions before a purchasing decision."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Translate published descriptions into demonstration tests",
+            "section": "Translate published descriptions into demonstration tests"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Translate published descriptions into demonstration tests; semantic review verifies support",
+            "section": "Translate published descriptions into demonstration tests"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Test evidence, access and human review",
+            "section": "Test evidence, access and human review"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Test evidence, access and human review; semantic review verifies support",
+            "section": "Test evidence, access and human review"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Resolve commercial and technical unknowns",
+            "section": "Resolve commercial and technical unknowns"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Resolve commercial and technical unknowns; semantic review verifies support",
+            "section": "Resolve commercial and technical unknowns"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "ddc2d156d4dd50e4425bbff8873ca2948d4c11072b8a56f880c345fef21ca085",
+      "contentHash": "77f99afe1419ef674621a4a43f64e2f3084a14de499497fea9707ff7b34882d5",
+      "paragraphHashes": [
+        "e3e5169def1c65e64862b5d0e7cd1b5b8ee93239e1d844630082d51d2a6660e6",
+        "8f376591b6568f0c1794906666b7808b0095691da41f05bc4eda415ba4998831",
+        "30a6bdf109e83a87bb34ea3826911b015ed8b1bd4c643197ff5a819255e4ddf3",
+        "e5b1527c179921f772c20b2e7751ccf9fc3dc1cfc91ae96c1fafa523e4e8e8d6",
+        "edb9b8cfaaab0227efb6f77026db1bb9dce4c387e8e3f49b8cc88ecdb1f37b66",
+        "5ef0950b5f06f2b88a9b9421dca9b44f9d7087d411d0224eeeae77803ade0156",
+        "52aa2656f099475305017064bafc74e2cbd9e5344c550b904ac80b863d4ac6b0",
+        "df8a4404d02cb0fd1bffe7d360224ff406bb57ba2d441c228018f54ebfb96ca5",
+        "ced3d89c0ccaf805a75d0589a424b1027a3ab7679e10a7d4f3d34bdf86e8d557",
+        "87bad8a7008238ab71d6bb95b9aeb42a42408a09fd8fc338bd5b2490a59fe798",
+        "0eea46f3b5e36a01c07aac5d4956ea8ce395cbfa2f93fbbdb5f214368d2cfdd1",
+        "f3439ddc10ea0e77252328d94ed20570d812af1778c569b2428ff501d6eb0a21",
+        "24feabf84f8065697a557f12b5c67fda15d201f1fd44d0d4cc1bdb36d42e8fa1",
+        "a7b15005b45b1162e9f75693f3aa2af565d329e7356d34d6ed6409f3c10e1e9f",
+        "14aaff1cc79686af1a635ae4548f78a28741ba2ebf201bdf47fa5acb1d94a5a7",
+        "89ed941c6fc8c7027b32969340f9c2ef070b64e397bf7918b261f3f0c52e5567",
+        "bf390a326e920d0f56d9ab27df05f32910731711ae9b40614d33f5b016e830d7",
+        "c5895d7a54ac9f893fca9f15b56f358585759fa4a8aab293eb7890c35a7d997d",
+        "ef215905f66ee584187c14b1b407c3ecfe41e352e56333674add7c243146b8f9",
+        "62671e3bef426c400fce453f37e3d9a1ec0f4ba1d232cf5863152aad248b9203",
+        "7f8bc0d0e6ede0b0488b4c7738f3c33bc11abbdbd51288885bfb1e21d8b872c3",
+        "c41c884047cf36e19c83916bc748b5723c0d9f8b53355225970d47ea07ca3eb8",
+        "5773404cb0d84faa6ebe601737e2571485470d4dde332cc3f2ba875a86e78eb6",
+        "b1af02f78ea2c0ef0dd695b19388fe3163f0914da69bf19146ab1902e8b8611d",
+        "842fcd4a72f9f84e5ac8689d9d8e12146a217951a26a01fe40423afd3c26c670",
+        "177ffc7c69ebda250627b6e3dedaa10b06cf20a2e7bae1de2185b0b53305928b",
+        "92b7b337904b8028ba9c0ebb2ffd6bf4f38e94309dfaac1dd8f03daa64d22e53",
+        "a14e98a6146a684dd35895844c0d0b0ba5145eb3ff986f74ef0aa3a13cd9ef15",
+        "eb90c2adc4facfd10d8153909aede8fa8a09cbc189d4f922e058580cc0082125",
+        "8c9fb9bd6de54978db854445e1fdd1adf0ce97c5e0854c025e9c4246ad059f85",
+        "a340cf90c31c97d5f3c79af081956f7bfa0668ebef26954c859436fd4a22ed6a",
+        "dfbba1516b1c537d751017f0f42ce3c2de92655b4e7530771553737135dbac84",
+        "659e38d7d76e22eb332dcfe8d7ff13470b340a2cfdd04cdaa2b3aee5470ba7ca",
+        "18e76880772b43ad7d9e9d52b5d4fc3fd0f347cce92ddaebf98f3ab0fee36905",
+        "990537b8cbdc0caff20a27d6529b52898c190856875d42866ef86f0cc5cc95c3",
+        "2f3b0ab0d62010788102b0fface59af369b456cb247cb2bcb53aa2095391959c",
+        "2f285e0d736f08e1840dfdbce61fd2d19b950d566f5a3dfeae9b62fefb7ffb6b",
+        "c46c8a1903777adfb5ef5e012b9c311a127284e49fe3d6c134dd9cbc600c1914",
+        "cc420354aadf045aeca5440c063d38f1d7197edd4757a7596850560d22eb88a2",
+        "69d2b269efe3b5a2102e9d726da2890fb21097aae125a22ba61748447884190c",
+        "ae6886057cd2e2eba2e26d1680925ace1c1033160298d0391c4f02e558ba1999",
+        "9044072d44880d736191a9e79902aad74452b40969ba12cf6164ac692e997172",
+        "45b40f12a61f547f8f26c96913cb2e5cd8a73f48a1039f9a166e0f7210999ee9",
+        "35fd43482c1b2d6d10c4627540f09c3e58436ca95e0277b68802f21980be6a1e",
+        "2acc36313a42110c5d281d7416865a531c144965c2f7c4d3ac698d725febd2a6",
+        "974935a08167e69ae7ade92f6cb42f725f74d93c05f0e939c6324f5fb71b57e4"
+      ],
+      "outputContextHash": "c7cd60fc3c139ff0dd9ca0d1a9f48b3fe0c5843494e7eb1813538001aafeb144",
+      "reviewedAt": "2026-11-05T08:27:32.119Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

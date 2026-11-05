@@ -33,6 +33,10 @@
     {
       "term": "Evidence missing",
       "definition": "A local decision state indicating that no record supports the assignment."
+    },
+    {
+      "term": "Results sheet",
+      "definition": "A record of each claim, its test, what was observed and its disposition."
     }
   ],
   "roles": [
@@ -46,7 +50,16 @@
     "Assessor",
     "Quality lead",
     "Workflow owner",
-    "Inspector"
+    "Inspector",
+    "Evaluation lead",
+    "Supervisor",
+    "Quality reviewer",
+    "IT reviewer",
+    "Employee",
+    "Administrator",
+    "Supplier",
+    "Decision-maker",
+    "Auditor"
   ],
   "recordNames": [
     "Task schedule",
@@ -63,7 +76,18 @@
     "Certificates",
     "Practical assessment records",
     "Cross-training charts",
-    "Decision rules"
+    "Decision rules",
+    "Workflow map",
+    "Demonstration script",
+    "Results sheet",
+    "Unknowns list",
+    "Employee roster",
+    "Competency matrix",
+    "Supervisor sign-off",
+    "Practical assessment",
+    "Written supplier statement",
+    "Implementation outline",
+    "Recommendation"
   ],
   "example": {
     "label": "Illustrative example",
@@ -81,6 +105,18 @@
         "Classify a person’s evidence and define state transitions.",
         "Resolve uncertain evidence and choose an interim safe action.",
         "Block assignment when a required qualification has expired."
+      ]
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluate ICC against the actual decision",
+      "summary": "The prior page-heading finding is resolved: the body begins with an H2 and does not duplicate the page-shell H1. No changed paragraphs were submitted for review.",
+      "bodyHash": "225371c7a777405ac68b4aba633c02ecad5f0cdc8a7177ac1484675a39c9cc83",
+      "decisions": [
+        "Select published claims to verify in a demonstration.",
+        "Determine whether evidence review and access arrangements meet local needs.",
+        "Classify demonstration outcomes and record limitations or outstanding questions.",
+        "Accept, clarify or reject unresolved conditions before a purchasing decision."
       ]
     }
   ],
