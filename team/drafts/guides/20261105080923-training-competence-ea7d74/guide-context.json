@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "topicId": "training-competence",
+  "glossary": [
+    {
+      "term": "Competence",
+      "definition": "The ability to apply knowledge and skills to achieve intended results, as cited in the APG guidance from ISO 9000:2015."
+    },
+    {
+      "term": "Competency matrix",
+      "definition": "A way to relate people and their assessed levels to tasks or competencies; the organization must define what each level means."
+    },
+    {
+      "term": "Qualification",
+      "definition": "A recognized qualification where one is applicable; it is distinct from the broader ability to perform competently."
+    },
+    {
+      "term": "Documented information",
+      "definition": "Information retained as evidence; the APG guidance says the organization decides what evidence of competence is appropriate."
+    },
+    {
+      "term": "Workflow owner",
+      "definition": "The role accountable for decisions and records in a defined workflow."
+    }
+  ],
+  "roles": [
+    "Quality owner",
+    "Process owner",
+    "Operator"
+  ],
+  "recordNames": [],
+  "example": {
+    "label": "Illustrative example",
+    "description": "An unnamed Canadian manufacturer evaluates training and competency management software for one production workflow; all situations and records are hypothetical, not customer results."
+  },
+  "reviewedChapters": [],
+  "researchHash": "583553686e535b26f91965e206907c901e554261a7b7a6ca05be80f831789dcb"
+}
