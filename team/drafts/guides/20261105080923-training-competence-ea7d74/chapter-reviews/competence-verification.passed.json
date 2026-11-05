@@ -1,0 +1,186 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The previous finding is resolved: the assessment record now requires an unambiguous assessor identifier. The changed paragraphs present no clear new problems.",
+  "glossary": [
+    {
+      "term": "Completion",
+      "definition": "Whether the person finished the action."
+    },
+    {
+      "term": "Effectiveness",
+      "definition": "Whether the action produced the competence needed for the task."
+    }
+  ],
+  "roles": [
+    "Assessor",
+    "Process owner",
+    "Quality lead",
+    "Quality reviewer",
+    "Supervisor",
+    "Alternate inspector",
+    "Second assessor",
+    "Peer reviewer",
+    "Supplier",
+    "Management"
+  ],
+  "recordNames": [
+    "Assessment record",
+    "Task definition",
+    "Acceptance criteria",
+    "Work instruction",
+    "Training records",
+    "Employment records",
+    "Training plans",
+    "Completion certificate",
+    "Quiz result",
+    "Supervisor sign-off",
+    "Practical assessment",
+    "Results sheet",
+    "Reassessment plan"
+  ],
+  "decisions": [
+    "Choose and conduct an assessment suited to the task.",
+    "Decide whether a simulation, delay or other route is acceptable when observation or an assessor is unavailable.",
+    "Determine whether combined evidence supports the task decision.",
+    "Keep a person out of independent work when required evidence is missing.",
+    "Plan further action and reassessment after an unsuccessful assessment.",
+    "Arrange interim coverage or escalate when no evidenced person is available.",
+    "Decide what to retain outside the system if it cannot show the assessment history."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Select an assessment method",
+        "section": "Select an assessment method"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Select an assessment method; semantic review verifies support",
+        "section": "Select an assessment method"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Separate completion from effectiveness",
+        "section": "Separate completion from effectiveness"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Separate completion from effectiveness; semantic review verifies support",
+        "section": "Separate completion from effectiveness"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Respond to an unsuccessful assessment",
+        "section": "Respond to an unsuccessful assessment"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Respond to an unsuccessful assessment; semantic review verifies support",
+        "section": "Respond to an unsuccessful assessment"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "4b999fc70ae18bf5ca0e97febcbf6356a194a8cd05342e5cbf5dcd871ce1f914",
+  "contentHash": "05a1683afbdcc40cdae7ad3f2587dab595e798aff5d3039a99c3c4e861f27fc1",
+  "paragraphHashes": [
+    "02220c794d903386c5b7bd148e0cb8dd1f6a84269a2c9d8b4bb0c7305360481f",
+    "f75d9b6a33855ebbb2dafb8de0de3794dce0db812bc37311e0ce34bae0babf45",
+    "bf95118f33c7b0f2b489f536ac23b8ea822d6ac3d4cc3b92d2d60ba1378a0f78",
+    "32e672816186e898d7d95d3f84b03f0bf20fdf5de64af138b232bebd539885c8",
+    "a6dbc8247304cc3e16d42158c1e956aa9c889e821755971aed7782dde6eadd49",
+    "c6c7cb15d1e80c836fe52fb3b95455591ce70d0a10ebf2116ea310851511b723",
+    "7dbfc5286a6fae5fad0decf211aa2ebed843284a149e0ab1ad0f401257396c8d",
+    "54ebeb6ce41791297adad4768fa04fe0824100a8b21c4f12650455e35f64dea5",
+    "3a9ea66bb68fc84e245f0d968153f525341dbbcd7eb1ee5b0c003863ea3721c4",
+    "9a37be9d31c857e0919b92d06ac3013a95e1344c6616ed2f5bd1663374374cc4",
+    "b3e47caa4c5fb36e1765a7c0ba8dba098427a2176842f7fe412d3f0224a4b18c",
+    "0979744e16d15e9ac70090a8a7eb652e6aac2b8f4ec7fffc091fdfc422c76b15",
+    "716630541ad688e41631fc3f71880bc48f3925fcab8e0b6404776b44c735e509",
+    "fe02e5ab0a6a81bb17b0cc05859358df64e530c7262a03d18bef5490f968b90b",
+    "95fcfc0dfa3c10b26e86c75191216043949a15e50fef67bee7080e86d4b13b7a",
+    "e5cf5ab0bfece3039652242c11a005bce8654930f24630f9cda59060f974d71d",
+    "8fc69dec336010f8a02db4e9076230a2cb55323d9bf86690d5d753aec4a8b26c",
+    "e944148bbec987eaa04e22d0607bf38d0250461485819840dce3d55cdc6c57fd",
+    "cbbb5b22877552ffad18770f6e421df7323917e13668c5eb8905becabf149fcf",
+    "0c11e1dd2a0001cf975eebd908f0b5f9db3a27d800a7cb392164b23e3cf5517e",
+    "521e8cce6820699c4d143fd4ff2df6fe6dfe0b09d04065401f45de156048739f",
+    "4cf05eb646a8db3c979ca6c4803b38561db7ee66f7608d01d1407b1659ea52de",
+    "ee262639447ce5a47a2152a5e0b9dd30428ee9712daa919ee97086befd228b4c",
+    "73562656482a66c55d0e590db9f52c5331c1e9169cc2fad156ce1fcbd9b706dc",
+    "2ea089d5c4d987cd532de244293de3d401406d1c808786599d1a509499ed5acd",
+    "646772270ed85198ef670cbe8ea153dea22704ae614583eb344f9dce4547d485",
+    "61ea8b7c63f626d6a18c8930a4188c1a30d8d282cc6c5f235841a3741ba7db90",
+    "f795ff3bc36003e591282686224b2d6314ae58b6942fe025ca0f60f30c37c28e",
+    "75b23a630356e2d59ab0d10a5f0962d561f2e3d90cf1c3932fb8b45579efd960",
+    "0bda9c8003e3e18d12a900b4500c0ef9eea408ad88c7f8eba2a54284f001df3e",
+    "8ce39fa5b70fefd3a21327c5211a5f7c67d73b6aa72a76f98a11de7331bd1cb7",
+    "9e1bea4e8b76f2848f7ff8557e7519e2d02ea0615ecad7929a77b5d1ebaf7f24",
+    "8b3a1368c3930354df8bde4d55b9ffc37aa860a97bc8b1a0339f8992d769ebb4",
+    "1afc8db8291fa87626bb68a217e007383dc1f06c96c0ab7c4439d0cf10a0da17",
+    "6f94327213f8e620e27177ff50fe995a051b8bb6b698177fffe40c7d6157e57c",
+    "136bfa555b23479019bf200c066eb8e47a2f928c7b76013e7bd5a6e2e716450d",
+    "1580120c0197376016f5632e902b5ef067291904c70d7420488492547d95d3e9",
+    "c8c3c48fd0dfb72bb3964fe1b85f82f0bc3b14f27855f3f94e112fde9a10dbf5",
+    "b90fdfddc91a8a6496eaaaed2290cf09efee0c3fa16c4599ba6963396075a085",
+    "b8f1f595732cafc8fc7b0dc255c88f6c281120eda52f0d023610db41c9a36481",
+    "5c5c667cc9a64bcd5a4649b66f9764a6d51b27ace61deffcfcfff86ab29fc7cc",
+    "58a31670b3fff50d577eadc1a411aa46dfc4459b3a51574d5835cb0a6604158f",
+    "a2ce06a52f5455cc0828aa33950a3a96d5c9b656289bdc127f86a3c0f38a8cbe",
+    "32e0f964c753cabaad80ef46a4da2f3ddcaec459cfc8acdbc37ab3b556fedfeb"
+  ],
+  "outputContextHash": "d9ba6d0728cca5b74d845ec4f1ed0b865e9a43ef640ce4886084861a0552d65b",
+  "reviewedAt": "2026-11-05T08:42:33.337Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

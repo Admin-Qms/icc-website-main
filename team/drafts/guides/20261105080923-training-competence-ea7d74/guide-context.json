@@ -49,6 +49,14 @@
     {
       "term": "Completion record",
       "definition": "A record documenting that an action took place; it does not by itself prove that a person can perform the task."
+    },
+    {
+      "term": "Completion",
+      "definition": "Whether the person finished the action."
+    },
+    {
+      "term": "Effectiveness",
+      "definition": "Whether the action produced the competence needed for the task."
     }
   ],
   "roles": [
@@ -81,7 +89,10 @@
     "Coach",
     "Learner",
     "Management",
-    "Provider"
+    "Provider",
+    "Alternate inspector",
+    "Second assessor",
+    "Peer reviewer"
   ],
   "recordNames": [
     "Task schedule",
@@ -127,7 +138,14 @@
     "Exception record",
     "Revised plan",
     "Purchase order",
-    "Agreement"
+    "Agreement",
+    "Assessment record",
+    "Acceptance criteria",
+    "Work instruction",
+    "Employment records",
+    "Training plans",
+    "Completion certificate",
+    "Reassessment plan"
   ],
   "example": {
     "label": "Illustrative example",
@@ -186,6 +204,21 @@
         "Resolve disputed or incomplete sign-off while controlling independent assignment.",
         "Reschedule overdue learning and select an evidenced replacement or hold the work.",
         "Communicate competence requirements to external providers and retain relevant evidence."
+      ]
+    },
+    {
+      "slug": "competence-verification",
+      "title": "Verify competence in practical work",
+      "summary": "The previous finding is resolved: the assessment record now requires an unambiguous assessor identifier. The changed paragraphs present no clear new problems.",
+      "bodyHash": "c018046dac76db8f08d57149f59c440424acb11cd0ae5124061ae7b2418b77e7",
+      "decisions": [
+        "Choose and conduct an assessment suited to the task.",
+        "Decide whether a simulation, delay or other route is acceptable when observation or an assessor is unavailable.",
+        "Determine whether combined evidence supports the task decision.",
+        "Keep a person out of independent work when required evidence is missing.",
+        "Plan further action and reassessment after an unsuccessful assessment.",
+        "Arrange interim coverage or escalate when no evidenced person is available.",
+        "Decide what to retain outside the system if it cannot show the assessment history."
       ]
     }
   ],
