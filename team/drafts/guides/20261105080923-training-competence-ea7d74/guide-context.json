@@ -132,7 +132,10 @@
     "Pilot supervisor",
     "Rollout sponsor",
     "Exception owner",
-    "First point of contact"
+    "First point of contact",
+    "Operations owner",
+    "IT representative",
+    "Qualified adviser"
   ],
   "recordNames": [
     "Task schedule",
@@ -206,7 +209,15 @@
     "One-page role reference",
     "Pilot log",
     "Workflow document",
-    "Expansion decision"
+    "Expansion decision",
+    "Review record",
+    "Review findings",
+    "Review decision",
+    "Migration exception list",
+    "Approved FAQ answers and source references",
+    "Evaluation record",
+    "Written supplier answers",
+    "List of open questions"
   ],
   "example": {
     "label": "Illustrative example",
@@ -324,6 +335,21 @@
         "Set local acceptance thresholds and determine how missed thresholds affect expansion.",
         "Expand, repeat the pilot or pause based on readiness and support capacity.",
         "Assign support contacts and action owners after expansion."
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Review performance and prepare the next decision",
+      "summary": "The prior citation finding is resolved. No clear new problems were found in the changed paragraphs.",
+      "bodyHash": "5a3e446c696fbcf93713409205b76760c23956b2dec693687045f91498c20aed",
+      "decisions": [
+        "Prioritize corrective actions or workflow improvements from review findings.",
+        "Treat insufficient evidence as a review finding.",
+        "Choose a review interval and owner.",
+        "Answer FAQ questions within the evidence or refer interpretation questions to an adviser.",
+        "Classify legacy records for migration, review or separate retention.",
+        "Choose an evidenced replacement, permitted supervision or a hold when staffing evidence is missing.",
+        "Proceed, seek clarification or reject the software option based on the demonstration and open conditions."
       ]
     }
   ],
