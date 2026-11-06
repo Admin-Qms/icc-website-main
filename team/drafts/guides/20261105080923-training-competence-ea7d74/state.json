@@ -44,71 +44,71 @@
       "checkpointedAt": "2026-11-06T13:02:47.860Z"
     },
     "evaluating-software": {
-      "hash": "2a659ee9a02fc3037fe7f34242eaa6c12bfa0c75faa57b7e9261b57357faebd7",
-      "wordCount": 2009,
+      "hash": "de2347ef561afb5bf29f4d8cfe30c105b6b3d7c2b8772036568110b28371bb09",
+      "wordCount": 2024,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-06T13:04:57.966Z"
+      "checkpointedAt": "2026-11-06T13:11:35.058Z"
     },
     "competency-matrix": {
-      "hash": "f7f6f1dbe0352181896f7c2890734005570107b4239269a2a71a72b4d03aa67c",
-      "wordCount": 2038,
+      "hash": "461e6dcaf423f25245a0545860a8ee14f2b18bb5c40293298767b8bc57ce2de7",
+      "wordCount": 2036,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-06T13:05:10.089Z"
+      "checkpointedAt": "2026-11-06T13:12:46.878Z"
     },
     "training-assignments": {
       "hash": "599d29fce75b17652208a7627245766164bbb332899a115e4da61666e32068e3",
       "wordCount": 2034,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-06T13:05:10.437Z"
+      "checkpointedAt": "2026-11-06T13:13:12.112Z"
     },
     "competence-verification": {
       "hash": "83ce6f73304a93b0e61e820d4f84f30bd789bd20dd9aae720950d67ebf9c0d08",
       "wordCount": 2040,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-06T13:05:10.790Z"
+      "checkpointedAt": "2026-11-06T13:13:54.556Z"
     },
     "qualification-renewal": {
       "hash": "ffad4e63a17c56ed7a69af675414b6cdd181a00e3e8e88d5f36d287fe897229b",
       "wordCount": 2061,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-06T13:05:11.147Z"
+      "checkpointedAt": "2026-11-06T13:14:03.949Z"
     },
     "migration-planning": {
       "hash": "220f26bac54578ad1d55a9ae1ddded850b0f08d271610a5622d249431ff40e2d",
       "wordCount": 2053,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-06T13:05:11.505Z"
+      "checkpointedAt": "2026-11-06T13:14:04.196Z"
     },
     "training-rollout": {
       "hash": "9316efe17706455d940c46222c7cfd2923d95195adc825a00d6178d17dad630c",
       "wordCount": 2032,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-06T13:05:11.889Z"
+      "checkpointedAt": "2026-11-06T13:14:04.431Z"
     },
     "ongoing-operation": {
       "hash": "db4d954d24505bf8d8450dc12b7086469477c072ed7f57aee8702684ca84c9a8",
       "wordCount": 2067,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-06T13:05:12.284Z"
+      "checkpointedAt": "2026-11-06T13:14:04.637Z"
     },
     "competency-management-software": {
       "hash": "cdcaddcf2462af40a504cba5ea5d617a1cbbda60751fbbd7c407da4bf200cfe1",
       "wordCount": 1520,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-11-06T13:05:12.686Z"
+      "checkpointedAt": "2026-11-06T13:14:48.246Z"
     }
   },
   "createdAt": "2026-11-05T08:09:23.578Z",
-  "updatedAt": "2026-11-06T13:05:12.687Z",
+  "updatedAt": "2026-11-06T13:14:55.641Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "training-competence",
@@ -1174,7 +1174,7 @@
     "reviewedChapters": [],
     "researchHash": "583553686e535b26f91965e206907c901e554261a7b7a6ca05be80f831789dcb"
   },
-  "contextHash": "ffc53d5161d8e46fcf72040623234d38a39c2d5b045694b7fb678d66a8831003",
+  "contextHash": "e824325266fde6a13751060c4bceb623a3c9fbf3a06b4f1b7ed1e88623424bec",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1370,59 +1370,62 @@
       "reviewer": "Configured independent chapter reviewer"
     },
     "evaluating-software": {
-      "claims": "failed",
+      "claims": "passed",
       "scope": "passed",
       "readability": "passed",
-      "links": "failed",
-      "repetition": "failed",
+      "links": "passed",
+      "repetition": "passed",
       "faq": "passed",
-      "findings": [
-        {
-          "section": "Test evidence, access and human review — Ask who approved the evidence",
-          "reason": "The changed paragraph attributes auditor access to specified records and certificate completion dates to the ICC page. The supplied claims describe those records but do not establish that auditors can view them or that certificates show completion dates.",
-          "action": "Present auditor access and completion dates as questions to demonstrate, or supply evidence supporting the specific attribution."
-        },
-        {
-          "section": "Resolve commercial and technical unknowns — Compare options on the same basis",
-          "reason": "The changed paragraph repeats the instruction to compare ICC with an improved paper or spreadsheet workflow.",
-          "action": "Combine the two mentions into one comparison instruction."
-        }
-      ],
-      "summary": "The earlier finding is resolved: the page now limits the integration omission to HR systems. One changed citation overstates the supplied evidence, and one changed paragraph repeats a comparison instruction.",
+      "findings": [],
+      "summary": "Both previous findings are resolved. The changed paragraphs present auditor access and certificate dates as open questions and avoid repeating the comparison instruction.",
       "glossary": [
         {
           "term": "Results sheet",
-          "definition": "A comparison record of each claim, its test, what was observed and its disposition."
+          "definition": "A record of each claim, its test, the observation and its disposition."
+        },
+        {
+          "term": "Disposition",
+          "definition": "An evaluation status for a claim, such as shown, shown with configuration, described but not shown, or not available."
+        },
+        {
+          "term": "Unknowns list",
+          "definition": "A list of questions needing written answers, each with an owner and due date."
         }
       ],
       "roles": [
         "Evaluation lead",
-        "Employee",
-        "Supervisor",
-        "Quality reviewer",
-        "Administrator",
-        "IT reviewer",
-        "Decision-maker",
         "Supplier",
-        "Auditor"
+        "Supervisor",
+        "Quality lead",
+        "Quality reviewer",
+        "IT reviewer",
+        "Employee",
+        "Administrator",
+        "Decision-maker"
       ],
       "recordNames": [
         "Test script",
         "Results sheet",
         "Unknowns list",
-        "Sample roster",
-        "Written supplier statement",
-        "Vendor proposal",
+        "Workforce directory",
+        "Competency matrix",
+        "Training campaign",
+        "Supervisor sign-off",
+        "Quiz results",
+        "Certificates",
+        "Supplier statement",
         "Implementation outline",
-        "Recommendation"
+        "Evaluation recommendation"
       ],
       "decisions": [
-        "Select published claims to verify in a demonstration.",
-        "Determine whether evidence review and access arrangements meet local needs.",
-        "Compare suppliers and existing paper or spreadsheet workflows on the same basis.",
-        "Accept, clarify or reject unresolved conditions before a decision."
+        "Select published claims to test against the workflow map.",
+        "Classify each claim according to what was demonstrated.",
+        "Determine whether evidence review and access arrangements meet local rules.",
+        "Determine what human review is needed for any AI-assisted suggestion.",
+        "Compare software and improved paper or spreadsheet options using the same scenario and criteria.",
+        "Accept, clarify or reject unresolved conditions before a contract is signed."
       ],
-      "pass": false,
+      "pass": true,
       "deterministic": {
         "pass": true,
         "checks": [
@@ -1501,8 +1504,8 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "f2396285f801312a5a830445854154d7fe151184f36d6da3fa6e26eb3a531918",
-      "contentHash": "ee5ee5d7a4e137a1f4b5b1f1f1407d298f9d4fcd1bdf7225490d97aee50dc17c",
+      "inputHash": "8ea962978fd38ab856d219fd52fb35655cd0b095c6cb296d9dd47552f170c6b6",
+      "contentHash": "b7092122a7bc64f36b72ac10f231a18bab90a8bc65ec9d4c0a1be9e0709324de",
       "paragraphHashes": [
         "e3e5169def1c65e64862b5d0e7cd1b5b8ee93239e1d844630082d51d2a6660e6",
         "e23c53ff346cd6a173015e8cb662ffa8d843c146b20fb8879cd2528834c7f149",
@@ -1524,7 +1527,7 @@
         "c5895d7a54ac9f893fca9f15b56f358585759fa4a8aab293eb7890c35a7d997d",
         "ef215905f66ee584187c14b1b407c3ecfe41e352e56333674add7c243146b8f9",
         "62671e3bef426c400fce453f37e3d9a1ec0f4ba1d232cf5863152aad248b9203",
-        "a860833d72ce68d76af5330594c4fc2c85bea8879ad38db06cfa5cc0179af0d0",
+        "4a3935277bd35fd78a0fda0b0ccb3f8d5f534b43f920363f05a562154b5f3ee9",
         "c41c884047cf36e19c83916bc748b5723c0d9f8b53355225970d47ea07ca3eb8",
         "5773404cb0d84faa6ebe601737e2571485470d4dde332cc3f2ba875a86e78eb6",
         "b1af02f78ea2c0ef0dd695b19388fe3163f0914da69bf19146ab1902e8b8611d",
@@ -1543,7 +1546,7 @@
         "dc9cc5741fa88678b0a77be77fd3141c64beec5cbc54596b359d534ac7a932e6",
         "c46c8a1903777adfb5ef5e012b9c311a127284e49fe3d6c134dd9cbc600c1914",
         "cc420354aadf045aeca5440c063d38f1d7197edd4757a7596850560d22eb88a2",
-        "5a0efcf9667f4d4375707497d309e1e8144845e0148921e39c788ad76edc8688",
+        "5964a2409a31a1f954143765e8f1d93e5e12d902aaf2b566da86237e344ea68b",
         "a2e1ab960243609584da8b30535f0d89d15972495118f040ccf93ee4af1295c3",
         "9044072d44880d736191a9e79902aad74452b40969ba12cf6164ac692e997172",
         "45b40f12a61f547f8f26c96913cb2e5cd8a73f48a1039f9a166e0f7210999ee9",
@@ -1551,8 +1554,1485 @@
         "2acc36313a42110c5d281d7416865a531c144965c2f7c4d3ac698d725febd2a6",
         "d0950fa540ace1aed6d0ca9cdcfdad0939a49b74498b699ca8a5165ea7b08798"
       ],
-      "outputContextHash": "ffc53d5161d8e46fcf72040623234d38a39c2d5b045694b7fb678d66a8831003",
-      "reviewedAt": "2026-11-06T13:05:09.905Z",
+      "outputContextHash": "fd6619be704e86d22fd355d565b03facac18a055b1fb972f5ca0bc7ced65a2e5",
+      "reviewedAt": "2026-11-06T13:11:44.384Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "competency-matrix": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "No earlier findings remain unresolved, and the changed paragraphs present no clear new problems.",
+      "glossary": [
+        {
+          "term": "Operating scope",
+          "definition": "The product families, equipment, shifts or conditions covered by a task definition."
+        },
+        {
+          "term": "Level",
+          "definition": "A statement about what a person has demonstrated for a task."
+        }
+      ],
+      "roles": [
+        "Process owner",
+        "Quality lead",
+        "Supervisor",
+        "Authorized assessor",
+        "Qualified colleague",
+        "Workflow owner",
+        "Administrator",
+        "Matrix owner",
+        "Supplier",
+        "Reviewer"
+      ],
+      "recordNames": [
+        "Task definitions",
+        "Approved level definitions and evidence thresholds",
+        "Qualification status",
+        "Practical evaluation",
+        "Matrix review checklist",
+        "Change decision",
+        "Affected task list",
+        "Results sheet"
+      ],
+      "decisions": [
+        "Approve the competence requirements and operating scope for each task.",
+        "Define level meanings, evidence thresholds and applicable qualification conditions.",
+        "Confirm whether a required qualification and its scope are current.",
+        "Decide a person's competence status through the assigned decision path.",
+        "Approve revised task requirements and identify affected people.",
+        "Determine whether existing evidence covers revised work and set an interim rule when the effect is unresolved.",
+        "Record open questions and manual steps identified during software evaluation."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Map tasks to necessary competence",
+            "section": "Map tasks to necessary competence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Map tasks to necessary competence; semantic review verifies support",
+            "section": "Map tasks to necessary competence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Define levels and qualification conditions",
+            "section": "Define levels and qualification conditions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Define levels and qualification conditions; semantic review verifies support",
+            "section": "Define levels and qualification conditions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assign ownership and control changes",
+            "section": "Assign ownership and control changes"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assign ownership and control changes; semantic review verifies support",
+            "section": "Assign ownership and control changes"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "074d0c1d9ff7573e3631c49f133f081e8bd4a5a5f292b9131ce344f4728ee797",
+      "contentHash": "6a56d1ec77e072aefb671ab0546ed7e28917a695877d2f0b258f9e30f803724f",
+      "paragraphHashes": [
+        "ccf97829ca01d05b616db0af1dbe892e1cfeb0886ebb585a2a8444285a0f3a36",
+        "b3c3fd455b205d74bf13a273b739d2e1bc2dd390d324b77998457a21c27f7430",
+        "cef9a1c1caf7daaab8aa52e4d480caa341785d996f082fb3dc78567be3b69072",
+        "f074722213353e4240740853b2948ffc3358a93ca8a3faa35e63489a23991afc",
+        "1b55de30519f9f6145575ca3da0d25ac13a896c2ab2f1fd2e4a7a08ab9c1e0e2",
+        "c18d1514906f92b145ca539450f9b15c2faffc470ae41eb74f286e471134efc1",
+        "0bb62b781ad4d0672ee4286e57d545af1b22f87c7fdb6a7b97fd509b96aa1674",
+        "011f7eb21c54b97c2a7757be7218010c6cf62af3589f67af57b5ced0eb3cc442",
+        "b15a65082327e0e54bedf3e70b7c5de6af0180018ec8f8a3e87e577bddc45f9f",
+        "24a29db304977bfacd2bc0d69586f936f534f5813b55627a8f39c7c6ab939709",
+        "43855cc757863862c10b26876e7396a5cc44117c3b9b2bc3027b862ec2327c88",
+        "40400e8d9a2e156d92f3af8cd40ef81267e95b3a146cfc2cf5ae7b69b67d40b2",
+        "17720975fa8c2198ae4aa43ab6767c5acc1514dbea27611261ef7c6955a742d2",
+        "db9960522af5ac782812ed608322234a8f84b749c4f37aafdec2340824b7a3e7",
+        "d82723e31b740e26d2d218ef21c5103af93a46e4e29c672cc34624d72c3ed68d",
+        "a77609ac9fdb7e1929bbf90b408f2c0b21e1c53c3a42c200a0736b3a23f12e55",
+        "8585c0836ecde7f318bb4cf549fc908589da83f67ce12d03576ebf231d8ddc25",
+        "9f0685ebd5673e2a7a6ed097590b6b31b6c4078a0231890f466e83c167917857",
+        "29360c6dd6520e442c563c3da6b34a62d0d6251f9c6bb02e2058afcbc99d000d",
+        "32a6e0b1ad8c67bf893f08e4122986de0f327cf846e3914428677b9a06209251",
+        "a950bcb6cf0163438fbdb1181c0ee19f3c757947f8f77906ce74b96dc59ae76d",
+        "a014acf82bd77d8ad0474e0a12b7280811a4eb0860e478c22394e1a0712b58f8",
+        "7b849573604a3b2dc657227316e1634318ac228bb90dc486cb51775a23a67f69",
+        "c4a1cad3416bcdf4345f9186a339586f68a6731dd110af9e75c76872b620491f",
+        "cd8bc2b3b375143b25bbcf35b3cd68a04a924969826b31d4e3326761e16f6297",
+        "124ac3465767f34d36ba71dd4afae638a32d5e47eda84eade1d93584accea868",
+        "83c03b533cf086f3d05c74efa604596450824813a7ad1569a04c80a4f2c65d19",
+        "3919501378912045552edc227d4403d0ec24406e129be47ccb47ea6d8e4d8853",
+        "f1d000710f7d8f6df0e0b97bae7e947351d5d03f3ccbccb9dcc75be78d592fd3",
+        "7ac7dea8770ced1c84f36d843ae55753fff4a63c15010ff55b92927c68538fa2",
+        "fafcbd0186f6714635fe84e0be4c85440fb5afecc9b6f0c0855845ee6efdf3a9",
+        "7e7709812f31ca8850de0802ee4aca0e2f4bbf67f67ca44708b8ea9fd2e84f4a",
+        "36734b398254b534130da24e6d272b8f5accd8d92ff45179e81b072263394650",
+        "613c0faf6b94572ec5c4fce6b89c8bbd806529d475fd5305b5042e02ce096477",
+        "f917c5fddcbbd564b74d9e6968bd9c2a5083481c4c75e832b50bd796b86c52a5",
+        "ad855bbf05d3b4d60b70463b078e85e433c8b969b8b27ee06b281227736e93b8",
+        "99db914f3d59f9cce599fcdbf6ddf24e51e2036b94125163d504d4bdd6320db4",
+        "da88c5122f83ad2edb1f26bd79be0d1597f45b5c26a5916b6e32bd90f3ee8b73",
+        "6da0913ee06575fbd6c0829d9d27c4b29f9f21f7b23bb5e590788acec3bc23f3",
+        "3b2d0b1bebcf225b36ac21888621fbc1c3a64588cc56407bc82b1a02c704a284",
+        "31feeba36860e085dd19e7031e97e784caa964319aead2ddd44887a32315659b",
+        "1b7770ab4d203e9073ba513015c5592cb81d0c101adf9f486f84ddd41ee2b57a",
+        "63119cb37d7d93bfab925708d42f2684f0db67bf04fff9b0b66bf0f2fdd02704",
+        "e38f1e954ca180618b7189d7a058d5e40295a3d2bdd2d07e5d3275aa3e713f44",
+        "1814eb3114031c6f3c3712e36e0d3877f07cd890cbad48adaf3ae335eb37a507",
+        "d1f4e39c826b72549aa921fe3de1c419e3b10960e8fcfa30fc1dd00a2340326d",
+        "d85117389ec97fef97ff587866d445105a91e0a7e668e6cedb609690176b86a1",
+        "1471590237b1d2fc212cb6db6598f2941e1b885a95618147538895e0a967c768"
+      ],
+      "outputContextHash": "cc62729c136602263fd3b8a3df50b1df9edc60420f0f00550e8b65e6c5c10da4",
+      "reviewedAt": "2026-11-06T13:12:56.383Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "training-assignments": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "Both previous findings are resolved, and the changed paragraphs present no clear new problems.",
+      "glossary": [
+        {
+          "term": "Completion record",
+          "definition": "A record documenting that an action took place; it does not by itself prove that a person can perform the task."
+        }
+      ],
+      "roles": [
+        "Supervisor",
+        "Process owner",
+        "Trainer",
+        "Training coordinator",
+        "Authorized coach",
+        "Coach",
+        "Quality lead",
+        "Learner",
+        "Workflow owner",
+        "Management",
+        "Provider",
+        "Supplier"
+      ],
+      "recordNames": [
+        "Assignment record",
+        "Completion record",
+        "Training plan",
+        "Training record",
+        "Supervisor sign-off",
+        "Quiz result",
+        "Certificate",
+        "Practical assessment",
+        "Exception record",
+        "Revised plan",
+        "Results sheet",
+        "Purchase order",
+        "Agreement"
+      ],
+      "decisions": [
+        "Select a proportionate action and responsible trainer or provider for the gap.",
+        "Record an exception and decide on interim staffing and escalation when no suitable action is available.",
+        "Confirm completion or record incomplete work and outstanding assessment.",
+        "Resolve disputed or incomplete sign-off while controlling independent assignment.",
+        "Reschedule overdue learning and select an evidenced replacement or hold the work.",
+        "Communicate competence requirements to external providers and retain relevant evidence."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Choose an action suited to the gap",
+            "section": "Choose an action suited to the gap"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Choose an action suited to the gap; semantic review verifies support",
+            "section": "Choose an action suited to the gap"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assign people and record completion",
+            "section": "Assign people and record completion"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assign people and record completion; semantic review verifies support",
+            "section": "Assign people and record completion"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Handle overdue or unavailable learning",
+            "section": "Handle overdue or unavailable learning"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Handle overdue or unavailable learning; semantic review verifies support",
+            "section": "Handle overdue or unavailable learning"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "a5a605683cc2543c30134ebc50fa5c3ad9f0c747cf498d5a1bf0fde01aa4ab81",
+      "contentHash": "da628a19eed1e79e18f763fe83cbf3079fd4bc2556c55633af321c8c3e1467fa",
+      "paragraphHashes": [
+        "fbc33445d0f2d85ab9d738bc11e22ba229b2be1d2052c141fe45d6ab3db0e272",
+        "0c150a773f3b5a3ef66ba4ffab7ea94ea6b2241f8245f7e5b3df783a0ba8eedb",
+        "019d50120d356bac47245a434b526816132436d7b80f6d8013c9dc2dc2cd5a65",
+        "3ad1d7c7ec97f63131105d2b44530fc6f203d00124c9bb2c738f3ec237971f45",
+        "602563cddef9dfd99743e8263d60629f718ce48d976e5a37b30e09a5ef4e69a8",
+        "c2a3b583fc0c17b74bfcd6654d7112b62c5342500b2d62cd6e3aedf768c996b8",
+        "a8fa69e704a336f62fd436d09f835e2b722d806eae866f87132d566dba5f9cac",
+        "c6b9afd7c21cbb94d18c064d51c8324a794015d5fa86d200afe0071de8f11a75",
+        "b3dd8da0e29432ae6ad8db63688c9ce866b224c48bcb3200306c2db88050a1bf",
+        "7e9bf2b67d608d3226674ee0388c522e1c3e1b87d72c6cde196d2d46d66de438",
+        "f2757d753e6338f9e529c5aca9ae213c840b37bfd0faa671416b9def87f3b9f0",
+        "9a3556f4c7bd756490b863a7a3e62cf1906aa065a7c90403154883077dac20b2",
+        "8519e266b7a140f3d40bcef8f68bb4f24755f93972572a39b4e015491ab39008",
+        "2e3e8f98a49495e6d7668918981b96e30bbb7974d3cbdc50b8f9611275d591db",
+        "0032227399c769a225e5ec28a771c67e46ee89a37b7c8aa7fe7337fbcc887aba",
+        "ed27e68a7ac8aa4688586241990016d95d303a664f453033127310bf8666470e",
+        "f5e8bfab4acb63ccb61e64dde87861c8f4af26ab0d4fb31634abedd6631182fe",
+        "9be163e32f957efd0ac6f1d10bae994df9177a65494db032cbeaf7b3e16b0f3a",
+        "33359f4ff6eabe85f663a89eaff4ae111b0b12717d91c40653f774b4467e86c9",
+        "5a28471a5a8ac223b39a2377a9fdc4d412775d42f0c37cfb4a0677fe8a5019fe",
+        "d61ecc77f7ac6238a9a48790794b4949f31fb8cd6e1f5a161891ebf066cdb2bc",
+        "c47ce3acf8fa6612765348120e24513ae5024d8f5f59087009aaa90f91a8c8f9",
+        "19ebd9190431fd1b1327fbe0bb01dce02a356f5d1db75911ab90cde5d86bb367",
+        "1003392029c61670d6d3ab62cc69c95148acd0eae60acba730a547ca1c7d671e",
+        "9da23fbc26194abbb4cedac25f13b516c7e8d0428926f949a53aa977b8672a3e",
+        "1c3585c4c354be44d8c66ef1db235d779812d78aa4b5e8f9d96bb2d5b901927c",
+        "e7062357867b333194da7f590c5ee37fe74372b72a6d518d4c27e6b1c218cc79",
+        "2a15b14582e3ab1e142d55cd47560bceb5caa48d841e272445eadccba9b7fce1",
+        "514474a46b7346554b582eaa10826546a69c0eee8c250f5889d0c9cf4c2803ee",
+        "877b3f67a26dc604f68530f477c564097d5a9483511acbd695ea2c8857ce107c",
+        "27c87bc65fbb102f086760972ccd37464bb3002b62eb89d2fe618aa7037ba5b5",
+        "958b194fcdf51726efa944b3770a8fd0810160755d22f18c45d0a3796cd4f60b",
+        "a81bfeb73d8f27929be177824a635b4afed1b5b7e91133551cb25504fcaea58f",
+        "b8126f6cdd9836a730800b22aa3f5a9ae032e503c9e28799ee77665b757c177c",
+        "650750e9524e0181dc4d9d4dc58c9fe2eb8a0d0846e15a075a41cd2fd8155e11",
+        "9675b1af7731247c4e3514067c15f7fe8123a1580b767f71cd3559c796fdaa20",
+        "0450b6b956da87d81aae94e9b9cb9229f92c079e779ada6f8899518f4868115a",
+        "551fcb66c8d6f0dc23aedb7a069238cb8efd1723716c3e04c22a37e0e0e64e20",
+        "6ea12b75a71c6a1498fd4335ff50f8d24263d87ba69aec04fbb176794b9825dd",
+        "b862d24b30bf3038deb68de66b20051c803d8373642669bceee5e3e29645b2f9",
+        "48ac46cfa219651a63dae21746952ed88abeca50ac54358828e48bfba769072f",
+        "0eb3e6e86b2fe9c334dcc6df61140ca65856671d23fb9b94b3c84bba4b36fd7f",
+        "db59c5b64301b6b588f048d8cc44ea0afac682e4714be840967e391156030f05"
+      ],
+      "outputContextHash": "b2313816b0cc27dfeef1f294f8264aa4a2d13819920cb5652f80b10801b0fa65",
+      "reviewedAt": "2026-11-06T13:13:12.114Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-05T08:38:21.452Z"
+    },
+    "competence-verification": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "No earlier findings remain unresolved, and the changed paragraph presents no clear new problems.",
+      "glossary": [
+        {
+          "term": "Completion",
+          "definition": "Whether the person finished the action."
+        },
+        {
+          "term": "Effectiveness",
+          "definition": "Whether the action produced the competence the task needs."
+        }
+      ],
+      "roles": [
+        "Process owner",
+        "Assessor",
+        "Quality lead",
+        "Quality reviewer",
+        "Supervisor",
+        "Second assessor",
+        "Reviewer",
+        "Supplier",
+        "Management",
+        "Alternate inspector",
+        "Usual inspector"
+      ],
+      "recordNames": [
+        "Completion record",
+        "Training records",
+        "Employment records",
+        "Work instruction",
+        "Assessment criteria",
+        "Practical assessment",
+        "Certificate",
+        "Quiz result",
+        "Supervisor sign-off",
+        "Results sheet",
+        "Reassessment plan"
+      ],
+      "decisions": [
+        "Choose an assessment method and acceptance criteria suited to the task.",
+        "Determine how to proceed when work cannot be observed or an authorized assessor is unavailable.",
+        "Determine whether the combined evidence supports the task decision.",
+        "Reconfirm evidence affected by a relevant change rather than accepting it silently.",
+        "Plan further action and reassessment after an unsuccessful assessment.",
+        "Restrict independent assignment and arrange interim coverage while a gap remains open.",
+        "Escalate repeated unsuccessful assessments or unavailable coverage.",
+        "Determine how to preserve decision and follow-up history when evaluating software."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Select an assessment method",
+            "section": "Select an assessment method"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Select an assessment method; semantic review verifies support",
+            "section": "Select an assessment method"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Separate completion from effectiveness",
+            "section": "Separate completion from effectiveness"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Separate completion from effectiveness; semantic review verifies support",
+            "section": "Separate completion from effectiveness"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Respond to an unsuccessful assessment",
+            "section": "Respond to an unsuccessful assessment"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Respond to an unsuccessful assessment; semantic review verifies support",
+            "section": "Respond to an unsuccessful assessment"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "9da890247a6daaea5b6105c76cc8bbff1f5631324e9aa0d2f8ab36a058580835",
+      "contentHash": "3b5654291bcec2021b58c026f20685e0b48259b9242ca5512fc558f414588fe3",
+      "paragraphHashes": [
+        "02220c794d903386c5b7bd148e0cb8dd1f6a84269a2c9d8b4bb0c7305360481f",
+        "f75d9b6a33855ebbb2dafb8de0de3794dce0db812bc37311e0ce34bae0babf45",
+        "5b1f01c25e3d291d9a193c31f3e556dfad8a40201876dfe02b23fa99dbd8de75",
+        "32e672816186e898d7d95d3f84b03f0bf20fdf5de64af138b232bebd539885c8",
+        "a6dbc8247304cc3e16d42158c1e956aa9c889e821755971aed7782dde6eadd49",
+        "c6c7cb15d1e80c836fe52fb3b95455591ce70d0a10ebf2116ea310851511b723",
+        "7dbfc5286a6fae5fad0decf211aa2ebed843284a149e0ab1ad0f401257396c8d",
+        "54ebeb6ce41791297adad4768fa04fe0824100a8b21c4f12650455e35f64dea5",
+        "3a9ea66bb68fc84e245f0d968153f525341dbbcd7eb1ee5b0c003863ea3721c4",
+        "9a37be9d31c857e0919b92d06ac3013a95e1344c6616ed2f5bd1663374374cc4",
+        "b3e47caa4c5fb36e1765a7c0ba8dba098427a2176842f7fe412d3f0224a4b18c",
+        "0979744e16d15e9ac70090a8a7eb652e6aac2b8f4ec7fffc091fdfc422c76b15",
+        "716630541ad688e41631fc3f71880bc48f3925fcab8e0b6404776b44c735e509",
+        "fe02e5ab0a6a81bb17b0cc05859358df64e530c7262a03d18bef5490f968b90b",
+        "95fcfc0dfa3c10b26e86c75191216043949a15e50fef67bee7080e86d4b13b7a",
+        "e5cf5ab0bfece3039652242c11a005bce8654930f24630f9cda59060f974d71d",
+        "8fc69dec336010f8a02db4e9076230a2cb55323d9bf86690d5d753aec4a8b26c",
+        "e944148bbec987eaa04e22d0607bf38d0250461485819840dce3d55cdc6c57fd",
+        "cbbb5b22877552ffad18770f6e421df7323917e13668c5eb8905becabf149fcf",
+        "0c11e1dd2a0001cf975eebd908f0b5f9db3a27d800a7cb392164b23e3cf5517e",
+        "521e8cce6820699c4d143fd4ff2df6fe6dfe0b09d04065401f45de156048739f",
+        "4cf05eb646a8db3c979ca6c4803b38561db7ee66f7608d01d1407b1659ea52de",
+        "ee262639447ce5a47a2152a5e0b9dd30428ee9712daa919ee97086befd228b4c",
+        "73562656482a66c55d0e590db9f52c5331c1e9169cc2fad156ce1fcbd9b706dc",
+        "2ea089d5c4d987cd532de244293de3d401406d1c808786599d1a509499ed5acd",
+        "646772270ed85198ef670cbe8ea153dea22704ae614583eb344f9dce4547d485",
+        "61ea8b7c63f626d6a18c8930a4188c1a30d8d282cc6c5f235841a3741ba7db90",
+        "f795ff3bc36003e591282686224b2d6314ae58b6942fe025ca0f60f30c37c28e",
+        "75b23a630356e2d59ab0d10a5f0962d561f2e3d90cf1c3932fb8b45579efd960",
+        "0bda9c8003e3e18d12a900b4500c0ef9eea408ad88c7f8eba2a54284f001df3e",
+        "8ce39fa5b70fefd3a21327c5211a5f7c67d73b6aa72a76f98a11de7331bd1cb7",
+        "9e1bea4e8b76f2848f7ff8557e7519e2d02ea0615ecad7929a77b5d1ebaf7f24",
+        "8b3a1368c3930354df8bde4d55b9ffc37aa860a97bc8b1a0339f8992d769ebb4",
+        "1afc8db8291fa87626bb68a217e007383dc1f06c96c0ab7c4439d0cf10a0da17",
+        "6f94327213f8e620e27177ff50fe995a051b8bb6b698177fffe40c7d6157e57c",
+        "136bfa555b23479019bf200c066eb8e47a2f928c7b76013e7bd5a6e2e716450d",
+        "1580120c0197376016f5632e902b5ef067291904c70d7420488492547d95d3e9",
+        "c8c3c48fd0dfb72bb3964fe1b85f82f0bc3b14f27855f3f94e112fde9a10dbf5",
+        "b90fdfddc91a8a6496eaaaed2290cf09efee0c3fa16c4599ba6963396075a085",
+        "b8f1f595732cafc8fc7b0dc255c88f6c281120eda52f0d023610db41c9a36481",
+        "5c5c667cc9a64bcd5a4649b66f9764a6d51b27ace61deffcfcfff86ab29fc7cc",
+        "58a31670b3fff50d577eadc1a411aa46dfc4459b3a51574d5835cb0a6604158f",
+        "a2ce06a52f5455cc0828aa33950a3a96d5c9b656289bdc127f86a3c0f38a8cbe",
+        "32e0f964c753cabaad80ef46a4da2f3ddcaec459cfc8acdbc37ab3b556fedfeb"
+      ],
+      "outputContextHash": "abb8e9954b2dda04304dce671ab4e58fa082b59c70333edc2bd9a9f49cdb3d15",
+      "reviewedAt": "2026-11-06T13:14:03.651Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "qualification-renewal": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The previous finding is resolved: every unresolved gap must now have an owner and due date. No clear problems were found in the changed paragraphs.",
+      "glossary": [],
+      "roles": [
+        "Qualification owner",
+        "Process owner",
+        "Quality representative",
+        "Assessor",
+        "Supervisor",
+        "Operator",
+        "Inspector",
+        "Reviewer",
+        "Auditor",
+        "Supplier"
+      ],
+      "recordNames": [
+        "Competency matrix",
+        "Qualification review outcome",
+        "Qualification evidence",
+        "Review trigger and planned action",
+        "Review calendar",
+        "Practical assessment",
+        "Certificate",
+        "Location list",
+        "Evidence references",
+        "Unresolved gaps",
+        "Retrieval measurement"
+      ],
+      "decisions": [
+        "Confirm qualification validity and scope or withhold reliance.",
+        "Determine when a change or interval requires review.",
+        "Choose supervised work, an evidenced colleague or a delay when a review is late, subject to qualification conditions.",
+        "Identify and explain evidence for a sampled person.",
+        "Record and resolve missing or inconsistent evidence.",
+        "Determine how to track reviews if system notifications are unavailable."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Review applicable qualification conditions",
+            "section": "Review applicable qualification conditions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Review applicable qualification conditions; semantic review verifies support",
+            "section": "Review applicable qualification conditions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Trigger review after change or over time",
+            "section": "Trigger review after change or over time"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Trigger review after change or over time; semantic review verifies support",
+            "section": "Trigger review after change or over time"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Retrieve evidence for a sampled person",
+            "section": "Retrieve evidence for a sampled person"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Retrieve evidence for a sampled person; semantic review verifies support",
+            "section": "Retrieve evidence for a sampled person"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "06020ff8684fa2ebbd19644f2cd7e589a549d6145694ae6e803276eb805e4040",
+      "contentHash": "9d794cc53d6e9c12c120cf8686256a3475eb0dfcacfc2bc130da8ab92d16b013",
+      "paragraphHashes": [
+        "30377aae90de5c27eaf315801beef50cb4336a50127be2073723e6af00b12866",
+        "7b8c4c6a66a9212c9f21a98b5c90bd5f741503b4a8fcb6c87c20b0ccac6a617f",
+        "c436c7c4cb9bc696e2c1223e435f34cd335ceab77d2afc6547ebcf71916bf5b5",
+        "921670d8bc49b221d6052d904402988ee0c897f926c96aac7ba8e18c447ed1ed",
+        "3430cf35ab4afa75767d4abf86065a0c483550c8a98c700d1fbe0d1b1237f912",
+        "d06c296996bdfefda861d6484c57e5a5bf662a483f452733125777f63c67e129",
+        "2b7f917f742b699982216e5ed04eea804d5939043b9daa44e6ebdb5516d70534",
+        "ca28c3d4928e9ca5f8d7ee52d6a52c6042e87cf4276da22aa41bf14dac387ba6",
+        "a2d9f3a838af2b51f185bb24762346c0e96f7dc75c77455fece233c8740c2553",
+        "c1b67fcc2088663c1ec5c43616467c83c7936f5b08d9fdd89cc3cb8afb3843a1",
+        "35f4a04218ed60737796c192a0975419e1be6629c7cac9075cf5bcc8d2a6364e",
+        "95d18657a942a940c3709582857e25ac699bc6ac62ac61fb8bd6274a362bcb72",
+        "da7fba2560fc7a6c69c3f5d0c5194eaa2d4a8f0e1dc234c7ca55a96f30e70720",
+        "38d7b4fdd6fad550de8b272855cecef64c8b0f9159e1f067008f801897773f84",
+        "14ed0d075978ed947a8552def64ceecd55718be7c3be9dc7d33aabbc4c38bd37",
+        "298f93692a646a330717f0809978e75dc5577bd9cb984c6dd52692fa978772c6",
+        "74573cd691a1bbfe283e52b84e8f03acd711cad150bbfe16db19cd5c76da2ad8",
+        "61f888d9b8a774ad6574a1c9d05bf08bd76d2e9e413344e4d532f74d94e0790f",
+        "2479bbc80481af84d997c6aab04e510d5142fae88c3fdc7d242db43462a4d22f",
+        "0972bba2b6a860a823a3b49d7165f87d53ea6742f9057dcf033a0be45056c553",
+        "3f41c0fe49decaa113d7cb50204a7b73913da7c644bb34ff257d08a55b692397",
+        "1bffbcaec9e7da197b4becf6c24f91790dfe53f64e6c4d16b343935867d7ce8a",
+        "0a45ddab7755d5a3d7d8c380730c07540c7859efd85c65624fabcb53ee45b400",
+        "7b7d13974025145abde63f5f32bb4cef8eea40759b1e6f8b585d0ca3d00c7d4d",
+        "7c3b891e0baadc4530bc34526f43c6b75e13c8b2e9a4467aa3b9096e194f8bb4",
+        "b647f0cd17ffe6ae7a5d4f9162a4515c17bd77a551618c9f88d49e7033eb5829",
+        "1cc0231f1314a444ad8bc0737a02faff9cb4057a472f045d59b6ea200f246f51",
+        "972b431c32d93d3c64a1d519faa74bd4ef5e5db6e06e964d320486ed931aab52",
+        "c003c07fc1366a143ee2a03ffe9770a99345111150c77629e737c1d7d5a434d0",
+        "cfad5f8d20878aea146ba8f4dd780da3a86526497c0be1fc8d36830c311fc825",
+        "740e056dce1a6e3347f1fa1450832005b2e5ef4196bbc59add7271a2396b67fa",
+        "93030396e2c849bdfe8deb3dfb1b54cd40405563128f9a8d3ca97918e2eb0085",
+        "97e82de85f3ecbf0fb7d83c07472b8ca0fb7726a9a9df2e3e88a0ab78caf0fc2",
+        "987d4875f60fa73b0c8955a74764a6ade73dcb90e8da2a942f743cbda8f7b8df",
+        "bba57259550844497599708f346fe3f8fcd7f449b4dbd51e9b06809ecb79a475",
+        "84932699441408cf234d0ce0e85913a4ef10cab3a21d2eef61eb3261d9633d37",
+        "26d6f6430f6025255ff0c5f4332bbb831dbaab85bf46aa1996b1c09ce5d72fc6",
+        "fe79575dbaa0ce43fce6cf1ecd7e0d2adbe4551a54c5a583607f64745a26747a",
+        "1787316e273d674859ccf05ad0960f32a444bb7d0789ceffe90a71c307fa3154",
+        "9b025799b43679dfe29cb97aaaf2a96be2d8821a131b453a2bb1de9a30c2f8a3",
+        "136234e4eb0ddee190c70c5500792e3265c972d58066138089b4ad13d9c2b5f9"
+      ],
+      "outputContextHash": "a9a4a940a1dc139765ececfaf61e938a15a64f336247ef0dcb38293670cdd9c8",
+      "reviewedAt": "2026-11-06T13:14:03.953Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-05T08:46:36.144Z"
+    },
+    "migration-planning": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "Both earlier findings are resolved. The changed paragraphs present no clear new problems.",
+      "glossary": [
+        {
+          "term": "Cutover",
+          "definition": "The moment the new system becomes the place where staffing decisions are made."
+        },
+        {
+          "term": "Usable",
+          "definition": "A record disposition for evidence that has the context its kind needs and refers to a requirement the team still recognizes."
+        },
+        {
+          "term": "Needs review",
+          "definition": "A record disposition for evidence that is plausible but incomplete."
+        },
+        {
+          "term": "Unsuitable for reliance",
+          "definition": "A record disposition for evidence that cannot be tied to a person or task, conflicts with another record, or has no evident source."
+        },
+        {
+          "term": "Practical assessment",
+          "definition": "A record of demonstrated performance at a point in time."
+        }
+      ],
+      "roles": [
+        "Records owner",
+        "Supervisor",
+        "Assessor",
+        "Migration lead",
+        "Second reviewer",
+        "Workflow owner",
+        "IT owner",
+        "Supplier"
+      ],
+      "recordNames": [
+        "Inventory and disposition",
+        "Classification guide",
+        "Field mapping",
+        "Reconciliation results",
+        "Unresolved errors",
+        "Exception list",
+        "Cutover approval",
+        "Fallback plan"
+      ],
+      "decisions": [
+        "Classify legacy records as usable, needing review, or unsuitable for reliance.",
+        "Decide whether each record is transferred or retained outside the system.",
+        "Accept the pilot transfer or correct the mapping and repeat it.",
+        "Designate the authoritative source during transition and assign discrepancy resolution.",
+        "Authorize or delay cutover, including a partial cutover for reconciled tasks.",
+        "Define when to roll back or use the fallback route.",
+        "Restrict or hold work when sufficient alternative evidence or required qualifications cannot be confirmed."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Inventory and classify legacy evidence",
+            "section": "Inventory and classify legacy evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Inventory and classify legacy evidence; semantic review verifies support",
+            "section": "Inventory and classify legacy evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Map and test transfers",
+            "section": "Map and test transfers"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Map and test transfers; semantic review verifies support",
+            "section": "Map and test transfers"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Approve cutover and fallback",
+            "section": "Approve cutover and fallback"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Approve cutover and fallback; semantic review verifies support",
+            "section": "Approve cutover and fallback"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "aef0fd8b18e8bc7241148ff27ab67e977c34a434aa1e0042fb73904afd6c44bc",
+      "contentHash": "602cf6ce5ddbad10256c62e50567a3ac327c61cdb079757a6bc587ff26f6c3a7",
+      "paragraphHashes": [
+        "123a624134486386eb74f27167ef74da9ac2d80725fa12ac3c49dbdc3a05065d",
+        "626c78bc4f60562d20c6cb2d199db32c22b29bcc022e00a82afacfd704769709",
+        "071ceb637d4c13b85ca411a4778a33150086b68bf2260f2f05c0fe6438a68ad4",
+        "d3842ec57653378450994c9de404ad667fdaf12051df1958c6c8246483279d7d",
+        "523db931016d288b1d70a1ff0bb877683f6f59789d5ff9dbb043c233d9902333",
+        "92132bc032d0ab5e5671d804d87cf8e84aa63f4a41d3d6b4c14d25fa31bc9a10",
+        "16a83dce747b5f632c99220b01c5821810363a8586d13c0a455cc20b868a4d93",
+        "cc6e9add00820a6b482a4827195bc5929ade43209bc69b85a14351c452653759",
+        "b2bcba8f9868770895df460f5f4b311cbe0983bcc30fa2eef39c0871737bc7d1",
+        "f4e94a2f80d179560ddd75e1ad77d3a1097024a75ced4f4ef871b2bd59d7b876",
+        "cbf50a8966928e4a42ae206a68cb5b8f44b56bb49d901d64dc3782d055429b03",
+        "2be41449ba466a5586fc7eb0d6d4c1cb6835fcc8e4e36e9d8955a6237baca70c",
+        "f316e8e9c7971ff0149c63d044854f56248bb1a52cc6ac5fa212eed5b4525dfe",
+        "0f657cc81d8621ba672012da390cb2b1cd3a9eb22ad5b546606ff7aff4a66d62",
+        "b994ffbfbdf250e32e73f38ec3db11f6f362050e99e6cf8a4b10671f64862d0c",
+        "f679e93262e9d0569e2737b30d05d49dcedc4e32aa172b707580e216d39dc620",
+        "a2eac03dabb91f44d784d281036a51de5dbf6957c2b40070038db351e0b7aede",
+        "6bdfbfe4bad977595a9d70db376788f040129d6591f838f4b24207e2b4c18510",
+        "86c64d52149cbdbe33c3462967dcc2949837f2eef26674f2fe2cfd313c7ce84f",
+        "7d8a1884ad8850ffc45f16a75f572a2d9c64cee9264978ca472142e05f196359",
+        "49950c4f08807ddb7fbab65828dc69199eb47f8b8bba9568833287b0f40dfa71",
+        "c735a7894e16b74c6adcaf0cd5e725f389c8ff4ab28b237b94670739c362adae",
+        "c6396980353f88835d6998ab127b029fc72b68f061eb1cdb9dce5b22020290fb",
+        "c494c0ad73ea8fc7369bf7a390de6998fab8ab99ca9940476769d62b6582b116",
+        "62194017ab44556667abc7049464921dbdab150b26f0a72c4adeedbbb3b93eb9",
+        "e47e318345767206daa63f7be1a929aed8006efe3884b489470fb49906164b13",
+        "c0e816c5b41310498417ee8c4038ac3d92aa08acd7d745d8b535abd8ecea6476",
+        "201c7b9f490398b48cc10f9f2e8c0a4927cbec1b516272b058609e436e6effb3",
+        "223a84d2c0affbc5a53b05b9ab2d8ebd41775813cc7db9745ca00965a42d43de",
+        "aa5551320bd6658c3223b6a8abe475bc34342b21b936dfaedefbab00fb019763",
+        "da5c06a9085bee647ca968318bc232a9f4c290431d748877ae7d8743afb693a2",
+        "aee80d1da6df44c02229139449df071c2782a9515904963ef335cde95bcaf837",
+        "ba2f417fc72ff0132de1554bb151cb0118e73de51856e6dba825390056d34c64",
+        "8ec231b94f1ad7306ae08d543142be901d33563beda7ab0d1e5db11ae851d70e",
+        "290968efab4be537a0faaab954aa606113be77657bdcc85821907ea9cc374333",
+        "b507a81bf81cad4fbf40b84c90a5948e9541882d9c73cefe5d9cca0905fe5fd3",
+        "9603d81b645cd05395577477326da7c04a155ccd326e7f77ddd7c71f332039c5",
+        "a07778ac3334a62d7a46bb03a7e7fe53067ecef779a84184312171dc61b30807",
+        "a21e268bd129f75e548e27e9c0feee890349ed7752eb93ebd8702d74d046c393",
+        "b5349628a0024333cd89c6fc3ce0971de1de14fd50e34b38a2004710c91e2193",
+        "05c6d447a6dd394c22872bacdc2e67098ec700e8424259d45893419a04c8e929",
+        "63db39ab1d686c9df845a6e88f72988c2e774c65b8b069143998a57aa2a741fe",
+        "194073b3294df65d0f2885095d9880e8cbf4825dd20e59577583218a2539f749",
+        "c3ca5061656c82efa16dd5a8d948e1f7ae42f15a048edb85ba995d7d7fca4666",
+        "3df343cdde5970d06dfd2c3b10bddee18a673f2d69e4962e23ed9f2b024bb324",
+        "3af81820c71a73ab36d19aa367cf9b25ab625f023af20082995596566a3a4d77",
+        "e98528252fedf51ee0138fd584a34c3543e4278f126e3992ef261b93af71c759"
+      ],
+      "outputContextHash": "22d541864f9e33e02aa342a2a368d728ff7bde6a9fc7e607c8aabb9734858438",
+      "reviewedAt": "2026-11-06T13:14:04.199Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-05T08:54:24.366Z"
+    },
+    "training-rollout": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All previous findings are resolved. The changed paragraphs present no clear new problems.",
+      "glossary": [
+        {
+          "term": "Pilot",
+          "definition": "A limited-scope test of the workflow under conditions close to real use."
+        },
+        {
+          "term": "Pilot log",
+          "definition": "A record of observed decisions, issues, owners and dates for resolution."
+        }
+      ],
+      "roles": [
+        "Rollout lead",
+        "Supervisor",
+        "Assessor",
+        "Learner",
+        "Quality reviewer",
+        "Workflow owner",
+        "Quality lead",
+        "Pilot supervisor",
+        "Rollout sponsor",
+        "Exception owner",
+        "First point of contact",
+        "Inspector",
+        "Alternate inspector"
+      ],
+      "recordNames": [
+        "Training plan",
+        "Practice completion record",
+        "One-page role reference",
+        "Pilot log",
+        "Workflow document",
+        "Expansion decision"
+      ],
+      "decisions": [
+        "Select role-specific practice tasks and support.",
+        "Assign ownership and decide whether the pilot waits when a role cannot access or complete a required task.",
+        "Compare pilot decisions with locally approved rules.",
+        "Accept the pilot, accept it with conditions, or assign corrective actions before another trial.",
+        "Set local acceptance thresholds and determine how missed thresholds affect expansion.",
+        "Expand, repeat the pilot or pause based on readiness and support capacity.",
+        "Assign support contacts and action owners after expansion."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Prepare role-specific tasks",
+            "section": "Prepare role-specific tasks"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Prepare role-specific tasks; semantic review verifies support",
+            "section": "Prepare role-specific tasks"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Pilot normal and exception paths",
+            "section": "Pilot normal and exception paths"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Pilot normal and exception paths; semantic review verifies support",
+            "section": "Pilot normal and exception paths"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Decide whether to expand",
+            "section": "Decide whether to expand"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Decide whether to expand; semantic review verifies support",
+            "section": "Decide whether to expand"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "2c17904f3b881bfc39a7f7bf595e886db5fa937632df633bb083ce5df2e5a2d8",
+      "contentHash": "27bd4c2ec3081fa36e7e8ac97964643e52e99e5b71e0a7a4c8a52c8e67cac280",
+      "paragraphHashes": [
+        "c858731ab1863812faa13547ee31124e123535c33e72276a7fdf186a0278c31e",
+        "fc99f1d970c249071a3ff94780f1d30b4fa6e245e223e87895444663cb2e27b5",
+        "33e41b60f1a62f5eba591c5e1922c7b36b0b97c22c331f8be14c22624c234d8d",
+        "b86b0068673717b73749d1da05ef417ced726b2d65d79ee15f12dca544e8923b",
+        "9fd2439fe85b98018b9656578db38479e6e91cc0b3705fb32d781a08f5322b1d",
+        "f9cc54da1c358186f3748fc7dea4ab97e15365bac58ed774e9064ea38fb33c5b",
+        "18aee2a899036ed19b07aa456e455f27e3ce114e4f546bfeddd92a31aa69de6e",
+        "54c09e29e76f71152806b6b53b0d073ae390f6c5131c3ef0e9809267c2669c0e",
+        "6d7ae527449549d8c77becdbc6b24740a7f506a2161e7087cd1e8676edb65aaa",
+        "96a51e2fa56a33e2a1cdbdc49165090febf2d05c2ba2d895d4bd88940d76b4fb",
+        "73a8d85716d7928f8a6a2b9dfe6b10848356eccbac9b264e0f015ba4b410a448",
+        "92f014af6094aa648b379b4e5ffb5c7accd852015bb2c8112556874217009140",
+        "52df0287fe34a8a27bde24959939f43f253ef795e5241eea146d4164ff7ff491",
+        "24fa9c6dcf7a39e1dbeb0d68085c76db9aacc136827f0aabe1be6204217a8e7e",
+        "b9ebec1772059b75920fec4b0b4902c2fcd351435d040f42d36f2402afb2adaf",
+        "d0d30ce3be9aef295fe48f27c96c936c01053df2e99c25957a6cce2314cdba94",
+        "b1706a448b248e44a06102d00a335390326d343ee18a52685bd589cdcf09eec9",
+        "da1dde96f9553203bd9fb05941e644d175d349b3951e47e95a34de99dd6d001f",
+        "72474c5c0719e2ad142cdff250c8b042e86c989f8b7dc5896fce223b41016ec8",
+        "270163a13722edf422af7cc539b8146398362f215c38f359401c46f75d797212",
+        "36a2ca7b715216c80fd2817b6b6accecc8c8e7ca6739e8e11f606eb3f3b17044",
+        "f99e8f47c82ad2420a3e14674475772d53e4404905727c56ea3b52b5ead5f2f9",
+        "03d05ab307bb0d68b7c16f89943057e77867b8d94989c01e7302cd580b88c994",
+        "e754741fa17ff0f2433145423ef77ce84e9ead335812434d931bb9384e5375c2",
+        "af6a199032fdbeccb1ec41456b8e7f05928180df14cfc6729132c5b996fe8d06",
+        "3c317063e6cc5a9bc487dd7a4febc7c89459ca79225083d14c8b0745e40a6871",
+        "803727ceab0ff19b283ece993f3a9a9823d508b7fa63c08a5d3653c904b1c503",
+        "54581bc20222d09feb81f13e8e69240ce6c39d11d9f769126d727495b572ef07",
+        "bbb8d852b61b476205308d2a0ba9fdd733a73b96d06e7cabe5e10345f6890d3a",
+        "a543b815651625ce5abffccaed9b01d7043db13dff8abfc3345ae319f4a57310",
+        "9b83e9c919bf91c6de1f1b18ab2c28ba808952f3a8481d9f93a0710ab9338a72",
+        "a6278fa1088695f618bb996fa4563fad698c850ae50a9671b42cb3a94e8e5577",
+        "8b9dba9617b844cc26c0e95f04af1c20fbe182e77978a8035055182218190dc8",
+        "0e83d1a0509f538c4b1e3aa87aaaa8a0760ec00603266cffa61fe38bac20107d",
+        "2cc319bf29f61f3bfb66237f22c1842c36a6ba615172298f48ace75f9cec79e3",
+        "3e65eee2fc5fbab9369660fc6719560be2f984e7d1d62bdab71aabc2c05e792c",
+        "745c98e3575eb92259ad3867741fa2aa047130fc2b1b8062b0c82ee589347c85",
+        "ed896de844827b5490c9224dde043fc1a16c6676373d89511962e08676c11c82",
+        "32aa5dc6f68594547113ce43f761860901b49c1c69ce6fcd33d969663beb08b3",
+        "6438223fdcd518f07de59a1ca2cb0208b64ebf72e5f79b5df7952d1d4b05f350",
+        "bec96693636bd36b8703986acbf4c97e15f62df027ae103b71fa0a0dbbcbd827",
+        "11fc1b5c9e9d8e704a4501f860fa66ccb5ef5f4986cd2d6c33bef344a2f3304b",
+        "a301c993d8a243f59ac82d3c727d5027ad25f037ed7af91900bca55a18511708"
+      ],
+      "outputContextHash": "42898400bdc4b72675df1ec759d12599fd2aed6f0ec4d346ab2f4dc5d8989ee4",
+      "reviewedAt": "2026-11-06T13:14:04.433Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-05T08:58:43.386Z"
+    },
+    "ongoing-operation": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The prior citation finding is resolved. No clear new problems were found in the changed paragraphs.",
+      "glossary": [],
+      "roles": [
+        "Quality owner",
+        "Operations owner",
+        "Quality lead",
+        "Supervisor",
+        "Assessor",
+        "Quality reviewer",
+        "IT representative",
+        "Evaluation lead",
+        "Migration lead",
+        "Exception owner",
+        "Operator",
+        "Auditor",
+        "Qualified adviser",
+        "Supplier"
+      ],
+      "recordNames": [
+        "Review record",
+        "Review findings",
+        "Review decision",
+        "Migration exception list",
+        "Assessment record",
+        "Task definition",
+        "Competency matrix",
+        "Approved FAQ answers and source references",
+        "Results sheet",
+        "Evaluation record",
+        "Written supplier answers",
+        "List of open questions"
+      ],
+      "decisions": [
+        "Prioritize corrective actions or workflow improvements from review findings.",
+        "Treat insufficient evidence as a review finding.",
+        "Choose a review interval and owner.",
+        "Answer FAQ questions within the evidence or refer interpretation questions to an adviser.",
+        "Classify legacy records for migration, review or separate retention.",
+        "Choose an evidenced replacement, permitted supervision or a hold when staffing evidence is missing.",
+        "Proceed, seek clarification or reject the software option based on the demonstration and open conditions."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Review decision quality and improve",
+            "section": "Review decision quality and improve"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Review decision quality and improve; semantic review verifies support",
+            "section": "Review decision quality and improve"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Answer common questions without overstating compliance",
+            "section": "Answer common questions without overstating compliance"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Answer common questions without overstating compliance; semantic review verifies support",
+            "section": "Answer common questions without overstating compliance"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Prepare a focused ICC demonstration",
+            "section": "Prepare a focused ICC demonstration"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Prepare a focused ICC demonstration; semantic review verifies support",
+            "section": "Prepare a focused ICC demonstration"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What operational question should competency management software answer first?",
+            "section": "What operational question should competency management software answer first?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How is training completion different from demonstrated competence?",
+            "section": "How is training completion different from demonstrated competence?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: When is a formal qualification required in addition to competence?",
+            "section": "When is a formal qualification required in addition to competence?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What evidence should support a competency matrix entry?",
+            "section": "What evidence should support a competency matrix entry?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should a supervisor handle a missing assessment or an absent qualified worker?",
+            "section": "How should a supervisor handle a missing assessment or an absent qualified worker?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Which legacy training records should be migrated, reviewed or retained separately?",
+            "section": "Which legacy training records should be migrated, reviewed or retained separately?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What might an auditor ask to see beyond training plans and records?",
+            "section": "What might an auditor ask to see beyond training plans and records?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Does ICC's standards mapping mean the software guarantees conformity or certification?",
+            "section": "Does ICC's standards mapping mean the software guarantees conformity or certification?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What should the team ask ICC to demonstrate and confirm in writing?",
+            "section": "What should the team ask ICC to demonstrate and confirm in writing?"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "26f4d5e4b622e7f11bc43ced8b8b86153cff6c543cf8912ecee3eddf7cf3ef17",
+      "contentHash": "d3828ae4886aa7b5cdf3b802599f3b11dc841474d6cc5663b83ab8046cc128a1",
+      "paragraphHashes": [
+        "9378d461bfe860273c2d15a24e9e4ae83116d365785a0442e4deff73f3d81d43",
+        "992f22537e7937c09d35f602851ff51c9a45f037a049ecc6324f09b4a296438e",
+        "afed87af69e6d0f7bd7b10d6075652bb2b2ab4845563621a9524233842fdf665",
+        "f1ee23d104d97fe859a5165bbc43a53ab250d033649c93d19943515b56681fd7",
+        "6314f33d76c8e5924ac740abdf6ef35831c214fe98fa9218c4b4c0cc6a4b2ecf",
+        "0e65d4b6f6194dc1b7768003bdf367cd69d6000e8525db245e9792505f3cc1e9",
+        "d47982ec769a700b007a96dcf397124df0e42daff877d0039b1db306f36c5780",
+        "28756decb988082a40766c61839dcc0b8f5a19be762bb5325a08731a73e08f25",
+        "8a1f6e590f89f6baff6376c0ad3e60880723ee81327c85b41e040e9b1264c87e",
+        "85c8bfc21861606bd30960813b9f0c657a6fcf4191434f16b55b23aa19421a0c",
+        "d8c7aa4b1be8b6bf0e786539f5f2741fe1ffd3589a6e767f4df06715ac2c608a",
+        "b3ce9b31fdba14e232c4a09f1d8b4ae9f32062072697ed2ab65a19ae2539a976",
+        "48e15812c04bb37718b8598eb4644230fdfc262a9f8e466b06bbc38ed4ab2ff9",
+        "44fb77ffd22ac8c62229b691e00a0aafd549e68774e74e5b3add939f62671d62",
+        "75776ec8690249896429faf0fa415f9e77ea8cad2fb240c46fbc8e3852b81310",
+        "c59f42a6246eaaf7a73e54c0ab203541aa7ed4d6db343a33b11c5ff5b4dd731a",
+        "23b1fa71b5651e8d1ff25da0e4c35bcb63b96102f6bec878d2707a54299373df",
+        "7df73b91c284e8127151235a18ffe357e562b791eb39425700682d606abaf818",
+        "e97b7b62789da328df62ef3b8f184240440032757185233460773c7f5cc484e2",
+        "7d179b672c494ca6d6193221aeb0b51b173025d71b57406596360993ff11e2de",
+        "202924aa17eb7af690d38ba19735f04d2deb2c206b273a18c179ea93b651dad2",
+        "7556e1af4ffaf1440d6650b8aaef661b429919513d6661f237df02ade3f1d150",
+        "5950b8798fb384b8efa8b4f80db2535020fe6def9f9f26a8ba856dd8055ed9ff",
+        "ba1f13dfd2b506c52eb804da258b77160a69b3f7c25716896e8d9272b51dbea5",
+        "64a359f45f3f18f0a1fd3118b414a8bfa4ad1b18a895c1cf8e76506fd78076c8",
+        "300b90d0d1664ce2d9216ed9d3c85f60d675e0ae037eeec9f4d25bf7549f1280",
+        "bc273499d2a9e1db815ba3a8725c754d39beafa4209ccd9cfd5d9974ec38d381",
+        "bd9cfc1e79b106a3e22a5dafa15dc303f7e63c41c4a877bf2fb76c53fa132c81",
+        "66928a38f5d79b5cccb07c2883d212311900ac57cf6fe3040e5bec1ba7ba546e",
+        "d8c4f00cb7ac32df8906b8f6797489c45916fd91a3859602b5d0b65d1e9e57d3",
+        "bcef0ca437b0503b7848f16ea80369d6303a458c2d4d43c138ec7edf97e39947",
+        "4984a735b62b01072dfd17f1f0bef5e762e5a3355a62148147c3ff8d2972b60f",
+        "e51b59274b2ff9b01921ec14a87ab76c3b472e0dded23b76e8c3e2c4afa0c12e",
+        "01e96545ed02e1501463a780ce0cf9f6b64237c511fb5b460228cb9af445053d",
+        "ac43e547805a25abcabae23250e3e118d94cd32d666214991c6e40d3b3e789f6",
+        "a09601fb410e05014ef0c9bc4d87554d68236e2da93d7c997b8e90220a3826ad",
+        "2f901f446ecad3cde0ef37fa12b3c0053d37b56697587bc08d3874ed9d044247",
+        "2b35d51e40e6fda9d21830bd66cd9923f7c807377e37647081afc6108a0db323",
+        "6a6f056648394ceb246ef6eafb0764b8bf4805800565fcc923480c141a4d6388",
+        "33fa3a0b18d15dd44b6d7df0936e84f5b8fd364393b6c475aa431effa5e89e80",
+        "de836117a8347f7c7021a12dfe08fdedce86f94b57e27a4e1a7bf1cb684b2ff3",
+        "6f2f4b6d54f88e3903099d63067fb4aa3258a783d015038a24535b7673314f7e",
+        "32ed0ab51fc6f6f611fc9d19df425527676516d0b1a15102656460365f33643b",
+        "8a6613b31ea43154308927b73a3f16b8e31acd2f09d8cfed48eed862027a85bd",
+        "0c21307b4cb65e448ad178f5be1c110fa56781b2ef3bcb7de5e01ba0cbbc12d5",
+        "88ce69b742672f322c2cdb4f2cdf9429a4b83fe6688fa61938b3e29c1790f860",
+        "a8d6a2f0133a9f728af3774db68a9357b0c9c066f710fbf2d908e224916fb8fa",
+        "5b66515dc5c0439ee44155f171737daaef8cab8e79e201b5194ba7efaa008eca"
+      ],
+      "outputContextHash": "3fc8b3c4fe7f8a4bf6b376e3f22a8da4a4767418769f50b02d3dd9e2161059d8",
+      "reviewedAt": "2026-11-06T13:14:04.639Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-06T12:53:04.536Z"
+    },
+    "competency-management-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "No earlier findings remain open, and the changed paragraph presents no clear new problems.",
+      "glossary": [],
+      "roles": [
+        "Quality owner",
+        "Operations owner",
+        "Supervisor",
+        "Assessor",
+        "Training coordinator",
+        "IT",
+        "Learner",
+        "Auditor"
+      ],
+      "recordNames": [
+        "Training certificate",
+        "Practical assessment checklist",
+        "Qualification expiration spreadsheet",
+        "Training plans",
+        "Training records",
+        "Competency matrix",
+        "Results sheet",
+        "Legacy records",
+        "Pilot results"
+      ],
+      "decisions": [
+        "Define task requirements, levels, evidence rules and qualification conditions.",
+        "Determine whether evidence supports independent work.",
+        "Select or hold a replacement assignment when evidence is missing.",
+        "Decide which legacy records to transfer, review or retain outside the system.",
+        "Evaluate software using demonstrations and written supplier confirmations.",
+        "Decide whether to expand after a pilot.",
+        "Review post-go-live decision quality and decide what to change."
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: The operational problem",
+            "section": "The operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: How to use this guide",
+            "section": "How to use this guide"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+            "section": "Planning evaluation and implementation"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "f9452d86d7c247f365cca0423448cb47d64bd22634646534bbbba4d74bce952b",
+      "contentHash": "d5aa081dbdb5ac8a647987c5d80cab1eb4f53a347268049b3471bb282252e60b",
+      "paragraphHashes": [
+        "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
+        "cfa8b973cb86a9b43983ab9e62c68a849f13e0d615cbde59639d55e8462ef5f2",
+        "674a6678134091d335c71d4ba7eeac699b64473b8695acb5b4869f0ee000222d",
+        "6122c3aface1022e5d4ac220a27ae6febd8a91d1781ecbe050b1661b99bad0cd",
+        "8a2b9db3907ddf872f16ba7c5ad1b314e5581f0057b03f15644b7f4a0df09f8e",
+        "348fb2180d01d9e936a8630d53aa74767e9acb2dca29a82cf4fb610ebad251fb",
+        "aa8443e22096f6bccdedea51a40f5af9efcdfcaaff063eb6cd7832a0e43cb9f4",
+        "11ccc13902597c3f9be181b86cf2b92b3565954a689b3a11014e93d9b7a0491a",
+        "f1e738161a7a4ec53202aac0ef3c844de52305b30c58a6922e517b890fc534b8",
+        "fc390166ef71d03597ef5a013f0b408f517ac1a4a73c79e7142863d851b98b47",
+        "dd2698f3d44ea985fd94e942cf37448c9b770b15ebe5d0b106819002d0160a8d",
+        "ace812d25f988aee9133390a8ffbd03cb9e2e522da33e540a191efd9de49eeae",
+        "43e78acf5a67cf6d6764bad26430dc42c4a63b12b2b941ee7db7982c36a536d4",
+        "4b64f939bdc35fcff0f89fb4d967d3b2eae9ab9ada0782ba843b16147be96d32",
+        "a7851bce1bd46e58f07a4e2524285939ca0a061fe2a463acde43ac11af7a8a6b",
+        "2edab0eba1b55e2e0dccd8236be19cb94ce3eae8bd3563c832971d5bb948e6e9",
+        "96f0a8a875ea9a7e34ae699a7568beebc9ea14411c1cfbb2cfbf0fa4629b2e07",
+        "744b62ea31ba1b9a1b2ed3e7ec7ce86812f78c0928dfcebff4a367c7c0856eb6",
+        "15cfdeb34a2f36b63be71df4cc0dfcc1e4fb3b55ad4a089464f390b46ddfb0d2",
+        "f247267152416170e1afc6279729f34542acbd8855baed3e67b8ff10c10ab98d",
+        "be6a15675109797e3496d3343545b74a298337dcd6e96c2ced19aa882ccebdfc"
+      ],
+      "outputContextHash": "e824325266fde6a13751060c4bceb623a3c9fbf3a06b4f1b7ed1e88623424bec",
+      "reviewedAt": "2026-11-06T13:14:55.637Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

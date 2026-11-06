@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The earlier attribution finding is resolved: the change triggers are presented as local guidance, and the APG statement is supported. The changed paragraphs present no clear new problems.",
+  "summary": "No earlier findings remain unresolved, and the changed paragraphs present no clear new problems.",
   "glossary": [
     {
       "term": "Operating scope",
@@ -14,42 +14,39 @@
     },
     {
       "term": "Level",
-      "definition": "A statement of what a person has demonstrated for a task."
+      "definition": "A statement about what a person has demonstrated for a task."
     }
   ],
   "roles": [
     "Process owner",
-    "Supervisor",
     "Quality lead",
+    "Supervisor",
     "Authorized assessor",
     "Qualified colleague",
     "Workflow owner",
     "Administrator",
     "Matrix owner",
     "Supplier",
-    "Inspector",
-    "Alternate"
+    "Reviewer"
   ],
   "recordNames": [
-    "Task definition",
-    "Competency matrix",
-    "Approved level definitions",
-    "Evidence thresholds",
-    "Applicable qualification conditions",
+    "Task definitions",
+    "Approved level definitions and evidence thresholds",
+    "Qualification status",
     "Practical evaluation",
+    "Matrix review checklist",
     "Change decision",
     "Affected task list",
-    "Matrix review checklist",
     "Results sheet"
   ],
   "decisions": [
-    "Approve the competence needed for each task and resolve unclear task scope or intended results.",
-    "Define level meanings, evidence thresholds and required qualification conditions.",
-    "Block assignment when a required qualification or its scope cannot be confirmed.",
-    "Assign separate ownership for task requirements and individual competence status.",
-    "Approve revised requirements and identify affected people.",
-    "Determine whether existing evidence covers changed work and apply an interim rule when the effect is unresolved.",
-    "Record open software evaluation questions and any needed manual steps."
+    "Approve the competence requirements and operating scope for each task.",
+    "Define level meanings, evidence thresholds and applicable qualification conditions.",
+    "Confirm whether a required qualification and its scope are current.",
+    "Decide a person's competence status through the assigned decision path.",
+    "Approve revised task requirements and identify affected people.",
+    "Determine whether existing evidence covers revised work and set an interim rule when the effect is unresolved.",
+    "Record open questions and manual steps identified during software evaluation."
   ],
   "pass": true,
   "deterministic": {
@@ -130,8 +127,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "4537a44f8ce1284d8b3c275b8095e883955fef094f72bf31d8057e95ff52304c",
-  "contentHash": "370830aabcfc89b139ecd0f5294013f51021b8aff26009102c821ebe73e90840",
+  "inputHash": "074d0c1d9ff7573e3631c49f133f081e8bd4a5a5f292b9131ce344f4728ee797",
+  "contentHash": "6a56d1ec77e072aefb671ab0546ed7e28917a695877d2f0b258f9e30f803724f",
   "paragraphHashes": [
     "ccf97829ca01d05b616db0af1dbe892e1cfeb0886ebb585a2a8444285a0f3a36",
     "b3c3fd455b205d74bf13a273b739d2e1bc2dd390d324b77998457a21c27f7430",
@@ -143,7 +140,7 @@
     "011f7eb21c54b97c2a7757be7218010c6cf62af3589f67af57b5ced0eb3cc442",
     "b15a65082327e0e54bedf3e70b7c5de6af0180018ec8f8a3e87e577bddc45f9f",
     "24a29db304977bfacd2bc0d69586f936f534f5813b55627a8f39c7c6ab939709",
-    "20c8db4b67cd0786c2feaa14a80a83be4b49238d32a94dc72d1a87a2b3d81d90",
+    "43855cc757863862c10b26876e7396a5cc44117c3b9b2bc3027b862ec2327c88",
     "40400e8d9a2e156d92f3af8cd40ef81267e95b3a146cfc2cf5ae7b69b67d40b2",
     "17720975fa8c2198ae4aa43ab6767c5acc1514dbea27611261ef7c6955a742d2",
     "db9960522af5ac782812ed608322234a8f84b749c4f37aafdec2340824b7a3e7",
@@ -177,12 +174,12 @@
     "1b7770ab4d203e9073ba513015c5592cb81d0c101adf9f486f84ddd41ee2b57a",
     "63119cb37d7d93bfab925708d42f2684f0db67bf04fff9b0b66bf0f2fdd02704",
     "e38f1e954ca180618b7189d7a058d5e40295a3d2bdd2d07e5d3275aa3e713f44",
-    "bacc52c4bf004921857397661b3582a0c506d985fa42dc94ee8584553e744e5c",
+    "1814eb3114031c6f3c3712e36e0d3877f07cd890cbad48adaf3ae335eb37a507",
     "d1f4e39c826b72549aa921fe3de1c419e3b10960e8fcfa30fc1dd00a2340326d",
     "d85117389ec97fef97ff587866d445105a91e0a7e668e6cedb609690176b86a1",
     "1471590237b1d2fc212cb6db6598f2941e1b885a95618147538895e0a967c768"
   ],
-  "outputContextHash": "7f32b3b77afb516c830152e914ab496f199e79668bf5abfab024ee05caabf9b1",
-  "reviewedAt": "2026-11-05T08:33:30.877Z",
+  "outputContextHash": "cc62729c136602263fd3b8a3df50b1df9edc60420f0f00550e8b65e6c5c10da4",
+  "reviewedAt": "2026-11-06T13:12:56.383Z",
   "reviewer": "Configured independent chapter reviewer"
 }

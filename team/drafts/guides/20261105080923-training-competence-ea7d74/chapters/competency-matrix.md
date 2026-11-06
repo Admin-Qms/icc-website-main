@@ -132,7 +132,7 @@ Where the answer to the third question cannot yet be determined, record the effe
 
 **Illustrative example:** In the hypothetical plant, a revised inspection method adds a new gauge. The process owner approves the revised task definition, lists the people who hold the independent level on that task, and requires supervised work until a practical evaluation on the new gauge is recorded. The alternate's existing evidence is reviewed first, and the change decision is filed with the affected task list.
 
-Name an owner for the matrix itself as well as for the tasks. That person checks on a schedule, for example, quarterly, that every task has a current owner, that no task refers to a retired instruction, and that people who left the cell no longer appear as available. A short checklist for this review keeps it from becoming a debate each time.
+Name an owner for the matrix itself as well as for the tasks. That person checks on a schedule—for example, quarterly—that every task has a current owner, that no task refers to a retired instruction, and that people who left the cell no longer appear as available. A short checklist for this review keeps it from becoming a debate each time.
 
 ### Record the change decision
 

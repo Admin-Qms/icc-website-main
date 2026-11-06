@@ -69,7 +69,7 @@ The Auditing Practices Group [says](https://committee.iso.org/files/live/sites/t
 3. Can the entry be edited afterward, and if so, is the earlier version visible?
 4. Which version of the task requirement was current when the sign-off was made?
 
-The [ICC module page](https://isocertificationconsultants.ca/solutions/training-competence/) says an auditor can view the competency matrix for a role or person, quiz results and pass scores, supervisor sign-offs, and certificates with completion dates. Treat that list as the script for the demonstration. Ask to see each item for the fictional person, then ask about the fourth question above, which the page does not address.
+The [ICC module page](https://isocertificationconsultants.ca/solutions/training-competence/) describes competency matrices, quiz results and pass scores, supervisor sign-offs, and certificates. Treat that list as the script for the demonstration, and treat two points as open questions rather than facts: whether an auditor can open those records directly, and whether each certificate shows the date the training was completed. Ask to see each item for the fictional person, then ask about the fourth question above, which the page does not address.
 
 ### Test roles and permissions
 
@@ -122,7 +122,7 @@ Ask what the quoted scope includes for mapping processes, configuring fields and
 
 ### Compare options on the same basis
 
-If ICC is being compared with other suppliers or with improving the current spreadsheet process, use the same scenario, the same records, and the same results sheet for each. Add a final column for outstanding questions. A supplier who cannot yet answer is not disqualified, but the answer must arrive before a decision. Include the option of improving the current paper or spreadsheet workflow in the comparison. Sometimes the mapping exercise reveals that a clearer state definition and a named exception owner resolve most of the problem.
+Compare ICC, any other suppliers, and an improved version of the current paper or spreadsheet workflow using the same scenario, the same records, and the same results sheet for each. Add a final column for outstanding questions. A supplier who cannot yet answer is not disqualified, but the answer must arrive before a decision. Keeping the improved paper or spreadsheet option in the comparison matters because sometimes the mapping exercise reveals that a clearer state definition and a named exception owner resolve most of the problem.
 
 Generic procurement criteria apply: total cost over several years, implementation effort on the organization's side, data transfer into and out of the system, security review, supplier stability, and the support available to a small team. Weight them by what the map showed. A plant with frequent absences needs fast status checks. A plant with many recognized qualifications needs reliable expiry handling, which is covered in a later chapter.
 

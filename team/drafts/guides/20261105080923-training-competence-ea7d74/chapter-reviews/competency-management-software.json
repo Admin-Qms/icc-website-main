@@ -6,41 +6,37 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The earlier heading finding is resolved. The changed paragraph presents no clear new problem.",
+  "summary": "No earlier findings remain open, and the changed paragraph presents no clear new problems.",
   "glossary": [],
   "roles": [
     "Quality owner",
     "Operations owner",
     "Supervisor",
     "Assessor",
-    "IT",
     "Training coordinator",
+    "IT",
     "Learner",
-    "Supplier",
     "Auditor"
   ],
   "recordNames": [
     "Training certificate",
-    "Practical assessment",
-    "Paper checklist",
-    "Qualification expiration date",
+    "Practical assessment checklist",
+    "Qualification expiration spreadsheet",
     "Training plans",
     "Training records",
-    "Documented information",
     "Competency matrix",
     "Results sheet",
-    "Written supplier statement",
     "Legacy records",
     "Pilot results"
   ],
   "decisions": [
-    "Decide who may perform a task independently based on current evidence.",
     "Define task requirements, levels, evidence rules and qualification conditions.",
-    "Select actions and assessments to address competence gaps.",
-    "Determine which legacy records can be trusted, reviewed or retained outside the system.",
-    "Evaluate supplier claims through demonstrations and written confirmation.",
-    "Decide whether to expand after piloting normal and exception paths.",
-    "Review decision quality after go-live and decide what to change."
+    "Determine whether evidence supports independent work.",
+    "Select or hold a replacement assignment when evidence is missing.",
+    "Decide which legacy records to transfer, review or retain outside the system.",
+    "Evaluate software using demonstrations and written supplier confirmations.",
+    "Decide whether to expand after a pilot.",
+    "Review post-go-live decision quality and decide what to change."
   ],
   "pass": true,
   "deterministic": {
@@ -103,8 +99,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "5c6870860a6bc00924cb4630ec5f733427ff87d74fa0289a4cb2835d658fb1a3",
-  "contentHash": "d4e8546a0b87c0c2e5dd52d0d4c1e9418558fcae49c147bdafbb815e86810153",
+  "inputHash": "f9452d86d7c247f365cca0423448cb47d64bd22634646534bbbba4d74bce952b",
+  "contentHash": "d5aa081dbdb5ac8a647987c5d80cab1eb4f53a347268049b3471bb282252e60b",
   "paragraphHashes": [
     "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
     "cfa8b973cb86a9b43983ab9e62c68a849f13e0d615cbde59639d55e8462ef5f2",
@@ -113,7 +109,7 @@
     "8a2b9db3907ddf872f16ba7c5ad1b314e5581f0057b03f15644b7f4a0df09f8e",
     "348fb2180d01d9e936a8630d53aa74767e9acb2dca29a82cf4fb610ebad251fb",
     "aa8443e22096f6bccdedea51a40f5af9efcdfcaaff063eb6cd7832a0e43cb9f4",
-    "11957b31a5fbe3171a36c6c288a76a8b1ae29f1f5613b2852ade5e2db64c5d89",
+    "11ccc13902597c3f9be181b86cf2b92b3565954a689b3a11014e93d9b7a0491a",
     "f1e738161a7a4ec53202aac0ef3c844de52305b30c58a6922e517b890fc534b8",
     "fc390166ef71d03597ef5a013f0b408f517ac1a4a73c79e7142863d851b98b47",
     "dd2698f3d44ea985fd94e942cf37448c9b770b15ebe5d0b106819002d0160a8d",
@@ -128,7 +124,7 @@
     "f247267152416170e1afc6279729f34542acbd8855baed3e67b8ff10c10ab98d",
     "be6a15675109797e3496d3343545b74a298337dcd6e96c2ced19aa882ccebdfc"
   ],
-  "outputContextHash": "187c7e6a600906ac3e7482c6e09ce79da27664e8c633cd2848c51ce83afad7bf",
-  "reviewedAt": "2026-11-06T13:00:42.027Z",
+  "outputContextHash": "e824325266fde6a13751060c4bceb623a3c9fbf3a06b4f1b7ed1e88623424bec",
+  "reviewedAt": "2026-11-06T13:14:55.637Z",
   "reviewer": "Configured independent chapter reviewer"
 }

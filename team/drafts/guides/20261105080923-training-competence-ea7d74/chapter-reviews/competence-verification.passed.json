@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The previous finding is resolved: the assessment record now requires an unambiguous assessor identifier. The changed paragraphs present no clear new problems.",
+  "summary": "No earlier findings remain unresolved, and the changed paragraph presents no clear new problems.",
   "glossary": [
     {
       "term": "Completion",
@@ -14,44 +14,44 @@
     },
     {
       "term": "Effectiveness",
-      "definition": "Whether the action produced the competence needed for the task."
+      "definition": "Whether the action produced the competence the task needs."
     }
   ],
   "roles": [
-    "Assessor",
     "Process owner",
+    "Assessor",
     "Quality lead",
     "Quality reviewer",
     "Supervisor",
-    "Alternate inspector",
     "Second assessor",
-    "Peer reviewer",
+    "Reviewer",
     "Supplier",
-    "Management"
+    "Management",
+    "Alternate inspector",
+    "Usual inspector"
   ],
   "recordNames": [
-    "Assessment record",
-    "Task definition",
-    "Acceptance criteria",
-    "Work instruction",
+    "Completion record",
     "Training records",
     "Employment records",
-    "Training plans",
-    "Completion certificate",
+    "Work instruction",
+    "Assessment criteria",
+    "Practical assessment",
+    "Certificate",
     "Quiz result",
     "Supervisor sign-off",
-    "Practical assessment",
     "Results sheet",
     "Reassessment plan"
   ],
   "decisions": [
-    "Choose and conduct an assessment suited to the task.",
-    "Decide whether a simulation, delay or other route is acceptable when observation or an assessor is unavailable.",
-    "Determine whether combined evidence supports the task decision.",
-    "Keep a person out of independent work when required evidence is missing.",
+    "Choose an assessment method and acceptance criteria suited to the task.",
+    "Determine how to proceed when work cannot be observed or an authorized assessor is unavailable.",
+    "Determine whether the combined evidence supports the task decision.",
+    "Reconfirm evidence affected by a relevant change rather than accepting it silently.",
     "Plan further action and reassessment after an unsuccessful assessment.",
-    "Arrange interim coverage or escalate when no evidenced person is available.",
-    "Decide what to retain outside the system if it cannot show the assessment history."
+    "Restrict independent assignment and arrange interim coverage while a gap remains open.",
+    "Escalate repeated unsuccessful assessments or unavailable coverage.",
+    "Determine how to preserve decision and follow-up history when evaluating software."
   ],
   "pass": true,
   "deterministic": {
@@ -132,12 +132,12 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "4b999fc70ae18bf5ca0e97febcbf6356a194a8cd05342e5cbf5dcd871ce1f914",
-  "contentHash": "05a1683afbdcc40cdae7ad3f2587dab595e798aff5d3039a99c3c4e861f27fc1",
+  "inputHash": "9da890247a6daaea5b6105c76cc8bbff1f5631324e9aa0d2f8ab36a058580835",
+  "contentHash": "3b5654291bcec2021b58c026f20685e0b48259b9242ca5512fc558f414588fe3",
   "paragraphHashes": [
     "02220c794d903386c5b7bd148e0cb8dd1f6a84269a2c9d8b4bb0c7305360481f",
     "f75d9b6a33855ebbb2dafb8de0de3794dce0db812bc37311e0ce34bae0babf45",
-    "bf95118f33c7b0f2b489f536ac23b8ea822d6ac3d4cc3b92d2d60ba1378a0f78",
+    "5b1f01c25e3d291d9a193c31f3e556dfad8a40201876dfe02b23fa99dbd8de75",
     "32e672816186e898d7d95d3f84b03f0bf20fdf5de64af138b232bebd539885c8",
     "a6dbc8247304cc3e16d42158c1e956aa9c889e821755971aed7782dde6eadd49",
     "c6c7cb15d1e80c836fe52fb3b95455591ce70d0a10ebf2116ea310851511b723",
@@ -180,7 +180,7 @@
     "a2ce06a52f5455cc0828aa33950a3a96d5c9b656289bdc127f86a3c0f38a8cbe",
     "32e0f964c753cabaad80ef46a4da2f3ddcaec459cfc8acdbc37ab3b556fedfeb"
   ],
-  "outputContextHash": "d9ba6d0728cca5b74d845ec4f1ed0b865e9a43ef640ce4886084861a0552d65b",
-  "reviewedAt": "2026-11-05T08:42:33.337Z",
+  "outputContextHash": "abb8e9954b2dda04304dce671ab4e58fa082b59c70333edc2bd9a9f49cdb3d15",
+  "reviewedAt": "2026-11-06T13:14:03.651Z",
   "reviewer": "Configured independent chapter reviewer"
 }
