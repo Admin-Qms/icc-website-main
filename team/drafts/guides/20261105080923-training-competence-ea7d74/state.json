@@ -34,7 +34,7 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W45-slot-2",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "fc52d85576d28f9617369a89fabc07d04ad2ac72c5242aba482b9e14dfc90070",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-05T08:09:23.578Z",
-  "updatedAt": "2026-11-06T13:00:42.030Z",
+  "updatedAt": "2026-11-06T13:01:29.416Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "training-competence",
@@ -3013,7 +3013,34 @@
   },
   "researchHash": "583553686e535b26f91965e206907c901e554261a7b7a6ca05be80f831789dcb",
   "outlineHash": "da5bebd501b6042a6aff37cff11d43f5253471496a188952e4760db41a343353",
-  "audit": null,
+  "audit": {
+    "claims": "failed",
+    "consistency": "passed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "The guide says ICC’s page has no “self-serve access” information and that its “main call to action” is a demonstration request. The supplied evidence establishes only that the page does not describe integrations, pricing or trials; it does not support either additional page claim.",
+      "The introduction says an AI suggestion is reviewed and approved by a named person. The supplied ICC evidence says a person reviews each AI output before it enters a controlled record; it does not establish approval by a named person. The guide should not present that stronger description as a verified product fact.",
+      "The mapping chapter says the APG example of welders may require a qualification “from a qualified authority.” The supplied evidence mentions qualifications for welders in specific conditions but does not establish that authority detail.",
+      "The matrix chapter attributes to clause 7.1.1 a requirement to determine necessary process knowledge. The supplied evidence supports only that knowledge needed for processes under clause 7.1.1 is an input to competence; it does not support that fuller clause description.",
+      "The practical-assessment chapter calls observation “usually the strongest option,” and the mapping chapter says three proposed decision states are enough “for most cells.” Neither ranking nor generalization is supported by the supplied evidence. Present these as explicit local recommendations or remove the broad claims.",
+      "The APG disclaimer paragraph in the introduction is repeated nearly word for word in “Map the qualification decision at the production cell.” Since the pages are expected to stand alone, this repeated paragraph exceeds the allowed recap or cross-reference."
+    ],
+    "inputHash": "1ac9bacf2c5eec31af5560b46d80f8533c6ab16fc04aabfb8f0dc2d56b65e98b",
+    "pageHashes": {
+      "competency-management-software": "efb39ed33ec02e3c46a07b558ad5564a60dc151a3677d8249bd58c4b58667218",
+      "mapping-workflows": "15c71e0e5577e1f38e5fe95c6c24a1a56a8f4310cd2f9a56bdfa65096c69707d",
+      "evaluating-software": "225371c7a777405ac68b4aba633c02ecad5f0cdc8a7177ac1484675a39c9cc83",
+      "competency-matrix": "3542593e0dd7ad95e34fa7ad04a62481f3362ed78f8aafe28dfc4ce69636a7eb",
+      "training-assignments": "ceceb011781ea5d5367a400fe723ea32581181c42480b727a82e7c0f4c636f4a",
+      "competence-verification": "c018046dac76db8f08d57149f59c440424acb11cd0ae5124061ae7b2418b77e7",
+      "qualification-renewal": "2892f7dde2757f2d3ab7b4bd6a8dfd16a785022d93fd67c894470f46e0421385",
+      "migration-planning": "5bbcd33e09cac7516f9bcdf46f76242c244fa1d60fba1ed15e00793b29f7ba24",
+      "training-rollout": "27ec3390fa8506c68f770fe7e836d7f10db955db451263ee514bd6fb567b51ad",
+      "ongoing-operation": "5a3e446c696fbcf93713409205b76760c23956b2dec693687045f91498c20aed"
+    },
+    "reviewer": "Configured openai independent review",
+    "reviewedAt": "2026-11-06T13:01:29.413Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }
