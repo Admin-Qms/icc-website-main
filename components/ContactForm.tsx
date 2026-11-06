@@ -8,21 +8,13 @@ import { trackLead } from "@/lib/analytics";
 
 type Status = "idle" | "submitting" | "done" | "error";
 
-const REQUEST_OPTIONS = [
-  { value: "demo", label: "Demo" },
-  { value: "consultation", label: "Consultation" },
-  { value: "assessment", label: "Assessment" },
-];
-
 export function ContactForm({
   compact = false,
   title,
-  askRequest = false,
   submitLabel = "Send message",
 }: {
   compact?: boolean;
   title?: string;
-  askRequest?: boolean;
   submitLabel?: string;
 }) {
   const [status, setStatus] = useState<Status>("idle");
@@ -42,7 +34,7 @@ export function ContactForm({
       phone: data.phone,
       company: data.company,
       standard: data.standard,
-      ...(askRequest ? { request: data.request } : {}),
+      request: "demo",
       message: data.message,
       botcheck: data.botcheck,
     };
@@ -101,7 +93,7 @@ export function ContactForm({
             </h3>
             <p className="mt-3 max-w-sm text-slate-600">
               Thanks, your request is in. We will reply within one
-              business day to set up your demo or call.
+              business day to set up your demo.
             </p>
           </motion.div>
         ) : (
@@ -123,32 +115,6 @@ export function ContactForm({
               className="hidden"
               aria-hidden
             />
-            {askRequest && (
-              <fieldset>
-                <legend className="text-sm font-medium text-slate-700">
-                  What would you like?
-                </legend>
-                <div className="mt-1.5 grid gap-2 sm:grid-cols-3">
-                  {REQUEST_OPTIONS.map((option) => (
-                    <label
-                      key={option.value}
-                      htmlFor={`${id}-request-${option.value}`}
-                      className="flex cursor-pointer items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 transition has-[:checked]:border-teal-500 has-[:checked]:ring-2 has-[:checked]:ring-teal-100"
-                    >
-                      <input
-                        type="radio"
-                        id={`${id}-request-${option.value}`}
-                        name="request"
-                        value={option.value}
-                        defaultChecked={option.value === "demo"}
-                        className="accent-teal-700"
-                      />
-                      {option.label}
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
-            )}
             <div className="grid gap-4 sm:grid-cols-2">
               <Field
                 label="Full name"

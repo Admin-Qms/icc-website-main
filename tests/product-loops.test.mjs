@@ -44,11 +44,12 @@ test("loops css has a reduced-motion final frame for every step class", () => {
   assert.match(reduced, /\.fill\b/, ".fill has no reduced-motion rule");
 });
 
-test("LoopFrame carries the neutral title and the sample-data chip", () => {
+test("LoopFrame carries the sample-data chip and no product title", () => {
   const text = readFileSync(join(LOOPS, "LoopFrame.tsx"), "utf8");
-  for (const needle of ["Compliance Management Software", "Sample data", 'role="img"', "aria-hidden"]) {
+  for (const needle of ["Sample data", 'role="img"', "aria-hidden"]) {
     assert.ok(text.includes(needle), `LoopFrame.tsx is missing ${needle}`);
   }
+  assert.ok(!/compliance management software/i.test(text), "LoopFrame.tsx shows the product title");
 });
 
 test("no loop uses the product name", () => {
@@ -108,10 +109,3 @@ test("module pages render MODULE_LOOPS", () => {
   assert.ok(page.includes("MODULE_LOOPS"), "module page does not reference MODULE_LOOPS");
 });
 
-test("LoopFrame has a CSS-only pause control that pauses animations", () => {
-  const tsx = readFileSync(join(LOOPS, "LoopFrame.tsx"), "utf8");
-  const css = readFileSync(join(LOOPS, "loops.module.css"), "utf8");
-  assert.match(tsx, /type="checkbox"/);
-  assert.ok(tsx.includes("Pause animation"));
-  assert.match(css, /:checked[^{]*\{[^}]*animation-play-state:\s*paused/);
-});

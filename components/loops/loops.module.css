@@ -16,47 +16,12 @@
  * Reduced motion shows the final frame: .onK visible, .untilK hidden, .fill at var(--to).
  */
 
-/* ---------- pause control (WCAG 2.2.2) ---------- */
+/* ---------- loop ---------- */
 
 .loop {
   position: relative;
   width: 100%;
   min-width: 0;
-}
-
-.pauseInput {
-  position: absolute;
-  bottom: 5px;
-  left: 2px;
-  width: 14px;
-  height: 14px;
-  margin: 0;
-  accent-color: var(--teal, #0e7490);
-  cursor: pointer;
-}
-
-.pauseLabel {
-  display: block;
-  height: 24px;
-  margin-top: 4px;
-  padding-left: 24px;
-  color: #475569;
-  font-size: 12px;
-  line-height: 24px;
-  cursor: pointer;
-}
-
-.pauseInput:focus-visible + .window ~ .pauseLabel {
-  border-radius: 4px;
-  outline: 2px solid #0e7490;
-  outline-offset: 1px;
-}
-
-.pauseInput:checked + .window,
-.pauseInput:checked + .window *,
-.pauseInput:checked + .window *::before,
-.pauseInput:checked + .window *::after {
-  animation-play-state: paused;
 }
 
 /* ---------- window ---------- */
@@ -85,51 +50,6 @@
   line-height: 1.35;
   text-align: left;
   user-select: none;
-}
-
-.bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: 36px;
-  padding: 0 12px;
-  border-bottom: 1px solid var(--line);
-  background: #fff;
-}
-
-.mark {
-  flex: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  background: linear-gradient(135deg, var(--teal), var(--navy));
-}
-
-.title {
-  min-width: 0;
-  overflow: hidden;
-  color: var(--navy);
-  font-size: 12.5px;
-  font-weight: 600;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.search {
-  flex: 0 1 30%;
-  min-width: 24px;
-  height: 18px;
-  margin-left: auto;
-  border-radius: 5px;
-  background: #f1f4f8;
-}
-
-.avatar {
-  flex: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #cbd5e1;
 }
 
 .tabs {
@@ -1194,11 +1114,6 @@
 
 /* Final frame, no motion. Every step class needs a rule here. */
 @media (prefers-reduced-motion: reduce) {
-  .pauseInput,
-  .pauseLabel {
-    display: none;
-  }
-
   .on1, .on2, .on3, .on4, .on5 {
     animation: none;
     opacity: 1;

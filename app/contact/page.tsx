@@ -9,7 +9,7 @@ import { SITE, ADDRESS_LINE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Book a demo of our compliance management software, or ask for a consultation or readiness assessment. Serving Canada and the USA. We reply in one business day.",
+    "Get a demo of our compliance management software on your own standard. Serving Canada and the USA. We reply in one business day.",
   alternates: { canonical: "/contact" },
 };
 
@@ -21,7 +21,7 @@ export default function ContactPage() {
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-teal-700">
               <ShieldCheck className="h-3.5 w-3.5" />
-              Live walkthrough
+              Live demo
             </span>
           </Reveal>
           <Reveal delay={0.05}>
@@ -32,9 +32,8 @@ export default function ContactPage() {
           <Reveal delay={0.1}>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-slate-600">
               See how the software keeps your documents, audits and corrective
-              actions in one place. Prefer to talk it through first? Ask for a
-              consultation or a readiness assessment instead. We reply within one
-              business day, with no obligation.
+              actions in one place. We reply within one business day, with
+              no obligation.
             </p>
           </Reveal>
 
@@ -76,7 +75,7 @@ export default function ContactPage() {
         </div>
 
         <Reveal delay={0.1}>
-          <ContactForm askRequest title="Get a walkthrough" submitLabel="Book my walkthrough" />
+          <ContactForm title="Get a Demo" submitLabel="Get a Demo" />
         </Reveal>
       </div>
     </section>
