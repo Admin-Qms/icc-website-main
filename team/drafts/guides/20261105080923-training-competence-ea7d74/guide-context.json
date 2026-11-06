@@ -135,7 +135,8 @@
     "First point of contact",
     "Operations owner",
     "IT representative",
-    "Qualified adviser"
+    "Qualified adviser",
+    "IT"
   ],
   "recordNames": [
     "Task schedule",
@@ -217,7 +218,13 @@
     "Approved FAQ answers and source references",
     "Evaluation record",
     "Written supplier answers",
-    "List of open questions"
+    "List of open questions",
+    "Training certificate",
+    "Paper checklist",
+    "Qualification expiration date",
+    "Documented information",
+    "Legacy records",
+    "Pilot results"
   ],
   "example": {
     "label": "Illustrative example",
@@ -350,6 +357,21 @@
         "Classify legacy records for migration, review or separate retention.",
         "Choose an evidenced replacement, permitted supervision or a hold when staffing evidence is missing.",
         "Proceed, seek clarification or reject the software option based on the demonstration and open conditions."
+      ]
+    },
+    {
+      "slug": "competency-management-software",
+      "title": "Training and competency management software: showing who is qualified for each task",
+      "summary": "The earlier heading finding is resolved. The changed paragraph presents no clear new problem.",
+      "bodyHash": "efb39ed33ec02e3c46a07b558ad5564a60dc151a3677d8249bd58c4b58667218",
+      "decisions": [
+        "Decide who may perform a task independently based on current evidence.",
+        "Define task requirements, levels, evidence rules and qualification conditions.",
+        "Select actions and assessments to address competence gaps.",
+        "Determine which legacy records can be trusted, reviewed or retained outside the system.",
+        "Evaluate supplier claims through demonstrations and written confirmation.",
+        "Decide whether to expand after piloting normal and exception paths.",
+        "Review decision quality after go-live and decide what to change."
       ]
     }
   ],
