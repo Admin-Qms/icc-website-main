@@ -239,10 +239,7 @@
     "Written supplier answers",
     "List of open questions",
     "Training certificate",
-    "Practical assessment checklist",
-    "Qualification expiration spreadsheet",
-    "Legacy records",
-    "Pilot results"
+    "Legacy records"
   ],
   "example": {
     "label": "Illustrative example",
@@ -385,16 +382,16 @@
     {
       "slug": "competency-management-software",
       "title": "Training and competency management software: showing who is qualified for each task",
-      "summary": "No earlier findings remain open, and the changed paragraph presents no clear new problems.",
-      "bodyHash": "1d3bfe8d5397b219ccbee318e17800b15615d07ef226f28810e9417e1fe56d5e",
+      "summary": "No prior findings remain unresolved, and the changed paragraphs present no clear new problems.",
+      "bodyHash": "ff6ef9650f91fa78840e0175ce1096512c2d670a7b2bd3f2ebf4d117ad34795c",
       "decisions": [
-        "Define task requirements, levels, evidence rules and qualification conditions.",
-        "Determine whether evidence supports independent work.",
-        "Select or hold a replacement assignment when evidence is missing.",
-        "Decide which legacy records to transfer, review or retain outside the system.",
-        "Evaluate software using demonstrations and written supplier confirmations.",
-        "Decide whether to expand after a pilot.",
-        "Review post-go-live decision quality and decide what to change."
+        "Decide who may perform a task independently based on current evidence.",
+        "Define task requirements, evidence rules and qualification conditions.",
+        "Determine what evidence is sufficient for each task and level.",
+        "Decide which legacy records can be trusted, need review or remain outside the system.",
+        "Test software against realistic scenarios and distinguish published, demonstrated and written claims.",
+        "Pilot normal and exception paths before expanding.",
+        "Review decision quality after go-live and decide what to change."
       ]
     }
   ],

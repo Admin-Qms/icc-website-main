@@ -34,7 +34,7 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W45-slot-2",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "051467036d847df1a87b4ae7a96d1967192c3880872718684abb230d17215db9",
@@ -100,15 +100,15 @@
       "checkpointedAt": "2026-11-06T13:14:04.637Z"
     },
     "competency-management-software": {
-      "hash": "cdcaddcf2462af40a504cba5ea5d617a1cbbda60751fbbd7c407da4bf200cfe1",
-      "wordCount": 1520,
+      "hash": "f71d32c9682a7d5e436c6495ba486ff24cd385341af1067c8b9d4bc36f0aaef3",
+      "wordCount": 1529,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-11-06T13:14:48.246Z"
+      "checkpointedAt": "2026-11-06T13:16:36.302Z"
     }
   },
   "createdAt": "2026-11-05T08:09:23.578Z",
-  "updatedAt": "2026-11-06T13:14:55.641Z",
+  "updatedAt": "2026-11-06T13:16:51.034Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "training-competence",
@@ -1174,7 +1174,7 @@
     "reviewedChapters": [],
     "researchHash": "583553686e535b26f91965e206907c901e554261a7b7a6ca05be80f831789dcb"
   },
-  "contextHash": "e824325266fde6a13751060c4bceb623a3c9fbf3a06b4f1b7ed1e88623424bec",
+  "contextHash": "d05ae160316fcb882b1970d2f1ff9594d6bfae74433ae15f61b2d453aba0b462",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2913,37 +2913,37 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "No earlier findings remain open, and the changed paragraph presents no clear new problems.",
+      "summary": "No prior findings remain unresolved, and the changed paragraphs present no clear new problems.",
       "glossary": [],
       "roles": [
         "Quality owner",
         "Operations owner",
         "Supervisor",
+        "Operator",
         "Assessor",
         "Training coordinator",
-        "IT",
         "Learner",
-        "Auditor"
+        "IT",
+        "Auditor",
+        "Supplier"
       ],
       "recordNames": [
         "Training certificate",
-        "Practical assessment checklist",
-        "Qualification expiration spreadsheet",
+        "Practical assessment",
         "Training plans",
         "Training records",
         "Competency matrix",
         "Results sheet",
-        "Legacy records",
-        "Pilot results"
+        "Legacy records"
       ],
       "decisions": [
-        "Define task requirements, levels, evidence rules and qualification conditions.",
-        "Determine whether evidence supports independent work.",
-        "Select or hold a replacement assignment when evidence is missing.",
-        "Decide which legacy records to transfer, review or retain outside the system.",
-        "Evaluate software using demonstrations and written supplier confirmations.",
-        "Decide whether to expand after a pilot.",
-        "Review post-go-live decision quality and decide what to change."
+        "Decide who may perform a task independently based on current evidence.",
+        "Define task requirements, evidence rules and qualification conditions.",
+        "Determine what evidence is sufficient for each task and level.",
+        "Decide which legacy records can be trusted, need review or remain outside the system.",
+        "Test software against realistic scenarios and distinguish published, demonstrated and written claims.",
+        "Pilot normal and exception paths before expanding.",
+        "Review decision quality after go-live and decide what to change."
       ],
       "pass": true,
       "deterministic": {
@@ -3006,8 +3006,8 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "f9452d86d7c247f365cca0423448cb47d64bd22634646534bbbba4d74bce952b",
-      "contentHash": "d5aa081dbdb5ac8a647987c5d80cab1eb4f53a347268049b3471bb282252e60b",
+      "inputHash": "30060079959e58846ec77c9af63f5782dfdb6f5accff16f8d736f70a34586732",
+      "contentHash": "c08e6dcf33452003851a670752fc7af4bf8ca5f8e6ed25973abfc44912ea0f6c",
       "paragraphHashes": [
         "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
         "cfa8b973cb86a9b43983ab9e62c68a849f13e0d615cbde59639d55e8462ef5f2",
@@ -3016,7 +3016,7 @@
         "8a2b9db3907ddf872f16ba7c5ad1b314e5581f0057b03f15644b7f4a0df09f8e",
         "348fb2180d01d9e936a8630d53aa74767e9acb2dca29a82cf4fb610ebad251fb",
         "aa8443e22096f6bccdedea51a40f5af9efcdfcaaff063eb6cd7832a0e43cb9f4",
-        "11ccc13902597c3f9be181b86cf2b92b3565954a689b3a11014e93d9b7a0491a",
+        "eb7a773cd82d4c1438e0d11d1e4871badadfde7b7e5c12abaaa4621f4d932673",
         "f1e738161a7a4ec53202aac0ef3c844de52305b30c58a6922e517b890fc534b8",
         "fc390166ef71d03597ef5a013f0b408f517ac1a4a73c79e7142863d851b98b47",
         "dd2698f3d44ea985fd94e942cf37448c9b770b15ebe5d0b106819002d0160a8d",
@@ -3024,21 +3024,41 @@
         "43e78acf5a67cf6d6764bad26430dc42c4a63b12b2b941ee7db7982c36a536d4",
         "4b64f939bdc35fcff0f89fb4d967d3b2eae9ab9ada0782ba843b16147be96d32",
         "a7851bce1bd46e58f07a4e2524285939ca0a061fe2a463acde43ac11af7a8a6b",
-        "2edab0eba1b55e2e0dccd8236be19cb94ce3eae8bd3563c832971d5bb948e6e9",
+        "c303a5ce31d60d49a9258f870c3ef240e0c9daef65cb3c934dea3cbb3194eb0e",
         "96f0a8a875ea9a7e34ae699a7568beebc9ea14411c1cfbb2cfbf0fa4629b2e07",
         "744b62ea31ba1b9a1b2ed3e7ec7ce86812f78c0928dfcebff4a367c7c0856eb6",
         "15cfdeb34a2f36b63be71df4cc0dfcc1e4fb3b55ad4a089464f390b46ddfb0d2",
         "f247267152416170e1afc6279729f34542acbd8855baed3e67b8ff10c10ab98d",
         "be6a15675109797e3496d3343545b74a298337dcd6e96c2ced19aa882ccebdfc"
       ],
-      "outputContextHash": "e824325266fde6a13751060c4bceb623a3c9fbf3a06b4f1b7ed1e88623424bec",
-      "reviewedAt": "2026-11-06T13:14:55.637Z",
+      "outputContextHash": "d05ae160316fcb882b1970d2f1ff9594d6bfae74433ae15f61b2d453aba0b462",
+      "reviewedAt": "2026-11-06T13:16:45.158Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
   "researchHash": "583553686e535b26f91965e206907c901e554261a7b7a6ca05be80f831789dcb",
   "outlineHash": "da5bebd501b6042a6aff37cff11d43f5253471496a188952e4760db41a343353",
-  "audit": null,
+  "audit": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "unresolvedFindings": [],
+    "inputHash": "9786c41f148680cf62de44eb8c6198939b103240996d3ad87cc0a8d1a47d7a5d",
+    "pageHashes": {
+      "competency-management-software": "ff6ef9650f91fa78840e0175ce1096512c2d670a7b2bd3f2ebf4d117ad34795c",
+      "mapping-workflows": "2c618f22bbb0699b4c1eaf3fd9bf86bf976f2b275324d04baced722926ccb590",
+      "evaluating-software": "261d003f3a7738bd6e3e4a1b59b8b26064d93797571c2e716b33e4b129788b08",
+      "competency-matrix": "5ca72aa83004bb18a657dd3468a7e36de102f93ed221fb8cbfb6fdfb6acf82ab",
+      "training-assignments": "ceceb011781ea5d5367a400fe723ea32581181c42480b727a82e7c0f4c636f4a",
+      "competence-verification": "b94846efacfeb2382ad7fd89d11cc25fe1c1a6da14782181782690bec8ebbefb",
+      "qualification-renewal": "2892f7dde2757f2d3ab7b4bd6a8dfd16a785022d93fd67c894470f46e0421385",
+      "migration-planning": "5bbcd33e09cac7516f9bcdf46f76242c244fa1d60fba1ed15e00793b29f7ba24",
+      "training-rollout": "27ec3390fa8506c68f770fe7e836d7f10db955db451263ee514bd6fb567b51ad",
+      "ongoing-operation": "5a3e446c696fbcf93713409205b76760c23956b2dec693687045f91498c20aed"
+    },
+    "reviewer": "Configured openai independent review",
+    "reviewedAt": "2026-11-06T13:16:51.033Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }

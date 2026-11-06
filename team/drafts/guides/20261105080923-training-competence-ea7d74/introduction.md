@@ -37,7 +37,7 @@ The ISO 9001 Auditing Practices Group, a joint effort of ISO/TC 176 and the Inte
 
 The paper is helpful because it keeps attention on people doing real work. It says an auditor may sample people in a process, observe their performance, interview them about the competence the task needs, and check that someone with adequate competence is available when the usual person is absent. It also says the existence of training plans and records is not sufficient on its own to show how an organization ensures competence. A system that stores certificates but cannot support the staffing decision has only digitized the folder.
 
-Software cannot define competence for a team. The questions to put to any candidate system are whether it can hold the team's own definitions, such as task requirements, levels, evidence rules, and qualification conditions, and whether it applies them consistently when a decision is made. Ask whether it shows what is missing as plainly as what is present, and whether it routes a review to the right person and records who confirmed what and when. Treat each answer as something to see demonstrated and confirmed in writing before relying on it. Where a system offers AI assistance, treat it as drafting that a person reviews and approves, never as a decision.
+Software cannot define competence for a team. The questions to put to any candidate system are whether it can hold the team's own definitions, such as task requirements, levels, evidence rules, and qualification conditions, and whether it applies them consistently when a decision is made. Ask whether it shows what is missing as plainly as what is present, and whether it routes a review to the right person and records who confirmed what and when. Treat each answer as something to see demonstrated and confirmed in writing before relying on it. Where a system offers AI assistance, treat it as a draft that a person reviews before it enters a controlled record, never as a decision.
 
 ## How to use this guide
 
@@ -61,7 +61,7 @@ The chapters run in this order:
 
 Before reading further, decide who needs to be involved. A competency decision touches more people than most software purchases. The quality owner usually owns the definitions and the records. The operations owner owns the work and the staffing decisions. Supervisors and assessors are the people who will use the system under time pressure, and their view of whether it fits a normal shift is worth more than any demonstration script. IT will have questions about access and data export, and a training coordinator will know where the records really are.
 
-Then agree on success in operational terms. One example to adapt: a supervisor can see, for a named person and task, whether the evidence supports independent work, what is missing, and who must act. A second example: a sampled person's evidence can be retrieved and explained without searching several systems. Both are examples to adapt, not targets from any source, and writing your own statements keeps the later evaluation honest.
+Then agree on success in operational terms. One example to adapt is this: a supervisor can see, for a named person and task, whether the evidence supports independent work, what is missing, and who must act. A second example is this: a sampled person's evidence can be retrieved and explained without searching several systems. Both are examples to adapt, not targets from any source, and writing your own statements keeps the later evaluation honest.
 
 A practical sequence for planning looks like this:
 
