@@ -24,7 +24,7 @@ capabilityIds: []
 
 Every competence workflow begins with a decision that someone makes under time pressure: who may do this task, on this shift, without supervision? Before any software enters the conversation, write that decision down in plain words. Name the task, the shift or cell where it happens, the person who makes the assignment, and the evidence that person looks at today. A team that cannot state the question in a sentence will not be able to test whether a system answers it.
 
-The ISO 9001 Auditing Practices Group, a joint effort of ISO/TC 176 and the International Accreditation Forum, frames competence as the ability to apply knowledge and skills to achieve intended results. Its paper, [Guidance on auditing Competence](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf), was written for auditors working with ISO 9001:2015 clause 7.2. It is not an additional standard, and it does not describe the requirements of any later edition. It is used in this guide as a clear description of what auditors tend to examine, not as a source of obligations.
+The [Guidance on auditing Competence](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf) from the ISO 9001 Auditing Practices Group frames competence as the ability to apply knowledge and skills to achieve intended results. This chapter uses it only as a description of what auditors tend to examine, as the introduction explains, and not as a source of obligations. Here it supports one practical point: competence is shown through people doing real work, so the map must begin where a person is actually assigned a task, and must record what the supervisor consults at that moment.
 
 That description is useful here because it starts with people doing real work. The paper says an auditor may sample people in a process, observe their performance, interview them about the competence they need, and confirm that they can do their duties. It also says an auditor may verify that, when the usual person is absent, someone with an adequate level of competence is available to replace them. That last point is the staffing question in audit language. The supervisor who covers an absence is making the same decision an auditor later checks.
 
@@ -44,7 +44,7 @@ Mapping every task in the plant at once produces a diagram nobody trusts. Pick o
 
 **Illustrative example:** An unnamed Canadian manufacturer of machined components relies on one inspector for first-article checks at a cutting cell. When that inspector is away, the supervisor usually asks whoever seems most experienced. The team chooses this cell for mapping because the substitution happens several times a month and the supervisor cannot show, on the spot, why a particular alternate was chosen. All of the situations in this chapter are hypothetical, and none describes a customer result.
 
-Two questions expose most weak points. Who is allowed to say a person may do the task, and what happens when that person is unavailable? The APG paper notes that qualifications are not always required but competencies are, citing welders for specific welding conditions as a case where a qualification from a qualified authority may be required. Mark every step where a recognized qualification matters; those steps need a different kind of evidence from steps that rely on internal assessment.
+Two questions expose most weak points. Who is allowed to say a person may do the task, and what happens when that person is unavailable? The APG paper notes that qualifications are not always required, but competencies are, citing welders for specific welding conditions as an example of where a qualification may be required. Mark every step where a recognized qualification matters; those steps need a different kind of evidence from steps that rely on internal assessment.
 
 ## Trace evidence and handoffs
 
@@ -59,7 +59,7 @@ For each step, collect the document, system, or conversation that carries it tod
 
 Expect the records to sit in more than one place. The APG paper observes that documented information on competence may be held locally at each process or by a central function such as Human Resources. Record each location, who maintains it, and its format, whether paper, spreadsheet, shared drive, or learning platform. A person asked to prove one individual's competence must be able to assemble the pieces, and later migration work depends on this list.
 
-One distinction needs special attention during mapping. The APG paper explains that records can show a training course was completed, but participation alone does not necessarily provide evidence that the trainee is competent, because it may demonstrate that knowledge was gained and not that it is being applied effectively. It also says the existence of training plans and records of effectiveness evaluation is not sufficient, on its own, to show how an organization ensures the competence it needs.
+One distinction needs special attention during mapping. The APG paper explains that records can show a training course was completed, but participation alone does not necessarily provide evidence that the trainee is competent, because it may demonstrate that knowledge was gained but not that it is being applied effectively. It also says the existence of training plans and records of effectiveness evaluation is not sufficient, on its own, to show how an organization ensures the competence it needs.
 
 For the map, this means marking which records show attendance or completion and which show demonstrated ability. A sign-in sheet belongs to the first group. A supervisor's observation of the person performing the task under normal conditions belongs to the second. If the cell has only the first kind, the map should say so.
 
@@ -74,7 +74,7 @@ For the map, this means marking which records show attendance or completion and 
 
 The final step in mapping is to say, in advance, what each possible answer to the staffing question means. Without agreed definitions, two supervisors read the same record differently, and any system built around it inherits the ambiguity. The states below are local design choices, not fields of any product.
 
-Three states are enough to start for most cells.
+This guide proposes three states as a local starting point, which a team may adapt.
 
 - **Evidenced.** The record set for this person and task meets the rules the team agreed. The supervisor may assign the work.
 - **Awaiting assessment.** Learning is complete or under way, but the practical evaluation required by the team's rules is missing or not yet recorded. The person may work only under conditions the team defines, such as with a qualified colleague present, or not at all.
@@ -97,7 +97,7 @@ Every workflow needs a person who resolves uncertainty. When a supervisor cannot
 
 The [APG paper](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf) says an organization may need to ensure adequate replacements, and gives cross-training charts among the records that can help mitigate risks from staff shortages. A cross-training view is the practical tool here: it lets a supervisor see at a glance who else is evidenced for the task. If no one is, that is a staffing risk to escalate, not a gap to paper over.
 
-Before accepting the definitions, run them against real, imperfect examples. Pull four or five records from the chosen cell and ask two people independently to assign each a state. Compare answers. Where they differ, the rule is unclear, and the team should rewrite it. Include at least one record with learning complete but no practical assessment, one with an assessment against an outdated instruction, and one with a qualification of unknown expiry.
+Before accepting the definitions, run them against real, imperfect examples. Pull four or five records from the chosen cell and ask two people independently to assign each a state. Compare answers. Where they differ, the rule is unclear, and the team should rewrite it. Include at least one record with learning complete but no practical assessment, one with an assessment against an outdated instruction, and one with a qualification of unknown expiration.
 
 **Illustrative example:** In the hypothetical plant, the alternate inspector has a completed measurement course and no recorded practical assessment. Two supervisors classify the record differently: one says evidenced because the course covered the method, and the other says awaiting assessment. The team resolves the disagreement by writing that completion alone never moves a person to evidenced for first-article inspection. The alternate stays awaiting assessment until quality records a practical evaluation, and the supervisor assigns the work to a colleague who is already evidenced.
 

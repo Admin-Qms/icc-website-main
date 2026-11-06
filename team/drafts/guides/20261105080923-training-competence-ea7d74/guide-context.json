@@ -23,68 +23,24 @@
       "definition": "The role accountable for decisions and records in a defined workflow."
     },
     {
+      "term": "Current-state map",
+      "definition": "A map showing how task requirements lead to a trained, assessed and recorded person, and who handles each step."
+    },
+    {
       "term": "Evidenced",
-      "definition": "A local decision state indicating that a person’s record set for a task meets the team’s agreed rules."
+      "definition": "A proposed local state in which a person's record set for a task meets the team's agreed rules."
     },
     {
       "term": "Awaiting assessment",
-      "definition": "A local decision state for a person whose learning is complete or under way but whose required practical evaluation is missing or not yet recorded."
+      "definition": "A proposed local state in which learning is complete or under way but the required practical evaluation is missing or not yet recorded."
     },
     {
       "term": "Evidence missing",
-      "definition": "A local decision state indicating that no record supports the assignment."
+      "definition": "A proposed local state in which no record supports the assignment."
     },
     {
-      "term": "Results sheet",
-      "definition": "A record of each claim, its test, what was observed and its disposition."
-    },
-    {
-      "term": "Operating scope",
-      "definition": "The product families, equipment, shifts or conditions covered by a task definition."
-    },
-    {
-      "term": "Level",
-      "definition": "A statement of what a person has demonstrated for a task."
-    },
-    {
-      "term": "Completion record",
-      "definition": "A record documenting that an action took place; it does not by itself prove that a person can perform the task."
-    },
-    {
-      "term": "Completion",
-      "definition": "Whether the person finished the action."
-    },
-    {
-      "term": "Effectiveness",
-      "definition": "Whether the action produced the competence needed for the task."
-    },
-    {
-      "term": "Cutover",
-      "definition": "The moment the new system becomes the place where staffing decisions are made."
-    },
-    {
-      "term": "Usable",
-      "definition": "A record disposition for evidence that has the context its kind needs and refers to a requirement the team still recognizes."
-    },
-    {
-      "term": "Needs review",
-      "definition": "A record disposition for evidence that is plausible but incomplete."
-    },
-    {
-      "term": "Unsuitable for reliance",
-      "definition": "A record disposition for evidence that cannot be tied to a person or task, conflicts with another record, or has no evident source."
-    },
-    {
-      "term": "Practical assessment",
-      "definition": "A record of demonstrated performance at a point in time."
-    },
-    {
-      "term": "Pilot",
-      "definition": "A limited-scope test of the workflow under conditions close to real use."
-    },
-    {
-      "term": "Pilot log",
-      "definition": "A record of observed decisions, issues, owners and dates for resolution."
+      "term": "Cross-training view",
+      "definition": "A view that helps a supervisor see who else is evidenced for a task."
     }
   ],
   "roles": [
@@ -98,45 +54,8 @@
     "Assessor",
     "Quality lead",
     "Workflow owner",
-    "Inspector",
-    "Evaluation lead",
-    "Supervisor",
-    "Quality reviewer",
-    "IT reviewer",
-    "Employee",
-    "Administrator",
-    "Supplier",
-    "Decision-maker",
-    "Auditor",
-    "Authorized assessor",
-    "Qualified colleague",
-    "Matrix owner",
-    "Alternate",
-    "Trainer",
-    "Authorized coach",
-    "Coach",
-    "Learner",
-    "Management",
-    "Provider",
-    "Alternate inspector",
-    "Second assessor",
-    "Peer reviewer",
-    "Qualification owner",
-    "Quality representative",
-    "Reviewer",
-    "Records owner",
-    "Migration lead",
-    "Second reviewer",
-    "IT owner",
-    "Rollout lead",
-    "Pilot supervisor",
-    "Rollout sponsor",
     "Exception owner",
-    "First point of contact",
-    "Operations owner",
-    "IT representative",
-    "Qualified adviser",
-    "IT"
+    "Independent reviewer"
   ],
   "recordNames": [
     "Task schedule",
@@ -146,85 +65,17 @@
     "Job descriptions",
     "Work instructions",
     "Process specifications",
-    "Training records",
+    "Training plans",
+    "Personnel files",
     "Training sign-in sheets",
-    "Quiz results",
+    "Quiz or test results",
     "Supervisor checklists",
     "Certificates",
     "Practical assessment records",
+    "Recognized qualifications",
     "Cross-training charts",
-    "Decision rules",
-    "Workflow map",
-    "Demonstration script",
-    "Results sheet",
-    "Unknowns list",
-    "Employee roster",
-    "Competency matrix",
-    "Supervisor sign-off",
-    "Practical assessment",
-    "Written supplier statement",
-    "Implementation outline",
-    "Recommendation",
-    "Task definition",
-    "Approved level definitions",
-    "Evidence thresholds",
-    "Applicable qualification conditions",
-    "Practical evaluation",
-    "Change decision",
-    "Affected task list",
-    "Matrix review checklist",
-    "Assignment record",
-    "Completion record",
-    "Training plan",
-    "Training record",
-    "Quiz result",
-    "Certificate",
-    "Exception record",
-    "Revised plan",
-    "Purchase order",
-    "Agreement",
-    "Assessment record",
-    "Acceptance criteria",
-    "Work instruction",
-    "Employment records",
-    "Training plans",
-    "Completion certificate",
-    "Reassessment plan",
-    "Qualification review outcome",
-    "Qualification evidence",
-    "Review trigger and planned action",
-    "Review calendar",
-    "Location list",
-    "Evidence references",
-    "Unresolved gaps",
-    "Retrieval measurement",
-    "Inventory and disposition",
-    "Classification guide",
-    "Field mapping",
-    "Reconciliation results",
-    "Unresolved errors",
-    "Exception list",
-    "Cutover approval",
-    "Fallback plan",
-    "Practice completion record",
-    "One-page role reference",
-    "Pilot log",
-    "Workflow document",
-    "Expansion decision",
-    "Review record",
-    "Review findings",
-    "Review decision",
-    "Migration exception list",
-    "Approved FAQ answers and source references",
-    "Evaluation record",
-    "Written supplier answers",
-    "List of open questions",
-    "Training certificate",
-    "Paper checklist",
-    "Qualification expiration date",
-    "Documented information",
-    "Legacy records",
-    "Pilot results"
+    "State entry rules",
+    "Exception owner and interim safe action"
   ],
   "example": {
     "label": "Illustrative example",
@@ -234,144 +85,16 @@
     {
       "slug": "mapping-workflows",
       "title": "Map the qualification decision at the production cell",
-      "summary": "The previous finding is resolved: an expired required qualification now blocks assignment until resolved. The changed paragraph presents no clear new problem.",
-      "bodyHash": "15c71e0e5577e1f38e5fe95c6c24a1a56a8f4310cd2f9a56bdfa65096c69707d",
+      "summary": "The changed paragraphs present no clear new problems, and there are no unresolved findings from the previous review.",
+      "bodyHash": "2c618f22bbb0699b4c1eaf3fd9bf86bf976f2b275324d04baced722926ccb590",
       "decisions": [
-        "Assign a person supported by current evidence or hold the assignment.",
-        "Identify evidence locations and handoff owners.",
-        "Classify a person’s evidence and define state transitions.",
-        "Resolve uncertain evidence and choose an interim safe action.",
-        "Block assignment when a required qualification has expired."
-      ]
-    },
-    {
-      "slug": "evaluating-software",
-      "title": "Evaluate ICC against the actual decision",
-      "summary": "The prior page-heading finding is resolved: the body begins with an H2 and does not duplicate the page-shell H1. No changed paragraphs were submitted for review.",
-      "bodyHash": "225371c7a777405ac68b4aba633c02ecad5f0cdc8a7177ac1484675a39c9cc83",
-      "decisions": [
-        "Select published claims to verify in a demonstration.",
-        "Determine whether evidence review and access arrangements meet local needs.",
-        "Classify demonstration outcomes and record limitations or outstanding questions.",
-        "Accept, clarify or reject unresolved conditions before a purchasing decision."
-      ]
-    },
-    {
-      "slug": "competency-matrix",
-      "title": "Define task requirements and the competency matrix",
-      "summary": "The earlier attribution finding is resolved: the change triggers are presented as local guidance, and the APG statement is supported. The changed paragraphs present no clear new problems.",
-      "bodyHash": "3542593e0dd7ad95e34fa7ad04a62481f3362ed78f8aafe28dfc4ce69636a7eb",
-      "decisions": [
-        "Approve the competence needed for each task and resolve unclear task scope or intended results.",
-        "Define level meanings, evidence thresholds and required qualification conditions.",
-        "Block assignment when a required qualification or its scope cannot be confirmed.",
-        "Assign separate ownership for task requirements and individual competence status.",
-        "Approve revised requirements and identify affected people.",
-        "Determine whether existing evidence covers changed work and apply an interim rule when the effect is unresolved.",
-        "Record open software evaluation questions and any needed manual steps."
-      ]
-    },
-    {
-      "slug": "training-assignments",
-      "title": "Choose actions to close competence gaps",
-      "summary": "Both previous findings are resolved, and the changed paragraphs present no clear new problems.",
-      "bodyHash": "ceceb011781ea5d5367a400fe723ea32581181c42480b727a82e7c0f4c636f4a",
-      "decisions": [
-        "Select a proportionate action and responsible trainer or provider for the gap.",
-        "Record an exception and decide on interim staffing and escalation when no suitable action is available.",
-        "Confirm completion or record incomplete work and outstanding assessment.",
-        "Resolve disputed or incomplete sign-off while controlling independent assignment.",
-        "Reschedule overdue learning and select an evidenced replacement or hold the work.",
-        "Communicate competence requirements to external providers and retain relevant evidence."
-      ]
-    },
-    {
-      "slug": "competence-verification",
-      "title": "Verify competence in practical work",
-      "summary": "The previous finding is resolved: the assessment record now requires an unambiguous assessor identifier. The changed paragraphs present no clear new problems.",
-      "bodyHash": "c018046dac76db8f08d57149f59c440424acb11cd0ae5124061ae7b2418b77e7",
-      "decisions": [
-        "Choose and conduct an assessment suited to the task.",
-        "Decide whether a simulation, delay or other route is acceptable when observation or an assessor is unavailable.",
-        "Determine whether combined evidence supports the task decision.",
-        "Keep a person out of independent work when required evidence is missing.",
-        "Plan further action and reassessment after an unsuccessful assessment.",
-        "Arrange interim coverage or escalate when no evidenced person is available.",
-        "Decide what to retain outside the system if it cannot show the assessment history."
-      ]
-    },
-    {
-      "slug": "qualification-renewal",
-      "title": "Maintain validity and retrieve evidence",
-      "summary": "The previous finding is resolved: every unresolved gap must now have an owner and due date. No clear problems were found in the changed paragraphs.",
-      "bodyHash": "2892f7dde2757f2d3ab7b4bd6a8dfd16a785022d93fd67c894470f46e0421385",
-      "decisions": [
-        "Confirm qualification validity and scope or withhold reliance.",
-        "Determine when a change or interval requires review.",
-        "Choose supervised work, an evidenced colleague or a delay when a review is late, subject to qualification conditions.",
-        "Identify and explain evidence for a sampled person.",
-        "Record and resolve missing or inconsistent evidence.",
-        "Determine how to track reviews if system notifications are unavailable."
-      ]
-    },
-    {
-      "slug": "migration-planning",
-      "title": "Migrate records without creating false qualifications",
-      "summary": "Both earlier findings are resolved. The changed paragraphs present no clear new problems.",
-      "bodyHash": "5bbcd33e09cac7516f9bcdf46f76242c244fa1d60fba1ed15e00793b29f7ba24",
-      "decisions": [
-        "Classify legacy records as usable, needing review, or unsuitable for reliance.",
-        "Decide whether each record is transferred or retained outside the system.",
-        "Accept the pilot transfer or correct the mapping and repeat it.",
-        "Designate the authoritative source during transition and assign discrepancy resolution.",
-        "Authorize or delay cutover, including a partial cutover for reconciled tasks.",
-        "Define when to roll back or use the fallback route.",
-        "Restrict or hold work when sufficient alternative evidence or required qualifications cannot be confirmed."
-      ]
-    },
-    {
-      "slug": "training-rollout",
-      "title": "Pilot the workflow with supervisors and learners",
-      "summary": "All previous findings are resolved. The changed paragraphs present no clear new problems.",
-      "bodyHash": "27ec3390fa8506c68f770fe7e836d7f10db955db451263ee514bd6fb567b51ad",
-      "decisions": [
-        "Select role-specific practice tasks and support.",
-        "Assign ownership and decide whether the pilot waits when a role cannot access or complete a required task.",
-        "Compare pilot decisions with locally approved rules.",
-        "Accept the pilot, accept it with conditions, or assign corrective actions before another trial.",
-        "Set local acceptance thresholds and determine how missed thresholds affect expansion.",
-        "Expand, repeat the pilot or pause based on readiness and support capacity.",
-        "Assign support contacts and action owners after expansion."
-      ]
-    },
-    {
-      "slug": "ongoing-operation",
-      "title": "Review performance and prepare the next decision",
-      "summary": "The prior citation finding is resolved. No clear new problems were found in the changed paragraphs.",
-      "bodyHash": "5a3e446c696fbcf93713409205b76760c23956b2dec693687045f91498c20aed",
-      "decisions": [
-        "Prioritize corrective actions or workflow improvements from review findings.",
-        "Treat insufficient evidence as a review finding.",
-        "Choose a review interval and owner.",
-        "Answer FAQ questions within the evidence or refer interpretation questions to an adviser.",
-        "Classify legacy records for migration, review or separate retention.",
-        "Choose an evidenced replacement, permitted supervision or a hold when staffing evidence is missing.",
-        "Proceed, seek clarification or reject the software option based on the demonstration and open conditions."
-      ]
-    },
-    {
-      "slug": "competency-management-software",
-      "title": "Training and competency management software: showing who is qualified for each task",
-      "summary": "The earlier heading finding is resolved. The changed paragraph presents no clear new problem.",
-      "bodyHash": "efb39ed33ec02e3c46a07b558ad5564a60dc151a3677d8249bd58c4b58667218",
-      "decisions": [
-        "Decide who may perform a task independently based on current evidence.",
-        "Define task requirements, levels, evidence rules and qualification conditions.",
-        "Select actions and assessments to address competence gaps.",
-        "Determine which legacy records can be trusted, reviewed or retained outside the system.",
-        "Evaluate supplier claims through demonstrations and written confirmation.",
-        "Decide whether to expand after piloting normal and exception paths.",
-        "Review decision quality after go-live and decide what to change."
+        "Select a person supported by evidence or hold the assignment.",
+        "Identify the evidence and handoff owner at each step.",
+        "Determine which records show attendance and which show demonstrated ability.",
+        "Assign a local decision state to a person's task evidence.",
+        "Determine when a change requires re-evaluation.",
+        "Resolve incomplete or conflicting evidence and select a safe interim action.",
+        "Accept or revise the map and state rules using independent test cases."
       ]
     }
   ],

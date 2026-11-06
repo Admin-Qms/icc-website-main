@@ -24,7 +24,7 @@ capabilityIds: []
 
 Learning ends with a completion record. Verification begins when someone checks that the person can do the work. The Auditing Practices Group, in its [guidance on auditing competence](https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf), names evaluation techniques an organization may use, including role-play, peer review, observation, review of training and employment records, and interviews. The paper was written for auditors working with ISO 9001:2015 clause 7.2, and it describes options rather than a required method.
 
-For a production task, observation of real or representative work is usually the strongest option because it shows the person applying knowledge and skill to achieve the intended result. Other methods have a place. An interview can reveal whether a person understands when to escalate. Peer review can test a judgment call. A review of records can confirm prior experience. The choice depends on the task, and the process owner should record the reasoning.
+For a production task, this guide recommends observation of real or representative work as a starting point because it shows the person applying knowledge and skill to achieve the intended result. Other methods have a place. An interview can reveal whether a person understands when to escalate. Peer review can test a judgment call. A review of records can confirm prior experience. The choice depends on the task, and the process owner should record the reasoning.
 
 ### Choose the method from the task requirement
 

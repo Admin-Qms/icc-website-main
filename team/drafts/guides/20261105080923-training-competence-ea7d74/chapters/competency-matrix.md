@@ -43,7 +43,7 @@ If a task's scope or intended result is unclear, the process owner resolves the 
 
 ### Separate knowledge from the task
 
-The APG paper notes that knowledge is an input to competence and that clause 7.1.1 asks organizations to determine the knowledge necessary for their processes. When defining a task, list the knowledge it relies on, such as how to read a drawing or interpret a gauge reading, so that learning content can be matched to it later. Keep the task definition short enough that a supervisor can read it at the cell. A page of narrative that nobody consults does not help the staffing decision.
+The APG paper notes that knowledge is an input to competence, and that knowledge needed for processes under clause 7.1.1 is one input to it. When defining a task, list the knowledge it relies on, such as how to read a drawing or interpret a gauge reading, so that learning content can be matched to it later. Keep the task definition short enough that a supervisor can read it at the cell. A page of narrative that nobody consults does not help the staffing decision.
 
 | Task element | Question to answer | Typical source |
 |---|---|---|
