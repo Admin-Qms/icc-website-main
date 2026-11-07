@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/isocert/public_html/
+    - rsync -av --exclude='.git' --exclude='.cpanel.yml' ./ "$DEPLOYPATH"
