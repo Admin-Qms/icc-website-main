@@ -20,6 +20,20 @@ sourceIds:
   - apg-competence
   - icc-training-competence
 capabilityIds: []
+wordCount: 1529
+readTime: 8
+image:
+  src: >-
+    /images/guides/competency-management-software/competency-management-software.webp
+  alt: >-
+    A manufacturing quality technician confirming a controlled work instruction
+    at a production cell; authentic industrial setting, no text or logos.
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 7f95dad1c6e5daf84e8aa49bfb88ed3e1b0539a69f12cd531637d50fe500db68
+  sha256: 7f95dad1c6e5daf84e8aa49bfb88ed3e1b0539a69f12cd531637d50fe500db68
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## The operational problem
 

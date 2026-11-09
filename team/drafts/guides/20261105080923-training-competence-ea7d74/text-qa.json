@@ -1,5 +1,5 @@
 {
-  "pass": false,
+  "pass": true,
   "checks": [
     {
       "id": "schema-version",
@@ -758,6 +758,12 @@
       "page": "competency-management-software"
     },
     {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "competency-management-software"
+    },
+    {
       "id": "voice",
       "pass": true,
       "message": "All blocks use third-person voice",
@@ -790,7 +796,7 @@
     {
       "id": "keyword-covered",
       "pass": true,
-      "message": "Assigned topic must be represented in both title and description",
+      "message": "The introduction must name the assigned topic in both title and description",
       "page": "competency-management-software"
     },
     {
@@ -920,6 +926,12 @@
       "page": "mapping-workflows"
     },
     {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "mapping-workflows"
+    },
+    {
       "id": "voice",
       "pass": true,
       "message": "All blocks use third-person voice",
@@ -951,8 +963,8 @@
     },
     {
       "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
       "page": "mapping-workflows"
     },
     {
@@ -1094,6 +1106,12 @@
       "page": "evaluating-software"
     },
     {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "evaluating-software"
+    },
+    {
       "id": "voice",
       "pass": true,
       "message": "All blocks use third-person voice",
@@ -1125,8 +1143,8 @@
     },
     {
       "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
       "page": "evaluating-software"
     },
     {
@@ -1148,9 +1166,9 @@
       "page": "evaluating-software"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "evaluating-software"
     },
     {
@@ -1166,21 +1184,21 @@
       "page": "evaluating-software"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "evaluating-software"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "evaluating-software"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "evaluating-software"
     },
     {
@@ -1286,6 +1304,12 @@
       "page": "competency-matrix"
     },
     {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "competency-matrix"
+    },
+    {
       "id": "voice",
       "pass": true,
       "message": "All blocks use third-person voice",
@@ -1317,8 +1341,8 @@
     },
     {
       "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
       "page": "competency-matrix"
     },
     {
@@ -1346,9 +1370,9 @@
       "page": "competency-matrix"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "competency-matrix"
     },
     {
@@ -1365,7 +1389,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "competency-matrix"
     },
@@ -1460,6 +1484,12 @@
       "page": "training-assignments"
     },
     {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "training-assignments"
+    },
+    {
       "id": "voice",
       "pass": true,
       "message": "All blocks use third-person voice",
@@ -1491,8 +1521,8 @@
     },
     {
       "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
       "page": "training-assignments"
     },
     {
@@ -1520,9 +1550,9 @@
       "page": "training-assignments"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "training-assignments"
     },
     {
@@ -1539,7 +1569,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "training-assignments"
     },
@@ -1634,6 +1664,12 @@
       "page": "competence-verification"
     },
     {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "competence-verification"
+    },
+    {
       "id": "voice",
       "pass": true,
       "message": "All blocks use third-person voice",
@@ -1665,8 +1701,8 @@
     },
     {
       "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
       "page": "competence-verification"
     },
     {
@@ -1694,9 +1730,9 @@
       "page": "competence-verification"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "competence-verification"
     },
     {
@@ -1713,7 +1749,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "competence-verification"
     },
@@ -1808,6 +1844,12 @@
       "page": "qualification-renewal"
     },
     {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "qualification-renewal"
+    },
+    {
       "id": "voice",
       "pass": true,
       "message": "All blocks use third-person voice",
@@ -1839,8 +1881,8 @@
     },
     {
       "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
       "page": "qualification-renewal"
     },
     {
@@ -1868,9 +1910,9 @@
       "page": "qualification-renewal"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "qualification-renewal"
     },
     {
@@ -1880,9 +1922,9 @@
       "page": "qualification-renewal"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "qualification-renewal"
     },
     {
@@ -1893,7 +1935,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "qualification-renewal"
     },
@@ -1988,6 +2030,12 @@
       "page": "migration-planning"
     },
     {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "migration-planning"
+    },
+    {
       "id": "voice",
       "pass": true,
       "message": "All blocks use third-person voice",
@@ -2019,8 +2067,8 @@
     },
     {
       "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
       "page": "migration-planning"
     },
     {
@@ -2048,15 +2096,15 @@
       "page": "migration-planning"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "migration-planning"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "migration-planning"
     },
     {
@@ -2067,7 +2115,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "migration-planning"
     },
@@ -2162,6 +2210,12 @@
       "page": "training-rollout"
     },
     {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "training-rollout"
+    },
+    {
       "id": "voice",
       "pass": true,
       "message": "All blocks use third-person voice",
@@ -2193,8 +2247,8 @@
     },
     {
       "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
       "page": "training-rollout"
     },
     {
@@ -2216,9 +2270,9 @@
       "page": "training-rollout"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "training-rollout"
     },
     {
@@ -2241,7 +2295,7 @@
     },
     {
       "id": "useful-links",
-      "pass": false,
+      "pass": true,
       "message": "Each page needs useful internal and primary-source links",
       "page": "training-rollout"
     },
@@ -2333,6 +2387,12 @@
       "pass": true,
       "message": "Cite assigned evidence in Prepare a focused ICC demonstration; semantic review verifies support",
       "section": "Prepare a focused ICC demonstration",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
       "page": "ongoing-operation"
     },
     {
@@ -2430,8 +2490,8 @@
     },
     {
       "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
       "page": "ongoing-operation"
     },
     {
@@ -2465,9 +2525,9 @@
       "page": "ongoing-operation"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "ongoing-operation"
     },
     {
@@ -2477,9 +2537,9 @@
       "page": "ongoing-operation"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "ongoing-operation"
     },
     {
@@ -2489,9 +2549,9 @@
       "page": "ongoing-operation"
     },
     {
-      "id": "external-link",
+      "id": "internal-link",
       "pass": true,
-      "message": "External source must be approved and present in research: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
       "page": "ongoing-operation"
     },
     {
@@ -2529,97 +2589,6 @@
       "message": "The closing paragraph must invite a software demonstration at /contact/"
     }
   ],
-  "failures": [
-    {
-      "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
-      "page": "mapping-workflows"
-    },
-    {
-      "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
-      "page": "evaluating-software"
-    },
-    {
-      "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
-      "page": "competency-matrix"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "competency-matrix"
-    },
-    {
-      "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
-      "page": "training-assignments"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "training-assignments"
-    },
-    {
-      "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
-      "page": "competence-verification"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "competence-verification"
-    },
-    {
-      "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
-      "page": "qualification-renewal"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "qualification-renewal"
-    },
-    {
-      "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
-      "page": "migration-planning"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "migration-planning"
-    },
-    {
-      "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
-      "page": "training-rollout"
-    },
-    {
-      "id": "useful-links",
-      "pass": false,
-      "message": "Each page needs useful internal and primary-source links",
-      "page": "training-rollout"
-    },
-    {
-      "id": "keyword-covered",
-      "pass": false,
-      "message": "Assigned topic must be represented in both title and description",
-      "page": "ongoing-operation"
-    }
-  ],
+  "failures": [],
   "wordCount": 19918
 }

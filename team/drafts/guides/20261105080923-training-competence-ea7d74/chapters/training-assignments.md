@@ -19,6 +19,19 @@ sourceIds:
   - apg-competence
   - icc-training-competence
 capabilityIds: []
+wordCount: 2034
+readTime: 11
+image:
+  src: /images/guides/competency-management-software/training-assignments.webp
+  alt: >-
+    Two inspectors reviewing an inspection record beside a fabrication cell; no
+    readable text or logos.
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 4f4393fdd623bf38c9e3b0755fd75f313763798b02c74300683e9194c1642e9e
+  sha256: 4f4393fdd623bf38c9e3b0755fd75f313763798b02c74300683e9194c1642e9e
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Choose an action suited to the gap
 

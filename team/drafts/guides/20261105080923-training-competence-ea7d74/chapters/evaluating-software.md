@@ -19,6 +19,19 @@ sourceIds:
   - icc-training-competence
   - apg-competence
 capabilityIds: []
+wordCount: 2024
+readTime: 11
+image:
+  src: /images/guides/competency-management-software/evaluating-software.webp
+  alt: >-
+    A machining supervisor comparing inspection records beside a CNC machine; no
+    readable text or logos.
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 3ed1faaf723f38cbbb8fbb769c553d2966aa58b234c0b27e3dedf85fde5dd011
+  sha256: 3ed1faaf723f38cbbb8fbb769c553d2966aa58b234c0b27e3dedf85fde5dd011
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Translate published descriptions into demonstration tests
 

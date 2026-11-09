@@ -19,6 +19,19 @@ sourceIds:
   - icc-training-competence
   - apg-competence
 capabilityIds: []
+wordCount: 2032
+readTime: 11
+image:
+  src: /images/guides/competency-management-software/training-rollout.webp
+  alt: >-
+    A trainer showing an operator an approved setup instruction on a shop floor;
+    no readable text or logos.
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 875cbe204617cf17c2882cb7c42570d771ff01ac749a1434628cf6763dfc4032
+  sha256: 875cbe204617cf17c2882cb7c42570d771ff01ac749a1434628cf6763dfc4032
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Prepare role-specific tasks
 

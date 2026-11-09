@@ -19,6 +19,19 @@ imageBrief: >-
 sourceIds:
   - apg-competence
 capabilityIds: []
+wordCount: 2042
+readTime: 11
+image:
+  src: /images/guides/competency-management-software/mapping-workflows.webp
+  alt: >-
+    A fabrication inspector tracing a paper work instruction at a cutting
+    station; no readable text or logos.
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: f1517377c6ae8e12db08794d1773ab630b1cb512962b641e01194e6d1b24ba33
+  sha256: f1517377c6ae8e12db08794d1773ab630b1cb512962b641e01194e6d1b24ba33
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Start with the staffing question
 

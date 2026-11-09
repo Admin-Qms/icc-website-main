@@ -19,6 +19,19 @@ sourceIds:
   - apg-competence
   - icc-training-competence
 capabilityIds: []
+wordCount: 2040
+readTime: 11
+image:
+  src: /images/guides/competency-management-software/competence-verification.webp
+  alt: >-
+    An assessor observing an operator at a guarded production station; no
+    readable text or logos.
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 5a3b067c96015d33c50c358448e12b5ac92442eb119d13f321590e9f7bf01a77
+  sha256: 5a3b067c96015d33c50c358448e12b5ac92442eb119d13f321590e9f7bf01a77
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Select an assessment method
 

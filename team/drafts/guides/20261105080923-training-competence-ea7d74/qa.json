@@ -1,0 +1,2774 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "id": "schema-version",
+      "pass": true,
+      "message": "Guide schemaVersion must be 1"
+    },
+    {
+      "id": "guide-slug",
+      "pass": true,
+      "message": "Guide slug must have 6–80 lowercase letters/digits with hyphens"
+    },
+    {
+      "id": "topic-id",
+      "pass": true,
+      "message": "A stable topic ID is required"
+    },
+    {
+      "id": "chapter-count",
+      "pass": true,
+      "message": "Nine complete chapters are required; ten plus an introduction exceeds the inclusive budget"
+    },
+    {
+      "id": "introduction-file",
+      "pass": true,
+      "message": "Introduction filename must be introduction.md"
+    },
+    {
+      "id": "manifest-metadata",
+      "pass": true,
+      "message": "Guide identity and author are required"
+    },
+    {
+      "id": "manifest-description",
+      "pass": true,
+      "message": "Guide description must be 120–160 characters"
+    },
+    {
+      "id": "manifest-date",
+      "pass": true,
+      "message": "Guide date must be valid and not in the future"
+    },
+    {
+      "id": "snapshot-hashes",
+      "pass": true,
+      "message": "Evidence snapshots must have SHA-256 hashes"
+    },
+    {
+      "id": "unique-chapters",
+      "pass": true,
+      "message": "Chapter slugs must be unique"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "training-assignments"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "competence-verification"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "migration-planning"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "training-rollout"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "chapter-order",
+      "pass": true,
+      "message": "Every chapter must exist in manifest order"
+    },
+    {
+      "id": "introduction-slug",
+      "pass": true,
+      "message": "Introduction slug must equal guide slug"
+    },
+    {
+      "id": "unique-titles",
+      "pass": true,
+      "message": "Every page needs a unique title"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "introduction-words",
+      "pass": true,
+      "message": "1529 visible words",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2042 visible words",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2024 visible words",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2036 visible words",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "training-assignments"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "training-assignments"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "training-assignments"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "training-assignments"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "training-assignments"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2034 visible words",
+      "page": "training-assignments"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "training-assignments"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "training-assignments"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "training-assignments"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "competence-verification"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "competence-verification"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "competence-verification"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "competence-verification"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "competence-verification"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2040 visible words",
+      "page": "competence-verification"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "competence-verification"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "competence-verification"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "competence-verification"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2061 visible words",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "migration-planning"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "migration-planning"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2053 visible words",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "migration-planning"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "migration-planning"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "training-rollout"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "training-rollout"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "training-rollout"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "training-rollout"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "training-rollout"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2032 visible words",
+      "page": "training-rollout"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "training-rollout"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "training-rollout"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "training-rollout"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2067 visible words",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "total-words",
+      "pass": true,
+      "message": "19918 total visible words; maximum 20,000 includes introduction"
+    },
+    {
+      "id": "cross-chapter-repetition",
+      "pass": true,
+      "message": "No substantially copied paragraphs across guide pages"
+    },
+    {
+      "id": "audit-hash",
+      "pass": true,
+      "message": "Required review must match the current prose, metadata, links and evidence"
+    },
+    {
+      "id": "audit-identity",
+      "pass": true,
+      "message": "Review identity and date are required"
+    },
+    {
+      "id": "audit-claims",
+      "pass": true,
+      "message": "claims review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-consistency",
+      "pass": true,
+      "message": "consistency review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-repetition",
+      "pass": true,
+      "message": "repetition review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-findings",
+      "pass": true,
+      "message": "All required review findings must be resolved"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: The operational problem",
+      "section": "The operational problem",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: How to use this guide",
+      "section": "How to use this guide",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+      "section": "Planning evaluation and implementation",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "The introduction must name the assigned topic in both title and description",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/training-competence/",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "competency-management-software"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Start with the staffing question",
+      "section": "Start with the staffing question",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Start with the staffing question; semantic review verifies support",
+      "section": "Start with the staffing question",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Trace evidence and handoffs",
+      "section": "Trace evidence and handoffs",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Trace evidence and handoffs; semantic review verifies support",
+      "section": "Trace evidence and handoffs",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Define decision states and acceptance",
+      "section": "Define decision states and acceptance",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Define decision states and acceptance; semantic review verifies support",
+      "section": "Define decision states and acceptance",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/training-competence/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Translate published descriptions into demonstration tests",
+      "section": "Translate published descriptions into demonstration tests",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Translate published descriptions into demonstration tests; semantic review verifies support",
+      "section": "Translate published descriptions into demonstration tests",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Test evidence, access and human review",
+      "section": "Test evidence, access and human review",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Test evidence, access and human review; semantic review verifies support",
+      "section": "Test evidence, access and human review",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Resolve commercial and technical unknowns",
+      "section": "Resolve commercial and technical unknowns",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Resolve commercial and technical unknowns; semantic review verifies support",
+      "section": "Resolve commercial and technical unknowns",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /contact/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Map tasks to necessary competence",
+      "section": "Map tasks to necessary competence",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Map tasks to necessary competence; semantic review verifies support",
+      "section": "Map tasks to necessary competence",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Define levels and qualification conditions",
+      "section": "Define levels and qualification conditions",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Define levels and qualification conditions; semantic review verifies support",
+      "section": "Define levels and qualification conditions",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Assign ownership and control changes",
+      "section": "Assign ownership and control changes",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Assign ownership and control changes; semantic review verifies support",
+      "section": "Assign ownership and control changes",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "competency-matrix"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "training-assignments"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "training-assignments"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "training-assignments"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "training-assignments"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "training-assignments"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "training-assignments"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "training-assignments"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Choose an action suited to the gap",
+      "section": "Choose an action suited to the gap",
+      "page": "training-assignments"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Choose an action suited to the gap; semantic review verifies support",
+      "section": "Choose an action suited to the gap",
+      "page": "training-assignments"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Assign people and record completion",
+      "section": "Assign people and record completion",
+      "page": "training-assignments"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Assign people and record completion; semantic review verifies support",
+      "section": "Assign people and record completion",
+      "page": "training-assignments"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Handle overdue or unavailable learning",
+      "section": "Handle overdue or unavailable learning",
+      "page": "training-assignments"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Handle overdue or unavailable learning; semantic review verifies support",
+      "section": "Handle overdue or unavailable learning",
+      "page": "training-assignments"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "training-assignments"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "training-assignments"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "training-assignments"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "training-assignments"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "training-assignments"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "training-assignments"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "training-assignments"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "training-assignments"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "training-assignments"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "training-assignments"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "training-assignments"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "training-assignments"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "training-assignments"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "training-assignments"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "training-assignments"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "training-assignments"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "training-assignments"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "training-assignments"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "training-assignments"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "competence-verification"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "competence-verification"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "competence-verification"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "competence-verification"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "competence-verification"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "competence-verification"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "competence-verification"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Select an assessment method",
+      "section": "Select an assessment method",
+      "page": "competence-verification"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Select an assessment method; semantic review verifies support",
+      "section": "Select an assessment method",
+      "page": "competence-verification"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Separate completion from effectiveness",
+      "section": "Separate completion from effectiveness",
+      "page": "competence-verification"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Separate completion from effectiveness; semantic review verifies support",
+      "section": "Separate completion from effectiveness",
+      "page": "competence-verification"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Respond to an unsuccessful assessment",
+      "section": "Respond to an unsuccessful assessment",
+      "page": "competence-verification"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Respond to an unsuccessful assessment; semantic review verifies support",
+      "section": "Respond to an unsuccessful assessment",
+      "page": "competence-verification"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "competence-verification"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "competence-verification"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "competence-verification"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "competence-verification"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "competence-verification"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "competence-verification"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "competence-verification"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "competence-verification"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "competence-verification"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "competence-verification"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "competence-verification"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "competence-verification"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "competence-verification"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "competence-verification"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "competence-verification"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "competence-verification"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "competence-verification"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "competence-verification"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "competence-verification"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Review applicable qualification conditions",
+      "section": "Review applicable qualification conditions",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Review applicable qualification conditions; semantic review verifies support",
+      "section": "Review applicable qualification conditions",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Trigger review after change or over time",
+      "section": "Trigger review after change or over time",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Trigger review after change or over time; semantic review verifies support",
+      "section": "Trigger review after change or over time",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Retrieve evidence for a sampled person",
+      "section": "Retrieve evidence for a sampled person",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Retrieve evidence for a sampled person; semantic review verifies support",
+      "section": "Retrieve evidence for a sampled person",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "qualification-renewal"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "migration-planning"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "migration-planning"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "migration-planning"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "migration-planning"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "migration-planning"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "migration-planning"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Inventory and classify legacy evidence",
+      "section": "Inventory and classify legacy evidence",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Inventory and classify legacy evidence; semantic review verifies support",
+      "section": "Inventory and classify legacy evidence",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Map and test transfers",
+      "section": "Map and test transfers",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Map and test transfers; semantic review verifies support",
+      "section": "Map and test transfers",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Approve cutover and fallback",
+      "section": "Approve cutover and fallback",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Approve cutover and fallback; semantic review verifies support",
+      "section": "Approve cutover and fallback",
+      "page": "migration-planning"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "migration-planning"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "migration-planning"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "migration-planning"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "migration-planning"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "migration-planning"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "migration-planning"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "migration-planning"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "migration-planning"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "migration-planning"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "migration-planning"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "migration-planning"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "migration-planning"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "migration-planning"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "migration-planning"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "migration-planning"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "migration-planning"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "migration-planning"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "migration-planning"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "training-rollout"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "training-rollout"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "training-rollout"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "training-rollout"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "training-rollout"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "training-rollout"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "training-rollout"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Prepare role-specific tasks",
+      "section": "Prepare role-specific tasks",
+      "page": "training-rollout"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Prepare role-specific tasks; semantic review verifies support",
+      "section": "Prepare role-specific tasks",
+      "page": "training-rollout"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Pilot normal and exception paths",
+      "section": "Pilot normal and exception paths",
+      "page": "training-rollout"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Pilot normal and exception paths; semantic review verifies support",
+      "section": "Pilot normal and exception paths",
+      "page": "training-rollout"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Decide whether to expand",
+      "section": "Decide whether to expand",
+      "page": "training-rollout"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Decide whether to expand; semantic review verifies support",
+      "section": "Decide whether to expand",
+      "page": "training-rollout"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "training-rollout"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "training-rollout"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "training-rollout"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "training-rollout"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "training-rollout"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "training-rollout"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "training-rollout"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "training-rollout"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "training-rollout"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "training-rollout"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "training-rollout"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "training-rollout"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "training-rollout"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "training-rollout"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "training-rollout"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "training-rollout"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "training-rollout"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "training-rollout"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "training-rollout"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Review decision quality and improve",
+      "section": "Review decision quality and improve",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Review decision quality and improve; semantic review verifies support",
+      "section": "Review decision quality and improve",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Answer common questions without overstating compliance",
+      "section": "Answer common questions without overstating compliance",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Answer common questions without overstating compliance; semantic review verifies support",
+      "section": "Answer common questions without overstating compliance",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Prepare a focused ICC demonstration",
+      "section": "Prepare a focused ICC demonstration",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Prepare a focused ICC demonstration; semantic review verifies support",
+      "section": "Prepare a focused ICC demonstration",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What operational question should competency management software answer first?",
+      "section": "What operational question should competency management software answer first?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: How is training completion different from demonstrated competence?",
+      "section": "How is training completion different from demonstrated competence?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: When is a formal qualification required in addition to competence?",
+      "section": "When is a formal qualification required in addition to competence?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What evidence should support a competency matrix entry?",
+      "section": "What evidence should support a competency matrix entry?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: How should a supervisor handle a missing assessment or an absent qualified worker?",
+      "section": "How should a supervisor handle a missing assessment or an absent qualified worker?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Which legacy training records should be migrated, reviewed or retained separately?",
+      "section": "Which legacy training records should be migrated, reviewed or retained separately?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What might an auditor ask to see beyond training plans and records?",
+      "section": "What might an auditor ask to see beyond training plans and records?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Does ICC's standards mapping mean the software guarantees conformity or certification?",
+      "section": "Does ICC's standards mapping mean the software guarantees conformity or certification?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What should the team ask ICC to demonstrate and confirm in writing?",
+      "section": "What should the team ask ICC to demonstrate and confirm in writing?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/training-competence/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /contact/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-coverage",
+      "pass": true,
+      "message": "Eight to ten distinct visible FAQ questions required"
+    },
+    {
+      "id": "demonstration-invitation",
+      "pass": true,
+      "message": "The closing paragraph must invite a software demonstration at /contact/"
+    }
+  ],
+  "failures": [],
+  "wordCount": 19918
+}

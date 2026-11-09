@@ -20,6 +20,19 @@ sourceIds:
   - apg-competence
   - icc-training-competence
 capabilityIds: []
+wordCount: 2067
+readTime: 11
+image:
+  src: /images/guides/competency-management-software/ongoing-operation.webp
+  alt: >-
+    A quality lead reviewing completed evidence beside a final inspection
+    station; no readable text or logos.
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 32a3a61e72b0968c2c29678c2516da20b4e696bbabc6b18813775146b7050549
+  sha256: 32a3a61e72b0968c2c29678c2516da20b4e696bbabc6b18813775146b7050549
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Review decision quality and improve
 
