@@ -45,7 +45,7 @@ restore_state() {
 
 save_state() {
   fetch_state
-  local index="$ROOT/.git/guide-state-index" tree parent commit
+  local index="$(git rev-parse --absolute-git-dir)/guide-state-index" tree parent commit
   rm -f "$index"
   export GIT_INDEX_FILE="$index"
   git read-tree --empty
