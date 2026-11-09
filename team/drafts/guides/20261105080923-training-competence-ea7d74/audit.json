@@ -1,0 +1,21 @@
+{
+  "claims": "passed",
+  "consistency": "passed",
+  "repetition": "passed",
+  "unresolvedFindings": [],
+  "inputHash": "9786c41f148680cf62de44eb8c6198939b103240996d3ad87cc0a8d1a47d7a5d",
+  "pageHashes": {
+    "competency-management-software": "ff6ef9650f91fa78840e0175ce1096512c2d670a7b2bd3f2ebf4d117ad34795c",
+    "mapping-workflows": "2c618f22bbb0699b4c1eaf3fd9bf86bf976f2b275324d04baced722926ccb590",
+    "evaluating-software": "261d003f3a7738bd6e3e4a1b59b8b26064d93797571c2e716b33e4b129788b08",
+    "competency-matrix": "5ca72aa83004bb18a657dd3468a7e36de102f93ed221fb8cbfb6fdfb6acf82ab",
+    "training-assignments": "ceceb011781ea5d5367a400fe723ea32581181c42480b727a82e7c0f4c636f4a",
+    "competence-verification": "b94846efacfeb2382ad7fd89d11cc25fe1c1a6da14782181782690bec8ebbefb",
+    "qualification-renewal": "2892f7dde2757f2d3ab7b4bd6a8dfd16a785022d93fd67c894470f46e0421385",
+    "migration-planning": "5bbcd33e09cac7516f9bcdf46f76242c244fa1d60fba1ed15e00793b29f7ba24",
+    "training-rollout": "27ec3390fa8506c68f770fe7e836d7f10db955db451263ee514bd6fb567b51ad",
+    "ongoing-operation": "5a3e446c696fbcf93713409205b76760c23956b2dec693687045f91498c20aed"
+  },
+  "reviewer": "Configured openai independent review",
+  "reviewedAt": "2026-11-09T08:14:20.100Z"
+}

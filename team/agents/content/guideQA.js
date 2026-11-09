@@ -1,6 +1,6 @@
 const { validateGuideStructure, hashGuideInputs, countGuideWords, guideRoutes } = require('../../../lib/guide-contract.cjs');
 const { checkVoice, checkFabricatedQuotes, toBlocks, findBritishSpellings, countBannedPhrases, findPositioningTerms } = require('./contentQA');
-const { getRoutes, toRoute } = require('../shared/siteRoutes');
+const { getRoutes, toRoute, isSiteLink } = require('../shared/siteRoutes');
 const { keywordCovered } = require('../shared/contentStore');
 const { checkPageContent, links } = require('./guideEditorial');
 
@@ -55,13 +55,14 @@ async function validateGuide(bundle, context = {}) {
     add('spelling', findBritishSpellings(page.body).length === 0, 'Use ICC US spelling while preserving proper names', page.slug);
     add('banned-filler', countBannedPhrases(page.body).length === 0, 'Remove banned filler phrases', page.slug);
     add('positioning-terms', findPositioningTerms(`${page.title}\n${page.description}\n${page.body}`).length === 0, 'Remove product names and AI audit claims', page.slug);
-    add('keyword-covered', keywordCovered(page.primaryKeyword, page.title) && keywordCovered(page.primaryKeyword, page.description), 'Assigned topic must be represented in both title and description', page.slug);
+    const introduction = page.slug === bundle.introduction.slug;
+    add('keyword-covered', introduction ? keywordCovered(page.primaryKeyword, page.title) && keywordCovered(page.primaryKeyword, page.description) : keywordCovered(page.primaryKeyword, page.title) || keywordCovered(page.primaryKeyword, page.description), introduction ? 'The introduction must name the assigned topic in both title and description' : 'A chapter must name the assigned topic in its title or description', page.slug);
     add('page-title-unused', !titles.has(page.title?.trim().toLowerCase()), 'Title must not duplicate another published content page', page.slug);
     add('source-supported', page.sourceIds.every(id => sourceIds.has(id)), 'Every page source must appear in the manifest', page.slug);
     add('capability-supported', page.capabilityIds.every(id => capabilities.has(id)), 'Every claimed product capability must be verified', page.slug);
     let internal = 0, external = 0;
     for (const link of extractLinks(page.body)) {
-      if (link.startsWith('/')) { internal++; add('internal-link', routes.has(toRoute(link)), `Internal destination must exist: ${link}`, page.slug); }
+      if (isSiteLink(link)) { internal++; add('internal-link', routes.has(toRoute(link)), `Internal destination must exist: ${link}`, page.slug); }
       else if (link.startsWith('#')) { add('local-anchor', link.length > 1, 'Anchor destination must be specified', page.slug); }
       else if (/^https:\/\//.test(link)) { external++; add('external-link', allowed.has(link) && bundle.manifest.sources.some(s => s.url === link), `External source must be approved and present in research: ${link}`, page.slug); }
       else add('link-scheme', false, `Unsupported guide link scheme: ${link}`, page.slug);

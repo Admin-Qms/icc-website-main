@@ -1,0 +1,181 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "All previous findings are resolved. The changed paragraphs present no clear new problems.",
+  "glossary": [
+    {
+      "term": "Pilot",
+      "definition": "A limited-scope test of the workflow under conditions close to real use."
+    },
+    {
+      "term": "Pilot log",
+      "definition": "A record of observed decisions, issues, owners and dates for resolution."
+    }
+  ],
+  "roles": [
+    "Rollout lead",
+    "Supervisor",
+    "Assessor",
+    "Learner",
+    "Quality reviewer",
+    "Workflow owner",
+    "Quality lead",
+    "Pilot supervisor",
+    "Rollout sponsor",
+    "Exception owner",
+    "First point of contact",
+    "Inspector",
+    "Alternate inspector"
+  ],
+  "recordNames": [
+    "Training plan",
+    "Practice completion record",
+    "One-page role reference",
+    "Pilot log",
+    "Workflow document",
+    "Expansion decision"
+  ],
+  "decisions": [
+    "Select role-specific practice tasks and support.",
+    "Assign ownership and decide whether the pilot waits when a role cannot access or complete a required task.",
+    "Compare pilot decisions with locally approved rules.",
+    "Accept the pilot, accept it with conditions, or assign corrective actions before another trial.",
+    "Set local acceptance thresholds and determine how missed thresholds affect expansion.",
+    "Expand, repeat the pilot or pause based on readiness and support capacity.",
+    "Assign support contacts and action owners after expansion."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Prepare role-specific tasks",
+        "section": "Prepare role-specific tasks"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Prepare role-specific tasks; semantic review verifies support",
+        "section": "Prepare role-specific tasks"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Pilot normal and exception paths",
+        "section": "Pilot normal and exception paths"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Pilot normal and exception paths; semantic review verifies support",
+        "section": "Pilot normal and exception paths"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Decide whether to expand",
+        "section": "Decide whether to expand"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Decide whether to expand; semantic review verifies support",
+        "section": "Decide whether to expand"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "9550b2e156b094a388ba375afc634627329524f63e9484c3689b942d010560c7",
+  "contentHash": "27bd4c2ec3081fa36e7e8ac97964643e52e99e5b71e0a7a4c8a52c8e67cac280",
+  "paragraphHashes": [
+    "c858731ab1863812faa13547ee31124e123535c33e72276a7fdf186a0278c31e",
+    "fc99f1d970c249071a3ff94780f1d30b4fa6e245e223e87895444663cb2e27b5",
+    "33e41b60f1a62f5eba591c5e1922c7b36b0b97c22c331f8be14c22624c234d8d",
+    "b86b0068673717b73749d1da05ef417ced726b2d65d79ee15f12dca544e8923b",
+    "9fd2439fe85b98018b9656578db38479e6e91cc0b3705fb32d781a08f5322b1d",
+    "f9cc54da1c358186f3748fc7dea4ab97e15365bac58ed774e9064ea38fb33c5b",
+    "18aee2a899036ed19b07aa456e455f27e3ce114e4f546bfeddd92a31aa69de6e",
+    "54c09e29e76f71152806b6b53b0d073ae390f6c5131c3ef0e9809267c2669c0e",
+    "6d7ae527449549d8c77becdbc6b24740a7f506a2161e7087cd1e8676edb65aaa",
+    "96a51e2fa56a33e2a1cdbdc49165090febf2d05c2ba2d895d4bd88940d76b4fb",
+    "73a8d85716d7928f8a6a2b9dfe6b10848356eccbac9b264e0f015ba4b410a448",
+    "92f014af6094aa648b379b4e5ffb5c7accd852015bb2c8112556874217009140",
+    "52df0287fe34a8a27bde24959939f43f253ef795e5241eea146d4164ff7ff491",
+    "24fa9c6dcf7a39e1dbeb0d68085c76db9aacc136827f0aabe1be6204217a8e7e",
+    "b9ebec1772059b75920fec4b0b4902c2fcd351435d040f42d36f2402afb2adaf",
+    "d0d30ce3be9aef295fe48f27c96c936c01053df2e99c25957a6cce2314cdba94",
+    "b1706a448b248e44a06102d00a335390326d343ee18a52685bd589cdcf09eec9",
+    "da1dde96f9553203bd9fb05941e644d175d349b3951e47e95a34de99dd6d001f",
+    "72474c5c0719e2ad142cdff250c8b042e86c989f8b7dc5896fce223b41016ec8",
+    "270163a13722edf422af7cc539b8146398362f215c38f359401c46f75d797212",
+    "36a2ca7b715216c80fd2817b6b6accecc8c8e7ca6739e8e11f606eb3f3b17044",
+    "f99e8f47c82ad2420a3e14674475772d53e4404905727c56ea3b52b5ead5f2f9",
+    "03d05ab307bb0d68b7c16f89943057e77867b8d94989c01e7302cd580b88c994",
+    "e754741fa17ff0f2433145423ef77ce84e9ead335812434d931bb9384e5375c2",
+    "af6a199032fdbeccb1ec41456b8e7f05928180df14cfc6729132c5b996fe8d06",
+    "3c317063e6cc5a9bc487dd7a4febc7c89459ca79225083d14c8b0745e40a6871",
+    "803727ceab0ff19b283ece993f3a9a9823d508b7fa63c08a5d3653c904b1c503",
+    "54581bc20222d09feb81f13e8e69240ce6c39d11d9f769126d727495b572ef07",
+    "bbb8d852b61b476205308d2a0ba9fdd733a73b96d06e7cabe5e10345f6890d3a",
+    "a543b815651625ce5abffccaed9b01d7043db13dff8abfc3345ae319f4a57310",
+    "9b83e9c919bf91c6de1f1b18ab2c28ba808952f3a8481d9f93a0710ab9338a72",
+    "a6278fa1088695f618bb996fa4563fad698c850ae50a9671b42cb3a94e8e5577",
+    "8b9dba9617b844cc26c0e95f04af1c20fbe182e77978a8035055182218190dc8",
+    "0e83d1a0509f538c4b1e3aa87aaaa8a0760ec00603266cffa61fe38bac20107d",
+    "2cc319bf29f61f3bfb66237f22c1842c36a6ba615172298f48ace75f9cec79e3",
+    "3e65eee2fc5fbab9369660fc6719560be2f984e7d1d62bdab71aabc2c05e792c",
+    "745c98e3575eb92259ad3867741fa2aa047130fc2b1b8062b0c82ee589347c85",
+    "ed896de844827b5490c9224dde043fc1a16c6676373d89511962e08676c11c82",
+    "32aa5dc6f68594547113ce43f761860901b49c1c69ce6fcd33d969663beb08b3",
+    "6438223fdcd518f07de59a1ca2cb0208b64ebf72e5f79b5df7952d1d4b05f350",
+    "bec96693636bd36b8703986acbf4c97e15f62df027ae103b71fa0a0dbbcbd827",
+    "11fc1b5c9e9d8e704a4501f860fa66ccb5ef5f4986cd2d6c33bef344a2f3304b",
+    "a301c993d8a243f59ac82d3c727d5027ad25f037ed7af91900bca55a18511708"
+  ],
+  "outputContextHash": "7c666c54c5a2030eafdfd83351a02437d28d59fb335f38862aca51ce37bf1673",
+  "reviewedAt": "2026-11-05T08:58:43.386Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

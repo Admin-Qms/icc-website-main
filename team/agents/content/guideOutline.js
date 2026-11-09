@@ -1,4 +1,5 @@
 const { validSlug } = require('../../../lib/guide-contract.cjs');
+const { keywordCovered } = require('../shared/contentStore');
 const SECTIONS = [
   ['mapping-workflows', 'Mapping the current workflow', ['Define the operational problem', 'Identify records and handoffs', 'Assign owners and decisions', 'Set acceptance criteria']],
   ['evaluating-software', 'Evaluating software capabilities', ['Build a workflow-based shortlist', 'Test the decision points', 'Examine evidence and permissions', 'Compare cost and support']],
@@ -57,9 +58,14 @@ function createGuideOutline(topic, research = { sources: [] }) {
       'How should training and rollout be evaluated?', 'Does software guarantee ISO certification?', 'What should be prepared for a software demonstration?'
     ] };
 }
-function validateGuideOutline(outline, research) {
+function validateGuideOutline(outline, research, topic) {
   const issues = [];
   if (!outline || !Array.isArray(outline.chapters)) return { pass: false, failures: ['An ordered chapter array is required'] };
+  const keyword = topic?.primaryKeyword || outline.primaryKeyword;
+  if (keyword) {
+    if (!keywordCovered(keyword, outline.title) || !keywordCovered(keyword, outline.description)) issues.push(`Introduction title and description must name the keyword "${keyword}"`);
+    for (const c of outline.chapters) if (c && !keywordCovered(keyword, c.title) && !keywordCovered(keyword, c.description)) issues.push(`Chapter title or description must name the keyword "${keyword}": ${c.slug}`);
+  }
   if (outline.chapters?.length !== 9) issues.push('Nine chapters required');
   if (new Set((outline.chapters || []).map(c => c.slug)).size !== outline.chapters?.length) issues.push('Duplicate chapter slugs');
   for (const c of outline.chapters || []) {

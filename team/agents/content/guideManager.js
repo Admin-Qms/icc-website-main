@@ -76,7 +76,7 @@ function createGuideManager({ store = defaultStore, model, reviewer, editModel, 
     const savedOutline = refresh ? JSON.parse(readInside(job.directory, 'outline.json')) : null;
     const outline = pack.outline || savedOutline || createGuideOutline(job.topic, research);
     if (refresh && (hashValue(outline) !== job.outlineHash || hashValue(research.sources.map(s => s.id)) !== hashValue(job.manifest.sources.map(s => s.id)) || Object.values(job.assignments).some(a => hashValue(a.capabilityIds) !== hashValue(research.capabilityIds)))) throw new Error('Research refresh must preserve outline, source IDs and capability identity; changed identities require editorial reconciliation');
-    const outlineReport = validateGuideOutline(outline, research);
+    const outlineReport = validateGuideOutline(outline, research, job.topic);
     if (!outlineReport.pass) throw new Error(outlineReport.failures.join('; '));
     const slug = slugify(job.topic.primaryKeyword); const date = refresh ? job.manifest.date : localDay(new Date());
     const manifest = { schemaVersion: 1, topicId: job.topic.id, slug, title: outline.title, description: outline.description,

@@ -69,3 +69,12 @@ test('reviewer glossary entries without a term or definition are ignored rather 
   assert.equal(next.glossary.length, 2); assert.equal(next.glossary[1].term, 'Pilot');
   assert.deepEqual(editorial.glossaryVariants(frozenContext(), review), []);
 });
+test('the per-chapter check applies the same link rule as the publish gate: one internal and one source link', () => {
+  assert.ok(editorial);
+  const page = { slug: 'chapter', title: 'Chapter', description: 'Desc', body: '## Section\n\nWorkflow guidance without any links.' };
+  const research = { sources: [{ id: 'primary-records', url: 'https://example.org/records' }] };
+  const checks = editorial.checkPageContent(page, {}, research).checks;
+  assert.ok(checks.some(c => c.id === 'useful-links' && c.pass === false));
+  page.body += '\n\nSee [the module](https://isocertificationconsultants.ca/solutions/document-control/) and [the source](https://example.org/records).';
+  assert.ok(editorial.checkPageContent(page, {}, research).checks.every(c => c.id !== 'useful-links' || c.pass === true));
+});

@@ -1,0 +1,173 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The previous finding is resolved: every unresolved gap must now have an owner and due date. No clear problems were found in the changed paragraphs.",
+  "glossary": [],
+  "roles": [
+    "Qualification owner",
+    "Process owner",
+    "Quality representative",
+    "Assessor",
+    "Supervisor",
+    "Operator",
+    "Inspector",
+    "Reviewer",
+    "Auditor",
+    "Supplier"
+  ],
+  "recordNames": [
+    "Competency matrix",
+    "Qualification review outcome",
+    "Qualification evidence",
+    "Review trigger and planned action",
+    "Review calendar",
+    "Practical assessment",
+    "Certificate",
+    "Location list",
+    "Evidence references",
+    "Unresolved gaps",
+    "Retrieval measurement"
+  ],
+  "decisions": [
+    "Confirm qualification validity and scope or withhold reliance.",
+    "Determine when a change or interval requires review.",
+    "Choose supervised work, an evidenced colleague or a delay when a review is late, subject to qualification conditions.",
+    "Identify and explain evidence for a sampled person.",
+    "Record and resolve missing or inconsistent evidence.",
+    "Determine how to track reviews if system notifications are unavailable."
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Review applicable qualification conditions",
+        "section": "Review applicable qualification conditions"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Review applicable qualification conditions; semantic review verifies support",
+        "section": "Review applicable qualification conditions"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Trigger review after change or over time",
+        "section": "Trigger review after change or over time"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Trigger review after change or over time; semantic review verifies support",
+        "section": "Trigger review after change or over time"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Retrieve evidence for a sampled person",
+        "section": "Retrieve evidence for a sampled person"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Retrieve evidence for a sampled person; semantic review verifies support",
+        "section": "Retrieve evidence for a sampled person"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "06020ff8684fa2ebbd19644f2cd7e589a549d6145694ae6e803276eb805e4040",
+  "contentHash": "9d794cc53d6e9c12c120cf8686256a3475eb0dfcacfc2bc130da8ab92d16b013",
+  "paragraphHashes": [
+    "30377aae90de5c27eaf315801beef50cb4336a50127be2073723e6af00b12866",
+    "7b8c4c6a66a9212c9f21a98b5c90bd5f741503b4a8fcb6c87c20b0ccac6a617f",
+    "c436c7c4cb9bc696e2c1223e435f34cd335ceab77d2afc6547ebcf71916bf5b5",
+    "921670d8bc49b221d6052d904402988ee0c897f926c96aac7ba8e18c447ed1ed",
+    "3430cf35ab4afa75767d4abf86065a0c483550c8a98c700d1fbe0d1b1237f912",
+    "d06c296996bdfefda861d6484c57e5a5bf662a483f452733125777f63c67e129",
+    "2b7f917f742b699982216e5ed04eea804d5939043b9daa44e6ebdb5516d70534",
+    "ca28c3d4928e9ca5f8d7ee52d6a52c6042e87cf4276da22aa41bf14dac387ba6",
+    "a2d9f3a838af2b51f185bb24762346c0e96f7dc75c77455fece233c8740c2553",
+    "c1b67fcc2088663c1ec5c43616467c83c7936f5b08d9fdd89cc3cb8afb3843a1",
+    "35f4a04218ed60737796c192a0975419e1be6629c7cac9075cf5bcc8d2a6364e",
+    "95d18657a942a940c3709582857e25ac699bc6ac62ac61fb8bd6274a362bcb72",
+    "da7fba2560fc7a6c69c3f5d0c5194eaa2d4a8f0e1dc234c7ca55a96f30e70720",
+    "38d7b4fdd6fad550de8b272855cecef64c8b0f9159e1f067008f801897773f84",
+    "14ed0d075978ed947a8552def64ceecd55718be7c3be9dc7d33aabbc4c38bd37",
+    "298f93692a646a330717f0809978e75dc5577bd9cb984c6dd52692fa978772c6",
+    "74573cd691a1bbfe283e52b84e8f03acd711cad150bbfe16db19cd5c76da2ad8",
+    "61f888d9b8a774ad6574a1c9d05bf08bd76d2e9e413344e4d532f74d94e0790f",
+    "2479bbc80481af84d997c6aab04e510d5142fae88c3fdc7d242db43462a4d22f",
+    "0972bba2b6a860a823a3b49d7165f87d53ea6742f9057dcf033a0be45056c553",
+    "3f41c0fe49decaa113d7cb50204a7b73913da7c644bb34ff257d08a55b692397",
+    "1bffbcaec9e7da197b4becf6c24f91790dfe53f64e6c4d16b343935867d7ce8a",
+    "0a45ddab7755d5a3d7d8c380730c07540c7859efd85c65624fabcb53ee45b400",
+    "7b7d13974025145abde63f5f32bb4cef8eea40759b1e6f8b585d0ca3d00c7d4d",
+    "7c3b891e0baadc4530bc34526f43c6b75e13c8b2e9a4467aa3b9096e194f8bb4",
+    "b647f0cd17ffe6ae7a5d4f9162a4515c17bd77a551618c9f88d49e7033eb5829",
+    "1cc0231f1314a444ad8bc0737a02faff9cb4057a472f045d59b6ea200f246f51",
+    "972b431c32d93d3c64a1d519faa74bd4ef5e5db6e06e964d320486ed931aab52",
+    "c003c07fc1366a143ee2a03ffe9770a99345111150c77629e737c1d7d5a434d0",
+    "cfad5f8d20878aea146ba8f4dd780da3a86526497c0be1fc8d36830c311fc825",
+    "740e056dce1a6e3347f1fa1450832005b2e5ef4196bbc59add7271a2396b67fa",
+    "93030396e2c849bdfe8deb3dfb1b54cd40405563128f9a8d3ca97918e2eb0085",
+    "97e82de85f3ecbf0fb7d83c07472b8ca0fb7726a9a9df2e3e88a0ab78caf0fc2",
+    "987d4875f60fa73b0c8955a74764a6ade73dcb90e8da2a942f743cbda8f7b8df",
+    "bba57259550844497599708f346fe3f8fcd7f449b4dbd51e9b06809ecb79a475",
+    "84932699441408cf234d0ce0e85913a4ef10cab3a21d2eef61eb3261d9633d37",
+    "26d6f6430f6025255ff0c5f4332bbb831dbaab85bf46aa1996b1c09ce5d72fc6",
+    "fe79575dbaa0ce43fce6cf1ecd7e0d2adbe4551a54c5a583607f64745a26747a",
+    "1787316e273d674859ccf05ad0960f32a444bb7d0789ceffe90a71c307fa3154",
+    "9b025799b43679dfe29cb97aaaf2a96be2d8821a131b453a2bb1de9a30c2f8a3",
+    "136234e4eb0ddee190c70c5500792e3265c972d58066138089b4ad13d9c2b5f9"
+  ],
+  "outputContextHash": "a9a4a940a1dc139765ececfaf61e938a15a64f336247ef0dcb38293670cdd9c8",
+  "reviewedAt": "2026-11-06T13:14:03.953Z",
+  "reviewer": "Configured independent chapter reviewer",
+  "carried": true,
+  "carriedFrom": "2026-11-05T08:46:36.144Z"
+}

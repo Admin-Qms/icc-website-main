@@ -11,10 +11,10 @@ const silent = { log: () => {} };
 
 test('an outline the model nested under the input envelope is unwrapped and accepted', async () => {
   const seed = createGuideOutline(topic, research);
-  const refined = { ...seed, title: 'Refined CAPA guide' };
+  const refined = { ...seed, title: 'Refined CAPA software guide' };
   let calls = 0;
   const outline = await designGuideOutline(topic, research, { ...silent, call: async () => { calls++; return { topic, research, seed: refined }; } });
-  assert.equal(calls, 1); assert.equal(outline.title, 'Refined CAPA guide');
+  assert.equal(calls, 1); assert.equal(outline.title, 'Refined CAPA software guide');
   assert.equal(validateGuideOutline(outline, research).pass, true);
 });
 
@@ -46,7 +46,7 @@ test('after two unusable proposals the architect falls back to the valid seed ou
 
 test('a valid top-level proposal passes through unchanged', async () => {
   const seed = createGuideOutline(topic, research);
-  const proposal = { ...seed, title: 'A valid proposal' };
+  const proposal = { ...seed, title: 'A valid CAPA software proposal' };
   const outline = await designGuideOutline(topic, research, { ...silent, call: async () => proposal });
   assert.deepEqual(outline, proposal);
 });

@@ -34,6 +34,8 @@ bash team/scripts/scheduled-guide-run.sh generate <job-id>
 bash team/scripts/scheduled-guide-run.sh publish-local <job-id>
 ```
 
+The outline validator checks keyword coverage before titles are frozen: the introduction title and description must name the primary keyword, and each chapter must name it in its title or description (task-style chapter titles are fine when the description carries the keyword). The publish gate applies the same rule, so an outline that freezes cannot fail on it later.
+
 `prepare` resumes any unpublished slot job first; otherwise it skips non-production days and already-published slots, and reserves the slot due today. Topic and slot reservations are exclusive. A successful dry-run requires all ten pages, their images and every gate. In the scheduled run a slot counts as complete only once its guide is in `content/guides/`; a generated but unpublished job is resumed and published by the next run. Two concurrent publications are rejected through a shared lock.
 
 Research requires retrieved primary evidence, approved exact URLs and supported claims. Product promises require verified entries in `data/software-capabilities.json`. Current candidate entries are pending: generic evaluation advice is allowed, advertising those capabilities is blocked. A missing model audit or unresolved finding blocks publication.

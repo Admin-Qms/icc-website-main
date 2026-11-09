@@ -1,5 +1,6 @@
 const { countGuideWords, hashValue, POLICY } = require('../../../lib/guide-contract.cjs');
 const { checkVoice, checkFabricatedQuotes, toBlocks, findBritishSpellings, countBannedPhrases } = require('./contentQA');
+const { isSiteLink } = require('../shared/siteRoutes');
 const normalize = text => String(text).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 function pageWordBudget(job, slug) {
   const pages = [job.manifest.slug, ...job.manifest.chapters.map(c => c.slug)];
@@ -53,6 +54,8 @@ function checkPageContent(page, plan = {}, research = {}) {
       add('subsection-evidence', sources.every(Boolean) && sources.some(s => cited.includes(s.url)), `Cite assigned evidence in ${title}; semantic review verifies support`, title);
     }
   }
+  const pageLinks = links(page.body);
+  add('useful-links', pageLinks.some(isSiteLink) && pageLinks.some(l => /^https:\/\//.test(l) && !isSiteLink(l)), 'Each page needs at least one internal link (a site path or site URL) and one primary-source link');
   for (const faq of String(page.body).matchAll(/^###\s+(.+\?)\r?\n([\s\S]*?)(?=^#{1,3}\s|$(?![\s\S]))/gm)) add('faq-answer', countGuideWords(faq[2]) >= 20, `Answer with actionable detail: ${faq[1]}`, faq[1]);
   return { pass: checks.every(c => c.pass), checks, failures: checks.filter(c => !c.pass) };
 }

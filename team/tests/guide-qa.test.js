@@ -33,3 +33,20 @@ test('product names and AI audit claims block a guide page', async () => {
   const report = await qa.validateGuide(bundle, context(bundle));
   assert.ok(report.failures.some(f => f.id === 'positioning-terms' && f.page === bundle.chapters[0].slug));
 });
+test('a chapter with a task-style title passes keyword coverage when its description names the keyword; the introduction still needs both', async () => {
+  assert.ok(qa); const bundle = structuralBundle();
+  bundle.chapters[0].title = 'Verify competence in practical work';
+  bundle.introduction.title = 'Showing who is qualified for each task';
+  const report = await qa.validateGuide(bundle, context(bundle));
+  assert.ok(!report.failures.some(f => f.id === 'keyword-covered' && f.page === bundle.chapters[0].slug), 'chapter should pass');
+  assert.ok(report.failures.some(f => f.id === 'keyword-covered' && f.page === bundle.introduction.slug), 'introduction should fail');
+});
+test('an absolute link to the site counts as an internal link and must resolve', async () => {
+  assert.ok(qa); const bundle = structuralBundle(); const source = bundle.manifest.sources[0].url;
+  bundle.chapters[0].body += `\n\nSee [the module](https://isocertificationconsultants.ca/contact/) and [the standard](${source}).`;
+  bundle.chapters[1].body += `\n\nSee [a missing page](https://isocertificationconsultants.ca/no-such-page/) and [the standard](${source}).`;
+  const report = await qa.validateGuide(bundle, context(bundle));
+  assert.ok(!report.failures.some(f => f.id === 'useful-links' && f.page === bundle.chapters[0].slug));
+  assert.ok(!report.failures.some(f => f.id === 'external-link' && f.page === bundle.chapters[0].slug));
+  assert.ok(report.failures.some(f => f.id === 'internal-link' && f.page === bundle.chapters[1].slug));
+});

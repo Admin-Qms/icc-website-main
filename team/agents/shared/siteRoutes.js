@@ -73,6 +73,13 @@ function getRoutes({ refresh = false } = {}) {
 }
 
 /** "/services/iso-9001/#faq" and "https://<site>/services/iso-9001" -> "/services/iso-9001" */
+function isSiteLink(href) {
+  const link = String(href || "").trim();
+  if (link.startsWith("/")) return true;
+  const origin = (SITE_URL || "").replace(/\/+$/, "").toLowerCase();
+  const bare = origin.replace(/^https?:\/\/(www\.)?/, "");
+  return /^https?:\/\/(www\.)?/i.test(link) && new RegExp(`^https?://(www\\.)?${bare.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(/|$)`, "i").test(link);
+}
 function toRoute(href) {
   let route = String(href || "").trim();
   const origin = (SITE_URL || "").replace(/\/+$/, "");
@@ -120,4 +127,4 @@ function getLinkTargets() {
   return [...targets, ...general, ...guideTargets].filter((t) => has(t.url));
 }
 
-module.exports = { getRoutes, resolves, toRoute, getLinkTargets, readSiteArray };
+module.exports = { isSiteLink, getRoutes, resolves, toRoute, getLinkTargets, readSiteArray };
