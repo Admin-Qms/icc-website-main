@@ -34,7 +34,7 @@
     "sourceReviewFindings": []
   },
   "productionSlotId": "2026-W45-slot-2",
-  "stage": "ready-for-publication",
+  "stage": "locally-published",
   "pages": {
     "mapping-workflows": {
       "hash": "051467036d847df1a87b4ae7a96d1967192c3880872718684abb230d17215db9",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-05T08:09:23.578Z",
-  "updatedAt": "2026-11-09T13:27:40.711Z",
+  "updatedAt": "2026-11-09T13:28:39.929Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "training-competence",
@@ -3059,7 +3059,7 @@
     "reviewer": "Configured openai independent review",
     "reviewedAt": "2026-11-09T13:21:54.003Z"
   },
-  "generationCompletedAt": "2026-11-09T13:27:40.710Z",
+  "generationCompletedAt": "2026-11-09T13:28:39.812Z",
   "finalReport": {
     "pass": true,
     "checks": [
@@ -5833,5 +5833,128 @@
     ],
     "failures": [],
     "wordCount": 19918
+  },
+  "publishedFiles": [
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/guide.json",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/introduction.md",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/chapters/mapping-workflows.md",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/chapters/evaluating-software.md",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/chapters/competency-matrix.md",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/chapters/training-assignments.md",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/chapters/competence-verification.md",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/chapters/qualification-renewal.md",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/chapters/migration-planning.md",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/chapters/training-rollout.md",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/content/guides/competency-management-software/chapters/ongoing-operation.md",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/public/images/guides/competency-management-software/competency-management-software.webp",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/public/images/guides/competency-management-software/mapping-workflows.webp",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/public/images/guides/competency-management-software/evaluating-software.webp",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/public/images/guides/competency-management-software/competency-matrix.webp",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/public/images/guides/competency-management-software/training-assignments.webp",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/public/images/guides/competency-management-software/competence-verification.webp",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/public/images/guides/competency-management-software/qualification-renewal.webp",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/public/images/guides/competency-management-software/migration-planning.webp",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/public/images/guides/competency-management-software/training-rollout.webp",
+    "/private/tmp/claude-503/-Users-ganesh-qms-master/ad962c42-fc8f-49d7-a4b3-0eec4958a412/scratchpad/icc-guide-fix/public/images/guides/competency-management-software/ongoing-operation.webp"
+  ],
+  "publishedManifest": {
+    "schemaVersion": 1,
+    "topicId": "training-competence",
+    "slug": "competency-management-software",
+    "title": "Training and competency management software: showing who is qualified for each task",
+    "description": "How to choose and implement competency management software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.",
+    "primaryKeyword": "competency management software",
+    "keywords": [
+      "competency management software",
+      "training records",
+      "competency matrix"
+    ],
+    "audience": "Canadian quality and operations teams",
+    "author": "ISO Certification Consultants Editorial Team",
+    "date": "2026-11-05",
+    "introductionFile": "introduction.md",
+    "chapters": [
+      {
+        "slug": "mapping-workflows",
+        "file": "chapters/mapping-workflows.md"
+      },
+      {
+        "slug": "evaluating-software",
+        "file": "chapters/evaluating-software.md"
+      },
+      {
+        "slug": "competency-matrix",
+        "file": "chapters/competency-matrix.md"
+      },
+      {
+        "slug": "training-assignments",
+        "file": "chapters/training-assignments.md"
+      },
+      {
+        "slug": "competence-verification",
+        "file": "chapters/competence-verification.md"
+      },
+      {
+        "slug": "qualification-renewal",
+        "file": "chapters/qualification-renewal.md"
+      },
+      {
+        "slug": "migration-planning",
+        "file": "chapters/migration-planning.md"
+      },
+      {
+        "slug": "training-rollout",
+        "file": "chapters/training-rollout.md"
+      },
+      {
+        "slug": "ongoing-operation",
+        "file": "chapters/ongoing-operation.md"
+      }
+    ],
+    "sources": [
+      {
+        "id": "apg-competence",
+        "sourceType": "primary",
+        "title": "ISO 9001 Auditing Practices Group: Guidance on auditing Competence (Edition 2, 2022-06-01)",
+        "publisher": "ISO/TC 176 and International Accreditation Forum (IAF)",
+        "url": "https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-Competence.pdf",
+        "retrievedAt": "2026-11-05",
+        "supportedClaims": [
+          "Auditor guidance written for ISO 9001:2015 clause 7.2; it is not an additional standard and does not establish the requirements of any later edition.",
+          "Competence is defined as the ability to apply knowledge and skills to achieve intended results (ISO 9000:2015, 3.10.4).",
+          "Clause 7.2 d requires retaining appropriate documented information as evidence of competence; the word appropriate leaves the organization to decide which records have value.",
+          "The competence cycle has four parts: determining necessary competence, taking actions to acquire it (training, hiring, on-the-job training, mentoring, reassigning, adjusting the job, subcontracting), evaluating the effectiveness of those actions, and retaining documented information.",
+          "Evaluation techniques may include role-play, peer review, observation, review of training and employment records, or interviews; attending a course does not by itself prove the person is competent.",
+          "Qualifications are not always required, but competence is; where statutes or other requirements demand qualifications (for example welders for specific welding conditions) the organization should determine them and demonstrate they are maintained.",
+          "Records may include training needs identification, training plans and records, effectiveness evaluation records, cross-training charts to mitigate staff shortages, and prompts for when refresher training is due for revalidation of a qualification.",
+          "Auditors may sample people, observe performance, interview them about the competence requirements and verify that adequate replacements exist when the usual person is absent.",
+          "People under the organization's control may include individuals at external providers; the organization may need to communicate its competence requirements to them (clause 8.4).",
+          "Existence of training plans and records alone is not sufficient to show how competence is ensured; sampling, observing and interviewing remain key audit activities.",
+          "Competence may be documented centrally (for example in Human Resources) or locally at each process.",
+          "Competence verification may need to be monitored or repeated; corrective actions and internal audit results often identify training needs.",
+          "ISO 10015:2019 gives guidelines for competence management and people development; it is not a required standard and should not be used as audit criteria in an ISO 9001:2015 audit.",
+          "Knowledge needed for processes (clause 7.1.1) is an input to competence.",
+          "Not every activity needs documented information; the need depends on factors such as complexity, size, products and services, statutory context and the personnel employed."
+        ]
+      },
+      {
+        "id": "icc-training-competence",
+        "sourceType": "primary",
+        "title": "Training Management Software | ISO Certification Consultants (published ICC module page)",
+        "publisher": "ISO Certification Consultants Inc.",
+        "url": "https://isocertificationconsultants.ca/solutions/training-competence/",
+        "retrievedAt": "2026-11-05",
+        "supportedClaims": [
+          "The published ICC page describes a workforce directory built by importing employees, a training library with quizzes and pass scores, training campaigns online, in a classroom or on the job, a competency matrix with user-defined levels and bulk updates, supervisor sign-off of on-the-job training, certificates on completion, and an employee area called My Learning. These are published descriptions; availability and configuration must be confirmed in a demonstration and no capability is advertised as verified.",
+          "The page states every AI output in the software is a suggestion a person reviews before it enters a controlled record.",
+          "The page maps the module to ISO 9001:2015 clause 7.2, ISO 13485:2016 clause 6.2 and ISO/IEC 17025:2017 clause 6.2; a mapping is not a statement that software alone satisfies a clause.",
+          "The page does not describe HR-system integrations, pricing or trials; those are evaluation questions."
+        ]
+      }
+    ],
+    "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "researchSnapshotHash": "de1ce323dc531dc6f1a2597bd6ab3f473a570dffe4c53e4b27f9ab31eaa86b76",
+    "productionSlotId": "2026-W45-slot-2",
+    "publishedAt": "2026-11-09T13:28:39.814Z"
   }
 }
