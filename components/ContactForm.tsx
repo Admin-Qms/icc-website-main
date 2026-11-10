@@ -68,7 +68,7 @@ export function ContactForm({
             {title}
           </h2>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            Tell us about your operation and the support you need.
+            Tell us your standard and we will set up a short call to show you the platform.
           </p>
         </div>
       )}
@@ -93,7 +93,7 @@ export function ContactForm({
             </h3>
             <p className="mt-3 max-w-sm text-slate-600">
               Thanks, your request is in. We will reply within one
-              business day to set up your demo.
+              business day to set up your call.
             </p>
           </motion.div>
         ) : (
@@ -169,14 +169,13 @@ export function ContactForm({
               </select>
             </div>
             <div>
-              <Label htmlFor={`${id}-message`}>How can we help?</Label>
+              <Label htmlFor={`${id}-message`}>Anything we should know? (optional)</Label>
               <textarea
                 id={`${id}-message`}
                 name="message"
                 maxLength={5000}
-                rows={compact ? 3 : 4}
-                required
-                placeholder="Tell us about your operation and what you're certifying for…"
+                rows={compact ? 2 : 4}
+                placeholder="For example: first audit in March, 40 people, documents in shared folders"
                 className="mt-1.5 w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition placeholder:text-slate-400 focus:border-teal-500 focus:ring-2 focus:ring-teal-100"
               />
             </div>

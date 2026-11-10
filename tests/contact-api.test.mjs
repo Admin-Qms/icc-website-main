@@ -68,6 +68,20 @@ test("phone is optional and a supplied callback number is included in the notifi
   assert.deepEqual(messages[2].to, ["anthony.mannella@isocertificationconsultants.ca"]);
 });
 
+test("the message is optional so a call request needs only name, email and company", async (t) => {
+  configured(t);
+  const messages = [];
+  t.mock.method(globalThis, "fetch", async (_url, options) => {
+    messages.push(JSON.parse(options.body));
+    return Response.json({ id: "test-email-id" });
+  });
+  for (const message of [undefined, ""]) {
+    assert.equal((await contact.fetch(request({ ...enquiry, message }))).status, 200);
+  }
+  assert.match(messages[0].text, /No message added\./);
+  assert.match(messages[1].text, /No message added\./);
+});
+
 test("rejects invalid callback numbers before sending", async (t) => {
   configured(t);
   const send = t.mock.method(globalThis, "fetch", () => { throw new Error("Must not send"); });

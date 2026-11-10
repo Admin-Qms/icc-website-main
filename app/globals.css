@@ -164,6 +164,25 @@
   }
 }
 
+/* Main "Book a call" button: a soft gold halo every few seconds draws the eye. */
+.cta-pulse {
+  animation: cta-pulse 2.8s ease-out infinite;
+}
+
+.cta-pulse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes cta-pulse {
+  0% {
+    box-shadow: 0 6px 16px -6px rgba(180, 83, 9, 0.6), 0 0 0 0 rgba(217, 119, 6, 0.45);
+  }
+  70%,
+  100% {
+    box-shadow: 0 6px 16px -6px rgba(180, 83, 9, 0.6), 0 0 0 12px rgba(217, 119, 6, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

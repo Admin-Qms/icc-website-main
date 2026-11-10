@@ -1194,41 +1194,43 @@ export const MODULES: Module[] = [
 ];
 
 // Home page: the buyer's pain, the module that answers it, the concrete capability.
+// Problems a quality team recognises, each with what the platform changes. Kept short:
+// shown in the hero card (components/home/ProblemSolved.tsx) and the homepage grid.
 export const PAIN_POINTS = [
   {
-    pain: "You are not sure which document version is current.",
+    pain: "Nobody is sure which version is current.",
     module: "Documents",
+    icon: "document",
     slug: "document-control",
-    capability:
-      "Everyone sees only the latest approved version, and you can show the auditor exactly which version was approved and when.",
+    capability: "Only the approved version is live, with proof of when it was approved.",
   },
   {
     pain: "Audit prep is a last-minute scramble.",
     module: "Audits",
+    icon: "audit",
     slug: "audits-management-review",
-    capability:
-      "Checklists, findings and evidence are already in one place, and the audit report is ready when the audit closes.",
+    capability: "Evidence is already in one place. The report is ready when the audit closes.",
   },
   {
     pain: "Corrective actions stall with no owner.",
-    module: "Improvements",
+    module: "Corrective actions",
+    icon: "capa",
     slug: "nonconformance-capa",
-    capability:
-      "Every corrective action has an owner, a due date and reminders, and it only closes once the fix is checked.",
+    capability: "Every action has an owner, a due date and reminders until the fix is checked.",
   },
   {
-    pain: "Gaps show up only when the auditor points at them.",
+    pain: "Gaps show up when the auditor finds them.",
     module: "Standards",
+    icon: "assessment",
     slug: "standards",
-    capability:
-      "You see your coverage clause by clause, so you find the gaps before the auditor does.",
+    capability: "See your coverage clause by clause and close the gaps first.",
   },
   {
     pain: "Supplier responses get lost in email.",
-    module: "Supplier Quality",
+    module: "Suppliers",
+    icon: "supplier",
     slug: "supplier-quality",
-    capability:
-      "Suppliers answer SCARs and PPAP requests in their own portal, and every response is on record.",
+    capability: "Suppliers answer SCARs in their own portal, and every reply is on record.",
   },
 ];
 

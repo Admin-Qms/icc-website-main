@@ -81,7 +81,7 @@ export default {
         company: field(data, "company", 160),
         standard: field(data, "standard", 80, true),
         request: field(data, "request", 20, true) || "demo",
-        message: field(data, "message", 5000),
+        message: field(data, "message", 5000, true),
       };
       if (!Object.hasOwn(REQUEST_LABELS, enquiry.request)) throw new Error("Invalid request");
       if (!/^[^\s<>@,;]+@[^\s<>@,;]+\.[^\s<>@,;]+$/.test(enquiry.email)) throw new Error("Invalid email");
@@ -112,7 +112,7 @@ export default {
         `Request: ${requestLabel}`,
         `Standard: ${standard}`,
         "",
-        enquiry.message,
+        enquiry.message || "No message added.",
       ].join("\n"),
     };
     // Identical retries reuse Resend's result for 24 hours, including after timeouts.

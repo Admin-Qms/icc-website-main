@@ -21,7 +21,7 @@ export default function ContactPage() {
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-teal-700">
               <ShieldCheck className="h-3.5 w-3.5" />
-              Live demo
+              Book a call
             </span>
           </Reveal>
           <Reveal delay={0.05}>
@@ -31,17 +31,17 @@ export default function ContactPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-5 max-w-md text-lg leading-relaxed text-slate-600">
-              See how the software keeps your documents, audits and corrective
-              actions in one place. We reply within one business day, with
-              no obligation.
+              On a short call we show how the platform keeps your documents,
+              audits and corrective actions in one place, set up for your
+              standard. No obligation.
             </p>
           </Reveal>
 
           <Reveal delay={0.15} className="mt-8 space-y-4">
             {[
-              "A walkthrough of the software, using your own standards",
-              "A clear, honest read on scope and timeline",
-              "A free readiness assessment to start from",
+              "The platform shown on your own standard",
+              "Which modules you need, and how setup works",
+              "A reply within one business day",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-teal-50 text-teal-700 ring-1 ring-teal-100">
@@ -75,7 +75,7 @@ export default function ContactPage() {
         </div>
 
         <Reveal delay={0.1}>
-          <ContactForm title="Get a Demo" submitLabel="Get a Demo" />
+          <ContactForm title="Book a call" submitLabel="Book my call" />
         </Reveal>
       </div>
     </section>

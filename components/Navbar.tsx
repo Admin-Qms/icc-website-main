@@ -4,44 +4,58 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Phone, ChevronDown, Icon } from "./Icons";
-import { SITE } from "@/lib/site";
+import { MODULES, SITE } from "@/lib/site";
 import { Logo } from "./Logo";
 
-// One "Solutions" menu, two clearly-differentiated offerings (+ overview).
-const SOLUTIONS_MENU = [
+// Four top-level items: the platform (with its modules), who it is for, reading, who built it.
+const PLATFORM_OVERVIEW = {
+  href: "/platform",
+  icon: "dashboard",
+  title: "Platform overview",
+  desc: "What the platform does, and how AI is kept in check",
+};
+
+const INDUSTRIES = { href: "/industries", label: "Industries" };
+const ABOUT = { href: "/about", label: "About" };
+
+const RESOURCES_MENU = [
   {
-    href: "/solutions",
-    icon: "dashboard",
-    title: "Software Modules",
-    desc: "Eleven modules, from Standards and Documents to Supplier Quality",
+    href: "/guides",
+    icon: "training",
+    title: "Software guides",
+    desc: "How to choose and run compliance software, step by step",
   },
   {
-    href: "/custom-solutions",
-    icon: "design",
-    title: "Custom-Built Solutions",
-    desc: "Built for your specific challenge by experts & engineers",
+    href: "/blog",
+    icon: "document",
+    title: "Blog",
+    desc: "Checklists and practical advice for ISO teams",
   },
   {
-    href: "/platform",
+    href: "/assessment",
     icon: "assessment",
-    title: "Compliance Management Software",
-    desc: "What the software does, and how AI is kept in check",
+    title: "Free readiness check",
+    desc: "Eight questions to see how audit-ready you are",
+  },
+  {
+    href: "/roi",
+    icon: "dashboard",
+    title: "ROI estimator",
+    desc: "Estimate the time and cost the platform saves",
   },
 ];
 
-const NAV = [
-  { href: "/roi", label: "ROI" },
-  { href: "/services", label: "Standards" },
-  { href: "/industries", label: "Industries" },
-  { href: "/blog", label: "Blog" },
-  { href: "/guides", label: "Guides" },
-  { href: "/about", label: "About" },
-];
+type MenuId = "platform" | "resources";
+
+const LINK_CLASS =
+  "group relative whitespace-nowrap rounded-md px-3.5 py-2 text-[15px] font-semibold text-navy-800 transition-colors hover:text-teal-700";
+const UNDERLINE_CLASS =
+  "absolute inset-x-3.5 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded bg-teal-600 transition-transform duration-300 group-hover:scale-x-100";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menu, setMenu] = useState<MenuId | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -69,17 +83,58 @@ export function Navbar() {
     };
   }, []);
 
-  function openMenu() {
+  function openMenu(id: MenuId) {
     if (closeTimer.current) clearTimeout(closeTimer.current);
-    setMenuOpen(true);
+    setMenu(id);
   }
   function scheduleClose() {
-    closeTimer.current = setTimeout(() => setMenuOpen(false), 140);
+    closeTimer.current = setTimeout(() => setMenu(null), 140);
+  }
+
+  // Called as a function, not rendered as <Dropdown>, so React keeps the same element
+  // across re-renders and the open/close animation is not restarted.
+  function dropdown(id: MenuId, label: string, width: string, children: React.ReactNode) {
+    const isOpen = menu === id;
+    return (
+      <div className="relative" onMouseEnter={() => openMenu(id)} onMouseLeave={scheduleClose}>
+        <button
+          onClick={(event) => {
+            // Pointer hover already opens the menu; its click should keep it open.
+            if (closeTimer.current) clearTimeout(closeTimer.current);
+            if (event.detail === 0) setMenu(isOpen ? null : id);
+            else setMenu(id);
+          }}
+          aria-expanded={isOpen}
+          className={`group relative flex items-center gap-1.5 whitespace-nowrap rounded-md px-3.5 py-2 text-[15px] font-semibold transition-colors ${
+            isOpen ? "text-teal-700" : "text-navy-800 hover:text-teal-700"
+          }`}
+        >
+          {label}
+          <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+        </button>
+
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 8, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 8, scale: 0.98 }}
+              transition={{ duration: 0.18 }}
+              className={`absolute left-0 top-full pt-3 ${width}`}
+            >
+              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-[0_24px_60px_-24px_rgba(22,43,77,0.45)]">
+                {children}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
   }
 
   return (
     <header className="fixed inset-x-0 top-0 z-50" onKeyDown={(event) => {
-      if (event.key === "Escape") { setOpen(false); setMenuOpen(false); }
+      if (event.key === "Escape") { setOpen(false); setMenu(null); }
     }}>
       {/* Utility bar — trust + phone (hidden once scrolled to save space) */}
       <div
@@ -90,7 +145,7 @@ export function Navbar() {
         <div className="container-page flex h-10 items-center justify-between text-[13px]">
           <p className="flex items-center gap-2">
             <ShieldCheck className="h-4 w-4 text-teal-400" />
-            Audit-ready quality and compliance · {SITE.region}
+            Compliance platform built by ISO auditors · {SITE.region}
           </p>
           <div className="flex items-center gap-6">
             <a
@@ -118,84 +173,89 @@ export function Navbar() {
             <Logo tagline={false} singleLine />
           </Link>
 
-          <div className="hidden shrink-0 items-center gap-0.5 xl:flex">
-            {/* Solutions dropdown */}
-            <div className="relative" onMouseEnter={openMenu} onMouseLeave={scheduleClose}>
-              <button
-                onClick={(event) => {
-                  // Pointer hover already opens the menu; its click should keep it open.
-                  if (closeTimer.current) clearTimeout(closeTimer.current);
-                  if (event.detail === 0) setMenuOpen((v) => !v);
-                  else setMenuOpen(true);
-                }}
-                aria-expanded={menuOpen}
-                className={`group relative flex items-center gap-1.5 whitespace-nowrap rounded-md px-2 py-2 text-sm font-semibold transition-colors ${
-                  menuOpen ? "text-teal-700" : "text-navy-800 hover:text-teal-700"
-                }`}
-              >
-                Solutions
-                <ChevronDown
-                  className={`h-4 w-4 transition-transform duration-200 ${menuOpen ? "rotate-180" : ""}`}
-                />
-              </button>
-
-              <AnimatePresence>
-                {menuOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8, scale: 0.98 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 8, scale: 0.98 }}
-                    transition={{ duration: 0.18 }}
-                    className="absolute left-0 top-full w-[380px] pt-3"
-                  >
-                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-[0_24px_60px_-24px_rgba(22,43,77,0.45)]">
-                      {SOLUTIONS_MENU.map((item, i) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setMenuOpen(false)}
-                          className={`group/item flex items-start gap-3.5 rounded-lg p-3.5 transition-colors hover:bg-teal-50 ${
-                            i < SOLUTIONS_MENU.length - 1 ? "mb-0.5" : ""
-                          }`}
-                        >
-                          <span className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-navy-900 text-teal-400 transition-colors group-hover/item:bg-teal-600 group-hover/item:text-white">
-                            <Icon name={item.icon} className="h-5 w-5" />
-                          </span>
-                          <span>
-                            <span className="flex items-center gap-1.5 font-heading text-[15px] font-bold text-navy-900">
-                              {item.title}
-                              <ArrowRight className="h-3.5 w-3.5 text-teal-600 opacity-0 transition-all group-hover/item:translate-x-0.5 group-hover/item:opacity-100" />
-                            </span>
-                            <span className="mt-0.5 block text-[13px] leading-snug text-slate-500">
-                              {item.desc}
-                            </span>
-                          </span>
-                        </Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {NAV.map((item) => (
+          <div className="hidden shrink-0 items-center gap-3 xl:flex">
+            {dropdown("platform", "Platform", "w-[600px]", <>
               <Link
-                key={item.href}
-                href={item.href}
-                className="group relative whitespace-nowrap rounded-md px-2 py-2 text-sm font-semibold text-navy-800 transition-colors hover:text-teal-700"
+                href={PLATFORM_OVERVIEW.href}
+                onClick={() => setMenu(null)}
+                className="group/item flex items-start gap-3.5 rounded-lg bg-slate-50 p-3.5 transition-colors hover:bg-teal-50"
               >
-                {item.label}
-                <span className="absolute inset-x-2 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded bg-teal-600 transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-navy-900 text-teal-400 transition-colors group-hover/item:bg-teal-600 group-hover/item:text-white">
+                  <Icon name={PLATFORM_OVERVIEW.icon} className="h-5 w-5" />
+                </span>
+                <span>
+                  <span className="flex items-center gap-1.5 font-heading text-[15px] font-bold text-navy-900">
+                    {PLATFORM_OVERVIEW.title}
+                    <ArrowRight className="h-3.5 w-3.5 text-teal-600 opacity-0 transition-all group-hover/item:translate-x-0.5 group-hover/item:opacity-100" />
+                  </span>
+                  <span className="mt-0.5 block text-[13px] leading-snug text-slate-500">{PLATFORM_OVERVIEW.desc}</span>
+                </span>
               </Link>
-            ))}
+              <p className="px-3.5 pb-1 pt-3 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-400">Modules</p>
+              <div className="grid grid-cols-2 gap-0.5">
+                {MODULES.map((m) => (
+                  <Link
+                    key={m.slug}
+                    href={`/solutions/${m.slug}`}
+                    onClick={() => setMenu(null)}
+                    className="group/item flex items-center gap-2.5 rounded-lg px-3.5 py-2 transition-colors hover:bg-teal-50"
+                  >
+                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-teal-50 text-teal-700 transition-colors group-hover/item:bg-teal-600 group-hover/item:text-white">
+                      <Icon name={m.icon} className="h-4 w-4" />
+                    </span>
+                    <span className="text-sm font-semibold text-navy-900">{m.name}</span>
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href="/solutions"
+                onClick={() => setMenu(null)}
+                className="link-arrow mx-3.5 mb-2 mt-3 text-sm"
+              >
+                Compare all modules <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </>)}
+
+            <Link href={INDUSTRIES.href} className={LINK_CLASS}>
+              {INDUSTRIES.label}
+              <span className={UNDERLINE_CLASS} />
+            </Link>
+
+            {dropdown("resources", "Resources", "w-[380px]", <>
+              {RESOURCES_MENU.map((item, i) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMenu(null)}
+                  className={`group/item flex items-start gap-3.5 rounded-lg p-3.5 transition-colors hover:bg-teal-50 ${
+                    i < RESOURCES_MENU.length - 1 ? "mb-0.5" : ""
+                  }`}
+                >
+                  <span className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-navy-900 text-teal-400 transition-colors group-hover/item:bg-teal-600 group-hover/item:text-white">
+                    <Icon name={item.icon} className="h-5 w-5" />
+                  </span>
+                  <span>
+                    <span className="flex items-center gap-1.5 font-heading text-[15px] font-bold text-navy-900">
+                      {item.title}
+                      <ArrowRight className="h-3.5 w-3.5 text-teal-600 opacity-0 transition-all group-hover/item:translate-x-0.5 group-hover/item:opacity-100" />
+                    </span>
+                    <span className="mt-0.5 block text-[13px] leading-snug text-slate-500">
+                      {item.desc}
+                    </span>
+                  </span>
+                </Link>
+              ))}
+            </>)}
+
+            <Link href={ABOUT.href} className={LINK_CLASS}>
+              {ABOUT.label}
+              <span className={UNDERLINE_CLASS} />
+            </Link>
           </div>
 
           <div className="hidden shrink-0 items-center gap-2 xl:flex">
-            <Link href="/assessment" className="btn-ghost whitespace-nowrap px-2 py-2.5 text-sm">
-              Free Assessment
-            </Link>
-            <Link href="/contact" className="btn-primary whitespace-nowrap px-4 py-2.5 text-sm">
-              See it live
+            <Link href="/contact" className="btn-primary cta-pulse whitespace-nowrap px-6 py-3 text-[15px]">
+              Book a call
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -229,54 +289,66 @@ export function Navbar() {
             className={`overflow-y-auto border-b border-slate-200 bg-white px-5 pb-8 pt-3 shadow-lg xl:hidden ${scrolled ? 'max-h-[calc(100dvh-4rem)]' : 'max-h-[calc(100dvh-4rem)] lg:max-h-[calc(100dvh-6.5rem)]'}`}
           >
             <p className="px-1 pb-1 pt-2 text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
-              Solutions
+              Platform
             </p>
-            {SOLUTIONS_MENU.map((item, i) => (
-              <motion.div
-                key={item.href}
-                initial={{ opacity: 0, x: -12 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.04 * i }}
-              >
+            <Link
+              href={PLATFORM_OVERVIEW.href}
+              onClick={() => setOpen(false)}
+              className="block border-b border-slate-100 py-3.5 text-base font-semibold text-navy-900"
+            >
+              {PLATFORM_OVERVIEW.title}
+            </Link>
+            <div className="grid grid-cols-2 gap-x-3 border-b border-slate-100 py-2">
+              {MODULES.map((m) => (
                 <Link
-                  href={item.href}
+                  key={m.slug}
+                  href={`/solutions/${m.slug}`}
                   onClick={() => setOpen(false)}
-                  className="flex items-start gap-3 rounded-lg px-1 py-3"
+                  className="flex items-center gap-2 py-2 text-sm font-semibold text-navy-800"
                 >
-                  <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 text-teal-400">
-                    <Icon name={item.icon} className="h-5 w-5" />
-                  </span>
-                  <span>
-                    <span className="block font-heading text-[15px] font-bold text-navy-900">
-                      {item.title}
-                    </span>
-                    <span className="block text-[13px] text-slate-500">{item.desc}</span>
-                  </span>
+                  <Icon name={m.icon} className="h-4 w-4 shrink-0 text-teal-700" />
+                  {m.name}
                 </Link>
-              </motion.div>
-            ))}
-
-            <p className="px-1 pb-1 pt-4 text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
-              Company
-            </p>
-            <div className="flex flex-col">
-              {NAV.map((item, i) => (
-                <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.04 * (i + SOLUTIONS_MENU.length) }}
-                >
-                  <Link
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block border-b border-slate-100 py-3.5 text-base font-semibold text-navy-900"
-                  >
-                    {item.label}
-                  </Link>
-                </motion.div>
               ))}
             </div>
+
+            <p className="px-1 pb-1 pt-4 text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
+              Menu
+            </p>
+            <div className="flex flex-col">
+              {[INDUSTRIES, ABOUT].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="block border-b border-slate-100 py-3.5 text-base font-semibold text-navy-900"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            <p className="px-1 pb-1 pt-4 text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
+              Resources
+            </p>
+            {RESOURCES_MENU.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="flex items-start gap-3 rounded-lg px-1 py-3"
+              >
+                <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-navy-900 text-teal-400">
+                  <Icon name={item.icon} className="h-5 w-5" />
+                </span>
+                <span>
+                  <span className="block font-heading text-[15px] font-bold text-navy-900">
+                    {item.title}
+                  </span>
+                  <span className="block text-[13px] text-slate-500">{item.desc}</span>
+                </span>
+              </Link>
+            ))}
 
             <a
               href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
@@ -286,11 +358,8 @@ export function Navbar() {
               {SITE.phone}
             </a>
             <div className="mt-4 flex flex-col gap-3">
-              <Link href="/assessment" onClick={() => setOpen(false)} className="btn-outline w-full">
-                Free Assessment
-              </Link>
               <Link href="/contact" onClick={() => setOpen(false)} className="btn-primary w-full">
-                See it live
+                Book a call
               </Link>
             </div>
           </motion.div>

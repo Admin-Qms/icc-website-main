@@ -52,7 +52,7 @@ export default function AboutPage() {
         intro="ISO Certification Consultants Inc. builds compliance management software and backs it with certified consultants. The software keeps you audit-ready every day, and the experts help when you want them."
       >
         <Link href="/contact" className="btn-primary">
-          See it live <ArrowRight className="h-4 w-4" />
+          Book a call <ArrowRight className="h-4 w-4" />
         </Link>
       </PageHeader>
 

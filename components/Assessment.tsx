@@ -140,7 +140,7 @@ export function Assessment() {
               <p className="mx-auto mt-3 max-w-md text-slate-600">{result.note}</p>
               <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
                 <Link href="/contact" className="btn-primary">
-                  See it live <ArrowRight className="h-4 w-4" />
+                  Book a call <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link href="/contact" className="btn-outline">
                   Get a detailed gap analysis

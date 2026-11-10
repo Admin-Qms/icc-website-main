@@ -106,7 +106,7 @@ export function Footer() {
             href="/contact"
             className="inline-flex items-center gap-1.5 font-semibold text-teal-300 hover:text-teal-200"
           >
-            Get a walkthrough <ArrowRight className="h-4 w-4" />
+            Book a call <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

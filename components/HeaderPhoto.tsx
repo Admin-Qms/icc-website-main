@@ -9,7 +9,6 @@ export function HeaderPhoto({ src, alt }: { src: string; alt: string }) {
         alt={alt}
         fill
         priority
-        unoptimized
         sizes="(min-width: 1024px) 520px, 100vw"
         className="object-cover"
       />

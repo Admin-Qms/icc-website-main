@@ -41,3 +41,6 @@ npm-debug.log*
 
 # Local Claude Code settings (machine-specific, not part of the template)
 .claude/settings.local.json
+
+# Review comments left on the local dev server (components/DevComments.tsx)
+.dev-comments.json

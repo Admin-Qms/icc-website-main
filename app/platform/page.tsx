@@ -65,7 +65,7 @@ export default function PlatformPage() {
           See the modules <ArrowRight className="h-4 w-4" />
         </Link>
         <Link href="/contact" className="btn-ghost">
-          See it live
+          Book a call
         </Link>
       </PageHeader>
 

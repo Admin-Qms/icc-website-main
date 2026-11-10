@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./motion";
-import { ArrowRight, Icon, Check } from "./Icons";
+import { ArrowRight, Icon } from "./Icons";
 import { BannerDecor } from "./BannerDecor";
 import type { Standard, Industry, Module } from "@/lib/site";
 import { ANY_STANDARD, GAP_CREDIT } from "@/lib/site";
@@ -202,9 +202,16 @@ export function GapCreditBanner() {
   );
 }
 
+// What a visitor can expect after asking for a call, shown with every closing CTA.
+const CALL_STEPS = [
+  { title: "Tell us your standard", detail: "Fill in the short form. We reply within one business day." },
+  { title: "See it on a short call", detail: "We show the platform set up for your standard and your kind of operation." },
+  { title: "Leave with a clear next step", detail: "You know which modules you need and how setup works." },
+];
+
 export function CTASection({
   title = "See how much compliance work you can take off your team",
-  intro = "Get a walkthrough set up for your standards and processes. We'll show you where the manual work goes away and how you stay ready for every audit.",
+  intro = "Book a call and see the platform set up for your standard. We'll show you where the manual work goes away and how you stay ready for every audit.",
 }: {
   title?: string;
   intro?: string;
@@ -216,18 +223,28 @@ export function CTASection({
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-heading text-3xl font-bold text-white sm:text-4xl">{title}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-300">{intro}</p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn-primary">
-                See it live
-                <ArrowRight className="h-4 w-4" />
+          </div>
+          <ol className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-3">
+            {CALL_STEPS.map((step, i) => (
+              <li key={step.title} className="rounded-xl border border-white/10 bg-white/5 p-5 text-left">
+                <span className="grid h-7 w-7 place-items-center rounded-full bg-teal-400 text-sm font-bold text-navy-950">
+                  {i + 1}
+                </span>
+                <p className="mt-3 font-heading text-base font-bold text-white">{step.title}</p>
+                <p className="mt-1 text-sm leading-relaxed text-slate-300">{step.detail}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-10 text-center">
+            <Link href="/contact" className="btn-primary">
+              Book a call
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <p className="mt-5 text-sm text-slate-400">
+              Not ready to talk?{" "}
+              <Link href="/assessment" className="font-semibold text-teal-300 underline-offset-2 hover:underline">
+                Take the free readiness check
               </Link>
-              <Link href="/assessment" className="btn border-2 border-white/30 bg-transparent text-white hover:bg-white/10">
-                Take the free assessment
-              </Link>
-            </div>
-            <p className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-400">
-              <Check className="h-4 w-4 text-teal-400" />
-              We reply within one business day
             </p>
           </div>
         </Reveal>

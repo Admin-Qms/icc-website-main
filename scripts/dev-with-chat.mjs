@@ -1,10 +1,56 @@
 import { createServer } from "node:http";
+import { randomUUID } from "node:crypto";
+import { readFile, writeFile } from "node:fs/promises";
 import { Readable } from "node:stream";
 import next from "next";
 import chat from "../api/chat.ts";
 import productionConfig from "../next.config.mjs";
 import { developmentConfig } from "./development-config.mjs";
 import contact from "../api/contact.ts";
+
+// Review comments pinned with components/DevComments.tsx, kept in a git-ignored file.
+const COMMENTS_FILE = new URL("../.dev-comments.json", import.meta.url);
+const COMMENT_FIELDS = ["page", "selector", "tag", "text", "ox", "oy", "x", "y", "viewport", "comment"];
+
+async function readComments() {
+  try {
+    return JSON.parse(await readFile(COMMENTS_FILE, "utf8"));
+  } catch {
+    return [];
+  }
+}
+
+async function devComments(req, res, url) {
+  const send = (status, body) => {
+    res.writeHead(status, { "Content-Type": "application/json", "Cache-Control": "no-store" });
+    res.end(JSON.stringify(body));
+  };
+  const comments = await readComments();
+  if (req.method === "GET") return send(200, comments);
+  if (req.method === "DELETE") {
+    const id = url.searchParams.get("id");
+    await writeFile(COMMENTS_FILE, JSON.stringify(comments.filter((c) => c.id !== id), null, 2));
+    return send(200, { ok: true });
+  }
+  if (req.method !== "POST") return send(405, { error: "Method not allowed." });
+  let raw = "";
+  for await (const chunk of req) {
+    raw += chunk;
+    if (raw.length > 20_000) return send(413, { error: "Too large." });
+  }
+  let data;
+  try {
+    data = JSON.parse(raw);
+  } catch {
+    return send(400, { error: "Send JSON." });
+  }
+  if (typeof data?.comment !== "string" || !data.comment.trim()) return send(400, { error: "Comment is empty." });
+  const entry = { id: randomUUID(), createdAt: new Date().toISOString(), status: "open" };
+  for (const key of COMMENT_FIELDS) entry[key] = data[key];
+  comments.push(entry);
+  await writeFile(COMMENTS_FILE, JSON.stringify(comments, null, 2));
+  return send(201, entry);
+}
 
 function requestedPort() {
   const args = process.argv.slice(2);
@@ -50,6 +96,7 @@ try {
   server.on("request", async (req, res) => {
     const url = new URL(req.url || "/", `http://${req.headers.host || `${host}:${port}`}`);
     const endpoint = url.pathname.replace(/\/$/, "");
+    if (endpoint === "/__dev/comments") return devComments(req, res, url);
     const api = endpoint === "/api/chat" ? chat : endpoint === "/api/contact" ? contact : null;
     if (api) {
       try {

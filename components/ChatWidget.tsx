@@ -15,7 +15,7 @@ type Message = { role: "user" | "assistant"; content: string };
 const SUGGESTIONS = [
   "Which standards do you support?",
   "What can the software modules do?",
-  "How does certification consulting work?",
+  "How do I book a call?",
 ];
 
 function AssistantAvatar({ small = false }: { small?: boolean }) {
@@ -25,11 +25,11 @@ function AssistantAvatar({ small = false }: { small?: boolean }) {
       className={`block shrink-0 overflow-hidden rounded-full border-2 border-white bg-teal-100 shadow-sm ${small ? "h-7 w-7 sm:h-9 sm:w-9" : "h-9 w-9 sm:h-12 sm:w-12"}`}
     >
       <Image
-        src="/images/anthony-consultant.jpg"
+        src="/images/logo-mark.png"
         alt=""
         width={96}
         height={96}
-        className="h-full w-full object-cover object-[center_38%]"
+        className="h-full w-full object-contain p-1"
       />
     </span>
   );
@@ -328,10 +328,10 @@ export function ChatWidget() {
       {!open && (
         <div className="flex items-center gap-1.5 rounded-full border border-teal-200 bg-white p-1.5 shadow-[0_14px_38px_-14px_rgba(22,43,77,0.55)] sm:gap-2 sm:p-2">
           <AssistantAvatar small />
-          <span className="mr-1 text-xs font-semibold text-navy-900">ISO Consultant</span>
+          <span className="mr-1 text-xs font-semibold text-navy-900">AI Assistant</span>
           <a
             href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
-            aria-label={`Call Anthony at ${SITE.phone}`}
+            aria-label={`Call us at ${SITE.phone}`}
             className="inline-flex min-h-10 items-center gap-1 rounded-full border border-teal-300 px-3 text-xs font-semibold text-teal-800 transition hover:bg-teal-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
           >
             <Phone className="h-3.5 w-3.5" aria-hidden="true" />
@@ -341,7 +341,7 @@ export function ChatWidget() {
             ref={launcherRef}
             type="button"
             onClick={() => setOpen(true)}
-            aria-label="Chat with ISO Consultant"
+            aria-label="Chat with the AI Assistant"
             aria-expanded={false}
             aria-controls="website-chat-panel"
             className="min-h-10 rounded-full bg-teal-700 px-3.5 text-xs font-semibold text-white transition hover:bg-teal-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
@@ -358,7 +358,7 @@ export function ChatWidget() {
           id="website-chat-panel"
           role="dialog"
           aria-modal={mobile || undefined}
-          aria-label="Chat with ISO Consultant"
+          aria-label="Chat with the AI Assistant"
           style={mobile && mobileViewport ? { height: mobileViewport.height, top: mobileViewport.top } : undefined}
           className="flex h-[min(620px,calc(100dvh-2rem))] w-[min(390px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white outline-none shadow-[0_28px_80px_-22px_rgba(22,43,77,0.6)] max-sm:fixed max-sm:inset-x-0 max-sm:top-0 max-sm:h-[100dvh] max-sm:w-screen max-sm:rounded-none"
         >
@@ -371,8 +371,8 @@ export function ChatWidget() {
             >
               <AssistantAvatar />
               <span className="min-w-0 flex-1">
-                <span className="block truncate font-heading text-sm font-semibold text-white sm:text-base">ISO Consultant</span>
-                <span className="block truncate text-[11px] text-teal-200 sm:text-xs">ISO Certification Consultants</span>
+                <span className="block truncate font-heading text-sm font-semibold text-white sm:text-base">AI Assistant</span>
+                <span className="block truncate text-[11px] text-teal-200 sm:text-xs">Automated answers about the platform</span>
               </span>
             </button>
             {messages.length > 0 && (
@@ -412,7 +412,7 @@ export function ChatWidget() {
             <div className="flex items-start gap-2">
               <AssistantAvatar small />
               <div className="max-w-[calc(100%-2.25rem)] rounded-2xl rounded-tl-sm border border-slate-200 bg-white px-3 py-2 text-sm leading-5 text-slate-700 shadow-sm sm:max-w-[82%] sm:px-4 sm:py-3 sm:leading-relaxed">
-                Hello. Ask about certification consulting, supported standards, or the software modules. For advice about your own operation, the team can help directly.
+                Hello, I am the AI Assistant. Ask about the platform, the standards it supports or its modules. To talk to a person, book a call.
               </div>
             </div>
 

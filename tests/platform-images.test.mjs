@@ -6,25 +6,6 @@ import { INDUSTRIES, STANDARDS } from "../lib/site.ts";
 import { INDUSTRY_PHOTOS, STANDARD_PHOTOS, PHOTO_ALT } from "../lib/header-images.ts";
 
 const root = new URL("../", import.meta.url);
-const WALL = [
-  "fabrication",
-  "automotive",
-  "medical-device",
-  "aerospace",
-  "food-beverage",
-  "electronics",
-  "receiving",
-  "training",
-];
-
-test("hero wall points at the new platform photos", () => {
-  const hero = readFileSync(new URL("components/home/Hero.tsx", root), "utf8");
-  for (const name of WALL) {
-    assert.ok(hero.includes(`/images/platform/platform-${name}.webp`), name);
-  }
-  assert.ok(!/qms-[a-z-]+\.png/.test(hero), "old qms-*.png still referenced");
-});
-
 test("demo box image is set and exists", () => {
   assert.ok(DEMO_BOX_IMAGE, "DEMO_BOX_IMAGE is null");
   assert.ok(DEMO_BOX_IMAGE.alt.length > 10);

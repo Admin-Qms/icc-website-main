@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChatWidget } from "@/components/ChatWidget";
 import { Analytics } from "@/components/Analytics";
+import { DevComments } from "@/components/DevComments";
 import { PEOPLE, personId, personPath } from "@/lib/people";
 import { SITE, OG_IMAGE } from "@/lib/site";
 import { serializeJsonLd } from "@/lib/blog";
@@ -120,6 +121,8 @@ export default function RootLayout({
         <Footer />
         <ChatWidget />
         <Analytics />
+        {/* Local review comments; dropped from production builds. */}
+        {process.env.NODE_ENV === "development" && <DevComments />}
       </body>
     </html>
   );
