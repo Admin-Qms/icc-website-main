@@ -69,6 +69,18 @@
     {
       "term": "Period of doubt",
       "definition": "The period from the last calibration showing the instrument within its limits to the date the problem was found."
+    },
+    {
+      "term": "Inspection",
+      "definition": "A planned check of condition that produces a record with a result."
+    },
+    {
+      "term": "Planned maintenance",
+      "definition": "Maintenance that follows a schedule."
+    },
+    {
+      "term": "Unplanned maintenance",
+      "definition": "Maintenance that follows a fault or report."
     }
   ],
   "roles": [
@@ -96,7 +108,9 @@
     "Calibrating laboratory",
     "External laboratory",
     "Authorized person",
-    "Follow-up owner"
+    "Follow-up owner",
+    "Maintenance lead",
+    "Maintenance technician"
   ],
   "recordNames": [
     "Scope list",
@@ -141,7 +155,17 @@
     "Exception record",
     "Containment record",
     "Work order",
-    "Production log"
+    "Production log",
+    "Maintenance logs",
+    "Equipment list",
+    "Equipment record",
+    "Maintenance record",
+    "Procedure notes",
+    "Inspection checklist",
+    "Checklist template",
+    "Maintenance request",
+    "Calibration certificate",
+    "Technician's notes"
   ],
   "example": {
     "label": "Illustrative example",
@@ -242,6 +266,26 @@
         "When an exception can be closed and who accepts the evidence",
         "Who confirms follow-up action was effective",
         "Whether exception patterns warrant changes to intervals or supplier choices"
+      ]
+    },
+    {
+      "slug": "maintenance-inspections",
+      "title": "Link maintenance history and inspections to the equipment record",
+      "summary": "The earlier finding is resolved: the revised opening acknowledges that auditors can observe activities and speak with staff. No clear issue was found in the changed paragraph.",
+      "bodyHash": "88a0a37d5cdfd396d2e30151d72f045e2b2551332184e30bdd5c4004db188efc",
+      "decisions": [
+        "Which maintenance events enter each asset's history",
+        "Which events require a calibration check before return to use and who decides",
+        "What fields and sign-off the maintenance record needs",
+        "Whether planned maintenance has its own interval and status",
+        "What maintenance and calibration access each role needs",
+        "How a maintenance event affects calibration status",
+        "Who performs and reviews inspections and who acts as backup",
+        "What unsatisfactory checklist answers trigger",
+        "How often checklists run and whether frequency varies by equipment class",
+        "How checklist changes and versions are recorded",
+        "What retrieval target to use and how to handle missing or incomplete evidence",
+        "How an auditor receives read-only access"
       ]
     }
   ],

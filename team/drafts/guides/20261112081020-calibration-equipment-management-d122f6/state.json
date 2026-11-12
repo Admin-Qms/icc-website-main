@@ -78,10 +78,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-11-12T08:38:31.289Z"
+    },
+    "maintenance-inspections": {
+      "hash": "a0c221b9d2e5547d1cd43af1a0d657caa3e0b7a3b0a9779beef89baae10e5c06",
+      "wordCount": 2040,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-12T08:44:21.512Z"
     }
   },
   "createdAt": "2026-11-12T08:10:20.967Z",
-  "updatedAt": "2026-11-12T08:38:47.007Z",
+  "updatedAt": "2026-11-12T08:44:35.674Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "calibration-equipment-management",
@@ -1169,7 +1176,7 @@
     "reviewedChapters": [],
     "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73"
   },
-  "contextHash": "c8bbfa689d3c185a47c14867e2e61393cf18f50e5ea93f9e15de6cf43d6e07e7",
+  "contextHash": "df00fb59130c3e175af9b604477ab274f0dd0d6dcdc575ceefdc0b453573706e",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2236,6 +2243,194 @@
       ],
       "outputContextHash": "c8bbfa689d3c185a47c14867e2e61393cf18f50e5ea93f9e15de6cf43d6e07e7",
       "reviewedAt": "2026-11-12T08:38:47.005Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "maintenance-inspections": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The earlier finding is resolved: the revised opening acknowledges that auditors can observe activities and speak with staff. No clear issue was found in the changed paragraph.",
+      "glossary": [
+        {
+          "term": "Inspection",
+          "definition": "A planned check of condition that produces a record with a result."
+        },
+        {
+          "term": "Planned maintenance",
+          "definition": "Maintenance that follows a schedule."
+        },
+        {
+          "term": "Unplanned maintenance",
+          "definition": "Maintenance that follows a fault or report."
+        }
+      ],
+      "roles": [
+        "Maintenance lead",
+        "Maintenance technician",
+        "Calibration coordinator",
+        "Operator",
+        "Instrument owner",
+        "Reviewer",
+        "Supervisor",
+        "Quality lead",
+        "Auditor",
+        "Vendor"
+      ],
+      "recordNames": [
+        "Maintenance logs",
+        "Equipment list",
+        "Equipment record",
+        "Equipment register",
+        "Maintenance history",
+        "Maintenance record",
+        "Exception record",
+        "Procedure notes",
+        "Inspection checklist",
+        "Checklist template",
+        "Inspection record",
+        "Maintenance request",
+        "Calibration certificate",
+        "Technician's notes"
+      ],
+      "decisions": [
+        "Which maintenance events enter each asset's history",
+        "Which events require a calibration check before return to use and who decides",
+        "What fields and sign-off the maintenance record needs",
+        "Whether planned maintenance has its own interval and status",
+        "What maintenance and calibration access each role needs",
+        "How a maintenance event affects calibration status",
+        "Who performs and reviews inspections and who acts as backup",
+        "What unsatisfactory checklist answers trigger",
+        "How often checklists run and whether frequency varies by equipment class",
+        "How checklist changes and versions are recorded",
+        "What retrieval target to use and how to handle missing or incomplete evidence",
+        "How an auditor receives read-only access"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Keep maintenance on the same record",
+            "section": "Keep maintenance on the same record"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Keep maintenance on the same record; semantic review verifies support",
+            "section": "Keep maintenance on the same record"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Schedule inspections and sign-offs",
+            "section": "Schedule inspections and sign-offs"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Schedule inspections and sign-offs; semantic review verifies support",
+            "section": "Schedule inspections and sign-offs"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Prepare what an auditor sees",
+            "section": "Prepare what an auditor sees"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Prepare what an auditor sees; semantic review verifies support",
+            "section": "Prepare what an auditor sees"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "abd10616e2fc30a04e736eb2ad47f9a67a8731d7cc009b5cd4acaef3a29c0d21",
+      "contentHash": "313e2b6c7678da71a81488c6e454b0eb66ba47c0c89aa5de434389af0b288952",
+      "paragraphHashes": [
+        "e33dd70d7ba4f157a86196e3424f3184abb32aaf25837f65072be2c89744302a",
+        "de1f3f2c784f784060aade589f88a7ea47553590855f08389aa33a9387110d12",
+        "f7ea3c68928a0f19bbc1b50d0294e62ffa646506b274a4ba2c7b6356a52f825b",
+        "a266af5ffa9638dc3ebda9eb1e6bd72b5f1fcdf9c7b6b6803987f85b0beed5b6",
+        "7826e434956222191bdafdd75aef36a5a35dd6631fa33c958e44a8979e1ea3fe",
+        "dadb2b7ea8afe5767e5a6f5cf694c4342ecac2c74c730a0f2a4432467ec4f4cd",
+        "56515bd0943a6678d39b2a62798d6e175a4f24ffe3eb3eda5929c1b826bcff66",
+        "7771387d1091f340bedb1643abf28296badc4315296cd84fac752de16fe00de9",
+        "4d2d46e8d27625cd171dd5e4bb91ec59fd020ea84fb16f0880648c4baf95a677",
+        "5fe708cce6fd4ef40a5e52d301b5592d6b7a8cdc0c39dbf17b35d1b1ab39fbd6",
+        "a81244643c643ecb071be6092d547b559891eb2e103d129fe20704115c499a58",
+        "273de32fb21f03c34cc1ce094d0a7730b54c69ca1e2d13b22a2de380df5f3a17",
+        "ad2cb2db1375d4e71f1d6127cccf2f43d903851d21b6ab64de75d9ee9a99fd55",
+        "404169a28c7e73749b8e746bf145f2582dbecba7159b63ae3137d38d0ac1cc81",
+        "62b9e8539123efaf30bbd1e8e9dcee13d9e4331d1666fb16e969c03275a21337",
+        "1332f04701c4da30aaae1aa123eb1d5b77295a13e6a4daff0e31add8d7fd7fd6",
+        "472d225d31147b3093af8c481baef4092349926235fc5396c18003bc59e0c9d1",
+        "25fc54214faf1d7a25a96d407455168fe24ae88de73728da8d391d1dc62a6ab9",
+        "91a9650dfd2eccfe9c60cb00507eee2aaccbb21c4c2d4e10e8c50f5aaf8ae3bc",
+        "5e0bfe4ad0a5ac98d55bdfef335edf722cf0d1ef663bb8216cb634e9388469ca",
+        "8c4a8f9a9baefb74582ff884d222f51fcf4d152855c323b92fe7c8e29d9049ab",
+        "a28e3212bf16f2c5fa536aa1221d2addabd1ce48c79c670bc73476a96d308b2a",
+        "f44cdf08c04a574af1217dde975e2aa5751362b4a1ab4b4750502fb12a71dceb",
+        "3a113c446a8d7cb76c3f6bfdd32d42b40a4e61ac624107504d0f7e97b0520e4c",
+        "e5b24a0f08113dc377e738dd28d0e94343e075485921ef618e2af4a38c738117",
+        "179de3261868fa7a25985842557735831ddb44c1f5a34f0f1fa1e4735ad92c94",
+        "aef691b36fe61b8b764e856ddca08726f67ccc4355c1ea71560f64967900f425",
+        "a20bac3050f2a449c7d8989611f93dd3ed30e4745e344336f06ff4f337e35e60",
+        "7664f798556f37fc10859edf8e6507156fcdaac68dfcf5ae0189bda61d4c1723",
+        "0fe716cb94b719481dbc64707ba03c889392cc421ce3acb5de11417aafff4fa1",
+        "e0d6a537afecd328cc626f8ad9e7b530fccaf0d46f40cae842567ee9d9523c88"
+      ],
+      "outputContextHash": "df00fb59130c3e175af9b604477ab274f0dd0d6dcdc575ceefdc0b453573706e",
+      "reviewedAt": "2026-11-12T08:44:35.670Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
