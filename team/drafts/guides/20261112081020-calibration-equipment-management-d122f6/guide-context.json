@@ -57,6 +57,18 @@
     {
       "term": "Extension",
       "definition": "A deliberate decision by an authorized person to defer calibration, recorded with a reason and an end date."
+    },
+    {
+      "term": "Exception",
+      "definition": "An event that stops the normal calibration workflow."
+    },
+    {
+      "term": "Containment",
+      "definition": "Identifying work potentially affected by an out-of-tolerance instrument, deciding what review it needs, and recording the decision."
+    },
+    {
+      "term": "Period of doubt",
+      "definition": "The period from the last calibration showing the instrument within its limits to the date the problem was found."
     }
   ],
   "roles": [
@@ -82,7 +94,9 @@
     "Reviewer",
     "Supplier",
     "Calibrating laboratory",
-    "External laboratory"
+    "External laboratory",
+    "Authorized person",
+    "Follow-up owner"
   ],
   "recordNames": [
     "Scope list",
@@ -123,7 +137,11 @@
     "Work instruction",
     "Station card",
     "Status board",
-    "Operator report"
+    "Operator report",
+    "Exception record",
+    "Containment record",
+    "Work order",
+    "Production log"
   ],
   "example": {
     "label": "Illustrative example",
@@ -207,6 +225,23 @@
         "How to report damaged, abnormal or unlabelled instruments",
         "How to provide status without a device and resolve tag-register disagreements",
         "How to present upcoming work on the shop floor"
+      ]
+    },
+    {
+      "slug": "out-of-tolerance",
+      "title": "Handle out-of-tolerance results and instruments out of service",
+      "summary": "All previous findings are resolved. No clear problems were found in the changed paragraphs.",
+      "bodyHash": "7d6014c19a2219f0082b45bd9eed04351d92b40614af034c70040c68d2461381",
+      "decisions": [
+        "Which exception types to define, who owns the first response, and what first action each requires",
+        "Who may confirm an exception",
+        "Whether a returned result is outside the instrument's limits",
+        "Which work may have been affected and what review it needs",
+        "Whether to accept, recheck, hold or notify the customer about affected work",
+        "Which exceptions warrant investigation and who decides",
+        "When an exception can be closed and who accepts the evidence",
+        "Who confirms follow-up action was effective",
+        "Whether exception patterns warrant changes to intervals or supplier choices"
       ]
     }
   ],

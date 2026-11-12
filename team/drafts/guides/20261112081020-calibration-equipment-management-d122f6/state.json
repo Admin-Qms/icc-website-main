@@ -71,10 +71,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-11-12T08:33:02.585Z"
+    },
+    "out-of-tolerance": {
+      "hash": "ec898b244c82abb62445c0708aff3032a00f342e8ed79958fd58b999ad712653",
+      "wordCount": 2051,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-12T08:38:31.289Z"
     }
   },
   "createdAt": "2026-11-12T08:10:20.967Z",
-  "updatedAt": "2026-11-12T08:33:15.085Z",
+  "updatedAt": "2026-11-12T08:38:47.007Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "calibration-equipment-management",
@@ -1162,7 +1169,7 @@
     "reviewedChapters": [],
     "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73"
   },
-  "contextHash": "661a2ae36582ae41dd7f791da63f9ef3e3b4ed666fce942336a7e4c1229c6d22",
+  "contextHash": "c8bbfa689d3c185a47c14867e2e61393cf18f50e5ea93f9e15de6cf43d6e07e7",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2051,6 +2058,184 @@
       ],
       "outputContextHash": "661a2ae36582ae41dd7f791da63f9ef3e3b4ed666fce942336a7e4c1229c6d22",
       "reviewedAt": "2026-11-12T08:33:15.082Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "out-of-tolerance": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All previous findings are resolved. No clear problems were found in the changed paragraphs.",
+      "glossary": [
+        {
+          "term": "Exception",
+          "definition": "An event that stops the normal calibration workflow."
+        },
+        {
+          "term": "Containment",
+          "definition": "Identifying work potentially affected by an out-of-tolerance instrument, deciding what review it needs, and recording the decision."
+        },
+        {
+          "term": "Period of doubt",
+          "definition": "The period from the last calibration showing the instrument within its limits to the date the problem was found."
+        }
+      ],
+      "roles": [
+        "Operator",
+        "Calibration coordinator",
+        "Reviewer",
+        "Instrument owner",
+        "Quality lead",
+        "Authorized person",
+        "Follow-up owner",
+        "Auditor",
+        "Vendor"
+      ],
+      "recordNames": [
+        "Exception record",
+        "Containment record",
+        "Inspection record",
+        "Work order",
+        "Production log",
+        "Certificate",
+        "Equipment register",
+        "Instrument record",
+        "Maintenance history",
+        "Instrument tag"
+      ],
+      "decisions": [
+        "Which exception types to define, who owns the first response, and what first action each requires",
+        "Who may confirm an exception",
+        "Whether a returned result is outside the instrument's limits",
+        "Which work may have been affected and what review it needs",
+        "Whether to accept, recheck, hold or notify the customer about affected work",
+        "Which exceptions warrant investigation and who decides",
+        "When an exception can be closed and who accepts the evidence",
+        "Who confirms follow-up action was effective",
+        "Whether exception patterns warrant changes to intervals or supplier choices"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Recognize an exception",
+            "section": "Recognize an exception"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Recognize an exception; semantic review verifies support",
+            "section": "Recognize an exception"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Contain affected work",
+            "section": "Contain affected work"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Contain affected work; semantic review verifies support",
+            "section": "Contain affected work"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Preserve evidence and follow through",
+            "section": "Preserve evidence and follow through"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Preserve evidence and follow through; semantic review verifies support",
+            "section": "Preserve evidence and follow through"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "1b1c0d0b9b8875538724b1ce9efeeb3b5329224417d21d177f82ff76955589f5",
+      "contentHash": "09aabedef545f27c03de77ef3bd95df4ee86e96d9e58efb6b4d0f3667fcb26f3",
+      "paragraphHashes": [
+        "5658b573f6bb1cc4c619ece427445326bcdedc742445278831676c3371d44eb7",
+        "7bf48a4413ce1f321203467419dff1e7cbe5d7f67980f50deba73f2a7b09f6be",
+        "68caf74fe3269a7026155ff4a3b6c304819e08b8999ae23dadcc63c292596d88",
+        "bad486d6f33d2d2e85eeb8f3a597e33170a133832a948ef8fb55cf7d3cd5ca95",
+        "44cf41528445424c9ab846db30bd9d151d975861229824955d9f895e3480248e",
+        "a1674c3cd505297f780376edb80be03b0ac8024a3bac5b18ec02c44f9dcd5e93",
+        "dbd6878f756a59e897d45e67f10fa2900db226d552600948e74aedb516e4d80f",
+        "bf69d203b2d9d0e5faa6b892f6ff173b9f3083c70fd4216fd3aafa3acd3a4482",
+        "f45248643b6352f5ec5118f407b79066dcde36b05f2097dc31d09225bd3026fe",
+        "b3b88538536ae4cb7720fb6e564ef5aea983a56b71428636c5738b4d765f75fb",
+        "0de3cf2ad3d45df57d0b751821987060af70022d06e068f2f89eea227fce4e5c",
+        "804933af81bf6f0b09ba86549fb827cb26f0894109b3ee6d989acf7a8dc0d167",
+        "057a435407bf2e02bf44fabfc09e80fdda9612bf4a4d88cf19c837fd7f1ca1a2",
+        "6fc888a4c5838a30c1021c24b3ed3068bd12e2583fab605b0f8835b0da8c29d3",
+        "3b62dc3d77eef7ddb8f3f83dc7257677cd440754d7d89c78b4553336383d407a",
+        "e59fb482872cf4610416f6188aff49ab6c8608c982e65bf4a73a1a0aafc7290e",
+        "364625441432f39629e7993a2c60248422b10a41034aa712dac8be4f4298314a",
+        "e3123c939519fb75eea91eb2cb757058a4d6edc0e04ccd17483add9b63bd0406",
+        "b023705ef1999631707c5df52b553b28237d8db4b464acbffab7b719f0795774",
+        "e784c32542deae52a1ad6e5ca31732ed5706a34607e1b51e0faf71afa3c1dcd0",
+        "d5ed9428499155c78b79b3469828887ed7d7b1d13c5cfbe85a5207e9cca09516",
+        "c7c36a53ef37177a496c314d8653d0239e629c4982b0d45f308ac904fcfbad04",
+        "22f93ab79ab8e436e6951b65df1a526c591548fd979b7559e9694aea5bce80e6",
+        "ad09ce10e9b99b237132437cb37cdd87bbd56f99e93e8ce8cd70696c8fba51f1",
+        "0c39794cda5be8ec84b17c82652fec50e8b6649f5e9274d450238fc49a30802e",
+        "0a671a3be25c38df1bebdb5384ed798819e97d58f9fdf39b348383a0a5006838",
+        "ca5b6ce713b5d91f630e0bf1380301a9c5678f0891ba2b5b093e2db361fb917f",
+        "55acaa81b85f721c0a76443b53964cdd7d1d682f48aada97db03bb3570587886",
+        "628e21041b02115eff0a72b434626428154049edd366901210ba33fe1a688267"
+      ],
+      "outputContextHash": "c8bbfa689d3c185a47c14867e2e61393cf18f50e5ea93f9e15de6cf43d6e07e7",
+      "reviewedAt": "2026-11-12T08:38:47.005Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
