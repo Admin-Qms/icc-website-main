@@ -35,10 +35,18 @@
     ]
   },
   "productionSlotId": "2026-W46-slot-2",
-  "stage": "outlined",
-  "pages": {},
+  "stage": "writing",
+  "pages": {
+    "mapping-workflows": {
+      "hash": "2fb5391d65bb89ef556a9600bdf340d9bb27f724d81946e6dd0024d5014b01f5",
+      "wordCount": 2004,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-12T08:18:53.987Z"
+    }
+  },
   "createdAt": "2026-11-12T08:10:20.967Z",
-  "updatedAt": "2026-11-12T08:12:14.371Z",
+  "updatedAt": "2026-11-12T08:19:05.803Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "calibration-equipment-management",
@@ -1126,8 +1134,203 @@
     "reviewedChapters": [],
     "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73"
   },
-  "contextHash": "c4c7ead930e4e76b26d2001f8c5bc379332280eff2e9fdb02a9208099fc07fb8",
-  "chapterReviews": {},
+  "contextHash": "9ed4f6b4294ddfdbe2583cdaeb3d5199450b2f1f8222f8aea5faedfa26f76455",
+  "chapterReviews": {
+    "mapping-workflows": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The earlier page-shell heading finding is resolved. No clear issue was found in the changed paragraph.",
+      "glossary": [
+        {
+          "term": "Instrument owner",
+          "definition": "The person who uses or looks after the instrument and answers for its condition between calibrations."
+        },
+        {
+          "term": "Certificate reviewer",
+          "definition": "The person who checks returned evidence and decides whether the result is acceptable for the intended use."
+        },
+        {
+          "term": "Calibration coordinator",
+          "definition": "The person who manages the schedule, suppliers and register."
+        }
+      ],
+      "roles": [
+        "Quality lead",
+        "Calibration coordinator",
+        "Instrument owner",
+        "Certificate reviewer",
+        "Deputy reviewer",
+        "Supervisor",
+        "Station owner",
+        "Purchasing clerk",
+        "Operator",
+        "Auditor"
+      ],
+      "recordNames": [
+        "Scope list",
+        "Calibration workbook",
+        "Calibration request",
+        "Certificate",
+        "Instrument tag",
+        "Equipment register",
+        "Calibration record",
+        "Workflow map",
+        "Acceptance criteria"
+      ],
+      "decisions": [
+        "Which instruments are in scope and which are excluded",
+        "Whether an instrument is fit for use",
+        "Whether to send an instrument for calibration, hold it or remove it",
+        "Whether a returned result is acceptable for the intended use",
+        "Whether to release an instrument to service",
+        "Who may act as a backup reviewer",
+        "Who signs off the acceptance criteria and judges demonstrations"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Start with the instrument that cannot be found",
+            "section": "Start with the instrument that cannot be found"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Start with the instrument that cannot be found; semantic review verifies support",
+            "section": "Start with the instrument that cannot be found"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Trace records and handoffs",
+            "section": "Trace records and handoffs"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Trace records and handoffs; semantic review verifies support",
+            "section": "Trace records and handoffs"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assign owners and set acceptance criteria",
+            "section": "Assign owners and set acceptance criteria"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assign owners and set acceptance criteria; semantic review verifies support",
+            "section": "Assign owners and set acceptance criteria"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "576b930cf1979d38529cae102aecf12960fcd72df3fdbe730fdf436317e30127",
+      "contentHash": "d8bd3d4f679c102a6a8a3552d5be6d8ed84daa4f5a2ada7744029a3c28ef1618",
+      "paragraphHashes": [
+        "b7f590fe7d4f8f063692dcca27345596d7362443f45c6516f573587ed7c7c945",
+        "ebaae7f1f4934c10c68d8c9f852a7b48fc8b10fcdd6e502e50efc1c80a44e810",
+        "d85307586d6f1dac4e1c78a023f0a55c586bdfbe379ad59040d6388345a21e05",
+        "0f9c456f2c9a529e0ad19a046acc076ce81ca801e6ffaec7ef193ff156ee6eaa",
+        "bcb19b270d6f48e6139c3d95c9624914a16f74230deee18d21bd5baaf969d35f",
+        "1db5b7876f8571830bb64bf835123b73789c53386449042c2080de2fcde124f9",
+        "8327aea4ee60b91235c1b76cc37b6e3bde07797e3edef5c802e86d186b8ea069",
+        "c2139e1b5446c244be9c1577bfd368c5a169a08973da56971019c615c0e02148",
+        "681325f688ecd8d2607e775f02eff659ed212283ce2d20c9dd171e9e7bf6f23b",
+        "a1a2f7933ba07d890d86da94e8a020bf7f2f46abeb283600eccfa9aa4889d01a",
+        "c3ec9de527027a0f417345971c236f5e7cac74116a7d5b62ff01ff77fae11365",
+        "69de255e9f6bed9802c13b91b47b610107ad8ac36f64ddfc3459f8b8752bdf51",
+        "e0e95b2303256460d456eb49a7cdcc94d738031e9653278f4da7a68ff28d1a77",
+        "576f30baff54542604a0973450115706d2c46a0b6a95d416369980f479251e39",
+        "6a3e746a304a7f876aabaca6c2cb1e195a359b81f64a9beb406533adb7397b98",
+        "edfa6f6937dadb26d6c7b0d8740445c268451b6e3053bfad6872917e03a7e7d3",
+        "95b6e014f95c35e812f34ae415652871f860dee27976899f6a428699682089f3",
+        "4cfd3403b58b75eb176dffd48bce48a42c870904c9440723a21b712cdb77b3b0",
+        "4b3d3de11ac87302b524ce1f1d71bb8e4e04c4293d4c686e0825feb8c201f8b4",
+        "6f165a04b9526ed9082f87d8bdf48e1d13bfe75aa2c51d50c4ff9f929ef4fe03",
+        "97d75da101feb95e76f5c34b637f0ab2d1c87953fe861c51d0e8f5188eb64e5c",
+        "a200d5ba0faeb160502745e58f54b56d47c02535fd5e4dd44a130ba8a9e5c783",
+        "88721095da20009f5114bbb32e7659dd179c4b1420b005e8a397e25aec157d19",
+        "026316cb30bdf951849df9b4bf12bc88810841b0c1615d22dedd14086d0f8a72",
+        "36ba2d20af762323fe0ea7aecfeef4661c42b114466474beac1ad48540569c19",
+        "cae857bbc6de570354243d93f611f2ba78ad6e908beeb0973246f92667a521c3",
+        "9ba094cbcfb1f65a2c58d4f269f985fdd8ddf9810abf9ca80b9e33fa2b4ac72d",
+        "187aca67b6b091f952ba813ef81633a9b7766352c3e7bc26a6cd75d0004abdd1",
+        "9faf2541134bcfb2f1b8336a47d4507312857049e64f82de78e9a8fb9a961605",
+        "1865ed23bd941f2c3bf4c9807b81f0efa446f10b218f550946593accd14b939a",
+        "3dcacb7ada07652deb81905fcbf8db0fe12375af67f3ab914681470333d17753",
+        "5e565fac1f70fb2a9668cf9d74869466008c9d83bef9abcc4e920e8be58e3960",
+        "f59e8b5c9c3188db322cc093069b027782cbed910139ae2e778edb06a1bcf406",
+        "ebde557e50c72df470419d6fdfc9e84a6c7dbe17917e092baff7b7067ccdb524",
+        "5a343171ad2c8c30798d898f17d3337822ea5e3c2858cb3b3784a8d08af05ce4",
+        "612e1693f8e8c0410c82881210be62a58a4e74122a0db7c7fc4440ee2bba0721",
+        "2bf19e60d61f4d63039780f9a46307cd073b25b60fc0b0c44803e19eb126c59d",
+        "0a09162342923f05e2d20a678e998af2976514641f22fb598aededa2d441d5b5",
+        "05896b4b397ff745fb3f5d9c34c5cca9c01b3d08aa4e3088e7dc80281f854925",
+        "3b160410e0347a90702ce44c60b1d95790db7df802b042a45b51c6d7da244f7e",
+        "e4e4ca5573fbef64acf45603cec2caab15914be88407bf6cfb140f936dc89956",
+        "0dcef19a4a97a48f9f6c36f2b0203635190da9f77a9f4fa5ff92d1866df779ba",
+        "de8ab26c78b58bbe7fee51ff4c2d46ed2f2131dd222e02174f6e81b76d901dc2",
+        "98df08596fa1dd1ff42f0708824af8210d2db6c77bae60fcd90912318d0e08e5",
+        "3e9d9ecb32bc2850570b31d906bf59b018329ce8d782169a71793ee7af532f82",
+        "9d1bbc0b960453d574d5610eea54b6a561da6c6032088118bf989a230e3b3116",
+        "e87a19a48c9ec066df9cc998997d1cd25591ae10e5076633dc60798fc8cc2806"
+      ],
+      "outputContextHash": "9ed4f6b4294ddfdbe2583cdaeb3d5199450b2f1f8222f8aea5faedfa26f76455",
+      "reviewedAt": "2026-11-12T08:19:05.801Z",
+      "reviewer": "Configured independent chapter reviewer"
+    }
+  },
   "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73",
   "outlineHash": "d96aec6a9acf5913f7b1d65528ea71ff04fafd52d74dc15ed72313b253273826",
   "audit": null,

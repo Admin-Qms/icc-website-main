@@ -21,18 +21,65 @@
     {
       "term": "Workflow owner",
       "definition": "The role accountable for decisions and records in a defined workflow."
+    },
+    {
+      "term": "Instrument owner",
+      "definition": "The person who uses or looks after the instrument and answers for its condition between calibrations."
+    },
+    {
+      "term": "Certificate reviewer",
+      "definition": "The person who checks returned evidence and decides whether the result is acceptable for the intended use."
+    },
+    {
+      "term": "Calibration coordinator",
+      "definition": "The person who manages the schedule, suppliers and register."
     }
   ],
   "roles": [
     "Quality owner",
     "Process owner",
-    "Operator"
+    "Operator",
+    "Quality lead",
+    "Calibration coordinator",
+    "Instrument owner",
+    "Certificate reviewer",
+    "Deputy reviewer",
+    "Supervisor",
+    "Station owner",
+    "Purchasing clerk",
+    "Auditor"
   ],
-  "recordNames": [],
+  "recordNames": [
+    "Scope list",
+    "Calibration workbook",
+    "Calibration request",
+    "Certificate",
+    "Instrument tag",
+    "Equipment register",
+    "Calibration record",
+    "Workflow map",
+    "Acceptance criteria"
+  ],
   "example": {
     "label": "Illustrative example",
     "description": "An unnamed Canadian manufacturer evaluates calibration management software for one inspection workflow; all situations and records are hypothetical, not customer results."
   },
-  "reviewedChapters": [],
+  "reviewedChapters": [
+    {
+      "slug": "mapping-workflows",
+      "title": "Map the calibration decision for every instrument",
+      "summary": "The earlier page-shell heading finding is resolved. No clear issue was found in the changed paragraph.",
+      "bodyHash": "5a509e64e33a65039c659e048f9d2388a668c27b69ba6be5677e36addd78cd6f",
+      "decisions": [
+        "Which instruments are in scope and which are excluded",
+        "Whether an instrument is fit for use",
+        "Whether to send an instrument for calibration, hold it or remove it",
+        "Whether a returned result is acceptable for the intended use",
+        "Whether to release an instrument to service",
+        "Who may act as a backup reviewer",
+        "Who signs off the acceptance criteria and judges demonstrations"
+      ]
+    }
+  ],
   "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73"
 }
