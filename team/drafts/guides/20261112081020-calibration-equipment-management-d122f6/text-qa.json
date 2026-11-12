@@ -1,0 +1,2577 @@
+{
+  "pass": false,
+  "checks": [
+    {
+      "id": "schema-version",
+      "pass": true,
+      "message": "Guide schemaVersion must be 1"
+    },
+    {
+      "id": "guide-slug",
+      "pass": true,
+      "message": "Guide slug must have 6–80 lowercase letters/digits with hyphens"
+    },
+    {
+      "id": "topic-id",
+      "pass": true,
+      "message": "A stable topic ID is required"
+    },
+    {
+      "id": "chapter-count",
+      "pass": true,
+      "message": "Nine complete chapters are required; ten plus an introduction exceeds the inclusive budget"
+    },
+    {
+      "id": "introduction-file",
+      "pass": true,
+      "message": "Introduction filename must be introduction.md"
+    },
+    {
+      "id": "manifest-metadata",
+      "pass": true,
+      "message": "Guide identity and author are required"
+    },
+    {
+      "id": "manifest-description",
+      "pass": true,
+      "message": "Guide description must be 120–160 characters"
+    },
+    {
+      "id": "manifest-date",
+      "pass": true,
+      "message": "Guide date must be valid and not in the future"
+    },
+    {
+      "id": "snapshot-hashes",
+      "pass": true,
+      "message": "Evidence snapshots must have SHA-256 hashes"
+    },
+    {
+      "id": "unique-chapters",
+      "pass": true,
+      "message": "Chapter slugs must be unique"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "instrument-register"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "migration-planning"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "chapter-order",
+      "pass": true,
+      "message": "Every chapter must exist in manifest order"
+    },
+    {
+      "id": "introduction-slug",
+      "pass": true,
+      "message": "Introduction slug must equal guide slug"
+    },
+    {
+      "id": "unique-titles",
+      "pass": true,
+      "message": "Every page needs a unique title"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "introduction-words",
+      "pass": true,
+      "message": "1531 visible words",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2017 visible words",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2020 visible words",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "instrument-register"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "instrument-register"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "instrument-register"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "instrument-register"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "instrument-register"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2032 visible words",
+      "page": "instrument-register"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "instrument-register"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "instrument-register"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "instrument-register"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2098 visible words",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2052 visible words",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2091 visible words",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2019 visible words",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "migration-planning"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "migration-planning"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2056 visible words",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "migration-planning"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "migration-planning"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2058 visible words",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "total-words",
+      "pass": true,
+      "message": "19974 total visible words; maximum 20,000 includes introduction"
+    },
+    {
+      "id": "cross-chapter-repetition",
+      "pass": false,
+      "message": "mapping-workflows and certificates-traceability repeat a substantial passage; mapping-workflows and ongoing-operation repeat a substantial passage"
+    },
+    {
+      "id": "audit-hash",
+      "pass": true,
+      "message": "Required review must match the current prose, metadata, links and evidence"
+    },
+    {
+      "id": "audit-identity",
+      "pass": true,
+      "message": "Review identity and date are required"
+    },
+    {
+      "id": "audit-claims",
+      "pass": true,
+      "message": "claims review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-consistency",
+      "pass": true,
+      "message": "consistency review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-repetition",
+      "pass": true,
+      "message": "repetition review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-findings",
+      "pass": true,
+      "message": "All required review findings must be resolved"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: The operational problem",
+      "section": "The operational problem",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: How to use this guide",
+      "section": "How to use this guide",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+      "section": "Planning evaluation and implementation",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "The introduction must name the assigned topic in both title and description",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.nist.gov/metrology/metrological-traceability",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /contact/",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "calibration-management-software"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Start with the instrument that cannot be found",
+      "section": "Start with the instrument that cannot be found",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Start with the instrument that cannot be found; semantic review verifies support",
+      "section": "Start with the instrument that cannot be found",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Trace records and handoffs",
+      "section": "Trace records and handoffs",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Trace records and handoffs; semantic review verifies support",
+      "section": "Trace records and handoffs",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Assign owners and set acceptance criteria",
+      "section": "Assign owners and set acceptance criteria",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Assign owners and set acceptance criteria; semantic review verifies support",
+      "section": "Assign owners and set acceptance criteria",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.nist.gov/metrology/metrological-traceability",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/calibration-maintenance/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Build a workflow-based shortlist",
+      "section": "Build a workflow-based shortlist",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Build a workflow-based shortlist; semantic review verifies support",
+      "section": "Build a workflow-based shortlist",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Test the decision points",
+      "section": "Test the decision points",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Test the decision points; semantic review verifies support",
+      "section": "Test the decision points",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Examine evidence, access and support",
+      "section": "Examine evidence, access and support",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Examine evidence, access and support; semantic review verifies support",
+      "section": "Examine evidence, access and support",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.nist.gov/metrology/metrological-traceability",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "instrument-register"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "instrument-register"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "instrument-register"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "instrument-register"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "instrument-register"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "instrument-register"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "instrument-register"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Define the register record",
+      "section": "Define the register record",
+      "page": "instrument-register"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Define the register record; semantic review verifies support",
+      "section": "Define the register record",
+      "page": "instrument-register"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Set intervals and ownership",
+      "section": "Set intervals and ownership",
+      "page": "instrument-register"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Set intervals and ownership; semantic review verifies support",
+      "section": "Set intervals and ownership",
+      "page": "instrument-register"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Make bulk loading and floor access practical",
+      "section": "Make bulk loading and floor access practical",
+      "page": "instrument-register"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Make bulk loading and floor access practical; semantic review verifies support",
+      "section": "Make bulk loading and floor access practical",
+      "page": "instrument-register"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "instrument-register"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "instrument-register"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "instrument-register"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "instrument-register"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "instrument-register"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "instrument-register"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "instrument-register"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "instrument-register"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "instrument-register"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "instrument-register"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "instrument-register"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.nist.gov/metrology/metrological-traceability",
+      "page": "instrument-register"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "instrument-register"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "instrument-register"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "instrument-register"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Attach and identify the certificate",
+      "section": "Attach and identify the certificate",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Attach and identify the certificate; semantic review verifies support",
+      "section": "Attach and identify the certificate",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Check what traceability means",
+      "section": "Check what traceability means",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Check what traceability means; semantic review verifies support",
+      "section": "Check what traceability means",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Decide acceptance and fitness for use",
+      "section": "Decide acceptance and fitness for use",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Decide acceptance and fitness for use; semantic review verifies support",
+      "section": "Decide acceptance and fitness for use",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.nist.gov/metrology/metrological-traceability",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.nist.gov/metrology/metrological-traceability",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "certificates-traceability"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Turn intervals into a schedule",
+      "section": "Turn intervals into a schedule",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Turn intervals into a schedule; semantic review verifies support",
+      "section": "Turn intervals into a schedule",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Notify and escalate",
+      "section": "Notify and escalate",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Notify and escalate; semantic review verifies support",
+      "section": "Notify and escalate",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Use shop floor status",
+      "section": "Use shop floor status",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Use shop floor status; semantic review verifies support",
+      "section": "Use shop floor status",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.nist.gov/metrology/metrological-traceability",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /solutions/calibration-maintenance/",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "due-dates-scheduling"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Recognize an exception",
+      "section": "Recognize an exception",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Recognize an exception; semantic review verifies support",
+      "section": "Recognize an exception",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Contain affected work",
+      "section": "Contain affected work",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Contain affected work; semantic review verifies support",
+      "section": "Contain affected work",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Preserve evidence and follow through",
+      "section": "Preserve evidence and follow through",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Preserve evidence and follow through; semantic review verifies support",
+      "section": "Preserve evidence and follow through",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.nist.gov/metrology/metrological-traceability",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "out-of-tolerance"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Keep maintenance on the same record",
+      "section": "Keep maintenance on the same record",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Keep maintenance on the same record; semantic review verifies support",
+      "section": "Keep maintenance on the same record",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Schedule inspections and sign-offs",
+      "section": "Schedule inspections and sign-offs",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Schedule inspections and sign-offs; semantic review verifies support",
+      "section": "Schedule inspections and sign-offs",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Prepare what an auditor sees",
+      "section": "Prepare what an auditor sees",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Prepare what an auditor sees; semantic review verifies support",
+      "section": "Prepare what an auditor sees",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "maintenance-inspections"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "migration-planning"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "migration-planning"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "migration-planning"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "migration-planning"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "migration-planning"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "migration-planning"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Inventory and clean existing records",
+      "section": "Inventory and clean existing records",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Inventory and clean existing records; semantic review verifies support",
+      "section": "Inventory and clean existing records",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Pilot the import and verify",
+      "section": "Pilot the import and verify",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Pilot the import and verify; semantic review verifies support",
+      "section": "Pilot the import and verify",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Plan cutover and train teams",
+      "section": "Plan cutover and train teams",
+      "page": "migration-planning"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Plan cutover and train teams; semantic review verifies support",
+      "section": "Plan cutover and train teams",
+      "page": "migration-planning"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "migration-planning"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "migration-planning"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "migration-planning"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "migration-planning"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "migration-planning"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "migration-planning"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "migration-planning"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "migration-planning"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "migration-planning"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "migration-planning"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "migration-planning"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.nist.gov/metrology/metrological-traceability",
+      "page": "migration-planning"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "migration-planning"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "migration-planning"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "migration-planning"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "migration-planning"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Review the workflow and evidence",
+      "section": "Review the workflow and evidence",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Review the workflow and evidence; semantic review verifies support",
+      "section": "Review the workflow and evidence",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Answer common questions without overstating compliance",
+      "section": "Answer common questions without overstating compliance",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Answer common questions without overstating compliance; semantic review verifies support",
+      "section": "Answer common questions without overstating compliance",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Prepare a focused ICC demonstration",
+      "section": "Prepare a focused ICC demonstration",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Prepare a focused ICC demonstration; semantic review verifies support",
+      "section": "Prepare a focused ICC demonstration",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What problem should calibration management software solve first?",
+      "section": "What problem should calibration management software solve first?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Which records should be migrated into the register?",
+      "section": "Which records should be migrated into the register?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: How should calibration intervals be set and changed?",
+      "section": "How should calibration intervals be set and changed?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What does traceability mean for a calibration certificate?",
+      "section": "What does traceability mean for a calibration certificate?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Does a calibration certificate alone make a measurement traceable?",
+      "section": "Does a calibration certificate alone make a measurement traceable?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What should happen when an instrument is found out of tolerance?",
+      "section": "What should happen when an instrument is found out of tolerance?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: How should due dates and overdue instruments be handled?",
+      "section": "How should due dates and overdue instruments be handled?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What evidence should be ready for an auditor?",
+      "section": "What evidence should be ready for an auditor?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Does software guarantee ISO certification?",
+      "section": "Does software guarantee ISO certification?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What should be prepared for a software demonstration?",
+      "section": "What should be prepared for a software demonstration?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.nist.gov/metrology/metrological-traceability",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /contact/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-coverage",
+      "pass": true,
+      "message": "Eight to ten distinct visible FAQ questions required"
+    },
+    {
+      "id": "demonstration-invitation",
+      "pass": true,
+      "message": "The closing paragraph must invite a software demonstration at /contact/"
+    }
+  ],
+  "failures": [
+    {
+      "id": "cross-chapter-repetition",
+      "pass": false,
+      "message": "mapping-workflows and certificates-traceability repeat a substantial passage; mapping-workflows and ongoing-operation repeat a substantial passage"
+    }
+  ],
+  "wordCount": 19974
+}

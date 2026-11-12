@@ -1,11 +1,9 @@
 {
-  "claims": "failed",
+  "claims": "passed",
   "consistency": "passed",
   "repetition": "passed",
-  "unresolvedFindings": [
-    "The maintenance and inspections chapter says, “An auditor may observe activities, talk with staff, and review records.” The supplied evidence does not establish auditor practices. Remove this statement or frame it clearly as a possible scenario, not a factual claim."
-  ],
-  "inputHash": "a8032da612f03ffdb1ed3dcb25d26bada5d618dd9d2104c791c8052d70ae81a0",
+  "unresolvedFindings": [],
+  "inputHash": "9057d9ad6007e6c0691d601cbc06eb7f3c77d92ad117ac410f7bdbfa6e1eb4f6",
   "pageHashes": {
     "calibration-management-software": "19850cd5b9d10972f6989716b08d5f47b8d14a1146b7d707866828793be5cf0e",
     "mapping-workflows": "f655e5268a9306afd5d060365ee4f6069d8643a1b12c388a5d3a1972f6e3faa3",
@@ -14,10 +12,10 @@
     "certificates-traceability": "ff8aa839f05aa287a0a4f73cd0014b4e053c61bac1d346f84774c2a3a409d3e0",
     "due-dates-scheduling": "8a4812bedeb823d6aad9c38562297f2b2df5d4043664e15819e5a933de2c9215",
     "out-of-tolerance": "2b3ffbb2b8955829f79c0ce9421f113d7d49cf4c4ee05aa27afe3f10e90c1170",
-    "maintenance-inspections": "f3595e62460c2109cac482fc3a55246914258bbce6f7ff91f1d24b2c970c35ce",
+    "maintenance-inspections": "d5967ebde0d4cb7b04fe353c60f80f98da3ca0e6dcfce1648eb630a318c23ab3",
     "migration-planning": "747b32defac1a427f30e877b8797b584ec81b0227e17147f7eb32a1d20114caf",
     "ongoing-operation": "e071a91d554f7c00fb3a3ecd83f0c8c2085266b33aa85d471549aa0f30181823"
   },
   "reviewer": "Configured openai independent review",
-  "reviewedAt": "2026-11-12T09:12:45.331Z"
+  "reviewedAt": "2026-11-12T09:16:44.890Z"
 }
