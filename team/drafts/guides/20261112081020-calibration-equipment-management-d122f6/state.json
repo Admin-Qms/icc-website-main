@@ -92,10 +92,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-11-12T08:46:59.354Z"
+    },
+    "ongoing-operation": {
+      "hash": "980afbec161f72a57fc2982b8f6c044744fc4b98f394c32c8ff3acfc92d4e5f8",
+      "wordCount": 2047,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-12T08:53:15.604Z"
     }
   },
   "createdAt": "2026-11-12T08:10:20.967Z",
-  "updatedAt": "2026-11-12T08:47:07.094Z",
+  "updatedAt": "2026-11-12T08:53:25.821Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "calibration-equipment-management",
@@ -1183,7 +1190,7 @@
     "reviewedChapters": [],
     "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73"
   },
-  "contextHash": "a5098bc9376c248664d121924b8962fa13c5573988ffcf86e8025db1a112215f",
+  "contextHash": "7f08b8fa47f3e4866f79d22a9c8bf6990c610fee09f751bc523fc1c37e9fed33",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2612,6 +2619,255 @@
       ],
       "outputContextHash": "a5098bc9376c248664d121924b8962fa13c5573988ffcf86e8025db1a112215f",
       "reviewedAt": "2026-11-12T08:47:07.090Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "ongoing-operation": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The earlier unsupported claim has been removed, and no clear problems were found in the changed paragraphs.",
+      "glossary": [
+        {
+          "term": "Baseline",
+          "definition": "A starting measurement used for comparison, collected consistently over time."
+        }
+      ],
+      "roles": [
+        "Quality lead",
+        "Instrument owner",
+        "Coordinator",
+        "Evaluation lead",
+        "Reviewer",
+        "Operator",
+        "Vendor",
+        "Qualified specialist",
+        "Auditor"
+      ],
+      "recordNames": [
+        "Instrument records",
+        "Exception log",
+        "Overdue or recently extended items list",
+        "Review findings and actions",
+        "Review record",
+        "Calibration certificate",
+        "Inspection records",
+        "Maintenance history",
+        "Evaluation records",
+        "Approved answers",
+        "Workflow map",
+        "Equipment register",
+        "Acceptance criteria",
+        "Scoring sheet",
+        "Written vendor answers",
+        "Demonstration notes"
+      ],
+      "decisions": [
+        "Which program improvements to prioritize",
+        "How to respond when review evidence is incomplete",
+        "Whether a question can be answered within the available evidence or needs specialist interpretation",
+        "Which records to migrate",
+        "How to set or change calibration intervals",
+        "How to handle out-of-tolerance and overdue instruments",
+        "Whether to proceed, seek clarification or reject after a demonstration",
+        "Whether an undemonstrated critical path is acceptable or needs follow-up"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Review the workflow and evidence",
+            "section": "Review the workflow and evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Review the workflow and evidence; semantic review verifies support",
+            "section": "Review the workflow and evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Answer common questions without overstating compliance",
+            "section": "Answer common questions without overstating compliance"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Answer common questions without overstating compliance; semantic review verifies support",
+            "section": "Answer common questions without overstating compliance"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Prepare a focused ICC demonstration",
+            "section": "Prepare a focused ICC demonstration"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Prepare a focused ICC demonstration; semantic review verifies support",
+            "section": "Prepare a focused ICC demonstration"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What problem should calibration management software solve first?",
+            "section": "What problem should calibration management software solve first?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Which records should be migrated into the register?",
+            "section": "Which records should be migrated into the register?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should calibration intervals be set and changed?",
+            "section": "How should calibration intervals be set and changed?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What does traceability mean for a calibration certificate?",
+            "section": "What does traceability mean for a calibration certificate?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Does a calibration certificate alone make a measurement traceable?",
+            "section": "Does a calibration certificate alone make a measurement traceable?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What should happen when an instrument is found out of tolerance?",
+            "section": "What should happen when an instrument is found out of tolerance?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should due dates and overdue instruments be handled?",
+            "section": "How should due dates and overdue instruments be handled?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What evidence should be ready for an auditor?",
+            "section": "What evidence should be ready for an auditor?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Does software guarantee ISO certification?",
+            "section": "Does software guarantee ISO certification?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What should be prepared for a software demonstration?",
+            "section": "What should be prepared for a software demonstration?"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "654ea0d4728c5f6b3496b0a957fa25e98030c70cc89ab87e77297b8877279f5a",
+      "contentHash": "d9c8e074e99c50c8a8e167009d2dd2921fd416f20f4897d1fa65d683c9003af5",
+      "paragraphHashes": [
+        "2bc931bc3c3b35b7daa7d442f6f176389d11af5145d5a5aab237cf206fe58b5d",
+        "3c4d44edd6b08ebc0f9ce3afabf05d5a801541d244758ff09c0476deb88496b8",
+        "2eda8fae0f4e0dc28a07e4a3f9b126982812fd598089fb4df4deb1a18f9fc42c",
+        "61a18d213326e3f91974a744c1326cdff2c5753afd28ddbf5624a86bb32af1e2",
+        "49ac3f5731139589a9aa94aad7c661064c546f61a9f51288bf882d93f6f0d51e",
+        "442a615f40619c133e56022cf8a68e5cdd7ae3667c213c27481ec4f96f78ec52",
+        "a5c099065b0ff8c9084e6a7e62da7b78abd38bae3c0337386a8b133e30b40205",
+        "ffc33e561776794ed81af26bfe0e61b69ac3c8b9c6e320ed91ff00eedf0617ed",
+        "87c636deacf92a8cd3395ed39bf2cdef65c2a8934e35bc4b6633e6caafce8dda",
+        "40aec5618bfd5e4e9f94b12a5fd2cd8758c5b2089aa522e86f3f05adde6e8098",
+        "d5c6394576a0a561d3916cfa8db9e817aa649e0744b35588cf5a1b36c2533970",
+        "75776ec8690249896429faf0fa415f9e77ea8cad2fb240c46fbc8e3852b81310",
+        "328272b8e088305bfe9c10275135e7bc720585797e9b9011b3fe86e0854b9cb4",
+        "85df3b55710e80cc9e53bff1074c13a2b90fa32b4dda20b790ebba4769afe690",
+        "8e2356eee7499caaa5f47f742c4ee7171239b9ccf8f18d468ffd143ce96498bd",
+        "e79bc0ca07a0723584f50f80e50ba0329bd10e6c477a1addd41a0539efecbb7d",
+        "8125165b4044f52bbefe9a8a59c9f95c064605e73315c9049d12218f6b3226d5",
+        "1ee6292c9cd8cb6055ccdd5bd846deec18516da49dc67006fcd4d1128747be47",
+        "1bb08304ec6e4a036723254cb1269878f8cd4918d2ddde8d2c30a7276a240e2b",
+        "fa8bf5a3e9779674c8de078179c3e3b84467da7c10a68b8bc4765f7ca6114566",
+        "02b67ff11b2e28de114415319c559e4cf17dde724d8431ac0437dfde7643dd93",
+        "0dda363a903821fad629b75d63cd579bc87954a32e9c4833e59c8c55e63cc5ea",
+        "5203107f7957b586f4c19e57672491d4a78dd22b7ba7686d183270b509de8e43",
+        "fa20cd0ca04bf26cca1905318296b156658ae642e79f7d46b5f4f9088b746fb0",
+        "9ab94dc48fbdbca6594bb797bf9a34c3a65c21550bed1edc7fe75f32ea4b9eea",
+        "d914d15160c2fb5d858c538abea47c5c2ab22e45069f030197369384e8c2a378",
+        "f0e3527e6f8e20419e37993764aae40275f9c7be0080f8cc66f279da1e60613c",
+        "c4f0ad1df76a0b2654123caa2b6862ccfe70f56e6728e1261ebe734e9ef2018f",
+        "35c59e3bb08e21076c6fb2b215152fbb9d4362502a780bc655bdc58807775c2a",
+        "00f48486f5328451ebb5cf2d66883ddcf451c31bda245bf29650a8ecbed0585d",
+        "7658cfdd02d8e4114b554092cc62c124d47795c7f45396b143085322fe5d0bf3",
+        "bd3a3593cc22147298aa13e1113c82a7c8065dfaeb1240d028caac656ee3461b",
+        "84470e23a4cfa2d0fb9f8e9398219057a0f9126db398e06b4bde275b4f460806",
+        "ac43e547805a25abcabae23250e3e118d94cd32d666214991c6e40d3b3e789f6",
+        "26cc11ec1ed7c09df32388a6feb86fbdbc41a6abc135378302a2abf4095a49ca",
+        "e8c1a9db1337a23613148d129731a406e18c49746559c89de665fa1290a4b28b",
+        "7e0ce7ff054e0e03213421c4c8bcb03d37d9b944b4ac6a0cfe9d178a9c4782ac",
+        "e10858ec97bea8f91a4a853490e01064943d8476ac1553ff106f41e6148b2781",
+        "c07e0030c525498848a38559ad4747a65e381e3e1c6149d452721ff8c3f20198",
+        "90bc35cc765436f32f68a71cce8d5f7e5bc2b9c3c14c0827add780b95605dc9a",
+        "008567f2179659db5ee9e6110ee9c9dea56a1300e6a7fcca7db97f4291e6afb4",
+        "1a3cebf827ef26924fe6a0c71536a549af54201a55d4b36a3c3ed0c599f8c820",
+        "825a63f5053ed60fe091e7b91edaf8985372c6a1e5e049654a25aeaedc5dcb70"
+      ],
+      "outputContextHash": "7f08b8fa47f3e4866f79d22a9c8bf6990c610fee09f751bc523fc1c37e9fed33",
+      "reviewedAt": "2026-11-12T08:53:25.817Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

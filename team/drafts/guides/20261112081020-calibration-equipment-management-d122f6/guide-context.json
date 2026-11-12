@@ -89,6 +89,10 @@
     {
       "term": "Cutover",
       "definition": "The point at which the new register becomes the working record and the old sources stop being updated."
+    },
+    {
+      "term": "Baseline",
+      "definition": "A starting measurement used for comparison, collected consistently over time."
     }
   ],
   "roles": [
@@ -119,7 +123,10 @@
     "Follow-up owner",
     "Maintenance lead",
     "Maintenance technician",
-    "Workflow owner"
+    "Workflow owner",
+    "Coordinator",
+    "Evaluation lead",
+    "Qualified specialist"
   ],
   "recordNames": [
     "Scope list",
@@ -181,7 +188,15 @@
     "Pilot results",
     "Cutover plan",
     "Role-based job aids",
-    "Issues list"
+    "Issues list",
+    "Instrument records",
+    "Exception log",
+    "Overdue or recently extended items list",
+    "Review findings and actions",
+    "Review record",
+    "Inspection records",
+    "Evaluation records",
+    "Approved answers"
   ],
   "example": {
     "label": "Illustrative example",
@@ -318,6 +333,22 @@
         "When to switch to the new register and who signs off",
         "How to retain old sources and when to use a fallback",
         "What training each role needs and how to address reported issues"
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Review performance, answer common questions and prepare a demonstration",
+      "summary": "The earlier unsupported claim has been removed, and no clear problems were found in the changed paragraphs.",
+      "bodyHash": "8207a571ab37d055c64fff84b154be17a43ab45c6995725b60430ed1c410faf9",
+      "decisions": [
+        "Which program improvements to prioritize",
+        "How to respond when review evidence is incomplete",
+        "Whether a question can be answered within the available evidence or needs specialist interpretation",
+        "Which records to migrate",
+        "How to set or change calibration intervals",
+        "How to handle out-of-tolerance and overdue instruments",
+        "Whether to proceed, seek clarification or reject after a demonstration",
+        "Whether an undemonstrated critical path is acceptable or needs follow-up"
       ]
     }
   ],
