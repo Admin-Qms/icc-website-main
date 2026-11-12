@@ -71,6 +71,14 @@
       "definition": "A planned check of equipment condition that produces a record with a result."
     },
     {
+      "term": "Planned maintenance",
+      "definition": "Maintenance that follows a schedule."
+    },
+    {
+      "term": "Unplanned maintenance",
+      "definition": "Maintenance that follows a fault or a report."
+    },
+    {
       "term": "Pilot",
       "definition": "A small, controlled trial of the migration using real data before the full import."
     },
@@ -160,16 +168,15 @@
     "Production logs",
     "Containment record",
     "Closure note",
-    "Equipment record",
     "Maintenance logs",
     "Equipment list",
+    "Equipment record",
     "Maintenance record",
     "Procedure notes",
-    "Inspection checklist",
-    "Inspection schedule",
+    "Checklist template",
     "Inspection record",
     "Maintenance request",
-    "Technician's notes",
+    "Retrieval test result",
     "Inventory",
     "Cleaning log",
     "Archive list",
@@ -181,13 +188,13 @@
     "Overdue or recently extended items list",
     "Approved answers",
     "Evaluation records",
+    "Inspection checklist",
     "Inspection signature",
     "Workflow map",
     "Register specification",
     "Review checklist",
     "Schedule rule",
     "Exception procedure",
-    "Retrieval test result",
     "Migration log",
     "Certificate review",
     "Interval change",
@@ -295,22 +302,22 @@
     {
       "slug": "maintenance-inspections",
       "title": "Link maintenance history and inspections to the equipment record",
-      "summary": "The earlier calibration finding is resolved. No clear problems were identified in the changed paragraphs.",
-      "bodyHash": "f3595e62460c2109cac482fc3a55246914258bbce6f7ff91f1d24b2c970c35ce",
+      "summary": "The earlier retrieval-test finding is resolved. No clear problems were identified in the changed paragraphs.",
+      "bodyHash": "d5967ebde0d4cb7b04fe353c60f80f98da3ca0e6dcfce1648eb630a318c23ab3",
       "decisions": [
         "Which maintenance events belong in each asset's history",
         "Which events require a calibration check before return to use and who decides",
-        "What fields and sign-off requirements maintenance records need",
-        "Whether planned maintenance has its own interval and status",
-        "What access and permissions each role needs",
-        "How maintenance events affect calibration status",
-        "What inspection checklist items and follow-up actions are needed",
-        "Who performs and reviews inspections and who provides backup",
+        "What fields, after-work checks and sign-offs maintenance records require",
+        "How planned maintenance is scheduled and how maintenance affects calibration status",
+        "Which roles may add or view maintenance and calibration information",
+        "What inspection checklist items and follow-up triggers to use",
+        "Who performs and reviews inspections, including arrangements for small teams",
         "How often inspections run for each equipment class",
-        "How checklist changes and versions are recorded",
-        "What retrieval-time target to use and how to handle missing evidence",
-        "How to correct or document incomplete records",
-        "How an auditor is given read-only access"
+        "How signatures, record corrections and checklist versions are managed",
+        "How to record and follow up missed inspections",
+        "Whether the evidence set can be retrieved within the team's target",
+        "How to address missing or incomplete evidence",
+        "How an auditor receives read-only access"
       ]
     },
     {
