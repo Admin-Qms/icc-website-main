@@ -49,6 +49,14 @@
     {
       "term": "Data dictionary",
       "definition": "A description of each field, including its meaning, who fills it, allowed values and whether it can be left empty."
+    },
+    {
+      "term": "Overdue",
+      "definition": "A status for an instrument that has passed its due date without calibration."
+    },
+    {
+      "term": "Extension",
+      "definition": "A deliberate decision by an authorized person to defer calibration, recorded with a reason and an end date."
     }
   ],
   "roles": [
@@ -73,7 +81,8 @@
     "Approver",
     "Reviewer",
     "Supplier",
-    "Calibrating laboratory"
+    "Calibrating laboratory",
+    "External laboratory"
   ],
   "recordNames": [
     "Scope list",
@@ -104,7 +113,17 @@
     "Review checklist",
     "Reviewer decision and rationale",
     "Shop floor label",
-    "Procedure"
+    "Procedure",
+    "Schedule",
+    "Weekly review",
+    "Monthly schedule performance counts",
+    "Notification rules",
+    "Escalation record",
+    "Extension record",
+    "Work instruction",
+    "Station card",
+    "Status board",
+    "Operator report"
   ],
   "example": {
     "label": "Illustrative example",
@@ -167,6 +186,27 @@
         "Whether to accept an instrument for use, restrict it or reject it",
         "Who may make or confirm each review outcome",
         "Whether the original intended use is suitable after reassessment"
+      ]
+    },
+    {
+      "slug": "due-dates-scheduling",
+      "title": "Run due-date tracking and the calibration schedule",
+      "summary": "The earlier link finding is resolved. No clear problems were found in the changed paragraphs.",
+      "bodyHash": "b7bf75b7af8954f0a6ebbf34d4474ee7ffbc8ef10e7773dceb9da105f3a1a494",
+      "decisions": [
+        "How to calculate or enter the next due date",
+        "How to define statuses and due-soon windows",
+        "How to spread clustered calibration work",
+        "How to cover instrument availability during external calibration",
+        "Who owns and reviews the calendar",
+        "How early calibration affects the next due date",
+        "Who receives notifications, when, and by what method",
+        "How to escalate overdue instruments and document extensions",
+        "Who covers notification duties during absence",
+        "What operators should do for each status",
+        "How to report damaged, abnormal or unlabelled instruments",
+        "How to provide status without a device and resolve tag-register disagreements",
+        "How to present upcoming work on the shop floor"
       ]
     }
   ],
