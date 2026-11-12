@@ -57,10 +57,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-11-12T08:24:08.059Z"
+    },
+    "certificates-traceability": {
+      "hash": "6753bfd1c2b5d9857d05b16cded8cb628fea1920f2b833a0a9fea810946e2a53",
+      "wordCount": 2050,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-12T08:28:29.114Z"
     }
   },
   "createdAt": "2026-11-12T08:10:20.967Z",
-  "updatedAt": "2026-11-12T08:24:18.696Z",
+  "updatedAt": "2026-11-12T08:28:37.024Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "calibration-equipment-management",
@@ -1148,7 +1155,7 @@
     "reviewedChapters": [],
     "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73"
   },
-  "contextHash": "3bfb617d3bdcf7ed996b9642bfa42dd283db1f137f986759a03c0fb220a66e7a",
+  "contextHash": "a7f30a3076e217353219fb007fb216d03654e173615de05f363b12738a1a2e92",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1690,6 +1697,165 @@
       ],
       "outputContextHash": "3bfb617d3bdcf7ed996b9642bfa42dd283db1f137f986759a03c0fb220a66e7a",
       "reviewedAt": "2026-11-12T08:24:18.693Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "certificates-traceability": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The earlier finding is resolved: the example confirms suitability for restricted use and requires reassessment before the restriction is lifted. No clear problems were found in the changed paragraphs.",
+      "glossary": [],
+      "roles": [
+        "Calibration coordinator",
+        "Quality lead",
+        "Certificate reviewer",
+        "Supplier",
+        "Calibrating laboratory",
+        "Auditor",
+        "Vendor"
+      ],
+      "recordNames": [
+        "Certificate",
+        "Equipment register",
+        "Calibration event",
+        "Supplier query and answer",
+        "Review checklist",
+        "Reviewer decision and rationale",
+        "Shop floor label",
+        "Procedure"
+      ],
+      "decisions": [
+        "Whether to attach a certificate or query the supplier",
+        "Whether traceability evidence is sufficient or more evidence is needed",
+        "Whether to accept an instrument for use, restrict it or reject it",
+        "Who may make or confirm each review outcome",
+        "Whether the original intended use is suitable after reassessment"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Attach and identify the certificate",
+            "section": "Attach and identify the certificate"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Attach and identify the certificate; semantic review verifies support",
+            "section": "Attach and identify the certificate"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Check what traceability means",
+            "section": "Check what traceability means"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Check what traceability means; semantic review verifies support",
+            "section": "Check what traceability means"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Decide acceptance and fitness for use",
+            "section": "Decide acceptance and fitness for use"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Decide acceptance and fitness for use; semantic review verifies support",
+            "section": "Decide acceptance and fitness for use"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "be28e274278d76af65febcfd92497298303a055aa2ec0b00b9f7781104d00dfc",
+      "contentHash": "7f737410993c106066ab098da526ce8aaf692a0f84781bbd4b33e9b1185b082d",
+      "paragraphHashes": [
+        "f60dab71add39e8054e25bb61770c508f3f38a689db487edee91700960e6c0b1",
+        "459a1544ad7baec190e5a6f34ece310f475db67948b8b182b177dad9288f2f64",
+        "034286ced0b3da4a84738b82cf43f14142951718ab9e56592889a0659f0c6a67",
+        "72c1df0c743e3d993c8dd88183a5037243a4521d0889b270bc696a4de8a0d718",
+        "691ada5a09374d44047114934c578b115069f805147a83902473c95730c939ba",
+        "3fc4458a876e80b91bf24fd4ffadb44c183c41de305b677c87c64e08b0164503",
+        "02ef605f36f7ae3a6eb34b54f38cc0cc60047e6faf8634083694dbb3dd5624b0",
+        "83482e9384d349aa2889e66e3663f4e5f46b042616b8ab485a4fd056055dc323",
+        "e377ae082b590dfdc99ef07a7f17f7ca1a6168f549149733a995b087c07d0d94",
+        "45299616b65263a1b76f12fb738052e090417b9e571c98d675d61ec497b959f8",
+        "abcda06660fd2d37d2b776bb5f7258165a52f682d341c73ddc0ff311b70eabda",
+        "67580622e0055898b0587c57b83d60cc8fca8057d2f87057afda394100a08ff4",
+        "d4f29a7b032d5b55eb3e4d54031a066a804094330ebc43b28e9d2f9c309d1eb0",
+        "c6e3d6cc98859f0b231cd99210f7447444d8ae83a9842ccf8c07fa76c3ebcf59",
+        "c4852c90bea02b5d0be8ed0bb49c968509128faabbfad5878431dfe81ccdcc5f",
+        "1f5f6ec414d4fc5257c8b0dcc56325b1905c2645dd7d68867f311f566b1d1c56",
+        "5e823d86c928de3e6534e421d279f64cbf9a44e7dfcfaf7d15f151c59164424d",
+        "a0e5168acedade48ddcfb6d4c6aa883fec01e61017d3f6bf23806e647f22779d",
+        "9cc24698fc15383f74fccddce7f19f189d8a9a0bda2306537edbb5022c92abe8",
+        "eeab3a3e67954c86083962961a8483c152b83b7cdd9220461866441ec52203be",
+        "3e2888a3efe4ab37718263f075477c859849ec0ad6386a0f75cbc466b948ff7a",
+        "096a4044139c7ad107b4d1e639425e9e255098eb1c52d3fbe13514a28a0348b2",
+        "c6d004dc790e9cd658de90994314eb3717c6a0d91133f83a207a3619d4de007f",
+        "474c63b3899b71dc59efb61eee284a09afef77583ce14b217b0681171f82788b",
+        "13a1a115864f68986cdb14d61079dfd42e35b5e765e7faa3b0989c5f3a96929b",
+        "aab6ebd9202500259aab8bd056d29bdc6c50e7f0b816c421648fc7a2a3959cfb",
+        "9e2623ff5e293972a45a91fb60f5a89b8e00699580485920bb2627c978b66cdf",
+        "12dea2c901e3b0d6870cc34aa8b5105e97988671076ed99d68bc848d882eab89",
+        "49251cfd15311ed8a2478aed42437a6fd7015e115af1dd091958c1ff9efb7da6",
+        "477e760e67e0ce2ae3e761a638a962af082b19ad2eaf88cad31dd09ca4ebdc48",
+        "876ec0db6ae0568878196eb031c2aa2de74830ff4770beb24cb6043b653d7c6f"
+      ],
+      "outputContextHash": "a7f30a3076e217353219fb007fb216d03654e173615de05f363b12738a1a2e92",
+      "reviewedAt": "2026-11-12T08:28:37.018Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

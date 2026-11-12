@@ -71,7 +71,9 @@
     "Certified consultant",
     "Backup",
     "Approver",
-    "Reviewer"
+    "Reviewer",
+    "Supplier",
+    "Calibrating laboratory"
   ],
   "recordNames": [
     "Scope list",
@@ -96,7 +98,13 @@
     "Data dictionary",
     "Instrument label",
     "Cleaned spreadsheet",
-    "Calibration results"
+    "Calibration results",
+    "Calibration event",
+    "Supplier query and answer",
+    "Review checklist",
+    "Reviewer decision and rationale",
+    "Shop floor label",
+    "Procedure"
   ],
   "example": {
     "label": "Illustrative example",
@@ -146,6 +154,19 @@
         "How to prepare and test the import",
         "How to format, apply and replace labels",
         "What access each role needs"
+      ]
+    },
+    {
+      "slug": "certificates-traceability",
+      "title": "Review certificates and keep the traceability chain",
+      "summary": "The earlier finding is resolved: the example confirms suitability for restricted use and requires reassessment before the restriction is lifted. No clear problems were found in the changed paragraphs.",
+      "bodyHash": "e6d231037bbb0b00d5b48c0a318155c7a5736b863981beac0e53626c24ef0f82",
+      "decisions": [
+        "Whether to attach a certificate or query the supplier",
+        "Whether traceability evidence is sufficient or more evidence is needed",
+        "Whether to accept an instrument for use, restrict it or reject it",
+        "Who may make or confirm each review outcome",
+        "Whether the original intended use is suitable after reassessment"
       ]
     }
   ],
