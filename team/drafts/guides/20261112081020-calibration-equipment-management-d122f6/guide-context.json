@@ -32,7 +32,7 @@
     },
     {
       "term": "Calibration coordinator",
-      "definition": "The person who manages the schedule, suppliers and register."
+      "definition": "The person who manages the calibration schedule, suppliers and register."
     },
     {
       "term": "Identity fields",
@@ -93,11 +93,10 @@
     "Operator",
     "Quality lead",
     "Instrument owner",
-    "Calibration coordinator",
     "Certificate reviewer",
+    "Calibration coordinator",
     "Deputy reviewer",
     "Supervisor",
-    "Station owner",
     "Purchasing clerk",
     "Auditor",
     "Evaluation group member",
@@ -123,14 +122,14 @@
     "Qualified specialist"
   ],
   "recordNames": [
-    "Instrument scope list",
-    "Spreadsheet or workbook",
-    "Instrument tag",
-    "Calibration certificate or report",
+    "Scope list",
+    "Instrument record",
     "Calibration request",
+    "Calibration certificate",
+    "Calibration report",
     "Equipment register",
-    "Calibration record",
-    "Reviewer decision",
+    "Instrument tag",
+    "Workflow map",
     "Owner assignments",
     "Acceptance criteria",
     "Scoring sheet",
@@ -139,7 +138,6 @@
     "Candidate summary",
     "Commitments and open questions",
     "Ranked shortlist",
-    "Instrument record",
     "Certificate",
     "Maintenance history",
     "Field list",
@@ -147,7 +145,6 @@
     "Instrument label",
     "Cleaned spreadsheet",
     "Calibration results",
-    "Calibration certificate",
     "Calibration event record",
     "Supplier query and answer",
     "Certificate review checklist",
@@ -190,7 +187,6 @@
     "Evaluation records",
     "Inspection checklist",
     "Inspection signature",
-    "Workflow map",
     "Register specification",
     "Review checklist",
     "Schedule rule",
@@ -208,16 +204,14 @@
     {
       "slug": "mapping-workflows",
       "title": "Map the calibration decision for every instrument",
-      "summary": "The changed paragraphs present no clear problems, and the previous review raised no findings.",
-      "bodyHash": "f655e5268a9306afd5d060365ee4f6069d8643a1b12c388a5d3a1972f6e3faa3",
+      "summary": "The previous finding is resolved: the revised paragraph treats editor and date information as clues and recommends checking other evidence before judging reliability.",
+      "bodyHash": "98ffc33a70851726180c9155e4e74e766530fa045f2d4849a4e01c201f91146e",
       "decisions": [
-        "Which instruments are in scope and which are excluded, with reasons",
-        "Whether an instrument is fit for use",
-        "Whether to send an instrument for calibration",
-        "Whether to accept a calibration result and release or hold the instrument",
-        "What the next due date should be",
-        "Who may act as a backup reviewer and under what limits",
-        "Who signs off acceptance criteria and judges demonstrations"
+        "Include or exclude an instrument from scope, with a reason for exclusion.",
+        "Keep an instrument in service, send it for calibration, hold it or remove it.",
+        "Accept or reject a calibration result for the intended use and decide whether to release the instrument.",
+        "Assign owners and backups for calibration decisions.",
+        "Set and sign off acceptance criteria for evaluating software."
       ]
     },
     {

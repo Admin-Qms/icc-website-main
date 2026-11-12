@@ -35,81 +35,81 @@
     ]
   },
   "productionSlotId": "2026-W46-slot-2",
-  "stage": "reviewing",
+  "stage": "writing",
   "pages": {
     "mapping-workflows": {
-      "hash": "e7adec05a98b0d23da5692e39be7a88a0b750c0514fbaa927af943188d13e179",
-      "wordCount": 2017,
+      "hash": "655aa131dfa459557c6b957f39d4fd9e0359c908e07b0182d06eeb5d1c512feb",
+      "wordCount": 2038,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T09:00:53.421Z"
+      "checkpointedAt": "2026-11-12T09:19:31.990Z"
     },
     "evaluating-software": {
       "hash": "e3c9c783048638b110866fecd3aa441774203ce0a89ddfd1965f4bf67b12e046",
       "wordCount": 2020,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T09:01:51.277Z"
+      "checkpointedAt": "2026-11-12T09:19:41.159Z"
     },
     "instrument-register": {
       "hash": "f51462244171337eea7643b8130037858cbf3f79ce07d63576b5cb150cbd0998",
       "wordCount": 2032,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T09:02:00.174Z"
+      "checkpointedAt": "2026-11-12T09:19:41.689Z"
     },
     "certificates-traceability": {
       "hash": "85e67f90902993efd073437ec54ed6e67533bedf01ca74c3d2bbc81f513e882d",
       "wordCount": 2098,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T09:03:58.896Z"
+      "checkpointedAt": "2026-11-12T09:19:42.202Z"
     },
     "due-dates-scheduling": {
       "hash": "e932d22c1c2e3c91e483422064a588bab43ec59a7364b3218d4c166e767d61fb",
       "wordCount": 2052,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T09:04:54.999Z"
+      "checkpointedAt": "2026-11-12T09:19:42.708Z"
     },
     "out-of-tolerance": {
       "hash": "831413b0eacb6ec12ccfcbba6b703c231b9f93c212c24686f12da6983000ae58",
       "wordCount": 2091,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T09:08:52.521Z"
+      "checkpointedAt": "2026-11-12T09:19:43.248Z"
     },
     "maintenance-inspections": {
       "hash": "588745017dc3ffa6d9cb5b53df7872108da15104dddfdf6ce20ce37b9cfa03ba",
       "wordCount": 2019,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T09:16:04.686Z"
+      "checkpointedAt": "2026-11-12T09:19:43.757Z"
     },
     "migration-planning": {
       "hash": "9ed5c4cb7ea7d0b263e28d717c1e341609bb1c16a4cc40e74f092224482e05da",
       "wordCount": 2056,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T09:16:15.734Z"
+      "checkpointedAt": "2026-11-12T09:19:44.327Z"
     },
     "ongoing-operation": {
       "hash": "a7c17db73e8e6913ee8e0839af0d16831b78c2447ec2600a832ac8cd08563f71",
       "wordCount": 2058,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T09:16:16.274Z"
+      "checkpointedAt": "2026-11-12T09:19:44.879Z"
     },
     "calibration-management-software": {
       "hash": "76e6ce25d57f1c9430e00a2d8d7f925b8c2366991f0510902d84138b8e617b70",
       "wordCount": 1531,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-11-12T09:16:16.860Z"
+      "checkpointedAt": "2026-11-12T09:19:45.459Z"
     }
   },
   "createdAt": "2026-11-12T08:10:20.967Z",
-  "updatedAt": "2026-11-12T09:16:44.892Z",
+  "updatedAt": "2026-11-12T09:19:45.465Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "calibration-equipment-management",
@@ -1197,7 +1197,7 @@
     "reviewedChapters": [],
     "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73"
   },
-  "contextHash": "340c3f7bffb98cbd638a04aba25c9453190588ada42d354c6abb1f9af09802c9",
+  "contextHash": "fea20523e9533f3cf57992f57e4e50a251f7191c85dcab456a55c522e1b054f4",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1207,7 +1207,7 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The changed paragraphs present no clear problems, and the previous review raised no findings.",
+      "summary": "The previous finding is resolved: the revised paragraph treats editor and date information as clues and recommends checking other evidence before judging reliability.",
       "glossary": [
         {
           "term": "Instrument owner",
@@ -1219,41 +1219,38 @@
         },
         {
           "term": "Calibration coordinator",
-          "definition": "The person who manages the schedule, suppliers and register."
+          "definition": "The person who manages the calibration schedule, suppliers and register."
         }
       ],
       "roles": [
         "Quality lead",
         "Instrument owner",
-        "Calibration coordinator",
         "Certificate reviewer",
+        "Calibration coordinator",
         "Deputy reviewer",
         "Supervisor",
-        "Station owner",
         "Purchasing clerk",
         "Operator",
         "Auditor"
       ],
       "recordNames": [
-        "Instrument scope list",
-        "Spreadsheet or workbook",
-        "Instrument tag",
-        "Calibration certificate or report",
+        "Scope list",
+        "Instrument record",
         "Calibration request",
+        "Calibration certificate",
+        "Calibration report",
         "Equipment register",
-        "Calibration record",
-        "Reviewer decision",
+        "Instrument tag",
+        "Workflow map",
         "Owner assignments",
         "Acceptance criteria"
       ],
       "decisions": [
-        "Which instruments are in scope and which are excluded, with reasons",
-        "Whether an instrument is fit for use",
-        "Whether to send an instrument for calibration",
-        "Whether to accept a calibration result and release or hold the instrument",
-        "What the next due date should be",
-        "Who may act as a backup reviewer and under what limits",
-        "Who signs off acceptance criteria and judges demonstrations"
+        "Include or exclude an instrument from scope, with a reason for exclusion.",
+        "Keep an instrument in service, send it for calibration, hold it or remove it.",
+        "Accept or reject a calibration result for the intended use and decide whether to release the instrument.",
+        "Assign owners and backups for calibration decisions.",
+        "Set and sign off acceptance criteria for evaluating software."
       ],
       "pass": true,
       "deterministic": {
@@ -1339,15 +1336,16 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "38dc2381cdc13d984ee80a91e59aa73ee2be41d3963bdaa379d1b1cee8a94c47",
-      "contentHash": "39fd1eaac797d71a777f5d368d37a798a32076fd199f8ccd1b59c540efee6f09",
+      "inputHash": "9c9e9be3398dfe81630e3821cc760d37b8bfebc81c32fd5a6ace490538345e99",
+      "contentHash": "e20753ab2d70c3c5b0b151b223c01f4a16433dc944a4b7fbd4f69eedc602df09",
       "paragraphHashes": [
         "b7f590fe7d4f8f063692dcca27345596d7362443f45c6516f573587ed7c7c945",
         "ebaae7f1f4934c10c68d8c9f852a7b48fc8b10fcdd6e502e50efc1c80a44e810",
         "d85307586d6f1dac4e1c78a023f0a55c586bdfbe379ad59040d6388345a21e05",
         "d945f6af96fe9867d75a96e80cd3654a8f316370342ae2ecf0e4256ba56651cf",
-        "085870d049bccc30c2c2821e2ee246be6516dcbff6ad3b630143e1333dda6ec7",
+        "9dfbc8cc53d42f2b0690f007d35cd807874af1bb8ec45c157a13347cb581e33b",
         "131919ab585785ba74af65ff5d46f0cc9510eec4aeb178b335cabeac914c3339",
+        "cedae3df0b1ae5f5563e07cb6cad8ff200df2034f19012e2fd1e05d942b33216",
         "8327aea4ee60b91235c1b76cc37b6e3bde07797e3edef5c802e86d186b8ea069",
         "c2139e1b5446c244be9c1577bfd368c5a169a08973da56971019c615c0e02148",
         "681325f688ecd8d2607e775f02eff659ed212283ce2d20c9dd171e9e7bf6f23b",
@@ -1360,7 +1358,7 @@
         "edfa6f6937dadb26d6c7b0d8740445c268451b6e3053bfad6872917e03a7e7d3",
         "95b6e014f95c35e812f34ae415652871f860dee27976899f6a428699682089f3",
         "4cfd3403b58b75eb176dffd48bce48a42c870904c9440723a21b712cdb77b3b0",
-        "4b3d3de11ac87302b524ce1f1d71bb8e4e04c4293d4c686e0825feb8c201f8b4",
+        "ab26b9fb5af01c56c51c0699add292f5498c219bfd4fc8283940897fe97558f8",
         "6f165a04b9526ed9082f87d8bdf48e1d13bfe75aa2c51d50c4ff9f929ef4fe03",
         "97d75da101feb95e76f5c34b637f0ab2d1c87953fe861c51d0e8f5188eb64e5c",
         "a200d5ba0faeb160502745e58f54b56d47c02535fd5e4dd44a130ba8a9e5c783",
@@ -1390,8 +1388,8 @@
         "9d1bbc0b960453d574d5610eea54b6a561da6c6032088118bf989a230e3b3116",
         "e87a19a48c9ec066df9cc998997d1cd25591ae10e5076633dc60798fc8cc2806"
       ],
-      "outputContextHash": "3cdec3fd253dc5c01d084a50daeba24a5aa2cddfe755c17108f69cff1df6c72a",
-      "reviewedAt": "2026-11-12T09:01:04.477Z",
+      "outputContextHash": "fd951ed6be56367bae8cafabfbf2ba48877ce12ad8d494f614b41b7e1deb44e5",
+      "reviewedAt": "2026-11-12T09:19:40.646Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "evaluating-software": {
@@ -1516,7 +1514,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "8bb9399c2e3847e71e29f27f97639a5db7a882fcf7bb93e79c4ca045173d5638",
+      "inputHash": "ea72e96f119e06321530112dea668ed78f390209eb65e78cb32aeb880b271744",
       "contentHash": "5c1e52a084b0387c6f5a56c9b77ebf27177a0bfbad4302437eb7dce75e76f3b4",
       "paragraphHashes": [
         "34a2c737b52c6404cb6f0e763283301e4ff93d9d3750e57fc9a6711454a4c8ad",
@@ -1549,9 +1547,11 @@
         "35ad0246a799d5fc8e38d95f12707b0ad703f5069b2194e7d8c8f7084c5fb86a",
         "c721475bbe9932f834206179f3de99e0fbf8aacaa7c14f7f8fb10599400e3c4c"
       ],
-      "outputContextHash": "60c32d1c9261dbe50d6fba17c80eba32cc7406e96fb0f666f030764a8a1adacf",
-      "reviewedAt": "2026-11-12T09:01:59.636Z",
-      "reviewer": "Configured independent chapter reviewer"
+      "outputContextHash": "6102d738bf00712c8cce6d9b49f6c5b47e252497b94be7f2f2076d72a6aa05cf",
+      "reviewedAt": "2026-11-12T09:19:41.163Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-12T09:01:59.636Z"
     },
     "instrument-register": {
       "claims": "passed",
@@ -1691,7 +1691,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "a696b7b91318574160879636073b10c01a074cbbff463b86d27e88e34c6b956d",
+      "inputHash": "25bc364e9923948570fac3b84c65de3cefaf70a516704ff697a1b67fbcc391e9",
       "contentHash": "a9815394e4a54759b9d410cc49d97c6f150a9d9891f3460526a11a73b0617380",
       "paragraphHashes": [
         "025ab883b55a1e97c25a8bf1c111b4848c09a3704788d044aca3924b29c232bc",
@@ -1727,8 +1727,8 @@
         "185912a6a69a1bd1b2467a6fbcb3bd586bee9413cab0488067aee9f9ec04fa97",
         "4a2e48e70ff7e3cbea3a04d44f3629b2e8d4aaa3a2e42467d0ff7c6d9e93cb03"
       ],
-      "outputContextHash": "7f03db5206bdacc6a8972fbbda69c4ddc27df7e412181d889842e9c235d2b7c5",
-      "reviewedAt": "2026-11-12T09:02:00.178Z",
+      "outputContextHash": "c6dcfd96e5b1aafe67a198480530344e0207bd20ede5987e0216d66cc7ff7f17",
+      "reviewedAt": "2026-11-12T09:19:41.693Z",
       "reviewer": "Configured independent chapter reviewer",
       "carried": true,
       "carriedFrom": "2026-11-12T08:24:18.693Z"
@@ -1861,7 +1861,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "3eebc73f9b76d7839b7fbf1292c01997ed28680c053d1587204f15108b40862e",
+      "inputHash": "d6d46e169f38142c8b54baba444bf74a90c9b1b54779cbff2c5c32414c3572bf",
       "contentHash": "17c42929af46d01dc86790ae056fe9c8fc5c981b73145415018103bb07589c2d",
       "paragraphHashes": [
         "f60dab71add39e8054e25bb61770c508f3f38a689db487edee91700960e6c0b1",
@@ -1896,9 +1896,11 @@
         "477e760e67e0ce2ae3e761a638a962af082b19ad2eaf88cad31dd09ca4ebdc48",
         "876ec0db6ae0568878196eb031c2aa2de74830ff4770beb24cb6043b653d7c6f"
       ],
-      "outputContextHash": "a8067fcad9af33e976d4292a9aff3f8f04d945a799c819b0b15ab2399ed1769c",
-      "reviewedAt": "2026-11-12T09:04:08.925Z",
-      "reviewer": "Configured independent chapter reviewer"
+      "outputContextHash": "a46ce34589ae37165c8af8d6b8ca2aa3f3851c2a1ee789455e162bca053977a3",
+      "reviewedAt": "2026-11-12T09:19:42.207Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-12T09:04:08.925Z"
     },
     "due-dates-scheduling": {
       "claims": "passed",
@@ -2035,7 +2037,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "45e38e7a2a6fc33dc9c9540911e11621ffb041136d009a99d99aa4e7e8575ec2",
+      "inputHash": "aede744ab80264fae598dc78b8f552b0c75ff7c83e1812fc832a2d19ab9151ee",
       "contentHash": "ecdaa90475ee85c6157ca47ea318ee342ff265f19828e42c9efff578cf51685b",
       "paragraphHashes": [
         "b48aecf5962205975380b908645d1d0590385243e4880848af2a19d5cba89cf3",
@@ -2071,9 +2073,11 @@
         "5cef1e631a115559eaf59f6cad877adb1fc553f1d55a046b47ff84149c1fea91",
         "7edfe27bc52c96dbda074837e666bdab14f291a40ec69db6a9ab202c099b3545"
       ],
-      "outputContextHash": "080bd7ea70fa1671a8a673beac91d535dbf5f17e366d57790a9b62dfca365d21",
-      "reviewedAt": "2026-11-12T09:05:08.585Z",
-      "reviewer": "Configured independent chapter reviewer"
+      "outputContextHash": "69eecfffa1105deab73f32ae56ff4e176de849f022493d3f63d4ad6425b77057",
+      "reviewedAt": "2026-11-12T09:19:42.712Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-12T09:05:08.585Z"
     },
     "out-of-tolerance": {
       "claims": "passed",
@@ -2217,7 +2221,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "1cf63d41c43ce2de6f23b21a7b42f1d4b5e76eb8b1012a8f5cb1b17742c21e85",
+      "inputHash": "a0cb5073f4634093f664eb1ff244fb344003a1343c8843bb4dfe7538412de845",
       "contentHash": "7a4a14d2da2c642392bf71b366f569fb0748b2520f4cf2cc6855cb47a24cdfe9",
       "paragraphHashes": [
         "5658b573f6bb1cc4c619ece427445326bcdedc742445278831676c3371d44eb7",
@@ -2262,9 +2266,11 @@
         "55acaa81b85f721c0a76443b53964cdd7d1d682f48aada97db03bb3570587886",
         "628e21041b02115eff0a72b434626428154049edd366901210ba33fe1a688267"
       ],
-      "outputContextHash": "5a2fde8a39bde62164747d695fedcd14221761a581f3e3eb4ba75637ff82de2a",
-      "reviewedAt": "2026-11-12T09:09:03.682Z",
-      "reviewer": "Configured independent chapter reviewer"
+      "outputContextHash": "74f03ac77445372d32d7c22fa0df93050fe26d6b24cf4e3c856c28032f332dd2",
+      "reviewedAt": "2026-11-12T09:19:43.252Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-12T09:09:03.682Z"
     },
     "maintenance-inspections": {
       "claims": "passed",
@@ -2414,7 +2420,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "e6a63b9f4fff6619c365637092a2b40678db7f9d0984c399927bbb8817ad967a",
+      "inputHash": "905df5031de796635b000438a801e162b872620f82b10298d6f322142c712a0a",
       "contentHash": "b9c7d23e3bda6527b9a917e4c17d57a24b97b2d3a0149b3289005d2ec7ed117a",
       "paragraphHashes": [
         "e33dd70d7ba4f157a86196e3424f3184abb32aaf25837f65072be2c89744302a",
@@ -2449,9 +2455,11 @@
         "0fe716cb94b719481dbc64707ba03c889392cc421ce3acb5de11417aafff4fa1",
         "e0d6a537afecd328cc626f8ad9e7b530fccaf0d46f40cae842567ee9d9523c88"
       ],
-      "outputContextHash": "9c9199550c5ea9c56dd64642f1ff661c90fffa3be84088afd0e48171153042e5",
-      "reviewedAt": "2026-11-12T09:16:15.137Z",
-      "reviewer": "Configured independent chapter reviewer"
+      "outputContextHash": "623b447f70e552342bc66404599e5fb63bbe6c63fa7bde5f85c2409cf2ecb915",
+      "reviewedAt": "2026-11-12T09:19:43.760Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-12T09:16:15.137Z"
     },
     "migration-planning": {
       "claims": "passed",
@@ -2586,7 +2594,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "8807bba07e7d493ef42d0cd508fed814817222e5059a83759bcaf136c69edbf8",
+      "inputHash": "8759b1a950de34c486c4afa0e5146ee78fad9d195819e0c699f189bf65656328",
       "contentHash": "b6ca32e8265ae67256a28b01630aac5037d8ba1379db68ba257c3ec966e30ee9",
       "paragraphHashes": [
         "ec0674cf5b8773fc3fe8277bef8c756b93167b75c493d6b1c0960180b08dda0a",
@@ -2623,8 +2631,8 @@
         "569f573f2c641df437adb3da993e92870140f2f2c71780635f79532755d04cc8",
         "5165509f9be7edf2e355e412e08ede491e13a71cbf414bee66dc98119155e85b"
       ],
-      "outputContextHash": "5b4b517d95604d682743ee63c04962b116fe7894eea16b8695e323ea384764e2",
-      "reviewedAt": "2026-11-12T09:16:15.737Z",
+      "outputContextHash": "d2fbc3a816b5433212a50401f9fbc512b67f077aea18eb1eeec6de002fb02548",
+      "reviewedAt": "2026-11-12T09:19:44.330Z",
       "reviewer": "Configured independent chapter reviewer",
       "carried": true,
       "carriedFrom": "2026-11-12T08:47:07.090Z"
@@ -2817,7 +2825,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "57cc6520cd158909edb1cfd87073121342066c89e2823a04c117e56091abe51f",
+      "inputHash": "741412571bac5323f2730b30981522fd2a57c9e501d0dce3732200c5dd7f3226",
       "contentHash": "cacb9fd86fbb007ab612072fcb644ebbe603caceb84202d39d2e66831ca2b64e",
       "paragraphHashes": [
         "2bc931bc3c3b35b7daa7d442f6f176389d11af5145d5a5aab237cf206fe58b5d",
@@ -2864,8 +2872,8 @@
         "1a3cebf827ef26924fe6a0c71536a549af54201a55d4b36a3c3ed0c599f8c820",
         "825a63f5053ed60fe091e7b91edaf8985372c6a1e5e049654a25aeaedc5dcb70"
       ],
-      "outputContextHash": "734d7da9a08d189694d96e9c72a8495455899fd447294c354f95f32c02a5dea3",
-      "reviewedAt": "2026-11-12T09:16:16.279Z",
+      "outputContextHash": "3d3b6d1297f3d2a9ade20f078d4ff3d67f761c2f57fe9d88dbb904d88bc21dd7",
+      "reviewedAt": "2026-11-12T09:19:44.883Z",
       "reviewer": "Configured independent chapter reviewer",
       "carried": true,
       "carriedFrom": "2026-11-12T09:12:17.901Z"
@@ -2988,7 +2996,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "90ae5fb86760c9f184de8c9eba53312ae9d4e660529251cb73af3bf1a1e9e7be",
+      "inputHash": "3427e66a5b43638d1bac860fd8cbbff59abde33d8af5e4ed70bd103bbe7cb393",
       "contentHash": "3c9078c8dd54b2898616f159d5b82f71adf1ba3c9cc3fb8b0144dc204b566dc4",
       "paragraphHashes": [
         "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
@@ -3014,8 +3022,8 @@
         "fac7476d3148265d005b266b86a31fec207ebc7a2d9296f6296cea2674ef0e6d",
         "381bea88846c12545649065fe79535e30f614f878a4644f98551cdf86d4db99d"
       ],
-      "outputContextHash": "340c3f7bffb98cbd638a04aba25c9453190588ada42d354c6abb1f9af09802c9",
-      "reviewedAt": "2026-11-12T09:16:16.866Z",
+      "outputContextHash": "fea20523e9533f3cf57992f57e4e50a251f7191c85dcab456a55c522e1b054f4",
+      "reviewedAt": "2026-11-12T09:19:45.463Z",
       "reviewer": "Configured independent chapter reviewer",
       "carried": true,
       "carriedFrom": "2026-11-12T08:58:33.753Z"
@@ -3023,27 +3031,7 @@
   },
   "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73",
   "outlineHash": "d96aec6a9acf5913f7b1d65528ea71ff04fafd52d74dc15ed72313b253273826",
-  "audit": {
-    "claims": "passed",
-    "consistency": "passed",
-    "repetition": "passed",
-    "unresolvedFindings": [],
-    "inputHash": "9057d9ad6007e6c0691d601cbc06eb7f3c77d92ad117ac410f7bdbfa6e1eb4f6",
-    "pageHashes": {
-      "calibration-management-software": "19850cd5b9d10972f6989716b08d5f47b8d14a1146b7d707866828793be5cf0e",
-      "mapping-workflows": "f655e5268a9306afd5d060365ee4f6069d8643a1b12c388a5d3a1972f6e3faa3",
-      "evaluating-software": "d2ba4d88ef85bd8dd192b5cf9e76edb7681018e24375b4ac25e8d1b3b3fdf1d4",
-      "instrument-register": "af0373f54291db5a82489828fef1fa8ec29ff2c7979c3c6660a9bc02c64b7b4d",
-      "certificates-traceability": "ff8aa839f05aa287a0a4f73cd0014b4e053c61bac1d346f84774c2a3a409d3e0",
-      "due-dates-scheduling": "8a4812bedeb823d6aad9c38562297f2b2df5d4043664e15819e5a933de2c9215",
-      "out-of-tolerance": "2b3ffbb2b8955829f79c0ce9421f113d7d49cf4c4ee05aa27afe3f10e90c1170",
-      "maintenance-inspections": "d5967ebde0d4cb7b04fe353c60f80f98da3ca0e6dcfce1648eb630a318c23ab3",
-      "migration-planning": "747b32defac1a427f30e877b8797b584ec81b0227e17147f7eb32a1d20114caf",
-      "ongoing-operation": "e071a91d554f7c00fb3a3ecd83f0c8c2085266b33aa85d471549aa0f30181823"
-    },
-    "reviewer": "Configured openai independent review",
-    "reviewedAt": "2026-11-12T09:16:44.890Z"
-  },
+  "audit": null,
   "generationCompletedAt": null,
   "finalReport": null
 }

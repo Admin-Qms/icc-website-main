@@ -31,9 +31,11 @@ A quality lead who cannot list the instruments in a single cell, name the person
 
 Begin with a floor walk rather than a spreadsheet. Take the list the team already uses, whether that is a shared workbook, a binder of tags, or a folder of certificates, and compare it with what is physically in use at the workstations. Walk the area with the instrument owners where possible, since they know which items are really in use. The point of the walk is not to audit anyone. It is to learn how reliable the current list is.
 
-The [ISO 9001 Auditing Practices Group](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) page, published by ISO/TC 176 and the International Accreditation Forum, describes the group as an informal source of papers on auditing quality management systems and says the papers are non-definitive and are not required criteria for an audit. This guide does not rely on them for statements about audit practice.
+The [ISO 9001 Auditing Practices Group](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) page describes an informal group that publishes auditing papers and says its papers are non-definitive. This guide does not rely on them for statements about audit practice.
 
 The page lists papers on monitoring and measuring resources and on measurement traceability, but it does not summarize their content, so nothing in this chapter should be read as a statement of what those papers say. For the purposes of mapping, the recommendation is narrower: the team should be able to show how it identifies and controls the resources it uses to monitor and measure.
+
+Note, too, who last edited each instrument's record and when. Treat these details as clues, not proof: check the update history where it exists and compare the record with other evidence, such as the certificate and the instrument itself, before judging how reliable a source is. Record what the walk finds beside each instrument, so it produces a usable starting point rather than a set of impressions.
 
 Use five elements to describe each decision in the workflow. They carry through the rest of this guide.
 
@@ -65,7 +67,7 @@ A certificate or report is issued and returned, sometimes by email to one person
 
 Write each stage on a card, name the person who holds the instrument or the paper at that moment, and mark where two people have to agree.
 
-The National Institute of Standards and Technology explains on its [metrological traceability page](https://www.nist.gov/metrology/metrological-traceability) that NIST adopts the international vocabulary definition: traceability is the property of a measurement result whereby the result can be related to a reference through a documented unbroken chain of calibrations, each contributing to the measurement uncertainty.
+The National Institute of Standards and Technology describes, on its [metrological traceability page](https://www.nist.gov/metrology/metrological-traceability), a documented unbroken chain of calibrations that links a measurement result to a reference.
 
 For a workflow map, the useful word is documented. The chain only helps a team if the documentation exists where someone can find it, so the map should show where each piece of documentation is created, where it is stored, and who is responsible for keeping it.
 

@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The changed paragraphs present no clear problems, and the previous review raised no findings.",
+  "summary": "The previous finding is resolved: the revised paragraph treats editor and date information as clues and recommends checking other evidence before judging reliability.",
   "glossary": [
     {
       "term": "Instrument owner",
@@ -18,41 +18,38 @@
     },
     {
       "term": "Calibration coordinator",
-      "definition": "The person who manages the schedule, suppliers and register."
+      "definition": "The person who manages the calibration schedule, suppliers and register."
     }
   ],
   "roles": [
     "Quality lead",
     "Instrument owner",
-    "Calibration coordinator",
     "Certificate reviewer",
+    "Calibration coordinator",
     "Deputy reviewer",
     "Supervisor",
-    "Station owner",
     "Purchasing clerk",
     "Operator",
     "Auditor"
   ],
   "recordNames": [
-    "Instrument scope list",
-    "Spreadsheet or workbook",
-    "Instrument tag",
-    "Calibration certificate or report",
+    "Scope list",
+    "Instrument record",
     "Calibration request",
+    "Calibration certificate",
+    "Calibration report",
     "Equipment register",
-    "Calibration record",
-    "Reviewer decision",
+    "Instrument tag",
+    "Workflow map",
     "Owner assignments",
     "Acceptance criteria"
   ],
   "decisions": [
-    "Which instruments are in scope and which are excluded, with reasons",
-    "Whether an instrument is fit for use",
-    "Whether to send an instrument for calibration",
-    "Whether to accept a calibration result and release or hold the instrument",
-    "What the next due date should be",
-    "Who may act as a backup reviewer and under what limits",
-    "Who signs off acceptance criteria and judges demonstrations"
+    "Include or exclude an instrument from scope, with a reason for exclusion.",
+    "Keep an instrument in service, send it for calibration, hold it or remove it.",
+    "Accept or reject a calibration result for the intended use and decide whether to release the instrument.",
+    "Assign owners and backups for calibration decisions.",
+    "Set and sign off acceptance criteria for evaluating software."
   ],
   "pass": true,
   "deterministic": {
@@ -138,15 +135,16 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "38dc2381cdc13d984ee80a91e59aa73ee2be41d3963bdaa379d1b1cee8a94c47",
-  "contentHash": "39fd1eaac797d71a777f5d368d37a798a32076fd199f8ccd1b59c540efee6f09",
+  "inputHash": "9c9e9be3398dfe81630e3821cc760d37b8bfebc81c32fd5a6ace490538345e99",
+  "contentHash": "e20753ab2d70c3c5b0b151b223c01f4a16433dc944a4b7fbd4f69eedc602df09",
   "paragraphHashes": [
     "b7f590fe7d4f8f063692dcca27345596d7362443f45c6516f573587ed7c7c945",
     "ebaae7f1f4934c10c68d8c9f852a7b48fc8b10fcdd6e502e50efc1c80a44e810",
     "d85307586d6f1dac4e1c78a023f0a55c586bdfbe379ad59040d6388345a21e05",
     "d945f6af96fe9867d75a96e80cd3654a8f316370342ae2ecf0e4256ba56651cf",
-    "085870d049bccc30c2c2821e2ee246be6516dcbff6ad3b630143e1333dda6ec7",
+    "9dfbc8cc53d42f2b0690f007d35cd807874af1bb8ec45c157a13347cb581e33b",
     "131919ab585785ba74af65ff5d46f0cc9510eec4aeb178b335cabeac914c3339",
+    "cedae3df0b1ae5f5563e07cb6cad8ff200df2034f19012e2fd1e05d942b33216",
     "8327aea4ee60b91235c1b76cc37b6e3bde07797e3edef5c802e86d186b8ea069",
     "c2139e1b5446c244be9c1577bfd368c5a169a08973da56971019c615c0e02148",
     "681325f688ecd8d2607e775f02eff659ed212283ce2d20c9dd171e9e7bf6f23b",
@@ -159,7 +157,7 @@
     "edfa6f6937dadb26d6c7b0d8740445c268451b6e3053bfad6872917e03a7e7d3",
     "95b6e014f95c35e812f34ae415652871f860dee27976899f6a428699682089f3",
     "4cfd3403b58b75eb176dffd48bce48a42c870904c9440723a21b712cdb77b3b0",
-    "4b3d3de11ac87302b524ce1f1d71bb8e4e04c4293d4c686e0825feb8c201f8b4",
+    "ab26b9fb5af01c56c51c0699add292f5498c219bfd4fc8283940897fe97558f8",
     "6f165a04b9526ed9082f87d8bdf48e1d13bfe75aa2c51d50c4ff9f929ef4fe03",
     "97d75da101feb95e76f5c34b637f0ab2d1c87953fe861c51d0e8f5188eb64e5c",
     "a200d5ba0faeb160502745e58f54b56d47c02535fd5e4dd44a130ba8a9e5c783",
@@ -189,7 +187,7 @@
     "9d1bbc0b960453d574d5610eea54b6a561da6c6032088118bf989a230e3b3116",
     "e87a19a48c9ec066df9cc998997d1cd25591ae10e5076633dc60798fc8cc2806"
   ],
-  "outputContextHash": "3cdec3fd253dc5c01d084a50daeba24a5aa2cddfe755c17108f69cff1df6c72a",
-  "reviewedAt": "2026-11-12T09:01:04.477Z",
+  "outputContextHash": "fd951ed6be56367bae8cafabfbf2ba48877ce12ad8d494f614b41b7e1deb44e5",
+  "reviewedAt": "2026-11-12T09:19:40.646Z",
   "reviewer": "Configured independent chapter reviewer"
 }
