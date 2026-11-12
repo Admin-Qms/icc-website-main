@@ -201,7 +201,7 @@
     {
       "id": "chapter-words",
       "pass": true,
-      "message": "2017 visible words",
+      "message": "2038 visible words",
       "page": "mapping-workflows"
     },
     {
@@ -657,12 +657,12 @@
     {
       "id": "total-words",
       "pass": true,
-      "message": "19974 total visible words; maximum 20,000 includes introduction"
+      "message": "19995 total visible words; maximum 20,000 includes introduction"
     },
     {
       "id": "cross-chapter-repetition",
       "pass": false,
-      "message": "mapping-workflows and certificates-traceability repeat a substantial passage; mapping-workflows and ongoing-operation repeat a substantial passage"
+      "message": "mapping-workflows and ongoing-operation repeat a substantial passage"
     },
     {
       "id": "audit-hash",
@@ -2570,8 +2570,8 @@
     {
       "id": "cross-chapter-repetition",
       "pass": false,
-      "message": "mapping-workflows and certificates-traceability repeat a substantial passage; mapping-workflows and ongoing-operation repeat a substantial passage"
+      "message": "mapping-workflows and ongoing-operation repeat a substantial passage"
     }
   ],
-  "wordCount": 19974
+  "wordCount": 19995
 }

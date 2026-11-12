@@ -35,7 +35,7 @@
     ]
   },
   "productionSlotId": "2026-W46-slot-2",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "655aa131dfa459557c6b957f39d4fd9e0359c908e07b0182d06eeb5d1c512feb",
@@ -109,7 +109,7 @@
     }
   },
   "createdAt": "2026-11-12T08:10:20.967Z",
-  "updatedAt": "2026-11-12T09:19:45.465Z",
+  "updatedAt": "2026-11-12T09:20:01.658Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "calibration-equipment-management",
@@ -3031,7 +3031,27 @@
   },
   "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73",
   "outlineHash": "d96aec6a9acf5913f7b1d65528ea71ff04fafd52d74dc15ed72313b253273826",
-  "audit": null,
+  "audit": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "unresolvedFindings": [],
+    "inputHash": "daf8769f3590ca5b67e95ba43987ccecc5f5086caf3aaf042fd16b2800955b69",
+    "pageHashes": {
+      "calibration-management-software": "19850cd5b9d10972f6989716b08d5f47b8d14a1146b7d707866828793be5cf0e",
+      "mapping-workflows": "98ffc33a70851726180c9155e4e74e766530fa045f2d4849a4e01c201f91146e",
+      "evaluating-software": "d2ba4d88ef85bd8dd192b5cf9e76edb7681018e24375b4ac25e8d1b3b3fdf1d4",
+      "instrument-register": "af0373f54291db5a82489828fef1fa8ec29ff2c7979c3c6660a9bc02c64b7b4d",
+      "certificates-traceability": "ff8aa839f05aa287a0a4f73cd0014b4e053c61bac1d346f84774c2a3a409d3e0",
+      "due-dates-scheduling": "8a4812bedeb823d6aad9c38562297f2b2df5d4043664e15819e5a933de2c9215",
+      "out-of-tolerance": "2b3ffbb2b8955829f79c0ce9421f113d7d49cf4c4ee05aa27afe3f10e90c1170",
+      "maintenance-inspections": "d5967ebde0d4cb7b04fe353c60f80f98da3ca0e6dcfce1648eb630a318c23ab3",
+      "migration-planning": "747b32defac1a427f30e877b8797b584ec81b0227e17147f7eb32a1d20114caf",
+      "ongoing-operation": "e071a91d554f7c00fb3a3ecd83f0c8c2085266b33aa85d471549aa0f30181823"
+    },
+    "reviewer": "Configured openai independent review",
+    "reviewedAt": "2026-11-12T09:20:01.655Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }
