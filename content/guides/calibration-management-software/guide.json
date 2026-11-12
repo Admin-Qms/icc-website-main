@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "topicId": "calibration-equipment-management",
+  "slug": "calibration-management-software",
+  "title": "Calibration management software for Canadian quality and operations teams",
+  "description": "How to choose and implement calibration management software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.",
+  "primaryKeyword": "calibration management software",
+  "keywords": [
+    "calibration management software",
+    "equipment calibration register",
+    "calibration due date tracking"
+  ],
+  "audience": "Canadian quality and operations teams",
+  "author": "ISO Certification Consultants Editorial Team",
+  "date": "2026-11-12",
+  "introductionFile": "introduction.md",
+  "chapters": [
+    {
+      "slug": "mapping-workflows",
+      "file": "chapters/mapping-workflows.md"
+    },
+    {
+      "slug": "evaluating-software",
+      "file": "chapters/evaluating-software.md"
+    },
+    {
+      "slug": "instrument-register",
+      "file": "chapters/instrument-register.md"
+    },
+    {
+      "slug": "certificates-traceability",
+      "file": "chapters/certificates-traceability.md"
+    },
+    {
+      "slug": "due-dates-scheduling",
+      "file": "chapters/due-dates-scheduling.md"
+    },
+    {
+      "slug": "out-of-tolerance",
+      "file": "chapters/out-of-tolerance.md"
+    },
+    {
+      "slug": "maintenance-inspections",
+      "file": "chapters/maintenance-inspections.md"
+    },
+    {
+      "slug": "migration-planning",
+      "file": "chapters/migration-planning.md"
+    },
+    {
+      "slug": "ongoing-operation",
+      "file": "chapters/ongoing-operation.md"
+    }
+  ],
+  "sources": [
+    {
+      "id": "icc-calibration-maintenance",
+      "sourceType": "primary",
+      "title": "ICC Assets (calibration and maintenance) module page",
+      "publisher": "ISO Certification Consultants Inc.",
+      "url": "https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "retrievedAt": "2026-11-12",
+      "supportedClaims": [
+        "The published ICC page describes an equipment register in which each piece of equipment carries its calibration interval and attached certificates, with status labels such as due soon and in date. These are published descriptions; availability and configuration must be confirmed in a demonstration and no capability is advertised as verified.",
+        "The page describes a calibration record showing that calibration was recorded, a certificate attached and the next due date set.",
+        "The page states the register can be loaded in bulk from Excel; it gives no detail on how the import works.",
+        "The page states maintenance is recorded against the same equipment record.",
+        "The page describes inspection checklists built once and scheduled as programmes, with performed and reviewed e-signatures on inspection records.",
+        "The page describes QR labels on equipment that open its record on the shop floor, and PIN access for people without a desk login.",
+        "The page describes an auditor view showing the equipment register with calibration status and next due date, certificates attached to each instrument, completed inspection records with both signatures and timestamps, and maintenance history for each asset.",
+        "The page maps the module to ISO 9001:2015 clauses 7.1.5 and 7.1.3, ISO 13485:2016 clause 7.6 and ISO/IEC 17025:2017 clause 6.4; a mapping is not a statement that software alone satisfies a clause.",
+        "The page describes setup with the vendor: processes mapped, modules configured, standards onboarded and training included, with a certified consultant reviewing the configuration through to the audit.",
+        "The page states every AI output is a suggestion that a person reviews before it enters a controlled record.",
+        "The page does not state due-date alerts or reminders, pricing, or how the register import works; those are evaluation questions."
+      ]
+    },
+    {
+      "id": "nist-traceability",
+      "sourceType": "primary",
+      "title": "Metrological Traceability: Frequently Asked Questions and NIST Policy",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "url": "https://www.nist.gov/metrology/metrological-traceability",
+      "retrievedAt": "2026-11-12",
+      "supportedClaims": [
+        "NIST adopts the VIM definition (JCGM 200:2012, 2.41): traceability is the property of a measurement result whereby the result can be related to a reference through a documented unbroken chain of calibrations, each contributing to the measurement uncertainty.",
+        "Traceability is a property of a measurement result, not of an instrument, report or laboratory; merely having an instrument calibrated is not enough to make a result traceable.",
+        "The chain must be a complete, explicitly described and documented series of calibrations linking the result to each intermediate reference and to the highest reference claimed, and each link contributes to the measurement uncertainty.",
+        "Each link needs a defined measured property, a description of the measurement system and a specification of the reference used; the reference is typically a national or international standard.",
+        "Internal measurement assurance programs must establish the status of the measurement system and the reference at the relevant times.",
+        "The provider of a result is responsible for supporting its traceability claim and the user is responsible for assessing that claim; the provider must document the process and chain so a user can assess it.",
+        "Traceability does not signify or guarantee fitness for purpose; results can be traceable yet have uncertainty too large for a given use.",
+        "Using a standard reference material does not by itself make a user's results traceable; the user must document an unbroken chain and an assurance program.",
+        "Laboratory accreditation shows competence; it does not certify the traceability of a specific result.",
+        "NIST certifies traceability only for results it provides itself and does not certify the claims of others."
+      ]
+    },
+    {
+      "id": "apg-overview",
+      "sourceType": "primary",
+      "title": "ISO 9001 Auditing Practices Group",
+      "publisher": "ISO/TC 176 and International Accreditation Forum (IAF)",
+      "url": "https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "retrievedAt": "2026-11-12",
+      "supportedClaims": [
+        "The Auditing Practices Group was established in 2003 as an on-line source of papers on auditing quality management systems; it is an informal group drawn from ISO/TC 176 and the IAF.",
+        "The papers are non-definitive and are not required criteria for an audit.",
+        "The page lists papers titled Monitoring and measuring resources and Measurement traceability under auditing to ISO 9001:2015; this page does not summarize their content.",
+        "An August 2024 news item on the page says the resources paper was revised, that resources are a key element of a quality management system, and that auditors should consider how the resource requirements in clause 7.1 relate to other requirements.",
+        "The page does not discuss calibration intervals, software or documented information."
+      ]
+    }
+  ],
+  "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "researchSnapshotHash": "10ac21bf78b24f4ccf757639d10daa27f5c670dd21f9ace501fa0d76089120b4",
+  "productionSlotId": "2026-W46-slot-2",
+  "publishedAt": "2026-11-12T09:28:59.316Z"
+}
