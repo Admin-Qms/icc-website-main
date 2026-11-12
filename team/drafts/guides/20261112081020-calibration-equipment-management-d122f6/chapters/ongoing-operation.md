@@ -20,6 +20,19 @@ sourceIds:
   - apg-overview
   - nist-traceability
 capabilityIds: []
+wordCount: 2052
+readTime: 11
+image:
+  src: /images/guides/calibration-management-software/ongoing-operation.webp
+  alt: >-
+    a quality lead reviewing completed evidence beside a final inspection
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: b0d214847bb2f5e6cb5b1c67234ffbef366e708aa52d910ef809909379da221b
+  sha256: b0d214847bb2f5e6cb5b1c67234ffbef366e708aa52d910ef809909379da221b
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Review the workflow and evidence
 

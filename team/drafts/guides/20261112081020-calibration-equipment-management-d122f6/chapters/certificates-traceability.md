@@ -19,6 +19,20 @@ sourceIds:
   - icc-calibration-maintenance
   - nist-traceability
 capabilityIds: []
+wordCount: 2098
+readTime: 11
+image:
+  src: >-
+    /images/guides/calibration-management-software/certificates-traceability.webp
+  alt: >-
+    a quality lead reviewing a calibration certificate beside an inspection
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: bf7f9c1e647b9e2864bb004c645837248ea72bcf73c9afd1680859b8f51ab94c
+  sha256: bf7f9c1e647b9e2864bb004c645837248ea72bcf73c9afd1680859b8f51ab94c
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Attach and identify the certificate
 

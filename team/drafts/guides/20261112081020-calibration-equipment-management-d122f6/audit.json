@@ -3,7 +3,7 @@
   "consistency": "passed",
   "repetition": "passed",
   "unresolvedFindings": [],
-  "inputHash": "daf8769f3590ca5b67e95ba43987ccecc5f5086caf3aaf042fd16b2800955b69",
+  "inputHash": "3d4271ae8c7df8c334916ff0396b036d8410f4411984bc2b6da164bb67f6c434",
   "pageHashes": {
     "calibration-management-software": "19850cd5b9d10972f6989716b08d5f47b8d14a1146b7d707866828793be5cf0e",
     "mapping-workflows": "98ffc33a70851726180c9155e4e74e766530fa045f2d4849a4e01c201f91146e",
@@ -14,8 +14,8 @@
     "out-of-tolerance": "2b3ffbb2b8955829f79c0ce9421f113d7d49cf4c4ee05aa27afe3f10e90c1170",
     "maintenance-inspections": "d5967ebde0d4cb7b04fe353c60f80f98da3ca0e6dcfce1648eb630a318c23ab3",
     "migration-planning": "747b32defac1a427f30e877b8797b584ec81b0227e17147f7eb32a1d20114caf",
-    "ongoing-operation": "e071a91d554f7c00fb3a3ecd83f0c8c2085266b33aa85d471549aa0f30181823"
+    "ongoing-operation": "70d5de0c3f7ce0a4a7bf4d2fa728b1cab406abebdb5237d62d82ecb27f8bf855"
   },
   "reviewer": "Configured openai independent review",
-  "reviewedAt": "2026-11-12T09:20:01.655Z"
+  "reviewedAt": "2026-11-12T09:22:40.349Z"
 }

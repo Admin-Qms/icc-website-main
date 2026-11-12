@@ -20,6 +20,19 @@ sourceIds:
   - icc-calibration-maintenance
   - nist-traceability
 capabilityIds: []
+wordCount: 2032
+readTime: 11
+image:
+  src: /images/guides/calibration-management-software/instrument-register.webp
+  alt: >-
+    an operator scanning a label on a micrometer case beside an assembly
+    station; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 72a6b1c38ffc1cff0173d973c27038734683e4cb7e2729e097082695b6a90feb
+  sha256: 72a6b1c38ffc1cff0173d973c27038734683e4cb7e2729e097082695b6a90feb
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Define the register record
 

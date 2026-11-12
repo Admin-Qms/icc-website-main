@@ -19,6 +19,19 @@ imageBrief: >-
 sourceIds:
   - icc-calibration-maintenance
 capabilityIds: []
+wordCount: 2056
+readTime: 11
+image:
+  src: /images/guides/calibration-management-software/migration-planning.webp
+  alt: >-
+    a receiving inspector sorting calibration records beside incoming material
+    racks; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: b032db198defcd95d5fb93ca110e81bbcc9f79f7485800b418f2111fa82ed2fe
+  sha256: b032db198defcd95d5fb93ca110e81bbcc9f79f7485800b418f2111fa82ed2fe
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Inventory and clean existing records
 

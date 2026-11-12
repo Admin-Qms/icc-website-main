@@ -22,6 +22,20 @@ sourceIds:
   - apg-overview
   - nist-traceability
 capabilityIds: []
+wordCount: 2038
+readTime: 11
+image:
+  src: /images/guides/calibration-management-software/mapping-workflows.webp
+  alt: >-
+    a quality technician walking a production line with a clipboard of
+    instrument tags beside a CNC machine; authentic manufacturing environment,
+    no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: dd5e7a30d37d779d4c3585cc2f194933898e26f71c248834dfd86af9cb2cd712
+  sha256: dd5e7a30d37d779d4c3585cc2f194933898e26f71c248834dfd86af9cb2cd712
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Start with the instrument that cannot be found
 

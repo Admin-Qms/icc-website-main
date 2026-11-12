@@ -21,6 +21,19 @@ sourceIds:
   - nist-traceability
   - apg-overview
 capabilityIds: []
+wordCount: 2091
+readTime: 11
+image:
+  src: /images/guides/calibration-management-software/out-of-tolerance.webp
+  alt: >-
+    a quality technician isolating a rejected gauge at a marked inspection
+    bench; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 5657dd2200d693da027eaa0a3b74eac6c8c869d2b6dc10c6a79c76e88f99522c
+  sha256: 5657dd2200d693da027eaa0a3b74eac6c8c869d2b6dc10c6a79c76e88f99522c
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Recognize an exception
 

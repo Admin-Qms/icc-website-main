@@ -19,6 +19,19 @@ imageBrief: >-
 sourceIds:
   - icc-calibration-maintenance
 capabilityIds: []
+wordCount: 2052
+readTime: 11
+image:
+  src: /images/guides/calibration-management-software/due-dates-scheduling.webp
+  alt: >-
+    a line operator scanning an instrument label beside a guarded press;
+    authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 545748bc3fa339c9b802e31073b138ce83b6b9e42b90db60a46b4f3850a3f4d4
+  sha256: 545748bc3fa339c9b802e31073b138ce83b6b9e42b90db60a46b4f3850a3f4d4
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Turn intervals into a schedule
 

@@ -19,6 +19,19 @@ sourceIds:
   - icc-calibration-maintenance
   - apg-overview
 capabilityIds: []
+wordCount: 2019
+readTime: 11
+image:
+  src: /images/guides/calibration-management-software/maintenance-inspections.webp
+  alt: >-
+    two inspectors reviewing a completed inspection record beside a fabrication
+    cell; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: openai
+  sourceId: 6fbbf69325f22d7b40b871fdec2a8ecebe19ec270c0b29f17ddb00114855cf30
+  sha256: 6fbbf69325f22d7b40b871fdec2a8ecebe19ec270c0b29f17ddb00114855cf30
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Keep maintenance on the same record
 

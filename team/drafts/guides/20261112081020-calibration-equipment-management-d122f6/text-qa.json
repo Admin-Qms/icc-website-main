@@ -1,5 +1,5 @@
 {
-  "pass": false,
+  "pass": true,
   "checks": [
     {
       "id": "schema-version",
@@ -633,7 +633,7 @@
     {
       "id": "chapter-words",
       "pass": true,
-      "message": "2058 visible words",
+      "message": "2052 visible words",
       "page": "ongoing-operation"
     },
     {
@@ -657,12 +657,12 @@
     {
       "id": "total-words",
       "pass": true,
-      "message": "19995 total visible words; maximum 20,000 includes introduction"
+      "message": "19989 total visible words; maximum 20,000 includes introduction"
     },
     {
       "id": "cross-chapter-repetition",
-      "pass": false,
-      "message": "mapping-workflows and ongoing-operation repeat a substantial passage"
+      "pass": true,
+      "message": "No substantially copied paragraphs across guide pages"
     },
     {
       "id": "audit-hash",
@@ -2540,6 +2540,12 @@
     {
       "id": "internal-link",
       "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
       "message": "Internal destination must exist: /contact/",
       "page": "ongoing-operation"
     },
@@ -2566,12 +2572,6 @@
       "message": "The closing paragraph must invite a software demonstration at /contact/"
     }
   ],
-  "failures": [
-    {
-      "id": "cross-chapter-repetition",
-      "pass": false,
-      "message": "mapping-workflows and ongoing-operation repeat a substantial passage"
-    }
-  ],
-  "wordCount": 19995
+  "failures": [],
+  "wordCount": 19989
 }
