@@ -1,0 +1,29 @@
+{
+  "claims": "failed",
+  "consistency": "passed",
+  "repetition": "passed",
+  "unresolvedFindings": [
+    "The mapping chapter says the Auditing Practices Group papers provide context for what auditors tend to look at and that auditors can ask about measuring resources. The supplied APG evidence says the papers are non-definitive and lists their titles, but does not summarize their contents or establish what auditors tend to examine. The August 2024 item supports only the stated point about clause 7.1 relating to other requirements; keep broader auditor-behavior statements clearly framed as recommendations or remove them.",
+    "The certificate-review chapter turns NIST’s statements about uncertainty into a checklist requirement that a certificate state uncertainty, and its example treats a missing uncertainty statement as grounds to withhold acceptance. The supplied NIST evidence says each link contributes to measurement uncertainty and specifies information needed for each link, but does not say that every certificate must explicitly state uncertainty or that its absence alone invalidates a traceability claim. Qualify this as the organization’s review rule, not a direct NIST requirement.",
+    "Several auditor-behavior claims are not supported by the supplied sources, including that auditors ask about unexplained record changes, that an auditor will see particular gaps, and that specific records are what auditors rely on. The ICC page describes an auditor view, and the APG evidence gives only limited context; neither supports these broader claims about audit practice.",
+    "The guide makes general capability claims not established by the supplied evidence, including that software can make a reviewer’s decision attributable and dated or hold values and comparisons. Present these as capabilities to test rather than facts about software, and do not imply they are verified ICC capabilities.",
+    "The FAQ states that certification depends on the whole management system and an audit. The supplied evidence supports that an ICC clause mapping is not a statement that software alone satisfies a clause, but does not establish this broader certification claim. Cite suitable primary evidence or narrow the answer to the supported limitation.",
+    "The schedule chapter uses NIST’s statement about internal measurement-assurance programs establishing measurement-system and reference status at relevant times as a reason for keeping the calibration schedule current. That is an extrapolation; distinguish the guide’s scheduling recommendation from what NIST specifically states.",
+    "The certificate chapter states as fact that a calibration certificate is evidence that a calibration event took place and produced a result. The supplied ICC evidence describes a calibration record with a certificate attached, but does not establish this general claim about certificates. Cite supporting evidence or frame it as the team’s working assumption."
+  ],
+  "inputHash": "7ef4fac56be5dd73eb7470df4592d4be98cfc626748be4321c7f46214eac1cc8",
+  "pageHashes": {
+    "calibration-management-software": "19850cd5b9d10972f6989716b08d5f47b8d14a1146b7d707866828793be5cf0e",
+    "mapping-workflows": "5a509e64e33a65039c659e048f9d2388a668c27b69ba6be5677e36addd78cd6f",
+    "evaluating-software": "c5965255e2964166a8813738c5ed67880a5b2ecd82275e68a700597fadd7a0d7",
+    "instrument-register": "af0373f54291db5a82489828fef1fa8ec29ff2c7979c3c6660a9bc02c64b7b4d",
+    "certificates-traceability": "e6d231037bbb0b00d5b48c0a318155c7a5736b863981beac0e53626c24ef0f82",
+    "due-dates-scheduling": "b7bf75b7af8954f0a6ebbf34d4474ee7ffbc8ef10e7773dceb9da105f3a1a494",
+    "out-of-tolerance": "7d6014c19a2219f0082b45bd9eed04351d92b40614af034c70040c68d2461381",
+    "maintenance-inspections": "88a0a37d5cdfd396d2e30151d72f045e2b2551332184e30bdd5c4004db188efc",
+    "migration-planning": "747b32defac1a427f30e877b8797b584ec81b0227e17147f7eb32a1d20114caf",
+    "ongoing-operation": "8207a571ab37d055c64fff84b154be17a43ab45c6995725b60430ed1c410faf9"
+  },
+  "reviewer": "Configured openai independent review",
+  "reviewedAt": "2026-11-12T08:59:12.497Z"
+}
