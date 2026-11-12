@@ -6,11 +6,11 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The earlier page-shell heading finding is resolved. No clear issue was found in the changed paragraph.",
+  "summary": "The changed paragraphs present no clear problems, and the previous review raised no findings.",
   "glossary": [
     {
       "term": "Instrument owner",
-      "definition": "The person who uses or looks after the instrument and answers for its condition between calibrations."
+      "definition": "The person who uses or looks after an instrument and answers for its condition between calibrations."
     },
     {
       "term": "Certificate reviewer",
@@ -23,8 +23,8 @@
   ],
   "roles": [
     "Quality lead",
-    "Calibration coordinator",
     "Instrument owner",
+    "Calibration coordinator",
     "Certificate reviewer",
     "Deputy reviewer",
     "Supervisor",
@@ -34,24 +34,25 @@
     "Auditor"
   ],
   "recordNames": [
-    "Scope list",
-    "Calibration workbook",
-    "Calibration request",
-    "Certificate",
+    "Instrument scope list",
+    "Spreadsheet or workbook",
     "Instrument tag",
+    "Calibration certificate or report",
+    "Calibration request",
     "Equipment register",
     "Calibration record",
-    "Workflow map",
+    "Reviewer decision",
+    "Owner assignments",
     "Acceptance criteria"
   ],
   "decisions": [
-    "Which instruments are in scope and which are excluded",
+    "Which instruments are in scope and which are excluded, with reasons",
     "Whether an instrument is fit for use",
-    "Whether to send an instrument for calibration, hold it or remove it",
-    "Whether a returned result is acceptable for the intended use",
-    "Whether to release an instrument to service",
-    "Who may act as a backup reviewer",
-    "Who signs off the acceptance criteria and judges demonstrations"
+    "Whether to send an instrument for calibration",
+    "Whether to accept a calibration result and release or hold the instrument",
+    "What the next due date should be",
+    "Who may act as a backup reviewer and under what limits",
+    "Who signs off acceptance criteria and judges demonstrations"
   ],
   "pass": true,
   "deterministic": {
@@ -137,15 +138,15 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "576b930cf1979d38529cae102aecf12960fcd72df3fdbe730fdf436317e30127",
-  "contentHash": "d8bd3d4f679c102a6a8a3552d5be6d8ed84daa4f5a2ada7744029a3c28ef1618",
+  "inputHash": "38dc2381cdc13d984ee80a91e59aa73ee2be41d3963bdaa379d1b1cee8a94c47",
+  "contentHash": "39fd1eaac797d71a777f5d368d37a798a32076fd199f8ccd1b59c540efee6f09",
   "paragraphHashes": [
     "b7f590fe7d4f8f063692dcca27345596d7362443f45c6516f573587ed7c7c945",
     "ebaae7f1f4934c10c68d8c9f852a7b48fc8b10fcdd6e502e50efc1c80a44e810",
     "d85307586d6f1dac4e1c78a023f0a55c586bdfbe379ad59040d6388345a21e05",
-    "0f9c456f2c9a529e0ad19a046acc076ce81ca801e6ffaec7ef193ff156ee6eaa",
-    "bcb19b270d6f48e6139c3d95c9624914a16f74230deee18d21bd5baaf969d35f",
-    "1db5b7876f8571830bb64bf835123b73789c53386449042c2080de2fcde124f9",
+    "d945f6af96fe9867d75a96e80cd3654a8f316370342ae2ecf0e4256ba56651cf",
+    "085870d049bccc30c2c2821e2ee246be6516dcbff6ad3b630143e1333dda6ec7",
+    "131919ab585785ba74af65ff5d46f0cc9510eec4aeb178b335cabeac914c3339",
     "8327aea4ee60b91235c1b76cc37b6e3bde07797e3edef5c802e86d186b8ea069",
     "c2139e1b5446c244be9c1577bfd368c5a169a08973da56971019c615c0e02148",
     "681325f688ecd8d2607e775f02eff659ed212283ce2d20c9dd171e9e7bf6f23b",
@@ -188,7 +189,7 @@
     "9d1bbc0b960453d574d5610eea54b6a561da6c6032088118bf989a230e3b3116",
     "e87a19a48c9ec066df9cc998997d1cd25591ae10e5076633dc60798fc8cc2806"
   ],
-  "outputContextHash": "9ed4f6b4294ddfdbe2583cdaeb3d5199450b2f1f8222f8aea5faedfa26f76455",
-  "reviewedAt": "2026-11-12T08:19:05.801Z",
+  "outputContextHash": "3cdec3fd253dc5c01d084a50daeba24a5aa2cddfe755c17108f69cff1df6c72a",
+  "reviewedAt": "2026-11-12T09:01:04.477Z",
   "reviewer": "Configured independent chapter reviewer"
 }

@@ -6,15 +6,11 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The earlier link finding is resolved. No clear problems were found in the changed paragraphs.",
+  "summary": "No previous findings remain unresolved, and the changed paragraphs present no clear problems. The cited NIST claim is supported.",
   "glossary": [
     {
-      "term": "Overdue",
-      "definition": "A status for an instrument that has passed its due date without calibration."
-    },
-    {
       "term": "Extension",
-      "definition": "A deliberate decision by an authorized person to defer calibration, recorded with a reason and an end date."
+      "definition": "An authorized, recorded decision to defer a calibration, with a reason and an end date."
     }
   ],
   "roles": [
@@ -24,43 +20,34 @@
     "Operator",
     "Supervisor",
     "Deputy",
-    "Vendor",
-    "External laboratory",
+    "Backup owner",
     "Approver",
-    "Auditor"
+    "Vendor",
+    "External laboratory"
   ],
   "recordNames": [
     "Equipment register",
     "Instrument record",
     "Calibration event",
-    "Certificate",
+    "Calibration certificate",
+    "Maintenance history",
     "Schedule",
-    "Weekly review",
-    "Monthly schedule performance counts",
-    "Notification rules",
-    "Escalation record",
-    "Extension record",
-    "Instrument label",
+    "Weekly report",
     "Work instruction",
-    "Station card",
-    "Status board",
-    "Instrument tag",
-    "Operator report"
+    "Printed status board",
+    "Instrument label",
+    "Status card"
   ],
   "decisions": [
-    "How to calculate or enter the next due date",
-    "How to define statuses and due-soon windows",
-    "How to spread clustered calibration work",
-    "How to cover instrument availability during external calibration",
-    "Who owns and reviews the calendar",
-    "How early calibration affects the next due date",
-    "Who receives notifications, when, and by what method",
-    "How to escalate overdue instruments and document extensions",
-    "Who covers notification duties during absence",
+    "How to calculate the next due date and handle early calibration",
+    "Which status values and due-soon windows to use",
+    "How to spread clustered calibration work and cover instruments sent to laboratories",
+    "Who owns the calendar and releases instruments",
+    "Who receives notifications, when, and how nonresponse is escalated",
+    "Whether to remove an overdue instrument from service, authorize an extension, or arrange urgent calibration",
+    "Who covers notification duties during an absence",
     "What operators should do for each status",
-    "How to report damaged, abnormal or unlabelled instruments",
-    "How to provide status without a device and resolve tag-register disagreements",
-    "How to present upcoming work on the shop floor"
+    "How to provide and reconcile status information when device access is unavailable"
   ],
   "pass": true,
   "deterministic": {
@@ -146,14 +133,14 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "3150e6459fbcad20a903baaa7a4d44e1b367e069e366e58a361c107aadef2c35",
-  "contentHash": "3cc345f31de8e9131665965de7870247f03e474c81cbe69df921ec28ca7a2a41",
+  "inputHash": "45e38e7a2a6fc33dc9c9540911e11621ffb041136d009a99d99aa4e7e8575ec2",
+  "contentHash": "ecdaa90475ee85c6157ca47ea318ee342ff265f19828e42c9efff578cf51685b",
   "paragraphHashes": [
     "b48aecf5962205975380b908645d1d0590385243e4880848af2a19d5cba89cf3",
     "189bf12bf3788dcfa006b6cb93f53b0fd99a5dee4b8c5b9a79dcf91a4e5910ae",
     "f1532b5169fdebe05770fb51239332db0954041868902b6af4a58b2720a79eb1",
     "54eee690c0ce4961dd3ef357925f1f9fcde1234cd2ba7ac6ec45bb919fee52f4",
-    "f711f86ddb3865046885d5bdd153c93ab33583f37f7a9b37ed8cd68780e5915c",
+    "7302cf10345edd43ca8c8c30a30f089af6a8fb7800ecea0c01ac88176e97b966",
     "f8032619560fd549c192da804879930e7088f1142d59ce7b0cb46892ed7a102a",
     "c14ecc25e157f22e8a3bb929826625c8a470c8c82fc9d1698ea59b41434aa18a",
     "5879f7c542d68ec312467a100910f548cb8ccf2a662c304c9ff5d6b89de90b69",
@@ -166,7 +153,7 @@
     "5ab6f6ad72c9e9d409fc790d019ccfdb0cf61ac3a316539eab2c070c1472dad8",
     "4d666e596a056d232dba37632d0457146e7939d575d37f1250e0b0c2e342ed53",
     "1e018756af518368c03663f7ad1c1807f222a896b857f94b2ee6a16de9272271",
-    "a252e7adf1f710a5a411b04d53edf849f1e652e4c16c5ff04022befdc1ad770d",
+    "0688c60a195a84f79ad7a4f3870364967016e4ff859bda9053c454f21c62a655",
     "c04133ce1a273165a35b8367115bae84b8899b07c1949e741173bc4af0933cb8",
     "d45400b4e5f3c50237a8b1db5dfc2be4ac26b49ed73cda0c49f0947225dd7ebd",
     "8e3decfb58165ec781265df8f0976821186fa92d3f5ca3731e6f2c173b4fb113",
@@ -182,7 +169,7 @@
     "5cef1e631a115559eaf59f6cad877adb1fc553f1d55a046b47ff84149c1fea91",
     "7edfe27bc52c96dbda074837e666bdab14f291a40ec69db6a9ab202c099b3545"
   ],
-  "outputContextHash": "661a2ae36582ae41dd7f791da63f9ef3e3b4ed666fce942336a7e4c1229c6d22",
-  "reviewedAt": "2026-11-12T08:33:15.082Z",
+  "outputContextHash": "080bd7ea70fa1671a8a673beac91d535dbf5f17e366d57790a9b62dfca365d21",
+  "reviewedAt": "2026-11-12T09:05:08.585Z",
   "reviewer": "Configured independent chapter reviewer"
 }

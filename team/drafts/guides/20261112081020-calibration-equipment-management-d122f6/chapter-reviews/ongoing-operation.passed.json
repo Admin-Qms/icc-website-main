@@ -6,50 +6,40 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The earlier unsupported claim has been removed, and no clear problems were found in the changed paragraphs.",
-  "glossary": [
-    {
-      "term": "Baseline",
-      "definition": "A starting measurement used for comparison, collected consistently over time."
-    }
-  ],
+  "summary": "No previous findings remain unresolved, and the changed paragraphs present no clear problems.",
+  "glossary": [],
   "roles": [
     "Quality lead",
+    "Evaluation lead",
     "Instrument owner",
     "Coordinator",
-    "Evaluation lead",
     "Reviewer",
     "Operator",
-    "Vendor",
+    "Approver",
     "Qualified specialist",
+    "Vendor",
     "Auditor"
   ],
   "recordNames": [
-    "Instrument records",
+    "Instrument record",
     "Exception log",
     "Overdue or recently extended items list",
-    "Review findings and actions",
-    "Review record",
     "Calibration certificate",
-    "Inspection records",
+    "Inspection record",
     "Maintenance history",
-    "Evaluation records",
+    "Review record",
     "Approved answers",
-    "Workflow map",
-    "Equipment register",
+    "Evaluation records",
     "Acceptance criteria",
     "Scoring sheet",
-    "Written vendor answers",
-    "Demonstration notes"
+    "Demonstration notes",
+    "Written vendor answers"
   ],
   "decisions": [
-    "Which program improvements to prioritize",
-    "How to respond when review evidence is incomplete",
-    "Whether a question can be answered within the available evidence or needs specialist interpretation",
-    "Which records to migrate",
-    "How to set or change calibration intervals",
-    "How to handle out-of-tolerance and overdue instruments",
-    "Whether to proceed, seek clarification or reject after a demonstration",
+    "Which improvement issues to prioritize and assign",
+    "What baseline measures to use",
+    "Whether an FAQ answer is supported or needs specialist interpretation",
+    "Whether to proceed, seek clarification or reject after the demonstration",
     "Whether an undemonstrated critical path is acceptable or needs follow-up"
   ],
   "pass": true,
@@ -196,8 +186,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "654ea0d4728c5f6b3496b0a957fa25e98030c70cc89ab87e77297b8877279f5a",
-  "contentHash": "d9c8e074e99c50c8a8e167009d2dd2921fd416f20f4897d1fa65d683c9003af5",
+  "inputHash": "eff5c4d9ea0de1ea6a1eb889ee7dba1b694cf3f1a41ee6dff051bc2be136e9fc",
+  "contentHash": "cacb9fd86fbb007ab612072fcb644ebbe603caceb84202d39d2e66831ca2b64e",
   "paragraphHashes": [
     "2bc931bc3c3b35b7daa7d442f6f176389d11af5145d5a5aab237cf206fe58b5d",
     "3c4d44edd6b08ebc0f9ce3afabf05d5a801541d244758ff09c0476deb88496b8",
@@ -219,7 +209,7 @@
     "1ee6292c9cd8cb6055ccdd5bd846deec18516da49dc67006fcd4d1128747be47",
     "1bb08304ec6e4a036723254cb1269878f8cd4918d2ddde8d2c30a7276a240e2b",
     "fa8bf5a3e9779674c8de078179c3e3b84467da7c10a68b8bc4765f7ca6114566",
-    "02b67ff11b2e28de114415319c559e4cf17dde724d8431ac0437dfde7643dd93",
+    "a0561ae0f03545a1674f3c22a22f1a6e5f1c96236fd3758c9b68535050a4d38e",
     "0dda363a903821fad629b75d63cd579bc87954a32e9c4833e59c8c55e63cc5ea",
     "5203107f7957b586f4c19e57672491d4a78dd22b7ba7686d183270b509de8e43",
     "fa20cd0ca04bf26cca1905318296b156658ae642e79f7d46b5f4f9088b746fb0",
@@ -229,7 +219,7 @@
     "c4f0ad1df76a0b2654123caa2b6862ccfe70f56e6728e1261ebe734e9ef2018f",
     "35c59e3bb08e21076c6fb2b215152fbb9d4362502a780bc655bdc58807775c2a",
     "00f48486f5328451ebb5cf2d66883ddcf451c31bda245bf29650a8ecbed0585d",
-    "7658cfdd02d8e4114b554092cc62c124d47795c7f45396b143085322fe5d0bf3",
+    "b64fee873ef9612edec7dd8880aef9ad539c5078aa436610bf5f9eb8181f0820",
     "bd3a3593cc22147298aa13e1113c82a7c8065dfaeb1240d028caac656ee3461b",
     "84470e23a4cfa2d0fb9f8e9398219057a0f9126db398e06b4bde275b4f460806",
     "ac43e547805a25abcabae23250e3e118d94cd32d666214991c6e40d3b3e789f6",
@@ -243,7 +233,7 @@
     "1a3cebf827ef26924fe6a0c71536a549af54201a55d4b36a3c3ed0c599f8c820",
     "825a63f5053ed60fe091e7b91edaf8985372c6a1e5e049654a25aeaedc5dcb70"
   ],
-  "outputContextHash": "7f08b8fa47f3e4866f79d22a9c8bf6990c610fee09f751bc523fc1c37e9fed33",
-  "reviewedAt": "2026-11-12T08:53:25.817Z",
+  "outputContextHash": "667d1de302ef744634bda6365f7f7c8b5afefea4dbffc2efaa0aff1ebe27042e",
+  "reviewedAt": "2026-11-12T09:12:17.901Z",
   "reviewer": "Configured independent chapter reviewer"
 }

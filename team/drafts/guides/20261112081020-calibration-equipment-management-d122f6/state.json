@@ -35,81 +35,81 @@
     ]
   },
   "productionSlotId": "2026-W46-slot-2",
-  "stage": "reviewing",
+  "stage": "writing",
   "pages": {
     "mapping-workflows": {
-      "hash": "2fb5391d65bb89ef556a9600bdf340d9bb27f724d81946e6dd0024d5014b01f5",
-      "wordCount": 2004,
-      "readTime": 11,
-      "status": "written",
-      "checkpointedAt": "2026-11-12T08:18:53.987Z"
-    },
-    "evaluating-software": {
-      "hash": "f3d5bf03dde69b3bc245068b07070dea9ff33dda8f0bf7f3de44ca271e12e788",
+      "hash": "e7adec05a98b0d23da5692e39be7a88a0b750c0514fbaa927af943188d13e179",
       "wordCount": 2017,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T08:21:36.482Z"
+      "checkpointedAt": "2026-11-12T09:00:53.421Z"
+    },
+    "evaluating-software": {
+      "hash": "e3c9c783048638b110866fecd3aa441774203ce0a89ddfd1965f4bf67b12e046",
+      "wordCount": 2020,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-12T09:01:51.277Z"
     },
     "instrument-register": {
       "hash": "f51462244171337eea7643b8130037858cbf3f79ce07d63576b5cb150cbd0998",
       "wordCount": 2032,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T08:24:08.059Z"
+      "checkpointedAt": "2026-11-12T09:02:00.174Z"
     },
     "certificates-traceability": {
-      "hash": "6753bfd1c2b5d9857d05b16cded8cb628fea1920f2b833a0a9fea810946e2a53",
-      "wordCount": 2050,
+      "hash": "85e67f90902993efd073437ec54ed6e67533bedf01ca74c3d2bbc81f513e882d",
+      "wordCount": 2098,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T08:28:29.114Z"
+      "checkpointedAt": "2026-11-12T09:03:58.896Z"
     },
     "due-dates-scheduling": {
-      "hash": "96da61e2c8dbcb42eb94d05ad9944479cdc48d0a3ada5ceb36e08e4fda9f7660",
-      "wordCount": 2050,
+      "hash": "e932d22c1c2e3c91e483422064a588bab43ec59a7364b3218d4c166e767d61fb",
+      "wordCount": 2052,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T08:33:02.585Z"
+      "checkpointedAt": "2026-11-12T09:04:54.999Z"
     },
     "out-of-tolerance": {
-      "hash": "ec898b244c82abb62445c0708aff3032a00f342e8ed79958fd58b999ad712653",
-      "wordCount": 2051,
+      "hash": "831413b0eacb6ec12ccfcbba6b703c231b9f93c212c24686f12da6983000ae58",
+      "wordCount": 2091,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T08:38:31.289Z"
+      "checkpointedAt": "2026-11-12T09:08:52.521Z"
     },
     "maintenance-inspections": {
-      "hash": "a0c221b9d2e5547d1cd43af1a0d657caa3e0b7a3b0a9779beef89baae10e5c06",
-      "wordCount": 2040,
+      "hash": "ff588c4fdf04dffde1ed0571607340bad19c5ec86cee6ef707031bec62af47f6",
+      "wordCount": 2034,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T08:44:21.512Z"
+      "checkpointedAt": "2026-11-12T09:11:03.095Z"
     },
     "migration-planning": {
       "hash": "9ed5c4cb7ea7d0b263e28d717c1e341609bb1c16a4cc40e74f092224482e05da",
       "wordCount": 2056,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T08:46:59.354Z"
+      "checkpointedAt": "2026-11-12T09:11:15.025Z"
     },
     "ongoing-operation": {
-      "hash": "980afbec161f72a57fc2982b8f6c044744fc4b98f394c32c8ff3acfc92d4e5f8",
-      "wordCount": 2047,
+      "hash": "a7c17db73e8e6913ee8e0839af0d16831b78c2447ec2600a832ac8cd08563f71",
+      "wordCount": 2058,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-12T08:53:15.604Z"
+      "checkpointedAt": "2026-11-12T09:12:10.570Z"
     },
     "calibration-management-software": {
       "hash": "76e6ce25d57f1c9430e00a2d8d7f925b8c2366991f0510902d84138b8e617b70",
       "wordCount": 1531,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-11-12T08:58:23.398Z"
+      "checkpointedAt": "2026-11-12T09:12:18.482Z"
     }
   },
   "createdAt": "2026-11-12T08:10:20.967Z",
-  "updatedAt": "2026-11-12T08:59:12.498Z",
+  "updatedAt": "2026-11-12T09:12:18.489Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "calibration-equipment-management",
@@ -1197,7 +1197,7 @@
     "reviewedChapters": [],
     "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73"
   },
-  "contextHash": "a8f3a52fd2e2204f1d792d9a7d350a1c275452fb31f9b16a323eca0d7ec5bacf",
+  "contextHash": "0376ef457dd4662e8530e9e7a22f2eb175f337d8af2fba65d33090d822164974",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1207,11 +1207,11 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The earlier page-shell heading finding is resolved. No clear issue was found in the changed paragraph.",
+      "summary": "The changed paragraphs present no clear problems, and the previous review raised no findings.",
       "glossary": [
         {
           "term": "Instrument owner",
-          "definition": "The person who uses or looks after the instrument and answers for its condition between calibrations."
+          "definition": "The person who uses or looks after an instrument and answers for its condition between calibrations."
         },
         {
           "term": "Certificate reviewer",
@@ -1224,8 +1224,8 @@
       ],
       "roles": [
         "Quality lead",
-        "Calibration coordinator",
         "Instrument owner",
+        "Calibration coordinator",
         "Certificate reviewer",
         "Deputy reviewer",
         "Supervisor",
@@ -1235,24 +1235,25 @@
         "Auditor"
       ],
       "recordNames": [
-        "Scope list",
-        "Calibration workbook",
-        "Calibration request",
-        "Certificate",
+        "Instrument scope list",
+        "Spreadsheet or workbook",
         "Instrument tag",
+        "Calibration certificate or report",
+        "Calibration request",
         "Equipment register",
         "Calibration record",
-        "Workflow map",
+        "Reviewer decision",
+        "Owner assignments",
         "Acceptance criteria"
       ],
       "decisions": [
-        "Which instruments are in scope and which are excluded",
+        "Which instruments are in scope and which are excluded, with reasons",
         "Whether an instrument is fit for use",
-        "Whether to send an instrument for calibration, hold it or remove it",
-        "Whether a returned result is acceptable for the intended use",
-        "Whether to release an instrument to service",
-        "Who may act as a backup reviewer",
-        "Who signs off the acceptance criteria and judges demonstrations"
+        "Whether to send an instrument for calibration",
+        "Whether to accept a calibration result and release or hold the instrument",
+        "What the next due date should be",
+        "Who may act as a backup reviewer and under what limits",
+        "Who signs off acceptance criteria and judges demonstrations"
       ],
       "pass": true,
       "deterministic": {
@@ -1338,15 +1339,15 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "576b930cf1979d38529cae102aecf12960fcd72df3fdbe730fdf436317e30127",
-      "contentHash": "d8bd3d4f679c102a6a8a3552d5be6d8ed84daa4f5a2ada7744029a3c28ef1618",
+      "inputHash": "38dc2381cdc13d984ee80a91e59aa73ee2be41d3963bdaa379d1b1cee8a94c47",
+      "contentHash": "39fd1eaac797d71a777f5d368d37a798a32076fd199f8ccd1b59c540efee6f09",
       "paragraphHashes": [
         "b7f590fe7d4f8f063692dcca27345596d7362443f45c6516f573587ed7c7c945",
         "ebaae7f1f4934c10c68d8c9f852a7b48fc8b10fcdd6e502e50efc1c80a44e810",
         "d85307586d6f1dac4e1c78a023f0a55c586bdfbe379ad59040d6388345a21e05",
-        "0f9c456f2c9a529e0ad19a046acc076ce81ca801e6ffaec7ef193ff156ee6eaa",
-        "bcb19b270d6f48e6139c3d95c9624914a16f74230deee18d21bd5baaf969d35f",
-        "1db5b7876f8571830bb64bf835123b73789c53386449042c2080de2fcde124f9",
+        "d945f6af96fe9867d75a96e80cd3654a8f316370342ae2ecf0e4256ba56651cf",
+        "085870d049bccc30c2c2821e2ee246be6516dcbff6ad3b630143e1333dda6ec7",
+        "131919ab585785ba74af65ff5d46f0cc9510eec4aeb178b335cabeac914c3339",
         "8327aea4ee60b91235c1b76cc37b6e3bde07797e3edef5c802e86d186b8ea069",
         "c2139e1b5446c244be9c1577bfd368c5a169a08973da56971019c615c0e02148",
         "681325f688ecd8d2607e775f02eff659ed212283ce2d20c9dd171e9e7bf6f23b",
@@ -1389,8 +1390,8 @@
         "9d1bbc0b960453d574d5610eea54b6a561da6c6032088118bf989a230e3b3116",
         "e87a19a48c9ec066df9cc998997d1cd25591ae10e5076633dc60798fc8cc2806"
       ],
-      "outputContextHash": "9ed4f6b4294ddfdbe2583cdaeb3d5199450b2f1f8222f8aea5faedfa26f76455",
-      "reviewedAt": "2026-11-12T08:19:05.801Z",
+      "outputContextHash": "3cdec3fd253dc5c01d084a50daeba24a5aa2cddfe755c17108f69cff1df6c72a",
+      "reviewedAt": "2026-11-12T09:01:04.477Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "evaluating-software": {
@@ -1401,46 +1402,35 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The earlier citation finding is resolved. No clear problems were found in the changed paragraphs.",
-      "glossary": [
-        {
-          "term": "Scoring sheet",
-          "definition": "A comparison sheet listing workflow steps and candidates, with demonstration outcomes and supporting evidence."
-        }
-      ],
+      "summary": "No unresolved previous findings or clear problems in the changed paragraphs were identified.",
+      "glossary": [],
       "roles": [
         "Evaluation group member",
         "Calibration coordinator",
-        "Instrument owner",
         "Certificate reviewer",
+        "Instrument owner",
         "Operator",
-        "Deputy",
         "Auditor",
+        "Deputy",
+        "Demonstration note-taker",
+        "Follow-up questioner",
         "Vendor",
-        "Note-taker",
         "Certified consultant"
       ],
       "recordNames": [
-        "Workflow map",
-        "Acceptance criteria",
-        "Equipment register",
-        "Calibration record",
-        "Certificate",
         "Scoring sheet",
         "Demonstration notes",
-        "Inspection record",
-        "Maintenance history",
         "Written vendor answers",
         "Candidate summary",
         "Commitments and open questions",
         "Ranked shortlist"
       ],
       "decisions": [
-        "Which candidates can show the whole workflow and should be shortlisted",
-        "How to score each demonstrated workflow step",
-        "Whether a returned certificate is acceptable",
-        "Whether a candidate advances when required answers remain incomplete",
-        "Which candidate to prefer after evaluating evidence, access and support"
+        "Which candidates can show the whole decision path and belong on the shortlist",
+        "How to score the evidence shown for each workflow step",
+        "Whether a certificate is acceptable",
+        "Whether to advance a candidate with incomplete written answers",
+        "Which candidate is preferred"
       ],
       "pass": true,
       "deterministic": {
@@ -1526,8 +1516,8 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "97f6a4cae5df65fa571ff01faab7958aa1805d893617661b9af943ab3ba80f11",
-      "contentHash": "afae67ad753955a7c6a4aac17a9683ea5781c126ab7a14b44cc29492a9ef71f1",
+      "inputHash": "8bb9399c2e3847e71e29f27f97639a5db7a882fcf7bb93e79c4ca045173d5638",
+      "contentHash": "5c1e52a084b0387c6f5a56c9b77ebf27177a0bfbad4302437eb7dce75e76f3b4",
       "paragraphHashes": [
         "34a2c737b52c6404cb6f0e763283301e4ff93d9d3750e57fc9a6711454a4c8ad",
         "81b746b141e66e10abc3bf7f116a73219edcc8755b7ef3a90999b8912d54afba",
@@ -1536,12 +1526,12 @@
         "74bb799d9582d5e9be137541c4ad9a8d55625bed41528388906765f66c6fcd4d",
         "dfc8c1d74b503525008eb3ce23859a7e2b303908767b572b6680727e923a05e1",
         "68c4c2f4c32d64c1f063d70e5c9976a7edd993e58ab632e3a0c443e9598e869d",
-        "f8598b55aec835dbddca19ed486fb523d33bf1f38ff741e44c087cce62fe1194",
+        "0cea410e51963cdbd8a7941aaafc725cb6e8a55c0fde26bd798f511b157e8e3d",
         "de49c0cd1fa3c0e5358ee7eb1f3cd62fae771bd4834c6338ba27b658d2eaeddf",
         "09c5a13508681f88a4128cf7cc058720fe4ba6952ebb71a1ace8ab5d004b3ce2",
         "bf5a171a644eff2e5be03746d8a9e71b22d2e400819473c0e710ba480e4e9329",
         "387f56dd2922f5a100e5fa1b5e7bc4633cfb676f293ad577d2179add8236d0e3",
-        "10efbe5a1ac211d3bc4cb0f7f01a6ead80ae1b8eee6a74a7f57507d4df8d00ae",
+        "fd1a64131cc0eb170561780e905ca27d525f6454ee611cf57fe43bf0880fc9b0",
         "9f544378aaa3aefa34c0da0fed1035c72475fae252aba341c70dbb0b2c711f16",
         "3e1a00d8a03b1bc6258c8ff650780e60fca9be3c980607c5efaee90b1df9e5b1",
         "36cb5d4e74e35f44d59db43f306ee84f57f4b7473f6ac5b27b94326e307da395",
@@ -1552,15 +1542,15 @@
         "f481d8e1a5145724da7b17e27847522a5cbef81ed5be23d81a8b77761f84ac2f",
         "3d6b71c2200a9277779f16a76d17a77e6077ec118a6b31f863642fe8ee4a815d",
         "ed143c4fa528e3ebdef5706d1b6f397574aace3e93ff512ffad7e2ea6ce442b5",
-        "14400e9e71cdbdfa6f2f50784fc7fe46dfae5b5491e2c46cc785451bb19aff15",
+        "0b858f6a4800a3f5a3e785d11823c8a2fc88bb3de7e7544b8d4974517438b25c",
         "3b2cc6bf3fd8777e5baed1805353f2ce2614080d8995d10e2abbd9aeb457e3f3",
         "8e2422cde166bb1db264cbe958e7c060971951412a105af2bb9cdad711984496",
         "ef154b0821bdd002c585fee8dfef7becc60c005854c5cfcd39a2375884109acd",
         "35ad0246a799d5fc8e38d95f12707b0ad703f5069b2194e7d8c8f7084c5fb86a",
         "c721475bbe9932f834206179f3de99e0fbf8aacaa7c14f7f8fb10599400e3c4c"
       ],
-      "outputContextHash": "1d19f84ac1be84195c0f4a2c25aa79625c299d7cb6c2050a970b11935fe44c6b",
-      "reviewedAt": "2026-11-12T08:21:46.173Z",
+      "outputContextHash": "60c32d1c9261dbe50d6fba17c80eba32cc7406e96fb0f666f030764a8a1adacf",
+      "reviewedAt": "2026-11-12T09:01:59.636Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "instrument-register": {
@@ -1701,7 +1691,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "c2d94d06e6230898976c3f1ecc19dd96115c6cc7d2a8843d6883aa3a2ebb28d9",
+      "inputHash": "a696b7b91318574160879636073b10c01a074cbbff463b86d27e88e34c6b956d",
       "contentHash": "a9815394e4a54759b9d410cc49d97c6f150a9d9891f3460526a11a73b0617380",
       "paragraphHashes": [
         "025ab883b55a1e97c25a8bf1c111b4848c09a3704788d044aca3924b29c232bc",
@@ -1737,9 +1727,11 @@
         "185912a6a69a1bd1b2467a6fbcb3bd586bee9413cab0488067aee9f9ec04fa97",
         "4a2e48e70ff7e3cbea3a04d44f3629b2e8d4aaa3a2e42467d0ff7c6d9e93cb03"
       ],
-      "outputContextHash": "3bfb617d3bdcf7ed996b9642bfa42dd283db1f137f986759a03c0fb220a66e7a",
-      "reviewedAt": "2026-11-12T08:24:18.693Z",
-      "reviewer": "Configured independent chapter reviewer"
+      "outputContextHash": "7f03db5206bdacc6a8972fbbda69c4ddc27df7e412181d889842e9c235d2b7c5",
+      "reviewedAt": "2026-11-12T09:02:00.178Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-12T08:24:18.693Z"
     },
     "certificates-traceability": {
       "claims": "passed",
@@ -1749,33 +1741,41 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The earlier finding is resolved: the example confirms suitability for restricted use and requires reassessment before the restriction is lifted. No clear problems were found in the changed paragraphs.",
-      "glossary": [],
+      "summary": "The previous traceability finding is resolved. No clear problems were identified in the changed paragraphs.",
+      "glossary": [
+        {
+          "term": "Calibration certificate",
+          "definition": "Evidence that a calibration event took place and produced a result, as treated in this guide."
+        }
+      ],
       "roles": [
         "Calibration coordinator",
         "Quality lead",
         "Certificate reviewer",
         "Supplier",
         "Calibrating laboratory",
-        "Auditor",
-        "Vendor"
+        "Vendor",
+        "Auditor"
       ],
       "recordNames": [
-        "Certificate",
+        "Calibration certificate",
         "Equipment register",
-        "Calibration event",
+        "Calibration event record",
         "Supplier query and answer",
-        "Review checklist",
+        "Certificate review checklist",
+        "Review record",
         "Reviewer decision and rationale",
+        "Weekly list of certificates awaiting review",
         "Shop floor label",
         "Procedure"
       ],
       "decisions": [
-        "Whether to attach a certificate or query the supplier",
+        "Where certificates are received and who routes them",
+        "Whether to attach a certificate or return it for correction",
         "Whether traceability evidence is sufficient or more evidence is needed",
+        "What review depth applies to each instrument class",
         "Whether to accept an instrument for use, restrict it or reject it",
-        "Who may make or confirm each review outcome",
-        "Whether the original intended use is suitable after reassessment"
+        "Which decisions require quality lead or second-person confirmation"
       ],
       "pass": true,
       "deterministic": {
@@ -1861,43 +1861,43 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "be28e274278d76af65febcfd92497298303a055aa2ec0b00b9f7781104d00dfc",
-      "contentHash": "7f737410993c106066ab098da526ce8aaf692a0f84781bbd4b33e9b1185b082d",
+      "inputHash": "3eebc73f9b76d7839b7fbf1292c01997ed28680c053d1587204f15108b40862e",
+      "contentHash": "17c42929af46d01dc86790ae056fe9c8fc5c981b73145415018103bb07589c2d",
       "paragraphHashes": [
         "f60dab71add39e8054e25bb61770c508f3f38a689db487edee91700960e6c0b1",
-        "459a1544ad7baec190e5a6f34ece310f475db67948b8b182b177dad9288f2f64",
-        "034286ced0b3da4a84738b82cf43f14142951718ab9e56592889a0659f0c6a67",
+        "b3b4fa2212f2a29ed0bce722006bdf93f3100832b66456586f4c4dcc24ff0ab0",
+        "b49b395cec2aec23e62661a46e207b5c66cb686e5c31e488070464dd1de687b9",
         "72c1df0c743e3d993c8dd88183a5037243a4521d0889b270bc696a4de8a0d718",
         "691ada5a09374d44047114934c578b115069f805147a83902473c95730c939ba",
-        "3fc4458a876e80b91bf24fd4ffadb44c183c41de305b677c87c64e08b0164503",
+        "db27f180508c84aab5ddfe73c12cb06bbece9d1979e2113e1a6343d292e14e9b",
         "02ef605f36f7ae3a6eb34b54f38cc0cc60047e6faf8634083694dbb3dd5624b0",
         "83482e9384d349aa2889e66e3663f4e5f46b042616b8ab485a4fd056055dc323",
         "e377ae082b590dfdc99ef07a7f17f7ca1a6168f549149733a995b087c07d0d94",
         "45299616b65263a1b76f12fb738052e090417b9e571c98d675d61ec497b959f8",
         "abcda06660fd2d37d2b776bb5f7258165a52f682d341c73ddc0ff311b70eabda",
         "67580622e0055898b0587c57b83d60cc8fca8057d2f87057afda394100a08ff4",
-        "d4f29a7b032d5b55eb3e4d54031a066a804094330ebc43b28e9d2f9c309d1eb0",
-        "c6e3d6cc98859f0b231cd99210f7447444d8ae83a9842ccf8c07fa76c3ebcf59",
+        "efdcb0b0642ed0f6cb2a185ea9f62c2470dcce55d81fd1ec3c21a70c5bd4eec9",
+        "c758545f8378040adc4c8aed67e790c63af98d189d25e355530b4cf5dbe6717d",
         "c4852c90bea02b5d0be8ed0bb49c968509128faabbfad5878431dfe81ccdcc5f",
-        "1f5f6ec414d4fc5257c8b0dcc56325b1905c2645dd7d68867f311f566b1d1c56",
+        "e52d287337e9a04482bb2c5e0146aeba1cb4530cc8a667820277d0454cea5e71",
         "5e823d86c928de3e6534e421d279f64cbf9a44e7dfcfaf7d15f151c59164424d",
         "a0e5168acedade48ddcfb6d4c6aa883fec01e61017d3f6bf23806e647f22779d",
-        "9cc24698fc15383f74fccddce7f19f189d8a9a0bda2306537edbb5022c92abe8",
+        "c20bf02eb280cf8883ff083035ba86a21a9528bad513951e3a9ddeb4185a585c",
         "eeab3a3e67954c86083962961a8483c152b83b7cdd9220461866441ec52203be",
         "3e2888a3efe4ab37718263f075477c859849ec0ad6386a0f75cbc466b948ff7a",
         "096a4044139c7ad107b4d1e639425e9e255098eb1c52d3fbe13514a28a0348b2",
         "c6d004dc790e9cd658de90994314eb3717c6a0d91133f83a207a3619d4de007f",
         "474c63b3899b71dc59efb61eee284a09afef77583ce14b217b0681171f82788b",
-        "13a1a115864f68986cdb14d61079dfd42e35b5e765e7faa3b0989c5f3a96929b",
+        "7802adf3777cb82626020aafd2998d07e88f5b0a1c8e50b913d0700faaddef69",
         "aab6ebd9202500259aab8bd056d29bdc6c50e7f0b816c421648fc7a2a3959cfb",
         "9e2623ff5e293972a45a91fb60f5a89b8e00699580485920bb2627c978b66cdf",
-        "12dea2c901e3b0d6870cc34aa8b5105e97988671076ed99d68bc848d882eab89",
+        "eb6fc73cadfd9f93e2f8571fcd77c8024b7e64b4888625f8f4714ee9cbd4443a",
         "49251cfd15311ed8a2478aed42437a6fd7015e115af1dd091958c1ff9efb7da6",
         "477e760e67e0ce2ae3e761a638a962af082b19ad2eaf88cad31dd09ca4ebdc48",
         "876ec0db6ae0568878196eb031c2aa2de74830ff4770beb24cb6043b653d7c6f"
       ],
-      "outputContextHash": "a7f30a3076e217353219fb007fb216d03654e173615de05f363b12738a1a2e92",
-      "reviewedAt": "2026-11-12T08:28:37.018Z",
+      "outputContextHash": "a8067fcad9af33e976d4292a9aff3f8f04d945a799c819b0b15ab2399ed1769c",
+      "reviewedAt": "2026-11-12T09:04:08.925Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "due-dates-scheduling": {
@@ -1908,15 +1908,11 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The earlier link finding is resolved. No clear problems were found in the changed paragraphs.",
+      "summary": "No previous findings remain unresolved, and the changed paragraphs present no clear problems. The cited NIST claim is supported.",
       "glossary": [
         {
-          "term": "Overdue",
-          "definition": "A status for an instrument that has passed its due date without calibration."
-        },
-        {
           "term": "Extension",
-          "definition": "A deliberate decision by an authorized person to defer calibration, recorded with a reason and an end date."
+          "definition": "An authorized, recorded decision to defer a calibration, with a reason and an end date."
         }
       ],
       "roles": [
@@ -1926,43 +1922,34 @@
         "Operator",
         "Supervisor",
         "Deputy",
-        "Vendor",
-        "External laboratory",
+        "Backup owner",
         "Approver",
-        "Auditor"
+        "Vendor",
+        "External laboratory"
       ],
       "recordNames": [
         "Equipment register",
         "Instrument record",
         "Calibration event",
-        "Certificate",
+        "Calibration certificate",
+        "Maintenance history",
         "Schedule",
-        "Weekly review",
-        "Monthly schedule performance counts",
-        "Notification rules",
-        "Escalation record",
-        "Extension record",
-        "Instrument label",
+        "Weekly report",
         "Work instruction",
-        "Station card",
-        "Status board",
-        "Instrument tag",
-        "Operator report"
+        "Printed status board",
+        "Instrument label",
+        "Status card"
       ],
       "decisions": [
-        "How to calculate or enter the next due date",
-        "How to define statuses and due-soon windows",
-        "How to spread clustered calibration work",
-        "How to cover instrument availability during external calibration",
-        "Who owns and reviews the calendar",
-        "How early calibration affects the next due date",
-        "Who receives notifications, when, and by what method",
-        "How to escalate overdue instruments and document extensions",
-        "Who covers notification duties during absence",
+        "How to calculate the next due date and handle early calibration",
+        "Which status values and due-soon windows to use",
+        "How to spread clustered calibration work and cover instruments sent to laboratories",
+        "Who owns the calendar and releases instruments",
+        "Who receives notifications, when, and how nonresponse is escalated",
+        "Whether to remove an overdue instrument from service, authorize an extension, or arrange urgent calibration",
+        "Who covers notification duties during an absence",
         "What operators should do for each status",
-        "How to report damaged, abnormal or unlabelled instruments",
-        "How to provide status without a device and resolve tag-register disagreements",
-        "How to present upcoming work on the shop floor"
+        "How to provide and reconcile status information when device access is unavailable"
       ],
       "pass": true,
       "deterministic": {
@@ -2048,14 +2035,14 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "3150e6459fbcad20a903baaa7a4d44e1b367e069e366e58a361c107aadef2c35",
-      "contentHash": "3cc345f31de8e9131665965de7870247f03e474c81cbe69df921ec28ca7a2a41",
+      "inputHash": "45e38e7a2a6fc33dc9c9540911e11621ffb041136d009a99d99aa4e7e8575ec2",
+      "contentHash": "ecdaa90475ee85c6157ca47ea318ee342ff265f19828e42c9efff578cf51685b",
       "paragraphHashes": [
         "b48aecf5962205975380b908645d1d0590385243e4880848af2a19d5cba89cf3",
         "189bf12bf3788dcfa006b6cb93f53b0fd99a5dee4b8c5b9a79dcf91a4e5910ae",
         "f1532b5169fdebe05770fb51239332db0954041868902b6af4a58b2720a79eb1",
         "54eee690c0ce4961dd3ef357925f1f9fcde1234cd2ba7ac6ec45bb919fee52f4",
-        "f711f86ddb3865046885d5bdd153c93ab33583f37f7a9b37ed8cd68780e5915c",
+        "7302cf10345edd43ca8c8c30a30f089af6a8fb7800ecea0c01ac88176e97b966",
         "f8032619560fd549c192da804879930e7088f1142d59ce7b0cb46892ed7a102a",
         "c14ecc25e157f22e8a3bb929826625c8a470c8c82fc9d1698ea59b41434aa18a",
         "5879f7c542d68ec312467a100910f548cb8ccf2a662c304c9ff5d6b89de90b69",
@@ -2068,7 +2055,7 @@
         "5ab6f6ad72c9e9d409fc790d019ccfdb0cf61ac3a316539eab2c070c1472dad8",
         "4d666e596a056d232dba37632d0457146e7939d575d37f1250e0b0c2e342ed53",
         "1e018756af518368c03663f7ad1c1807f222a896b857f94b2ee6a16de9272271",
-        "a252e7adf1f710a5a411b04d53edf849f1e652e4c16c5ff04022befdc1ad770d",
+        "0688c60a195a84f79ad7a4f3870364967016e4ff859bda9053c454f21c62a655",
         "c04133ce1a273165a35b8367115bae84b8899b07c1949e741173bc4af0933cb8",
         "d45400b4e5f3c50237a8b1db5dfc2be4ac26b49ed73cda0c49f0947225dd7ebd",
         "8e3decfb58165ec781265df8f0976821186fa92d3f5ca3731e6f2c173b4fb113",
@@ -2084,8 +2071,8 @@
         "5cef1e631a115559eaf59f6cad877adb1fc553f1d55a046b47ff84149c1fea91",
         "7edfe27bc52c96dbda074837e666bdab14f291a40ec69db6a9ab202c099b3545"
       ],
-      "outputContextHash": "661a2ae36582ae41dd7f791da63f9ef3e3b4ed666fce942336a7e4c1229c6d22",
-      "reviewedAt": "2026-11-12T08:33:15.082Z",
+      "outputContextHash": "080bd7ea70fa1671a8a673beac91d535dbf5f17e366d57790a9b62dfca365d21",
+      "reviewedAt": "2026-11-12T09:05:08.585Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "out-of-tolerance": {
@@ -2096,7 +2083,7 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "All previous findings are resolved. No clear problems were found in the changed paragraphs.",
+      "summary": "Both previous findings are resolved. No clear problems were identified in the changed paragraphs.",
       "glossary": [
         {
           "term": "Exception",
@@ -2104,45 +2091,46 @@
         },
         {
           "term": "Containment",
-          "definition": "Identifying work potentially affected by an out-of-tolerance instrument, deciding what review it needs, and recording the decision."
+          "definition": "Identifying potentially affected work, deciding what review it needs, and recording that decision."
         },
         {
           "term": "Period of doubt",
-          "definition": "The period from the last calibration showing the instrument within its limits to the date the problem was found."
+          "definition": "The period from the last calibration showing the instrument within limits through its removal from service."
         }
       ],
       "roles": [
         "Operator",
-        "Calibration coordinator",
+        "Coordinator",
         "Reviewer",
+        "First-response owner",
         "Instrument owner",
         "Quality lead",
-        "Authorized person",
         "Follow-up owner",
-        "Auditor",
-        "Vendor"
+        "Vendor",
+        "Auditor"
       ],
       "recordNames": [
         "Exception record",
-        "Containment record",
-        "Inspection record",
-        "Work order",
-        "Production log",
-        "Certificate",
         "Equipment register",
         "Instrument record",
+        "Calibration certificate",
+        "Inspection records",
+        "Work orders",
+        "Production logs",
+        "Containment record",
         "Maintenance history",
-        "Instrument tag"
+        "Closure note"
       ],
       "decisions": [
-        "Which exception types to define, who owns the first response, and what first action each requires",
-        "Who may confirm an exception",
-        "Whether a returned result is outside the instrument's limits",
-        "Which work may have been affected and what review it needs",
-        "Whether to accept, recheck, hold or notify the customer about affected work",
-        "Which exceptions warrant investigation and who decides",
-        "When an exception can be closed and who accepts the evidence",
-        "Who confirms follow-up action was effective",
+        "Which exception types to define and who owns their first response",
+        "Whether to confirm a reported concern as an exception",
+        "Whether to isolate or hold an instrument",
+        "What period and work are potentially affected",
+        "Whether to accept, recheck or hold affected work, or notify a customer",
+        "Which exceptions warrant investigation",
+        "Whether to repair, adjust, recalibrate, replace, hold or retire an instrument",
+        "Whether evidence supports return to service and exception closure",
+        "Who confirms that follow-up action was effective",
         "Whether exception patterns warrant changes to intervals or supplier choices"
       ],
       "pass": true,
@@ -2229,41 +2217,53 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "1b1c0d0b9b8875538724b1ce9efeeb3b5329224417d21d177f82ff76955589f5",
-      "contentHash": "09aabedef545f27c03de77ef3bd95df4ee86e96d9e58efb6b4d0f3667fcb26f3",
+      "inputHash": "1cf63d41c43ce2de6f23b21a7b42f1d4b5e76eb8b1012a8f5cb1b17742c21e85",
+      "contentHash": "7a4a14d2da2c642392bf71b366f569fb0748b2520f4cf2cc6855cb47a24cdfe9",
       "paragraphHashes": [
         "5658b573f6bb1cc4c619ece427445326bcdedc742445278831676c3371d44eb7",
         "7bf48a4413ce1f321203467419dff1e7cbe5d7f67980f50deba73f2a7b09f6be",
-        "68caf74fe3269a7026155ff4a3b6c304819e08b8999ae23dadcc63c292596d88",
-        "bad486d6f33d2d2e85eeb8f3a597e33170a133832a948ef8fb55cf7d3cd5ca95",
-        "44cf41528445424c9ab846db30bd9d151d975861229824955d9f895e3480248e",
-        "a1674c3cd505297f780376edb80be03b0ac8024a3bac5b18ec02c44f9dcd5e93",
+        "da20717beee1952c4cb5acde6af93a7d0f0d5cf55d2c6bb582895128672441fd",
+        "0856c3c694d7a0d64fc7e597f448504fd2f7758502d0550d3d6775c36f4e3291",
+        "961f96d0e94fff590a21c01cf7ddb053b85daeac91bd802f0b2af1cc509ef9f7",
+        "df5a6a71cb2a1715978d1329477d965b6f26b82b4153e559ff0c2301be739b1c",
+        "ea96f56696029e0254e2610ad185596951927d4d9665d1bd53965a8eed7da7e4",
+        "a4db463bae99b9eecb1d32d86aacd3d647322bffdbfbf9f6058ef26ad982b001",
+        "a6ffba5b861e133a280396ddbdfc42c7905f7b497afa27fe81b1394cc8cb96f7",
         "dbd6878f756a59e897d45e67f10fa2900db226d552600948e74aedb516e4d80f",
         "bf69d203b2d9d0e5faa6b892f6ff173b9f3083c70fd4216fd3aafa3acd3a4482",
         "f45248643b6352f5ec5118f407b79066dcde36b05f2097dc31d09225bd3026fe",
         "b3b88538536ae4cb7720fb6e564ef5aea983a56b71428636c5738b4d765f75fb",
         "0de3cf2ad3d45df57d0b751821987060af70022d06e068f2f89eea227fce4e5c",
-        "804933af81bf6f0b09ba86549fb827cb26f0894109b3ee6d989acf7a8dc0d167",
-        "057a435407bf2e02bf44fabfc09e80fdda9612bf4a4d88cf19c837fd7f1ca1a2",
+        "5425781ca0fbe120f76d18a17210a59c8349301be260c36f3780b08e9ddb8968",
+        "bb96d4581805c0e9af0765cabae524c574f3cbc6c9e5cb8f82b719765daaa617",
+        "a0cff32b858e226866ed9b094b0f8640e63ebb6f3be178af89e6f9eaa651cd29",
+        "54c0382e01691ce75f981c69b83fe203d4adfa80694ff4a10d778064aede70d7",
         "6fc888a4c5838a30c1021c24b3ed3068bd12e2583fab605b0f8835b0da8c29d3",
-        "3b62dc3d77eef7ddb8f3f83dc7257677cd440754d7d89c78b4553336383d407a",
-        "e59fb482872cf4610416f6188aff49ab6c8608c982e65bf4a73a1a0aafc7290e",
-        "364625441432f39629e7993a2c60248422b10a41034aa712dac8be4f4298314a",
-        "e3123c939519fb75eea91eb2cb757058a4d6edc0e04ccd17483add9b63bd0406",
+        "a9c51b691b8fbe6861c060db49876a68a08a582c1ff53dd42f91f877814d5b77",
+        "9518c45d1c5239bf0c94388579e8ec0cd391d2582d428d716e8ca87046e8ee5e",
+        "d65643645cf88c87ae20b892fd847b9019bc581812da697aa1dff09891f6c559",
+        "cd6fa863a594d8ac86a807ee1a80a30f207966504ad1beb5106cc3c30de56956",
+        "571c7a3d312810999aed51ad378252ec07d0088faf9778297e18771bb5ab6ec0",
+        "a3356064e7d34a550502f5d30b44aceeb1645be6df9abae8fb0d67e74c3fc41b",
         "b023705ef1999631707c5df52b553b28237d8db4b464acbffab7b719f0795774",
         "e784c32542deae52a1ad6e5ca31732ed5706a34607e1b51e0faf71afa3c1dcd0",
-        "d5ed9428499155c78b79b3469828887ed7d7b1d13c5cfbe85a5207e9cca09516",
-        "c7c36a53ef37177a496c314d8653d0239e629c4982b0d45f308ac904fcfbad04",
+        "83d72ad1017faf3b86e9f72e21e9e51b84ae7f827b276aef01f2f0abf3596e66",
+        "d5465de11b057a2fe3f0288d63eea0369e3ea39fd00ae3e970cabf220bc43fd9",
+        "4de3b4272fb593ec035e8e0b6ae39a5c31cae54775133208eb0550605f20d505",
+        "b4acbe65a256bf425a9463d0d68d0dfab0f909ec4f68c068501a384ff9648ab6",
         "22f93ab79ab8e436e6951b65df1a526c591548fd979b7559e9694aea5bce80e6",
-        "ad09ce10e9b99b237132437cb37cdd87bbd56f99e93e8ce8cd70696c8fba51f1",
-        "0c39794cda5be8ec84b17c82652fec50e8b6649f5e9274d450238fc49a30802e",
+        "8739812c51e550787a214a064e99e8d0f76fe79b0ad99f0a5dc9907451630c4a",
+        "cbae44b339965165d0c8eca9c67ac89f66e7635157aa341ac6c90d8396bfd57d",
+        "fa5afa8e722a835221e2059e1e9671476ead97c22e29154f5fc064a23b74c40b",
+        "1f8a2646d91951ee436fce4df1d1f8f95c45b817605dddc8a29c3383fc521ed5",
+        "f365aa45131c66a5fe35f0bff7a5772584d2787bded97464b7337f18e14ed8f6",
         "0a671a3be25c38df1bebdb5384ed798819e97d58f9fdf39b348383a0a5006838",
         "ca5b6ce713b5d91f630e0bf1380301a9c5678f0891ba2b5b093e2db361fb917f",
         "55acaa81b85f721c0a76443b53964cdd7d1d682f48aada97db03bb3570587886",
         "628e21041b02115eff0a72b434626428154049edd366901210ba33fe1a688267"
       ],
-      "outputContextHash": "c8bbfa689d3c185a47c14867e2e61393cf18f50e5ea93f9e15de6cf43d6e07e7",
-      "reviewedAt": "2026-11-12T08:38:47.005Z",
+      "outputContextHash": "5a2fde8a39bde62164747d695fedcd14221761a581f3e3eb4ba75637ff82de2a",
+      "reviewedAt": "2026-11-12T09:09:03.682Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "maintenance-inspections": {
@@ -2274,62 +2274,56 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The earlier finding is resolved: the revised opening acknowledges that auditors can observe activities and speak with staff. No clear issue was found in the changed paragraph.",
+      "summary": "The earlier calibration finding is resolved. No clear problems were identified in the changed paragraphs.",
       "glossary": [
         {
           "term": "Inspection",
-          "definition": "A planned check of condition that produces a record with a result."
-        },
-        {
-          "term": "Planned maintenance",
-          "definition": "Maintenance that follows a schedule."
-        },
-        {
-          "term": "Unplanned maintenance",
-          "definition": "Maintenance that follows a fault or report."
+          "definition": "A planned check of equipment condition that produces a record with a result."
         }
       ],
       "roles": [
         "Maintenance lead",
         "Maintenance technician",
         "Calibration coordinator",
+        "Reviewer",
         "Operator",
         "Instrument owner",
-        "Reviewer",
         "Supervisor",
         "Quality lead",
         "Auditor",
-        "Vendor"
+        "Vendor",
+        "Backup"
       ],
       "recordNames": [
+        "Equipment record",
         "Maintenance logs",
         "Equipment list",
-        "Equipment record",
-        "Equipment register",
         "Maintenance history",
         "Maintenance record",
         "Exception record",
         "Procedure notes",
         "Inspection checklist",
-        "Checklist template",
+        "Inspection schedule",
         "Inspection record",
         "Maintenance request",
+        "Equipment register",
         "Calibration certificate",
         "Technician's notes"
       ],
       "decisions": [
-        "Which maintenance events enter each asset's history",
+        "Which maintenance events belong in each asset's history",
         "Which events require a calibration check before return to use and who decides",
-        "What fields and sign-off the maintenance record needs",
+        "What fields and sign-off requirements maintenance records need",
         "Whether planned maintenance has its own interval and status",
-        "What maintenance and calibration access each role needs",
-        "How a maintenance event affects calibration status",
-        "Who performs and reviews inspections and who acts as backup",
-        "What unsatisfactory checklist answers trigger",
-        "How often checklists run and whether frequency varies by equipment class",
+        "What access and permissions each role needs",
+        "How maintenance events affect calibration status",
+        "What inspection checklist items and follow-up actions are needed",
+        "Who performs and reviews inspections and who provides backup",
+        "How often inspections run for each equipment class",
         "How checklist changes and versions are recorded",
-        "What retrieval target to use and how to handle missing or incomplete evidence",
-        "How an auditor receives read-only access"
+        "What retrieval-time target to use and how to handle missing evidence",
+        "How to correct or document incomplete records",
+        "How an auditor is given read-only access"
       ],
       "pass": true,
       "deterministic": {
@@ -2415,18 +2409,18 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "abd10616e2fc30a04e736eb2ad47f9a67a8731d7cc009b5cd4acaef3a29c0d21",
-      "contentHash": "313e2b6c7678da71a81488c6e454b0eb66ba47c0c89aa5de434389af0b288952",
+      "inputHash": "2c6f9c2017b141c4fd4366f613c578f72864f0e9f5b5ea2b3864e5d2b01cb2b5",
+      "contentHash": "d2996ace268f34b41ea4e8c09f3ccf3089e04fdbf3820639c78d3cde31bc3d50",
       "paragraphHashes": [
         "e33dd70d7ba4f157a86196e3424f3184abb32aaf25837f65072be2c89744302a",
-        "de1f3f2c784f784060aade589f88a7ea47553590855f08389aa33a9387110d12",
+        "854b2df5250fd347ca4ed5516bd6088497a9b362d24070073bc382edde8b66d7",
         "f7ea3c68928a0f19bbc1b50d0294e62ffa646506b274a4ba2c7b6356a52f825b",
         "a266af5ffa9638dc3ebda9eb1e6bd72b5f1fcdf9c7b6b6803987f85b0beed5b6",
         "7826e434956222191bdafdd75aef36a5a35dd6631fa33c958e44a8979e1ea3fe",
         "dadb2b7ea8afe5767e5a6f5cf694c4342ecac2c74c730a0f2a4432467ec4f4cd",
         "56515bd0943a6678d39b2a62798d6e175a4f24ffe3eb3eda5929c1b826bcff66",
         "7771387d1091f340bedb1643abf28296badc4315296cd84fac752de16fe00de9",
-        "4d2d46e8d27625cd171dd5e4bb91ec59fd020ea84fb16f0880648c4baf95a677",
+        "76d82df86b982ef95871322fcebc8789d02c9988ce606f43d6e149c06c04aa4b",
         "5fe708cce6fd4ef40a5e52d301b5592d6b7a8cdc0c39dbf17b35d1b1ab39fbd6",
         "a81244643c643ecb071be6092d547b559891eb2e103d129fe20704115c499a58",
         "273de32fb21f03c34cc1ce094d0a7730b54c69ca1e2d13b22a2de380df5f3a17",
@@ -2434,24 +2428,24 @@
         "404169a28c7e73749b8e746bf145f2582dbecba7159b63ae3137d38d0ac1cc81",
         "62b9e8539123efaf30bbd1e8e9dcee13d9e4331d1666fb16e969c03275a21337",
         "1332f04701c4da30aaae1aa123eb1d5b77295a13e6a4daff0e31add8d7fd7fd6",
-        "472d225d31147b3093af8c481baef4092349926235fc5396c18003bc59e0c9d1",
+        "7b98232ec99382d206682138a77479a633f62088eeb4e3e37cbef1dbe992de6e",
         "25fc54214faf1d7a25a96d407455168fe24ae88de73728da8d391d1dc62a6ab9",
         "91a9650dfd2eccfe9c60cb00507eee2aaccbb21c4c2d4e10e8c50f5aaf8ae3bc",
         "5e0bfe4ad0a5ac98d55bdfef335edf722cf0d1ef663bb8216cb634e9388469ca",
         "8c4a8f9a9baefb74582ff884d222f51fcf4d152855c323b92fe7c8e29d9049ab",
         "a28e3212bf16f2c5fa536aa1221d2addabd1ce48c79c670bc73476a96d308b2a",
-        "f44cdf08c04a574af1217dde975e2aa5751362b4a1ab4b4750502fb12a71dceb",
+        "206872cfa0cd15cddee6a8f80b5d4dd8883699fa8250615231b43d4da872fc62",
         "3a113c446a8d7cb76c3f6bfdd32d42b40a4e61ac624107504d0f7e97b0520e4c",
         "e5b24a0f08113dc377e738dd28d0e94343e075485921ef618e2af4a38c738117",
         "179de3261868fa7a25985842557735831ddb44c1f5a34f0f1fa1e4735ad92c94",
-        "aef691b36fe61b8b764e856ddca08726f67ccc4355c1ea71560f64967900f425",
+        "bf40be057f23bb5f4d0941fc9396166611ae462029d1281961e1b9d262166885",
         "a20bac3050f2a449c7d8989611f93dd3ed30e4745e344336f06ff4f337e35e60",
         "7664f798556f37fc10859edf8e6507156fcdaac68dfcf5ae0189bda61d4c1723",
         "0fe716cb94b719481dbc64707ba03c889392cc421ce3acb5de11417aafff4fa1",
         "e0d6a537afecd328cc626f8ad9e7b530fccaf0d46f40cae842567ee9d9523c88"
       ],
-      "outputContextHash": "df00fb59130c3e175af9b604477ab274f0dd0d6dcdc575ceefdc0b453573706e",
-      "reviewedAt": "2026-11-12T08:44:35.670Z",
+      "outputContextHash": "64b8aead294244f72a82c3d42b7d585161df10fd5f73e5ba3062119a2a0a68f9",
+      "reviewedAt": "2026-11-12T09:11:14.438Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "migration-planning": {
@@ -2587,7 +2581,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "8963587812852961cf7f1a3ccfa8eb62bb2b3ba892dc91e618180b119dec9712",
+      "inputHash": "794e53439dff066c45f589053df34ca6c8e6e866947cecc2edd0e646a3b8cbfb",
       "contentHash": "b6ca32e8265ae67256a28b01630aac5037d8ba1379db68ba257c3ec966e30ee9",
       "paragraphHashes": [
         "ec0674cf5b8773fc3fe8277bef8c756b93167b75c493d6b1c0960180b08dda0a",
@@ -2624,9 +2618,11 @@
         "569f573f2c641df437adb3da993e92870140f2f2c71780635f79532755d04cc8",
         "5165509f9be7edf2e355e412e08ede491e13a71cbf414bee66dc98119155e85b"
       ],
-      "outputContextHash": "a5098bc9376c248664d121924b8962fa13c5573988ffcf86e8025db1a112215f",
-      "reviewedAt": "2026-11-12T08:47:07.090Z",
-      "reviewer": "Configured independent chapter reviewer"
+      "outputContextHash": "af86a2ab766206c13025f5821d068841276b209f5fe4ed8ede15a18e147a7e1b",
+      "reviewedAt": "2026-11-12T09:11:15.029Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-12T08:47:07.090Z"
     },
     "ongoing-operation": {
       "claims": "passed",
@@ -2636,50 +2632,40 @@
       "repetition": "passed",
       "faq": "passed",
       "findings": [],
-      "summary": "The earlier unsupported claim has been removed, and no clear problems were found in the changed paragraphs.",
-      "glossary": [
-        {
-          "term": "Baseline",
-          "definition": "A starting measurement used for comparison, collected consistently over time."
-        }
-      ],
+      "summary": "No previous findings remain unresolved, and the changed paragraphs present no clear problems.",
+      "glossary": [],
       "roles": [
         "Quality lead",
+        "Evaluation lead",
         "Instrument owner",
         "Coordinator",
-        "Evaluation lead",
         "Reviewer",
         "Operator",
-        "Vendor",
+        "Approver",
         "Qualified specialist",
+        "Vendor",
         "Auditor"
       ],
       "recordNames": [
-        "Instrument records",
+        "Instrument record",
         "Exception log",
         "Overdue or recently extended items list",
-        "Review findings and actions",
-        "Review record",
         "Calibration certificate",
-        "Inspection records",
+        "Inspection record",
         "Maintenance history",
-        "Evaluation records",
+        "Review record",
         "Approved answers",
-        "Workflow map",
-        "Equipment register",
+        "Evaluation records",
         "Acceptance criteria",
         "Scoring sheet",
-        "Written vendor answers",
-        "Demonstration notes"
+        "Demonstration notes",
+        "Written vendor answers"
       ],
       "decisions": [
-        "Which program improvements to prioritize",
-        "How to respond when review evidence is incomplete",
-        "Whether a question can be answered within the available evidence or needs specialist interpretation",
-        "Which records to migrate",
-        "How to set or change calibration intervals",
-        "How to handle out-of-tolerance and overdue instruments",
-        "Whether to proceed, seek clarification or reject after a demonstration",
+        "Which improvement issues to prioritize and assign",
+        "What baseline measures to use",
+        "Whether an FAQ answer is supported or needs specialist interpretation",
+        "Whether to proceed, seek clarification or reject after the demonstration",
         "Whether an undemonstrated critical path is acceptable or needs follow-up"
       ],
       "pass": true,
@@ -2826,8 +2812,8 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "654ea0d4728c5f6b3496b0a957fa25e98030c70cc89ab87e77297b8877279f5a",
-      "contentHash": "d9c8e074e99c50c8a8e167009d2dd2921fd416f20f4897d1fa65d683c9003af5",
+      "inputHash": "eff5c4d9ea0de1ea6a1eb889ee7dba1b694cf3f1a41ee6dff051bc2be136e9fc",
+      "contentHash": "cacb9fd86fbb007ab612072fcb644ebbe603caceb84202d39d2e66831ca2b64e",
       "paragraphHashes": [
         "2bc931bc3c3b35b7daa7d442f6f176389d11af5145d5a5aab237cf206fe58b5d",
         "3c4d44edd6b08ebc0f9ce3afabf05d5a801541d244758ff09c0476deb88496b8",
@@ -2849,7 +2835,7 @@
         "1ee6292c9cd8cb6055ccdd5bd846deec18516da49dc67006fcd4d1128747be47",
         "1bb08304ec6e4a036723254cb1269878f8cd4918d2ddde8d2c30a7276a240e2b",
         "fa8bf5a3e9779674c8de078179c3e3b84467da7c10a68b8bc4765f7ca6114566",
-        "02b67ff11b2e28de114415319c559e4cf17dde724d8431ac0437dfde7643dd93",
+        "a0561ae0f03545a1674f3c22a22f1a6e5f1c96236fd3758c9b68535050a4d38e",
         "0dda363a903821fad629b75d63cd579bc87954a32e9c4833e59c8c55e63cc5ea",
         "5203107f7957b586f4c19e57672491d4a78dd22b7ba7686d183270b509de8e43",
         "fa20cd0ca04bf26cca1905318296b156658ae642e79f7d46b5f4f9088b746fb0",
@@ -2859,7 +2845,7 @@
         "c4f0ad1df76a0b2654123caa2b6862ccfe70f56e6728e1261ebe734e9ef2018f",
         "35c59e3bb08e21076c6fb2b215152fbb9d4362502a780bc655bdc58807775c2a",
         "00f48486f5328451ebb5cf2d66883ddcf451c31bda245bf29650a8ecbed0585d",
-        "7658cfdd02d8e4114b554092cc62c124d47795c7f45396b143085322fe5d0bf3",
+        "b64fee873ef9612edec7dd8880aef9ad539c5078aa436610bf5f9eb8181f0820",
         "bd3a3593cc22147298aa13e1113c82a7c8065dfaeb1240d028caac656ee3461b",
         "84470e23a4cfa2d0fb9f8e9398219057a0f9126db398e06b4bde275b4f460806",
         "ac43e547805a25abcabae23250e3e118d94cd32d666214991c6e40d3b3e789f6",
@@ -2873,8 +2859,8 @@
         "1a3cebf827ef26924fe6a0c71536a549af54201a55d4b36a3c3ed0c599f8c820",
         "825a63f5053ed60fe091e7b91edaf8985372c6a1e5e049654a25aeaedc5dcb70"
       ],
-      "outputContextHash": "7f08b8fa47f3e4866f79d22a9c8bf6990c610fee09f751bc523fc1c37e9fed33",
-      "reviewedAt": "2026-11-12T08:53:25.817Z",
+      "outputContextHash": "667d1de302ef744634bda6365f7f7c8b5afefea4dbffc2efaa0aff1ebe27042e",
+      "reviewedAt": "2026-11-12T09:12:17.901Z",
       "reviewer": "Configured independent chapter reviewer"
     },
     "calibration-management-software": {
@@ -2995,7 +2981,7 @@
         "failures": []
       },
       "glossaryVariantsIgnored": [],
-      "inputHash": "fab60effbf07b5aa72646bccf34d673a78cf51000b31761a2af79400f7876b8d",
+      "inputHash": "b062a9e3bf70cfa60bd47185802d4afe6e635e9f16137423dfc6d4695565fb00",
       "contentHash": "3c9078c8dd54b2898616f159d5b82f71adf1ba3c9cc3fb8b0144dc204b566dc4",
       "paragraphHashes": [
         "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
@@ -3021,42 +3007,16 @@
         "fac7476d3148265d005b266b86a31fec207ebc7a2d9296f6296cea2674ef0e6d",
         "381bea88846c12545649065fe79535e30f614f878a4644f98551cdf86d4db99d"
       ],
-      "outputContextHash": "a8f3a52fd2e2204f1d792d9a7d350a1c275452fb31f9b16a323eca0d7ec5bacf",
-      "reviewedAt": "2026-11-12T08:58:33.753Z",
-      "reviewer": "Configured independent chapter reviewer"
+      "outputContextHash": "0376ef457dd4662e8530e9e7a22f2eb175f337d8af2fba65d33090d822164974",
+      "reviewedAt": "2026-11-12T09:12:18.487Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-12T08:58:33.753Z"
     }
   },
   "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73",
   "outlineHash": "d96aec6a9acf5913f7b1d65528ea71ff04fafd52d74dc15ed72313b253273826",
-  "audit": {
-    "claims": "failed",
-    "consistency": "passed",
-    "repetition": "passed",
-    "unresolvedFindings": [
-      "The mapping chapter says the Auditing Practices Group papers provide context for what auditors tend to look at and that auditors can ask about measuring resources. The supplied APG evidence says the papers are non-definitive and lists their titles, but does not summarize their contents or establish what auditors tend to examine. The August 2024 item supports only the stated point about clause 7.1 relating to other requirements; keep broader auditor-behavior statements clearly framed as recommendations or remove them.",
-      "The certificate-review chapter turns NIST’s statements about uncertainty into a checklist requirement that a certificate state uncertainty, and its example treats a missing uncertainty statement as grounds to withhold acceptance. The supplied NIST evidence says each link contributes to measurement uncertainty and specifies information needed for each link, but does not say that every certificate must explicitly state uncertainty or that its absence alone invalidates a traceability claim. Qualify this as the organization’s review rule, not a direct NIST requirement.",
-      "Several auditor-behavior claims are not supported by the supplied sources, including that auditors ask about unexplained record changes, that an auditor will see particular gaps, and that specific records are what auditors rely on. The ICC page describes an auditor view, and the APG evidence gives only limited context; neither supports these broader claims about audit practice.",
-      "The guide makes general capability claims not established by the supplied evidence, including that software can make a reviewer’s decision attributable and dated or hold values and comparisons. Present these as capabilities to test rather than facts about software, and do not imply they are verified ICC capabilities.",
-      "The FAQ states that certification depends on the whole management system and an audit. The supplied evidence supports that an ICC clause mapping is not a statement that software alone satisfies a clause, but does not establish this broader certification claim. Cite suitable primary evidence or narrow the answer to the supported limitation.",
-      "The schedule chapter uses NIST’s statement about internal measurement-assurance programs establishing measurement-system and reference status at relevant times as a reason for keeping the calibration schedule current. That is an extrapolation; distinguish the guide’s scheduling recommendation from what NIST specifically states.",
-      "The certificate chapter states as fact that a calibration certificate is evidence that a calibration event took place and produced a result. The supplied ICC evidence describes a calibration record with a certificate attached, but does not establish this general claim about certificates. Cite supporting evidence or frame it as the team’s working assumption."
-    ],
-    "inputHash": "7ef4fac56be5dd73eb7470df4592d4be98cfc626748be4321c7f46214eac1cc8",
-    "pageHashes": {
-      "calibration-management-software": "19850cd5b9d10972f6989716b08d5f47b8d14a1146b7d707866828793be5cf0e",
-      "mapping-workflows": "5a509e64e33a65039c659e048f9d2388a668c27b69ba6be5677e36addd78cd6f",
-      "evaluating-software": "c5965255e2964166a8813738c5ed67880a5b2ecd82275e68a700597fadd7a0d7",
-      "instrument-register": "af0373f54291db5a82489828fef1fa8ec29ff2c7979c3c6660a9bc02c64b7b4d",
-      "certificates-traceability": "e6d231037bbb0b00d5b48c0a318155c7a5736b863981beac0e53626c24ef0f82",
-      "due-dates-scheduling": "b7bf75b7af8954f0a6ebbf34d4474ee7ffbc8ef10e7773dceb9da105f3a1a494",
-      "out-of-tolerance": "7d6014c19a2219f0082b45bd9eed04351d92b40614af034c70040c68d2461381",
-      "maintenance-inspections": "88a0a37d5cdfd396d2e30151d72f045e2b2551332184e30bdd5c4004db188efc",
-      "migration-planning": "747b32defac1a427f30e877b8797b584ec81b0227e17147f7eb32a1d20114caf",
-      "ongoing-operation": "8207a571ab37d055c64fff84b154be17a43ab45c6995725b60430ed1c410faf9"
-    },
-    "reviewer": "Configured openai independent review",
-    "reviewedAt": "2026-11-12T08:59:12.497Z"
-  },
+  "audit": null,
   "generationCompletedAt": null,
   "finalReport": null
 }

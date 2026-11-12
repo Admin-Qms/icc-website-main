@@ -22,7 +22,7 @@ capabilityIds: []
 ---
 ## Keep maintenance on the same record
 
-Calibration tells the team whether an instrument measured correctly at a point in time. Maintenance tells the team what has happened to the equipment since. When the two histories sit in different places, a reviewer looking at a drifting result cannot easily see that the instrument was repaired, adjusted, or dropped a month earlier. This section covers why the team may want maintenance on the same equipment record, and how to test whether a system supports it.
+Calibration gives the team measurement results at a point in time to compare with its acceptance criteria. Maintenance tells the team what has happened to the equipment since. When the two histories sit in different places, a reviewer looking at a drifting result cannot easily see that the instrument was repaired, adjusted, or dropped a month earlier. This section covers why the team may want maintenance on the same equipment record and how to test whether a system supports it.
 
 The published [ICC calibration and maintenance page](https://isocertificationconsultants.ca/solutions/calibration-maintenance/) states that maintenance is recorded against the same equipment record, and it lists maintenance history for each asset in the auditor view. That is a description of a design choice worth examining on its own terms. One record per piece of equipment may let a person read calibration and maintenance events together, but the supplied description does not specify how the events are displayed. Ask any candidate to show the combined history for one instrument, with at least one calibration and one maintenance event, and check that the order of events is clear.
 
@@ -36,7 +36,7 @@ Consider who writes maintenance records. In some plants, the calibration coordin
 
 Keep descriptions specific. A line such as “repaired” is of little use to a later reader, while a line naming the part replaced and the check made afterward lets a reviewer judge whether a calibration check is needed.
 
-Finally, check what happens to the calibration status when a maintenance event is recorded. A system could leave the status unchanged, flag the instrument for review, or place it out of service until a calibration check is recorded. The team's rule should determine which behavior it wants. Ask the vendor to show what happens, and whether the behavior can be configured.
+Finally, check what happens to the calibration status when a maintenance event is recorded. A system could leave the status unchanged, flag the instrument for review, or place it out of service until a calibration check is recorded. The team's rule should determine which behavior it wants. Ask the vendor to show what happens and whether the behavior can be configured.
 
 **Illustrative example:** At an unnamed Canadian manufacturer, a technician replaces the anvil on a bench micrometer and records the repair on the equipment record. The team's rule says a repair to a measuring surface requires a calibration check before release, so the coordinator schedules one and the instrument stays out of service. The timeline on the record shows the repair followed by the new calibration. All situations in this chapter are hypothetical, and none describes a customer result.
 
@@ -52,7 +52,7 @@ Decide who performs and who reviews. The person who performs the inspection is o
 
 Decide how often each checklist runs and whether the frequency differs by equipment class. A checklist applied to a hundred gauges needs a way to show which ones are done and which are not. Ask the vendor to show a program view: which inspections are due, which are complete, and which are overdue. Without a view like this, the coordinator may need a separate spreadsheet as a workaround.
 
-Test what the signature means. An e-signature should identify the person, the time, and the action, and it should be tied to the specific record. Ask how a signature is created, whether it can be applied by someone else, and what happens if a record is changed after signing. The page describes timestamps in the auditor view, so ask to see them on a completed record, and ask how a correction is made and shown.
+Test what the signature means. An e-signature should identify the person, the time, and the action, and it should be tied to the specific record. Ask how the signature is created, whether it can be applied by someone else, and what happens if a record is changed after signing. The page describes timestamps in the auditor view, so ask to see them on a completed record, and ask how a correction is made and shown.
 
 Consider floor access again. The ICC page describes QR labels that open an equipment record on the shop floor and PIN access for people without a desk login. If operators perform inspections, test whether they can open the checklist from the label, complete it, and sign using the access the plant would actually provide. A checklist that needs a desk login is an access risk to test at the machine.
 
@@ -64,7 +64,7 @@ Keep a record of missed inspections as well as completed ones. A missed inspecti
 
 ## Prepare what an auditor sees
 
-An auditor may observe activities and talk with staff, and will also rely on the records the workflow leaves behind. The final test of a calibration and maintenance design is whether a person who was not involved can pick an instrument, ask for its history, and understand it without help. This section covers how to prepare for that and how to practice it.
+An auditor may observe activities, talk with staff, and review records. The final test of a calibration and maintenance design is whether a person who was not involved can pick an instrument, ask for its history, and understand it without help. This section covers how to prepare for that and how to practice it.
 
 The [ICC calibration and maintenance page](https://isocertificationconsultants.ca/solutions/calibration-maintenance/) lists an auditor view that includes the equipment register with calibration status and the next due date, calibration certificates attached to each instrument, completed inspection records with both signatures and timestamps, and maintenance history for each asset. Use that list as a template for the team's own evidence set, whatever system it uses. For any instrument, the team should be able to show its status, its latest certificate, its recent inspections, and its maintenance history, and explain any exception in between.
 
@@ -72,7 +72,7 @@ The [ISO 9001 Auditing Practices Group](https://committee.iso.org/home/tc176/iso
 
 Run a retrieval test before an audit. Choose three instruments at random, one from each of several classes, and ask a colleague who did not set up the register to find each instrument's status, certificate, last inspection, and maintenance history. Set a target in minutes for retrieving one instrument's evidence, time each retrieval against it, and note where the person hesitated. If a record cannot be found, log it, investigate where it should have been filed, and escalate it to the quality lead. Hesitation shows where the record is unclear.
 
-Check completeness as well as findability. For each of the three instruments, ask whether every event in the timeline has its evidence. A calibration with no certificate, an inspection with one signature, or a repair with no description is a gap the auditor will see. Fix gaps by completing the record where the facts are known, and note any that cannot be corrected, with the reason. Do not backdate entries to cover a gap, since an honest note is better than an altered record.
+Check completeness as well as findability. For each of the three instruments, ask whether every event in the timeline has its evidence. A calibration with no certificate, an inspection with one signature, or a repair with no description is a gap a reviewer may question. Fix gaps by completing the record where the facts are known, and note any that cannot be corrected, with the reason. Do not backdate entries to cover a gap, since an honest note is better than an altered record.
 
 Prepare people as well as records. The coordinator, the reviewer, and the quality lead should be able to explain how the process works in a few sentences, and operators should be able to say how they check an instrument's status before using it.
 

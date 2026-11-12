@@ -29,11 +29,11 @@ Every calibration program begins with a question that sounds simple and rarely i
 
 A quality lead who cannot list the instruments in a single cell, name the person responsible for each, and point to the latest certificate has found the real starting point for the evaluation. Software that records calibration will only be as accurate as the list it is given.
 
-Begin with a floor walk rather than a spreadsheet. Take the list the team already uses, whether that is a shared workbook, a binder of tags, or a folder of certificates, and compare it with what is physically in use at the workstations. The point of the walk is not to audit anyone. It is to learn how reliable the current list is.
+Begin with a floor walk rather than a spreadsheet. Take the list the team already uses, whether that is a shared workbook, a binder of tags, or a folder of certificates, and compare it with what is physically in use at the workstations. Walk the area with the instrument owners where possible, since they know which items are really in use. The point of the walk is not to audit anyone. It is to learn how reliable the current list is.
 
-The [ISO 9001 Auditing Practices Group](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) page, published by ISO/TC 176 and the International Accreditation Forum, describes the group as an informal source of papers on auditing quality management systems and says the papers are non-definitive and are not required criteria for an audit. This guide uses them only as context for what auditors tend to look at.
+The [ISO 9001 Auditing Practices Group](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) page, published by ISO/TC 176 and the International Accreditation Forum, describes the group as an informal source of papers on auditing quality management systems and says the papers are non-definitive and are not required criteria for an audit. This guide does not rely on them for statements about audit practice.
 
-The page lists papers on monitoring and measuring resources and on measurement traceability, but it does not summarize their content, so nothing in this chapter should be read as a statement of what those papers say. For the purposes of mapping, the practical lesson is narrower: resources used to monitor and measure are something an auditor can ask about, so the team should be able to show them.
+The page lists papers on monitoring and measuring resources and on measurement traceability, but it does not summarize their content, so nothing in this chapter should be read as a statement of what those papers say. For the purposes of mapping, the recommendation is narrower: the team should be able to show how it identifies and controls the resources it uses to monitor and measure.
 
 Use five elements to describe each decision in the workflow. They carry through the rest of this guide.
 

@@ -6,62 +6,56 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The earlier finding is resolved: the revised opening acknowledges that auditors can observe activities and speak with staff. No clear issue was found in the changed paragraph.",
+  "summary": "The earlier calibration finding is resolved. No clear problems were identified in the changed paragraphs.",
   "glossary": [
     {
       "term": "Inspection",
-      "definition": "A planned check of condition that produces a record with a result."
-    },
-    {
-      "term": "Planned maintenance",
-      "definition": "Maintenance that follows a schedule."
-    },
-    {
-      "term": "Unplanned maintenance",
-      "definition": "Maintenance that follows a fault or report."
+      "definition": "A planned check of equipment condition that produces a record with a result."
     }
   ],
   "roles": [
     "Maintenance lead",
     "Maintenance technician",
     "Calibration coordinator",
+    "Reviewer",
     "Operator",
     "Instrument owner",
-    "Reviewer",
     "Supervisor",
     "Quality lead",
     "Auditor",
-    "Vendor"
+    "Vendor",
+    "Backup"
   ],
   "recordNames": [
+    "Equipment record",
     "Maintenance logs",
     "Equipment list",
-    "Equipment record",
-    "Equipment register",
     "Maintenance history",
     "Maintenance record",
     "Exception record",
     "Procedure notes",
     "Inspection checklist",
-    "Checklist template",
+    "Inspection schedule",
     "Inspection record",
     "Maintenance request",
+    "Equipment register",
     "Calibration certificate",
     "Technician's notes"
   ],
   "decisions": [
-    "Which maintenance events enter each asset's history",
+    "Which maintenance events belong in each asset's history",
     "Which events require a calibration check before return to use and who decides",
-    "What fields and sign-off the maintenance record needs",
+    "What fields and sign-off requirements maintenance records need",
     "Whether planned maintenance has its own interval and status",
-    "What maintenance and calibration access each role needs",
-    "How a maintenance event affects calibration status",
-    "Who performs and reviews inspections and who acts as backup",
-    "What unsatisfactory checklist answers trigger",
-    "How often checklists run and whether frequency varies by equipment class",
+    "What access and permissions each role needs",
+    "How maintenance events affect calibration status",
+    "What inspection checklist items and follow-up actions are needed",
+    "Who performs and reviews inspections and who provides backup",
+    "How often inspections run for each equipment class",
     "How checklist changes and versions are recorded",
-    "What retrieval target to use and how to handle missing or incomplete evidence",
-    "How an auditor receives read-only access"
+    "What retrieval-time target to use and how to handle missing evidence",
+    "How to correct or document incomplete records",
+    "How an auditor is given read-only access"
   ],
   "pass": true,
   "deterministic": {
@@ -147,18 +141,18 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "abd10616e2fc30a04e736eb2ad47f9a67a8731d7cc009b5cd4acaef3a29c0d21",
-  "contentHash": "313e2b6c7678da71a81488c6e454b0eb66ba47c0c89aa5de434389af0b288952",
+  "inputHash": "2c6f9c2017b141c4fd4366f613c578f72864f0e9f5b5ea2b3864e5d2b01cb2b5",
+  "contentHash": "d2996ace268f34b41ea4e8c09f3ccf3089e04fdbf3820639c78d3cde31bc3d50",
   "paragraphHashes": [
     "e33dd70d7ba4f157a86196e3424f3184abb32aaf25837f65072be2c89744302a",
-    "de1f3f2c784f784060aade589f88a7ea47553590855f08389aa33a9387110d12",
+    "854b2df5250fd347ca4ed5516bd6088497a9b362d24070073bc382edde8b66d7",
     "f7ea3c68928a0f19bbc1b50d0294e62ffa646506b274a4ba2c7b6356a52f825b",
     "a266af5ffa9638dc3ebda9eb1e6bd72b5f1fcdf9c7b6b6803987f85b0beed5b6",
     "7826e434956222191bdafdd75aef36a5a35dd6631fa33c958e44a8979e1ea3fe",
     "dadb2b7ea8afe5767e5a6f5cf694c4342ecac2c74c730a0f2a4432467ec4f4cd",
     "56515bd0943a6678d39b2a62798d6e175a4f24ffe3eb3eda5929c1b826bcff66",
     "7771387d1091f340bedb1643abf28296badc4315296cd84fac752de16fe00de9",
-    "4d2d46e8d27625cd171dd5e4bb91ec59fd020ea84fb16f0880648c4baf95a677",
+    "76d82df86b982ef95871322fcebc8789d02c9988ce606f43d6e149c06c04aa4b",
     "5fe708cce6fd4ef40a5e52d301b5592d6b7a8cdc0c39dbf17b35d1b1ab39fbd6",
     "a81244643c643ecb071be6092d547b559891eb2e103d129fe20704115c499a58",
     "273de32fb21f03c34cc1ce094d0a7730b54c69ca1e2d13b22a2de380df5f3a17",
@@ -166,23 +160,23 @@
     "404169a28c7e73749b8e746bf145f2582dbecba7159b63ae3137d38d0ac1cc81",
     "62b9e8539123efaf30bbd1e8e9dcee13d9e4331d1666fb16e969c03275a21337",
     "1332f04701c4da30aaae1aa123eb1d5b77295a13e6a4daff0e31add8d7fd7fd6",
-    "472d225d31147b3093af8c481baef4092349926235fc5396c18003bc59e0c9d1",
+    "7b98232ec99382d206682138a77479a633f62088eeb4e3e37cbef1dbe992de6e",
     "25fc54214faf1d7a25a96d407455168fe24ae88de73728da8d391d1dc62a6ab9",
     "91a9650dfd2eccfe9c60cb00507eee2aaccbb21c4c2d4e10e8c50f5aaf8ae3bc",
     "5e0bfe4ad0a5ac98d55bdfef335edf722cf0d1ef663bb8216cb634e9388469ca",
     "8c4a8f9a9baefb74582ff884d222f51fcf4d152855c323b92fe7c8e29d9049ab",
     "a28e3212bf16f2c5fa536aa1221d2addabd1ce48c79c670bc73476a96d308b2a",
-    "f44cdf08c04a574af1217dde975e2aa5751362b4a1ab4b4750502fb12a71dceb",
+    "206872cfa0cd15cddee6a8f80b5d4dd8883699fa8250615231b43d4da872fc62",
     "3a113c446a8d7cb76c3f6bfdd32d42b40a4e61ac624107504d0f7e97b0520e4c",
     "e5b24a0f08113dc377e738dd28d0e94343e075485921ef618e2af4a38c738117",
     "179de3261868fa7a25985842557735831ddb44c1f5a34f0f1fa1e4735ad92c94",
-    "aef691b36fe61b8b764e856ddca08726f67ccc4355c1ea71560f64967900f425",
+    "bf40be057f23bb5f4d0941fc9396166611ae462029d1281961e1b9d262166885",
     "a20bac3050f2a449c7d8989611f93dd3ed30e4745e344336f06ff4f337e35e60",
     "7664f798556f37fc10859edf8e6507156fcdaac68dfcf5ae0189bda61d4c1723",
     "0fe716cb94b719481dbc64707ba03c889392cc421ce3acb5de11417aafff4fa1",
     "e0d6a537afecd328cc626f8ad9e7b530fccaf0d46f40cae842567ee9d9523c88"
   ],
-  "outputContextHash": "df00fb59130c3e175af9b604477ab274f0dd0d6dcdc575ceefdc0b453573706e",
-  "reviewedAt": "2026-11-12T08:44:35.670Z",
+  "outputContextHash": "64b8aead294244f72a82c3d42b7d585161df10fd5f73e5ba3062119a2a0a68f9",
+  "reviewedAt": "2026-11-12T09:11:14.438Z",
   "reviewer": "Configured independent chapter reviewer"
 }

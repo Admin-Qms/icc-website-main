@@ -61,7 +61,7 @@ As an internal recommendation, set a default for each instrument class from the 
 
 ### What does traceability mean for a calibration certificate?
 
-The [National Institute of Standards and Technology](https://www.nist.gov/metrology/metrological-traceability) adopts the international vocabulary definition: traceability is the property of a measurement result whereby it can be related to a reference through a documented unbroken chain of calibrations, each contributing to the measurement uncertainty. A reviewer therefore looks for the documented chain and the stated uncertainty, not only for the word traceable.
+The [National Institute of Standards and Technology](https://www.nist.gov/metrology/metrological-traceability) adopts the international vocabulary definition: traceability is the property of a measurement result whereby it can be related to a reference through a documented unbroken chain of calibrations, each contributing to the measurement uncertainty. A reviewer therefore looks for the documented chain and, under the team's review rule, the stated uncertainty, not only for the word traceable.
 
 ### Does a calibration certificate alone make a measurement traceable?
 
@@ -81,7 +81,7 @@ The [ICC calibration and maintenance page](https://isocertificationconsultants.c
 
 ### Does software guarantee ISO certification?
 
-No. The ICC page maps the module to ISO 9001:2015 clauses 7.1.5 and 7.1.3, ISO 13485:2016 clause 7.6 and ISO/IEC 17025:2017 clause 6.4, but a mapping is not a statement that software alone satisfies a clause. Certification depends on the whole management system and an audit. Software supports records and routines; the people and procedures still matter.
+No. The ICC page maps the module to ISO 9001:2015 clauses 7.1.5 and 7.1.3, ISO 13485:2016 clause 7.6 and ISO/IEC 17025:2017 clause 6.4, but a mapping is not a statement that software alone satisfies a clause. A mapping describes how a module relates to a clause; the team and its quality lead remain responsible for judging whether their own system meets the requirements.
 
 ### What should be prepared for a software demonstration?
 
