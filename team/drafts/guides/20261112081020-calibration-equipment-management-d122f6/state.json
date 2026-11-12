@@ -35,7 +35,7 @@
     ]
   },
   "productionSlotId": "2026-W46-slot-2",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "e7adec05a98b0d23da5692e39be7a88a0b750c0514fbaa927af943188d13e179",
@@ -109,7 +109,7 @@
     }
   },
   "createdAt": "2026-11-12T08:10:20.967Z",
-  "updatedAt": "2026-11-12T09:12:18.489Z",
+  "updatedAt": "2026-11-12T09:12:45.333Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "calibration-equipment-management",
@@ -3016,7 +3016,29 @@
   },
   "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73",
   "outlineHash": "d96aec6a9acf5913f7b1d65528ea71ff04fafd52d74dc15ed72313b253273826",
-  "audit": null,
+  "audit": {
+    "claims": "failed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "unresolvedFindings": [
+      "The maintenance and inspections chapter says, “An auditor may observe activities, talk with staff, and review records.” The supplied evidence does not establish auditor practices. Remove this statement or frame it clearly as a possible scenario, not a factual claim."
+    ],
+    "inputHash": "a8032da612f03ffdb1ed3dcb25d26bada5d618dd9d2104c791c8052d70ae81a0",
+    "pageHashes": {
+      "calibration-management-software": "19850cd5b9d10972f6989716b08d5f47b8d14a1146b7d707866828793be5cf0e",
+      "mapping-workflows": "f655e5268a9306afd5d060365ee4f6069d8643a1b12c388a5d3a1972f6e3faa3",
+      "evaluating-software": "d2ba4d88ef85bd8dd192b5cf9e76edb7681018e24375b4ac25e8d1b3b3fdf1d4",
+      "instrument-register": "af0373f54291db5a82489828fef1fa8ec29ff2c7979c3c6660a9bc02c64b7b4d",
+      "certificates-traceability": "ff8aa839f05aa287a0a4f73cd0014b4e053c61bac1d346f84774c2a3a409d3e0",
+      "due-dates-scheduling": "8a4812bedeb823d6aad9c38562297f2b2df5d4043664e15819e5a933de2c9215",
+      "out-of-tolerance": "2b3ffbb2b8955829f79c0ce9421f113d7d49cf4c4ee05aa27afe3f10e90c1170",
+      "maintenance-inspections": "f3595e62460c2109cac482fc3a55246914258bbce6f7ff91f1d24b2c970c35ce",
+      "migration-planning": "747b32defac1a427f30e877b8797b584ec81b0227e17147f7eb32a1d20114caf",
+      "ongoing-operation": "e071a91d554f7c00fb3a3ecd83f0c8c2085266b33aa85d471549aa0f30181823"
+    },
+    "reviewer": "Configured openai independent review",
+    "reviewedAt": "2026-11-12T09:12:45.331Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }
