@@ -1,0 +1,170 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The earlier citation finding is resolved. No clear problems were found in the changed paragraphs.",
+  "glossary": [
+    {
+      "term": "Scoring sheet",
+      "definition": "A comparison sheet listing workflow steps and candidates, with demonstration outcomes and supporting evidence."
+    }
+  ],
+  "roles": [
+    "Evaluation group member",
+    "Calibration coordinator",
+    "Instrument owner",
+    "Certificate reviewer",
+    "Operator",
+    "Deputy",
+    "Auditor",
+    "Vendor",
+    "Note-taker",
+    "Certified consultant"
+  ],
+  "recordNames": [
+    "Workflow map",
+    "Acceptance criteria",
+    "Equipment register",
+    "Calibration record",
+    "Certificate",
+    "Scoring sheet",
+    "Demonstration notes",
+    "Inspection record",
+    "Maintenance history",
+    "Written vendor answers",
+    "Candidate summary",
+    "Commitments and open questions",
+    "Ranked shortlist"
+  ],
+  "decisions": [
+    "Which candidates can show the whole workflow and should be shortlisted",
+    "How to score each demonstrated workflow step",
+    "Whether a returned certificate is acceptable",
+    "Whether a candidate advances when required answers remain incomplete",
+    "Which candidate to prefer after evaluating evidence, access and support"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Build a workflow-based shortlist",
+        "section": "Build a workflow-based shortlist"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Build a workflow-based shortlist; semantic review verifies support",
+        "section": "Build a workflow-based shortlist"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Test the decision points",
+        "section": "Test the decision points"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Test the decision points; semantic review verifies support",
+        "section": "Test the decision points"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Examine evidence, access and support",
+        "section": "Examine evidence, access and support"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Examine evidence, access and support; semantic review verifies support",
+        "section": "Examine evidence, access and support"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "97f6a4cae5df65fa571ff01faab7958aa1805d893617661b9af943ab3ba80f11",
+  "contentHash": "afae67ad753955a7c6a4aac17a9683ea5781c126ab7a14b44cc29492a9ef71f1",
+  "paragraphHashes": [
+    "34a2c737b52c6404cb6f0e763283301e4ff93d9d3750e57fc9a6711454a4c8ad",
+    "81b746b141e66e10abc3bf7f116a73219edcc8755b7ef3a90999b8912d54afba",
+    "4393f43de466836f8b20811fa0fff9b70e37298e1793795054811845fa6b9dff",
+    "cbbf8736bc7f549ddc36fdc5102b55b97e67035e72165d2d8a7420e70652e26f",
+    "74bb799d9582d5e9be137541c4ad9a8d55625bed41528388906765f66c6fcd4d",
+    "dfc8c1d74b503525008eb3ce23859a7e2b303908767b572b6680727e923a05e1",
+    "68c4c2f4c32d64c1f063d70e5c9976a7edd993e58ab632e3a0c443e9598e869d",
+    "f8598b55aec835dbddca19ed486fb523d33bf1f38ff741e44c087cce62fe1194",
+    "de49c0cd1fa3c0e5358ee7eb1f3cd62fae771bd4834c6338ba27b658d2eaeddf",
+    "09c5a13508681f88a4128cf7cc058720fe4ba6952ebb71a1ace8ab5d004b3ce2",
+    "bf5a171a644eff2e5be03746d8a9e71b22d2e400819473c0e710ba480e4e9329",
+    "387f56dd2922f5a100e5fa1b5e7bc4633cfb676f293ad577d2179add8236d0e3",
+    "10efbe5a1ac211d3bc4cb0f7f01a6ead80ae1b8eee6a74a7f57507d4df8d00ae",
+    "9f544378aaa3aefa34c0da0fed1035c72475fae252aba341c70dbb0b2c711f16",
+    "3e1a00d8a03b1bc6258c8ff650780e60fca9be3c980607c5efaee90b1df9e5b1",
+    "36cb5d4e74e35f44d59db43f306ee84f57f4b7473f6ac5b27b94326e307da395",
+    "89bfd351f2e83ba56c9d9b393028101993bcfaac249d7b3fc6482222029e2723",
+    "6d58aafc11dbb9512f39ba37ee2587f6a884db8436dfd959a69b2915d69cb1ba",
+    "5e729fe893a8e959304ff7f829a52efeb6a5dc6511983883edc65952e167f6d5",
+    "a4f8290e3cdb03da33e3773ce108b78b109140b385919077cd0def740904c4cf",
+    "f481d8e1a5145724da7b17e27847522a5cbef81ed5be23d81a8b77761f84ac2f",
+    "3d6b71c2200a9277779f16a76d17a77e6077ec118a6b31f863642fe8ee4a815d",
+    "ed143c4fa528e3ebdef5706d1b6f397574aace3e93ff512ffad7e2ea6ce442b5",
+    "14400e9e71cdbdfa6f2f50784fc7fe46dfae5b5491e2c46cc785451bb19aff15",
+    "3b2cc6bf3fd8777e5baed1805353f2ce2614080d8995d10e2abbd9aeb457e3f3",
+    "8e2422cde166bb1db264cbe958e7c060971951412a105af2bb9cdad711984496",
+    "ef154b0821bdd002c585fee8dfef7becc60c005854c5cfcd39a2375884109acd",
+    "35ad0246a799d5fc8e38d95f12707b0ad703f5069b2194e7d8c8f7084c5fb86a",
+    "c721475bbe9932f834206179f3de99e0fbf8aacaa7c14f7f8fb10599400e3c4c"
+  ],
+  "outputContextHash": "1d19f84ac1be84195c0f4a2c25aa79625c299d7cb6c2050a970b11935fe44c6b",
+  "reviewedAt": "2026-11-12T08:21:46.173Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

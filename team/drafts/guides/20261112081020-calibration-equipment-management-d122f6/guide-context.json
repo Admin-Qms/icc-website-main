@@ -33,6 +33,10 @@
     {
       "term": "Calibration coordinator",
       "definition": "The person who manages the schedule, suppliers and register."
+    },
+    {
+      "term": "Scoring sheet",
+      "definition": "A comparison sheet listing workflow steps and candidates, with demonstration outcomes and supporting evidence."
     }
   ],
   "roles": [
@@ -47,7 +51,12 @@
     "Supervisor",
     "Station owner",
     "Purchasing clerk",
-    "Auditor"
+    "Auditor",
+    "Evaluation group member",
+    "Deputy",
+    "Vendor",
+    "Note-taker",
+    "Certified consultant"
   ],
   "recordNames": [
     "Scope list",
@@ -58,7 +67,15 @@
     "Equipment register",
     "Calibration record",
     "Workflow map",
-    "Acceptance criteria"
+    "Acceptance criteria",
+    "Scoring sheet",
+    "Demonstration notes",
+    "Inspection record",
+    "Maintenance history",
+    "Written vendor answers",
+    "Candidate summary",
+    "Commitments and open questions",
+    "Ranked shortlist"
   ],
   "example": {
     "label": "Illustrative example",
@@ -78,6 +95,19 @@
         "Whether to release an instrument to service",
         "Who may act as a backup reviewer",
         "Who signs off the acceptance criteria and judges demonstrations"
+      ]
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluate calibration management software against real instruments",
+      "summary": "The earlier citation finding is resolved. No clear problems were found in the changed paragraphs.",
+      "bodyHash": "c5965255e2964166a8813738c5ed67880a5b2ecd82275e68a700597fadd7a0d7",
+      "decisions": [
+        "Which candidates can show the whole workflow and should be shortlisted",
+        "How to score each demonstrated workflow step",
+        "Whether a returned certificate is acceptable",
+        "Whether a candidate advances when required answers remain incomplete",
+        "Which candidate to prefer after evaluating evidence, access and support"
       ]
     }
   ],
