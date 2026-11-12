@@ -50,10 +50,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-11-12T08:21:36.482Z"
+    },
+    "instrument-register": {
+      "hash": "f51462244171337eea7643b8130037858cbf3f79ce07d63576b5cb150cbd0998",
+      "wordCount": 2032,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-12T08:24:08.059Z"
     }
   },
   "createdAt": "2026-11-12T08:10:20.967Z",
-  "updatedAt": "2026-11-12T08:21:46.176Z",
+  "updatedAt": "2026-11-12T08:24:18.696Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "calibration-equipment-management",
@@ -1141,7 +1148,7 @@
     "reviewedChapters": [],
     "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73"
   },
-  "contextHash": "1d19f84ac1be84195c0f4a2c25aa79625c299d7cb6c2050a970b11935fe44c6b",
+  "contextHash": "3bfb617d3bdcf7ed996b9642bfa42dd283db1f137f986759a03c0fb220a66e7a",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1505,6 +1512,184 @@
       ],
       "outputContextHash": "1d19f84ac1be84195c0f4a2c25aa79625c299d7cb6c2050a970b11935fe44c6b",
       "reviewedAt": "2026-11-12T08:21:46.173Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "instrument-register": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The earlier citation finding is resolved. The changed paragraph cites the supplied ICC source and accurately describes its support for bulk loading from Excel.",
+      "glossary": [
+        {
+          "term": "Identity fields",
+          "definition": "Fields that describe an instrument and rarely change."
+        },
+        {
+          "term": "Status fields",
+          "definition": "Fields that describe where an instrument stands and change with events."
+        },
+        {
+          "term": "Data dictionary",
+          "definition": "A description of each field, including its meaning, who fills it, allowed values and whether it can be left empty."
+        }
+      ],
+      "roles": [
+        "Calibration coordinator",
+        "Instrument owner",
+        "Backup",
+        "Approver",
+        "Operator",
+        "Reviewer",
+        "Vendor"
+      ],
+      "recordNames": [
+        "Equipment register",
+        "Instrument record",
+        "Certificate",
+        "Maintenance history",
+        "Field list",
+        "Data dictionary",
+        "Instrument label",
+        "Cleaned spreadsheet",
+        "Calibration results"
+      ],
+      "decisions": [
+        "Which fields to include in the minimum instrument record",
+        "How to assign unique identifiers and instrument classes",
+        "How incomplete mandatory fields should appear",
+        "What intervals to set and when to adjust them",
+        "Who owns each instrument and acts as backup",
+        "Who may change fields, intervals or service status",
+        "How to prepare and test the import",
+        "How to format, apply and replace labels",
+        "What access each role needs"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Define the register record",
+            "section": "Define the register record"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Define the register record; semantic review verifies support",
+            "section": "Define the register record"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Set intervals and ownership",
+            "section": "Set intervals and ownership"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Set intervals and ownership; semantic review verifies support",
+            "section": "Set intervals and ownership"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Make bulk loading and floor access practical",
+            "section": "Make bulk loading and floor access practical"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Make bulk loading and floor access practical; semantic review verifies support",
+            "section": "Make bulk loading and floor access practical"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "c2d94d06e6230898976c3f1ecc19dd96115c6cc7d2a8843d6883aa3a2ebb28d9",
+      "contentHash": "a9815394e4a54759b9d410cc49d97c6f150a9d9891f3460526a11a73b0617380",
+      "paragraphHashes": [
+        "025ab883b55a1e97c25a8bf1c111b4848c09a3704788d044aca3924b29c232bc",
+        "321496af7a6e6e926ff6ab66a16e7d0632986a557d3e0330ca7ddb7c90c174e3",
+        "e1f7f01ce0abd2082bfb8f1749e4dadcccbd5bc4469a70c8f3aa918a9ff2e072",
+        "d7a923e5774b3a1e69a4932aa9d2c7f154718cd31b49293c25a8efaf07715420",
+        "c24ae9bfe5e098f461031c12d4475c45ec1b38794bba3181d4c328bfc5419297",
+        "8095f56943738f39ff4a7e57aaf649576ad614ac52c03d484e5ee2bd8d26f806",
+        "867fd8c29ef74525ef61ab8c7ae65a8d6242771b8b4bdf81e112fefa460f64bb",
+        "a75c134dd083ff8901ee7959de8342f5e45dfb8434bc17111d95400036225f2e",
+        "dcec5195d47a0cb2d4b8ab180614f7ffaa0c9345ef20f3fc8478a29d3262a8cc",
+        "95a85fd7c5a6b2c59cea5bc933846d50e71be42a26e8c513425ebf86e4e8df72",
+        "d66e3e3b56ba6375b875b978232665aba062ab5514fa5b545c5a70877ae11dc7",
+        "38c67f9a4f32e4725a3f7ce18840956192751659715d8d8ff89f2d700fbb0a87",
+        "fb48a57bf1c20a01381d860d40415e28df5fc192932d04314db8c666749397b5",
+        "427b3830e424e014b0c09e96e70f3c5ce557f822fb3e58677342e654964b8d15",
+        "2b5162065c9c652f355ae2d991c0a4e3c31da920887925d0b1275d970e8919ef",
+        "a1f4248210739dfdd11ca87fdcd84998a965ff1402a3bb5b69b899bbc5a56747",
+        "cd3d40caac342947fc42070a00d817b418ad1e12df536bce9ad29a68c3626b1c",
+        "0475e307c7eb2561f89850675d0408aa5e553d4f72e4d58bf37a765fbe9bcf17",
+        "87ebf5d40b732f95cf7a7301f3d1895f636f95cc4e4ba8fb2a06b661d3477bac",
+        "de5acc82f165034d767444ff1af0387bee0906c817462160b7147440e504e9e3",
+        "917c36acf6f6f7985028f3f52080711c7789e104260f8da3e529e4b0216c6e30",
+        "d59c78b832dc846ba38017a950fc23368ecf22db077fb4f2234bde54c7998868",
+        "09639e4b602864eb0a2cc3516d7d6fe5a2574c9a42f299e72355baad902ca0cc",
+        "62b7f16c2fc6d112c0548654b9c95a4870b75e487fe05d0f4ef257e4627f4d17",
+        "ab0875bb0f66185be4e911bafd6bfd2b536131668819b83f09ef9e441077d45c",
+        "9984fee8b12ed5db6d8aa3f8664b69e8f3666587a92af5c8016ff5ef5cd4db13",
+        "615abdf1eb1a3ff28226a1c72d77c60476f47ffd35ae183016943c3992de4857",
+        "188fa9d52f56c278902528696b528ffac1f10903117dd61b1f6d49a0fceef56d",
+        "69e88be74d1a2f7c990e3e3e29a7751dc58120e35f9238b8855eaea74cd20621",
+        "fb3e265fa4a02f396ebd44c3bc53278871ee50259634355421cd2accf40349bc",
+        "185912a6a69a1bd1b2467a6fbcb3bd586bee9413cab0488067aee9f9ec04fa97",
+        "4a2e48e70ff7e3cbea3a04d44f3629b2e8d4aaa3a2e42467d0ff7c6d9e93cb03"
+      ],
+      "outputContextHash": "3bfb617d3bdcf7ed996b9642bfa42dd283db1f137f986759a03c0fb220a66e7a",
+      "reviewedAt": "2026-11-12T08:24:18.693Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

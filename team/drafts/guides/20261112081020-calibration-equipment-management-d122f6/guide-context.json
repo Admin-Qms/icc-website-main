@@ -37,6 +37,18 @@
     {
       "term": "Scoring sheet",
       "definition": "A comparison sheet listing workflow steps and candidates, with demonstration outcomes and supporting evidence."
+    },
+    {
+      "term": "Identity fields",
+      "definition": "Fields that describe an instrument and rarely change."
+    },
+    {
+      "term": "Status fields",
+      "definition": "Fields that describe where an instrument stands and change with events."
+    },
+    {
+      "term": "Data dictionary",
+      "definition": "A description of each field, including its meaning, who fills it, allowed values and whether it can be left empty."
     }
   ],
   "roles": [
@@ -56,7 +68,10 @@
     "Deputy",
     "Vendor",
     "Note-taker",
-    "Certified consultant"
+    "Certified consultant",
+    "Backup",
+    "Approver",
+    "Reviewer"
   ],
   "recordNames": [
     "Scope list",
@@ -75,7 +90,13 @@
     "Written vendor answers",
     "Candidate summary",
     "Commitments and open questions",
-    "Ranked shortlist"
+    "Ranked shortlist",
+    "Instrument record",
+    "Field list",
+    "Data dictionary",
+    "Instrument label",
+    "Cleaned spreadsheet",
+    "Calibration results"
   ],
   "example": {
     "label": "Illustrative example",
@@ -108,6 +129,23 @@
         "Whether a returned certificate is acceptable",
         "Whether a candidate advances when required answers remain incomplete",
         "Which candidate to prefer after evaluating evidence, access and support"
+      ]
+    },
+    {
+      "slug": "instrument-register",
+      "title": "Build the equipment register and calibration intervals",
+      "summary": "The earlier citation finding is resolved. The changed paragraph cites the supplied ICC source and accurately describes its support for bulk loading from Excel.",
+      "bodyHash": "af0373f54291db5a82489828fef1fa8ec29ff2c7979c3c6660a9bc02c64b7b4d",
+      "decisions": [
+        "Which fields to include in the minimum instrument record",
+        "How to assign unique identifiers and instrument classes",
+        "How incomplete mandatory fields should appear",
+        "What intervals to set and when to adjust them",
+        "Who owns each instrument and acts as backup",
+        "Who may change fields, intervals or service status",
+        "How to prepare and test the import",
+        "How to format, apply and replace labels",
+        "What access each role needs"
       ]
     }
   ],
