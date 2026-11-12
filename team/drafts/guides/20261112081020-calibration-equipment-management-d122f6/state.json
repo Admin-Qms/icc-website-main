@@ -1,0 +1,42 @@
+{
+  "id": "20261112081020-calibration-equipment-management-d122f6",
+  "topic": {
+    "id": "calibration-equipment-management",
+    "topic": "Calibration and equipment maintenance management software",
+    "aliases": [],
+    "primaryKeyword": "calibration management software",
+    "secondaryKeywords": [
+      "equipment calibration register",
+      "calibration due date tracking"
+    ],
+    "moduleSlugs": [
+      "calibration-maintenance"
+    ],
+    "audience": "Canadian quality and operations teams",
+    "problem": "Quality teams struggle to keep calibration intervals, certificates and maintenance history for every instrument current and audit-ready.",
+    "priority": 6,
+    "proposedAt": "2026-10-26T15:15:46.773Z",
+    "proposedBy": "topic-scout",
+    "approval": "approved",
+    "approvedBy": "scout-reviewer",
+    "approvedAt": "2026-10-26T15:15:46.773Z",
+    "reviewRules": {
+      "R1_SCOPE": "pass",
+      "R2_DISTINCT": "pass",
+      "R3_SOURCES": "pass",
+      "R4_ACCURACY": "pass",
+      "R5_FIT": "pass"
+    },
+    "reviewFindings": [],
+    "sources": [
+      "https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "https://www.nist.gov/metrology/metrological-traceability",
+      "https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html"
+    ]
+  },
+  "productionSlotId": "2026-W46-slot-2",
+  "stage": "reserved",
+  "pages": {},
+  "createdAt": "2026-11-12T08:10:20.967Z",
+  "updatedAt": "2026-11-12T08:10:20.967Z"
+}
