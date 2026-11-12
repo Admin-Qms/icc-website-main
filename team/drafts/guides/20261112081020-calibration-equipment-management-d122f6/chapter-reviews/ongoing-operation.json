@@ -6,41 +6,45 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "No previous findings remain unresolved, and the changed paragraphs present no clear problems.",
+  "summary": "The previous finding is resolved: the answer names the assigned standards and clauses and retains the qualification about mapping. The changed paragraph presents no clear new problems.",
   "glossary": [],
   "roles": [
     "Quality lead",
-    "Evaluation lead",
     "Instrument owner",
     "Coordinator",
+    "Qualified specialist",
+    "Evaluation lead",
     "Reviewer",
     "Operator",
-    "Approver",
-    "Qualified specialist",
+    "Presenter",
     "Vendor",
     "Auditor"
   ],
   "recordNames": [
-    "Instrument record",
+    "Instrument records",
     "Exception log",
     "Overdue or recently extended items list",
-    "Calibration certificate",
-    "Inspection record",
+    "Calibration certificates",
+    "Inspection records",
     "Maintenance history",
-    "Review record",
+    "Review findings and actions",
+    "Baseline measures",
     "Approved answers",
     "Evaluation records",
+    "Workflow map",
+    "Equipment register",
     "Acceptance criteria",
     "Scoring sheet",
     "Demonstration notes",
     "Written vendor answers"
   ],
   "decisions": [
-    "Which improvement issues to prioritize and assign",
-    "What baseline measures to use",
-    "Whether an FAQ answer is supported or needs specialist interpretation",
+    "Which review findings and improvements to prioritize",
+    "How to answer FAQ questions within the evidence and when to defer interpretation",
+    "Whether affected work is acceptable after an out-of-tolerance result",
+    "Whether and how to extend a calibration due date",
     "Whether to proceed, seek clarification or reject after the demonstration",
-    "Whether an undemonstrated critical path is acceptable or needs follow-up"
+    "Whether an unshown critical path is acceptable or needs a follow-up demonstration"
   ],
   "pass": true,
   "deterministic": {
@@ -186,8 +190,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "741412571bac5323f2730b30981522fd2a57c9e501d0dce3732200c5dd7f3226",
-  "contentHash": "cacb9fd86fbb007ab612072fcb644ebbe603caceb84202d39d2e66831ca2b64e",
+  "inputHash": "93acb45ad37eb18733545321691d6c9b21f97eaf156e7c8750d2d27bcc61ec4f",
+  "contentHash": "a6f6d8d980df6e5d5c39152bb22e1daa4d56896b604eff3f2c998d7e9145e635",
   "paragraphHashes": [
     "2bc931bc3c3b35b7daa7d442f6f176389d11af5145d5a5aab237cf206fe58b5d",
     "3c4d44edd6b08ebc0f9ce3afabf05d5a801541d244758ff09c0476deb88496b8",
@@ -219,7 +223,7 @@
     "c4f0ad1df76a0b2654123caa2b6862ccfe70f56e6728e1261ebe734e9ef2018f",
     "35c59e3bb08e21076c6fb2b215152fbb9d4362502a780bc655bdc58807775c2a",
     "00f48486f5328451ebb5cf2d66883ddcf451c31bda245bf29650a8ecbed0585d",
-    "b64fee873ef9612edec7dd8880aef9ad539c5078aa436610bf5f9eb8181f0820",
+    "55dc5c4da4a8dcfbdcffac78ffed40bd754fd1e29f57648504d9cb99f4fbe00e",
     "bd3a3593cc22147298aa13e1113c82a7c8065dfaeb1240d028caac656ee3461b",
     "84470e23a4cfa2d0fb9f8e9398219057a0f9126db398e06b4bde275b4f460806",
     "ac43e547805a25abcabae23250e3e118d94cd32d666214991c6e40d3b3e789f6",
@@ -233,9 +237,7 @@
     "1a3cebf827ef26924fe6a0c71536a549af54201a55d4b36a3c3ed0c599f8c820",
     "825a63f5053ed60fe091e7b91edaf8985372c6a1e5e049654a25aeaedc5dcb70"
   ],
-  "outputContextHash": "3d3b6d1297f3d2a9ade20f078d4ff3d67f761c2f57fe9d88dbb904d88bc21dd7",
-  "reviewedAt": "2026-11-12T09:19:44.883Z",
-  "reviewer": "Configured independent chapter reviewer",
-  "carried": true,
-  "carriedFrom": "2026-11-12T09:12:17.901Z"
+  "outputContextHash": "8a4d190fcb13080d88ffd526b8611723835f2a3331f74bc3294ea05d749d1d80",
+  "reviewedAt": "2026-11-12T09:22:24.396Z",
+  "reviewer": "Configured independent chapter reviewer"
 }

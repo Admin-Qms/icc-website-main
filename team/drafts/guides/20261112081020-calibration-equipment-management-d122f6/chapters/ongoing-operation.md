@@ -81,7 +81,7 @@ The [ICC calibration and maintenance page](https://isocertificationconsultants.c
 
 ### Does software guarantee ISO certification?
 
-No. The ICC page maps the module to ISO 9001:2015 clauses 7.1.5 and 7.1.3, ISO 13485:2016 clause 7.6 and ISO/IEC 17025:2017 clause 6.4, but a mapping is not a statement that software alone satisfies a clause. A mapping describes how a module relates to a clause; the team and its quality lead remain responsible for judging whether their own system meets the requirements.
+No. The published [ICC page](https://isocertificationconsultants.ca/solutions/calibration-maintenance/) names ISO 9001:2015 clauses 7.1.5 and 7.1.3, ISO 13485:2016 clause 7.6 and ISO/IEC 17025:2017 clause 6.4 as the clauses the module is mapped to. Such a mapping does not mean software alone satisfies a clause. The team and its quality lead remain responsible for judging whether their own system meets the requirements.
 
 ### What should be prepared for a software demonstration?
 

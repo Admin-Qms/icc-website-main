@@ -118,8 +118,9 @@
     "Maintenance lead",
     "Maintenance technician",
     "Workflow owner",
+    "Qualified specialist",
     "Evaluation lead",
-    "Qualified specialist"
+    "Presenter"
   ],
   "recordNames": [
     "Scope list",
@@ -181,8 +182,12 @@
     "Cutover plan",
     "Role-based job aids",
     "Issues list",
+    "Instrument records",
     "Exception log",
     "Overdue or recently extended items list",
+    "Calibration certificates",
+    "Review findings and actions",
+    "Baseline measures",
     "Approved answers",
     "Evaluation records",
     "Inspection checklist",
@@ -333,14 +338,15 @@
     {
       "slug": "ongoing-operation",
       "title": "Review performance, answer common questions and prepare a demonstration",
-      "summary": "No previous findings remain unresolved, and the changed paragraphs present no clear problems.",
-      "bodyHash": "e071a91d554f7c00fb3a3ecd83f0c8c2085266b33aa85d471549aa0f30181823",
+      "summary": "The previous finding is resolved: the answer names the assigned standards and clauses and retains the qualification about mapping. The changed paragraph presents no clear new problems.",
+      "bodyHash": "70d5de0c3f7ce0a4a7bf4d2fa728b1cab406abebdb5237d62d82ecb27f8bf855",
       "decisions": [
-        "Which improvement issues to prioritize and assign",
-        "What baseline measures to use",
-        "Whether an FAQ answer is supported or needs specialist interpretation",
+        "Which review findings and improvements to prioritize",
+        "How to answer FAQ questions within the evidence and when to defer interpretation",
+        "Whether affected work is acceptable after an out-of-tolerance result",
+        "Whether and how to extend a calibration due date",
         "Whether to proceed, seek clarification or reject after the demonstration",
-        "Whether an undemonstrated critical path is acceptable or needs follow-up"
+        "Whether an unshown critical path is acceptable or needs a follow-up demonstration"
       ]
     },
     {
