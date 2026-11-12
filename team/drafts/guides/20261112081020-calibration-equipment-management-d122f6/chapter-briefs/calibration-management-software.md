@@ -1,0 +1,897 @@
+# Calibration management software for Canadian quality and operations teams
+
+## Fixed frontmatter
+
+```json
+{
+  "slug": "calibration-management-software",
+  "title": "Calibration management software for Canadian quality and operations teams",
+  "description": "How to choose and implement calibration management software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.",
+  "primaryKeyword": "calibration management software",
+  "keywords": [
+    "calibration management software",
+    "equipment calibration register",
+    "calibration due date tracking"
+  ],
+  "author": "ISO Certification Consultants Editorial Team",
+  "date": "2026-11-12",
+  "imageBrief": "A manufacturing quality technician checking an instrument tag at a production cell; authentic industrial setting, no text or logos",
+  "sourceIds": [
+    "icc-calibration-maintenance",
+    "nist-traceability",
+    "apg-overview"
+  ],
+  "capabilityIds": []
+}
+```
+
+Target: 1500 visible words.
+Scope: Introduce the complete guide, its audience and the decisions it helps make. Include an ordered overview, useful internal/primary links, no product promises.
+
+## Subsections
+
+- The operational problem
+
+- How to use this guide
+
+- Planning evaluation and implementation
+
+## Chapter boundaries
+
+
+## Evidence
+
+{
+  "topicId": "calibration-equipment-management",
+  "sources": [
+    {
+      "id": "icc-calibration-maintenance",
+      "sourceType": "primary",
+      "title": "ICC Assets (calibration and maintenance) module page",
+      "publisher": "ISO Certification Consultants Inc.",
+      "url": "https://isocertificationconsultants.ca/solutions/calibration-maintenance/",
+      "retrievedAt": "2026-11-12",
+      "supportedClaims": [
+        "The published ICC page describes an equipment register in which each piece of equipment carries its calibration interval and attached certificates, with status labels such as due soon and in date. These are published descriptions; availability and configuration must be confirmed in a demonstration and no capability is advertised as verified.",
+        "The page describes a calibration record showing that calibration was recorded, a certificate attached and the next due date set.",
+        "The page states the register can be loaded in bulk from Excel; it gives no detail on how the import works.",
+        "The page states maintenance is recorded against the same equipment record.",
+        "The page describes inspection checklists built once and scheduled as programmes, with performed and reviewed e-signatures on inspection records.",
+        "The page describes QR labels on equipment that open its record on the shop floor, and PIN access for people without a desk login.",
+        "The page describes an auditor view showing the equipment register with calibration status and next due date, certificates attached to each instrument, completed inspection records with both signatures and timestamps, and maintenance history for each asset.",
+        "The page maps the module to ISO 9001:2015 clauses 7.1.5 and 7.1.3, ISO 13485:2016 clause 7.6 and ISO/IEC 17025:2017 clause 6.4; a mapping is not a statement that software alone satisfies a clause.",
+        "The page describes setup with the vendor: processes mapped, modules configured, standards onboarded and training included, with a certified consultant reviewing the configuration through to the audit.",
+        "The page states every AI output is a suggestion that a person reviews before it enters a controlled record.",
+        "The page does not state due-date alerts or reminders, pricing, or how the register import works; those are evaluation questions."
+      ]
+    },
+    {
+      "id": "nist-traceability",
+      "sourceType": "primary",
+      "title": "Metrological Traceability: Frequently Asked Questions and NIST Policy",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "url": "https://www.nist.gov/metrology/metrological-traceability",
+      "retrievedAt": "2026-11-12",
+      "supportedClaims": [
+        "NIST adopts the VIM definition (JCGM 200:2012, 2.41): traceability is the property of a measurement result whereby the result can be related to a reference through a documented unbroken chain of calibrations, each contributing to the measurement uncertainty.",
+        "Traceability is a property of a measurement result, not of an instrument, report or laboratory; merely having an instrument calibrated is not enough to make a result traceable.",
+        "The chain must be a complete, explicitly described and documented series of calibrations linking the result to each intermediate reference and to the highest reference claimed, and each link contributes to the measurement uncertainty.",
+        "Each link needs a defined measured property, a description of the measurement system and a specification of the reference used; the reference is typically a national or international standard.",
+        "Internal measurement assurance programs must establish the status of the measurement system and the reference at the relevant times.",
+        "The provider of a result is responsible for supporting its traceability claim and the user is responsible for assessing that claim; the provider must document the process and chain so a user can assess it.",
+        "Traceability does not signify or guarantee fitness for purpose; results can be traceable yet have uncertainty too large for a given use.",
+        "Using a standard reference material does not by itself make a user's results traceable; the user must document an unbroken chain and an assurance program.",
+        "Laboratory accreditation shows competence; it does not certify the traceability of a specific result.",
+        "NIST certifies traceability only for results it provides itself and does not certify the claims of others."
+      ]
+    },
+    {
+      "id": "apg-overview",
+      "sourceType": "primary",
+      "title": "ISO 9001 Auditing Practices Group",
+      "publisher": "ISO/TC 176 and International Accreditation Forum (IAF)",
+      "url": "https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "retrievedAt": "2026-11-12",
+      "supportedClaims": [
+        "The Auditing Practices Group was established in 2003 as an on-line source of papers on auditing quality management systems; it is an informal group drawn from ISO/TC 176 and the IAF.",
+        "The papers are non-definitive and are not required criteria for an audit.",
+        "The page lists papers titled Monitoring and measuring resources and Measurement traceability under auditing to ISO 9001:2015; this page does not summarize their content.",
+        "An August 2024 news item on the page says the resources paper was revised, that resources are a key element of a quality management system, and that auditors should consider how the resource requirements in clause 7.1 relate to other requirements.",
+        "The page does not discuss calibration intervals, software or documented information."
+      ]
+    }
+  ],
+  "capabilityIds": [],
+  "capabilities": [],
+  "researchSnapshotHash": "10ac21bf78b24f4ccf757639d10daa27f5c670dd21f9ace501fa0d76089120b4",
+  "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}
+
+## Entire outline
+
+{
+  "title": "Calibration management software for Canadian quality and operations teams",
+  "description": "How to choose and implement calibration management software: map the workflow, compare capabilities, configure reviews, migrate records and train teams.",
+  "primaryKeyword": "calibration management software",
+  "introductionWords": 1500,
+  "estimatedWords": 19500,
+  "introductionImageBrief": "A manufacturing quality technician checking an instrument tag at a production cell; authentic industrial setting, no text or logos",
+  "glossary": [
+    {
+      "term": "Calibration interval",
+      "definition": "The planned time between calibrations of an instrument, set by the organization and recorded in the register."
+    },
+    {
+      "term": "Metrological traceability",
+      "definition": "The property of a measurement result whereby it can be related to a reference through a documented unbroken chain of calibrations, each contributing to the measurement uncertainty (NIST, adopting the VIM definition)."
+    },
+    {
+      "term": "Equipment register",
+      "definition": "The list of instruments in scope with identity, owner, interval, status and attached certificates."
+    },
+    {
+      "term": "Out-of-tolerance",
+      "definition": "A calibration result outside the limits the organization accepts for the instrument."
+    },
+    {
+      "term": "Workflow owner",
+      "definition": "The role accountable for decisions and records in a defined workflow."
+    }
+  ],
+  "example": {
+    "label": "Illustrative example",
+    "description": "An unnamed Canadian manufacturer evaluates calibration management software for one inspection workflow; all situations and records are hypothetical, not customer results."
+  },
+  "chapters": [
+    {
+      "slug": "mapping-workflows",
+      "title": "Map the calibration decision for every instrument",
+      "description": "Mapping the current workflow in calibration management software: define the problem, trace records and handoffs, assign owners and set acceptance criteria.",
+      "targetWords": 2000,
+      "chapterKeyword": "calibration management software workflow",
+      "boundaries": [
+        "Map the existing calibration decisions and handoffs; leave register design to the instrument register chapter.",
+        "Leave vendor comparison to the evaluation chapter and migration mechanics to the migration chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Start with the instrument that cannot be found",
+          "sourceIds": [
+            "icc-calibration-maintenance",
+            "apg-overview"
+          ],
+          "keyPoints": [
+            "Name the question a quality lead must answer: which instruments are in use, which are in date and which have evidence on file.",
+            "The auditing papers on the ISO/TC 176 Auditing Practices Group page are non-definitive; treat them as context, not required criteria."
+          ],
+          "workflow": {
+            "role": "Quality lead",
+            "input": "Floor walk list, existing spreadsheets and paper certificates",
+            "decision": "Decide which instruments belong in scope and which are excluded with a reason",
+            "record": "Scope list with owner and reason for each exclusion",
+            "exception": "An instrument is in use but appears in no list"
+          },
+          "evaluationCriteria": [
+            "Can the team name every instrument in scope, its owner and where its latest certificate sits without searching?"
+          ],
+          "example": "A supervisor finds a gauge at a workstation that appears in no spreadsheet and records it as a scoping gap."
+        },
+        {
+          "title": "Trace records and handoffs",
+          "sourceIds": [
+            "icc-calibration-maintenance",
+            "nist-traceability"
+          ],
+          "keyPoints": [
+            "Map the path from calibration request to returned instrument, certificate review and updated due date.",
+            "NIST describes traceability as a documented unbroken chain of calibrations; the workflow map should show where that documentation is created and stored."
+          ],
+          "workflow": {
+            "role": "Calibration coordinator",
+            "input": "Calibration requests, supplier certificates and internal check records",
+            "decision": "Accept the certificate and release the instrument, or hold it",
+            "record": "Handoff log from sender to reviewer to releaser",
+            "exception": "Certificate returns late or incomplete"
+          },
+          "evaluationCriteria": [
+            "Does the map show who receives the certificate, who reviews it and who releases the instrument?"
+          ],
+          "example": "The coordinator notes that certificates arrive by email at one desk and are filed by another person weeks later."
+        },
+        {
+          "title": "Assign owners and set acceptance criteria",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "Assign an instrument owner, a certificate reviewer and a back-up for each calibration decision.",
+            "Define in advance what counts as an acceptable workflow: every in-scope instrument has an interval, a certificate and a next due date."
+          ],
+          "workflow": {
+            "role": "Workflow owner",
+            "input": "Instrument list, role list and absence cover",
+            "decision": "Approve ownership and the acceptance criteria",
+            "record": "Owner assignments and the signed-off acceptance criteria",
+            "exception": "Owner absent or role vacant"
+          },
+          "evaluationCriteria": [
+            "Can a vendor demonstration be judged against written acceptance criteria rather than impressions?"
+          ],
+          "example": "The team writes three acceptance criteria and a back-up reviewer for the inspection instruments."
+        }
+      ],
+      "imageBrief": "a quality technician walking a production line with a clipboard of instrument tags beside a CNC machine; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover the current-state calibration workflow, ownership and acceptance criteria."
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluate calibration management software against real instruments",
+      "description": "Evaluating software capabilities in calibration management software: build a workflow shortlist, test decision points, examine evidence and compare support.",
+      "targetWords": 2000,
+      "chapterKeyword": "calibration management software evaluation",
+      "boundaries": [
+        "Evaluate fit using the mapped workflow; do not design the register fields here.",
+        "Do not describe unverified ICC features as confirmed; frame them as demonstration questions."
+      ],
+      "subsections": [
+        {
+          "title": "Build a workflow-based shortlist",
+          "sourceIds": [
+            "icc-calibration-maintenance",
+            "apg-overview"
+          ],
+          "keyPoints": [
+            "Score each candidate against the mapped workflow and acceptance criteria rather than a feature list.",
+            "The ICC page describes an equipment register, calibration records, maintenance history and an auditor view; confirm each in a demonstration."
+          ],
+          "workflow": {
+            "role": "Evaluation lead",
+            "input": "Mapped workflow, acceptance criteria and candidate list",
+            "decision": "Shortlist candidates that can show the whole decision path",
+            "record": "Scoring sheet with evidence from each demonstration",
+            "exception": "A candidate cannot show a required step"
+          },
+          "evaluationCriteria": [
+            "Does every shortlisted candidate demonstrate the steps from the workflow map, in order?"
+          ],
+          "example": "The team asks each vendor to run one instrument from due date to released certificate."
+        },
+        {
+          "title": "Test the decision points",
+          "sourceIds": [
+            "icc-calibration-maintenance",
+            "nist-traceability"
+          ],
+          "keyPoints": [
+            "Ask the vendor to show a certificate review, an out-of-tolerance decision and a missing certificate.",
+            "The ICC page does not state due-date alerts or reminders; ask whether and how due dates trigger action."
+          ],
+          "workflow": {
+            "role": "Quality lead",
+            "input": "Sample instruments, a sample certificate and an incomplete record",
+            "decision": "Accept, reject or defer the candidate on observed behavior",
+            "record": "Demonstration notes and unresolved questions",
+            "exception": "A required decision path cannot be shown"
+          },
+          "evaluationCriteria": [
+            "Can the vendor show what happens when a certificate is missing, not only when everything is complete?"
+          ],
+          "example": "The team brings one instrument with no certificate and asks what the register shows."
+        },
+        {
+          "title": "Examine evidence, access and support",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "Check what an auditor sees, who can edit calibration records and how changes are traced.",
+            "The ICC page describes QR labels, PIN access for people without a desk login and a vendor-led setup; the page gives no pricing, so ask in writing."
+          ],
+          "workflow": {
+            "role": "Quality lead and IT contact",
+            "input": "Access list, support questions and price request",
+            "decision": "Select the candidate whose evidence, access and support terms fit",
+            "record": "Written vendor answers on access, support and cost",
+            "exception": "Vendor answers are vague or verbal only"
+          },
+          "evaluationCriteria": [
+            "Are access rules, support scope and cost confirmed in writing before the decision?"
+          ],
+          "example": "The team requests the support scope and import details in writing before shortlisting."
+        }
+      ],
+      "imageBrief": "two quality inspectors comparing a calibration certificate with an instrument tag at a bench; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover vendor evaluation using the workflow map, with ICC claims as demonstration questions."
+    },
+    {
+      "slug": "instrument-register",
+      "title": "Build the equipment register and calibration intervals",
+      "description": "Designing the equipment register in calibration management software: define record structure, set ownership and access, create usable records and test them.",
+      "targetWords": 2000,
+      "chapterKeyword": "calibration management software equipment register",
+      "boundaries": [
+        "Define register fields and intervals; leave certificate content review to the next chapter.",
+        "Leave due-date operations to the scheduling chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Define the register record",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "Each equipment record carries its calibration interval and attached certificates on the ICC page; decide which other fields the team needs.",
+            "Separate fixed identity fields from changing status fields."
+          ],
+          "workflow": {
+            "role": "Calibration coordinator",
+            "input": "Instrument list, supplier details and procedures",
+            "decision": "Decide the mandatory fields for each instrument class",
+            "record": "Register field specification",
+            "exception": "Instrument class has no agreed interval"
+          },
+          "evaluationCriteria": [
+            "Can every instrument be identified and its interval found from one record?"
+          ],
+          "example": "The team lists identification, location, owner, interval and certificate as the minimum fields."
+        },
+        {
+          "title": "Set intervals and ownership",
+          "sourceIds": [
+            "icc-calibration-maintenance",
+            "nist-traceability"
+          ],
+          "keyPoints": [
+            "Set each interval deliberately and record the reasoning; the NIST page notes that traceability does not guarantee fitness for purpose.",
+            "Name an owner and a back-up for every instrument."
+          ],
+          "workflow": {
+            "role": "Instrument owner",
+            "input": "Manufacturer guidance, usage history and past results",
+            "decision": "Confirm or adjust each interval",
+            "record": "Interval rationale and owner assignment",
+            "exception": "Interval cannot be justified"
+          },
+          "evaluationCriteria": [
+            "Does the register show why an interval was chosen and who may change it?"
+          ],
+          "example": "An owner shortens an interval after repeated drift is noted in past results."
+        },
+        {
+          "title": "Make bulk loading and floor access practical",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "The ICC page states the register can be loaded in bulk from Excel but gives no detail; test the import with real data.",
+            "QR labels open an equipment record on the shop floor, according to the ICC page."
+          ],
+          "workflow": {
+            "role": "Calibration coordinator",
+            "input": "Cleaned spreadsheet and sample QR labels",
+            "decision": "Approve the import mapping and label format",
+            "record": "Import test results and label trial notes",
+            "exception": "Import rejects or alters records"
+          },
+          "evaluationCriteria": [
+            "Does a trial import preserve identity, interval and owner for a sample of real instruments?"
+          ],
+          "example": "The team imports twenty instruments and checks each against the source sheet."
+        }
+      ],
+      "imageBrief": "an operator scanning a label on a micrometer case beside an assembly station; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover register design, intervals, ownership and loading."
+    },
+    {
+      "slug": "certificates-traceability",
+      "title": "Review certificates and keep the traceability chain",
+      "description": "Reviewing certificates in calibration management software: attach evidence, check traceability, accept or reject results and keep records retrievable.",
+      "targetWords": 2000,
+      "chapterKeyword": "calibration management software certificates",
+      "boundaries": [
+        "Cover certificate review and traceability evidence; leave out-of-tolerance handling to its own chapter.",
+        "Do not state what any standard clause requires beyond the supplied sources."
+      ],
+      "subsections": [
+        {
+          "title": "Attach and identify the certificate",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "The ICC page describes a calibration record with a certificate attached and a next due date set.",
+            "Link each certificate to one instrument and one calibration event."
+          ],
+          "workflow": {
+            "role": "Calibration coordinator",
+            "input": "Supplier certificate and instrument record",
+            "decision": "Attach the certificate or return it to the supplier",
+            "record": "Linked certificate and event date",
+            "exception": "Certificate lacks an instrument identifier"
+          },
+          "evaluationCriteria": [
+            "Can a certificate be traced to exactly one instrument and one event?"
+          ],
+          "example": "A certificate that does not match an instrument serial number is held for correction."
+        },
+        {
+          "title": "Check what traceability means",
+          "sourceIds": [
+            "nist-traceability"
+          ],
+          "keyPoints": [
+            "NIST defines traceability as a property of a measurement result, linked to a reference through a documented unbroken chain of calibrations, each contributing uncertainty.",
+            "Having an instrument calibrated is not by itself enough to make a result traceable."
+          ],
+          "workflow": {
+            "role": "Quality lead",
+            "input": "Certificate, reference information and uncertainty statements",
+            "decision": "Accept the evidence or request more",
+            "record": "Review record with the chain evidence checked",
+            "exception": "Chain is incomplete or uncertainty is missing"
+          },
+          "evaluationCriteria": [
+            "Does the review step prompt the reviewer to check the chain and uncertainty, not only the date?"
+          ],
+          "example": "The reviewer asks the supplier for the missing uncertainty statement before accepting."
+        },
+        {
+          "title": "Decide acceptance and fitness for use",
+          "sourceIds": [
+            "nist-traceability",
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "NIST states traceability does not guarantee fitness for purpose, so record the check that the result suits the use.",
+            "Keep reviewer identity and decision with the certificate."
+          ],
+          "workflow": {
+            "role": "Certificate reviewer",
+            "input": "Certificate, tolerance requirements and intended use",
+            "decision": "Accept for use, restrict or reject",
+            "record": "Reviewer decision and rationale",
+            "exception": "Result is traceable but too uncertain for the task"
+          },
+          "evaluationCriteria": [
+            "Does the record show who accepted the certificate, when and for which use?"
+          ],
+          "example": "The reviewer restricts a gauge to a looser tolerance until a better calibration is obtained."
+        }
+      ],
+      "imageBrief": "a quality lead reviewing a calibration certificate beside an inspection station; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover certificate review and traceability evidence."
+    },
+    {
+      "slug": "due-dates-scheduling",
+      "title": "Run due-date tracking and the calibration schedule",
+      "description": "Running due-date tracking in calibration management software: set the schedule, notify owners, handle late items and use shop floor access for status.",
+      "targetWords": 2000,
+      "chapterKeyword": "calibration management software due date tracking",
+      "boundaries": [
+        "Cover scheduling and status; leave failed results to the out-of-tolerance chapter.",
+        "Do not claim alerts exist; the ICC page does not state them."
+      ],
+      "subsections": [
+        {
+          "title": "Turn intervals into a schedule",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "The ICC page describes status labels on instruments, such as due soon and in date; confirm how status is calculated.",
+            "Plan calibration work by due date and workload."
+          ],
+          "workflow": {
+            "role": "Calibration coordinator",
+            "input": "Register intervals and last calibration dates",
+            "decision": "Plan the month and assign calibrations",
+            "record": "Schedule with assigned owners",
+            "exception": "Too many instruments fall due together"
+          },
+          "evaluationCriteria": [
+            "Can the team see what is due in the next period by owner?"
+          ],
+          "example": "The coordinator spreads instruments due in the same week across the month."
+        },
+        {
+          "title": "Notify and escalate",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "The ICC page does not state reminders or alerts; ask what notification exists and who receives it.",
+            "Define escalation for overdue items."
+          ],
+          "workflow": {
+            "role": "Instrument owner",
+            "input": "Due list and notification rules",
+            "decision": "Calibrate, defer with approval or remove from use",
+            "record": "Escalation record",
+            "exception": "Owner does not act before the due date"
+          },
+          "evaluationCriteria": [
+            "Does the evaluation show who is told, when and what happens if no one acts?"
+          ],
+          "example": "An overdue gauge is tagged and removed until its owner confirms a plan."
+        },
+        {
+          "title": "Use shop floor status",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "QR labels open an instrument record on the shop floor and PIN access supports people without a desk login, per the ICC page.",
+            "Operators should see status before using an instrument."
+          ],
+          "workflow": {
+            "role": "Operator",
+            "input": "Instrument label and floor access",
+            "decision": "Use the instrument or stop and report",
+            "record": "Status check or report",
+            "exception": "Label unreadable or access unavailable"
+          },
+          "evaluationCriteria": [
+            "Can an operator see an instrument's status in seconds at the point of use?"
+          ],
+          "example": "An operator scans a label, sees the instrument is overdue and reports it."
+        }
+      ],
+      "imageBrief": "a line operator scanning an instrument label beside a guarded press; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover schedule, notifications and floor status."
+    },
+    {
+      "slug": "out-of-tolerance",
+      "title": "Handle out-of-tolerance results and instruments out of service",
+      "description": "Handling exceptions in calibration management software: recognize out-of-tolerance results, contain affected work, assign action and preserve evidence.",
+      "targetWords": 2000,
+      "chapterKeyword": "calibration management software exceptions",
+      "boundaries": [
+        "Cover exceptions and corrective routing; leave routine certificate review to its chapter.",
+        "Do not prescribe a standard clause beyond the supplied sources."
+      ],
+      "subsections": [
+        {
+          "title": "Recognize an exception",
+          "sourceIds": [
+            "icc-calibration-maintenance",
+            "nist-traceability"
+          ],
+          "keyPoints": [
+            "Define exceptions: failed calibration, missing certificate, overdue use and damaged equipment.",
+            "NIST notes results can be traceable yet inadequate for the use."
+          ],
+          "workflow": {
+            "role": "Calibration coordinator",
+            "input": "Certificate results and use history",
+            "decision": "Declare an exception and isolate the instrument",
+            "record": "Exception record with instrument and date",
+            "exception": "Instrument was used after a failure"
+          },
+          "evaluationCriteria": [
+            "Is every exception type defined, with an owner and a starting action?"
+          ],
+          "example": "A failed result is recorded and the instrument is tagged out of service."
+        },
+        {
+          "title": "Contain affected work",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "Identify products measured since the last good calibration and decide what review is needed.",
+            "Record who made the decision."
+          ],
+          "workflow": {
+            "role": "Quality lead",
+            "input": "Use history and measurement records",
+            "decision": "Decide on review, hold or release of affected work",
+            "record": "Impact assessment and decision",
+            "exception": "Use history is incomplete"
+          },
+          "evaluationCriteria": [
+            "Does the record help identify what the instrument measured since its last good calibration?"
+          ],
+          "example": "The quality lead lists the lots inspected with the instrument since the previous calibration."
+        },
+        {
+          "title": "Preserve evidence and follow through",
+          "sourceIds": [
+            "icc-calibration-maintenance",
+            "apg-overview"
+          ],
+          "keyPoints": [
+            "Keep the exception, decision and follow-up together; the ICC page describes an auditor view.",
+            "Auditing papers are non-definitive; use them as context only."
+          ],
+          "workflow": {
+            "role": "Workflow owner",
+            "input": "Exception record and corrective action",
+            "decision": "Close the exception when evidence shows resolution",
+            "record": "Closure record",
+            "exception": "Action remains open past its date"
+          },
+          "evaluationCriteria": [
+            "Can an auditor see exception, decision and closure from the instrument record?"
+          ],
+          "example": "The closure note links the replaced instrument and the review of affected lots."
+        }
+      ],
+      "imageBrief": "a quality technician isolating a rejected gauge at a marked inspection bench; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover exceptions and containment."
+    },
+    {
+      "slug": "maintenance-inspections",
+      "title": "Link maintenance history and inspections to the equipment record",
+      "description": "Linking maintenance in calibration management software: record asset history, schedule inspection programmes, capture signatures and present audit evidence.",
+      "targetWords": 2000,
+      "chapterKeyword": "calibration management software maintenance history",
+      "boundaries": [
+        "Cover maintenance and inspection records; leave migration to its chapter.",
+        "Describe ICC capabilities only as published page descriptions."
+      ],
+      "subsections": [
+        {
+          "title": "Keep maintenance on the same record",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "The ICC page states maintenance is recorded against the same equipment record.",
+            "Decide what maintenance events matter to calibration."
+          ],
+          "workflow": {
+            "role": "Maintenance lead",
+            "input": "Maintenance logs and equipment list",
+            "decision": "Decide which events enter the record",
+            "record": "Maintenance history on the asset record",
+            "exception": "Maintenance affects calibration status"
+          },
+          "evaluationCriteria": [
+            "Does a repair or adjustment show on the same record that carries the calibration status?"
+          ],
+          "example": "A maintenance repair on a gauge prompts a recalibration check."
+        },
+        {
+          "title": "Schedule inspections and sign-offs",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "The ICC page describes checklists built once and scheduled as programmes, with performed and reviewed e-signatures.",
+            "Define who performs and who reviews."
+          ],
+          "workflow": {
+            "role": "Inspector",
+            "input": "Checklist and schedule",
+            "decision": "Complete the inspection and sign off",
+            "record": "Inspection record with both signatures",
+            "exception": "Reviewer unavailable"
+          },
+          "evaluationCriteria": [
+            "Do inspection records show both signatures and timestamps?"
+          ],
+          "example": "An operator completes a checklist and a supervisor reviews it."
+        },
+        {
+          "title": "Prepare what an auditor sees",
+          "sourceIds": [
+            "icc-calibration-maintenance",
+            "apg-overview"
+          ],
+          "keyPoints": [
+            "The ICC page lists register with status, certificates, inspection records and maintenance history in the auditor view.",
+            "Practice a sample retrieval before an audit."
+          ],
+          "workflow": {
+            "role": "Quality lead",
+            "input": "Register, certificates and records",
+            "decision": "Confirm the evidence set is retrievable",
+            "record": "Retrieval test result",
+            "exception": "A record cannot be found"
+          },
+          "evaluationCriteria": [
+            "Can the team retrieve evidence for one instrument within minutes?"
+          ],
+          "example": "The team picks an instrument and retrieves its full history."
+        }
+      ],
+      "imageBrief": "two inspectors reviewing a completed inspection record beside a fabrication cell; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover maintenance, inspections and audit retrieval."
+    },
+    {
+      "slug": "migration-planning",
+      "title": "Migrate the register and certificates without losing evidence",
+      "description": "Planning migration for calibration management software: inventory records, clean data, pilot the import, plan cutover and roll out to teams with training.",
+      "targetWords": 2000,
+      "chapterKeyword": "calibration management software migration",
+      "boundaries": [
+        "Cover migration and rollout; leave long-term review to the final chapter.",
+        "State that import details must be confirmed; the ICC page gives none."
+      ],
+      "subsections": [
+        {
+          "title": "Inventory and clean existing records",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "List every spreadsheet, folder and paper file holding calibration data.",
+            "The ICC page states bulk loading from Excel; confirm what it accepts."
+          ],
+          "workflow": {
+            "role": "Calibration coordinator",
+            "input": "Spreadsheets, folders and paper files",
+            "decision": "Decide what to migrate and what to archive",
+            "record": "Inventory and cleaning log",
+            "exception": "Duplicate or conflicting instrument identities"
+          },
+          "evaluationCriteria": [
+            "Is each source classified and each conflict resolved before import?"
+          ],
+          "example": "The team merges two spreadsheets with different names for one instrument."
+        },
+        {
+          "title": "Pilot the import and verify",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "Import one instrument class first and compare it with the source.",
+            "Verify intervals, owners and certificate links."
+          ],
+          "workflow": {
+            "role": "Quality lead",
+            "input": "Pilot data and source records",
+            "decision": "Approve the pilot or adjust the mapping",
+            "record": "Pilot verification record",
+            "exception": "Import changes values"
+          },
+          "evaluationCriteria": [
+            "Does a sample check show every pilot record matches its source?"
+          ],
+          "example": "Fifty records are checked against the source."
+        },
+        {
+          "title": "Plan cutover and train teams",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "The ICC page describes vendor setup with mapping, configuration, onboarding and training; confirm scope in writing.",
+            "Train by role."
+          ],
+          "workflow": {
+            "role": "Workflow owner",
+            "input": "Cutover plan and training list",
+            "decision": "Approve cutover and training completion",
+            "record": "Cutover and training record",
+            "exception": "Users cannot access the system"
+          },
+          "evaluationCriteria": [
+            "Do operators, reviewers and owners each know their step before cutover?"
+          ],
+          "example": "The team trains operators on scanning and reviewers on certificate acceptance."
+        }
+      ],
+      "imageBrief": "a receiving inspector sorting calibration records beside incoming material racks; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover migration, cutover and role training."
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Review performance, answer common questions and prepare a demonstration",
+      "description": "Maintaining calibration management software: review the workflow and evidence, answer common questions and prepare a demonstration for next steps.",
+      "targetWords": 2000,
+      "chapterKeyword": "calibration management software ongoing review",
+      "boundaries": [
+        "Cover system-level review, FAQs and the demonstration; individual instrument decisions belong in earlier chapters.",
+        "Distinguish source claims from vendor claims and avoid compliance guarantees."
+      ],
+      "subsections": [
+        {
+          "title": "Review the workflow and evidence",
+          "sourceIds": [
+            "icc-calibration-maintenance",
+            "apg-overview"
+          ],
+          "keyPoints": [
+            "Sample instruments, exceptions and overdue items on a set rhythm.",
+            "The Auditing Practices Group page notes that resources are a key element of a quality management system and that clause 7.1 relates to other requirements."
+          ],
+          "workflow": {
+            "role": "Quality lead",
+            "input": "Sample records and exception log",
+            "decision": "Prioritize improvements",
+            "record": "Review findings and actions",
+            "exception": "Evidence is too incomplete to assess"
+          },
+          "evaluationCriteria": [
+            "Are baselines set before any improvement is compared?"
+          ],
+          "example": "The team samples ten instruments each quarter."
+        },
+        {
+          "title": "Answer common questions without overstating compliance",
+          "sourceIds": [
+            "icc-calibration-maintenance",
+            "nist-traceability",
+            "apg-overview"
+          ],
+          "keyPoints": [
+            "Answer the FAQ questions listed in the outline.",
+            "ICC maps the module to ISO 9001:2015 clauses 7.1.5 and 7.1.3, ISO 13485:2016 clause 7.6 and ISO/IEC 17025:2017 clause 6.4; a mapping does not mean software alone satisfies a clause."
+          ],
+          "workflow": {
+            "role": "Quality lead",
+            "input": "FAQ questions and sources",
+            "decision": "Answer within the evidence",
+            "record": "Approved answers",
+            "exception": "A question needs interpretation beyond the sources"
+          },
+          "evaluationCriteria": [
+            "Do answers cite a supplied source and avoid guarantees?"
+          ],
+          "example": "The team explains that a certificate alone does not prove a traceable result."
+        },
+        {
+          "title": "Prepare a focused ICC demonstration",
+          "sourceIds": [
+            "icc-calibration-maintenance"
+          ],
+          "keyPoints": [
+            "Bring a real instrument, a missing certificate and an overdue item.",
+            "Request written answers on alerts, import, pricing and access."
+          ],
+          "workflow": {
+            "role": "Evaluation lead",
+            "input": "Scenario and open questions",
+            "decision": "Proceed, clarify or reject",
+            "record": "Demonstration results",
+            "exception": "A critical path cannot be shown"
+          },
+          "evaluationCriteria": [
+            "Does the demonstration show the decision paths, with limits stated?"
+          ],
+          "example": "The team asks to see an overdue instrument and a missing certificate."
+        }
+      ],
+      "imageBrief": "a quality lead reviewing completed evidence beside a final inspection station; authentic manufacturing environment, no readable text or logos",
+      "scope": "Cover review, FAQs and the demonstration invitation."
+    }
+  ],
+  "faqQuestions": [
+    "What problem should calibration management software solve first?",
+    "Which records should be migrated into the register?",
+    "How should calibration intervals be set and changed?",
+    "What does traceability mean for a calibration certificate?",
+    "Does a calibration certificate alone make a measurement traceable?",
+    "What should happen when an instrument is found out of tolerance?",
+    "How should due dates and overdue instruments be handled?",
+    "What evidence should be ready for an auditor?",
+    "Does software guarantee ISO certification?",
+    "What should be prepared for a software demonstration?"
+  ]
+}
+
+# ICC software guide writing rules
+
+Write for Canadian quality and operations teams evaluating or implementing software. Explain roles, inputs, decisions, records, exceptions, evaluation criteria and rollout. Use ISO requirements as supporting context rather than the main structure.
+
+- Write the introduction and chapters in separate Markdown files. The page shell supplies the H1; body subsections use H2, and FAQ questions use H3.
+- Nine chapters, each 2,000–2,200 visible words. Introduction at least 1,500 words. Entire guide at most 20,000 words including introduction, FAQs and closing invitation. Target 19,500; never use repetitive filler.
+- Use third person or direct address, US spelling and naturally capitalized terminology. Avoid the blog rule file's banned filler phrases. Do not paste or bold raw SEO keywords.
+- The introduction states the reader benefit in one sentence: what a team gains from managing the work in compliance management software in general, not a promise about ICC's product. Describe AI only as preparing drafts that a person reviews before they enter a controlled record (the ICC evidence supports review, not approval), and never claim a capability that is not in the verified register.
+- Never write the product brand as one word, "Quro", the product's web address, "AI gap assessment/analysis" or "AI audit finding(s)"; call it "compliance management software", a module's name, or "AI Assistant".
+- Titles, descriptions, keywords and URLs are fixed by the final brief. Descriptions must be 120–160 characters. Chapter order comes from the manifest.
+- Use only the frozen primary sources and capability register entries. A primary source's existence is not proof of an unrelated claim. Cite the precise source that supports the point. Do not call historical ISO guidance the current edition; resolve edition conflicts before making edition claims.
+- Distinguish software evaluation criteria from product features. Pending or retired ICC capabilities cannot be advertised. Use verified ICC-specific evidence for every advertised capability.
+- Do not invent quotations, statistics, named clients, testimonials, client results or product behavior. Begin hypothetical scenarios with `**Illustrative example:**` and use unnamed businesses. Illustrative calculations must expose their assumptions and never describe actual results.
+- Cover each chapter's distinct scope. Use paragraphs, practical tables, steps and decision criteria where helpful. Avoid repeating definitions, introductions, examples or closing language across chapters.
+- Include 8–10 distinct FAQ answers across the guide. Put them in the assigned FAQ subsection; do not repeat the same FAQ on every chapter. The last chapter closes with an invitation to request a software demonstration at `/contact/`: the closing paragraph contains "demo" or "demonstration" and links `/contact/` (for example `[book a demo](/contact/)`). The `demonstration-invitation` check blocks the guide otherwise. Do not put the slogan "Stop managing compliance. Start automating it." in the text: the page's demo box already shows it, and the chapter reviewer rejects it as an unsupported claim.
+- Each page has its own managed industrial hero brief. Use manufacturing workflow scenes; no generic office scenes, fabricated product screenshots, logos or readable invented interface text. Do not emit inline image markers or untracked image links; the guide pipeline rejects them until inline provenance is supported.
+- Use short paragraphs, clear role/input/decision/record/exception explanations and practical evaluation criteria. A table, list or Important/Key Consideration callout should help the decision, never fill a formatting quota. Each FAQ answer must give actionable detail, rather than a question heading with a token answer.
+- Read `guide-context.json` and the exact subsection brief. Preserve the reviewed glossary, example and decisions. Review each chapter before writing the next; edits to an earlier chapter require re-review of affected downstream chapters.
+- Aim near 2,000 chapter words, but use `guide budget` to determine the actual allowed maximum. Reserve at least 2,000 for each unwritten chapter and 1,500 for the introduction. Length or editorial corrections target named subsections; preserve exact citations and factual quantities.
+- Every page links at least one site page (a path such as `/solutions/training-competence/` or the full site URL; both count as internal and must resolve) and at least one assigned primary source. The `useful-links` check runs at each chapter checkpoint and again at publication.
+- Source and chapter reviews are required. Missing audit credentials, stale review hashes, unresolved accuracy/repetition findings or broken links block publication. Never edit checks or evidence to make a failed draft pass.
+
+Before checkpointing a page, count visible words, check its assigned scope and evidence, remove duplicate explanations, verify internal destinations and flag any statement the frozen evidence does not support.

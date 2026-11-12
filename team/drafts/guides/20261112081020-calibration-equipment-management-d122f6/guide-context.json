@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "topicId": "calibration-equipment-management",
+  "glossary": [
+    {
+      "term": "Calibration interval",
+      "definition": "The planned time between calibrations of an instrument, set by the organization and recorded in the register."
+    },
+    {
+      "term": "Metrological traceability",
+      "definition": "The property of a measurement result whereby it can be related to a reference through a documented unbroken chain of calibrations, each contributing to the measurement uncertainty (NIST, adopting the VIM definition)."
+    },
+    {
+      "term": "Equipment register",
+      "definition": "The list of instruments in scope with identity, owner, interval, status and attached certificates."
+    },
+    {
+      "term": "Out-of-tolerance",
+      "definition": "A calibration result outside the limits the organization accepts for the instrument."
+    },
+    {
+      "term": "Workflow owner",
+      "definition": "The role accountable for decisions and records in a defined workflow."
+    }
+  ],
+  "roles": [
+    "Quality owner",
+    "Process owner",
+    "Operator"
+  ],
+  "recordNames": [],
+  "example": {
+    "label": "Illustrative example",
+    "description": "An unnamed Canadian manufacturer evaluates calibration management software for one inspection workflow; all situations and records are hypothetical, not customer results."
+  },
+  "reviewedChapters": [],
+  "researchHash": "2964240cafb4bdf8ba5c59333cc6a71d52a3b8053abe0fef0e7290000edbaa73"
+}
