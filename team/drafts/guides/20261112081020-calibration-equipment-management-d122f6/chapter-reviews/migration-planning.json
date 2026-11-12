@@ -1,0 +1,174 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "Both earlier citation findings are resolved. No clear problems were found in the changed paragraphs.",
+  "glossary": [
+    {
+      "term": "Pilot",
+      "definition": "A small, controlled trial of the migration using real data before the full import."
+    },
+    {
+      "term": "Cutover",
+      "definition": "The point at which the new register becomes the working record and the old sources stop being updated."
+    }
+  ],
+  "roles": [
+    "Calibration coordinator",
+    "Quality lead",
+    "Workflow owner",
+    "Operator",
+    "Instrument owner",
+    "Reviewer",
+    "Supervisor",
+    "Vendor",
+    "Certified consultant"
+  ],
+  "recordNames": [
+    "Inventory",
+    "Cleaning log",
+    "Archive list",
+    "Pilot results",
+    "Cutover plan",
+    "Role-based job aids",
+    "Issues list"
+  ],
+  "decisions": [
+    "What to migrate, archive or leave behind",
+    "How to resolve duplicate identities and incomplete data",
+    "How to bring certificates across",
+    "Who may approve record corrections",
+    "Whether the pilot passes or its mapping needs adjustment",
+    "When to switch to the new register and who signs off",
+    "How to retain old sources and when to use a fallback",
+    "What training each role needs and how to address reported issues"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Inventory and clean existing records",
+        "section": "Inventory and clean existing records"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Inventory and clean existing records; semantic review verifies support",
+        "section": "Inventory and clean existing records"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Pilot the import and verify",
+        "section": "Pilot the import and verify"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Pilot the import and verify; semantic review verifies support",
+        "section": "Pilot the import and verify"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Plan cutover and train teams",
+        "section": "Plan cutover and train teams"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Plan cutover and train teams; semantic review verifies support",
+        "section": "Plan cutover and train teams"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "8963587812852961cf7f1a3ccfa8eb62bb2b3ba892dc91e618180b119dec9712",
+  "contentHash": "b6ca32e8265ae67256a28b01630aac5037d8ba1379db68ba257c3ec966e30ee9",
+  "paragraphHashes": [
+    "ec0674cf5b8773fc3fe8277bef8c756b93167b75c493d6b1c0960180b08dda0a",
+    "e65cff2e78263bf4a5b70a6260113b312ef6c9d61718db751426eaa2df6367e4",
+    "4a1b1b7980e8622ce0876d79c95d73779ad3f877a89e147a76693491644a81d5",
+    "e73995a3f2c989eb2227cce4811127499f02d501a6fc20441d36102121204f4b",
+    "7b27422c6bb5c938357c973a411595ed4b9ff0bf142b45e5de5288667350e24c",
+    "f2fa9b5c5ee199a8cf8d93f55114982ea868fc5a30366c4bf2cc013c98363ead",
+    "ddb4dbd0ae6ace3ea47dbac98701f524a2dfeb288ef5fbc0f95ee0be70c86e2d",
+    "96442c1401857a5943b2dca79773a3a3c4aa1dbed654f21c441c4a80b3fb2432",
+    "c071f8d4dde4739a765ef0d8522466c43a5040a6bed854b1070cc3dbd78e5539",
+    "449451a9b0c18a266f99cf5efec79c72a321ab0f72523aaceb8ac1b269c5699e",
+    "512f578916d11b9d8496437246ad65b00ef0f6acaeee1b8c3590524210cc2e1f",
+    "914e0c77a91b2ae131f8125e3879999bc2d8f80e5e37fb620d7a135734560f7e",
+    "3011db0a257d1d4c792f031ffd69ccf8944436495f58c6de0b56839b38b47f07",
+    "5421d3f469dfa1cdfcb0d7bced5caaecf1f017570dcdd0e24ee1997b1b5a05c5",
+    "7c5403caa0d96ba8bd680de5ca5ac7edfb195e43ae8bf2dfa73952306de6f741",
+    "c8fd1e2c84ab5da2cfb2ebcae1e7d4fcfb2df8982677fb9417a56efc3d23f4cc",
+    "16255ca5c7fef5a672e80fb3e2453f2169a42301cffc0997eb36db34c9bf34d0",
+    "c47544489d3daa52db8a4da44fd2dc6e269718ac98a0d00ece2dd362b7724554",
+    "2ede0a8dd8aee12a41999f599da1aca20db23c1448ac76af54e5d23d6c746945",
+    "4c701a8a1275f4220acebf0ae5e103294b381af2897633239bc1c469621fd50f",
+    "2e10ade007e5a48a402f4b3658798fddfc9d5515f756eb6730e8e560246bc13e",
+    "443946595ae829237b618056233d48d643abb10dac91727c6c366b966dee0d94",
+    "d194d7ff2d7b694edb98516133ea1f8890b89bbfb29d2b406a0b881c51011e27",
+    "6fea1755bb2916275640ce355e9e3d80976b68d48f53532422e38959f25c1214",
+    "70aec3320e026af6d97da9ecde1666690dc71b223342ac94bd0f684131ec6096",
+    "b7f93a1d9809390c18a23ca303e1f1587d83080946843178d32281e56279ad2d",
+    "be5fee629c697d240342cc5b2d4c539d27a48b8e76cbd1b06425cfdc19f41fee",
+    "19ed6803c65a20e856a81a1c92242c6c3b16460c1ea51b900a7cf09e5b634b0d",
+    "7f73b6758625b74f087816d940314c066ef9de24243cef640db68c6bcbdd88b4",
+    "9827d2b30f31afcd243d58e8ed873981ffa65a322c4302e088b32d10140fc9e4",
+    "246d281d9e0dd94eb4386514db5e8306d4dbfc707d4f97cd759125a8b20998b5",
+    "569f573f2c641df437adb3da993e92870140f2f2c71780635f79532755d04cc8",
+    "5165509f9be7edf2e355e412e08ede491e13a71cbf414bee66dc98119155e85b"
+  ],
+  "outputContextHash": "a5098bc9376c248664d121924b8962fa13c5573988ffcf86e8025db1a112215f",
+  "reviewedAt": "2026-11-12T08:47:07.090Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

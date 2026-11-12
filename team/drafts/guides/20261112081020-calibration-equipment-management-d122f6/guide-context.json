@@ -81,6 +81,14 @@
     {
       "term": "Unplanned maintenance",
       "definition": "Maintenance that follows a fault or report."
+    },
+    {
+      "term": "Pilot",
+      "definition": "A small, controlled trial of the migration using real data before the full import."
+    },
+    {
+      "term": "Cutover",
+      "definition": "The point at which the new register becomes the working record and the old sources stop being updated."
     }
   ],
   "roles": [
@@ -110,7 +118,8 @@
     "Authorized person",
     "Follow-up owner",
     "Maintenance lead",
-    "Maintenance technician"
+    "Maintenance technician",
+    "Workflow owner"
   ],
   "recordNames": [
     "Scope list",
@@ -165,7 +174,14 @@
     "Checklist template",
     "Maintenance request",
     "Calibration certificate",
-    "Technician's notes"
+    "Technician's notes",
+    "Inventory",
+    "Cleaning log",
+    "Archive list",
+    "Pilot results",
+    "Cutover plan",
+    "Role-based job aids",
+    "Issues list"
   ],
   "example": {
     "label": "Illustrative example",
@@ -286,6 +302,22 @@
         "How checklist changes and versions are recorded",
         "What retrieval target to use and how to handle missing or incomplete evidence",
         "How an auditor receives read-only access"
+      ]
+    },
+    {
+      "slug": "migration-planning",
+      "title": "Migrate the register and certificates without losing evidence",
+      "summary": "Both earlier citation findings are resolved. No clear problems were found in the changed paragraphs.",
+      "bodyHash": "747b32defac1a427f30e877b8797b584ec81b0227e17147f7eb32a1d20114caf",
+      "decisions": [
+        "What to migrate, archive or leave behind",
+        "How to resolve duplicate identities and incomplete data",
+        "How to bring certificates across",
+        "Who may approve record corrections",
+        "Whether the pilot passes or its mapping needs adjustment",
+        "When to switch to the new register and who signs off",
+        "How to retain old sources and when to use a fallback",
+        "What training each role needs and how to address reported issues"
       ]
     }
   ],
