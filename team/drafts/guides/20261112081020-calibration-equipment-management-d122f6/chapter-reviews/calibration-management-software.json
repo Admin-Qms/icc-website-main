@@ -1,0 +1,148 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "Both earlier findings are resolved. No clear problems were found in the changed paragraphs.",
+  "glossary": [],
+  "roles": [
+    "Quality lead",
+    "Calibration coordinator",
+    "Instrument owner",
+    "Certificate reviewer",
+    "Evaluation lead",
+    "Operator",
+    "Backup",
+    "Auditor",
+    "Vendor"
+  ],
+  "recordNames": [
+    "Equipment register",
+    "Certificate",
+    "Maintenance history",
+    "Instrument tag",
+    "Inspection checklist",
+    "Inspection signature",
+    "Workflow map",
+    "Acceptance criteria",
+    "Scoring sheet",
+    "Register specification",
+    "Review checklist",
+    "Schedule rule",
+    "Exception procedure",
+    "Retrieval test result",
+    "Migration log",
+    "Cutover plan",
+    "Certificate review",
+    "Interval change",
+    "Maintenance event"
+  ],
+  "decisions": [
+    "Which instruments to include in the first release",
+    "Who owns each workflow decision and who acts as backup",
+    "What acceptance criteria to use when evaluating software",
+    "How to configure the register, review steps and schedule",
+    "How to handle exceptions and failures",
+    "What retrieval target to use",
+    "What baseline measure to collect and compare after implementation",
+    "How to migrate records and train roles"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: The operational problem",
+        "section": "The operational problem"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: How to use this guide",
+        "section": "How to use this guide"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+        "section": "Planning evaluation and implementation"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "fab60effbf07b5aa72646bccf34d673a78cf51000b31761a2af79400f7876b8d",
+  "contentHash": "3c9078c8dd54b2898616f159d5b82f71adf1ba3c9cc3fb8b0144dc204b566dc4",
+  "paragraphHashes": [
+    "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
+    "9a2b755026172f25d1a7f7a4931a36f42d28c5359d636071286f05ab9a45e90e",
+    "9ec5c80e786f8acccb37eb1b9255a50ff13b40666475d7bc6dfe5cf25025bf47",
+    "ac68c030e8e8630efb2a96c63f712df3878aa79c06a349edcabf15a5d3f9a699",
+    "25cc8aaede713491b5c3c2ea0462bb863a92e174e85a9736c21ea1fcff9a0d48",
+    "27867a47730a3df449099b242463e8357bc5e729ef005fe4402d87ddf6f07f9b",
+    "6b00a78bed1df59f6037f5571e7d435034ce9fb3951157f1b96a866fbd6c93c9",
+    "d0f441c0607582af46ec0fe2cbb8c0b64921d1f9440fd94f731c094b01532362",
+    "ec5f1ef32ef9af5f395062babbcaf76fcd299aa3181d9484a41b66c8ccb01cdd",
+    "f1e738161a7a4ec53202aac0ef3c844de52305b30c58a6922e517b890fc534b8",
+    "b376fd074bc7e2be87c0f03e5e6544039de0ae9b2698ce28e9c7f10ab6d3bc42",
+    "6d3b09c7e787915ad2c59af74c11090f08808c6de452caf70c470feba285550f",
+    "78caf90109e4635cea37a04973e35c6924f5e47d34dfa51f31e934312ec34215",
+    "2ad09a447179a556ac718625c7d74ad2bca0da0695cabacb6e53d9deb9c73107",
+    "4b64f939bdc35fcff0f89fb4d967d3b2eae9ab9ada0782ba843b16147be96d32",
+    "cc9256f793ebd2afd4e3859c88727cba6858bda7e05cfd45261f5b44a16acb11",
+    "d4244d45c41107a0ad1e2fe408e01350dece06edee6b29ea46ba8652bc0ef953",
+    "077522cf19883a5e14734e803c1af5d6ed2eb963f1a4ae291a51b04b15125c51",
+    "e01e2e439dd6f8d05ee1b5ad3389e9ce3648c90d287ab5d7d1f02d4d82069205",
+    "95b8996efaeff6cf2e8c6a9009a0344a806f1b2d5a6e1df197636ccce59c0099",
+    "fac7476d3148265d005b266b86a31fec207ebc7a2d9296f6296cea2674ef0e6d",
+    "381bea88846c12545649065fe79535e30f614f878a4644f98551cdf86d4db99d"
+  ],
+  "outputContextHash": "a8f3a52fd2e2204f1d792d9a7d350a1c275452fb31f9b16a323eca0d7ec5bacf",
+  "reviewedAt": "2026-11-12T08:58:33.753Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

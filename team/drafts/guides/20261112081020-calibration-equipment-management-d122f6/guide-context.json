@@ -196,7 +196,16 @@
     "Review record",
     "Inspection records",
     "Evaluation records",
-    "Approved answers"
+    "Approved answers",
+    "Inspection signature",
+    "Register specification",
+    "Schedule rule",
+    "Exception procedure",
+    "Retrieval test result",
+    "Migration log",
+    "Certificate review",
+    "Interval change",
+    "Maintenance event"
   ],
   "example": {
     "label": "Illustrative example",
@@ -349,6 +358,22 @@
         "How to handle out-of-tolerance and overdue instruments",
         "Whether to proceed, seek clarification or reject after a demonstration",
         "Whether an undemonstrated critical path is acceptable or needs follow-up"
+      ]
+    },
+    {
+      "slug": "calibration-management-software",
+      "title": "Calibration management software for Canadian quality and operations teams",
+      "summary": "Both earlier findings are resolved. No clear problems were found in the changed paragraphs.",
+      "bodyHash": "19850cd5b9d10972f6989716b08d5f47b8d14a1146b7d707866828793be5cf0e",
+      "decisions": [
+        "Which instruments to include in the first release",
+        "Who owns each workflow decision and who acts as backup",
+        "What acceptance criteria to use when evaluating software",
+        "How to configure the register, review steps and schedule",
+        "How to handle exceptions and failures",
+        "What retrieval target to use",
+        "What baseline measure to collect and compare after implementation",
+        "How to migrate records and train roles"
       ]
     }
   ],
