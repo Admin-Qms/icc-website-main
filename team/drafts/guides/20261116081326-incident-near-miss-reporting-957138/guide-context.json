@@ -37,6 +37,22 @@
     {
       "term": "Report form specification",
       "definition": "A record of each field’s name, who completes it, whether it is required, and its accepted values."
+    },
+    {
+      "term": "Severity scale",
+      "definition": "A set of harm-based rating levels with definitions and examples."
+    },
+    {
+      "term": "Routing table",
+      "definition": "A table naming who is told at each severity level, the expected first-response time, and a fallback role."
+    },
+    {
+      "term": "Rating history",
+      "definition": "A record of the original rating and changes, including who made them, when, and why."
+    },
+    {
+      "term": "Regulatory checklist",
+      "definition": "A checklist of applicable external notification duties, responsible roles, and filing records."
     }
   ],
   "roles": [
@@ -67,7 +83,11 @@
     "Safety lead",
     "Operations supervisor",
     "Backup reviewer",
-    "Human resources"
+    "Human resources",
+    "Operations manager",
+    "Area supervisor",
+    "Plant manager",
+    "Qualified adviser"
   ],
   "recordNames": [
     "Problem statement",
@@ -97,7 +117,17 @@
     "Review entry",
     "Report log",
     "Paper card",
-    "Access-point check record"
+    "Access-point check record",
+    "Severity scale",
+    "Routing table",
+    "Regulatory checklist",
+    "Past reports",
+    "Paper logs",
+    "Handover sheets",
+    "Unreviewed-report check records",
+    "Incident record",
+    "External filing record",
+    "Demonstration criteria"
   ],
   "example": {
     "label": "Illustrative example",
@@ -153,6 +183,24 @@
         "Who is told about a report",
         "How related reports are linked",
         "What feedback can safely be given to reporters"
+      ]
+    },
+    {
+      "slug": "severity-triage",
+      "title": "Rate severity and triage in incident and near-miss reporting software",
+      "summary": "The three previous findings are resolved, and the changed paragraphs present no clear new problems. No FAQ is assigned or included.",
+      "bodyHash": "911002fc5b73bec45e4fac5aebb3275b2ee76ef090507c68bb74c856a2d3a852",
+      "decisions": [
+        "How to define severity levels and rate near-misses",
+        "Who rules when a report does not fit a level clearly",
+        "Who receives reports at each rating and how quickly they must respond",
+        "Who handles a report when the first recipient does not respond",
+        "Who may change a rating and what reason must be recorded",
+        "What final rating to assign to a disputed report",
+        "How to escalate a rating dispute that remains contested",
+        "How to detect and correct a rating change made without a reason",
+        "Which events require external notice and by when",
+        "Who decides, files and records external notices"
       ]
     }
   ],
