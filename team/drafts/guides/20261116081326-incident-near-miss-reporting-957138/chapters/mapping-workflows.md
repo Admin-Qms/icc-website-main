@@ -23,7 +23,7 @@ capabilityIds: []
 ---
 ## Define the reporting problem
 
-Most plants already collect reports of incidents and near-misses. The trouble is how they arrive. A note on a clipboard, a message to a supervisor, an email to the safety coordinator, and a comment at a shift meeting all describe real events, yet none of them lands in one log. Incidents and near-misses reported on paper or by email are not consistently logged, rated for severity, or linked to corrective action. That sentence is the problem statement for this guide, and every later chapter returns to it.
+A plant may already collect reports of incidents and near-misses. The trouble can be how they arrive. A note on a clipboard, a message to a supervisor, an email to the safety coordinator, and a comment at a shift meeting all describe real events, yet none of them lands in one log. Incidents and near-misses reported on paper or by email may not be consistently logged, rated for severity, or linked to corrective action. That sentence is the problem statement for this guide, and every later chapter returns to it.
 
 Write the problem down in operating terms before looking at any product. Ask three plain questions. How many different places can a report start? Who decides whether it is written down? What happens to it afterward? The answers show whether the plant has a reporting process or a collection of habits.
 
@@ -85,7 +85,7 @@ Regulation shapes some of these assignments. Where a joint health and safety com
 
 Add the people outside the safety function. Maintenance often fixes the condition, production supervisors adjust work, and the quality team may track the resulting action. If those people are not in the table, the first corrective action will stall at a handoff nobody owns.
 
-Include the reporter in the table. The person who sees the event is the first owner of the report and often the last to hear what happened to it. Decide who tells the reporter that the report was received and what became of it. Plants that skip this step tend to see reporting fall off, because people stop writing things down when nothing visibly follows.
+Include the reporter in the table. The person who sees the event is the first owner of the report and often the last to hear what happened to it. Decide who tells the reporter that the report was received and what became of it. Skipping this step may discourage reporting if nothing visibly follows.
 
 The finished table is short but strong. Each row says who decides, what they need, what they record, and who steps in when they cannot. Review it with the owners themselves, not only with their managers, because the people doing the work will spot decisions the table missed.
 

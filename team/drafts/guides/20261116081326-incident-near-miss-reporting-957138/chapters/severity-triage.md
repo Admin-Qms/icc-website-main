@@ -35,7 +35,7 @@ Begin with the plant's own history. Gather a sample of past reports from paper l
 | Medium | Minor harm, or a close call with the potential for it | A near-miss with a lift truck at a blind corner |
 | High | Serious harm, or a close call with the potential for it | A guard missing during a running cycle |
 
-These three levels are an illustration for building a scale, not a recommended standard, and each plant should write definitions that match its own hazards and its own approach to risk. The ICC page's sample dashboard shows ratings such as Low and Medium, but the research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.
+These three levels are an illustration for building a scale, not a recommended standard, and each plant should write definitions that match its own hazards and its own approach to risk. The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.
 
 Decide how near-misses are rated. A near-miss caused no harm, so a rating based on actual harm would always be the lowest. Most plants rate a near-miss by the harm that could reasonably have occurred, and the scale should say so in plain words. The same event can then receive the same rating whether or not someone happened to be standing in the wrong place.
 
@@ -65,7 +65,7 @@ The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) 
 
 Test the table with a sample report at each level before the plant relies on it. Walk the report through the table with the named roles and ask each whether they would see it in time and know what to do next. Adjust any row where the answer is no. Think about shifts and absences. A rule that sends a High report to one named manager fails when that manager is on leave. Route to a role with a named person behind it, and keep the list of people behind each role current. Review the routing table whenever the organization changes.
 
-Consider the reporter's side too. A reporter who sees that a serious report received a quick response learns that reporting is worthwhile. Where the reporter is known, the plant may choose to tell them the rating category and who has taken it on, within what the plant's policy allows.
+Consider the reporter's side too. A reporter who sees that a serious report received a quick response learns that reporting is worthwhile. Where the reporter is known, the plant may choose to tell them the rating category and who has taken it on, to the extent allowed by the plant's policy.
 
 Finally, include an unreviewed-report check. A weekly look at reports that have no rating, or that have sat at one level beyond the expected response time, catches the cases where routing failed quietly. The check does not need new software; it needs an owner and a calendar entry. Assign it to the safety coordinator and record each check, including the result, so it becomes part of the plant's evidence.
 

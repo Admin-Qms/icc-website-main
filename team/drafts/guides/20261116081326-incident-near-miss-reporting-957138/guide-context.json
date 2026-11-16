@@ -28,7 +28,7 @@
     },
     {
       "term": "Acceptance criteria",
-      "definition": "Statements a demonstration can prove or fail to prove."
+      "definition": "Statements a software demonstration can prove or fail to prove against the plant’s workflow."
     },
     {
       "term": "Review entry",
@@ -37,224 +37,70 @@
     {
       "term": "Report form specification",
       "definition": "A record of each field’s name, who completes it, whether it is required, and its accepted values."
-    },
-    {
-      "term": "Severity scale",
-      "definition": "A set of harm-based rating levels with definitions and examples."
-    },
-    {
-      "term": "Routing table",
-      "definition": "A table naming who is told at each severity level, the expected first-response time, and a fallback role."
-    },
-    {
-      "term": "Rating history",
-      "definition": "A record of the original rating and changes, including who made them, when, and why."
-    },
-    {
-      "term": "Regulatory checklist",
-      "definition": "A checklist of applicable external notification duties, responsible roles, and filing records."
-    },
-    {
-      "term": "Assignment entry",
-      "definition": "A record naming the investigator, investigation scope and date."
-    },
-    {
-      "term": "Evidence list",
-      "definition": "A list of evidence items noting what each item is, who collected it, when and where it is held."
-    },
-    {
-      "term": "Cause statement",
-      "definition": "A record of the investigation’s explanation that distinguishes observations, reports and conclusions and identifies supporting evidence."
-    },
-    {
-      "term": "Reviewed conclusion",
-      "definition": "An investigation conclusion recorded with the reviewer’s name and date."
-    },
-    {
-      "term": "Correction",
-      "definition": "An action that deals with the immediate problem."
-    },
-    {
-      "term": "Action owner",
-      "definition": "The person who makes an action's change or sees that it is made."
-    },
-    {
-      "term": "Verification",
-      "definition": "A check of whether a completed action worked."
-    },
-    {
-      "term": "Access rule",
-      "definition": "A record of what each group may see."
-    },
-    {
-      "term": "Recommendation",
-      "definition": "A proposal for a change."
-    },
-    {
-      "term": "Cutover",
-      "definition": "The point at which the new system becomes the record."
-    },
-    {
-      "term": "Evidence map",
-      "definition": "A record listing, for each clause in scope, what the requirement asks, the records held, where they are kept and who owns them."
-    },
-    {
-      "term": "Gap list",
-      "definition": "A list of audit rehearsal gaps with an owner and date for each item."
-    },
-    {
-      "term": "Exception log",
-      "definition": "A log of consequential failures in the reporting process."
-    },
-    {
-      "term": "Baseline",
-      "definition": "An initial set of results used as the starting point for later comparisons."
     }
   ],
   "roles": [
     "Quality owner",
     "Process owner",
     "Operator",
-    "Quality or safety lead",
-    "Reporter",
+    "Quality lead",
+    "Safety lead",
     "Supervisor",
     "Safety coordinator",
-    "Decision owner",
-    "Backup owner",
-    "Joint health and safety committee or health and safety representative",
+    "Reporter",
+    "Investigator",
+    "Action owner",
     "Maintenance",
     "Production supervisor",
     "Quality team",
-    "Investigator",
-    "Action owner",
     "Auditor",
     "Evaluation team",
     "Evaluator",
     "Floor supervisor",
     "Administrator",
     "Certified consultant",
-    "Safety committee",
+    "Decision owner",
     "Vendor",
     "Reviewer",
-    "Safety lead",
     "Operations supervisor",
     "Backup reviewer",
     "Human resources",
-    "Operations manager",
-    "Area supervisor",
-    "Plant manager",
-    "Qualified adviser",
-    "Maintenance planner",
-    "Manager",
-    "Joint health and safety committee",
-    "Maintenance lead",
-    "Backup",
-    "Checker",
-    "Leadership team",
-    "Health and safety representative",
-    "Quality manager",
-    "Committee chair",
-    "Worker committee member",
-    "Management representative",
-    "Data owner",
-    "Implementation lead",
-    "Floor reporter",
-    "Committee member",
-    "Evaluation lead",
-    "Quality lead"
+    "Safety committee"
   ],
   "recordNames": [
-    "Problem statement",
-    "Definitions sheet",
     "Incident log",
-    "Clipboard note",
+    "Paper form",
     "Email",
+    "Clipboard note",
     "Shift handover sheet",
     "Photo",
     "Investigation notes",
-    "Current-process map",
-    "Decision table",
-    "Acceptance criteria list",
-    "Criteria ranking",
-    "Demonstration comments",
-    "Scoring sheet",
-    "Comparison sheet",
-    "Sample reports",
-    "Incident and near-miss log",
-    "Rating history",
     "Corrective action",
-    "Competency records",
-    "Written recommendation",
+    "Problem statement",
+    "Definitions sheet",
+    "Current-state process map",
+    "Role and decision table",
+    "Acceptance criteria list",
+    "Scoring sheet",
+    "Demonstration comments",
+    "Acceptance criteria",
+    "Comparison sheet",
+    "Demonstration plan",
+    "Sample reports",
+    "Anonymous report",
+    "Incident and near-miss log",
+    "Auditor view",
+    "Training records",
+    "Equipment records",
+    "Written vendor commitments",
+    "Recommendation",
     "Report form specification",
     "Anonymous reporting policy",
     "Placement list",
     "Review entry",
     "Report log",
     "Paper card",
-    "Access-point check record",
-    "Severity scale",
-    "Routing table",
-    "Regulatory checklist",
-    "Past reports",
-    "Paper logs",
-    "Handover sheets",
-    "Unreviewed-report check records",
-    "Incident record",
-    "External filing record",
-    "Demonstration criteria",
-    "Rated report",
-    "Assignment entry",
-    "Evidence list",
-    "Witness statements",
-    "Training records",
-    "Work instruction",
-    "Equipment maintenance and inspection records",
-    "Cause statement",
-    "Investigation record",
-    "Reviewed conclusion",
-    "Corrective actions",
-    "Decision with reason",
-    "Action entry",
-    "Linked records",
-    "Closure checklist",
-    "Cross-reference",
-    "Effectiveness check",
-    "Access rule",
-    "Anonymity policy",
-    "Committee pack",
-    "Inspection notes",
-    "Meeting record",
-    "Written response",
-    "Recommendation register",
-    "Feedback entry",
-    "Gap list",
-    "Open-questions list",
-    "Evidence map",
-    "Import plan",
-    "Cutover plan",
-    "Risk assessments",
-    "Committee minutes",
-    "Inspection reports",
-    "Paper intake forms",
-    "Sampled reports",
-    "Exception log",
-    "Review findings",
-    "Review summary",
-    "Baseline results",
-    "Approved answers",
-    "Demonstration results",
-    "Acceptance criteria",
-    "Access rules",
-    "Linked actions",
-    "Source files",
-    "Reports",
-    "Ratings",
-    "Investigations",
-    "Actions",
-    "Open questions",
-    "Definitions",
-    "Routing note",
-    "Baselines"
+    "Access-point check record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -264,34 +110,33 @@
     {
       "slug": "mapping-workflows",
       "title": "Map how incidents and near-misses are reported today",
-      "summary": "The prior finding is resolved. The changed paragraph accurately attributes the vendor’s description and uses supported wording about committees not seeing patterns early.",
-      "bodyHash": "21c6c18167b9d604d5028d8f79f1e6481f50fcc5859825b8d9e610b598cdf8dc",
+      "summary": "The changed paragraphs introduce no clear problems, and there are no earlier findings to resolve.",
+      "bodyHash": "16bbac9aa7689420a7c74a3e372c162931bb116c3f8a615a712a137200c8bff4",
       "decisions": [
-        "What counts as an incident, near-miss, or hazard report",
-        "How to classify doubtful cases and link duplicate reports",
-        "Whether to accept a report into the log",
-        "How severe a report is",
-        "Who investigates",
-        "Whether corrective action is required",
-        "Who owns each decision and who provides backup",
-        "Who tells the reporter what happened",
-        "Which acceptance criteria are mandatory or desirable",
-        "Who attends demonstrations"
+        "Define incidents, near-misses and hazard reports, including doubtful cases",
+        "Decide whether reports describe the same condition and should be linked",
+        "Decide whether to accept a report into the log",
+        "Rate severity",
+        "Assign an investigator",
+        "Decide whether corrective action is required",
+        "Assign decision owners and backups",
+        "Decide who informs the reporter of receipt and outcome",
+        "Set and rank acceptance criteria"
       ]
     },
     {
       "slug": "evaluating-software",
       "title": "Evaluate incident and near-miss reporting software",
-      "summary": "The prior heading finding is resolved: the page shell supplies the title, and the body uses subsection headings. No changed paragraphs were identified for further review.",
-      "bodyHash": "422941142e11988961eb8c59baf54d3aeec661aeff414c083c003e54a82087af",
+      "summary": "The earlier finding is resolved: demonstrated evidence and written vendor commitments are distinct. No clear problems were found in the changed paragraphs.",
+      "bodyHash": "218f0172e31b71b9dcb757fa7c5c1512acdaf1e3a3280cd2b40facf74841cc81",
       "decisions": [
-        "Which vendors to shortlist",
-        "Whether each demonstrated decision is recorded",
-        "How to score each evaluation criterion",
-        "Who can access, rate, investigate and close reports",
-        "Whether evidence and permissions meet the plant's needs",
-        "Whether setup effort, cost and support fit the plant",
-        "Who will resolve unanswered questions before a decision"
+        "Select vendors for demonstration against mandatory criteria",
+        "Decide whether demonstration criteria are shown, partly shown or not shown",
+        "Decide whether a report needs corrective action",
+        "Rate a report's severity",
+        "Decide who may file, view, rate, investigate and close reports",
+        "Decide whether setup effort, cost and support fit the plant's needs",
+        "Decide which unresolved questions must be answered before selection"
       ]
     },
     {
@@ -310,117 +155,6 @@
         "Who is told about a report",
         "How related reports are linked",
         "What feedback can safely be given to reporters"
-      ]
-    },
-    {
-      "slug": "severity-triage",
-      "title": "Rate severity and triage in incident and near-miss reporting software",
-      "summary": "The three previous findings are resolved, and the changed paragraphs present no clear new problems. No FAQ is assigned or included.",
-      "bodyHash": "911002fc5b73bec45e4fac5aebb3275b2ee76ef090507c68bb74c856a2d3a852",
-      "decisions": [
-        "How to define severity levels and rate near-misses",
-        "Who rules when a report does not fit a level clearly",
-        "Who receives reports at each rating and how quickly they must respond",
-        "Who handles a report when the first recipient does not respond",
-        "Who may change a rating and what reason must be recorded",
-        "What final rating to assign to a disputed report",
-        "How to escalate a rating dispute that remains contested",
-        "How to detect and correct a rating change made without a reason",
-        "Which events require external notice and by when",
-        "Who decides, files and records external notices"
-      ]
-    },
-    {
-      "slug": "investigation",
-      "title": "Run investigations from a structured record",
-      "summary": "The earlier heading and evidence-citation findings are resolved. The changed paragraphs present no clear new problems. No FAQ is assigned or included.",
-      "bodyHash": "86cfbd85240303d863b1eae42cc5f19569aeebb52556706a858c8af93a5622c0",
-      "decisions": [
-        "Who investigates and how deeply",
-        "Whether an investigator has a conflict",
-        "Who may reassign or widen an investigation",
-        "What evidence is sufficient and how to handle missing evidence",
-        "Who may access sensitive evidence",
-        "What caused or contributed to the event",
-        "Whether to accept or return the investigation",
-        "What findings can be shared with the reporter"
-      ]
-    },
-    {
-      "slug": "corrective-actions",
-      "title": "Link incidents to corrective action and follow-up",
-      "summary": "The previous findings are resolved. No clear new problems were identified in the changed paragraphs, and no FAQ is assigned or included.",
-      "bodyHash": "492fbb3d888bc5d1f32262ee7c325e5cbda3d63e1912debf5a68b6f25de675ee",
-      "decisions": [
-        "Whether a report needs action and what kind",
-        "Who accepts an action and its due date",
-        "How to escalate an action whose owner cannot act",
-        "Whether to consolidate action tracking",
-        "Whether an incident can close with an action open",
-        "How and when to check an action's effectiveness",
-        "Whether an action was effective or needs reopening"
-      ]
-    },
-    {
-      "slug": "committee-visibility",
-      "title": "Give committees and workers visibility into incident data",
-      "summary": "Both previous findings are resolved. The changed paragraphs present no clear new problems. No FAQ is assigned or included.",
-      "bodyHash": "0edc3cd98365b8a6d82bf3a522673d9102e488e253df89fad805c78305f7113a",
-      "decisions": [
-        "What each group may see on the dashboard",
-        "Whether the committee sees anonymous reports in full, in summary, or as counts",
-        "Which patterns to raise with the plant",
-        "How often to review the log",
-        "Whether to accept a committee recommendation, accept it in part, or explain why not",
-        "How to track recommendations if the product does not cover them",
-        "What feedback to share with reporters within privacy rules"
-      ]
-    },
-    {
-      "slug": "audit-evidence-migration",
-      "title": "Prepare audit evidence and migrate existing incident logs",
-      "summary": "The previous cutover finding is resolved: paper forms are described as reconciled intake records, and trouble indicators distinguish permitted intake from late or unentered reports. No clear new problems were found in the changed paragraphs.",
-      "bodyHash": "a8d7069e2803ccd3e33b968f0b9006b5b2eda29f4cff320032158ccb5c93a89f",
-      "decisions": [
-        "Which audit-readiness gaps to close",
-        "How external reviewers will access records",
-        "What evidence supports each clause",
-        "Which historical records to import and how to map their fields",
-        "What to archive rather than import",
-        "When and how to cut over",
-        "What triggers rollback or extra support"
-      ]
-    },
-    {
-      "slug": "ongoing-operation",
-      "title": "Review performance, answer common questions and prepare a demonstration",
-      "summary": "The previous findings are resolved, and no clear problems were identified in the changed paragraphs. The assigned FAQ is substantive and avoids compliance guarantees.",
-      "bodyHash": "8cf4617f403f5a9e54299aa06833994f26054fc4dcdc5d6508641554eb5885d7",
-      "decisions": [
-        "Which workflow improvements to prioritize",
-        "How to address evidence too incomplete to assess",
-        "How to answer questions within verified evidence and when to seek advice",
-        "Whether to accept anonymous reporting",
-        "Which historical logs to migrate",
-        "What demonstration criteria are mandatory",
-        "Whether to proceed, seek clarification or reject after the demonstration"
-      ]
-    },
-    {
-      "slug": "incident-and-near-miss-reporting-software",
-      "title": "Incident and near-miss reporting software for Canadian quality and operations teams",
-      "summary": "The previous finding is resolved: the chapter-heading statement is now qualified as a general approach. No clear problem was found in the changed paragraph.",
-      "bodyHash": "7c32732dd1caa203f1d5c4c5e4fd23568358cbc9f1ffd990757f1e15cde698b2",
-      "decisions": [
-        "Who owns each workflow responsibility and provides backup",
-        "How to rate severity and route reports",
-        "Who investigates and whether corrective action is needed",
-        "How to check whether an action worked",
-        "Which vendors to shortlist and how to score demonstrations",
-        "Which reporting fields, permissions and anonymous-reporting arrangements to use",
-        "Whether and how to import existing logs",
-        "How to plan cutover and training",
-        "What to improve next and what to ask the vendor to change"
       ]
     }
   ],

@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The prior finding is resolved. The changed paragraph accurately attributes the vendor’s description and uses supported wording about committees not seeing patterns early.",
+  "summary": "The changed paragraphs introduce no clear problems, and there are no earlier findings to resolve.",
   "glossary": [
     {
       "term": "Incident",
@@ -18,52 +18,50 @@
     },
     {
       "term": "Acceptance criteria",
-      "definition": "Statements a demonstration can prove or fail to prove."
+      "definition": "Statements a software demonstration can prove or fail to prove against the plant’s workflow."
     }
   ],
   "roles": [
-    "Quality or safety lead",
-    "Reporter",
+    "Quality lead",
+    "Safety lead",
     "Supervisor",
     "Safety coordinator",
-    "Decision owner",
-    "Backup owner",
-    "Joint health and safety committee or health and safety representative",
+    "Reporter",
+    "Investigator",
+    "Action owner",
     "Maintenance",
     "Production supervisor",
     "Quality team",
-    "Investigator",
-    "Action owner",
     "Auditor",
     "Evaluation team"
   ],
   "recordNames": [
-    "Problem statement",
-    "Definitions sheet",
     "Incident log",
-    "Clipboard note",
+    "Paper form",
     "Email",
+    "Clipboard note",
     "Shift handover sheet",
     "Photo",
     "Investigation notes",
-    "Current-process map",
-    "Decision table",
+    "Corrective action",
+    "Problem statement",
+    "Definitions sheet",
+    "Current-state process map",
+    "Role and decision table",
     "Acceptance criteria list",
-    "Criteria ranking",
-    "Demonstration comments",
-    "Scoring sheet"
+    "Scoring sheet",
+    "Demonstration comments"
   ],
   "decisions": [
-    "What counts as an incident, near-miss, or hazard report",
-    "How to classify doubtful cases and link duplicate reports",
-    "Whether to accept a report into the log",
-    "How severe a report is",
-    "Who investigates",
-    "Whether corrective action is required",
-    "Who owns each decision and who provides backup",
-    "Who tells the reporter what happened",
-    "Which acceptance criteria are mandatory or desirable",
-    "Who attends demonstrations"
+    "Define incidents, near-misses and hazard reports, including doubtful cases",
+    "Decide whether reports describe the same condition and should be linked",
+    "Decide whether to accept a report into the log",
+    "Rate severity",
+    "Assign an investigator",
+    "Decide whether corrective action is required",
+    "Assign decision owners and backups",
+    "Decide who informs the reporter of receipt and outcome",
+    "Set and rank acceptance criteria"
   ],
   "pass": true,
   "deterministic": {
@@ -161,11 +159,11 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "a1201cc6b62c3cddfdbea0b6fc0b2c599dcfcfe7edc89d8ffbd826f97cff8727",
-  "contentHash": "cfd63e277e6cb1bc2c9ded1e046c394a6e0056f74bdeb696c0dad35cbe1fde19",
+  "inputHash": "3d36cceaca60c20425671a2a2bb23a37e4e9df26779c4f6d33d8e15696dd5274",
+  "contentHash": "b55a334ea97724ea5face5c071f27dee944c59fbf14a47f613f5fe874d9c1ee4",
   "paragraphHashes": [
     "f76b01dfeb43ba98b65318b672f03c50ad4fc8b866cb798740da1ebd493ade1a",
-    "0f0d8188ab5be2ea8951265dd36aa59c45d8d44b1a390f0b7d76a2ed6215db6b",
+    "6ec7ff7def33bbf5926f385a9f89f57460e682f8b79b690841ac188c1a2eccba",
     "7f8147656ffdfa64d7a6c0650ebafbed7bcc9047ba2e548c217a29900a4a6915",
     "ea75de8c983ae6992c5c48a3cf0e2337c492d56477919d9480b6d2c62526980c",
     "98d88b690f426b76b6117623156ff1e8ee2202ead7bca9b05e21274a6f7bee1d",
@@ -192,7 +190,7 @@
     "b9b6ff94bcde6120b02bff6267a49af4446ddf304f9a00ed556622e4cf4c0dea",
     "3da6b340816069cdb21822f4c36ee98b01a99baec838966fceee6d75e805c143",
     "2e0d6fe47ce86e1c1ec81ba0753bf53d44c26fd5d2a1ff565fefe0b45b5a8aab",
-    "a0ae29fee1f96fb7917484c005e1443dd9c74bc9e2edc9137fc75df096370689",
+    "b6225a8af43f3a61d4087062dcf835a5a91dce18af8545af2aae9506188051ec",
     "95adf46b0092147fc409a753620d528e54b4738d7b5cc5a3a8140ca848b7745c",
     "6a2ded88e7602d155d24f2948d6036561de472cdfad3420e8c6d8c83a7b7dd96",
     "6a0663a2afc899547e82b0dcd5bf4e9e1b659aece7800e3cd9a165529c9458e3",
@@ -208,7 +206,7 @@
     "0584cbb58b3a39502b0f90fa2f1affbdb7b327004441c4c018b64705dcb469a8",
     "3c1bbab94a9236ccf5e7debf73cded1fdc6e7c48a67f8b213a13b6bf7789d7ac"
   ],
-  "outputContextHash": "9fc524d01f62d17d32725c625e4639849d97aec9fc41b492babecd2d9ccd898b",
-  "reviewedAt": "2026-11-16T08:20:49.836Z",
+  "outputContextHash": "99c6d053fb5dc09f962bd779b498060f8ddc2337bd032ca97b54c6cb0f439b1b",
+  "reviewedAt": "2026-11-16T09:03:03.397Z",
   "reviewer": "Configured independent chapter reviewer"
 }
