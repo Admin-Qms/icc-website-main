@@ -1,0 +1,198 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "Both previous findings are resolved, and the changed paragraphs present no clear new problems. No FAQ is assigned or included.",
+  "glossary": [
+    {
+      "term": "Review entry",
+      "definition": "The record of the first-review step."
+    },
+    {
+      "term": "Report form specification",
+      "definition": "A record of each field’s name, who completes it, whether it is required, and its accepted values."
+    }
+  ],
+  "roles": [
+    "Reporter",
+    "Operator",
+    "Safety coordinator",
+    "Reviewer",
+    "Investigator",
+    "Supervisor",
+    "Safety lead",
+    "Operations supervisor",
+    "Backup reviewer",
+    "Human resources",
+    "Safety committee",
+    "Vendor",
+    "Maintenance"
+  ],
+  "recordNames": [
+    "Report form specification",
+    "Anonymous reporting policy",
+    "Placement list",
+    "Review entry",
+    "Report log",
+    "Sample reports",
+    "Paper card",
+    "Access-point check record"
+  ],
+  "decisions": [
+    "Which report fields are required or optional",
+    "When anonymous reporting is accepted and who reads anonymous reports first",
+    "How anonymous reports that name a person are handled",
+    "Where floor access points are placed and what alternatives are provided",
+    "Who reviews new reports and what response target applies",
+    "Whether a report is complete enough to act on",
+    "How to categorize a report and hand it off to the severity process",
+    "Who is told about a report",
+    "How related reports are linked",
+    "What feedback can safely be given to reporters"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Define the report fields",
+        "section": "Define the report fields"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Define the report fields; semantic review verifies support",
+        "section": "Define the report fields"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Support anonymous floor reporting",
+        "section": "Support anonymous floor reporting"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Support anonymous floor reporting; semantic review verifies support",
+        "section": "Support anonymous floor reporting"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Make reporting reachable on the floor",
+        "section": "Make reporting reachable on the floor"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Make reporting reachable on the floor; semantic review verifies support",
+        "section": "Make reporting reachable on the floor"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Review new reports on arrival",
+        "section": "Review new reports on arrival"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Review new reports on arrival; semantic review verifies support",
+        "section": "Review new reports on arrival"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "b85f0290881c61b6a52de1ad176e4e54e6ba8070f6cc41d095ae284a19a64fa3",
+  "contentHash": "0657f871ac5dc5468f6d46ab45b3b14a9d3bfd65aae0a17cd6748943d3e127dd",
+  "paragraphHashes": [
+    "aff7e7a74342cfcf4d8728b7d9613e733214b911dcb1ff5717b186582661cb4b",
+    "385044940c42c3fc0c2c61043ee7688963c96cea93d0355537dc60522a0ef9b1",
+    "579ffc11415a7cb33504ce806c61a1e5661fc9feec961aac70ba01ea78891714",
+    "464695c63284ed1ee38427ab4ea4ddaa5c33d51349b473466bc59917bb594c61",
+    "60ff9fbcdb15321106922f9261ddfb652f29114572769362fda3e8d2ba96d85b",
+    "065a982fa1137975108876eda82cc80a5c36fb83e4e7bc64c0dc39ba608559a8",
+    "6dff0fa65ad23bcffe9187c8ebb3f2f474188f355fa42f330c40d676b8aa2e49",
+    "3fad0aa389e05e9b8064ef121512642550ef7048f13d46099a7696346aaf3cb8",
+    "783aeda34fa09750c045740aea673d4e6ced79b427b17561584590bf93c31486",
+    "362c9669b38fb7948a49f4bbfe1a1fd98862026a46ab3ee854ccd9484cfe8af6",
+    "047735a570ea2f97dce67ec5417d314de32696abdf58da254e132da7e292a145",
+    "2a441cb289568aea1c6123a067dccc92426b73a078c768192c991c91ccf734b0",
+    "3a56c2d5f9da23fecc10be88937f8f71deeee6541cfb499aea9897e00eb5d791",
+    "423cfdf658b32e354be4061cc178fcefcc49a3fa858a50ff8847c51dd75298d4",
+    "e63574292f867df97eb6113ea3c06b3d2e0e763e54b7c7724c214853ac2b2ad4",
+    "10ce5db9f7fc991f3176bcac3302a8407103bece71f5f9f19c9e3c4304b06dca",
+    "fbcb8dc05654d9586534c342db74d1e4dc4b7da00e343413b2fe0df10a9411de",
+    "5c605a3b90a13acdd709639d4072ff8ded9ba656307e13e3bd22f21b2217119b",
+    "c86f82772ce0166b9fa28ff7fa3aa04562a13d5f9e359549db6d0ab48d253f28",
+    "20f1b0d778173fb2c60051e02e6c96f9350e8f113412f3b598c9c71ff68895c2",
+    "c50984ff45050c24d8cc055ccafd61507df016b2b83390b5ec35d5335cea7e4f",
+    "4371a3b852fb6dbcff882e429fd812be28dbdd0b159c1f4c91bb3c3e3a8ae562",
+    "0fdc6806f3e1ae3d8df8bd1e7d4d8a443db36351bcc2045a4c7c30e22e3c45e5",
+    "812486486e67a0d3abe42d442bb7087872709ccc6e40dcefda4dcdaaa8090b73",
+    "58413414db1a936e6dc6dabe08be1953d9768126e1c517b7a9751a567664d764",
+    "81182e254dd31e5a27b9357fe70245d36443c6aaa03b48426c32ec8dc476b4c8",
+    "4072ddcf205aabf00bbf41f033ba11d6cb96b41a6bb5bdfd8e079e28c3acda11",
+    "b7d8b54fea5e105733dffb1477a291c956d139b1ea89f71c07c3a00265a44aae",
+    "a1f772a1464b36d0444f95f900747675c1548a692f7313f88ee6b6365cc94760",
+    "d2b6c251e9a7a2c3b7f4ce638896779136f29894e4052524116e3bbe7fa4dbdd",
+    "f250e634245dadba7c5ffff234df568e4bd63412de3db2138ac3587e548d6c13",
+    "1de27e12099c7fbb42bf4d88f103510310f208946511d14f9c5fc22ca450d66e",
+    "db170d0384e03a14354613d204f7abb9129021158663677bad203b2d169667c2",
+    "009075daa8bc92a0edbe5736a5a4251f0327279182f5ec65c0306b5a7c0757bd",
+    "3576f655dea886b8c10ca4a14a03102c80aca6baec1b1c1e5f217477ff25708d",
+    "d3c5dd4e9eaa36906923866f2194aba7fb5843fcf5c98fbe62955f63b0c3303e",
+    "3b36f68fcffa67af8b4917d4a4413351482642355bb28d28ebaa5642945b6f5c",
+    "540eaa34a012f383e249ae3ad9c90723fd2463a3adb8ced2c4751f49245696eb"
+  ],
+  "outputContextHash": "306f3c35b2041129b3ae319f114febbac588eb0cdc2eecfe61126bb5319b13cc",
+  "reviewedAt": "2026-11-16T08:32:52.336Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
