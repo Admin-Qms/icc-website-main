@@ -42,10 +42,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-11-16T08:20:40.894Z"
+    },
+    "evaluating-software": {
+      "hash": "418eb4ea3745a514557e3ddcc8d88151fafde88d3c44a70014c6a52778879fff",
+      "wordCount": 2032,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-16T08:24:53.663Z"
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-16T08:20:49.839Z",
+  "updatedAt": "2026-11-16T08:24:53.664Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -1261,7 +1268,7 @@
     "reviewedChapters": [],
     "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf"
   },
-  "contextHash": "9fc524d01f62d17d32725c625e4639849d97aec9fc41b492babecd2d9ccd898b",
+  "contextHash": "0170bf4edd199a8ae2d269585ad653f8797e3aab5e9821769d56b6e8226ccab6",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1475,6 +1482,193 @@
       ],
       "outputContextHash": "9fc524d01f62d17d32725c625e4639849d97aec9fc41b492babecd2d9ccd898b",
       "reviewedAt": "2026-11-16T08:20:49.836Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "evaluating-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The prior heading finding is resolved: the page shell supplies the title, and the body uses subsection headings. No changed paragraphs were identified for further review.",
+      "glossary": [],
+      "roles": [
+        "Evaluation team",
+        "Evaluator",
+        "Safety coordinator",
+        "Floor supervisor",
+        "Reporter",
+        "Investigator",
+        "Administrator",
+        "Auditor",
+        "Decision owner",
+        "Certified consultant",
+        "Safety committee",
+        "Vendor"
+      ],
+      "recordNames": [
+        "Comparison sheet",
+        "Sample reports",
+        "Scoring sheet",
+        "Incident and near-miss log",
+        "Rating history",
+        "Corrective action",
+        "Competency records",
+        "Written recommendation"
+      ],
+      "decisions": [
+        "Which vendors to shortlist",
+        "Whether each demonstrated decision is recorded",
+        "How to score each evaluation criterion",
+        "Who can access, rate, investigate and close reports",
+        "Whether evidence and permissions meet the plant's needs",
+        "Whether setup effort, cost and support fit the plant",
+        "Who will resolve unanswered questions before a decision"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Build a workflow-based shortlist",
+            "section": "Build a workflow-based shortlist"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Build a workflow-based shortlist; semantic review verifies support",
+            "section": "Build a workflow-based shortlist"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Test the decision points",
+            "section": "Test the decision points"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Test the decision points; semantic review verifies support",
+            "section": "Test the decision points"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Examine evidence, permissions and AI use",
+            "section": "Examine evidence, permissions and AI use"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Examine evidence, permissions and AI use; semantic review verifies support",
+            "section": "Examine evidence, permissions and AI use"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Compare setup, cost and support",
+            "section": "Compare setup, cost and support"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Compare setup, cost and support; semantic review verifies support",
+            "section": "Compare setup, cost and support"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "0a224adea982468e0f55f59a9d5c22e9e07778859bd2c12e6f92af1c518fc40d",
+      "contentHash": "2f7ed809e06f4595bfd2fe389d2c7c29eb0b88e7659269876523268f4f8300bb",
+      "paragraphHashes": [
+        "34a2c737b52c6404cb6f0e763283301e4ff93d9d3750e57fc9a6711454a4c8ad",
+        "3d19801fc23251d2166a3e8e48e2a34f833fb1ce0d16681141f1c8dd32bf3659",
+        "c03aab66664fb384844d5315d50a73a914f1442b3e9d9ac49e710768359bc7ea",
+        "7ba861de682b9482659adcea4e7524a5a4255c9cef6c8beabbfde71e2225786a",
+        "614722a56c7ebc3dc18a2c6e4bfa6847d26594aba6c3262c9f2e336b468a3860",
+        "bd1e56af29eeb5d6164360bd386123038ed93eae5acf371329f0ade18c5b3151",
+        "e00281d308c472a63cdfc3934f2c748687a84cff4cb43e6ba678bee105901bb5",
+        "f600eac08baaf2df1bf02ff675fb21e833c13df14f7b3a25ce6657f5b8ed9e2a",
+        "31b84eca01619633627344c7b35ebbfb08a5fce1cc9fc5d1002cfbca7482878f",
+        "7e5df543aef4e1bb0210c7755935f2a8db861bcaf07afb0e79803caeec251a49",
+        "bbd450fcd198381c81373db35d41d7800c803e3b547ccf9a0630b3545c30010b",
+        "09c5a13508681f88a4128cf7cc058720fe4ba6952ebb71a1ace8ab5d004b3ce2",
+        "e2da93ecb8134f4f3be2cb1f9b083bfb171833340a96c1539a991625bbf4af6a",
+        "cdab47c7cb410c6625b98c4a3a9673c1acf940d46ed258df58f319933f558734",
+        "6268dffe1272a59008fd1062cc1b4964cbfabcd3d99b628a0f74046fd0099b0b",
+        "688edb30848171071bba0b3e78807a203201b3e43e36eb9c01357522b6ce3465",
+        "f69b62d77542c1bb1ad998aae4f616828e689f2281713417ef3051364eebdf06",
+        "47a49770ae45bfdf32eda73c5e84157959c7da0f1e88a0817f6ce395b7b8cf86",
+        "f3a52281f85394bd73a2bfb73a4403189ef1ecd4af5f776e4af8382f5cdee35c",
+        "311acdb49af758b9e548576e17a77c0fa78e9fecb82efcf88dd98713cd84893a",
+        "ff228912c43eb48d9fe31933956c151264c2e2f65a9592046bd0fee25307443e",
+        "6517b60c786d0b130a46484a2994936f652033d41097e8e09e8faf955afc7fb1",
+        "e35808703b62bfdfbbe79187b42c689ede6e133da1da5dc41bceb7ecd307ebdc",
+        "b5941a73af64c4c76023e089b26ff4ad4ae216c205e9174b72de8bba4c0640d4",
+        "1742afc3beb13c38d85a36c46f18a68444680aa9b992d9251ffc84c0146c5fbf",
+        "d13809d08f8bfcf4caf8049b9384017f28ef8a05f37d461b7f6a3efe51b58eb1",
+        "559715f8f77dbe1d41e1be8823369fec12e036f81f4326c6a0209750eb6cf735",
+        "c6a0401c227b81f992d094573cfc97dc3da77ee21c29a063a2b616eb31ce9f2e",
+        "607a4ab7d1a21d18a8b8e77d36167d7e79ea942924b7e75a1d9365e58d68725c",
+        "93429afa1211d05581e14705ce33f9b6e30aa151524cd7c94923a3cd6fa98a2c",
+        "aabc475f3cc0bd6dbc065ea968ff1de2c71b029b298c8f217ff85cd276900460",
+        "a450c0865465a4fc9f7623346266aac75d50bd093b3fce9a059cc212bfee3bb0",
+        "e78e33c1f48b9f02a007628534ea7a3328f82053e0e6e5e03d321d3fdb116af7",
+        "d2b4165e301fbd668bf363343e74c250f06a9b75f031998b36d8f8c084b4d311",
+        "fea755a6f7bcb2f04c8f0abea9380b88681bbda84239792ee6f8a549e1f1fb89",
+        "11f80ba2c14d4dd1b471d0901408ce73ccf830c92d2f4debd5e12784b0dfb30c",
+        "cb4228c5f01886d9133c34ba8589ddae6fc41e2551395554ea838da4c91a635b",
+        "a4823796d75e2f287a7ff5dc913e8adac6085fcb2dbcabb13c6db2eb9acbafc2",
+        "b5c6afe600701d257d21cf74127ef16dd64ee15fa3e43600cd6b44c70048b555",
+        "af0e39465d1dec621bba8652259813459ae6bff02de2a4ab8a812549ff616109"
+      ],
+      "outputContextHash": "0170bf4edd199a8ae2d269585ad653f8797e3aab5e9821769d56b6e8226ccab6",
+      "reviewedAt": "2026-11-16T08:24:49.246Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

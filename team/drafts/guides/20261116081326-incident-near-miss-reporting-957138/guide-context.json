@@ -48,7 +48,13 @@
     "Investigator",
     "Action owner",
     "Auditor",
-    "Evaluation team"
+    "Evaluation team",
+    "Evaluator",
+    "Floor supervisor",
+    "Administrator",
+    "Certified consultant",
+    "Safety committee",
+    "Vendor"
   ],
   "recordNames": [
     "Problem statement",
@@ -64,7 +70,14 @@
     "Acceptance criteria list",
     "Criteria ranking",
     "Demonstration comments",
-    "Scoring sheet"
+    "Scoring sheet",
+    "Comparison sheet",
+    "Sample reports",
+    "Incident and near-miss log",
+    "Rating history",
+    "Corrective action",
+    "Competency records",
+    "Written recommendation"
   ],
   "example": {
     "label": "Illustrative example",
@@ -87,6 +100,21 @@
         "Who tells the reporter what happened",
         "Which acceptance criteria are mandatory or desirable",
         "Who attends demonstrations"
+      ]
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluate incident and near-miss reporting software",
+      "summary": "The prior heading finding is resolved: the page shell supplies the title, and the body uses subsection headings. No changed paragraphs were identified for further review.",
+      "bodyHash": "422941142e11988961eb8c59baf54d3aeec661aeff414c083c003e54a82087af",
+      "decisions": [
+        "Which vendors to shortlist",
+        "Whether each demonstrated decision is recorded",
+        "How to score each evaluation criterion",
+        "Who can access, rate, investigate and close reports",
+        "Whether evidence and permissions meet the plant's needs",
+        "Whether setup effort, cost and support fit the plant",
+        "Who will resolve unanswered questions before a decision"
       ]
     }
   ],
