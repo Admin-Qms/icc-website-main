@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "topicId": "incident-near-miss-reporting",
+  "glossary": [
+    {
+      "term": "Near-miss",
+      "definition": "An event that could have caused harm but did not."
+    },
+    {
+      "term": "Severity",
+      "definition": "A rating set from the level of harm, actual or potential, defined by the organization."
+    },
+    {
+      "term": "Corrective action",
+      "definition": "An action taken to remove the cause of an incident so it does not recur."
+    },
+    {
+      "term": "Workflow owner",
+      "definition": "The role accountable for decisions and records in a defined workflow."
+    }
+  ],
+  "roles": [
+    "Quality owner",
+    "Process owner",
+    "Operator"
+  ],
+  "recordNames": [],
+  "example": {
+    "label": "Illustrative example",
+    "description": "An unnamed Canadian manufacturer evaluates incident and near-miss reporting software for one production area; all situations and records are hypothetical, not customer results."
+  },
+  "reviewedChapters": [],
+  "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf"
+}
