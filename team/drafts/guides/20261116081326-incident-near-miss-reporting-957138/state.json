@@ -1,0 +1,41 @@
+{
+  "id": "20261116081326-incident-near-miss-reporting-957138",
+  "topic": {
+    "id": "incident-near-miss-reporting",
+    "topic": "Incident and near-miss reporting software",
+    "aliases": [],
+    "primaryKeyword": "incident and near-miss reporting software",
+    "secondaryKeywords": [
+      "near miss reporting",
+      "workplace incident log"
+    ],
+    "moduleSlugs": [
+      "safety"
+    ],
+    "audience": "Canadian quality and operations teams",
+    "problem": "Incidents and near-misses reported on paper or by email are not consistently logged, rated for severity or linked to corrective action.",
+    "priority": 7,
+    "proposedAt": "2026-10-26T15:15:46.773Z",
+    "proposedBy": "topic-scout",
+    "approval": "approved",
+    "approvedBy": "scout-reviewer",
+    "approvedAt": "2026-10-26T15:15:46.773Z",
+    "reviewRules": {
+      "R1_SCOPE": "pass",
+      "R2_DISTINCT": "pass",
+      "R3_SOURCES": "pass",
+      "R4_ACCURACY": "pass",
+      "R5_FIT": "pass"
+    },
+    "reviewFindings": [],
+    "sources": [
+      "https://isocertificationconsultants.ca/solutions/safety/",
+      "https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives"
+    ]
+  },
+  "productionSlotId": "2026-W47-slot-1",
+  "stage": "reserved",
+  "pages": {},
+  "createdAt": "2026-11-16T08:13:26.503Z",
+  "updatedAt": "2026-11-16T08:13:26.503Z"
+}
