@@ -17,18 +17,78 @@
     {
       "term": "Workflow owner",
       "definition": "The role accountable for decisions and records in a defined workflow."
+    },
+    {
+      "term": "Incident",
+      "definition": "An event that caused harm, damage, or a stoppage."
+    },
+    {
+      "term": "Hazard report",
+      "definition": "A report of a condition noticed before any event occurred."
+    },
+    {
+      "term": "Acceptance criteria",
+      "definition": "Statements a demonstration can prove or fail to prove."
     }
   ],
   "roles": [
     "Quality owner",
     "Process owner",
-    "Operator"
+    "Operator",
+    "Quality or safety lead",
+    "Reporter",
+    "Supervisor",
+    "Safety coordinator",
+    "Decision owner",
+    "Backup owner",
+    "Joint health and safety committee or health and safety representative",
+    "Maintenance",
+    "Production supervisor",
+    "Quality team",
+    "Investigator",
+    "Action owner",
+    "Auditor",
+    "Evaluation team"
   ],
-  "recordNames": [],
+  "recordNames": [
+    "Problem statement",
+    "Definitions sheet",
+    "Incident log",
+    "Clipboard note",
+    "Email",
+    "Shift handover sheet",
+    "Photo",
+    "Investigation notes",
+    "Current-process map",
+    "Decision table",
+    "Acceptance criteria list",
+    "Criteria ranking",
+    "Demonstration comments",
+    "Scoring sheet"
+  ],
   "example": {
     "label": "Illustrative example",
     "description": "An unnamed Canadian manufacturer evaluates incident and near-miss reporting software for one production area; all situations and records are hypothetical, not customer results."
   },
-  "reviewedChapters": [],
+  "reviewedChapters": [
+    {
+      "slug": "mapping-workflows",
+      "title": "Map how incidents and near-misses are reported today",
+      "summary": "The prior finding is resolved. The changed paragraph accurately attributes the vendor’s description and uses supported wording about committees not seeing patterns early.",
+      "bodyHash": "21c6c18167b9d604d5028d8f79f1e6481f50fcc5859825b8d9e610b598cdf8dc",
+      "decisions": [
+        "What counts as an incident, near-miss, or hazard report",
+        "How to classify doubtful cases and link duplicate reports",
+        "Whether to accept a report into the log",
+        "How severe a report is",
+        "Who investigates",
+        "Whether corrective action is required",
+        "Who owns each decision and who provides backup",
+        "Who tells the reporter what happened",
+        "Which acceptance criteria are mandatory or desirable",
+        "Who attends demonstrations"
+      ]
+    }
+  ],
   "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf"
 }

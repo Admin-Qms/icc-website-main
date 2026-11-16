@@ -34,10 +34,18 @@
     ]
   },
   "productionSlotId": "2026-W47-slot-1",
-  "stage": "outlined",
-  "pages": {},
+  "stage": "writing",
+  "pages": {
+    "mapping-workflows": {
+      "hash": "db3d8e8d325dec68ed11d7fb0098d5e36fc150a0895b909b1c0413c2b8d96fe2",
+      "wordCount": 2043,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-16T08:20:40.894Z"
+    }
+  },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-16T08:15:43.774Z",
+  "updatedAt": "2026-11-16T08:20:49.839Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -1253,8 +1261,223 @@
     "reviewedChapters": [],
     "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf"
   },
-  "contextHash": "0162044a6d7536e5a1aa7580d3b21b10f74f3af4778966b2321d965b77b0562d",
-  "chapterReviews": {},
+  "contextHash": "9fc524d01f62d17d32725c625e4639849d97aec9fc41b492babecd2d9ccd898b",
+  "chapterReviews": {
+    "mapping-workflows": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The prior finding is resolved. The changed paragraph accurately attributes the vendor’s description and uses supported wording about committees not seeing patterns early.",
+      "glossary": [
+        {
+          "term": "Incident",
+          "definition": "An event that caused harm, damage, or a stoppage."
+        },
+        {
+          "term": "Hazard report",
+          "definition": "A report of a condition noticed before any event occurred."
+        },
+        {
+          "term": "Acceptance criteria",
+          "definition": "Statements a demonstration can prove or fail to prove."
+        }
+      ],
+      "roles": [
+        "Quality or safety lead",
+        "Reporter",
+        "Supervisor",
+        "Safety coordinator",
+        "Decision owner",
+        "Backup owner",
+        "Joint health and safety committee or health and safety representative",
+        "Maintenance",
+        "Production supervisor",
+        "Quality team",
+        "Investigator",
+        "Action owner",
+        "Auditor",
+        "Evaluation team"
+      ],
+      "recordNames": [
+        "Problem statement",
+        "Definitions sheet",
+        "Incident log",
+        "Clipboard note",
+        "Email",
+        "Shift handover sheet",
+        "Photo",
+        "Investigation notes",
+        "Current-process map",
+        "Decision table",
+        "Acceptance criteria list",
+        "Criteria ranking",
+        "Demonstration comments",
+        "Scoring sheet"
+      ],
+      "decisions": [
+        "What counts as an incident, near-miss, or hazard report",
+        "How to classify doubtful cases and link duplicate reports",
+        "Whether to accept a report into the log",
+        "How severe a report is",
+        "Who investigates",
+        "Whether corrective action is required",
+        "Who owns each decision and who provides backup",
+        "Who tells the reporter what happened",
+        "Which acceptance criteria are mandatory or desirable",
+        "Who attends demonstrations"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Define the reporting problem",
+            "section": "Define the reporting problem"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Define the reporting problem; semantic review verifies support",
+            "section": "Define the reporting problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Trace reports, records and handoffs",
+            "section": "Trace reports, records and handoffs"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Trace reports, records and handoffs; semantic review verifies support",
+            "section": "Trace reports, records and handoffs"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assign owners and decisions",
+            "section": "Assign owners and decisions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assign owners and decisions; semantic review verifies support",
+            "section": "Assign owners and decisions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Set acceptance criteria for the software",
+            "section": "Set acceptance criteria for the software"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Set acceptance criteria for the software; semantic review verifies support",
+            "section": "Set acceptance criteria for the software"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "a1201cc6b62c3cddfdbea0b6fc0b2c599dcfcfe7edc89d8ffbd826f97cff8727",
+      "contentHash": "cfd63e277e6cb1bc2c9ded1e046c394a6e0056f74bdeb696c0dad35cbe1fde19",
+      "paragraphHashes": [
+        "f76b01dfeb43ba98b65318b672f03c50ad4fc8b866cb798740da1ebd493ade1a",
+        "0f0d8188ab5be2ea8951265dd36aa59c45d8d44b1a390f0b7d76a2ed6215db6b",
+        "7f8147656ffdfa64d7a6c0650ebafbed7bcc9047ba2e548c217a29900a4a6915",
+        "ea75de8c983ae6992c5c48a3cf0e2337c492d56477919d9480b6d2c62526980c",
+        "98d88b690f426b76b6117623156ff1e8ee2202ead7bca9b05e21274a6f7bee1d",
+        "efd0f20015cb51b41637bd5d9d6e1e9bcda8ad4068b04629f03091f7b5d251e3",
+        "10d231d898042b432e37bf1b97933e25bdd0ed9a4ebe6df07278b66f5669c095",
+        "e018a7de7e435da6528a66f629b7fedab72c4d842ed9003f59a2d78db4aba825",
+        "b498b17be05ae3118ee8d4855553fb539f7e6eba1a2daf34bb086c0aa0603d1f",
+        "b2e72efa5181a8fb40b29ee90add7e65ca0df537cd3d8a41d3f0965ade07f582",
+        "af9e52a6d5288646c37224b7427152b874f1bc0f05b84d72ae992ae0ae8c27ce",
+        "b12f5a2c06fca5e6ad050bb4dcafdc60db5ce9f27ad257ec9dccab6deffda513",
+        "ce9e838a81cc0cbe1e0e238a486aa6c85d50c4c4f8a1411ffe5ab5012c9d9fba",
+        "db606a21d057b3138c9171fccaddcfcecacdc7fd81f1f3dccd6aed7fc3032e1d",
+        "1b0a4ffd6b8f27b5137d0da58b5fd8787b6cfbab2967153e5f5e83feda74731f",
+        "1074e3bf88a0761ae4ff87ee79a706fab6dd3b88b1b1dddb083b2717e02b7766",
+        "94a4aa8bbe31146ebb4632d12d7201da576ab182489e22ba8226b1379a0a953f",
+        "e8be01b8c154799bffe066ac8396502a2220966eb184fc2f02969a6784488909",
+        "fdf373ae810929c781d339f6c540481fac386bbc7f1553ff3e01ec1d46353005",
+        "e6fe7100ac7f12983062ce0eee0f34d2cc753ab83d6af457c1e3a4de63e57fb4",
+        "d27ed10b0d702923d53048cc910ce9a0a61fb8436e5f168a42dd9372d78bafb9",
+        "e3de624f58a109656a81d9b93f502fea69e64c66561ed856989144ed3d2eeacf",
+        "99c0f50d392afd169b7433a4bdb011777e9e155623214092743e6075f21a0214",
+        "1cf1d228cf53ef86208457342b7ade76ff4a83378c10add2cef81f87c0ec8404",
+        "5e7505bf1d88b277a69e73dd9a89eb22dc25ef6c5cf2d15e1d630f1ae2e64c58",
+        "b9b6ff94bcde6120b02bff6267a49af4446ddf304f9a00ed556622e4cf4c0dea",
+        "3da6b340816069cdb21822f4c36ee98b01a99baec838966fceee6d75e805c143",
+        "2e0d6fe47ce86e1c1ec81ba0753bf53d44c26fd5d2a1ff565fefe0b45b5a8aab",
+        "a0ae29fee1f96fb7917484c005e1443dd9c74bc9e2edc9137fc75df096370689",
+        "95adf46b0092147fc409a753620d528e54b4738d7b5cc5a3a8140ca848b7745c",
+        "6a2ded88e7602d155d24f2948d6036561de472cdfad3420e8c6d8c83a7b7dd96",
+        "6a0663a2afc899547e82b0dcd5bf4e9e1b659aece7800e3cd9a165529c9458e3",
+        "55d9bd2b6c7b31d14c79764bcf41fa0460a128bfd6d86a41e0f81a6f1f5c8cc4",
+        "38df11720918e6ddba2db90e74c1d2c8b66e8e272d02cdfdbaafb654dcb90c9a",
+        "380d2435c26668d23663d703b4e74be4998473680e4fe83572c0d0b5bf95ea84",
+        "c01f953badcf0ab7c142eaa8744bb872c3d4160a1f8e77a8c6c25c55beba7122",
+        "c842a94e67d12f984e68e003acb288c7731ed4fe3e5b4ff7b26b0c60de5d13ad",
+        "0158a39a76053382bd1eab07ae06c623a41200ea45b94c61cd2219a93b7f41b4",
+        "2579fb51eb7d6cb1ad85e4f345f09beca8f96fdb8025622237e686ce449f1ab7",
+        "06e45c1bf9f54cf4b9bb6c6280ec639b81163e733e2d5173bd3fa9810d45f2d6",
+        "94ef47c0b9dd6648a86e214f4d24ca6bacc96717ae21175fd6a8c7d019360510",
+        "0584cbb58b3a39502b0f90fa2f1affbdb7b327004441c4c018b64705dcb469a8",
+        "3c1bbab94a9236ccf5e7debf73cded1fdc6e7c48a67f8b213a13b6bf7789d7ac"
+      ],
+      "outputContextHash": "9fc524d01f62d17d32725c625e4639849d97aec9fc41b492babecd2d9ccd898b",
+      "reviewedAt": "2026-11-16T08:20:49.836Z",
+      "reviewer": "Configured independent chapter reviewer"
+    }
+  },
   "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf",
   "outlineHash": "4666dbc28ac080c95dd5aa8d49380276ee7b8565a827d1777a0aebbc61cb105b",
   "audit": null,
