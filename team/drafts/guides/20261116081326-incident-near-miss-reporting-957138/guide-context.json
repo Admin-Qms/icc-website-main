@@ -101,6 +101,14 @@
     {
       "term": "Gap list",
       "definition": "A list of audit rehearsal gaps with an owner and date for each item."
+    },
+    {
+      "term": "Exception log",
+      "definition": "A log of consequential failures in the reporting process."
+    },
+    {
+      "term": "Baseline",
+      "definition": "An initial set of results used as the starting point for later comparisons."
     }
   ],
   "roles": [
@@ -151,7 +159,8 @@
     "Data owner",
     "Implementation lead",
     "Floor reporter",
-    "Committee member"
+    "Committee member",
+    "Evaluation lead"
   ],
   "recordNames": [
     "Problem statement",
@@ -225,7 +234,18 @@
     "Risk assessments",
     "Committee minutes",
     "Inspection reports",
-    "Paper intake forms"
+    "Paper intake forms",
+    "Sampled reports",
+    "Exception log",
+    "Review findings",
+    "Review summary",
+    "Baseline results",
+    "Approved answers",
+    "Demonstration results",
+    "Acceptance criteria",
+    "Access rules",
+    "Linked actions",
+    "Source files"
   ],
   "example": {
     "label": "Illustrative example",
@@ -360,6 +380,21 @@
         "What to archive rather than import",
         "When and how to cut over",
         "What triggers rollback or extra support"
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Review performance, answer common questions and prepare a demonstration",
+      "summary": "The previous findings are resolved, and no clear problems were identified in the changed paragraphs. The assigned FAQ is substantive and avoids compliance guarantees.",
+      "bodyHash": "8cf4617f403f5a9e54299aa06833994f26054fc4dcdc5d6508641554eb5885d7",
+      "decisions": [
+        "Which workflow improvements to prioritize",
+        "How to address evidence too incomplete to assess",
+        "How to answer questions within verified evidence and when to seek advice",
+        "Whether to accept anonymous reporting",
+        "Which historical logs to migrate",
+        "What demonstration criteria are mandatory",
+        "Whether to proceed, seek clarification or reject after the demonstration"
       ]
     }
   ],
