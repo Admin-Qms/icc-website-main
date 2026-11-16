@@ -1,0 +1,197 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "The previous findings are resolved. No clear new problems were identified in the changed paragraphs, and no FAQ is assigned or included.",
+  "glossary": [
+    {
+      "term": "Correction",
+      "definition": "An action that deals with the immediate problem."
+    },
+    {
+      "term": "Action owner",
+      "definition": "The person who makes an action's change or sees that it is made."
+    },
+    {
+      "term": "Verification",
+      "definition": "A check of whether a completed action worked."
+    }
+  ],
+  "roles": [
+    "Safety lead",
+    "Area supervisor",
+    "Action owner",
+    "Maintenance lead",
+    "Safety coordinator",
+    "Backup",
+    "Checker",
+    "Leadership team",
+    "Auditor",
+    "Vendor"
+  ],
+  "recordNames": [
+    "Decision with reason",
+    "Action entry",
+    "Linked records",
+    "Closure checklist",
+    "Cross-reference",
+    "Effectiveness check",
+    "Incident and near-miss log",
+    "Written recommendation"
+  ],
+  "decisions": [
+    "Whether a report needs action and what kind",
+    "Who accepts an action and its due date",
+    "How to escalate an action whose owner cannot act",
+    "Whether to consolidate action tracking",
+    "Whether an incident can close with an action open",
+    "How and when to check an action's effectiveness",
+    "Whether an action was effective or needs reopening"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Decide which reports need action",
+        "section": "Decide which reports need action"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Decide which reports need action; semantic review verifies support",
+        "section": "Decide which reports need action"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Assign owners and due dates",
+        "section": "Assign owners and due dates"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Assign owners and due dates; semantic review verifies support",
+        "section": "Assign owners and due dates"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Keep the link to the incident",
+        "section": "Keep the link to the incident"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Keep the link to the incident; semantic review verifies support",
+        "section": "Keep the link to the incident"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Verify effectiveness",
+        "section": "Verify effectiveness"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Verify effectiveness; semantic review verifies support",
+        "section": "Verify effectiveness"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "0bcd9cec1bc2daed974c97877ac91e64443b9a6f4d7ab0f80c2e977e9a6ee181",
+  "contentHash": "146bf82437ee7eaa1c52172de1d96da503224df7d3ce97ad6ee962d480ff0f1f",
+  "paragraphHashes": [
+    "82f646335f48d03090551d1161f36470fb7df00dcd424e63e2b7c0b547453c7e",
+    "47e56fe9d9e62e3bb5dcec4b8ffa839d0003def940b5aa6248b515f9bf4ced9e",
+    "5daaf0409dbd155e95dba5b883c444ebc11f7a70c32f82d6740305a9d645d17c",
+    "cbb41c25f31ae4e6b64c06bd539277ae7a3457bb34d55a8f8336d805b6325307",
+    "88894e171d1aca42a82e16f6840157f327704b65f5b2b1392845c231e5f441a9",
+    "924cf7b93314bcc51058ba9dcd6e7ec4b7aaf925ecb9b3a4278e672868821bd7",
+    "722ffe79eccfa6aae5d964927d2275598ed03d13ecd88452e1c0fdc27b759e5e",
+    "db4531c19f0afeb5c9b484c58550281dd1fa539d634ded37e1e1b2b791f31d8f",
+    "a1753dfe5f1881ffa88f62bc740f9834d67e14b66f91c258a3c0dbb972a9ec03",
+    "52a50706b299adb1c1c1032d1e3d0a879204c466314b2bdeac3a4cd79539b040",
+    "f38f0a208e606f99f9b083343a2528ace565ea8c9d8cb9385f03ad73c6e80cb3",
+    "ad54f07af104544a5f8b222dd15cb8bba57102fe05b2b6960f95fa1b0142c15f",
+    "1960e58368982e92084f8888bb525f62947358c9f400bc879f2267d7831edf54",
+    "b045ab000217638790569116c382be782b4743c05efc326caca6a9893d3017c8",
+    "95ccd6e1c15d9e50fe5b9c5078a1e4f65fa374ec85d9e489ac83d60c379656e9",
+    "fd3f5c02eef3fc36044268c1e329051e78e58ff08509b90869e18e26385bae27",
+    "3dcc366165d55eb7e97e3f72e6fe7ef1fbd89259fba75cee1976d66ed1ac8978",
+    "95cc4bd0972f7e76c276dad05b30015c839607e201695d4419ef7c506c967b85",
+    "caedf09f960a5e27743481a15c64d164db07393162c90d3d7f8de3c3814c8580",
+    "a635d68d73818ef15e32f5796378b72aac873ac42abc283ee2ad4ef8ed0a4244",
+    "db996041425ce3e5fd0ad3673139138b4408ae1cdb7e2cf0e8e97869f8a13259",
+    "78c3bc2b6c2bd4f172fef6abc41b6789f22a7624ff08f88632097acf5f6765f2",
+    "9124ca4d74144a1efff17937e8c526fa077457c9faa4b04278c66824837d6190",
+    "24ae03eb4200d9a358e6e7d09d64607d1c7bb59df6059948b36807daddc2737a",
+    "a2822fa69a683be1742fdedaaa797a6a48284ea25d23ab3b9e2babc01f78e14c",
+    "52e0cf6b8554bb4b7e2538d1fcaf21a3638a4f46072fc35ca2046ea51525bcae",
+    "f7c1d3891f56a756fcf5aa8f40c14eb4c5ed4a02b92dcc40744157492aa9625d",
+    "0e287bed0416df07b65b8ea53ff98c83d840d64f8993bf0fba3d7f9337642923",
+    "43319606cae991a1616858751397e8b54e569009d818feb61a62779a85cae49f",
+    "9e9a953461ffa60e8e947001983afa478112e30ec3ca7fcca26b7754a2774c3c",
+    "069bc45a7f720531329bb75ef0adb995c5c67a82a2f24adf0037dbdae3c2d7f6",
+    "1ddd939a924cec67f84f318cdde1ec461e40220bb52cf6f0b1f101b121278e48",
+    "82687ea6c53eeaa3649094f503f17362a68fc26aeffd82159fbfedfa62bcd063",
+    "a02d2c694a315e8f6e843afed70de53ad849fe41136cfe83a6b4fe7106ceff66",
+    "a20dc7eedaa204d8e685ce70dd05e4b8d87afe0a09b5f3f6e9c50af412c47e03",
+    "5368394303748badebdb476576a9ddfc447d9178edc9a62ac41b6efd00533b3f",
+    "638d262a3ab286515173ac4613460698234d8276a04092b81d2f29af154edb94",
+    "584f4d1fc79cf387281bffb690e475521c1a762726c3d4fc4244ad3b457d4988",
+    "c760fc2c242351a82bf5cf331761715c70d277d2ce7d8cd2834310a98bc2547d"
+  ],
+  "outputContextHash": "eedd54a549b90f934bd32267193806805ee510128c18bc7865c1b647d7753505",
+  "reviewedAt": "2026-11-16T08:43:36.230Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
