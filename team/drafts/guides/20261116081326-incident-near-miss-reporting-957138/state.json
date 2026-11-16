@@ -34,7 +34,7 @@
     ]
   },
   "productionSlotId": "2026-W47-slot-1",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "db3d8e8d325dec68ed11d7fb0098d5e36fc150a0895b909b1c0413c2b8d96fe2",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-16T09:01:02.584Z",
+  "updatedAt": "2026-11-16T09:01:46.960Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -3335,7 +3335,32 @@
   },
   "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf",
   "outlineHash": "4666dbc28ac080c95dd5aa8d49380276ee7b8565a827d1777a0aebbc61cb105b",
-  "audit": null,
+  "audit": {
+    "claims": "failed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "unresolvedFindings": [
+      "The guide says the ICC sample dashboard shows ratings such as “Low” and “Medium.” The supplied evidence does not support that claim or confirm which ratings the product offers.",
+      "The guide attributes “training campaigns, competency records and evidence capture” to the ICC setup description. The supplied evidence supports deployment with training and consultant review, but not those additional features.",
+      "The mapping chapter states that most plants collect incident and near-miss reports and that paper or email reports are not consistently logged, rated or linked to action. The supplied evidence does not establish those general claims about plants; the cited ICC page describes a problem pattern but provides no measured prevalence.",
+      "The claim that plants skipping reporter feedback tend to see reporting fall off is presented as a general tendency, but the supplied evidence does not support that causal claim."
+    ],
+    "inputHash": "339b9c006b250802a92996f41fc705619b0d493a5d879eab792eb53edaa0915d",
+    "pageHashes": {
+      "incident-and-near-miss-reporting-software": "7c32732dd1caa203f1d5c4c5e4fd23568358cbc9f1ffd990757f1e15cde698b2",
+      "mapping-workflows": "21c6c18167b9d604d5028d8f79f1e6481f50fcc5859825b8d9e610b598cdf8dc",
+      "evaluating-software": "422941142e11988961eb8c59baf54d3aeec661aeff414c083c003e54a82087af",
+      "reporting-intake": "4a43234f43fdb3acb3d65dbafdae95a6d731950cee4ff18c60d2c4a797aabab4",
+      "severity-triage": "911002fc5b73bec45e4fac5aebb3275b2ee76ef090507c68bb74c856a2d3a852",
+      "investigation": "86cfbd85240303d863b1eae42cc5f19569aeebb52556706a858c8af93a5622c0",
+      "corrective-actions": "492fbb3d888bc5d1f32262ee7c325e5cbda3d63e1912debf5a68b6f25de675ee",
+      "committee-visibility": "0edc3cd98365b8a6d82bf3a522673d9102e488e253df89fad805c78305f7113a",
+      "audit-evidence-migration": "a8d7069e2803ccd3e33b968f0b9006b5b2eda29f4cff320032158ccb5c93a89f",
+      "ongoing-operation": "8cf4617f403f5a9e54299aa06833994f26054fc4dcdc5d6508641554eb5885d7"
+    },
+    "reviewer": "Configured openai independent review",
+    "reviewedAt": "2026-11-16T09:01:46.958Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }
