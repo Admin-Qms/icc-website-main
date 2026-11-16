@@ -53,6 +53,22 @@
     {
       "term": "Regulatory checklist",
       "definition": "A checklist of applicable external notification duties, responsible roles, and filing records."
+    },
+    {
+      "term": "Assignment entry",
+      "definition": "A record naming the investigator, investigation scope and date."
+    },
+    {
+      "term": "Evidence list",
+      "definition": "A list of evidence items noting what each item is, who collected it, when and where it is held."
+    },
+    {
+      "term": "Cause statement",
+      "definition": "A record of the investigation’s explanation that distinguishes observations, reports and conclusions and identifies supporting evidence."
+    },
+    {
+      "term": "Reviewed conclusion",
+      "definition": "An investigation conclusion recorded with the reviewer’s name and date."
     }
   ],
   "roles": [
@@ -87,7 +103,10 @@
     "Operations manager",
     "Area supervisor",
     "Plant manager",
-    "Qualified adviser"
+    "Qualified adviser",
+    "Maintenance planner",
+    "Manager",
+    "Joint health and safety committee"
   ],
   "recordNames": [
     "Problem statement",
@@ -127,7 +146,18 @@
     "Unreviewed-report check records",
     "Incident record",
     "External filing record",
-    "Demonstration criteria"
+    "Demonstration criteria",
+    "Rated report",
+    "Assignment entry",
+    "Evidence list",
+    "Witness statements",
+    "Training records",
+    "Work instruction",
+    "Equipment maintenance and inspection records",
+    "Cause statement",
+    "Investigation record",
+    "Reviewed conclusion",
+    "Corrective actions"
   ],
   "example": {
     "label": "Illustrative example",
@@ -201,6 +231,22 @@
         "How to detect and correct a rating change made without a reason",
         "Which events require external notice and by when",
         "Who decides, files and records external notices"
+      ]
+    },
+    {
+      "slug": "investigation",
+      "title": "Run investigations from a structured record",
+      "summary": "The earlier heading and evidence-citation findings are resolved. The changed paragraphs present no clear new problems. No FAQ is assigned or included.",
+      "bodyHash": "86cfbd85240303d863b1eae42cc5f19569aeebb52556706a858c8af93a5622c0",
+      "decisions": [
+        "Who investigates and how deeply",
+        "Whether an investigator has a conflict",
+        "Who may reassign or widen an investigation",
+        "What evidence is sufficient and how to handle missing evidence",
+        "Who may access sensitive evidence",
+        "What caused or contributed to the event",
+        "Whether to accept or return the investigation",
+        "What findings can be shared with the reporter"
       ]
     }
   ],
