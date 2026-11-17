@@ -8,6 +8,8 @@ import { MODULES, CUSTOMIZATION, SITE, type Module } from "@/lib/site";
 import { pageTitle } from "@/lib/seo";
 import { FurtherReading } from "@/components/FurtherReading";
 import { MODULE_LOOPS } from "@/components/loops";
+import { ModuleVideo } from "@/components/ModuleVideo";
+import { MODULE_VIDEOS } from "@/lib/module-videos";
 
 export function generateStaticParams() {
   return MODULES.map((m) => ({ module: m.slug }));
@@ -36,6 +38,7 @@ export default function ModulePage({ params }: { params: { module: string } }) {
     .filter((x): x is Module => Boolean(x));
 
   const Loop = MODULE_LOOPS[m.slug];
+  const video = MODULE_VIDEOS[m.slug];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -64,7 +67,13 @@ export default function ModulePage({ params }: { params: { module: string } }) {
           </>
         }
         intro={m.summary}
-        visual={Loop ? <Loop /> : undefined}
+        visual={
+          video ? (
+            <ModuleVideo name={m.name} slug={m.slug} video={video} />
+          ) : Loop ? (
+            <Loop />
+          ) : undefined
+        }
       >
         <Link href={m.cta.href} className="btn-primary">
           {m.cta.label} <ArrowRight className="h-4 w-4" />
