@@ -61,6 +61,11 @@
       "permanent": true
     },
     {
+      "source": "/2020/10/04/what-is-iso-9001/",
+      "destination": "/services/iso-9001/",
+      "statusCode": 301
+    },
+    {
       "source": "/iso-9001-certification-auditing-training-consulting/",
       "destination": "/services/iso-9001/",
       "permanent": true
