@@ -40,10 +40,9 @@ export function ModuleVideo({
         className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 text-sm"
       >
         <span className="font-semibold text-navy-900">See {name} in action</span>
-        <span className="text-slate-600">
-          {video.illustrative && "Illustrative demo · "}
-          {Math.ceil(video.durationSeconds)} seconds · English captions
-        </span>
+        {video.illustrative && (
+          <span className="text-slate-600">Illustrative demo</span>
+        )}
       </figcaption>
     </figure>
   );
