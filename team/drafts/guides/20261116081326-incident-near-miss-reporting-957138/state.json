@@ -79,11 +79,11 @@
       "checkpointedAt": "2026-11-19T16:16:11.119Z"
     },
     "committee-visibility": {
-      "hash": "e28c824c2bb0fb0c218412642883b95044fefafc8308bcfbda3abe685a458b04",
-      "wordCount": 2012,
-      "readTime": 11,
+      "hash": "c8704afde5d02e67372022763673bb26c0981b29816d28f58d98d368b5b7571d",
+      "wordCount": 1998,
+      "readTime": 10,
       "status": "written",
-      "checkpointedAt": "2026-11-19T16:05:13.051Z"
+      "checkpointedAt": "2026-11-19T16:20:31.208Z"
     },
     "audit-evidence-migration": {
       "hash": "1900d3b1115b784eaa54b6295220c4be8c837af72232a3ea024d21b865992e61",
@@ -100,15 +100,15 @@
       "checkpointedAt": "2026-11-19T16:07:49.069Z"
     },
     "incident-and-near-miss-reporting-software": {
-      "hash": "a6ce4caf8261a9606706b13eab98ecb4754b446a83acd3884f7f437c2e9da4d5",
-      "wordCount": 1504,
+      "hash": "84a0383396848a97f97f29358d8d6b641030921a1853ebcd17231301a7fc80fd",
+      "wordCount": 1490,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-11-19T16:07:48.087Z"
+      "checkpointedAt": "2026-11-19T16:20:31.003Z"
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-19T16:16:19.427Z",
+  "updatedAt": "2026-11-19T16:20:31.209Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
