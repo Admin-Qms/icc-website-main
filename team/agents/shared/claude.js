@@ -44,7 +44,7 @@ function providerSummary() {
   return LLM_PROVIDERS.map((p) => `${p}: ${KEYS[p] ? "key set" : "key missing, skipped"}`).join("; ");
 }
 
-async function callClaude(tier, systemPrompt, userMessage, maxTokens) {
+async function callClaude(tier, systemPrompt, userMessage, maxTokens, options = {}) {
   if (!anthropicClient) {
     const Anthropic = require("@anthropic-ai/sdk");
     anthropicClient = new Anthropic({ apiKey: CLAUDE_API_KEY });
@@ -54,9 +54,10 @@ async function callClaude(tier, systemPrompt, userMessage, maxTokens) {
     max_tokens: maxTokens,
     system: systemPrompt,
     messages: [{ role: "user", content: userMessage }],
+    ...(options.schema ? { output_config: { format: { type: 'json_schema', schema: options.schema } } } : {}),
   });
   const text = response.content.find((b) => b.type === "text")?.text || "";
-  return { text, truncated: response.stop_reason === "max_tokens" };
+  return { text, truncated: response.stop_reason === "max_tokens", ...(options.schema ? { stopReason: response.stop_reason } : {}) };
 }
 
 async function callGemini(tier, systemPrompt, userMessage, maxTokens) {
@@ -128,10 +129,10 @@ function isRetryable(err) {
   );
 }
 
-async function callWithRetries(call, tier, systemPrompt, userMessage, maxTokens) {
+async function callWithRetries(call, tier, systemPrompt, userMessage, maxTokens, options) {
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
     try {
-      return await call(tier, systemPrompt, userMessage, maxTokens);
+      return await call(tier, systemPrompt, userMessage, maxTokens, options);
     } catch (err) {
       if (attempt === MAX_RETRIES || !isRetryable(err)) throw err;
       await new Promise((r) => setTimeout(r, RETRY_DELAY * attempt));
@@ -144,12 +145,12 @@ async function callWithRetries(call, tier, systemPrompt, userMessage, maxTokens)
  * errors, moving to the next provider when one fails (no credits, bad key, outage).
  * @returns {Promise<{text: string, truncated: boolean}>}
  */
-async function callLLM(tier, systemPrompt, userMessage, maxTokens) {
+async function callLLM(tier, systemPrompt, userMessage, maxTokens, options) {
   requireKey();
   const failures = [];
   for (const name of readyProviders()) {
     try {
-      return await callWithRetries(providers[name], tier, systemPrompt, userMessage, maxTokens);
+      return await callWithRetries(providers[name], tier, systemPrompt, userMessage, maxTokens, options);
     } catch (err) {
       const reason = CLOUD_ROUTINE ? `provider request failed (status ${Number.isInteger(err.status) ? err.status : 'unavailable'})` : err.message;
       failures.push(`${name}: ${reason}`);
@@ -169,9 +170,10 @@ async function callText(tier, systemPrompt, userMessage, maxTokens) {
   return text;
 }
 
-async function callJSON(tier, systemPrompt, userMessage, maxTokens) {
-  const { text, truncated } = await callLLM(tier, systemPrompt, userMessage, maxTokens);
+async function callJSON(tier, systemPrompt, userMessage, maxTokens, options) {
+  const { text, truncated, stopReason } = await callLLM(tier, systemPrompt, userMessage, maxTokens, options);
   if (truncated) throw new Error(`Model JSON reply was cut off at the ${maxTokens}-token limit`);
+  if (options?.schema && stopReason !== 'end_turn') throw new Error('Schema-bound JSON reply requires end_turn completion');
   const cleaned = text.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
   return JSON.parse(cleaned);
 }
@@ -188,8 +190,8 @@ async function claudeCall(systemPrompt, userMessage, maxTokens = 4096) {
  * Call the writing model and parse the response as JSON.
  * Strips markdown fences if present; requires complete, valid JSON.
  */
-async function claudeJSON(systemPrompt, userMessage, maxTokens = 4096) {
-  return callJSON("main", systemPrompt, userMessage, maxTokens);
+async function claudeJSON(systemPrompt, userMessage, maxTokens = 4096, options) {
+  return callJSON("main", systemPrompt, userMessage, maxTokens, options);
 }
 
 /**

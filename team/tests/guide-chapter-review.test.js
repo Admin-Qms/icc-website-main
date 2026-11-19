@@ -3,6 +3,33 @@ const { setupReview, passedReview } = require('./helpers/guideReviewFixture');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
 
+test('only cloud chapter semantic reviews request the complete strict response schema', async t => {
+  const config = require('../agents/shared/config'); const original = config.CLOUD_ROUTINE;
+  t.after(() => { config.CLOUD_ROUTINE = original; });
+  for (const cloud of [true, false]) {
+    config.CLOUD_ROUTINE = cloud;
+    let request;
+    const { service, job, writePage } = setupReview(t, { reviewer: async (...args) => { request = args; return passedReview(); } });
+    const slug = job.manifest.chapters[0].slug; writePage(slug);
+    assert.equal((await service.reviewChapter(job.id, slug)).pass, true);
+    assert.equal(request[2], 8192);
+    if (!cloud) { assert.equal(request.length, 3); continue; }
+    const status = { type: 'string', enum: ['passed', 'failed'] };
+    const strings = { type: 'array', items: { type: 'string' } };
+    assert.deepEqual(request[3], { schema: {
+      type: 'object', additionalProperties: false,
+      properties: {
+        claims: status, scope: status, readability: status, links: status, repetition: status, faq: status,
+        findings: { type: 'array', items: { type: 'object', additionalProperties: false, properties: { section: { type: 'string' }, reason: { type: 'string' }, action: { type: 'string' } }, required: ['section', 'reason', 'action'] } },
+        summary: { type: 'string' },
+        glossary: { type: 'array', items: { type: 'object', additionalProperties: false, properties: { term: { type: 'string' }, definition: { type: 'string' } }, required: ['term', 'definition'] } },
+        roles: strings, recordNames: strings, decisions: strings,
+      },
+      required: ['claims', 'scope', 'readability', 'links', 'repetition', 'faq', 'findings', 'summary', 'glossary', 'roles', 'recordNames', 'decisions'],
+    } });
+  }
+});
+
 for (const stage of ['cleaner', 'grammar']) {
   test(`a rejected ${stage} edit retains its exact input and reply without changing the checkpoint`, async t => {
     let input, candidate;
