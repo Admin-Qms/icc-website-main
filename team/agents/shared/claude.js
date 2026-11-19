@@ -204,8 +204,8 @@ async function claudeCallFast(systemPrompt, userMessage, maxTokens = 4096) {
 /**
  * Call the fast model and parse the response as JSON.
  */
-async function claudeJSONFast(systemPrompt, userMessage, maxTokens = 4096) {
-  return callJSON("fast", systemPrompt, userMessage, maxTokens);
+async function claudeJSONFast(systemPrompt, userMessage, maxTokens = 4096, options) {
+  return callJSON("fast", systemPrompt, userMessage, maxTokens, options);
 }
 
 module.exports = { claudeCall, claudeJSON, claudeCallFast, claudeJSONFast, hasLLMKey, providerSummary, LLM_PROVIDER: LLM_PROVIDERS[0], _providers: providers };

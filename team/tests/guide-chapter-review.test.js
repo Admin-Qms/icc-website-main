@@ -173,6 +173,28 @@ test('a re-review sends the earlier findings and only the changed paragraphs', a
   assert.match(payloads[1].previousReview.changedParagraphs[0], /Revised closing sentence\.$/);
   assert.match(prompts[1], /do not raise new points about unchanged text/i);
 });
+test('only cloud whole-guide audits request a complete strict audit schema', async t => {
+  const config = require('../agents/shared/config'); const original = config.CLOUD_ROUTINE;
+  t.after(() => { config.CLOUD_ROUTINE = original; });
+  const calls = [];
+  const { service, job, writePage } = setupReview(t, { auditor: async (...args) => { calls.push(args); return { claims: 'passed', consistency: 'passed', repetition: 'passed', unresolvedFindings: [] }; } });
+  for (const slug of [...job.manifest.chapters.map(c => c.slug), job.manifest.slug]) {
+    writePage(slug, slug === job.manifest.slug ? 1500 : 2000); await service.reviewChapter(job.id, slug);
+  }
+  config.CLOUD_ROUTINE = true; await service.reviewGuide(job.id);
+  config.CLOUD_ROUTINE = false; await service.reviewGuide(job.id);
+  assert.equal(calls[0][2], 8192);
+  assert.deepEqual(calls[0][3], { schema: {
+    type: 'object', additionalProperties: false,
+    properties: {
+      claims: { type: 'string', enum: ['passed', 'failed'] },
+      consistency: { type: 'string', enum: ['passed', 'failed'] },
+      repetition: { type: 'string', enum: ['passed', 'failed'] },
+      unresolvedFindings: { type: 'array', items: { type: 'string' } },
+    }, required: ['claims', 'consistency', 'repetition', 'unresolvedFindings'],
+  } });
+  assert.equal(calls[1].length, 3); assert.equal(calls[1][2], 8192);
+});
 test('a re-audit of the whole guide sends earlier findings and the changed pages', async t => {
   const audits = [];
   const { service, job, writePage } = setupReview(t, { auditor: async (prompt, message) => { audits.push({ prompt, payload: JSON.parse(message) }); return { claims: 'failed', consistency: 'passed', repetition: 'passed', unresolvedFindings: ['Unsupported claim in chapter one'] }; } });

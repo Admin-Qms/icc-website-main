@@ -130,11 +130,15 @@ test('Claude JSON schema reaches the real SDK transport while ordinary JSON and 
   });
   const schema = { type: 'object', properties: { ok: { type: 'boolean' } }, required: ['ok'], additionalProperties: false };
   assert.deepEqual(await llm.claudeJSON('review system', 'review body', 8192, { schema }), { ok: true });
+  assert.deepEqual(await llm.claudeJSONFast('fast review system', 'fast review body', 8192, { schema }), { ok: true });
   await llm.claudeJSON('ordinary system', 'ordinary body', 512);
   await llm.claudeCallFast('edit system', 'edit body', 2048);
+  await llm.claudeJSONFast('ordinary fast system', 'ordinary fast body', 512);
   assert.deepEqual(bodies[0], { model: 'claude-sonnet-4-6', max_tokens: 8192, system: 'review system', messages: [{ role: 'user', content: 'review body' }], output_config: { format: { type: 'json_schema', schema } } });
-  assert.deepEqual(bodies[1], { model: 'claude-sonnet-4-6', max_tokens: 512, system: 'ordinary system', messages: [{ role: 'user', content: 'ordinary body' }] });
-  assert.deepEqual(bodies[2], { model: 'claude-haiku-4-5-20251001', max_tokens: 2048, system: 'edit system', messages: [{ role: 'user', content: 'edit body' }] });
+  assert.deepEqual(bodies[1], { model: 'claude-haiku-4-5-20251001', max_tokens: 8192, system: 'fast review system', messages: [{ role: 'user', content: 'fast review body' }], output_config: { format: { type: 'json_schema', schema } } });
+  assert.deepEqual(bodies[2], { model: 'claude-sonnet-4-6', max_tokens: 512, system: 'ordinary system', messages: [{ role: 'user', content: 'ordinary body' }] });
+  assert.deepEqual(bodies[3], { model: 'claude-haiku-4-5-20251001', max_tokens: 2048, system: 'edit system', messages: [{ role: 'user', content: 'edit body' }] });
+  assert.deepEqual(bodies[4], { model: 'claude-haiku-4-5-20251001', max_tokens: 512, system: 'ordinary fast system', messages: [{ role: 'user', content: 'ordinary fast body' }] });
 });
 
 test('schema-bound JSON still rejects truncation, malformed replies and refusal without repair or new requests', async t => {
