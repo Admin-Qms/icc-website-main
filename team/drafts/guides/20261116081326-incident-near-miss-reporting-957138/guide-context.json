@@ -41,6 +41,14 @@
     {
       "term": "Permission matrix",
       "definition": "A record of which roles can file, read, rate, investigate, or close a report, and whether those rights differ by site or department."
+    },
+    {
+      "term": "Review entry",
+      "definition": "The record of the first-review step."
+    },
+    {
+      "term": "Report form specification",
+      "definition": "A record of each field’s name, who completes it, whether it is required, and its accepted values."
     }
   ],
   "roles": [
@@ -65,7 +73,14 @@
     "IT and safety lead",
     "Decision owner",
     "Floor reporter",
-    "Administrator"
+    "Administrator",
+    "Reviewer",
+    "Safety lead",
+    "Operations supervisor",
+    "Backup reviewer",
+    "Human resources",
+    "Safety committee",
+    "Vendor"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -79,7 +94,15 @@
     "Comparison sheet",
     "Written comparison",
     "Permission matrix",
-    "Written recommendation"
+    "Written recommendation",
+    "Report form specification",
+    "Anonymous reporting policy",
+    "Placement list",
+    "Review entry",
+    "Report log",
+    "Sample reports",
+    "Paper card",
+    "Access-point check record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -116,6 +139,24 @@
         "Decide access rules by role and site",
         "Decide whether setup effort and support fit the plant's needs",
         "Decide which open questions must be resolved before a recommendation is made"
+      ]
+    },
+    {
+      "slug": "reporting-intake",
+      "title": "Design reporting intake for incident and near-miss reporting software",
+      "summary": "Both previous findings are resolved, and the changed paragraphs present no clear new problems. No FAQ is assigned or included.",
+      "bodyHash": "4a43234f43fdb3acb3d65dbafdae95a6d731950cee4ff18c60d2c4a797aabab4",
+      "decisions": [
+        "Which report fields are required or optional",
+        "When anonymous reporting is accepted and who reads anonymous reports first",
+        "How anonymous reports that name a person are handled",
+        "Where floor access points are placed and what alternatives are provided",
+        "Who reviews new reports and what response target applies",
+        "Whether a report is complete enough to act on",
+        "How to categorize a report and hand it off to the severity process",
+        "Who is told about a report",
+        "How related reports are linked",
+        "What feedback can safely be given to reporters"
       ]
     }
   ],
