@@ -37,6 +37,18 @@
     {
       "term": "Report form specification",
       "definition": "A record of each field’s name, who completes it, whether it is required, and its accepted values."
+    },
+    {
+      "term": "Routing table",
+      "definition": "A record that lists, for each severity level, the role to be notified, the expected first-response time, and the fallback role if no response is received."
+    },
+    {
+      "term": "Rating history",
+      "definition": "A record showing each rating assigned to a report, who assigned it, when, and the reason for any change."
+    },
+    {
+      "term": "Regulatory checklist",
+      "definition": "A record kept apart from the severity scale that lists each applicable jurisdiction, the authority, the events requiring external notice, and who is responsible for filing."
     }
   ],
   "roles": [
@@ -65,7 +77,10 @@
     "Operations supervisor",
     "Backup reviewer",
     "Human resources",
-    "Safety committee"
+    "Safety committee",
+    "Operations manager",
+    "Plant manager",
+    "Area supervisor"
   ],
   "recordNames": [
     "Incident log",
@@ -100,7 +115,11 @@
     "Review entry",
     "Report log",
     "Paper card",
-    "Access-point check record"
+    "Access-point check record",
+    "Severity scale",
+    "Routing table",
+    "Rating history",
+    "Regulatory checklist"
   ],
   "example": {
     "label": "Illustrative example",
@@ -155,6 +174,19 @@
         "Who is told about a report",
         "How related reports are linked",
         "What feedback can safely be given to reporters"
+      ]
+    },
+    {
+      "slug": "severity-triage",
+      "title": "Rate severity and triage in incident and near-miss reporting software",
+      "summary": "No previous findings to resolve. Both changed paragraphs are clear and accurate: the disclaimer on the three-level table correctly flags it as illustrative and notes the product's level configuration is unconfirmed, and the reporter-feedback paragraph is appropriately hedged with plant-policy qualification. All workflow roles, inputs, decisions, records and exceptions match the plan. Illustrative examples are labelled correctly. Source URLs are used appropriately and within scope. No FAQ section is present and none is assigned. No scope creep, repetition or readability issues detected.",
+      "bodyHash": "1a3afd163d15f6bd5c1bfba71ae7a0a3c6279de1b0b0be07ea42a18f04eb8d54",
+      "decisions": [
+        "Decide level definitions",
+        "Rate near-misses by potential harm",
+        "Decide routing and response time",
+        "Decide the final rating",
+        "Decide which events need external notice"
       ]
     }
   ],
