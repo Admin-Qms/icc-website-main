@@ -69,7 +69,7 @@
       "wordCount": 2028,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-16T08:39:38.246Z"
+      "checkpointedAt": "2026-11-19T15:45:37.584Z"
     },
     "corrective-actions": {
       "hash": "d3f6972c8823bcc4a7b1b77ef28a6d7e832796c9cda3f36eb13222adba8f83e8",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-19T15:45:16.457Z",
+  "updatedAt": "2026-11-19T15:45:37.596Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -1324,7 +1324,7 @@
     "reviewedChapters": [],
     "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf"
   },
-  "contextHash": "009384c5e3cc7a8fdff953f287ed2e7e620b48ec8ee8e8553572610a12dc3643",
+  "contextHash": "f27fbbddd8eef05b377ce68a9a189803a5987cbe8aa614cb6ee2386a975fa7db",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2115,6 +2115,213 @@
       "outputContextHash": "009384c5e3cc7a8fdff953f287ed2e7e620b48ec8ee8e8553572610a12dc3643",
       "reviewedAt": "2026-11-19T15:45:16.454Z",
       "reviewer": "Configured independent chapter reviewer"
+    },
+    "investigation": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The earlier heading and evidence-citation findings are resolved. The changed paragraphs present no clear new problems. No FAQ is assigned or included.",
+      "glossary": [
+        {
+          "term": "Assignment entry",
+          "definition": "A record naming the investigator, investigation scope and date."
+        },
+        {
+          "term": "Evidence list",
+          "definition": "A list of evidence items noting what each item is, who collected it, when and where it is held."
+        },
+        {
+          "term": "Cause statement",
+          "definition": "A record of the investigation’s explanation that distinguishes observations, reports and conclusions and identifies supporting evidence."
+        },
+        {
+          "term": "Reviewed conclusion",
+          "definition": "An investigation conclusion recorded with the reviewer’s name and date."
+        }
+      ],
+      "roles": [
+        "Safety coordinator",
+        "Investigator",
+        "Area supervisor",
+        "Maintenance planner",
+        "Reporter",
+        "Operator",
+        "Safety lead",
+        "Reviewer",
+        "Manager",
+        "Auditor",
+        "Joint health and safety committee",
+        "Vendor"
+      ],
+      "recordNames": [
+        "Rated report",
+        "Assignment entry",
+        "Evidence list",
+        "Incident record",
+        "Witness statements",
+        "Training records",
+        "Work instruction",
+        "Equipment maintenance and inspection records",
+        "Cause statement",
+        "Investigation record",
+        "Reviewed conclusion",
+        "Incident log",
+        "Corrective actions"
+      ],
+      "decisions": [
+        "Who investigates and how deeply",
+        "Whether an investigator has a conflict",
+        "Who may reassign or widen an investigation",
+        "What evidence is sufficient and how to handle missing evidence",
+        "Who may access sensitive evidence",
+        "What caused or contributed to the event",
+        "Whether to accept or return the investigation",
+        "What findings can be shared with the reporter"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assign and scope the investigation",
+            "section": "Assign and scope the investigation"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assign and scope the investigation; semantic review verifies support",
+            "section": "Assign and scope the investigation"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Collect evidence",
+            "section": "Collect evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Collect evidence; semantic review verifies support",
+            "section": "Collect evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Analyze causes without blame",
+            "section": "Analyze causes without blame"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Analyze causes without blame; semantic review verifies support",
+            "section": "Analyze causes without blame"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Record conclusions and review",
+            "section": "Record conclusions and review"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Record conclusions and review; semantic review verifies support",
+            "section": "Record conclusions and review"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "d36f8d21a132b74518f137062968dca7abb16f2918b21f69fa47e0301ccf5ebe",
+      "contentHash": "a25ac61dbbddd304a7a53a9d4677d3c589a812498ddd9636159a72dd5ac4eaeb",
+      "paragraphHashes": [
+        "ace057f0074a888a3f4e7aeafb4f1efe4005edc0ace3e116a5b67ee8c7e7f539",
+        "d792e9390b141b0ffabbcec02d38abe86593429db16c526f7bb4bd6d2f677e46",
+        "7b11988bcb4ffecdb626d05c19af657e35ccc10f35ba324f5c2d27eb60c7b287",
+        "0b4c5bade6eaed90c6735f88f8171c1bb19580717e8d8fec4468e433fb701b88",
+        "c8d1816db3c3b19af2baba6df0f88f4f69442139dfc60b4175da722d379ac58d",
+        "dc9a7ee1e914355f1161e99b032ff62b4765478ab0dbfa0e2373afd68a60aac7",
+        "01aeec6448dcbdce8262bff4c8e512840db6679dd8177f34f8155b23b9a7bb3f",
+        "edddb7e75aa62e15df7e076525db0edf00e0e202d9ed458989be99edc14fd6b4",
+        "de288489616c5e1c6b9a1be0482f219bddb7d84dc286f38a9b8fda11773aff8d",
+        "de743f82c96f101b732a10dbbea47fe8b1074fd8aec3475a688f90ce0fb83720",
+        "62522cab3da9821ef47f863c0a194195e20ef4fc2883861b196a582a6d66746a",
+        "feed4fdfab76bb8465c7b534c80d5ef10a47540ea016f87a54ef50997d6e5848",
+        "98700a2be499a8ab4ee35f6b67b8a896b2efc9440594b98e165d524307997517",
+        "8723111209c7df67cf595b9990a7a7f12fa190e53ace24b1232b5a5bc34a9945",
+        "3614950716da15a47a10fda58bf95e61a209f69d0cbdb284f3b4606ec0765b34",
+        "58e5b234ad0d00e5ea7d9005533c4658ec92448af6c91cb5aa53617a47581ace",
+        "610f5b9639370bac1554217bcc37ac7591c9c572ca9ab61af9c0b0e40e499a1d",
+        "55d865347eb4975e089d15caf6cf9c4104191f8c487162245e085697c3adc7ad",
+        "0a0d4bc0e6bed201f7ac452b52a20ccab0becf517c0a27a2561151cb0986609c",
+        "745565c93ad9e8911f83fe2fc521ac7d772ef3e3e70de32b157c43489567a219",
+        "7cbf26fc6e6f96d8727b9a096d07fda3469ee4eb2772391b650850f9c98b4afd",
+        "1c4f07fa6b7770063d67d7ce7b7ae791ddcd4878d0de933c242d2bd25c002da7",
+        "ed68bda15eba97edfa7f0d41dc1b3f8b4f72c7b904ce721b4816cf236ea46670",
+        "0f70cc0aa1d5dd130e6a4991dfd03e1e8b32b1abb519f2217baaf5b44d744a34",
+        "f4e5f13f0d38ab674b3937416d5bc48a8172b50b21a0d53196ef41cee6b3a90c",
+        "edad8ee68b785a732d57032c5431a2c35666505d9946f85da94f40276d9ad4c7",
+        "5a067f3450988fc8b9a404013c32bcd5b88e113bc3baccd077297384f6047feb",
+        "e84d6a25711e66e44a26ce05f8b399d61e4f1765591b12dbdb3c5d51fe068fd9",
+        "8922ba2c0f343790457cf93f44ca183ff36b59d3d937184eb1ae41098b1b67a6",
+        "aa30b9bf63676f7f3a7e73298306a2ffd9e7f94ccde3d415f2e995f4cc0583db",
+        "84a896fb52bdc510df0caee8854719f75c36b7864631f2e27786bc45d5fbcbad",
+        "e50564336afcf6acd2916423ac43d4a4854a7e32163935cb97fbd76fb6116736",
+        "a9473003caedb41813ff316411b432e5e686e62cd289edc57a3ff56b9d1b9e8c",
+        "02ebc8cf9fbc068e7edcfd035b0e186c45c662652519bcfd5c5004e3c7a86c9b",
+        "41357022a06d2e5aa0450dbe7b6d15c7744f3536cbc105009b7d3bb3017f56f2"
+      ],
+      "outputContextHash": "f27fbbddd8eef05b377ce68a9a189803a5987cbe8aa614cb6ee2386a975fa7db",
+      "reviewedAt": "2026-11-19T15:45:37.594Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-16T08:39:34.643Z"
     }
   },
   "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf",
