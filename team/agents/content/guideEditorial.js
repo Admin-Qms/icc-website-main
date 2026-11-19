@@ -18,16 +18,34 @@ function pageWordBudget(job, slug) {
   return { min, max, possible: max >= min, spent, reserve, target: min };
 }
 function links(body, referenceBody = body) {
-  const text = String(body); const values = [];
-  for (const match of text.matchAll(/(?<!!)\[[^\]]+\]\(/g)) {
-    let i = match.index + match[0].length; const start = i; let depth = 1;
-    for (; i < text.length && depth; i++) { if (text[i] === '\\') { i++; continue; } if (text[i] === '(') depth++; if (text[i] === ')') depth--; }
-    if (!depth) { const target = text.slice(start, i - 1).trim(); values.push(target.startsWith('<') ? target.slice(1, target.indexOf('>')) : target.split(/\s+["']/)[0]); }
+  const label = value => value.trim().replace(/\s+/g, ' ').toLowerCase();
+  const definition = /^ {0,3}\[([^\]\n]+)\]:[ \t]*(?:\r?\n[ \t]*)?(?:<([^>\n]+)>|([^\s]+))[^\n]*$/gm;
+  const references = new Map();
+  for (const match of String(referenceBody).matchAll(definition)) {
+    const key = label(match[1]);
+    if (!references.has(key)) references.set(key, match[2] || match[3]);
   }
-  for (const match of String(referenceBody).matchAll(/^ {0,3}\[([^\]]+)\]:\s*(?:<([^>]+)>|(\S+))/gm)) {
-    if (referenceBody === body || text.includes(`[${match[1]}]`)) values.push(match[2] || match[3]);
+  // Definitions resolve citations but are not themselves citation occurrences.
+  const text = String(body).replace(definition, ''); const values = [];
+  const tokens = /!?\[([^\]]+)\]|<(https?:\/\/[^>]+)>/g;
+  for (let match; (match = tokens.exec(text));) {
+    if (match[2]) { values.push(match[2]); continue; }
+    const image = match[0].startsWith('!');
+    let target;
+    if (text[tokens.lastIndex] === '(') {
+      let i = tokens.lastIndex + 1; const start = i; let depth = 1;
+      for (; i < text.length && depth; i++) { if (text[i] === '\\') { i++; continue; } if (text[i] === '(') depth++; if (text[i] === ')') depth--; }
+      if (depth) continue;
+      const destination = text.slice(start, i - 1).trim();
+      target = destination.startsWith('<') ? destination.slice(1, destination.indexOf('>')) : destination.split(/\s+["']/)[0];
+      tokens.lastIndex = i;
+    } else {
+      const explicit = /^\[([^\]]*)\]/.exec(text.slice(tokens.lastIndex));
+      target = references.get(label(explicit?.[1] || match[1]));
+      if (explicit) tokens.lastIndex += explicit[0].length;
+    }
+    if (!image && target !== undefined) values.push(target);
   }
-  values.push(...[...text.matchAll(/<(https?:\/\/[^>]+)>/g)].map(m => m[1]));
   return values;
 }
 function preserveCopyEdit(before, after) {

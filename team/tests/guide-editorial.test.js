@@ -34,6 +34,33 @@ test('copy editing cannot silently alter a citation or a factual number', () => 
 test('signed measurements and reference-style Markdown citations survive copy editing exactly', () => {
   for (const [before, after] of [['Keep 50mm clearance.', 'Keep 60mm clearance.'], ['The change was -5%.', 'The change was 5%.'], ['[Evidence][source]\n\n[source]: https://example.org/original', '[Evidence][source]\n\n[source]: https://example.org/changed']]) assert.equal(editorial.preserveCopyEdit(before, after).pass, false);
 });
+test('link inventory follows citation reading order and counts repeated references', () => {
+  const body = '[First][source] then [Inline](/solutions/safety/) then [Again][source].\n\n[source]: https://example.org/evidence';
+  assert.deepEqual(editorial.links(body), ['https://example.org/evidence', '/solutions/safety/', 'https://example.org/evidence']);
+});
+test('copy editing cannot drop a repeated reference while retaining its definition', () => {
+  const body = '[First][source] then [Inline](/solutions/safety/) then [Again][source].\n\n[source]: https://example.org/evidence';
+  assert.equal(editorial.preserveCopyEdit(body, body.replace(' then [Again][source]', '')).pass, false);
+});
+test('collapsed and shortcut citations normalize reference case and whitespace', () => {
+  const body = '[ QUALITY\t Evidence ][] then [Quality Evidence] and [named][QUALITY   EVIDENCE].\n\n[quality evidence]: <https://example.org/evidence>\n[unused]: https://example.org/unused';
+  assert.deepEqual(editorial.links(body), ['https://example.org/evidence', 'https://example.org/evidence', 'https://example.org/evidence']);
+  assert.deepEqual(editorial.links('[unused]: <https://example.org/unused>'), []);
+});
+test('section references resolve against full-page definitions while preserving mixed link order', () => {
+  const section = '[Reference][source] then <https://example.org/auto> then [Balanced](https://example.org/file_(revision)) then [Angle](<https://example.org/angle>).';
+  assert.deepEqual(editorial.links(section, section + '\n\n[source]: https://example.org/evidence'), [
+    'https://example.org/evidence', 'https://example.org/auto', 'https://example.org/file_(revision)', 'https://example.org/angle',
+  ]);
+});
+for (const newline of ['\n', '\r\n']) {
+  test(`reference destinations on one indented ${newline === '\n' ? 'LF' : 'CRLF'} continuation remain protected`, () => {
+    const body = `[Evidence][iso]${newline}${newline}[iso]:${newline}  https://example.org/original`;
+    assert.equal(editorial.preserveCopyEdit(body, body.replace('/original', '/changed')).pass, false);
+    assert.deepEqual(editorial.links(body), ['https://example.org/original']);
+    assert.deepEqual(editorial.links(`[Evidence][iso]${newline}${newline}[iso]:${newline}${newline}  https://example.org/unrelated`), []);
+  });
+}
 test('a researched outline rejects missing targets, subsections and FAQ allocations', () => {
   const base = createGuideOutline({ id: 'document-control', topic: 'Document control software', primaryKeyword: 'document control software' }, research);
   for (const field of ['targetWords', 'subsections']) { const plan = structuredClone(base); delete plan.chapters[0][field]; assert.equal(validateGuideOutline(plan, research).pass, false); }
