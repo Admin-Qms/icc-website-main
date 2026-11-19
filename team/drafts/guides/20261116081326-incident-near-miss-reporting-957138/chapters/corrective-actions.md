@@ -87,7 +87,7 @@ Completing an action is not the same as solving the problem. Verification asks w
 
 Decide in advance how effectiveness will be judged. For a guard fitted to a machine, the check might be an inspection that the guard is in place and used, together with a review of reports from that station over a defined period. For a change to a procedure, it might be observation of the task and a conversation with the people who do it. Write the method into the action so that the checker knows what to look for.
 
-Set the timing for the check. Too soon, and the change has not yet been tested by normal work; too late, and a problem may continue unnoticed. Choose a period that fits the nature of the change and the frequency of the work, and record it. The plant should adjust the period as it learns.
+Set the timing for the check. Too soon, and the change has not yet been tested by normal work; too late, and a problem may continue unnoticed. Choose a period that fits the nature of the change and the frequency of the work, and record it. 
 
 Use the log. If the plant can search its incident record by location, equipment or category, the checker can look for new reports similar to the original. Ask the vendor how search and filtering work, and whether results can be saved or shared for a review meeting. The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) describes a log with severity and status, but the research reviewed does not describe search features, so test it with real examples.
 
@@ -95,7 +95,7 @@ The check should assess both whether the hazard is controlled and whether simila
 
 **Illustrative example:** In the same hypothetical scenario, a new report of the same fastener condition appears after the check period, so the action is reopened. The scenario is invented.
 
-Handle a failed check without blame. If the problem has returned, reopen the action or raise a new one, and record why the first change was not enough. This is valuable information. It may show that the cause was misjudged, that the change was not followed or that conditions changed.
+Handle a failed check without blame. If the problem has returned, reopen the action or raise a new one, and record why the first change was not enough. The cause may have been misjudged, the change not followed, or conditions changed.
 
 Keep verification honest. An effectiveness check that is always “effective” is probably not testing anything. Have someone other than the action owner perform it where possible, and review a sample of past checks to see whether any later reports contradicted them.
 

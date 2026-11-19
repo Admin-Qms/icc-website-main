@@ -44,11 +44,11 @@
       "checkpointedAt": "2026-11-19T16:04:11.105Z"
     },
     "evaluating-software": {
-      "hash": "116919671f7af094d3af8e6a5f8ebf971faacbc852512ec9bf7a4c8114df62ec",
-      "wordCount": 2094,
+      "hash": "719d1d52771592e2aa2f192dafe27abcfbbbdf815a861342dcfa38a18a946a75",
+      "wordCount": 2031,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-19T16:04:11.386Z"
+      "checkpointedAt": "2026-11-19T16:07:48.376Z"
     },
     "reporting-intake": {
       "hash": "1e1e2c4c1b2dcc9eda49024e4bff6cb25a599e24f0cf45d8551f0dedc0ebb6e6",
@@ -72,11 +72,11 @@
       "checkpointedAt": "2026-11-19T15:58:23.583Z"
     },
     "corrective-actions": {
-      "hash": "65afe7c6c875677b48767ce2c94da9047cac89de5f814ee44bd752f898ec3ae2",
-      "wordCount": 2071,
+      "hash": "a4a6ea14400ae37d7a6f241aebd7ac445965e41dd49d6b39ac40ca5484da117a",
+      "wordCount": 2053,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-19T16:04:11.999Z"
+      "checkpointedAt": "2026-11-19T16:07:48.677Z"
     },
     "committee-visibility": {
       "hash": "e28c824c2bb0fb0c218412642883b95044fefafc8308bcfbda3abe685a458b04",
@@ -86,29 +86,29 @@
       "checkpointedAt": "2026-11-19T16:05:13.051Z"
     },
     "audit-evidence-migration": {
-      "hash": "0971e3a21a2b5512a88dadc825b4c198aa0f5bd2865c2e50d8eee623176fbba7",
-      "wordCount": 2074,
+      "hash": "1900d3b1115b784eaa54b6295220c4be8c837af72232a3ea024d21b865992e61",
+      "wordCount": 2048,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-19T16:04:12.372Z"
+      "checkpointedAt": "2026-11-19T16:07:48.880Z"
     },
     "ongoing-operation": {
-      "hash": "79a83cd3f64e9bcf3ec7ac40761f97e8b20be4eb7d54afd8c15b30ff144db9f2",
-      "wordCount": 2078,
+      "hash": "1abe5abe3e9e77ba3c21315bdd7577d7b59766c1767a6ab639513eb654ce59d2",
+      "wordCount": 2021,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-19T15:58:39.899Z"
+      "checkpointedAt": "2026-11-19T16:07:49.069Z"
     },
     "incident-and-near-miss-reporting-software": {
-      "hash": "71465c8d68095e26ad3c8fdd140fe5a914e684ead8a0e12892bd300f05fd0f59",
-      "wordCount": 1537,
+      "hash": "a6ce4caf8261a9606706b13eab98ecb4754b446a83acd3884f7f437c2e9da4d5",
+      "wordCount": 1504,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-11-19T15:58:43.594Z"
+      "checkpointedAt": "2026-11-19T16:07:48.087Z"
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-19T16:05:13.052Z",
+  "updatedAt": "2026-11-19T16:07:49.069Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",

@@ -97,7 +97,7 @@ Bring real sample reports, including an anonymous one, a disputed rating and one
 
 A demonstration is most useful when the plant sets the agenda. The evaluation lead owns the preparation. The input is a scenario and a list of open questions. The decision is to proceed, ask for clarification or reject. The record is the demonstration results. The exception to plan for is a critical path that cannot be shown.
 
-Keep the session focused on the plant's decisions, not on the vendor's slides. Agree the agenda beforehand, allow a short introduction and then move straight to the sample reports, leaving time for exceptions, such as a report with a missing field or an action past its date, so the demonstration tests them.
+Agree an agenda with sample reports and time to test exceptions, such as missing fields or overdue actions.
 
 Prepare three sample reports from the plant's own history, with names and details removed: a routine near-miss reported from the floor, an anonymous report and a report that needs corrective action, plus an existing open action from the plant's log to test its path and follow-up. Ask the vendor to run each from filing to a linked action, and to show the rating, the review, the dashboard view and the auditor view.
 
@@ -105,7 +105,7 @@ Bring the open questions the published [ICC Safety page](https://isocertificatio
 
 Invite the right people. A floor reporter, an investigator, an action owner and a committee member will each see different things, so ask each to score the parts that matter to them. Collect their comments straight afterward, and compare them with the acceptance criteria.
 
-Ask the vendor how the plant's own terminology, severity scale and routing would be set up, who does that configuration and how a change is requested afterward. A product that fits today's process but cannot be adjusted when the plant changes it may become a constraint in the next year.
+Ask the vendor how the plant's own terminology, severity scale and routing would be set up, who does that configuration and how a change is requested afterward. 
 
 Decide the outcome in advance. State what the demonstration must show for the plant to proceed, what would lead to a request for clarification and what would end the evaluation. If a path cannot be shown, record it against the acceptance criteria, and let its effect on the decision follow from whether the criterion was mandatory. Record the result and the reasons, and share them with the decision owner.
 
