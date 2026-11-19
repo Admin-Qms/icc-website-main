@@ -9,6 +9,7 @@ const {
   OPENAI_API_KEY,
   OPENAI_TEXT_MODEL,
   OPENAI_TEXT_MODEL_FAST,
+  CLOUD_ROUTINE,
 } = require("./config");
 
 // Every agent reaches the model through this file, so the provider switch lives here.
@@ -150,15 +151,16 @@ async function callLLM(tier, systemPrompt, userMessage, maxTokens) {
     try {
       return await callWithRetries(providers[name], tier, systemPrompt, userMessage, maxTokens);
     } catch (err) {
-      failures.push(`${name}: ${err.message}`);
-      console.warn(`[llm] ${name} failed (${err.message})${failures.length < readyProviders().length ? ", trying the next provider" : ""}`);
+      const reason = CLOUD_ROUTINE ? `provider request failed (status ${Number.isInteger(err.status) ? err.status : 'unavailable'})` : err.message;
+      failures.push(`${name}: ${reason}`);
+      console.warn(`[llm] ${name} failed (${reason})${failures.length < readyProviders().length ? ", trying the next provider" : ""}`);
     }
   }
   throw new Error(`Every text provider failed — ${failures.join(" | ")}`);
 }
 
 // A reply cut off at the token limit is an error for prose: publishing half an
-// article is worse than failing the run. JSON callers keep the repair path below.
+// article is worse than failing the run. JSON callers must also reject incomplete responses.
 async function callText(tier, systemPrompt, userMessage, maxTokens) {
   const { text, truncated } = await callLLM(tier, systemPrompt, userMessage, maxTokens);
   if (truncated) {
@@ -168,9 +170,10 @@ async function callText(tier, systemPrompt, userMessage, maxTokens) {
 }
 
 async function callJSON(tier, systemPrompt, userMessage, maxTokens) {
-  const { text } = await callLLM(tier, systemPrompt, userMessage, maxTokens);
+  const { text, truncated } = await callLLM(tier, systemPrompt, userMessage, maxTokens);
+  if (truncated) throw new Error(`Model JSON reply was cut off at the ${maxTokens}-token limit`);
   const cleaned = text.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
-  return repairJSON(cleaned);
+  return JSON.parse(cleaned);
 }
 
 /**
@@ -182,56 +185,8 @@ async function claudeCall(systemPrompt, userMessage, maxTokens = 4096) {
 }
 
 /**
- * Attempt to repair truncated JSON by closing open structures.
- */
-function repairJSON(str) {
-  try { return JSON.parse(str); } catch { /* needs repair */ }
-
-  // Extract JSON object/array — strip any text before/after
-  let s = str;
-  const jsonStart = s.search(/[\[{]/);
-  if (jsonStart > 0) s = s.slice(jsonStart);
-
-  // Find where the top-level JSON ends and strip trailing text
-  let depth = 0, inStr = false, endPos = -1;
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === '"' && (i === 0 || s[i - 1] !== '\\')) { inStr = !inStr; continue; }
-    if (inStr) continue;
-    if (s[i] === '{' || s[i] === '[') depth++;
-    if (s[i] === '}' || s[i] === ']') { depth--; if (depth === 0) { endPos = i; break; } }
-  }
-  if (endPos > 0) {
-    s = s.slice(0, endPos + 1);
-    try { return JSON.parse(s); } catch { /* still broken, continue repair */ }
-  }
-
-  // Trim trailing incomplete string/value
-  s = s.replace(/,\s*$/, "").replace(/,\s*"[^"]*$/, "");
-
-  // Close open strings
-  const quoteCount = (s.match(/(?<!\\)"/g) || []).length;
-  if (quoteCount % 2 !== 0) s += '"';
-
-  // Close open brackets/braces
-  const opens = [];
-  inStr = false;
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === '"' && (i === 0 || s[i - 1] !== '\\')) { inStr = !inStr; continue; }
-    if (inStr) continue;
-    if (s[i] === '{' || s[i] === '[') opens.push(s[i]);
-    if (s[i] === '}' || s[i] === ']') opens.pop();
-  }
-  while (opens.length) {
-    const open = opens.pop();
-    s += open === '{' ? '}' : ']';
-  }
-
-  return JSON.parse(s);
-}
-
-/**
  * Call the writing model and parse the response as JSON.
- * Strips markdown fences if present. Repairs truncated JSON.
+ * Strips markdown fences if present; requires complete, valid JSON.
  */
 async function claudeJSON(systemPrompt, userMessage, maxTokens = 4096) {
   return callJSON("main", systemPrompt, userMessage, maxTokens);

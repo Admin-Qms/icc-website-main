@@ -98,3 +98,23 @@ test("an OpenAI reply cut off at the limit is reported, not published", async (t
   }), { status: 200 }));
   await assert.rejects(llm.claudeCall("system", "user", 512), /cut off at the 512-token limit/);
 });
+
+test('a truncated review JSON cannot be repaired into approval', async () => {
+  const llm = loadLLM({ LLM_PROVIDERS: 'claude', CLAUDE_API_KEY: 'test-review' });
+  llm._providers.claude = async () => ({ text: '{"findings":[]}', truncated: true });
+  await assert.rejects(llm.claudeJSONFast('review', 'draft', 512), /cut off|truncated/i);
+});
+
+test('incomplete review JSON cannot be repaired into approval', async () => {
+  const llm = loadLLM({ LLM_PROVIDERS: 'claude', CLAUDE_API_KEY: 'test-review' });
+  llm._providers.claude = async () => ({ text: '{"findings":[]', truncated: false });
+  await assert.rejects(llm.claudeJSONFast('review', 'draft', 512), /JSON|Expected|position|end/i);
+});
+
+test('cloud routines keep Claude reviews independent even with other provider keys present', async () => {
+  const llm = loadLLM({ ICC_CLOUD_ROUTINE: '1', LLM_PROVIDERS: 'openai,gemini', CLAUDE_API_KEY: '' });
+  try {
+    assert.equal(llm.hasLLMKey(), false, 'other providers cannot substitute for the required Claude reviewer');
+    await assert.rejects(llm.claudeJSONFast('review', 'draft', 512), /CLAUDE_API_KEY/);
+  } finally { delete process.env.ICC_CLOUD_ROUTINE; }
+});

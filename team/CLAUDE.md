@@ -107,9 +107,11 @@ If any issue is found during this gate, fix it before reporting. Do not report i
 
 ## Scheduled Blog and Guide Runs (exceptions to the process below)
 
-The scheduled blog run described in `team/ROUTINE.md` and approved in the root `CLAUDE.md` publishes a gate-passing article to `main` through `team/scripts/scheduled-run.sh` without a local review, a Playwright run or an "approved, push to production" message. Its push contains only `content/blog/` and `public/images/blog/`.
+The scheduled blog run described in `team/ROUTINE.md` and approved in the root `AGENTS.md` publishes a gate-passing article to `main` through `team/scripts/scheduled-run.sh` without a local review, a Playwright run or an "approved, push to production" message. Its push contains only `content/blog/` and `public/images/blog/`.
 
-The scheduled guide run described in `team/GUIDE-ROUTINE.md` and approved in the root `CLAUDE.md` does the same for a software guide through `team/scripts/scheduled-guide-run.sh`: its push to `main` contains only `content/guides/` and `public/images/guides/`, and its pushes to the `guide-state` branch contain only `team/drafts/guides/` and `team/reports/guides/`.
+The scheduled guide run described in `team/GUIDE-ROUTINE.md` and approved in the root `AGENTS.md` does the same for a software guide through `team/scripts/scheduled-guide-run.sh`: its push to `main` contains only `content/guides/` and `public/images/guides/`, and its pushes to the `guide-state` branch contain only `team/drafts/guides/` and `team/reports/guides/`.
+
+The scheduled topic scout in `SCOUT-ROUTINE.md` has its own approval in root `AGENTS.md`; only its wrapper may update the two queues and link bank. Codex candidate prompts remain inactive until explicit cutover. Their cloud mode requires Claude review, imported session images and remote ownership; see `CLOUD-SETUP.md`.
 
 Everything else in this file still applies to interactive sessions.
 

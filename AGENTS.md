@@ -1,8 +1,8 @@
-# ISO CERTIFICATION CONSULTANT WEBSITE — Codex SYSTEM PROMPT
+# ISO CERTIFICATION CONSULTANT WEBSITE — SHARED AGENT INSTRUCTIONS
 
-> **Purpose:** This is the master system prompt for Codex sessions working on the ISO Certification Consultants website. It defines the organizational structure, operating protocols, quality gates, daily schedules, and behavioral rules that govern all development and content operations.
+> **Purpose:** This is the canonical instructions for Codex and Claude sessions working on the ISO Certification Consultants website. It defines the organizational structure, operating protocols, quality gates, daily schedules, and behavioral rules that govern all development and content operations.
 >
-> **Usage:** Place this as `AGENTS.md` in the project root. Codex reads it at session start.
+> **Usage:** `AGENTS.md` is canonical. Root `CLAUDE.md` imports this file; shared writing skills live in `.agents/skills/`.
 
 ---
 
@@ -17,15 +17,15 @@ You report to **the Owner (CEO)** — the human. the Owner sets vision, approves
 **Tech Stack (current as of 2026-10-03):**
 - Frontend: Next.js 14 (App Router), React, TypeScript, Tailwind CSS — a static export (`output: "export"`); all site content is in `lib/site.ts`
 - Blog: Markdown files in the repo — `content/blog/<slug>.md`, images in `public/images/blog/<slug>/`, read at build time by `lib/blog.ts`. There is no CMS.
-- Writing: on the schedule, the Codex session writes the article from a brief (`node team/pm.js blog brief`, then `.Codex/skills/write-blog-article/SKILL.md`, then `blog publish --fixture`). The API writer still exists: `LLM_PROVIDER=gemini|Codex` in `team/agents/shared/Codex.js`; Gemini also runs the helper passes (topic pick, originality, claims audit). The rules every writer follows are in `team/data/writing-rules.md`.
-- Images: `IMAGE_PROVIDERS` (default `openai,gemini`; `pexels`, and `codex` on a Mac with Codex logged in). Every generated image uses the house style in `team/data/image-style.json` and is cropped to 1200x675 WebP by `sharp`. Used images are recorded in each post's frontmatter.
+- Writing: the active Claude routines write from managed briefs. The Codex Cloud candidate uses GPT-6.1 Terra for prose and Claude API for helpers/reviews, retaining the Sonnet chapter / Haiku fast-audit split in `team/agents/shared/config.js`. See `team/CLOUD-SETUP.md`; migration is not cut over.
+- Images: legacy runs retain their configured providers. `ICC_CLOUD_ROUTINE=1` forces `IMAGE_PROVIDERS=session` and `LLM_PROVIDERS=claude`: use the session's built-in image tool, then the managed import commands. No API image fallback or nested CLI. All output uses `team/data/image-style.json` and 1200x675 WebP, with hashes/provenance verified before publication.
 - Deployment: repo `https://github.com/Admin-Qms/icc-website-main`. The live site (isocertificationconsultants.ca) is a Vercel project; once it is connected to this repo, every push to `main` deploys. The GitHub Action that builds the export to the `deploy` branch (for cPanel) is kept as a backup.
 - Brand: the company is **ISO Certification Consultants Inc.** (plural) — `SITE` in `lib/site.ts` is the source for name, domain, email, logo path, the Web3Forms key and the BBB profile. The contact form posts to Web3Forms (no server in a static export).
 - Testing: `npm --prefix team test` (node:test) for the blog pipeline; `npm run build` for the site
-- Scheduling: a Codex cloud routine (prompt in `team/ROUTINE.md`, script in `team/scripts/scheduled-run.sh`) that publishes a gate-passing article straight to `main` every morning. See the standing approval section below.
+- Scheduling: a Claude Code cloud routine (prompt in `team/ROUTINE.md`, script in `team/scripts/scheduled-run.sh`) that publishes a gate-passing article straight to `main` every morning, and a second routine (prompt in `team/GUIDE-ROUTINE.md`, script in `team/scripts/scheduled-guide-run.sh`) that writes and publishes a software guide on Mondays and Thursdays, keeping unfinished drafts on the `guide-state` branch, and a third (prompt in `team/SCOUT-ROUTINE.md`, script in `team/scripts/scheduled-scout-run.sh`) that tops up both topic queues every Sunday, approving guide topics through an independent reviewer gate with no human step. See the standing approval sections below.
 
 **What is active and what is not:**
-- **Active:** the daily blog pipeline — `node team/pm.js blog publish` (see `team/README.md`).
+- **Active:** the weekly topic scout and the daily blog pipeline — `node team/pm.js blog publish` (see `team/README.md`) — and the twice-weekly guide pipeline — `node team/pm.js guide ...` driven by `team/scripts/scheduled-guide-run.sh` (see `team/GUIDE-ROUTINE.md`).
 - **Switched off:** every other agent in `team/` (SEO audits, security scans, morning report, web-dev agents, LinkedIn, analytics, mega-articles). They are kept for reference, still target the previous site (Sanity, Vercel, old pages) and cannot run as-is. The organizational chart below describes that wider design, not what currently runs.
 
 **Working rule:** Always `git pull` before `git push`. Commits stay local until the Owner asks for a push.
@@ -199,7 +199,7 @@ These are not agents but shared utilities used by all departments:
 | File | Purpose |
 |------|---------|
 | `shared/config.js` | Models, paths, site URL, API keys |
-| `shared/Codex.js` | Codex API wrapper (sonnet-4-6 + haiku-4-5) |
+| `shared/claude.js` | Claude API wrapper (sonnet-4-6 + haiku-4-5) |
 | `shared/sanity.js` | Sanity CMS client and helpers |
 | `shared/logger.js` | Centralized logging |
 | `shared/heartbeat.js` | Agent health tracking |
@@ -244,7 +244,7 @@ Every piece of content must pass ALL 10 standards before publishing. No exceptio
 
 **If any standard fails, the article goes back to the responsible agent. Nothing is written to `content/blog/`.**
 
-These ten are enforced, with further checks (1,500-word minimum, keyword in title and meta description, internal links that resolve, external links only from `team/data/external-link-bank.json`, a claims audit for invented names and statistics), by `contentQA.validateLocal` before anything is written. Current standard editions come from `team/data/standards-facts.json` — keep that file accurate.
+These ten are enforced, with further checks (1,500-word minimum, keyword in title and meta description, internal links that resolve, external links only from `team/data/external-link-bank.json`, a claims audit for invented names and statistics; on a retry it blocks only on paragraphs edited since an earlier clean audit, and never on the pipeline-fixed title or meta description), by `contentQA.validateLocal` before anything is written. Current standard editions come from `team/data/standards-facts.json` — keep that file accurate.
 
 ### PROTOCOL 3: SITE QUALITY GATES — WEB DEVELOPMENT
 
@@ -301,7 +301,7 @@ When a task requires expertise not covered by existing agents:
 
 ## DAILY OPERATIONS SCHEDULE
 
-All times Eastern (America/Toronto). Pipeline runs on Windows laptop via Codex Cowork.
+All times Eastern (America/Toronto). Pipeline runs on Windows laptop via Claude Cowork.
 
 ```
 5:00 AM  -  COO: System health check (uptime, SSL, DNS)
@@ -424,7 +424,7 @@ These rules are **non-negotiable**. No agent, supervisor, or department may over
 
 - **NEVER delete source files without a Cross-Impact scan confirming zero live imports.** Dead code cleanup is encouraged — but only after verification. Log every deletion in the status report.
 - **NEVER overwrite a file without first reading its current contents.** Always load the file, understand what's there, then make targeted edits. No blind full-file rewrites.
-- **NEVER modify more than one core system file in a single step without a plan.** Core files include: `app/layout.tsx`, `app/api/contact/route.ts`, `sanity.config.ts`, `next.config.js`, `shared/config.js`, `shared/Codex.js`, and any file imported by more than 10 other files. Changes to these require explicit the Owner approval.
+- **NEVER modify more than one core system file in a single step without a plan.** Core files include: `app/layout.tsx`, `app/api/contact/route.ts`, `sanity.config.ts`, `next.config.js`, `shared/config.js`, `shared/claude.js`, and any file imported by more than 10 other files. Changes to these require explicit the Owner approval.
 
 ### CONTENT PROTECTION
 
@@ -534,17 +534,17 @@ The previous sprint table (BlogPosting schema, canonicals, contact form, OG imag
 |---|------|-------|--------|
 | 1 | One repo: site + `team/`, duplicates removed | repo root | DONE (2026-10-03) |
 | 2 | Blog pages, sitemap, nav | `app/blog/`, `lib/blog.ts`, `components/Markdown.tsx`, `components/PostCard.tsx` | DONE (2026-10-03) |
-| 3 | Pipeline publishes Markdown, switchable writer | `team/agents/shared/contentStore.js`, `siteRoutes.js`, `Codex.js`, `team/agents/content/*` | DONE (2026-10-03) |
+| 3 | Pipeline publishes Markdown, switchable writer | `team/agents/shared/contentStore.js`, `siteRoutes.js`, `claude.js`, `team/agents/content/*` | DONE (2026-10-03) |
 | 4 | Blocking quality gate + tests | `team/agents/content/contentQA.js`, `rewritePatcher.js`, `team/tests/` | DONE (2026-10-03) |
 | 5 | Keyword queue, link bank, standards editions | `team/memory/keyword-queue.json`, `team/data/` | DONE (2026-10-03) |
-| 6 | First model-written article (Gemini) and first Codex-written article | `blog publish`, `blog brief` + `--fixture` | DONE (2026-10-04) |
+| 6 | First model-written article (Gemini) and first Claude-written article | `blog publish`, `blog brief` + `--fixture` | DONE (2026-10-04) |
 
 ### Milestone 2 — scheduled and live
 
 | # | Task | Status |
 |---|------|--------|
 | 0 | Writing rules in one file; US spelling, keyword-styling and claims checks; grammar step fixed | DONE (2026-10-04) |
-| 1 | Codex-writes mode: `blog brief`, writer skill, drafts through `--fixture` | DONE (2026-10-04) |
+| 1 | Claude-writes mode: `blog brief`, writer skill, drafts through `--fixture` | DONE (2026-10-04) |
 | 2 | OpenAI image provider, house style, Codex local option | DONE (2026-10-04) |
 | 3 | `trailingSlash: true`; sitemap and JSON-LD aligned | DONE (2026-10-04) |
 | 4 | `scheduled-run.sh`, `team/ROUTINE.md`, standing approval | DONE (2026-10-04) |
@@ -552,18 +552,49 @@ The previous sprint table (BlogPosting schema, canonicals, contact form, OG imag
 | 6 | Cloud environment `icc-blog` (Owner) + routine via `/schedule` | DONE (2026-10-05; first scheduled article on `main`) |
 | 7 | Vercel project connected to this repo; `www` domain added | PENDING (Owner) |
 | 8 | Owner feedback round 1: plural brand and domain, wordmark + BBB seal, Web3Forms contact form, "Canadian companies" wording, FAQ accordion | DONE (2026-10-06); Web3Forms key and logo file pending (Owner) |
+| 9 | Guide routine `icc-guides` (Mon + Thu): `scheduled-guide-run.sh` cloud commands, `guide-state` branch, standing approval | DONE (2026-10-15); first scheduled guide pending |
+| 10 | Topic scout routine `icc-scout` (Sun): `topicScout.js`, blocked/trusted domains, independent reviewer gate, standing approval | DONE (2026-10-15) |
 
 ---
 
+## Codex Cloud migration status and scope
+
+Existing Claude routines remain active until the Owner authorizes cutover after all release checks pass. Candidate prompts in the three routine documents are inactive. Implementation authorization does not authorize a real scheduled prepare, publication, push, deployment or trigger switch during migration testing.
+
+After explicit cutover of each matching routine, its standing approval below also covers the Codex Cloud session running the corresponding candidate prompt, using its saved ICC environment and the restricted script. It additionally covers managed image imports and blog `save-state` on `blog-state`. Routine locks live on `icc-routine-locks`; acquire once through prepare, retain through checkpoints, and release with the matching wrapper when stopping. Do not remove or bypass locks. Missing Claude access, image allowance or integrity failure saves safe progress and stops; never change providers to obtain a pass.
+
 ## SCHEDULED BLOG RUN — STANDING APPROVAL
 
-When a session's prompt is the scheduled blog run (the text in `team/ROUTINE.md`, run by a Codex cloud routine against this repository), the Owner has approved in advance, with no further confirmation, exactly this:
+When a session's prompt is the scheduled blog run (the text in `team/ROUTINE.md`, run by a Claude Code cloud routine against this repository), the Owner has approved in advance, with no further confirmation, exactly this:
 
 1. Running `bash team/scripts/scheduled-run.sh prepare`.
-2. Writing `body.md` for the brief it produces, following `.Codex/skills/write-blog-article/SKILL.md` and `team/data/writing-rules.md`.
+2. Writing `body.md` for the brief it produces, following `.agents/skills/write-blog-article/SKILL.md` and `team/data/writing-rules.md`.
 3. Running `bash team/scripts/scheduled-run.sh publish <draft.json>`, which commits only the new article and its images and pushes that commit to `main`.
 
 That run may not: edit code, prompts, checks, rules, the link bank or the standards file; commit or push anything itself; force-push; change the title or meta description; or retry a failed pipeline more than twice. The start-up banner below is for interactive sessions and is not printed by the scheduled run.
+
+## SCHEDULED GUIDE RUN — STANDING APPROVAL
+
+When a session's prompt is the scheduled guide run (the prompt block at the end of `team/GUIDE-ROUTINE.md`, run by the Claude Code cloud routine `icc-guides` against this repository), the Owner has approved in advance, with no further confirmation, exactly this:
+
+1. Running `bash team/scripts/scheduled-guide-run.sh prepare`, which restores unfinished guide drafts from the `guide-state` branch and reserves or resumes the production slot.
+2. Researching the assigned topic with the web tools, writing the research fixture, and running `node team/pm.js guide outline` and `guide research` to freeze the outline and chapter briefs.
+3. Writing the nine chapters and the introduction in the managed draft folder, following `.agents/skills/write-software-guide/SKILL.md`, `team/GUIDE-WRITER.md` and `team/data/guide-writing-rules.md`, with `guide checkpoint`, `guide review-chapter` and `guide revise` for each page.
+4. Running `bash team/scripts/scheduled-guide-run.sh save-state`, which pushes only `team/drafts/guides` and `team/reports/guides` to the `guide-state` branch.
+5. Running `bash team/scripts/scheduled-guide-run.sh review <job-id>` (audit, dry run with images, validation).
+6. Running `bash team/scripts/scheduled-guide-run.sh publish <job-id>`, which commits only the new guide's manifest, ten pages and ten images and pushes that commit to `main`.
+
+That run may not: edit code, prompts, skills, checks, rules, the link bank, the standards or capability files, the topic queue or any frozen job state; commit or push anything itself; force-push; delete lock files; hand-write anything into `content/guides/` or `public/images/guides/`; start the preview server; or retry a failed editorial stage more than twice. The blog approval above does not cover guides and this approval does not cover blogs.
+
+## SCHEDULED TOPIC SCOUT — STANDING APPROVAL
+
+When a session's prompt is the weekly topic scout (the prompt block at the end of `team/SCOUT-ROUTINE.md`, run by the Claude Code cloud routine `icc-scout`), the Owner has approved in advance, with no further confirmation, exactly this:
+
+1. Running `bash team/scripts/scheduled-scout-run.sh prepare`.
+2. Researching topics and primary sources with the web tools and writing `team/reports/scout-proposals.json`.
+3. Running `bash team/scripts/scheduled-scout-run.sh apply <proposals.json>`, which validates the proposals through `team/agents/content/topicScout.js`, appends blog keywords to `team/memory/keyword-queue.json`, and appends guide topics to `team/memory/guide-topic-queue.json` as `approved` only after all three gates pass: the hard rules in code (including `team/data/blocked-source-domains.json`), every source fetched with HTTP 200 and mentioning the topic, and an independent reviewer pass of the five rules in `REVIEW_RULES`. It also stocks sources for approved topics that have none recorded, through the same fetch checks and reviewer gate, and records them on the queue entry. Approved sources go into `team/data/external-link-bank.json`. The script commits only those three files and pushes to `main`.
+
+That run may not: edit code, prompts, checks, the domain lists, the capability or standards files, or any queue or bank file by hand; commit or push anything itself; force-push; propose a URL it did not open; or approve a topic any other way than through the reviewer gate. No step waits for the Owner: a reviewer rejection discards the topic and a reviewer outage parks it for automatic re-review on the next run.
 
 ## START
 

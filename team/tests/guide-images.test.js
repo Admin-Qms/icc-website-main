@@ -24,3 +24,18 @@ test('an image checkpoint recovers provenance when a page frontmatter checkpoint
   await sourceGuideImages(bundle, directory);
   assert.equal(bundle.introduction.image.sourceId, 'recovered');
 });
+
+test('final guide image validation preserves the recorded session generation request', async t => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'icc-guide-provenance-')); t.after(() => fs.rmSync(directory, { recursive: true, force: true }));
+  fs.mkdirSync(path.join(directory, 'images'));
+  const buffer = await sharp({ create: { width: 1200, height: 675, channels: 3, background: '#723456' } }).webp().toBuffer();
+  const image = { source: 'codex', sourceId: 'tool-artifact', alt: 'Factory inspection', sha256: crypto.createHash('sha256').update(buffer).digest('hex'), licenseUrl: 'https://openai.com/policies/terms-of-use/', inputHash: 'original-input', requestHash: 'assigned-request', request: { prompt: 'Industrial inspection on a manufacturing floor' } };
+  fs.writeFileSync(path.join(directory, 'images/first-page.webp'), buffer);
+  fs.writeFileSync(path.join(directory, 'images/first-page.json'), JSON.stringify(image));
+  const bundle = { manifest: { slug: 'test-guide' }, introduction: { slug: 'first-page' }, chapters: [] };
+  await sourceGuideImages(bundle, directory);
+  const saved = JSON.parse(fs.readFileSync(path.join(directory, 'images/first-page.json')));
+  assert.equal(saved.request.prompt, 'Industrial inspection on a manufacturing floor');
+  assert.equal(saved.inputHash, 'original-input');
+  assert.deepEqual(fs.readFileSync(path.join(directory, 'images/first-page.webp')), buffer);
+});

@@ -345,6 +345,7 @@ function imageMeta(slug, file, img) {
     credit: img.credit,
     creditUrl: img.creditUrl,
     sha256: img.sha256,
+    licenseUrl: img.licenseUrl,
   };
   for (const key of Object.keys(meta))
     if (meta[key] === undefined || meta[key] === null) delete meta[key];

@@ -1,6 +1,6 @@
 # ICC guide routine
 
-Status: created as the Claude Code cloud routine `icc-guides` (2026-10-15, `trig_01QCftVc3PfJZmDPjnr6q4MP`), Monday and Thursday 08:00 UTC (4:00 AM Toronto in summer, 3:00 AM in winter), same cloud environment and tools as the blog routine, no MCP connectors. Enabled on 2026-10-15 once the cloud commands reached `main`; manage it at https://claude.ai/code/routines. Target: two **complete guides** per Toronto ISO week, using the Monday and Thursday production slots. Daily blogs retain their separate cadence. The routine's prompt is the block at the end of this file; the standing approval that lets it push a gate-passing guide to `main` is in the root `CLAUDE.md`.
+Status: created as the Claude Code cloud routine `icc-guides` (2026-10-15, `trig_01QCftVc3PfJZmDPjnr6q4MP`), Monday and Thursday 08:00 UTC (4:00 AM Toronto in summer, 3:00 AM in winter), same cloud environment and tools as the blog routine, no MCP connectors. Enabled on 2026-10-15 once the cloud commands reached `main`; manage it at https://claude.ai/code/routines. Target: two **complete guides** per Toronto ISO week, using the Monday and Thursday production slots. Daily blogs retain their separate cadence. The routine's prompt is the block at the end of this file; the standing approval that lets it push a gate-passing guide to `main` is in the root `AGENTS.md`.
 
 ## Environment network access
 
@@ -54,7 +54,7 @@ Images have individual provenance checkpoints. Retries verify stored bytes, dime
 
 ## Release boundary
 
-The scheduled run's `publish` command is the only automated path to `main`, and it is covered by the guide standing approval in the root `CLAUDE.md` (the blog approval does not cover guides). It runs `guide publish`, the pipeline tests, the site build and both guide export checkers, stages only `content/guides/` and `public/images/guides/`, commits, pulls `main`, re-verifies if the pull brought changes, pushes, then saves the job state. Drafts, reports, credentials and code never enter that commit.
+The scheduled run's `publish` command is the only automated path to `main`, and it is covered by the guide standing approval in the root `AGENTS.md` (the blog approval does not cover guides). It runs `guide publish`, the pipeline tests, the site build and both guide export checkers, stages only `content/guides/` and `public/images/guides/`, commits, pulls `main`, re-verifies if the pull brought changes, pushes, then saves the job state. Drafts, reports, credentials and code never enter that commit.
 
 The local commands (`research`, `generate`, `publish-local`) never switch branches, reset a checkout, commit or push. A manual production release of a locally published guide follows the same allowlist: a clean checkout, only the guide manifest, introduction, nine chapters and ten images, tests, build and both checkers, pull before push.
 
@@ -100,3 +100,21 @@ Rules that override anything else you might consider:
 End your report with one line: `RESULT: published | in progress — <pages reviewed>/10 saved | nothing to generate | failed — <stage and reason>`.
 
 ---
+
+## Codex Cloud candidate prompt (inactive)
+
+The earlier prompt remains the active Claude routine during migration. The following prompt is for the separately authorized Codex cutover.
+
+```text
+Run the ICC software guide in ICC Guides with the actual session model GPT-6.1 Terra. This candidate is inactive until the Owner explicitly enables its schedule; migration probes must not execute this publication prompt.
+
+Read AGENTS.md, team/CLOUD-SETUP.md, .agents/skills/write-software-guide/SKILL.md, team/GUIDE-WRITER.md and team/data/guide-writing-rules.md. Require ICC_CLOUD_ROUTINE=1. Run bash team/scripts/scheduled-guide-run.sh prepare. Stop on NOTHING_TO_GENERATE. Resume the assigned unfinished job before any new one. For a new job research only approved primary sources into research-input.json from its template, run guide outline and guide research with the proposed fixture, then save-state. Never invent evidence or change the link bank.
+
+Follow the original guide routine's research format and page order. Terra writes nine chapters, then the introduction, from frozen briefs. For each page run guide budget, write Markdown within that budget, guide checkpoint, guide review-chapter; make targeted corrections or guide revise at most twice, checkpoint and re-review. Claude independently reviews. Do not continue past an unresolved review. Save-state after every passing page.
+
+Run node team/pm.js guide audit --job <id> and resolve all findings, then node team/pm.js guide check-text --job <id> before images. Run node team/pm.js guide image-requests --job <id>. For each missing request call the built-in image tool with its exact prompt and import its actual local raster through node team/pm.js guide import-image --job <id> --page <slug> --file <artifact>. Immediately run bash team/scripts/scheduled-guide-run.sh save-state after every import. Verified existing assets must be reused without generation/recompression. All ten are required. Run bash team/scripts/scheduled-guide-run.sh review <id>, resolve editorial findings within existing limits, then publish <id> only on REVIEW_PASSED.
+
+On allowance/reviewer failure save safe progress and release through bash team/scripts/scheduled-guide-run.sh release. Report reviewed page/image counts, stage and reason. If a save fails preserve local work and say so. Never retry integrity/Git/install failures blindly, remove locks, change fixed metadata, weaken checks, use an image API/nested CLI, write production paths, commit or push directly.
+
+End with RESULT: published | in progress — <pages reviewed>/10 saved | nothing to generate | saved-progress — <stage and reason> | failed — <stage and reason>.
+```

@@ -5,7 +5,7 @@ export type GuideManifest = { schemaVersion: 1; topicId: string; slug: string; t
 export type GuideBundle = { manifest: GuideManifest; introduction: GuidePage; chapters: GuidePage[] };
 export type GateCheck = { id: string; pass: boolean; message: string; page?: string };
 export type GateReport = { pass: boolean; checks: GateCheck[]; failures: GateCheck[]; wordCount: number };
-export const POLICY: Readonly<{chapters: number; chapterMin: number; chapterMax: number; introductionMin: number; totalMin: number; totalMax: number}>;
+export declare const POLICY: Readonly<{chapters: number; chapterMin: number; chapterMax: number; introductionMin: number; totalMin: number; totalMax: number}>;
 export function validSlug(value: unknown): boolean;
 export function normalizeDay(value: unknown): string | null;
 export function countGuideWords(markdown: string): number;

@@ -13,12 +13,13 @@ const BLOG_IMAGE_DIR = process.env.BLOG_IMAGE_DIR || path.join(SITE_ROOT, "publi
 const CLAUDE_API_KEY = process.env.CLAUDE_API_KEY || "";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
+const CLOUD_ROUTINE = process.env.ICC_CLOUD_ROUTINE === '1';
 
 // Which APIs answer the text calls, tried in order: LLM_PROVIDERS=openai,gemini falls back
 // to Gemini when OpenAI fails. The older single LLM_PROVIDER still works; with neither set,
 // use whichever key is present.
 const LLM_PROVIDERS = (
-  process.env.LLM_PROVIDERS || process.env.LLM_PROVIDER || (CLAUDE_API_KEY ? "claude" : GEMINI_API_KEY ? "gemini" : "claude")
+  CLOUD_ROUTINE ? 'claude' : process.env.LLM_PROVIDERS || process.env.LLM_PROVIDER || (CLAUDE_API_KEY ? "claude" : GEMINI_API_KEY ? "gemini" : "claude")
 ).split(",").map((p) => p.trim().toLowerCase()).filter(Boolean);
 const LLM_PROVIDER = LLM_PROVIDERS[0];
 
@@ -36,6 +37,7 @@ module.exports = {
   BLOG_TIMEZONE: "America/Toronto",
 
   LLM_PROVIDER,
+  CLOUD_ROUTINE,
   LLM_PROVIDERS,
   CLAUDE_API_KEY,
   CLAUDE_MODEL: "claude-sonnet-4-6",
@@ -49,7 +51,7 @@ module.exports = {
   OPENAI_IMAGE_MODEL: process.env.OPENAI_IMAGE_MODEL || "gpt-image-2",
   OPENAI_IMAGE_QUALITY: process.env.OPENAI_IMAGE_QUALITY || "medium",
   // Image sources in order of preference: openai, gemini, pexels, codex (codex = local Codex CLI login only)
-  IMAGE_PROVIDERS: (process.env.IMAGE_PROVIDERS || "openai,gemini").split(",").map((p) => p.trim().toLowerCase()).filter(Boolean),
+  IMAGE_PROVIDERS: (CLOUD_ROUTINE ? 'session' : process.env.IMAGE_PROVIDERS || "openai,gemini").split(",").map((p) => p.trim().toLowerCase()).filter(Boolean),
   IMAGE_STYLE_PATH: path.join(TEAM_ROOT, "data", "image-style.json"),
 
   SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID || "uakgkw7x",

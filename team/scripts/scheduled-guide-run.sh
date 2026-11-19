@@ -22,46 +22,13 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT"
 
-STATE_BRANCH="${GUIDE_STATE_BRANCH:-guide-state}"
-STATE_PATHS=(team/drafts/guides team/reports/guides)
-GIT_ID=(-c "user.name=${GIT_AUTHOR_NAME:-ICC guide pipeline}" -c "user.email=${GIT_AUTHOR_EMAIL:-guides@isocertificationconsultants.ca}")
-
+ROUTINE_KIND=guides
+source team/scripts/routine-common.sh
 status() { echo; echo "$*"; }
 fail() { status "GUIDE_FAILED"; exit 1; }
-
-fetch_state() { git fetch -q origin "+refs/heads/$STATE_BRANCH:refs/remotes/origin/$STATE_BRANCH" 2>/dev/null || true; }
-
-restore_state() {
-  fetch_state
-  if git rev-parse -q --verify "refs/remotes/origin/$STATE_BRANCH" >/dev/null; then
-    git archive "refs/remotes/origin/$STATE_BRANCH" | tar -xf - -C "$ROOT"
-    echo "[guide-state] restored drafts and reports from origin/$STATE_BRANCH"
-  else
-    echo "[guide-state] no $STATE_BRANCH branch yet; starting with no open jobs"
-  fi
-  # Locks belong to a process in a sandbox that no longer exists.
-  find "${STATE_PATHS[@]}" -name '*.lock' -type f -delete 2>/dev/null || true
-}
-
-save_state() {
-  fetch_state
-  local index="$(git rev-parse --absolute-git-dir)/guide-state-index" tree parent commit
-  rm -f "$index"
-  export GIT_INDEX_FILE="$index"
-  git read-tree --empty
-  for p in "${STATE_PATHS[@]}"; do [ -d "$p" ] && git add -f -- "$p"; done
-  git rm -q --cached --ignore-unmatch -r -- ':(glob)team/drafts/guides/**/*.lock' ':(glob)team/reports/guides/**/*.lock' >/dev/null || true
-  tree="$(git write-tree)"
-  unset GIT_INDEX_FILE; rm -f "$index"
-  parent="$(git rev-parse -q --verify "refs/remotes/origin/$STATE_BRANCH" || true)"
-  if [ -n "$parent" ] && [ "$(git rev-parse "$parent^{tree}")" = "$tree" ]; then
-    status "STATE_UNCHANGED"; return 0
-  fi
-  commit="$(git "${GIT_ID[@]}" commit-tree "$tree" ${parent:+-p "$parent"} -m "Guide state: ${1:-checkpoint} $(date -u +%Y-%m-%dT%H:%M:%SZ)")"
-  git push -q origin "$commit:refs/heads/$STATE_BRANCH"
-  git update-ref "refs/remotes/origin/$STATE_BRANCH" "$commit"
-  status "STATE_SAVED"
-}
+restore_state() { routine_state restore; }
+save_state() { assert_routine; routine_state save; }
+GIT_ID=(-c "user.name=${GIT_AUTHOR_NAME:-ICC guide pipeline}" -c "user.email=${GIT_AUTHOR_EMAIL:-guides@isocertificationconsultants.ca}")
 
 require_job() {
   node -e "require('./team/agents/shared/guideStore').loadJob(process.argv[1])" "${1:?managed guide job required}" >/dev/null || fail
@@ -69,11 +36,12 @@ require_job() {
 
 case "${1:-}" in
   prepare)
+    claim_routine
     git fetch origin main
     git checkout -q -B main origin/main
     npm ci --prefix team --no-audit --no-fund
     npm ci --no-audit --no-fund
-    node team/scripts/provider-status.js >&2 || true
+    node team/scripts/provider-status.js >&2
     restore_state
     out="$(mktemp)"
     node team/pm.js guide brief --scheduled 2>&1 | tee "$out" >&2 || true
@@ -82,6 +50,7 @@ case "${1:-}" in
       save_state "prepare $(basename "$folder")" >/dev/null
       status "GUIDE_BRIEF $folder"
     elif grep -q '^NOTHING_TO_GENERATE' "$out"; then
+      release_routine
       status "NOTHING_TO_GENERATE"
     else
       fail
@@ -92,7 +61,12 @@ case "${1:-}" in
     save_state "${2:-checkpoint}"
     ;;
 
+  release)
+    release_routine
+    ;;
+
   review)
+    assert_routine
     job="${2:?managed guide job required}"; require_job "$job"
     node team/pm.js guide audit --job "$job" || { save_state "audit $job" >/dev/null; fail; }
     node team/pm.js guide publish --job "$job" --dry-run || { save_state "dry-run $job" >/dev/null; fail; }
@@ -103,17 +77,23 @@ case "${1:-}" in
 
   publish)
     job="${2:?managed guide job required}"; require_job "$job"
+    publication_clean_index
+    claim_publication
     git pull --no-rebase -q origin main
     if ! node team/pm.js guide publish --job "$job"; then save_state "publish $job" >/dev/null; fail; fi
     if [ -z "$(git status --porcelain content/guides public/images/guides)" ]; then
+      release_routine
       status "NOTHING_TO_GENERATE"
       exit 0
     fi
     title="$(node -e "const j=require('./team/agents/shared/guideStore').loadJob(process.argv[1]);process.stdout.write((j.publishedManifest||j.manifest).title)" "$job")"
-    verify() { npm --prefix team test && npm run build && node team/scripts/check-guide-links.js && node team/scripts/check-guide-metadata.js; }
+    verify() { run_content_tests && npm run build && node team/scripts/check-guide-links.js && node team/scripts/check-guide-metadata.js; }
     verify || { save_state "verify $job" >/dev/null; fail; }
     # Only the guide manifest, its pages and its images are committed, never code or drafts.
-    git add content/guides public/images/guides
+    slug="$(node -e 'const j=require("./team/agents/shared/guideStore").loadJob(process.argv[1]);process.stdout.write((j.publishedManifest||j.manifest).slug)' "$job")"
+    FILES=("content/guides/$slug" "public/images/guides/$slug")
+    publication_clean_index
+    git add -- "${FILES[@]}"
     git "${GIT_ID[@]}" commit -q -m "Publish guide: $title"
     before="$(git rev-parse HEAD)"
     git pull --no-rebase -q origin main
@@ -121,8 +101,11 @@ case "${1:-}" in
       echo "[publish] main moved during the run; re-verifying the merged tree"
       verify || { save_state "verify-after-pull $job" >/dev/null; fail; }
     fi
-    git push -q origin main
+    assert_routine
+    if cloud_run; then node team/scripts/routine-state.js assert-lock --kind publish; fi
+    push_publication "${FILES[@]}"
     save_state "published $job" >/dev/null
+    release_routine
     status "PUBLISHED $title"
     ;;
 
@@ -146,14 +129,14 @@ NODE
     ;;
   publish-local)
     node team/pm.js guide publish --job "${2:?managed guide job required}"
-    npm --prefix team test
+    run_content_tests
     npm run build
     node team/scripts/check-guide-links.js
     node team/scripts/check-guide-metadata.js
     ;;
 
   *)
-    echo 'usage: scheduled-guide-run.sh prepare | save-state | review <job> | publish <job>   (scheduled cloud run; publish pushes the guide to main under the standing approval in CLAUDE.md)' >&2
+    echo 'usage: scheduled-guide-run.sh prepare | save-state | release | review <job> | publish <job>   (scheduled cloud run; publish pushes the guide to main under the standing approval in CLAUDE.md)' >&2
     echo '       scheduled-guide-run.sh research <fixture> | generate <job> | publish-local <job>   (local only; no git). Any other release path needs separate Owner authorization.' >&2
     exit 2
     ;;

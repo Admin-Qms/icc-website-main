@@ -15,6 +15,8 @@ export type PostImage = {
   sourceId?: string;
   credit?: string;
   creditUrl?: string;
+  sha256?: string;
+  licenseUrl?: string;
 };
 
 export type Post = {
