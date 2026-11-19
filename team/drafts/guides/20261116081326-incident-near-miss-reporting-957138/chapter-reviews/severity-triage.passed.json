@@ -6,29 +6,27 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "No previous findings to resolve. Both changed paragraphs are clear and accurate: the disclaimer on the three-level table correctly flags it as illustrative and notes the product's level configuration is unconfirmed, and the reporter-feedback paragraph is appropriately hedged with plant-policy qualification. All workflow roles, inputs, decisions, records and exceptions match the plan. Illustrative examples are labelled correctly. Source URLs are used appropriately and within scope. No FAQ section is present and none is assigned. No scope creep, repetition or readability issues detected.",
+  "summary": "All four subsections are present and match the plan's titles, key points, workflow elements, evaluation criteria, and examples. The changed paragraph correctly frames the three-or-four-level guidance as an illustrative starting point and explicitly disclaims it as a product claim, consistent with the supported research. Every factual claim about the ICC Safety page is supported by the supplied research and is framed as a published description to confirm in a demonstration. The Ontario JHSC guide is cited correctly with appropriate scope qualification, and its URL matches the research source list. Workflow roles, inputs, decisions, records, and exceptions are assigned as planned across all four subsections. Both illustrative examples are labeled as hypothetical and use unnamed Canadian manufacturers. No FAQ section appears, which is correct because the plan assigns none. No scope boundary is crossed into investigation mechanics or legal reporting thresholds. Terminology is consistent with the context glossary throughout. No unresolved previous findings exist. No repetition or readability problems are present.",
   "glossary": [
     {
       "term": "Routing table",
-      "definition": "A record that lists, for each severity level, the role to be notified, the expected first-response time, and the fallback role if no response is received."
+      "definition": "A record that lists, for each severity level, the role that is notified, the expected time for a first response, and the fallback role if no response is received."
     },
     {
       "term": "Rating history",
-      "definition": "A record showing each rating assigned to a report, who assigned it, when, and the reason for any change."
+      "definition": "The record of all ratings assigned to a report, including any changes, the name of who made each change, the date, and the reason."
     },
     {
       "term": "Regulatory checklist",
-      "definition": "A record kept apart from the severity scale that lists each applicable jurisdiction, the authority, the events requiring external notice, and who is responsible for filing."
+      "definition": "A record kept apart from the severity scale that lists each applicable jurisdiction, the authority that applies, and the external notice requirements triggered by specific events."
     }
   ],
   "roles": [
     "Safety lead",
     "Operations manager",
-    "Safety coordinator",
-    "Plant manager",
     "Area supervisor",
-    "Reviewer",
-    "Supervisor"
+    "Safety coordinator",
+    "Plant manager"
   ],
   "recordNames": [
     "Severity scale",
@@ -38,7 +36,6 @@
   ],
   "decisions": [
     "Decide level definitions",
-    "Rate near-misses by potential harm",
     "Decide routing and response time",
     "Decide the final rating",
     "Decide which events need external notice"
@@ -139,13 +136,13 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "241ee5bb053dcb6dab3b4db185cff4e2eb44abf205428cfe84d1bac45c5b01cd",
-  "contentHash": "93f43aa4688e2fdd1855b634ac6b359f1ac46d245223a2db3c3312f330d72739",
+  "inputHash": "e76642a6aa93506c09267b91b804043a284c2d96df5edbf47f091ae171c604d6",
+  "contentHash": "e6e529e876aa189b12d29192b9d45019ae75ca75abb457059254e212f61f4aba",
   "paragraphHashes": [
     "82fbd9921bff8db5f3f7900ffb43d6c76724b7999d91c19657671dd3c840aadc",
     "31550d2d598fb5649ae7dcd7103f0272af101ce30028e7aea9c90e34ef465c4a",
     "aa9e46b1c881db1faa043928ebfdf127ce97cae99f7e9cb7db298dd8b2d6dc86",
-    "9fa1821ec189876e88cdea306dbcd2390a588d1bcd6ae2f2b123bbf4f0befb05",
+    "7676261c18398363239c5e6f9f3a9acb1f7ccf9dfdd870d25eb5f7e4274e051f",
     "f3c2cece87e57d66dc692f9b73c8a558f1ee58dab3987452f17d55cc61c3d0ff",
     "290232155c75bc93db630aeeda697a4c8af3121b07f1d182c3415bc1df970d96",
     "362f236c33e585fe23cdab9cfbfeb0cea1475bfd30d0fe57db323252fedd20f7",
@@ -180,7 +177,7 @@
     "29e67430679feaf52e00cebb7d7edec03f98c10bbd334d83cbae18588f2cc513",
     "febdd27bc680fd5e5051e025f2240f949b091ad20d0964813bcb2572194e1f4c"
   ],
-  "outputContextHash": "009384c5e3cc7a8fdff953f287ed2e7e620b48ec8ee8e8553572610a12dc3643",
-  "reviewedAt": "2026-11-19T15:45:16.454Z",
+  "outputContextHash": "96700ee8a54363e168d7f7d3fac5d6e83636de886d92ae5561cd98e2eebd829d",
+  "reviewedAt": "2026-11-19T15:58:18.996Z",
   "reviewer": "Configured independent chapter reviewer"
 }

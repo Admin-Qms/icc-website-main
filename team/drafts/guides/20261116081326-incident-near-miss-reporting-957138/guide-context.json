@@ -49,6 +49,18 @@
     {
       "term": "Report form specification",
       "definition": "A record of each field’s name, who completes it, whether it is required, and its accepted values."
+    },
+    {
+      "term": "Routing table",
+      "definition": "A record that lists, for each severity level, the role that is notified, the expected time for a first response, and the fallback role if no response is received."
+    },
+    {
+      "term": "Rating history",
+      "definition": "The record of all ratings assigned to a report, including any changes, the name of who made each change, the date, and the reason."
+    },
+    {
+      "term": "Regulatory checklist",
+      "definition": "A record kept apart from the severity scale that lists each applicable jurisdiction, the authority that applies, and the external notice requirements triggered by specific events."
     }
   ],
   "roles": [
@@ -80,7 +92,9 @@
     "Backup reviewer",
     "Human resources",
     "Safety committee",
-    "Vendor"
+    "Vendor",
+    "Area supervisor",
+    "Plant manager"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -102,7 +116,11 @@
     "Report log",
     "Sample reports",
     "Paper card",
-    "Access-point check record"
+    "Access-point check record",
+    "Severity scale",
+    "Routing table",
+    "Rating history",
+    "Regulatory checklist"
   ],
   "example": {
     "label": "Illustrative example",
@@ -157,6 +175,18 @@
         "Who is told about a report",
         "How related reports are linked",
         "What feedback can safely be given to reporters"
+      ]
+    },
+    {
+      "slug": "severity-triage",
+      "title": "Rate severity and triage in incident and near-miss reporting software",
+      "summary": "All four subsections are present and match the plan's titles, key points, workflow elements, evaluation criteria, and examples. The changed paragraph correctly frames the three-or-four-level guidance as an illustrative starting point and explicitly disclaims it as a product claim, consistent with the supported research. Every factual claim about the ICC Safety page is supported by the supplied research and is framed as a published description to confirm in a demonstration. The Ontario JHSC guide is cited correctly with appropriate scope qualification, and its URL matches the research source list. Workflow roles, inputs, decisions, records, and exceptions are assigned as planned across all four subsections. Both illustrative examples are labeled as hypothetical and use unnamed Canadian manufacturers. No FAQ section appears, which is correct because the plan assigns none. No scope boundary is crossed into investigation mechanics or legal reporting thresholds. Terminology is consistent with the context glossary throughout. No unresolved previous findings exist. No repetition or readability problems are present.",
+      "bodyHash": "8e8f04c1789c256bf16796afeb89aa235c1570d779aba9ddaac2ca54974210a2",
+      "decisions": [
+        "Decide level definitions",
+        "Decide routing and response time",
+        "Decide the final rating",
+        "Decide which events need external notice"
       ]
     }
   ],
