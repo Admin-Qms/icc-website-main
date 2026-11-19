@@ -62,7 +62,7 @@
       "wordCount": 2064,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-19T16:04:11.774Z"
+      "checkpointedAt": "2026-11-19T16:13:34.023Z"
     },
     "investigation": {
       "hash": "fd77db55ff67f1a34215263f8d2b5149b1a96f53f10e191e02e2b258ed882e4e",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-19T16:12:26.037Z",
+  "updatedAt": "2026-11-19T16:13:45.272Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -1326,7 +1326,7 @@
     "reviewedChapters": [],
     "researchHash": "787552eb0e3e1cfe85cdfe24d931bb36d1c07e11f1c769c73a00896fc2258901"
   },
-  "contextHash": "6a9116842063a8ce7e880af6f80f366ce609033670e8e9dba3edd66660a32de1",
+  "contextHash": "11a6c1d03ab6e69a13ad8e1a443ae7d82eed743da213e6c72231d17a641f5b06",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1914,6 +1914,189 @@
       ],
       "outputContextHash": "6a9116842063a8ce7e880af6f80f366ce609033670e8e9dba3edd66660a32de1",
       "reviewedAt": "2026-11-19T16:12:26.033Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "severity-triage": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All checks pass. The changed paragraph correctly frames the illustrative severity table as a generic training illustration and explicitly states that available product levels and choices are unconfirmed, consistent with the research source constraints. No previous findings were raised, so none remain unresolved. All four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited with an explicit caution that it describes committees and representatives, not reporting deadlines. Links use only the two supplied source URLs and an allowed internal site path. No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or repetition were detected. Word count of approximately 2064 is within acceptable range of the 2000-word target.",
+      "glossary": [
+        {
+          "term": "Routing table",
+          "definition": "A record that lists, for each severity rating, the role to be notified, the expected time for a first response, and the fallback role if no response is received."
+        },
+        {
+          "term": "Rating history",
+          "definition": "The record of all ratings assigned to a report, showing the original rating, any subsequent changes, the name of the person who made each change, the date, and the stated reason."
+        },
+        {
+          "term": "Regulatory checklist",
+          "definition": "A record kept apart from the severity scale that lists each applicable jurisdiction, the authority responsible, the contact for questions, and the contractual or regulatory duties that may require external notice following an incident."
+        }
+      ],
+      "roles": [
+        "Safety lead",
+        "Operations manager",
+        "Safety coordinator",
+        "Plant manager",
+        "Area supervisor"
+      ],
+      "recordNames": [
+        "Severity scale",
+        "Routing table",
+        "Rating history",
+        "Regulatory checklist"
+      ],
+      "decisions": [
+        "Decide level definitions",
+        "Decide routing and response time",
+        "Decide the final rating",
+        "Decide which events need external notice"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Define a harm-based scale",
+            "section": "Define a harm-based scale"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Define a harm-based scale; semantic review verifies support",
+            "section": "Define a harm-based scale"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Route reports by rating",
+            "section": "Route reports by rating"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Route reports by rating; semantic review verifies support",
+            "section": "Route reports by rating"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Handle disputed ratings",
+            "section": "Handle disputed ratings"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Handle disputed ratings; semantic review verifies support",
+            "section": "Handle disputed ratings"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Separate regulatory duties from the log",
+            "section": "Separate regulatory duties from the log"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Separate regulatory duties from the log; semantic review verifies support",
+            "section": "Separate regulatory duties from the log"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "985f8d6b4d8e880eea49d4f22f14cfe01cf4f14b3fefd3d2aa4e4b96e73d4c7b",
+      "contentHash": "c1c8221ef26ef974a0b2072dced58d03881035314737ffc0ca336658d8998d9b",
+      "paragraphHashes": [
+        "82fbd9921bff8db5f3f7900ffb43d6c76724b7999d91c19657671dd3c840aadc",
+        "31550d2d598fb5649ae7dcd7103f0272af101ce30028e7aea9c90e34ef465c4a",
+        "aa9e46b1c881db1faa043928ebfdf127ce97cae99f7e9cb7db298dd8b2d6dc86",
+        "80311899b5bce6d1aaddd1adf56e6484c38b2ae44ff76817063f48aad79f5ae2",
+        "f3c2cece87e57d66dc692f9b73c8a558f1ee58dab3987452f17d55cc61c3d0ff",
+        "290232155c75bc93db630aeeda697a4c8af3121b07f1d182c3415bc1df970d96",
+        "362f236c33e585fe23cdab9cfbfeb0cea1475bfd30d0fe57db323252fedd20f7",
+        "daa425fb7e4153022502e973fff091c6379b68f2de6aa4e9f4cf9de8dc88d85c",
+        "f0f27f5bb092805b72592fe2f663c7309e20b389814e97d9d3b4ce52f9965fbb",
+        "d58c4a942370837c23568f89694882ac2e9f387389f4cc1840d48bb7d90baa16",
+        "18156bff28541cdaaffff80c45ff92cb30a50742feaa6dd97dbd54a81b8e1740",
+        "e22359d4356eec9ebe8dd2be10b1c6bb57687942234e5eb4c025ca30c0905497",
+        "da5800d14d769e96ecebca8cd633662126d3ec4c279d24532a9e920c2ec05e08",
+        "246135261ef5a0ecec1e90bb11d09eb4268ee4f5390e95af7caa63aaf06ecf80",
+        "96936a045b4781b4419799874a63bf78007c3b4006b0f9a854ee63938ddbe6c0",
+        "deb27a38fcdfea868d94dfc539ee6041f7462c041c799330bb3c0093a8d7bd9e",
+        "75b12f8db60ea32639dc8eb4c7e2b7acd99f3daac1dd79673e19a773d69f48a1",
+        "2c72f4a6e06f0dc942675c230b68bd15a4f072c35aad3fe86b066864cf01442a",
+        "c9d4672a70fe075d07de825f402f32f201c9c2dcef74f1adf35c410326e8c0fc",
+        "22adb006f84e1cbee8e2d9b400cd2b48add9dbee73364be6c344c52a45cba02e",
+        "aa2c37c1da1e9041fe4453957a3e41a17cd5bcf396be2c68d0b6e15a8b0b56fc",
+        "91a16ce9012844f9777adea7d96006d36be9ffd57d4fe16c33a0b671897bb8be",
+        "af552e8083034f0db12aa1f6b0e3ff4cf1e9980da5b0fc4374c949ebe6905972",
+        "d63b6392336cad3ab5aab83ebb839b820050f97a5947ce291347a74899a6b88a",
+        "bad321ffc2c1540060cb4f448fc94e94d8aaafcb32caf46100e000869778ac29",
+        "eb66a93ae3cd2a43054ee194ce5b7b704db845015e65762db57e6d2cab887622",
+        "2cfc2a6e26e3a99e598ec963b48da44b391dd7233c2508b933557156404a9973",
+        "1faa5fa70e5da59ad9fed31ad52cadbd050d4defa2e1edcda128a7867f4d7440",
+        "bf819a28e1c21c33726f1aca985580b1e1675dbe8f8f259f7afefd0f5f63e0c2",
+        "79aa0cff5490b5a81e34cfdb42e49176b7f83a3de55e9504008a12cc0e429975",
+        "28dc44bb24b621f4e1223a220173b816d5f1bebc925bc794e01c2299dab1231d",
+        "ff4a3f8fb07629193440a81acae6a68609b4dccd936ccf06acb54b09e51675cd",
+        "63d0a87ea4b6c81a54db06b7e492e54b60e6d31290e587431b909858f528983e",
+        "f6da0611675f59765bba72618ed0d1cf4cecff1635a9a618cbf6ee442a198c57",
+        "967a35662c9d61ab0f05e1444f7a617f03636bf1c00a263d9bd57e68f23c6332",
+        "29e67430679feaf52e00cebb7d7edec03f98c10bbd334d83cbae18588f2cc513",
+        "febdd27bc680fd5e5051e025f2240f949b091ad20d0964813bcb2572194e1f4c"
+      ],
+      "outputContextHash": "11a6c1d03ab6e69a13ad8e1a443ae7d82eed743da213e6c72231d17a641f5b06",
+      "reviewedAt": "2026-11-19T16:13:45.267Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

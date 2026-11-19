@@ -65,6 +65,18 @@
     {
       "term": "Report form specification",
       "definition": "The record of the final form design stating field name, who completes it, whether it is required, and what values it accepts."
+    },
+    {
+      "term": "Routing table",
+      "definition": "A record that lists, for each severity rating, the role to be notified, the expected time for a first response, and the fallback role if no response is received."
+    },
+    {
+      "term": "Rating history",
+      "definition": "The record of all ratings assigned to a report, showing the original rating, any subsequent changes, the name of the person who made each change, the date, and the stated reason."
+    },
+    {
+      "term": "Regulatory checklist",
+      "definition": "A record kept apart from the severity scale that lists each applicable jurisdiction, the authority responsible, the contact for questions, and the contractual or regulatory duties that may require external notice following an incident."
     }
   ],
   "roles": [
@@ -89,7 +101,9 @@
     "Decision owner",
     "Safety lead",
     "Operations supervisor",
-    "Reviewer"
+    "Reviewer",
+    "Plant manager",
+    "Area supervisor"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -106,7 +120,11 @@
     "Report form specification",
     "Placement list",
     "Policy and routing rule",
-    "Review entry"
+    "Review entry",
+    "Severity scale",
+    "Routing table",
+    "Rating history",
+    "Regulatory checklist"
   ],
   "example": {
     "label": "Illustrative example",
@@ -152,6 +170,18 @@
         "Decide when anonymous reporting is accepted and who reads anonymous reports first",
         "Decide placement of access points",
         "Decide whether to rate, investigate, or close a new report"
+      ]
+    },
+    {
+      "slug": "severity-triage",
+      "title": "Rate severity and triage in incident and near-miss reporting software",
+      "summary": "All checks pass. The changed paragraph correctly frames the illustrative severity table as a generic training illustration and explicitly states that available product levels and choices are unconfirmed, consistent with the research source constraints. No previous findings were raised, so none remain unresolved. All four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited with an explicit caution that it describes committees and representatives, not reporting deadlines. Links use only the two supplied source URLs and an allowed internal site path. No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or repetition were detected. Word count of approximately 2064 is within acceptable range of the 2000-word target.",
+      "bodyHash": "54707b71e667f802bf4914b5a1c3f83c1b3afe8a6ba3e1d5553fa67728b14176",
+      "decisions": [
+        "Decide level definitions",
+        "Decide routing and response time",
+        "Decide the final rating",
+        "Decide which events need external notice"
       ]
     }
   ],

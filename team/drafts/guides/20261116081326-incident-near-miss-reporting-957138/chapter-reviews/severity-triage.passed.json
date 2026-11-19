@@ -6,27 +6,27 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections are present and match the plan's titles, key points, workflow elements, evaluation criteria, and examples. The changed paragraph correctly frames the three-or-four-level guidance as an illustrative starting point and explicitly disclaims it as a product claim, consistent with the supported research. Every factual claim about the ICC Safety page is supported by the supplied research and is framed as a published description to confirm in a demonstration. The Ontario JHSC guide is cited correctly with appropriate scope qualification, and its URL matches the research source list. Workflow roles, inputs, decisions, records, and exceptions are assigned as planned across all four subsections. Both illustrative examples are labeled as hypothetical and use unnamed Canadian manufacturers. No FAQ section appears, which is correct because the plan assigns none. No scope boundary is crossed into investigation mechanics or legal reporting thresholds. Terminology is consistent with the context glossary throughout. No unresolved previous findings exist. No repetition or readability problems are present.",
+  "summary": "All checks pass. The changed paragraph correctly frames the illustrative severity table as a generic training illustration and explicitly states that available product levels and choices are unconfirmed, consistent with the research source constraints. No previous findings were raised, so none remain unresolved. All four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited with an explicit caution that it describes committees and representatives, not reporting deadlines. Links use only the two supplied source URLs and an allowed internal site path. No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or repetition were detected. Word count of approximately 2064 is within acceptable range of the 2000-word target.",
   "glossary": [
     {
       "term": "Routing table",
-      "definition": "A record that lists, for each severity level, the role that is notified, the expected time for a first response, and the fallback role if no response is received."
+      "definition": "A record that lists, for each severity rating, the role to be notified, the expected time for a first response, and the fallback role if no response is received."
     },
     {
       "term": "Rating history",
-      "definition": "The record of all ratings assigned to a report, including any changes, the name of who made each change, the date, and the reason."
+      "definition": "The record of all ratings assigned to a report, showing the original rating, any subsequent changes, the name of the person who made each change, the date, and the stated reason."
     },
     {
       "term": "Regulatory checklist",
-      "definition": "A record kept apart from the severity scale that lists each applicable jurisdiction, the authority that applies, and the external notice requirements triggered by specific events."
+      "definition": "A record kept apart from the severity scale that lists each applicable jurisdiction, the authority responsible, the contact for questions, and the contractual or regulatory duties that may require external notice following an incident."
     }
   ],
   "roles": [
     "Safety lead",
     "Operations manager",
-    "Area supervisor",
     "Safety coordinator",
-    "Plant manager"
+    "Plant manager",
+    "Area supervisor"
   ],
   "recordNames": [
     "Severity scale",
@@ -136,13 +136,13 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "e76642a6aa93506c09267b91b804043a284c2d96df5edbf47f091ae171c604d6",
-  "contentHash": "e6e529e876aa189b12d29192b9d45019ae75ca75abb457059254e212f61f4aba",
+  "inputHash": "985f8d6b4d8e880eea49d4f22f14cfe01cf4f14b3fefd3d2aa4e4b96e73d4c7b",
+  "contentHash": "c1c8221ef26ef974a0b2072dced58d03881035314737ffc0ca336658d8998d9b",
   "paragraphHashes": [
     "82fbd9921bff8db5f3f7900ffb43d6c76724b7999d91c19657671dd3c840aadc",
     "31550d2d598fb5649ae7dcd7103f0272af101ce30028e7aea9c90e34ef465c4a",
     "aa9e46b1c881db1faa043928ebfdf127ce97cae99f7e9cb7db298dd8b2d6dc86",
-    "7676261c18398363239c5e6f9f3a9acb1f7ccf9dfdd870d25eb5f7e4274e051f",
+    "80311899b5bce6d1aaddd1adf56e6484c38b2ae44ff76817063f48aad79f5ae2",
     "f3c2cece87e57d66dc692f9b73c8a558f1ee58dab3987452f17d55cc61c3d0ff",
     "290232155c75bc93db630aeeda697a4c8af3121b07f1d182c3415bc1df970d96",
     "362f236c33e585fe23cdab9cfbfeb0cea1475bfd30d0fe57db323252fedd20f7",
@@ -177,7 +177,7 @@
     "29e67430679feaf52e00cebb7d7edec03f98c10bbd334d83cbae18588f2cc513",
     "febdd27bc680fd5e5051e025f2240f949b091ad20d0964813bcb2572194e1f4c"
   ],
-  "outputContextHash": "96700ee8a54363e168d7f7d3fac5d6e83636de886d92ae5561cd98e2eebd829d",
-  "reviewedAt": "2026-11-19T15:58:18.996Z",
+  "outputContextHash": "11a6c1d03ab6e69a13ad8e1a443ae7d82eed743da213e6c72231d17a641f5b06",
+  "reviewedAt": "2026-11-19T16:13:45.267Z",
   "reviewer": "Configured independent chapter reviewer"
 }
