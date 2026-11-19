@@ -238,7 +238,16 @@
     "Demonstration results",
     "Access rules",
     "Linked actions",
-    "Source files"
+    "Source files",
+    "Reports",
+    "Ratings",
+    "Investigations",
+    "Actions",
+    "Decision table",
+    "Open questions",
+    "Definitions",
+    "Routing note",
+    "Baselines"
   ],
   "example": {
     "label": "Illustrative example",
@@ -382,6 +391,23 @@
         "Which historical logs to migrate",
         "What demonstration criteria are mandatory",
         "Whether to proceed, seek clarification or reject after the demonstration"
+      ]
+    },
+    {
+      "slug": "incident-and-near-miss-reporting-software",
+      "title": "Incident and near-miss reporting software for Canadian quality and operations teams",
+      "summary": "The previous finding is resolved: the chapter-heading statement is now qualified as a general approach. No clear problem was found in the changed paragraph.",
+      "bodyHash": "7c32732dd1caa203f1d5c4c5e4fd23568358cbc9f1ffd990757f1e15cde698b2",
+      "decisions": [
+        "Who owns each workflow responsibility and provides backup",
+        "How to rate severity and route reports",
+        "Who investigates and whether corrective action is needed",
+        "How to check whether an action worked",
+        "Which vendors to shortlist and how to score demonstrations",
+        "Which reporting fields, permissions and anonymous-reporting arrangements to use",
+        "Whether and how to import existing logs",
+        "How to plan cutover and training",
+        "What to improve next and what to ask the vendor to change"
       ]
     }
   ],

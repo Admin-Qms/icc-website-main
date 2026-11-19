@@ -104,11 +104,11 @@
       "wordCount": 1537,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-11-16T09:01:02.583Z"
+      "checkpointedAt": "2026-11-19T15:46:09.450Z"
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-19T15:46:05.389Z",
+  "updatedAt": "2026-11-19T15:46:09.459Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -1324,7 +1324,7 @@
     "reviewedChapters": [],
     "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf"
   },
-  "contextHash": "77a01c1c3d17c8782610e8fab5b0c30638c809e6b8e7f68f2dbd91be6712f643",
+  "contextHash": "9acd14bc3d2ebabe4670fe66c8507e83dfaf11140849aa6d557a5db61ff84976",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -3177,6 +3177,154 @@
       "reviewer": "Configured independent chapter reviewer",
       "carried": true,
       "carriedFrom": "2026-11-16T08:57:22.625Z"
+    },
+    "incident-and-near-miss-reporting-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The previous finding is resolved: the chapter-heading statement is now qualified as a general approach. No clear problem was found in the changed paragraph.",
+      "glossary": [],
+      "roles": [
+        "Quality lead",
+        "Evaluation lead",
+        "Safety lead",
+        "Safety coordinator",
+        "Operations manager",
+        "Floor supervisor",
+        "Committee member",
+        "Reporter",
+        "Investigator",
+        "Auditor",
+        "Vendor"
+      ],
+      "recordNames": [
+        "Incident log",
+        "Reports",
+        "Ratings",
+        "Investigations",
+        "Actions",
+        "Decision table",
+        "Acceptance criteria",
+        "Sample reports",
+        "Open questions",
+        "Definitions",
+        "Routing note",
+        "Exception log",
+        "Baselines"
+      ],
+      "decisions": [
+        "Who owns each workflow responsibility and provides backup",
+        "How to rate severity and route reports",
+        "Who investigates and whether corrective action is needed",
+        "How to check whether an action worked",
+        "Which vendors to shortlist and how to score demonstrations",
+        "Which reporting fields, permissions and anonymous-reporting arrangements to use",
+        "Whether and how to import existing logs",
+        "How to plan cutover and training",
+        "What to improve next and what to ask the vendor to change"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: The operational problem",
+            "section": "The operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: How to use this guide",
+            "section": "How to use this guide"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+            "section": "Planning evaluation and implementation"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "f0207ccd23ed1858f1a6c44703d03be40c7ad91e755f006e61d816bcb8a60974",
+      "contentHash": "8cad212b132d2d951db3773f6b2c8a8b8ce1f9afb4c7b27d5bd93484d57e2130",
+      "paragraphHashes": [
+        "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
+        "bb0622dfe5aa520fac22cfefb659c31c3603109e1407832a81da6aec559d6be0",
+        "1afd1a05702e88996272c4ac4b446f7c15b8cdf7bbcabbc56b82fc14fb46f663",
+        "bdc99779b701af2fb8acfac67b80617ed8f3a89cb1f5379066d13ab38190f15b",
+        "2e7958ecbd9056548cbe348282177518ccf6ba560d0ecb6d45cb85c34bde61bb",
+        "d3766f3bf6f8bbe3dd77dc08a16b547bca030560322e02ed9c44fa44cf73e17b",
+        "e408a219208bac63128b58a82abebc524f4ca76a346b04d4aae5287704e07c25",
+        "e5860e6a25be212698567a4bb708a0dab51afa96421b4cd5574d7d4f6f773486",
+        "e3342a8484af9650e9459afeeb88cf9afddf12d2e0f8298c286e5d9a8cb37095",
+        "f1e738161a7a4ec53202aac0ef3c844de52305b30c58a6922e517b890fc534b8",
+        "1919bdc50ec4e9e4f6f9b946242316e41439fc3bdf8ccd39361f53caad37dc0e",
+        "4756bc07447ebb7d64ac9b28a5536dcc5a5369bcd51d68dd510f9c6b017e2860",
+        "a2ec75ed260d9e8615b16e21d8b0b625cce51baec2e0d9860ffa95fe30259d72",
+        "91e38824954d6c17b9132674b68bf55eaedc3ed3bd443d540d817da915eb9951",
+        "4b64f939bdc35fcff0f89fb4d967d3b2eae9ab9ada0782ba843b16147be96d32",
+        "ac0cf114f03fcfb39d43aeaa53a9536d3ea8f2ec23ed798fb571d0edbf54bc88",
+        "2a97d330a6d3f2a1fca25232f5318fc6cb2681c4dd9f401ae3fc80360e7224a2",
+        "29607057c134e7785b7981caa1f67451001608bea50db40c3f620f34b9d9de68",
+        "a1e763ddc4ee7ed7f798c0af988c6d58ddfbb638c1f888513aaa687597303643",
+        "f5806bba95674b59dacf95181192f55d57430c9f0345a1d93f9927695068f17e",
+        "1aaa1d78fd1b21f503378fca910119605f6ed03d267d77381bb774664bc1125f",
+        "c8dd2d742150467ed5c10d9e74a1c0eb2fab7ff0e7a3e0a97284d500ff6280f4",
+        "0eaa775a4a8b70d819f93c2f40a945025a3d31d00532f47f7e5a0aafdf11e68a"
+      ],
+      "outputContextHash": "9acd14bc3d2ebabe4670fe66c8507e83dfaf11140849aa6d557a5db61ff84976",
+      "reviewedAt": "2026-11-19T15:46:09.458Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-16T09:00:58.304Z"
     }
   },
   "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf",
