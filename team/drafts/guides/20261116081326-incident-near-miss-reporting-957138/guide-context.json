@@ -77,6 +77,18 @@
     {
       "term": "Reviewed conclusion",
       "definition": "An investigation conclusion recorded with the reviewer’s name and date."
+    },
+    {
+      "term": "Correction",
+      "definition": "An action that deals with the immediate problem."
+    },
+    {
+      "term": "Action owner",
+      "definition": "The person who makes an action's change or sees that it is made."
+    },
+    {
+      "term": "Verification",
+      "definition": "A check of whether a completed action worked."
     }
   ],
   "roles": [
@@ -113,7 +125,11 @@
     "Plant manager",
     "Maintenance planner",
     "Manager",
-    "Auditor"
+    "Auditor",
+    "Maintenance lead",
+    "Backup",
+    "Checker",
+    "Leadership team"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -152,7 +168,14 @@
     "Investigation record",
     "Reviewed conclusion",
     "Incident log",
-    "Corrective actions"
+    "Corrective actions",
+    "Decision with reason",
+    "Action entry",
+    "Linked records",
+    "Closure checklist",
+    "Cross-reference",
+    "Effectiveness check",
+    "Incident and near-miss log"
   ],
   "example": {
     "label": "Illustrative example",
@@ -235,6 +258,21 @@
         "What caused or contributed to the event",
         "Whether to accept or return the investigation",
         "What findings can be shared with the reporter"
+      ]
+    },
+    {
+      "slug": "corrective-actions",
+      "title": "Link incidents to corrective action and follow-up",
+      "summary": "The previous findings are resolved. No clear new problems were identified in the changed paragraphs, and no FAQ is assigned or included.",
+      "bodyHash": "492fbb3d888bc5d1f32262ee7c325e5cbda3d63e1912debf5a68b6f25de675ee",
+      "decisions": [
+        "Whether a report needs action and what kind",
+        "Who accepts an action and its due date",
+        "How to escalate an action whose owner cannot act",
+        "Whether to consolidate action tracking",
+        "Whether an incident can close with an action open",
+        "How and when to check an action's effectiveness",
+        "Whether an action was effective or needs reopening"
       ]
     }
   ],
