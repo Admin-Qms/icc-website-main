@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The changed paragraphs introduce no clear problems, and there are no earlier findings to resolve.",
+  "summary": "All four subsections are present and match the plan's titles, key points, workflow elements, evaluation criteria, and examples. Changed paragraphs introduce the problem statement and cite the ICC Safety page correctly, framing it as the vendor's description rather than measured data, consistent with the supported claim. Every factual claim about the ICC Safety page and the Ontario JHSC guide is supported by the supplied research. Workflow roles, inputs, decisions, records, and exceptions are assigned as planned. Both illustrative examples are labeled as such and use unnamed hypothetical manufacturers. The Ontario-specific caveat is correctly stated. No FAQ section appears, which is correct because the plan assigns none. No scope boundary is crossed into vendor comparison, form design, severity rules, or corrective action mechanics. Terminology is consistent throughout. No repetition, broken internal paths, or unresolvable links are present. No previous findings were raised.",
   "glossary": [
     {
       "term": "Incident",
@@ -14,54 +14,52 @@
     },
     {
       "term": "Hazard report",
-      "definition": "A report of a condition noticed before any event occurred."
+      "definition": "A condition someone noticed before any event occurred."
     },
     {
       "term": "Acceptance criteria",
-      "definition": "Statements a software demonstration can prove or fail to prove against the plant’s workflow."
+      "definition": "Statements a demonstration can prove or fail to prove, derived from the plant's own process map and decision table, used to evaluate software against the plant's workflow."
+    },
+    {
+      "term": "Dead end",
+      "definition": "A step in a reporting process after which no record shows a decision was made, leaving the report unresolved."
     }
   ],
   "roles": [
-    "Quality lead",
-    "Safety lead",
+    "Quality or safety lead",
     "Supervisor",
     "Safety coordinator",
+    "Operations manager",
+    "Evaluation lead",
+    "Floor worker",
     "Reporter",
     "Investigator",
     "Action owner",
     "Maintenance",
     "Production supervisor",
     "Quality team",
-    "Auditor",
-    "Evaluation team"
+    "Joint health and safety committee",
+    "Health and safety representative"
   ],
   "recordNames": [
-    "Incident log",
-    "Paper form",
-    "Email",
-    "Clipboard note",
-    "Shift handover sheet",
-    "Photo",
-    "Investigation notes",
-    "Corrective action",
-    "Problem statement",
-    "Definitions sheet",
+    "Written definitions with an owner",
     "Current-state process map",
     "Role and decision table",
     "Acceptance criteria list",
-    "Scoring sheet",
-    "Demonstration comments"
+    "Log entry",
+    "Scoring sheet"
   ],
   "decisions": [
-    "Define incidents, near-misses and hazard reports, including doubtful cases",
-    "Decide whether reports describe the same condition and should be linked",
-    "Decide whether to accept a report into the log",
-    "Rate severity",
-    "Assign an investigator",
+    "Decide what counts as an incident, a near-miss, and a hazard report",
+    "Decide whether a report is accepted into the log",
+    "Rate the severity of a report",
+    "Decide who investigates",
     "Decide whether corrective action is required",
-    "Assign decision owners and backups",
-    "Decide who informs the reporter of receipt and outcome",
-    "Set and rank acceptance criteria"
+    "Decide which steps in the workflow are required versus habit",
+    "Assign a named owner and a backup to each decision",
+    "Decide which steps the software must support first",
+    "Rank acceptance criteria as mandatory or desirable",
+    "Decide who attends each demonstration"
   ],
   "pass": true,
   "deterministic": {
@@ -159,13 +157,13 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "3d36cceaca60c20425671a2a2bb23a37e4e9df26779c4f6d33d8e15696dd5274",
-  "contentHash": "b55a334ea97724ea5face5c071f27dee944c59fbf14a47f613f5fe874d9c1ee4",
+  "inputHash": "c643ef001ca132db535e1d1de37b1e1e96e256added3475d1c058b441bbabb2a",
+  "contentHash": "5d4070462970f1c24aaa2986dffcaf7eaadbf02aa48876e64c7c0e220a7d61e1",
   "paragraphHashes": [
     "f76b01dfeb43ba98b65318b672f03c50ad4fc8b866cb798740da1ebd493ade1a",
-    "6ec7ff7def33bbf5926f385a9f89f57460e682f8b79b690841ac188c1a2eccba",
-    "7f8147656ffdfa64d7a6c0650ebafbed7bcc9047ba2e548c217a29900a4a6915",
-    "ea75de8c983ae6992c5c48a3cf0e2337c492d56477919d9480b6d2c62526980c",
+    "4fe7a5e80429d71bfd7297521af9977fa8a3ce2a59d98f61b8b849fdd13cc97c",
+    "a52574b16d93e1fb49355dad5440c1a38a20d9f5c5bf24daed29ac0a0d707b5c",
+    "01a168708d8a91cb9cfaf2af9853289515452a63bb7336e8b8efbae788fcb61b",
     "98d88b690f426b76b6117623156ff1e8ee2202ead7bca9b05e21274a6f7bee1d",
     "efd0f20015cb51b41637bd5d9d6e1e9bcda8ad4068b04629f03091f7b5d251e3",
     "10d231d898042b432e37bf1b97933e25bdd0ed9a4ebe6df07278b66f5669c095",
@@ -206,7 +204,7 @@
     "0584cbb58b3a39502b0f90fa2f1affbdb7b327004441c4c018b64705dcb469a8",
     "3c1bbab94a9236ccf5e7debf73cded1fdc6e7c48a67f8b213a13b6bf7789d7ac"
   ],
-  "outputContextHash": "99c6d053fb5dc09f962bd779b498060f8ddc2337bd032ca97b54c6cb0f439b1b",
-  "reviewedAt": "2026-11-16T09:03:03.397Z",
+  "outputContextHash": "0b911e37588312d3a27f4e79c2465f7a19b23dc64a6d19ecc11d47d780914af0",
+  "reviewedAt": "2026-11-19T15:55:33.194Z",
   "reviewer": "Configured independent chapter reviewer"
 }

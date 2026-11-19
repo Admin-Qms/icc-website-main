@@ -27,7 +27,7 @@ A severity scale turns a pile of reports into a list the plant can act on in ord
 
 The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/) states that severity is set from the level of harm. That is a sound starting principle for any tool, and it gives the plant a direct question for a demonstration: how many levels exist, and can the plant name and describe each one in its own words?
 
-Begin with the plant's own history. Gather a sample of past reports from paper logs, email, and handover sheets, and sort them by how much harm each caused or could have caused. Three or four levels are a reasonable illustrative starting point, which the plant can adjust after testing. Fewer levels may blur important differences, and more levels may invite arguments about the boundary between neighbors. A simple pattern might read as follows.
+Begin with the plant's own history. Gather a sample of past reports from paper logs, email, and handover sheets, and sort them by how much harm each caused or could have caused. Three or four levels are a reasonable illustrative starting point, which the plant can adjust after testing. Fewer levels may blur important differences, and more levels may invite arguments about the boundary between neighbors. The following illustrative pattern is not a claim about the product’s available levels or configuration.
 
 | Level | Plain description | Typical example prompt |
 |---|---|---|

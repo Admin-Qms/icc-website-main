@@ -3,24 +3,24 @@
   "consistency": "passed",
   "repetition": "passed",
   "unresolvedFindings": [
-    "The guide says the ICC sample dashboard shows ratings such as “Low” and “Medium.” The supplied evidence does not support that claim or confirm which ratings the product offers.",
-    "The guide attributes “training campaigns, competency records and evidence capture” to the ICC setup description. The supplied evidence supports deployment with training and consultant review, but not those additional features.",
-    "The mapping chapter states that most plants collect incident and near-miss reports and that paper or email reports are not consistently logged, rated or linked to action. The supplied evidence does not establish those general claims about plants; the cited ICC page describes a problem pattern but provides no measured prevalence.",
-    "The claim that plants skipping reporter feedback tend to see reporting fall off is presented as a general tendency, but the supplied evidence does not support that causal claim."
+    "In 'Map how incidents and near-misses are reported today' chapter, the guide states 'The ICC [Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes the same pattern from the vendor's side. It says near-misses go unreported because reporting means finding a form and a supervisor; investigations start from a blank page after an incident; and a safety committee may not see patterns early.' This attribution is accurate per the supplied evidence, but the guide then uses this as a prompt to ask questions about the plant being studied. However, the guide does not clearly separate the vendor's description of a common problem from measured data about whether this pattern actually occurs in plants generally, potentially misleading readers about the prevalence of this problem.",
+    "In 'Evaluate incident and near-miss reporting software' chapter, the guide states 'The ICC [Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes incident and near-miss reporting, an anonymous report form opened by a QR code on the floor, a health and safety dashboard with its own permissions, and incidents that need corrective action to be carried into the Improvements module.' The supplied evidence supports all these claims, but the guide does not explicitly state that the ICC page does not describe which fields the form includes, what fields are standard versus configurable, or whether terminology can be changed—gaps the guide later correctly identifies as open questions in the 'Design reporting intake' chapter. This inconsistency between chapters could confuse readers about what the evidence actually covers.",
+    "In 'Rate severity and triage in incident and near-miss reporting software' chapter, the guide presents an illustrative table with three severity levels (Low, Medium, High) and states 'These three levels are an illustration for building a scale, not a recommended standard.' However, the guide does not verify against the supplied evidence whether the ICC Safety module actually supports three levels, more, or fewer, or whether the plant can define its own number of levels. The supplied evidence only states that 'severity is set from the level of harm' but does not confirm the number of levels or flexibility in level count. The guide treats this as an open question for demonstration but does not flag it as such when presenting the illustrative table, potentially implying the product supports this structure.",
+    "The guide attributes to the ICC page the statement that 'incidents that need corrective action are carried into the Improvements module.' The supplied evidence does state this, but the guide does not confirm in the demonstration criteria or in the evaluating chapter whether this means: (a) all incidents can optionally be carried over, (b) only flagged incidents move, or (c) the process is automatic. This ambiguity remains unresolved in the guide, and readers are not warned that the mechanics of the handoff are an open question."
   ],
-  "inputHash": "339b9c006b250802a92996f41fc705619b0d493a5d879eab792eb53edaa0915d",
+  "inputHash": "eb75a15dea13c82b1a0eaece27894aeb2f09e03f9f586c784b8cbfe27f5fd27e",
   "pageHashes": {
     "incident-and-near-miss-reporting-software": "7c32732dd1caa203f1d5c4c5e4fd23568358cbc9f1ffd990757f1e15cde698b2",
-    "mapping-workflows": "21c6c18167b9d604d5028d8f79f1e6481f50fcc5859825b8d9e610b598cdf8dc",
-    "evaluating-software": "422941142e11988961eb8c59baf54d3aeec661aeff414c083c003e54a82087af",
+    "mapping-workflows": "16bbac9aa7689420a7c74a3e372c162931bb116c3f8a615a712a137200c8bff4",
+    "evaluating-software": "218f0172e31b71b9dcb757fa7c5c1512acdaf1e3a3280cd2b40facf74841cc81",
     "reporting-intake": "4a43234f43fdb3acb3d65dbafdae95a6d731950cee4ff18c60d2c4a797aabab4",
-    "severity-triage": "911002fc5b73bec45e4fac5aebb3275b2ee76ef090507c68bb74c856a2d3a852",
+    "severity-triage": "1a3afd163d15f6bd5c1bfba71ae7a0a3c6279de1b0b0be07ea42a18f04eb8d54",
     "investigation": "86cfbd85240303d863b1eae42cc5f19569aeebb52556706a858c8af93a5622c0",
     "corrective-actions": "492fbb3d888bc5d1f32262ee7c325e5cbda3d63e1912debf5a68b6f25de675ee",
     "committee-visibility": "0edc3cd98365b8a6d82bf3a522673d9102e488e253df89fad805c78305f7113a",
     "audit-evidence-migration": "a8d7069e2803ccd3e33b968f0b9006b5b2eda29f4cff320032158ccb5c93a89f",
     "ongoing-operation": "8cf4617f403f5a9e54299aa06833994f26054fc4dcdc5d6508641554eb5885d7"
   },
-  "reviewer": "Configured openai independent review",
-  "reviewedAt": "2026-11-16T09:01:46.958Z"
+  "reviewer": "Configured claude independent review",
+  "reviewedAt": "2026-11-19T15:53:25.648Z"
 }

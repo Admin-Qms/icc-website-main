@@ -23,11 +23,11 @@ capabilityIds: []
 ---
 ## Define the reporting problem
 
-A plant may already collect reports of incidents and near-misses. The trouble can be how they arrive. A note on a clipboard, a message to a supervisor, an email to the safety coordinator, and a comment at a shift meeting all describe real events, yet none of them lands in one log. Incidents and near-misses reported on paper or by email may not be consistently logged, rated for severity, or linked to corrective action. That sentence is the problem statement for this guide, and every later chapter returns to it.
+A plant may already collect reports of incidents and near-misses. The trouble can be how they arrive. A note on a clipboard, a message to a supervisor, an email to the safety coordinator, and a comment at a shift meeting all describe real events, yet none of them lands in one log. Incidents and near-misses reported on paper or by email may not be consistently logged, rated for severity, or linked to corrective action. That situation is the problem statement for this guide, and every later chapter returns to it.
 
-Write the problem down in operating terms before looking at any product. Ask three plain questions. How many different places can a report start? Who decides whether it is written down? What happens to it afterward? The answers show whether the plant has a reporting process or a collection of habits.
+Write the problem down in operating terms before looking at any product. Ask three plain questions: How many different places can a report start? Who decides whether it is written down? What happens to it afterward? The answers show whether the plant has a reporting process or a collection of habits.
 
-The ICC [Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes the same pattern from the vendor's side. It says near-misses go unreported because reporting means finding a form and a supervisor; investigations start from a blank page after an incident; and a safety committee may not see patterns early. Read this as the vendor's description of a common problem, not as measured data about any plant. Use it to prompt questions in the plant being studied.
+The ICC [Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes the same pattern from the vendor's side. It says near-misses go unreported because reporting means finding a form and a supervisor; investigations start from a blank page after an incident; and a safety committee may not see patterns early. Read this as the vendor's description of a possible problem, not as measured evidence of its prevalence across plants or at any particular plant. Use it to prompt questions in the plant being studied.
 
 Definitions come next, because software cannot log what the team has not defined. Agree on wording for three categories:
 
