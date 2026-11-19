@@ -25,7 +25,7 @@ capabilityIds: []
 
 A system that works at launch can drift. Reports may arrive late, ratings may vary between reviewers and actions may sit unchecked. A regular review of the whole workflow keeps small problems from becoming habits. The safety lead owns it. The input is a sample of records and the exception log. The decision is which improvements to prioritize. The record is a set of review findings. The exception to plan for is evidence that is too incomplete to assess.
 
-Set the rhythm at the start. A quarterly review fits many plants, with a lighter monthly check of open items. Choose the period, name the reviewer and put the dates in the calendar, so the review does not depend on someone remembering.
+Set the rhythm at the start. A quarterly review fits many plants, with a lighter monthly check of open items. Choose the period, name the reviewer and put the dates in the calendar so the review does not depend on someone remembering.
 
 Sample records rather than reading everything. Pick a set of reports from the period, such as ten, and follow each through the chain described in earlier chapters: how it was filed, when it was first reviewed, how it was rated, whether it was investigated, what action followed and whether the action was checked. Include an anonymous report, one with a disputed rating and one closed without action where they occurred in the period, and say so when one did not. If the evidence is too incomplete to assess, record the gap, who will fill it and by when, and hold off on conclusions about that point.
 
@@ -63,7 +63,7 @@ An incident is an event that caused harm, damage or a stoppage. A near-miss is a
 
 ### How should severity be rated?
 
-The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) states that severity is set from the level of harm. Define a short scale in the plant's own words, rate near-misses by the harm that could reasonably have occurred, test the scale with two raters and keep a record of any change, including who made it and why. Where reviewers disagree, use the disputed report as a worked example in the scale, so the boundary becomes clearer over time and new reviewers can learn from real cases instead of adjectives.
+The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) states that severity is set from the level of harm. Define a short scale in the plant's own words, rate near-misses by the harm that could reasonably have occurred, test the scale with two raters and keep a record of any change, including who made it and why. Where reviewers disagree, use the disputed report as a worked example in the scale so the boundary becomes clearer over time and new reviewers can learn from real cases instead of adjectives.
 
 ### Should anonymous reporting be allowed?
 
@@ -75,15 +75,15 @@ Migrate what serves a purpose: open actions, recent history that supports patter
 
 ### How should incidents link to corrective actions?
 
-The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) says incidents that need corrective action are carried into the Improvements module, and that the auditor view shows the linked actions. A plant should decide which reports need action, give each action an owner and a date, keep the link to the incident and check effectiveness before closing. Where an action responds to a committee recommendation or an audit finding, link those records as well, so the response can be traced from any starting point.
+The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) says incidents that need corrective action are carried into the Improvements module, and that the auditor view shows the linked actions. A plant should decide which reports need action, give each action an owner and a date, keep the link to the incident and check effectiveness before closing. Where an action responds to a committee recommendation or an audit finding, link those records as well so the response can be traced from any starting point.
 
 ### What evidence should be ready for an auditor?
 
-Be ready to show the log with severity and status, the investigation and review for chosen incidents, linked actions with checks and the way workers are consulted. Rehearse with a colleague, and keep the gap list. Records should show what happened, including late items, without tidying. Decide in advance how an external reviewer will access the records, because the research reviewed for this guide does not describe external reviewer access, and ask the vendor to confirm it in writing.
+Be ready to show the log with severity and status, the investigation and review for chosen incidents, linked actions with checks and the way workers are consulted. Rehearse with a colleague and keep the gap list. Records should show what happened, including late items, without tidying. Decide in advance how an external reviewer will access the records, because the research reviewed for this guide does not describe external reviewer access, and ask the vendor to confirm it in writing.
 
 ### How do safety committees use the log?
 
-A committee may use the log to review patterns and open actions; whether the dashboard filters by location or category is a plant requirement to test in a demonstration. In the Ontario workplaces the [Government of Ontario's guide](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) covers, committees have defined meeting and inspection duties, and plants elsewhere should check their own rules. Share a summary with the committee ahead of each meeting, and record the follow-ups it decides so the next meeting can check them.
+A committee may use the log to review patterns and open actions; whether the dashboard filters by location or category is a plant requirement to test in a demonstration. In the Ontario workplaces the [Government of Ontario's guide](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) covers, committees have defined meeting and inspection duties, and plants elsewhere should check their own rules. Share a summary with the committee ahead of each meeting and record the follow-ups it decides so the next meeting can check them.
 
 ### Does software guarantee ISO 45001 compliance?
 
@@ -91,7 +91,7 @@ No. The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) map
 
 ### What should be prepared for a software demonstration?
 
-Bring real sample reports, including an anonymous one, a disputed rating and one that needs action, plus the plant's acceptance criteria and open questions. Ask the vendor to run the plant's samples and confirm in writing what was shown. The next section describes this in more detail. Agree who will score each part of the session, and decide beforehand what result would let the evaluation continue.
+Bring real sample reports, including an anonymous one, a disputed rating and one that needs action, plus the plant's acceptance criteria and open questions. Ask the vendor to run the plant's samples and confirm in writing what was shown. The next section describes this in more detail. Agree who will score each part of the session and decide beforehand what result would let the evaluation continue.
 
 ## Prepare a focused ICC demonstration
 
@@ -99,15 +99,15 @@ A demonstration is most useful when the plant sets the agenda. The evaluation le
 
 Agree an agenda with sample reports and time to test exceptions, such as missing fields or overdue actions.
 
-Prepare three sample reports from the plant's own history, with names and details removed: a routine near-miss reported from the floor, an anonymous report and a report that needs corrective action, plus an existing open action from the plant's log to test its path and follow-up. Ask the vendor to run each from filing to a linked action, and to show the rating, the review, the dashboard view and the auditor view.
+Prepare three sample reports from the plant's own history, with names and details removed: a routine near-miss reported from the floor, an anonymous report and a report that needs corrective action, plus an existing open action from the plant's log to test its path and follow-up. Ask the vendor to run each from filing to a linked action and to show the rating, the review, the dashboard view and the auditor view.
 
-Bring the open questions the published [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) does not answer: pricing, notifications or alerts, regulatory or authority reporting, how existing logs can be imported and how external reviewers get access. Ask for written answers, and note which are standard behavior and which depend on configuration.
+Bring the open questions the published [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) does not answer: pricing, notifications or alerts, regulatory or authority reporting, how existing logs can be imported and how external reviewers get access. Ask for written answers and note which are standard behavior and which depend on configuration.
 
-Invite the right people. A floor reporter, an investigator, an action owner and a committee member will each see different things, so ask each to score the parts that matter to them. Collect their comments straight afterward, and compare them with the acceptance criteria.
+Invite the right people. A floor reporter, an investigator, an action owner and a committee member will each see different things, so ask each to score the parts that matter to them. Collect their comments straight afterward and compare them with the acceptance criteria.
 
-Ask the vendor how the plant's own terminology, severity scale and routing would be set up, who does that configuration and how a change is requested afterward. 
+Ask the vendor how the plant's own terminology, severity scale and routing would be set up, who does that configuration and how a change is requested afterward.
 
-Decide the outcome in advance. State what the demonstration must show for the plant to proceed, what would lead to a request for clarification and what would end the evaluation. If a path cannot be shown, record it against the acceptance criteria, and let its effect on the decision follow from whether the criterion was mandatory. Record the result and the reasons, and share them with the decision owner.
+Decide the outcome in advance. State what the demonstration must show for the plant to proceed, what would lead to a request for clarification and what would end the evaluation. If a path cannot be shown, record it against the acceptance criteria and let its effect on the decision follow from whether the criterion was mandatory. Record the result and the reasons and share them with the decision owner.
 
 **Illustrative example:** An unnamed Canadian manufacturer asks to see an anonymous report become a rated record with a linked action. In a hypothetical session, the vendor shows every step except a reminder for an overdue action, which the team records as an open question to be answered in writing. The scenario is invented and shows no real result.
 

@@ -6,58 +6,33 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The previous findings are resolved, and no clear problems were identified in the changed paragraphs. The assigned FAQ is substantive and avoids compliance guarantees.",
+  "summary": "This is a re-review. No previous findings were raised, so none remain unresolved. All changed paragraphs are accurate and well-scoped. The three subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The ISO 45001 clause mappings (10.2, 5.4, 6.1.2) are correctly attributed to the ICC Safety page and hedged with the appropriate boundary that a mapping does not guarantee a clause is met. External reviewer access is correctly flagged as unconfirmed in the research. The Ontario JHSC guide is cited only in the FAQ subsection with an explicit caution that plants elsewhere must check their own rules. The FAQ subsection is plan-assigned and present; no FAQ content appears in the introduction or other subsections. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus the allowed internal site path /contact/. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2021 is within acceptable range of the 2000-word target. All changed paragraphs introduce no new unsupported claims.",
   "glossary": [
     {
       "term": "Exception log",
-      "definition": "A log of consequential failures in the reporting process."
+      "definition": "A running record of each time the reporting process failed in a material way, used to identify repeats and prompt process or configuration changes."
     },
     {
-      "term": "Baseline",
-      "definition": "An initial set of results used as the starting point for later comparisons."
+      "term": "Review findings",
+      "definition": "The record produced by a periodic workflow review, listing what the sample showed, what will change, who owns each change and by when."
+    },
+    {
+      "term": "Approved answers",
+      "definition": "The set of FAQ responses the safety lead has verified against the plant's actual sources and authorised for use with supervisors, committees, auditors and leadership."
     }
   ],
   "roles": [
-    "Safety lead",
-    "Reviewer",
-    "Operations manager",
-    "Safety committee",
-    "Qualified adviser",
-    "Evaluation lead",
-    "Floor reporter",
-    "Investigator",
-    "Action owner",
-    "Committee member",
-    "Vendor",
-    "Decision owner"
+    "Evaluation lead"
   ],
   "recordNames": [
-    "Sampled reports",
-    "Exception log",
     "Review findings",
-    "Review summary",
-    "Baseline results",
     "Approved answers",
-    "Demonstration results",
-    "Open-questions list",
-    "Acceptance criteria",
-    "Demonstration comments",
-    "Gap list",
-    "Severity scale",
-    "Routing table",
-    "Access rules",
-    "Incident and near-miss log",
-    "Linked actions",
-    "Source files"
+    "Demonstration results"
   ],
   "decisions": [
-    "Which workflow improvements to prioritize",
-    "How to address evidence too incomplete to assess",
-    "How to answer questions within verified evidence and when to seek advice",
-    "Whether to accept anonymous reporting",
-    "Which historical logs to migrate",
-    "What demonstration criteria are mandatory",
-    "Whether to proceed, seek clarification or reject after the demonstration"
+    "Decide improvements to prioritize",
+    "Answer within evidence",
+    "Proceed, ask for clarification or reject"
   ],
   "pass": true,
   "deterministic": {
@@ -203,12 +178,12 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "ac78991f193e8f50fe2c1f46272b52c8516bfb17fb874c89bfa8e7931618aad0",
-  "contentHash": "846a4fe2b24a9434af3b9f622c3a2e1c5bff775b5ae0103160f26b2cb74d8ffd",
+  "inputHash": "ce5cc94e03cc7c53f27667c202b4de8892771034550e518469a99f5ff3368bb4",
+  "contentHash": "5ce6c8f224706ec0f1735372d67393313a4e13a9e60c8a1becfdfd0b9f7c441c",
   "paragraphHashes": [
     "2bc931bc3c3b35b7daa7d442f6f176389d11af5145d5a5aab237cf206fe58b5d",
     "b4a74cd3fe9bedcc8b1c2654a82f78948f6a7d0e6ccaeee354eac6441c416a96",
-    "468f24792639d90d04794d9a7016b4f705f42947dd04a21fbc760033d0141624",
+    "032caddc9924df0532c8a45e5422c6cb9627984fa6b1640540b5a9c82659948d",
     "dd687906162481c3de2bb723f2e6ff03be2ca5a62cfc52594ec847261c30c1e6",
     "421d172b4b80408cab39f9b514b8a39742b7b0af46cdb24be0213a1566aa3c84",
     "b28e43c4b60f60300b9bc8d1754c52643c6ac2b54d2e0b11703fcae003fc863f",
@@ -225,35 +200,33 @@
     "f245d31b9c57a33f202df619555fe2da4063fe2b3cdf4e21629149ee1fe976a6",
     "865b03ce887c6bd9b244cfafa7d56f626f63e292433f558b50c113ee331a6967",
     "2df6d38821c07c42e5cb9c84025534a1d20a371601475e857342792821839cd6",
-    "e857c501212e102267ca03cd170c24f0193301577ad2ab7c6419ab770bdbf8e0",
+    "25e0891c17d1bf591af9f297394e794e18579b4c2b4f0de3b1245cf1dac9b642",
     "9785ab9dcd44a589710371c673c659ca16440b670af7246d0873dfbb747852fd",
     "07cb5e5b4c36f87d2fabcace08e757476ee5ef82d2bf3a69217f0ff6535c615a",
     "64f9a9e16eac3de29d9506cba2e3e5c88fc6d605a44916ce25439f59eac8f864",
     "19bb24163cf2b14fc85189f9c2a6ac8f326f4b5271c5439972fbf37066da1657",
     "0e7b2eece90f332c9800b8e33e57c6c209a1ea70c2251eee7f7325286d7289ce",
-    "4d82f2db91e9d9eef35e6f6b7404fbfb52b711fd66b0aa51786c62a14fb616a1",
+    "c6067669be48902aa3c698c0a116b63f3705f5c7d2de455c20fba97503567c60",
     "c4f0ad1df76a0b2654123caa2b6862ccfe70f56e6728e1261ebe734e9ef2018f",
-    "b9e7df9810ecdd0b3a3717f2388571d4d7931a16710c25e170d4ee2e7abcc4c8",
+    "300cde6bccbba1efbd464c47ccbaf8e393a9d7002f313c078b8868716a1941d6",
     "f5c0e4bb4acbded9c480f5ef610b8e713785d7eb0ccc3d75922780225ee566da",
-    "9f65589112295789fcc785c104743a648913046cbe10158b9e7e1ed3c0ac7810",
+    "9308a7736eb692e6f8c15caf81428314b0718c22f11f72102d7ab7f8707e0e6c",
     "5df8f7f16c2e02e31a2969925c830c2ee94a635366c2c607325b31daba344fc7",
-    "50d46ed984700cc313effc5decd1b88f77949d10618e6934d3d44528a96b0b72",
+    "48aeb83d9818abc11cfa8d6dd18b2c530794e82438c2d0d290c5991a662473fd",
     "bd3a3593cc22147298aa13e1113c82a7c8065dfaeb1240d028caac656ee3461b",
-    "590879c71c574f5f9ee901ce976f0f2a6d088061b87f8f05404cbf208c942b40",
+    "83e19c6f4b303fc428afe9ebbaf95409283533eec3dc89baa2f8b56e6a5cf04c",
     "ac43e547805a25abcabae23250e3e118d94cd32d666214991c6e40d3b3e789f6",
     "81acac4af18a74c5cefdd2ec6da9bcb199047ee12a40829fbf4b57317d188188",
-    "a855efeb9bc9ac4578a03c070c17e524530cda55373972888f88dc74b97d66be",
-    "e7613d56ba54be057c3c9eeab1351e573fe8870b6020e14806aed4fafd31797a",
-    "b0fc9f21a51be20d2b2916d32360fbc4ad1ae7cf6c06b7d6d87240ac6c9eca04",
-    "6182e0a01e78d19265fb55ca8854e596b304434eba034cc858d325f259e71f56",
-    "990299fdd191616968cad09ed8baa25c4a3ed20b67ad6c48322f90e261eaf941",
-    "1cba9c19e06442873fa0277228876d2c2f449598d21f7bb9ab7f701a5bfd7ee9",
+    "0724221785b376d55118b8ccc92066c4500f5dea95571f47fc075bb8920218b9",
+    "d96ea1542f71afc00dc014a2270cd059a1703b95a114fc1a88ca9f3f06cde72b",
+    "a04afa20b70a91959353d65b324232102cbbb654e8e7aca480ffb2dec00e3e47",
+    "aebb21534ceb3a8e2b04a50d4db69fe1715e8d1afce25bc17917546e1b55c612",
+    "a486935db1da1909ac2b4c83883c2ce2fe5bcffdedfa96e6f0f1624de7410c51",
+    "61a82da024dfaa365ad7659ef65d15ca5482cad8a046c83ca921ae2d37e30dc1",
     "7000843fa9c3e3cdafe07d23b2bc7253b88aafb8513827613cfc1d3cd04e3784",
     "8a34c9e07746b9d50618e968a17f2f13530851cf582af735f8a8971f94ff5ed4"
   ],
-  "outputContextHash": "b9ef1950946de1cb1b2f30e74b1cfa34b5d3d445292369f9c75787555dba13aa",
-  "reviewedAt": "2026-11-19T15:58:39.907Z",
-  "reviewer": "Configured independent chapter reviewer",
-  "carried": true,
-  "carriedFrom": "2026-11-16T08:57:22.625Z"
+  "outputContextHash": "88e7b142834de638a394ff212afef3f7173de59c8f7fc10c071004fdd0ce6378",
+  "reviewedAt": "2026-11-19T16:29:11.181Z",
+  "reviewer": "Configured independent chapter reviewer"
 }
