@@ -34,7 +34,7 @@
     ]
   },
   "productionSlotId": "2026-W47-slot-1",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "e5c529af216186caf054858837eb93c0c09852261a5428c4c5726ae149b49de3",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-19T16:30:09.844Z",
+  "updatedAt": "2026-11-19T16:30:38.401Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -3181,7 +3181,39 @@
   },
   "researchHash": "787552eb0e3e1cfe85cdfe24d931bb36d1c07e11f1c769c73a00896fc2258901",
   "outlineHash": "4666dbc28ac080c95dd5aa8d49380276ee7b8565a827d1777a0aebbc61cb105b",
-  "audit": null,
+  "audit": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "In 'Design reporting intake' chapter, the guide states 'The research reviewed for this guide does not establish which fields the form includes' and 'ask for a demonstration of that with an example,' yet the same guide in the introduction and 'Evaluate' chapter presents the ICC page's descriptions of 'incident and near-miss reporting' and 'anonymous report form' as if the page fully describes intake design. This contradiction persists unresolved: the guide does not reconcile whether the ICC page provides sufficient detail on form fields or whether such detail remains an open question for all chapters. Readers following the design chapter will discover capability gaps not flagged in earlier chapters.",
+      "In 'Rate severity and triage' chapter, the guide presents an illustrative three-level severity scale (Low, Medium, High) with examples, then states 'The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.' The guide does not resolve whether the illustration implies the product supports exactly three levels or any number, creating ambiguity about what readers should test in a demonstration. The illustration table itself is not flagged as unverified at the point it appears.",
+      "The guide attributes to the ICC Safety page in multiple chapters that 'incidents that need corrective action are carried into the Improvements module' (confirmed in evidence), but does not resolve the mechanical question raised in 'Link incidents to corrective action' chapter: 'what is carried across' and 'who initiates the transfer'—whether it is automatic, manual, or conditional. This ambiguity remains unresolved in the demonstration criteria, so readers lack clear guidance on what behavior to test.",
+      "The 'Prepare audit evidence' chapter states the ICC page 'maps its safety module to ISO 45001:2018 clauses 10.2, 5.4, and 6.1.2' and correctly notes 'A mapping is a pointer to possible evidence and does not guarantee that a clause is met.' However, the guide does not consistently apply this disclaimer in earlier chapters. The 'Give committees' chapter states the page 'maps the module to ISO 45001:2018 clause 5.4, consultation and participation of workers' without repeating the no-guarantee caveat, potentially leading readers in that chapter to overestimate what the mapping implies. The same unqualified citation appears in the introduction.",
+      "In 'Ongoing operation' FAQ section, the guide answers 'Does software guarantee ISO 45001 compliance?' with 'No' and correctly cites the mapping as evidence of potential, not proof. However, earlier chapters, including the introduction and 'Give committees and workers visibility,' cite the same ISO 45001 mapping without immediately repeating the limitation, creating inconsistency in how the same factual claim (the mapping exists) is qualified depending on chapter context.",
+      "The guide's research snapshot shows the Ontario guide was 'retrieved' on 2026-11-19 but the supportedClaims note states 'Automated HTTP retrieval remains blocked with 403; no successful automated fetch is claimed.' This creates ambiguity: the guide was verified by 'ROOT-BROWSER-VERIFIED' (direct human read), yet throughout the text, Ontario-specific requirements are presented without a consistent notice that they come from a source that could not be automatically verified and should be checked against the current official page. The 'Prepare audit evidence' chapter advises 'confirm current requirements' but does not flag Ontario citations as potentially stale.",
+      "The introduction states 'Two sources shape the guide's factual statements: the published ICC Safety module page and the Government of Ontario's guide,' yet does not inform readers that only the ICC page was verified by automated retrieval and human reading of the live page. The Ontario guide's statements are presented as authoritative without consistent flagging that they were not retrieved from a live source during guide preparation, only verified through search results. This inconsistency in transparency about source verification persists across all chapters citing Ontario rules.",
+      "In 'Give committees and workers visibility' chapter, the guide states 'The Government of Ontario's guide describes a joint health and safety committee meeting at least once every three months' and later 'confirm the rules that apply to their sites.' While the guide correctly advises confirmation, it presents Ontario-specific numeric thresholds and timelines as if established fact without flagging that these were not retrieved live from the current official source. The same unqualified presentation of Ontario-specific requirements appears in 'Prepare audit evidence' and other chapters, creating risk of outdated guidance.",
+      "The 'Review performance' FAQ section answers 'What evidence should be ready for an auditor?' by stating 'Be ready to show the log with severity and status, the investigation and review for chosen incidents, linked actions with checks and the way workers are consulted.' This answer cites no source and does not reference the ICC Safety page's description of the auditor view or explain which elements come from product capability versus plant practice. The answer conflates what the software can display with what an auditor will want to see, without distinguishing between verified capability and best practice.",
+      "In 'Prepare audit evidence' chapter, the guide states 'Ask which activities apply, their order and dependencies, and request a written plan' regarding setup steps, but earlier in the same chapter and in 'Link incidents' it treats the four setup steps as a described process model without confirming that the ICC page's description of them constitutes a workflow sequence or merely a list of activities that may occur in any order. This unresolved ambiguity about the nature of the setup description persists, leaving readers uncertain whether they should test these steps as a mandatory sequence.",
+      "The guide does not resolve a factual gap across chapters regarding what 'anonymous reports' means operationally. The 'Design reporting intake' chapter states the ICC page 'describes a QR code on the floor that opens an anonymous report form with no login' and later 'does not mention PIN access or notifications.' The 'Ongoing operation' FAQ answers 'Should anonymous reporting be allowed?' with policy guidance but does not confirm whether the ICC product actually supports the described anonymous flow or whether the design should assume it does. This ambiguity about whether the described anonymous functionality is confirmed versus aspirational persists unresolved."
+    ],
+    "inputHash": "014eab2f27a371cbd02c0afe75e5633bea72ca56c881a47ae5f5106552af0dff",
+    "pageHashes": {
+      "incident-and-near-miss-reporting-software": "068495ffc3e7de2417129430448c4c2f791459468f287c354ead5119732e6e80",
+      "mapping-workflows": "e70af05e51b19a8fcdb2d273d9b885d2a9a8de49af25ac2f51573a90ba509827",
+      "evaluating-software": "d0635b8a66313762474b0f06a0aab53e6bd03db5b6e604b1ad1c06a4221d5ca3",
+      "reporting-intake": "28230981305009573002903ee675cce3eedaf963af7bbb738c52f18fbbc03da5",
+      "severity-triage": "54707b71e667f802bf4914b5a1c3f83c1b3afe8a6ba3e1d5553fa67728b14176",
+      "investigation": "86cfbd85240303d863b1eae42cc5f19569aeebb52556706a858c8af93a5622c0",
+      "corrective-actions": "b21025e4ebac16597f8b8debbcfb4926961ae78c4f016956d891c6c3da783374",
+      "committee-visibility": "15927e028f3c5f51b09262ccc49c45efa77ffe042e1afd695758bc634884dd25",
+      "audit-evidence-migration": "6a4fa3254e6a8ce7d5a0adea3e91e7b88d83655a900188dd4da90a125cec66e1",
+      "ongoing-operation": "09e7ae1e66d924dda1c32c4d14c78c8305220943017dcb9d95a331aabab2a9e5"
+    },
+    "reviewer": "Configured claude independent review",
+    "reviewedAt": "2026-11-19T16:30:38.398Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }
