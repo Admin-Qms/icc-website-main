@@ -6,46 +6,26 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The previous finding is resolved: the chapter-heading statement is now qualified as a general approach. No clear problem was found in the changed paragraph.",
+  "summary": "All checks pass. No previous findings were raised, so none remain unresolved. The three changed paragraphs are accurate and well-scoped: the Ontario guide paragraph correctly attributes the source, restricts its application to Ontario workplaces, and explicitly cautions plants in other provinces and federally regulated sites to confirm their own rules; the structured evaluation paragraph gives sound procedural guidance without introducing unsupported vendor claims and correctly instructs recording the decision owner and unresolved evaluation questions; the closing paragraph accurately disclaims any guarantee that software alone produces safer work or satisfies a standard. All unchanged text was already reviewed and cleared. The three subsections match the plan exactly: The operational problem introduces the guide's purpose and audience; How to use this guide provides the ordered chapter overview; Planning evaluation and implementation covers the evaluation and implementation lifecycle. No workflow decisions, roles, records or exceptions are misattributed or omitted. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited with appropriate jurisdictional caveats. Both source URLs are used correctly and no unrecognised URLs appear. No FAQ section is present, consistent with the plan assigning none to any subsection of this introduction chapter. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 1512 is within acceptable range of the 1500-word target.",
   "glossary": [],
   "roles": [
-    "Quality lead",
     "Evaluation lead",
     "Safety lead",
     "Safety coordinator",
     "Operations manager",
     "Floor supervisor",
-    "Committee member",
-    "Reporter",
-    "Investigator",
-    "Auditor",
-    "Vendor"
+    "Committee member"
   ],
   "recordNames": [
-    "Incident log",
-    "Reports",
-    "Ratings",
-    "Investigations",
-    "Actions",
-    "Decision table",
-    "Acceptance criteria",
-    "Sample reports",
-    "Open questions",
-    "Definitions",
-    "Routing note",
-    "Exception log",
-    "Baselines"
+    "Acceptance criteria list",
+    "Shortlist with reasons",
+    "Scored demonstration sheet",
+    "Written comparison"
   ],
   "decisions": [
-    "Who owns each workflow responsibility and provides backup",
-    "How to rate severity and route reports",
-    "Who investigates and whether corrective action is needed",
-    "How to check whether an action worked",
-    "Which vendors to shortlist and how to score demonstrations",
-    "Which reporting fields, permissions and anonymous-reporting arrangements to use",
-    "Whether and how to import existing logs",
-    "How to plan cutover and training",
-    "What to improve next and what to ask the vendor to change"
+    "Decide the configuration before the switch",
+    "Decide the scope of existing log import",
+    "Decide what to improve next and what to ask the vendor to change"
   ],
   "pass": true,
   "deterministic": {
@@ -113,15 +93,15 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "15a4a6d8b023696f5638f5292933bf03b945d0019f76b2c43042fe72e415fd21",
-  "contentHash": "8cad212b132d2d951db3773f6b2c8a8b8ce1f9afb4c7b27d5bd93484d57e2130",
+  "inputHash": "51b7980bed4a3db0a1ae13f738a5893b2a3e8d7c49139968934456593e633327",
+  "contentHash": "7ed63b54b10341cb3a4333b756700406e9eb1d01d75cbd14412c210e55681cb7",
   "paragraphHashes": [
     "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
     "bb0622dfe5aa520fac22cfefb659c31c3603109e1407832a81da6aec559d6be0",
     "1afd1a05702e88996272c4ac4b446f7c15b8cdf7bbcabbc56b82fc14fb46f663",
     "bdc99779b701af2fb8acfac67b80617ed8f3a89cb1f5379066d13ab38190f15b",
     "2e7958ecbd9056548cbe348282177518ccf6ba560d0ecb6d45cb85c34bde61bb",
-    "d3766f3bf6f8bbe3dd77dc08a16b547bca030560322e02ed9c44fa44cf73e17b",
+    "0a8a7d16746b28b67e62523edf1ac502545b59f20be12b6058ffd40c8a55d6b7",
     "e408a219208bac63128b58a82abebc524f4ca76a346b04d4aae5287704e07c25",
     "e5860e6a25be212698567a4bb708a0dab51afa96421b4cd5574d7d4f6f773486",
     "e3342a8484af9650e9459afeeb88cf9afddf12d2e0f8298c286e5d9a8cb37095",
@@ -133,16 +113,14 @@
     "4b64f939bdc35fcff0f89fb4d967d3b2eae9ab9ada0782ba843b16147be96d32",
     "ac0cf114f03fcfb39d43aeaa53a9536d3ea8f2ec23ed798fb571d0edbf54bc88",
     "2a97d330a6d3f2a1fca25232f5318fc6cb2681c4dd9f401ae3fc80360e7224a2",
-    "29607057c134e7785b7981caa1f67451001608bea50db40c3f620f34b9d9de68",
+    "3f14f4b11783f632ed410b3b2f49a2d0130aedef5cf695e631baa56bfae0d3e9",
     "a1e763ddc4ee7ed7f798c0af988c6d58ddfbb638c1f888513aaa687597303643",
     "f5806bba95674b59dacf95181192f55d57430c9f0345a1d93f9927695068f17e",
     "1aaa1d78fd1b21f503378fca910119605f6ed03d267d77381bb774664bc1125f",
     "c8dd2d742150467ed5c10d9e74a1c0eb2fab7ff0e7a3e0a97284d500ff6280f4",
-    "0eaa775a4a8b70d819f93c2f40a945025a3d31d00532f47f7e5a0aafdf11e68a"
+    "4b8c8ec99b3d573be13dfdf1dc782493f84cb236357ff2f0569f46e753b6b61e"
   ],
-  "outputContextHash": "7e9b30c27ccd8b34ac4695d373e43b853b44a4dbc457cea31ce82d41f4d22504",
-  "reviewedAt": "2026-11-19T15:58:43.600Z",
-  "reviewer": "Configured independent chapter reviewer",
-  "carried": true,
-  "carriedFrom": "2026-11-16T09:00:58.304Z"
+  "outputContextHash": "ec32e81a5576f2325fd1b2bb4078d0299f5682ccbbc0a1a0161d21899d319d3a",
+  "reviewedAt": "2026-11-19T16:30:09.840Z",
+  "reviewer": "Configured independent chapter reviewer"
 }

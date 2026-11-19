@@ -324,6 +324,17 @@
         "Answer within evidence",
         "Proceed, ask for clarification or reject"
       ]
+    },
+    {
+      "slug": "incident-and-near-miss-reporting-software",
+      "title": "Incident and near-miss reporting software for Canadian quality and operations teams",
+      "summary": "All checks pass. No previous findings were raised, so none remain unresolved. The three changed paragraphs are accurate and well-scoped: the Ontario guide paragraph correctly attributes the source, restricts its application to Ontario workplaces, and explicitly cautions plants in other provinces and federally regulated sites to confirm their own rules; the structured evaluation paragraph gives sound procedural guidance without introducing unsupported vendor claims and correctly instructs recording the decision owner and unresolved evaluation questions; the closing paragraph accurately disclaims any guarantee that software alone produces safer work or satisfies a standard. All unchanged text was already reviewed and cleared. The three subsections match the plan exactly: The operational problem introduces the guide's purpose and audience; How to use this guide provides the ordered chapter overview; Planning evaluation and implementation covers the evaluation and implementation lifecycle. No workflow decisions, roles, records or exceptions are misattributed or omitted. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited with appropriate jurisdictional caveats. Both source URLs are used correctly and no unrecognised URLs appear. No FAQ section is present, consistent with the plan assigning none to any subsection of this introduction chapter. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 1512 is within acceptable range of the 1500-word target.",
+      "bodyHash": "068495ffc3e7de2417129430448c4c2f791459468f287c354ead5119732e6e80",
+      "decisions": [
+        "Decide the configuration before the switch",
+        "Decide the scope of existing log import",
+        "Decide what to improve next and what to ask the vendor to change"
+      ]
     }
   ],
   "researchHash": "787552eb0e3e1cfe85cdfe24d931bb36d1c07e11f1c769c73a00896fc2258901"
