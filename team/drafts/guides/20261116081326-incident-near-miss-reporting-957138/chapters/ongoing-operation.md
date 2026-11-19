@@ -75,7 +75,7 @@ Migrate what serves a purpose: open actions, recent history that supports patter
 
 ### How should incidents link to corrective actions?
 
-The ICC page says incidents that need corrective action are carried into the Improvements module, and that the auditor view shows the linked actions. A plant should decide which reports need action, give each action an owner and a date, keep the link to the incident and check effectiveness before closing. Where an action responds to a committee recommendation or an audit finding, link those records as well, so the response can be traced from any starting point.
+The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) says incidents that need corrective action are carried into the Improvements module, and that the auditor view shows the linked actions. A plant should decide which reports need action, give each action an owner and a date, keep the link to the incident and check effectiveness before closing. Where an action responds to a committee recommendation or an audit finding, link those records as well, so the response can be traced from any starting point.
 
 ### What evidence should be ready for an auditor?
 
@@ -87,7 +87,7 @@ A committee may use the log to review patterns and open actions; whether the das
 
 ### Does software guarantee ISO 45001 compliance?
 
-No. The ICC page maps its safety module to ISO 45001:2018 clauses 10.2, 5.4 and 6.1.2, but a mapping points to possible evidence and does not guarantee that a clause is met. The plant remains responsible for its processes, its records and its own interpretation of the standard. Keep any statements about compliance modest and tie each to a record the plant can show, and have a qualified person confirm clause details against the standard itself.
+No. The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4 and 6.1.2, but a mapping points to possible evidence and does not guarantee that a clause is met. The plant remains responsible for its processes, its records and its own interpretation of the standard. Keep any statements about compliance modest and tie each to a record the plant can show, and have a qualified person confirm clause details against the standard itself.
 
 ### What should be prepared for a software demonstration?
 
