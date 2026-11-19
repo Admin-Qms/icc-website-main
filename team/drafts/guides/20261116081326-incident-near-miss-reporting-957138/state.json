@@ -97,7 +97,7 @@
       "wordCount": 2078,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-16T08:57:26.794Z"
+      "checkpointedAt": "2026-11-19T15:46:05.375Z"
     },
     "incident-and-near-miss-reporting-software": {
       "hash": "71465c8d68095e26ad3c8fdd140fe5a914e684ead8a0e12892bd300f05fd0f59",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-19T15:46:01.031Z",
+  "updatedAt": "2026-11-19T15:46:05.389Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -1324,7 +1324,7 @@
     "reviewedChapters": [],
     "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf"
   },
-  "contextHash": "04c92cbd128243339c7b7eb20326319c8e3efcac3c009b1ba03b0c9548a0c995",
+  "contextHash": "77a01c1c3d17c8782610e8fab5b0c30638c809e6b8e7f68f2dbd91be6712f643",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2918,6 +2918,265 @@
       "reviewer": "Configured independent chapter reviewer",
       "carried": true,
       "carriedFrom": "2026-11-16T08:53:28.250Z"
+    },
+    "ongoing-operation": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "The previous findings are resolved, and no clear problems were identified in the changed paragraphs. The assigned FAQ is substantive and avoids compliance guarantees.",
+      "glossary": [
+        {
+          "term": "Exception log",
+          "definition": "A log of consequential failures in the reporting process."
+        },
+        {
+          "term": "Baseline",
+          "definition": "An initial set of results used as the starting point for later comparisons."
+        }
+      ],
+      "roles": [
+        "Safety lead",
+        "Reviewer",
+        "Operations manager",
+        "Safety committee",
+        "Qualified adviser",
+        "Evaluation lead",
+        "Floor reporter",
+        "Investigator",
+        "Action owner",
+        "Committee member",
+        "Vendor",
+        "Decision owner"
+      ],
+      "recordNames": [
+        "Sampled reports",
+        "Exception log",
+        "Review findings",
+        "Review summary",
+        "Baseline results",
+        "Approved answers",
+        "Demonstration results",
+        "Open-questions list",
+        "Acceptance criteria",
+        "Demonstration comments",
+        "Gap list",
+        "Severity scale",
+        "Routing table",
+        "Access rules",
+        "Incident and near-miss log",
+        "Linked actions",
+        "Source files"
+      ],
+      "decisions": [
+        "Which workflow improvements to prioritize",
+        "How to address evidence too incomplete to assess",
+        "How to answer questions within verified evidence and when to seek advice",
+        "Whether to accept anonymous reporting",
+        "Which historical logs to migrate",
+        "What demonstration criteria are mandatory",
+        "Whether to proceed, seek clarification or reject after the demonstration"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Review the workflow and evidence",
+            "section": "Review the workflow and evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Review the workflow and evidence; semantic review verifies support",
+            "section": "Review the workflow and evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Answer common questions without overclaiming",
+            "section": "Answer common questions without overclaiming"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Answer common questions without overclaiming; semantic review verifies support",
+            "section": "Answer common questions without overclaiming"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Prepare a focused ICC demonstration",
+            "section": "Prepare a focused ICC demonstration"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Prepare a focused ICC demonstration; semantic review verifies support",
+            "section": "Prepare a focused ICC demonstration"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What problem should incident and near-miss reporting software solve first?",
+            "section": "What problem should incident and near-miss reporting software solve first?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What is the difference between an incident and a near-miss?",
+            "section": "What is the difference between an incident and a near-miss?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should severity be rated?",
+            "section": "How should severity be rated?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Should anonymous reporting be allowed?",
+            "section": "Should anonymous reporting be allowed?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Which old logs should be migrated?",
+            "section": "Which old logs should be migrated?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should incidents link to corrective actions?",
+            "section": "How should incidents link to corrective actions?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What evidence should be ready for an auditor?",
+            "section": "What evidence should be ready for an auditor?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How do safety committees use the log?",
+            "section": "How do safety committees use the log?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Does software guarantee ISO 45001 compliance?",
+            "section": "Does software guarantee ISO 45001 compliance?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What should be prepared for a software demonstration?",
+            "section": "What should be prepared for a software demonstration?"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "e74e9984a41e21583be0e49104d0469360ed844b7db065af8097ad60f7d74962",
+      "contentHash": "846a4fe2b24a9434af3b9f622c3a2e1c5bff775b5ae0103160f26b2cb74d8ffd",
+      "paragraphHashes": [
+        "2bc931bc3c3b35b7daa7d442f6f176389d11af5145d5a5aab237cf206fe58b5d",
+        "b4a74cd3fe9bedcc8b1c2654a82f78948f6a7d0e6ccaeee354eac6441c416a96",
+        "468f24792639d90d04794d9a7016b4f705f42947dd04a21fbc760033d0141624",
+        "dd687906162481c3de2bb723f2e6ff03be2ca5a62cfc52594ec847261c30c1e6",
+        "421d172b4b80408cab39f9b514b8a39742b7b0af46cdb24be0213a1566aa3c84",
+        "b28e43c4b60f60300b9bc8d1754c52643c6ac2b54d2e0b11703fcae003fc863f",
+        "cf1cd02a77066c904c538afc91a9443a3772e83b54f0809225f88bef7815dbdd",
+        "acf2ab65313dc6995025b14c510d3e922410368614cedd196078dee5bd3bbe10",
+        "7d47055446dc9d0b0f36e064c3290801d37922735f526b4ca7c12bef62a25839",
+        "45645ce2166c38ddada0d0d73a9e83cf7bfac7cc6bfc76052147fff90d4ced7b",
+        "902cb4171665e2efacaa54cd9d3897df75d8fe1e5da4e3102bb1311e86623211",
+        "6471d92aea7a49d01876fe2a52a463cfc1b2d86416000dc04150c2fb59616c7e",
+        "835b1dc517c9a5d5236167fbbfbd5904028df308b573558373d45075da3c83ff",
+        "e4988391cb532b329513f457d0a7d40d30f8deaaa2636667869d12458ab12a11",
+        "44086d3fac4ffaf24dc9b381ff84fd4b75a7d1a4c9b8d28e3aede977dded5d90",
+        "787270d0260246244e8461b36c58381fb1a17dbbaa30190c12274ad1c999a599",
+        "f245d31b9c57a33f202df619555fe2da4063fe2b3cdf4e21629149ee1fe976a6",
+        "865b03ce887c6bd9b244cfafa7d56f626f63e292433f558b50c113ee331a6967",
+        "2df6d38821c07c42e5cb9c84025534a1d20a371601475e857342792821839cd6",
+        "e857c501212e102267ca03cd170c24f0193301577ad2ab7c6419ab770bdbf8e0",
+        "9785ab9dcd44a589710371c673c659ca16440b670af7246d0873dfbb747852fd",
+        "07cb5e5b4c36f87d2fabcace08e757476ee5ef82d2bf3a69217f0ff6535c615a",
+        "64f9a9e16eac3de29d9506cba2e3e5c88fc6d605a44916ce25439f59eac8f864",
+        "19bb24163cf2b14fc85189f9c2a6ac8f326f4b5271c5439972fbf37066da1657",
+        "0e7b2eece90f332c9800b8e33e57c6c209a1ea70c2251eee7f7325286d7289ce",
+        "4d82f2db91e9d9eef35e6f6b7404fbfb52b711fd66b0aa51786c62a14fb616a1",
+        "c4f0ad1df76a0b2654123caa2b6862ccfe70f56e6728e1261ebe734e9ef2018f",
+        "b9e7df9810ecdd0b3a3717f2388571d4d7931a16710c25e170d4ee2e7abcc4c8",
+        "f5c0e4bb4acbded9c480f5ef610b8e713785d7eb0ccc3d75922780225ee566da",
+        "9f65589112295789fcc785c104743a648913046cbe10158b9e7e1ed3c0ac7810",
+        "5df8f7f16c2e02e31a2969925c830c2ee94a635366c2c607325b31daba344fc7",
+        "50d46ed984700cc313effc5decd1b88f77949d10618e6934d3d44528a96b0b72",
+        "bd3a3593cc22147298aa13e1113c82a7c8065dfaeb1240d028caac656ee3461b",
+        "590879c71c574f5f9ee901ce976f0f2a6d088061b87f8f05404cbf208c942b40",
+        "ac43e547805a25abcabae23250e3e118d94cd32d666214991c6e40d3b3e789f6",
+        "81acac4af18a74c5cefdd2ec6da9bcb199047ee12a40829fbf4b57317d188188",
+        "a855efeb9bc9ac4578a03c070c17e524530cda55373972888f88dc74b97d66be",
+        "e7613d56ba54be057c3c9eeab1351e573fe8870b6020e14806aed4fafd31797a",
+        "b0fc9f21a51be20d2b2916d32360fbc4ad1ae7cf6c06b7d6d87240ac6c9eca04",
+        "6182e0a01e78d19265fb55ca8854e596b304434eba034cc858d325f259e71f56",
+        "990299fdd191616968cad09ed8baa25c4a3ed20b67ad6c48322f90e261eaf941",
+        "1cba9c19e06442873fa0277228876d2c2f449598d21f7bb9ab7f701a5bfd7ee9",
+        "7000843fa9c3e3cdafe07d23b2bc7253b88aafb8513827613cfc1d3cd04e3784",
+        "8a34c9e07746b9d50618e968a17f2f13530851cf582af735f8a8971f94ff5ed4"
+      ],
+      "outputContextHash": "77a01c1c3d17c8782610e8fab5b0c30638c809e6b8e7f68f2dbd91be6712f643",
+      "reviewedAt": "2026-11-19T15:46:05.386Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-16T08:57:22.625Z"
     }
   },
   "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf",
