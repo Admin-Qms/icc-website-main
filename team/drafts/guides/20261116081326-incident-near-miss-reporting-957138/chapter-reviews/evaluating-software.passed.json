@@ -6,42 +6,38 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections are present and match the plan's titles, key points, workflow elements, evaluation criteria, and examples. Every factual claim about the ICC Safety page is supported by the supplied research and is framed as a published description to be confirmed in a demonstration. The Ontario JHSC guide is cited correctly and with appropriate scope qualification. Workflow roles, inputs, decisions, records, and exceptions are assigned as planned. The illustrative example in 'Test the decision points' is labeled correctly and uses an unnamed hypothetical manufacturer. No FAQ section appears, which is correct because the plan assigns none. No scope boundary is crossed into form configuration, severity rule definition, or current-state mapping. Terminology is consistent with the context glossary. No repetition is present. Both supplied URLs match the research source list and support the sentences that cite them. No previous findings were raised and no changed paragraph introduces a new problem.",
+  "summary": "All changed paragraphs are accurate and well-scoped. ICC Safety page claims are correctly framed as published descriptions requiring demonstration confirmation. The Ontario guide link is cited appropriately as one example of provincial material. Setup steps are described without overstating sequence or guarantee. No previous findings were raised and none remain unresolved. No FAQ section appears, which is correct as the plan assigns none. Workflow elements, illustrative examples, roles, records, and decisions align with the plan. No scope boundary violations, repetition issues, or readability problems were detected.",
   "glossary": [
     {
-      "term": "Comparison sheet",
-      "definition": "A single grid with one row per evaluation criterion and one column per vendor, where each cell records whether a feature was described on a published page, demonstrated with sample reports, or promised in writing."
+      "term": "Permission matrix",
+      "definition": "A record showing which roles may file, read, rate, investigate, or close a report, used to evaluate whether access can be limited by role and reviewed."
     },
     {
-      "term": "Permission matrix",
-      "definition": "A record of which roles can file, read, rate, investigate, or close a report, and whether those rights differ by site or department."
+      "term": "Written comparison",
+      "definition": "A structured document recording vendor answers on setup effort, cost, and support responsibilities, used as the evaluation record for the final subsection."
     }
   ],
   "roles": [
     "Evaluation lead",
     "Safety coordinator",
-    "Floor supervisor",
     "IT and safety lead",
-    "Decision owner",
-    "Investigator",
+    "Floor supervisor",
     "Floor reporter",
-    "Administrator"
+    "Investigator",
+    "Administrator",
+    "Decision owner"
   ],
   "recordNames": [
     "Shortlist with reasons",
     "Scored demonstration sheet",
-    "Comparison sheet",
-    "Written comparison",
     "Permission matrix",
-    "Written recommendation"
+    "Written comparison"
   ],
   "decisions": [
-    "Decide how many vendors the team can examine properly",
-    "Decide which vendors can demonstrate the full end-to-end path",
-    "Decide whether each decision in the demonstration is captured and attributable",
-    "Decide access rules by role and site",
-    "Decide whether setup effort and support fit the plant's needs",
-    "Decide which open questions must be resolved before a recommendation is made"
+    "Decide which vendors can demonstrate the full path",
+    "Decide whether each decision is captured and attributable",
+    "Decide access rules",
+    "Decide whether setup effort and support fit"
   ],
   "pass": true,
   "deterministic": {
@@ -139,13 +135,13 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "1d1dfdad554a7310c12135759d404e4654b61051f29da91493d00ae5ce1f443d",
-  "contentHash": "38ab636a37963dabfe8ad3feb54af7a05ca63cd75cda28993b7746b30cb84009",
+  "inputHash": "70bb105e4aa6efec4ad45c2866e5b9e3aa2e1effaa12558f2db971897b7bdca3",
+  "contentHash": "b7b399f201e1b8989cc33f37e7772e7a4c1f4584614529b10285176f98cb0c4b",
   "paragraphHashes": [
     "34a2c737b52c6404cb6f0e763283301e4ff93d9d3750e57fc9a6711454a4c8ad",
     "3d19801fc23251d2166a3e8e48e2a34f833fb1ce0d16681141f1c8dd32bf3659",
-    "f86571f6833ea103806cff1e29cf1c7ac11d05efa6827d74cb06f919d96f1d9b",
-    "60f738f932920715b8618f2629f95cc03ef6154d0145b63afc14bd7f20e38fc4",
+    "36600a2852884872ae75418a2a8c70c9ce4de52563899dbc92c260480fb1b42e",
+    "3b51f71c3fad3f580d669592152438ecc8fce2c1e3fc956898066c9af2d90490",
     "614722a56c7ebc3dc18a2c6e4bfa6847d26594aba6c3262c9f2e336b468a3860",
     "066fcd8da2c0ef076af77f17e9538d3133ae3aebdb405b46a89d808e68cb72d2",
     "e00281d308c472a63cdfc3934f2c748687a84cff4cb43e6ba678bee105901bb5",
@@ -175,15 +171,15 @@
     "aabc475f3cc0bd6dbc065ea968ff1de2c71b029b298c8f217ff85cd276900460",
     "a450c0865465a4fc9f7623346266aac75d50bd093b3fce9a059cc212bfee3bb0",
     "e78e33c1f48b9f02a007628534ea7a3328f82053e0e6e5e03d321d3fdb116af7",
-    "449af9d576c79512490a48bb2fb04a1b580db64cd2ee5bf401925c5dbaff027b",
+    "e0c54ffdd9b79c8d746cb24a56d48af28c10ca2132e374cb060f0022b379d8a9",
     "ba1586da929d161ec82f475afb9de670884661047cd24831dab6a6259b857a9a",
     "11f80ba2c14d4dd1b471d0901408ce73ccf830c92d2f4debd5e12784b0dfb30c",
-    "e5695f05dfa1db326fddc33b7c68b0cda42ca430781f076ffa2db06151ac6995",
-    "a4823796d75e2f287a7ff5dc913e8adac6085fcb2dbcabb13c6db2eb9acbafc2",
+    "04f10b21f9e39bed1dfa14ea94ce5a072418ba70d1444be96556dbdfc5f4d62c",
+    "67999bb4362a6613ecca0ba4885beb9ca7aa74ae7b9af35905c1776fe2180b00",
     "05b200fb03c843e52c5c9e130892a0ca54475884b15542b5b2938b93aa7356ae",
-    "a344a85a63c82d52b6a94a9430534f19d30c6b191dd90fd0110876f82f8637a6"
+    "f3bb9a0ad1361bc9018f365c62ef0fc7cd57f6453ab21f9015c8271696029da4"
   ],
-  "outputContextHash": "b2fb895a18dbf06a2bbd39f34e87e7801d6676d0c56575244e9fbda9373b8e06",
-  "reviewedAt": "2026-11-19T15:56:58.466Z",
+  "outputContextHash": "d5444e73bb11e3cdcd6a00bc451aed27a560b728d5bc7c64259526235c8952f6",
+  "reviewedAt": "2026-11-19T16:11:06.134Z",
   "reviewer": "Configured independent chapter reviewer"
 }

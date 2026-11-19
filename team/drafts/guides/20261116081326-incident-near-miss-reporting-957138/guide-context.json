@@ -33,6 +33,14 @@
     {
       "term": "Dead end",
       "definition": "A step in the reporting process after which no record shows a decision was made, leaving a report unresolved."
+    },
+    {
+      "term": "Permission matrix",
+      "definition": "A record showing which roles may file, read, rate, investigate, or close a report, used to evaluate whether access can be limited by role and reviewed."
+    },
+    {
+      "term": "Written comparison",
+      "definition": "A structured document recording vendor answers on setup effort, cost, and support responsibilities, used as the evaluation record for the final subsection."
     }
   ],
   "roles": [
@@ -50,7 +58,11 @@
     "Maintenance",
     "Production supervisor",
     "Quality team",
-    "Reporter"
+    "Reporter",
+    "IT and safety lead",
+    "Floor supervisor",
+    "Administrator",
+    "Decision owner"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -59,7 +71,11 @@
     "Acceptance criteria list",
     "Log entry",
     "Investigation notes",
-    "Corrective action record"
+    "Corrective action record",
+    "Shortlist with reasons",
+    "Scored demonstration sheet",
+    "Permission matrix",
+    "Written comparison"
   ],
   "example": {
     "label": "Illustrative example",
@@ -81,6 +97,18 @@
         "Assign a named owner and a backup to each decision",
         "Decide which steps the software must support first",
         "Decide who attends each demonstration"
+      ]
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluate incident and near-miss reporting software",
+      "summary": "All changed paragraphs are accurate and well-scoped. ICC Safety page claims are correctly framed as published descriptions requiring demonstration confirmation. The Ontario guide link is cited appropriately as one example of provincial material. Setup steps are described without overstating sequence or guarantee. No previous findings were raised and none remain unresolved. No FAQ section appears, which is correct as the plan assigns none. Workflow elements, illustrative examples, roles, records, and decisions align with the plan. No scope boundary violations, repetition issues, or readability problems were detected.",
+      "bodyHash": "d0635b8a66313762474b0f06a0aab53e6bd03db5b6e604b1ad1c06a4221d5ca3",
+      "decisions": [
+        "Decide which vendors can demonstrate the full path",
+        "Decide whether each decision is captured and attributable",
+        "Decide access rules",
+        "Decide whether setup effort and support fit"
       ]
     }
   ],
