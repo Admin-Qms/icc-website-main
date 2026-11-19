@@ -63,7 +63,7 @@ An evaluation works best when it is planned like a small project. Name a lead, s
 
 Begin with the present state. Before any software is considered, trace how reports are actually made and what happens next, using real recent reports. The first chapter describes this in detail. The outcome is a map, a decision table and a set of acceptance criteria that tie the evaluation to the plant's own work.
 
-Then run a structured evaluation. Use the acceptance criteria to shortlist, send the same sample reports to each vendor and score what is shown. Record the open questions that published descriptions do not answer, and ask for written responses. Keep a clear line between what was demonstrated, what was described and what was promised for later.
+Then run a structured evaluation. Use the acceptance criteria to shortlist, send the same sample reports to each vendor and score what is shown. Record the open questions that published descriptions do not answer, and ask for written responses. Keep a clear line between what was demonstrated, what was described and what was promised for later. Record the decision owner and the unresolved evaluation questions so the team can follow up with each vendor before choosing a system.
 
 Decide the configuration before the switch. Reporting fields, severity levels, routing, permissions and the way anonymous reports are handled are design choices, and the plant should make them deliberately and write them down. The chapters on intake, severity and visibility set out the decisions and the records they should produce.
 
