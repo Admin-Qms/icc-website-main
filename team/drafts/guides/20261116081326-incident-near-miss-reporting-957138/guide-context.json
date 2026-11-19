@@ -77,6 +77,14 @@
     {
       "term": "Verification",
       "definition": "A check of whether a completed action worked."
+    },
+    {
+      "term": "Access rule",
+      "definition": "A record of what each group may see."
+    },
+    {
+      "term": "Recommendation",
+      "definition": "A proposal for a change."
     }
   ],
   "roles": [
@@ -115,7 +123,11 @@
     "Maintenance lead",
     "Backup",
     "Checker",
-    "Leadership team"
+    "Leadership team",
+    "Health and safety representative",
+    "Quality manager",
+    "Committee chair",
+    "Worker committee member"
   ],
   "recordNames": [
     "Incident log",
@@ -172,7 +184,15 @@
     "Closure checklist",
     "Cross-reference",
     "Effectiveness check",
-    "Written recommendation"
+    "Written recommendation",
+    "Access rule",
+    "Anonymity policy",
+    "Committee pack",
+    "Inspection notes",
+    "Meeting record",
+    "Written response",
+    "Recommendation register",
+    "Feedback entry"
   ],
   "example": {
     "label": "Illustrative example",
@@ -271,6 +291,21 @@
         "Whether an incident can close with an action open",
         "How and when to check an action's effectiveness",
         "Whether an action was effective or needs reopening"
+      ]
+    },
+    {
+      "slug": "committee-visibility",
+      "title": "Give committees and workers visibility into incident data",
+      "summary": "Both previous findings are resolved. The changed paragraphs present no clear new problems. No FAQ is assigned or included.",
+      "bodyHash": "0edc3cd98365b8a6d82bf3a522673d9102e488e253df89fad805c78305f7113a",
+      "decisions": [
+        "What each group may see on the dashboard",
+        "Whether the committee sees anonymous reports in full, in summary, or as counts",
+        "Which patterns to raise with the plant",
+        "How often to review the log",
+        "Whether to accept a committee recommendation, accept it in part, or explain why not",
+        "How to track recommendations if the product does not cover them",
+        "What feedback to share with reporters within privacy rules"
       ]
     }
   ],
