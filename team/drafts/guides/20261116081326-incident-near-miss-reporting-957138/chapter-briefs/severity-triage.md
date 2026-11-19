@@ -150,7 +150,7 @@ Avoid legal reporting thresholds; they depend on jurisdiction.
         "The page states every AI output is a suggestion that a person reviews before it enters a controlled record.",
         "The page describes the problem as near-misses going unreported because reporting needs a form and a supervisor, investigations starting from a blank page, and committees not seeing patterns early.",
         "The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions.",
-        "ROOT-BROWSER-VERIFIED on 2026-11-19: the owner directly viewed the primary ICC Safety page in Chrome. It describes severity by harm, an anonymous QR no-login form, separate dashboard and permissions, corrective-action handoff, and numbered configuration sections 01–04 for mapping, configuring modules including fields, checklists, terminology and routing, onboarding standards, and deployment and training. These are vendor descriptions, not a verified plant condition or guaranteed implementation workflow. Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed."
+        "ROOT-BROWSER-VERIFIED on 2026-11-19: Codex root directly read the primary ICC Safety page in Chrome. It describes severity by harm, an anonymous QR no-login form, separate dashboard and permissions, corrective-action handoff, and numbered configuration sections 01–04 for mapping, configuring modules including fields, checklists, terminology and routing, onboarding standards, and deployment and training. These are vendor descriptions, not a verified plant condition or guaranteed implementation workflow. Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed."
       ]
     },
     {
@@ -161,7 +161,7 @@ Avoid legal reporting thresholds; they depend on jurisdiction.
       "url": "https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
       "retrievedAt": "2026-11-19",
       "supportedClaims": [
-        "ROOT-BROWSER-VERIFIED: The owner directly viewed this primary Ontario government page in Chrome on 2026-11-19. The displayed title is Guide for health and safety committees and representatives and the page showed Updated August 17, 2026. Automated HTTP retrieval remains blocked with 403; no successful automated fetch is claimed.",
+        "ROOT-BROWSER-VERIFIED: Codex root directly read this primary Ontario government page in Chrome on 2026-11-19. The displayed title is Guide for health and safety committees and representatives and the page showed Updated August 17, 2026. Automated HTTP retrieval remains blocked with 403; no successful automated fetch is claimed.",
         "Ontario thresholds generally use regularly employed workers. Workplaces with 6–19 generally select a representative where no joint health and safety committee is required. Designated-substance rules and director or minister orders can require committees below 20; construction and farming have specific provisions.",
         "At least half of committee members are workers who do not exercise managerial functions.",
         "Joint health and safety committees meet at least every three months. Worker workplace inspections are monthly, subject to the stated inspector, regulatory and impracticability exceptions.",
@@ -172,7 +172,7 @@ Avoid legal reporting thresholds; they depend on jurisdiction.
   ],
   "capabilityIds": [],
   "capabilities": [],
-  "researchSnapshotHash": "bce7188b3e3100368abcd2d151dc949607d7ddf8b06d72e9561efb7950ef2bed",
+  "researchSnapshotHash": "89eb84cf02240a1fc5228bd60012fe6e02d85a375ba852db33376640e662bc1b",
   "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 }
 
