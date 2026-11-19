@@ -11,6 +11,22 @@ function fixture(t, body = 'The current edition is ISO 9001:2026.') {
   t.after(() => fs.rmSync(cacheDir, { recursive: true, force: true }));
   return { post: { slug: 'review-fixture', title: 'Risk decisions', description: 'Manufacturing risk decisions.', body }, cacheDir };
 }
+
+test('malformed fixture slugs cannot read or overwrite files outside the claims cache', async t => {
+  const { post, cacheDir } = fixture(t);
+  const cache = path.join(cacheDir, 'cache'); fs.mkdirSync(cache);
+  const protectedFile = path.join(cacheDir, 'protected.json');
+  fs.writeFileSync(protectedFile, '{"protected":true}');
+  for (const slug of ['../protected', 'nested/../../protected', '/absolute', '..\\protected', 123, '']) {
+    let calls = 0;
+    await assert.rejects(qa.auditClaims({ ...post, slug }, {
+      cacheDir: cache, call: async () => { calls++; return { findings: [] }; },
+    }), /slug/i);
+    assert.equal(calls, 0, 'invalid metadata is refused before spending review calls');
+    assert.equal(fs.readFileSync(protectedFile, 'utf8'), '{"protected":true}');
+    assert.deepEqual(fs.readdirSync(cache), []);
+  }
+});
 const disputed = { rule: 'STANDARD ACCURACY', text: 'The current edition is ISO 9001:2026.', reason: 'The sentence is correct and aligns with the supplied facts table.' };
 
 // These catch accepting a contradictory screen without adjudication, silently

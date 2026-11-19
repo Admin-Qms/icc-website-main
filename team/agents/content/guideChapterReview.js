@@ -1,4 +1,5 @@
 const fs = require('node:fs'); const path = require('node:path'); const matter = require('gray-matter');
+const { createHash, randomUUID } = require('node:crypto');
 const { readInside } = require('../../../lib/guide-files.cjs');
 const { hashValue, countGuideWords, parseGuidePage } = require('../../../lib/guide-contract.cjs');
 const { prepareResearchSnapshot, allowedSourceUrls } = require('./guideResearch');
@@ -6,6 +7,19 @@ const editorial = require('./guideEditorial');
 const REVIEW_FIELDS = ['claims', 'scope', 'readability', 'links', 'repetition', 'faq', 'findings', 'summary', 'glossary', 'roles', 'recordNames', 'decisions'];
 const FOCUSED_REVIEW = ' When previousReview is present the page was reviewed before: text outside previousReview.changedParagraphs was already checked, and only previousReview.findings were raised against it. Fail only for an earlier finding that is still unresolved, or a clear problem inside a changed paragraph; do not raise new points about unchanged text.';
 function createChapterReview({ store, readCapabilities, reviewer, editModel }) {
+  function rejectEdit(job, slug, stage, input, candidate, reason) {
+    if (typeof candidate !== 'string') throw new Error(reason);
+    const attempts = path.join(job.directory, 'attempts');
+    fs.mkdirSync(attempts, { recursive: true });
+    if (!fs.lstatSync(attempts).isDirectory()) throw new Error('Unsafe guide attempts directory');
+    const relative = path.posix.join('attempts', `${slug}-${stage}-rejected-${randomUUID()}`);
+    const directory = path.join(job.directory, relative);
+    fs.mkdirSync(directory);
+    store.atomic(path.join(directory, 'input.md'), input);
+    store.atomic(path.join(directory, 'candidate.md'), candidate);
+    const digest = text => createHash('sha256').update(text).digest('hex');
+    throw new Error(`${reason}. Rejected ${stage} edit: ${relative}/candidate.md (input SHA-256 ${digest(input)}, candidate SHA-256 ${digest(candidate)})`);
+  }
   function getGuideContext(id, slug, { complete = false } = {}) {
     const job = store.loadJob(id);
     if (!job.pagePlans || !job.initialContext) throw new Error('Recheckpoint research to create enriched chapter briefs/context');
@@ -43,10 +57,26 @@ function createChapterReview({ store, readCapabilities, reviewer, editModel }) {
     const carried = lastPass?.contentHash === editorial.pageContentHash(page, plan, research) ? lastPass : null;
     if (!carried) {
       const cleaned = await require('./contentCleaner').clean(page, { guide: true, ...(editModel ? { call: editModel } : {}) });
-      if (!cleaned.cleaned || !editorial.preserveCopyEdit(page.body, cleaned.body).pass) throw new Error('Guide cleaner changed citations or numbers; original page preserved');
-      const grammar = await require('./grammarAgent').checkGrammar({ ...page, body: cleaned.body }, { guide: true, ...(editModel ? { call: editModel } : {}) });
-      if (grammar.reviewStatus !== 'passed' || grammar.overallGrade !== 'pass') throw new Error(`Required guide grammar review failed: ${grammar.notes}`);
-      if (!editorial.preserveCopyEdit(page.body, grammar.correctedContent).pass) throw new Error('Copy-edit preservation failed');
+      if (!cleaned.cleaned || !editorial.preserveCopyEdit(page.body, cleaned.body).pass) {
+        rejectEdit(job, slug, 'cleaner', page.body, cleaned.body, 'Guide cleaner changed citations or numbers; original page preserved');
+      }
+      // The grammar agent returns its input on rollback. Retain the actual model
+      // reply for this review so a refusal can be diagnosed without another call.
+      const grammarModel = editModel || require('../shared/claude').claudeCallFast;
+      let grammarReply;
+      const grammar = await require('./grammarAgent').checkGrammar({ ...page, body: cleaned.body }, {
+        guide: true,
+        call: async (...args) => {
+          grammarReply = await grammarModel(...args);
+          return grammarReply;
+        },
+      });
+      if (grammar.reviewStatus !== 'passed' || grammar.overallGrade !== 'pass') {
+        rejectEdit(job, slug, 'grammar', cleaned.body, grammarReply, `Required guide grammar review failed: ${grammar.notes}`);
+      }
+      if (!editorial.preserveCopyEdit(page.body, grammar.correctedContent).pass) {
+        rejectEdit(job, slug, 'grammar', page.body, grammar.correctedContent, 'Copy-edit preservation failed');
+      }
       // A copy edit that moves the page outside its word range is dropped; the writer's in-range text is reviewed as written.
       const edited = inBudget(grammar.correctedContent) ? grammar.correctedContent : page.body;
       if (edited !== page.body) {

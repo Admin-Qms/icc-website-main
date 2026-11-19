@@ -48,3 +48,52 @@ test('an earlier unrelated content or code commit cannot ride along with the all
     });
   }
 });
+function assertRefusedWithoutMutation(root, scope) {
+  const head = git(root, 'rev-parse', 'HEAD'); const index = git(root, 'write-tree');
+  const status = git(root, 'status', '--porcelain=v1');
+  const result = scope('check', ...allowed);
+  assert.notEqual(result.status, 0, result.stdout + result.stderr);
+  assert.match(result.stdout + result.stderr, /outside|allow|scope|history|ancestor/i);
+  assert.equal(git(root, 'rev-parse', 'HEAD'), head);
+  assert.equal(git(root, 'write-tree'), index);
+  assert.equal(git(root, 'status', '--porcelain=v1'), status);
+}
+test('reverting an unrelated commit does not authorize its publication history', t => {
+  const { root, scope } = setup(t);
+  write(root, 'app/page.js', 'unrelated change'); git(root, 'add', 'app/page.js'); git(root, 'commit', '-qm', 'unrelated work');
+  git(root, 'revert', '--no-edit', 'HEAD');
+  write(root, allowed[0], '# Own post'); git(root, 'add', allowed[0]); git(root, 'commit', '-qm', 'own content');
+  assertRefusedWithoutMutation(root, scope);
+});
+test('renaming an unrelated source into an allowed artifact is refused', t => {
+  const { root, scope } = setup(t);
+  fs.mkdirSync(path.join(root, 'content/blog'), { recursive: true });
+  git(root, 'mv', 'app/page.js', allowed[0]); git(root, 'commit', '-qm', 'move source to publication');
+  assertRefusedWithoutMutation(root, scope);
+});
+test('merge history is refused even when both branches changed only allowed artifacts', t => {
+  const { root, scope } = setup(t);
+  git(root, 'checkout', '-qb', 'side');
+  write(root, allowed[1] + 'hero.webp'); git(root, 'add', allowed[1]); git(root, 'commit', '-qm', 'own image');
+  git(root, 'checkout', '-q', 'main');
+  write(root, allowed[0], '# Own post'); git(root, 'add', allowed[0]); git(root, 'commit', '-qm', 'own content');
+  git(root, 'merge', '--no-ff', '-qm', 'merge allowed artifacts', 'side');
+  assertRefusedWithoutMutation(root, scope);
+});
+test('history that does not descend from origin main is refused', t => {
+  const { root, scope } = setup(t);
+  const baseline = git(root, 'rev-parse', 'HEAD');
+  write(root, allowed[0], '# Own post'); git(root, 'add', allowed[0]); git(root, 'commit', '-qm', 'remote content');
+  git(root, 'update-ref', 'refs/remotes/origin/main', 'HEAD');
+  git(root, 'checkout', '-q', '--detach', baseline);
+  write(root, allowed[0], '# Different own post'); git(root, 'add', allowed[0]); git(root, 'commit', '-qm', 'local content');
+  assertRefusedWithoutMutation(root, scope);
+});
+test('linear publication history accepts own artifacts and an explicitly allowed queue', t => {
+  const { root, scope } = setup(t);
+  const queue = 'team/memory/keyword-queue.json';
+  write(root, allowed[0], '# Own post'); git(root, 'add', allowed[0]); git(root, 'commit', '-qm', 'own content');
+  write(root, allowed[1] + 'hero.webp'); write(root, queue, '[]');
+  git(root, 'add', allowed[1], queue); git(root, 'commit', '-qm', 'own image and queue');
+  const result = scope('check', ...allowed, queue); assert.equal(result.status, 0, result.stderr);
+});

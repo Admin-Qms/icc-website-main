@@ -895,6 +895,7 @@ const claimParagraphs = (body) => String(body || '').split(/\n\s*\n/).map((p) =>
  */
 async function auditClaims(post, { call, adjudicate, cacheDir = CLAIMS_CACHE_DIR } = {}) {
   const fs = require('fs'); const path = require('path');
+  if (post.slug != null && (typeof post.slug !== 'string' || !checkSlug({ slug: { current: post.slug } }).pass)) throw new Error('Invalid slug for claims audit cache');
   const { loadStandardsFacts } = require('./contextLoader');
   const facts = loadStandardsFacts();
   const result = await (call || require('../shared/claude').claudeJSONFast)(

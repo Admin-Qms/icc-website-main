@@ -1,5 +1,39 @@
 const { test } = require('node:test'); const assert = require('node:assert/strict'); const fs = require('node:fs');
 const { setupReview, passedReview } = require('./helpers/guideReviewFixture');
+const path = require('node:path');
+const { createHash } = require('node:crypto');
+
+for (const stage of ['cleaner', 'grammar']) {
+  test(`a rejected ${stage} edit retains its exact input and reply without changing the checkpoint`, async t => {
+    let input, candidate;
+    const { service, job, writePage } = setupReview(t, {
+      editModel: async (system, message) => {
+        const body = message.split('ARTICLE BODY:\n').at(-1);
+        if (system.startsWith('Clean one') && stage === 'grammar') return body.replace('checks the input', 'checks each input');
+        input = body;
+        candidate = body.replace('documented_information.pdf', 'amended_information.pdf');
+        return candidate;
+      },
+    });
+    const slug = job.manifest.chapters[0].slug;
+    const filename = writePage(slug);
+    const protectedFiles = [filename, ...['state.json', 'guide-context.json'].map(file => path.join(job.directory, file))];
+    const before = protectedFiles.map(file => fs.readFileSync(file));
+    await assert.rejects(service.reviewChapter(job.id, slug), error => {
+      const evidence = error.message.match(/attempts\/[^\s]+\/candidate\.md/);
+      assert.ok(evidence, 'the refusal identifies the saved candidate');
+      const directory = path.dirname(path.join(job.directory, evidence[0]));
+      assert.ok(path.basename(directory).startsWith(`${slug}-${stage}-rejected-`));
+      for (const [file, expected] of [['input.md', input], ['candidate.md', candidate]]) {
+        assert.equal(fs.readFileSync(path.join(directory, file), 'utf8'), expected);
+        assert.ok(error.message.includes(createHash('sha256').update(expected).digest('hex')));
+      }
+      return true;
+    });
+    assert.deepEqual(protectedFiles.map(file => fs.readFileSync(file)), before);
+    assert.ok(!fs.existsSync(path.join(job.directory, 'chapter-reviews', `${slug}.json`)));
+  });
+}
 test('an unreviewed predecessor blocks generation before any writer call', async t => {
   const { service, job } = setupReview(t, { model: async () => { throw new Error('Writer must not run'); } });
   await assert.rejects(() => service.writeGuidePage(job.id, job.manifest.chapters[1].slug), /review|predecessor/i);
