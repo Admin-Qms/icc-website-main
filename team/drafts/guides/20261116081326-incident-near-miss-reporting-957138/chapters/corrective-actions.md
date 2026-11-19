@@ -23,7 +23,7 @@ capabilityIds: []
 
 Not every report calls for a corrective action, and not every action needs the same weight. The decision should be made deliberately, by a named person, and written down. The safety lead usually makes it after the investigation or the first review. The input is the reviewed report or investigation. The decision is whether action is needed and, if so, of what kind. The record is the decision with its reason.
 
-The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/) says that incidents that need corrective action are carried into the Improvements module. The words “that need” imply a decision before the handoff, so ask the vendor to show what that decision looks like. Who marks a report as needing action? What information moves across to the Improvements module? Does the original report stay visible from the action, and does the action stay visible from the report? Test one report needing action and one that does not. Ask who initiates the transfer, whether it is automatic, what moves, and how both records remain linked; record what the vendor shows and any manual step. The page does not establish those mechanics.
+The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/) says that incidents that need corrective action are carried into the Improvements module. The words "that need" imply a decision before the handoff, so ask the vendor to show what that decision looks like. Who marks a report as needing action? What information moves across to the Improvements module? Does the original report stay visible from the action, and does the action stay visible from the report? Test one report needing action and one that does not. Ask who initiates the transfer, whether it is automatic, what moves, and how both records remain linked; record what the vendor shows and any manual step. The page does not establish those mechanics.
 
 Write criteria that guide the decision. Useful questions include the following:
 
@@ -37,7 +37,7 @@ The plant can weigh these as it sees fit. A low-rated report may still need acti
 
 Distinguish a correction from a corrective action. A correction deals with the immediate problem, such as putting the guard back or cleaning up a spill. A corrective action deals with the cause, so the problem does not return, such as changing how guards are checked at shift start. Both may be needed, and they may have different owners and dates. Recording them separately makes it easier to see whether the cause was addressed or only the symptom.
 
-The exception to plan for is a report where no action is needed but a concern remains, for instance, a worry that cannot be tied to evidence. Record the decision not to act, give the reason and state when the plant will look again, so the concern is not simply forgotten. Review a sample of “no action” decisions from time to time to make sure the reasons are sound.
+The exception to plan for is a report where no action is needed but a concern remains, for instance, a worry that cannot be tied to evidence. Record the decision not to act, give the reason and state when the plant will look again, so the concern is not simply forgotten. Review a sample of "no action" decisions from time to time to make sure the reasons are sound.
 
 Involve the area supervisor in the decision where possible. The supervisor knows whether the condition is isolated or typical, and whether a fix is practical. Record who was consulted, because a later reader may want to understand why one option was chosen over another.
 
@@ -47,7 +47,7 @@ Involve the area supervisor in the decision where possible. The supervisor knows
 
 An action without an owner and a date is a wish. The owner is the person who will make the change or see that it is made. The input is the action description. The decision is whether the owner accepts the action and the date. The record is the action entry. The exception to plan for is an owner who lacks the authority or budget to do what is needed.
 
-Write each action so a stranger could tell when it is complete. “Improve guarding” is vague, and “fit interlocked guards to the two press stations and add them to the shift-start check” is clear. Where a team member cannot tell what finished looks like, ask for a rewrite before accepting.
+Write each action so a stranger could tell when it is complete. "Improve guarding" is vague, and "fit interlocked guards to the two press stations and add them to the shift-start check" is clear. Where a team member cannot tell what finished looks like, ask for a rewrite before accepting.
 
 Choose the owner by authority, not by convenience. The owner of an action to change a procedure should be someone who can change it, and the owner of an equipment change should be someone who controls the equipment. Where the right owner is above the safety function, the safety lead should present the action and ask for acceptance, and record the answer. If the owner declines or cannot act, escalate to a named person rather than letting the action wait.
 
@@ -87,7 +87,7 @@ Completing an action is not the same as solving the problem. Verification asks w
 
 Decide in advance how effectiveness will be judged. For a guard fitted to a machine, the check might be an inspection that the guard is in place and used, together with a review of reports from that station over a defined period. For a change to a procedure, it might be observation of the task and a conversation with the people who do it. Write the method into the action so that the checker knows what to look for.
 
-Set the timing for the check. Too soon, and the change has not yet been tested by normal work; too late, and a problem may continue unnoticed. Choose a period that fits the nature of the change and the frequency of the work, and record it. 
+Set the timing for the check. Too soon, and the change has not yet been tested by normal work; too late, and a problem may continue unnoticed. Choose a period that fits the nature of the change and the frequency of the work, and record it.
 
 Use the log. If the plant can search its incident record by location, equipment or category, the checker can look for new reports similar to the original. Ask the vendor how search and filtering work, and whether results can be saved or shared for a review meeting. The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) describes a log with severity and status, but the research reviewed does not describe search features, so test it with real examples.
 
@@ -97,6 +97,6 @@ The check should assess both whether the hazard is controlled and whether simila
 
 Handle a failed check without blame. If the problem has returned, reopen the action or raise a new one, and record why the first change was not enough. The cause may have been misjudged, the change not followed, or conditions changed.
 
-Keep verification honest. An effectiveness check that is always “effective” is probably not testing anything. Have someone other than the action owner perform it where possible, and review a sample of past checks to see whether any later reports contradicted them.
+Keep verification honest. An effectiveness check that is always "effective" is probably not testing anything. Have someone other than the action owner perform it where possible, and review a sample of past checks to see whether any later reports contradicted them.
 
 Report the results to the people who need them. A summary of actions closed and verified, and of those reopened, gives the safety lead and the leadership team a view of whether the system is working. Keep it simple and based on the log, so it can be repeated each period without much effort.
