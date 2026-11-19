@@ -33,6 +33,14 @@
     {
       "term": "Dead end",
       "definition": "A step in a reporting process after which no record shows a decision was made, leaving the report unresolved."
+    },
+    {
+      "term": "Comparison sheet",
+      "definition": "A single grid with one row per evaluation criterion and one column per vendor, where each cell records whether a feature was described on a published page, demonstrated with sample reports, or promised in writing."
+    },
+    {
+      "term": "Permission matrix",
+      "definition": "A record of which roles can file, read, rate, investigate, or close a report, and whether those rights differ by site or department."
     }
   ],
   "roles": [
@@ -52,7 +60,12 @@
     "Production supervisor",
     "Quality team",
     "Joint health and safety committee",
-    "Health and safety representative"
+    "Health and safety representative",
+    "Floor supervisor",
+    "IT and safety lead",
+    "Decision owner",
+    "Floor reporter",
+    "Administrator"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -60,7 +73,13 @@
     "Role and decision table",
     "Acceptance criteria list",
     "Log entry",
-    "Scoring sheet"
+    "Scoring sheet",
+    "Shortlist with reasons",
+    "Scored demonstration sheet",
+    "Comparison sheet",
+    "Written comparison",
+    "Permission matrix",
+    "Written recommendation"
   ],
   "example": {
     "label": "Illustrative example",
@@ -83,6 +102,20 @@
         "Decide which steps the software must support first",
         "Rank acceptance criteria as mandatory or desirable",
         "Decide who attends each demonstration"
+      ]
+    },
+    {
+      "slug": "evaluating-software",
+      "title": "Evaluate incident and near-miss reporting software",
+      "summary": "All four subsections are present and match the plan's titles, key points, workflow elements, evaluation criteria, and examples. Every factual claim about the ICC Safety page is supported by the supplied research and is framed as a published description to be confirmed in a demonstration. The Ontario JHSC guide is cited correctly and with appropriate scope qualification. Workflow roles, inputs, decisions, records, and exceptions are assigned as planned. The illustrative example in 'Test the decision points' is labeled correctly and uses an unnamed hypothetical manufacturer. No FAQ section appears, which is correct because the plan assigns none. No scope boundary is crossed into form configuration, severity rule definition, or current-state mapping. Terminology is consistent with the context glossary. No repetition is present. Both supplied URLs match the research source list and support the sentences that cite them. No previous findings were raised and no changed paragraph introduces a new problem.",
+      "bodyHash": "ab9e6b16822694946e0f17eab4d6750501d366aa64f3aab08d50182da6671a6c",
+      "decisions": [
+        "Decide how many vendors the team can examine properly",
+        "Decide which vendors can demonstrate the full end-to-end path",
+        "Decide whether each decision in the demonstration is captured and attributable",
+        "Decide access rules by role and site",
+        "Decide whether setup effort and support fit the plant's needs",
+        "Decide which open questions must be resolved before a recommendation is made"
       ]
     }
   ],

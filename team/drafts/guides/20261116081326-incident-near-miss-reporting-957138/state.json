@@ -44,11 +44,11 @@
       "checkpointedAt": "2026-11-19T15:55:18.008Z"
     },
     "evaluating-software": {
-      "hash": "19e2f014c6982ecefbb4b9f63d9b2d395ed9a4328c1cfeda22ed6b42045bb795",
+      "hash": "072a757020d0dc7bb7af300c9050a4be3686821a8ef19bb4a657066d33832b8a",
       "wordCount": 2063,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-19T15:54:01.337Z"
+      "checkpointedAt": "2026-11-19T15:56:46.697Z"
     },
     "reporting-intake": {
       "hash": "99761cd798bbc5ba3087684035c4f8a18717c5c4fa7a12bb148fa2d16697de5a",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-19T15:55:33.196Z",
+  "updatedAt": "2026-11-19T15:56:58.469Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -1324,7 +1324,7 @@
     "reviewedChapters": [],
     "researchHash": "fe16881295832a465b3dc9635ef09903309e1128d66369965c313854fcda17bf"
   },
-  "contextHash": "0b911e37588312d3a27f4e79c2465f7a19b23dc64a6d19ecc11d47d780914af0",
+  "contextHash": "b2fb895a18dbf06a2bbd39f34e87e7801d6676d0c56575244e9fbda9373b8e06",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -1534,6 +1534,195 @@
       ],
       "outputContextHash": "0b911e37588312d3a27f4e79c2465f7a19b23dc64a6d19ecc11d47d780914af0",
       "reviewedAt": "2026-11-19T15:55:33.194Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "evaluating-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All four subsections are present and match the plan's titles, key points, workflow elements, evaluation criteria, and examples. Every factual claim about the ICC Safety page is supported by the supplied research and is framed as a published description to be confirmed in a demonstration. The Ontario JHSC guide is cited correctly and with appropriate scope qualification. Workflow roles, inputs, decisions, records, and exceptions are assigned as planned. The illustrative example in 'Test the decision points' is labeled correctly and uses an unnamed hypothetical manufacturer. No FAQ section appears, which is correct because the plan assigns none. No scope boundary is crossed into form configuration, severity rule definition, or current-state mapping. Terminology is consistent with the context glossary. No repetition is present. Both supplied URLs match the research source list and support the sentences that cite them. No previous findings were raised and no changed paragraph introduces a new problem.",
+      "glossary": [
+        {
+          "term": "Comparison sheet",
+          "definition": "A single grid with one row per evaluation criterion and one column per vendor, where each cell records whether a feature was described on a published page, demonstrated with sample reports, or promised in writing."
+        },
+        {
+          "term": "Permission matrix",
+          "definition": "A record of which roles can file, read, rate, investigate, or close a report, and whether those rights differ by site or department."
+        }
+      ],
+      "roles": [
+        "Evaluation lead",
+        "Safety coordinator",
+        "Floor supervisor",
+        "IT and safety lead",
+        "Decision owner",
+        "Investigator",
+        "Floor reporter",
+        "Administrator"
+      ],
+      "recordNames": [
+        "Shortlist with reasons",
+        "Scored demonstration sheet",
+        "Comparison sheet",
+        "Written comparison",
+        "Permission matrix",
+        "Written recommendation"
+      ],
+      "decisions": [
+        "Decide how many vendors the team can examine properly",
+        "Decide which vendors can demonstrate the full end-to-end path",
+        "Decide whether each decision in the demonstration is captured and attributable",
+        "Decide access rules by role and site",
+        "Decide whether setup effort and support fit the plant's needs",
+        "Decide which open questions must be resolved before a recommendation is made"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Build a workflow-based shortlist",
+            "section": "Build a workflow-based shortlist"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Build a workflow-based shortlist; semantic review verifies support",
+            "section": "Build a workflow-based shortlist"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Test the decision points",
+            "section": "Test the decision points"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Test the decision points; semantic review verifies support",
+            "section": "Test the decision points"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Examine evidence, permissions and AI use",
+            "section": "Examine evidence, permissions and AI use"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Examine evidence, permissions and AI use; semantic review verifies support",
+            "section": "Examine evidence, permissions and AI use"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Compare setup, cost and support",
+            "section": "Compare setup, cost and support"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Compare setup, cost and support; semantic review verifies support",
+            "section": "Compare setup, cost and support"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "1d1dfdad554a7310c12135759d404e4654b61051f29da91493d00ae5ce1f443d",
+      "contentHash": "38ab636a37963dabfe8ad3feb54af7a05ca63cd75cda28993b7746b30cb84009",
+      "paragraphHashes": [
+        "34a2c737b52c6404cb6f0e763283301e4ff93d9d3750e57fc9a6711454a4c8ad",
+        "3d19801fc23251d2166a3e8e48e2a34f833fb1ce0d16681141f1c8dd32bf3659",
+        "f86571f6833ea103806cff1e29cf1c7ac11d05efa6827d74cb06f919d96f1d9b",
+        "60f738f932920715b8618f2629f95cc03ef6154d0145b63afc14bd7f20e38fc4",
+        "614722a56c7ebc3dc18a2c6e4bfa6847d26594aba6c3262c9f2e336b468a3860",
+        "066fcd8da2c0ef076af77f17e9538d3133ae3aebdb405b46a89d808e68cb72d2",
+        "e00281d308c472a63cdfc3934f2c748687a84cff4cb43e6ba678bee105901bb5",
+        "f600eac08baaf2df1bf02ff675fb21e833c13df14f7b3a25ce6657f5b8ed9e2a",
+        "31b84eca01619633627344c7b35ebbfb08a5fce1cc9fc5d1002cfbca7482878f",
+        "7e5df543aef4e1bb0210c7755935f2a8db861bcaf07afb0e79803caeec251a49",
+        "20691080cd7f66c1302ac5ce5991e43df3aa46c1a6c21d43b89f4d95787817e8",
+        "09c5a13508681f88a4128cf7cc058720fe4ba6952ebb71a1ace8ab5d004b3ce2",
+        "e2da93ecb8134f4f3be2cb1f9b083bfb171833340a96c1539a991625bbf4af6a",
+        "cdab47c7cb410c6625b98c4a3a9673c1acf940d46ed258df58f319933f558734",
+        "7506d527265e9f23ee8bbb07600573249912320d540711bb9f874e03f8f51172",
+        "688edb30848171071bba0b3e78807a203201b3e43e36eb9c01357522b6ce3465",
+        "f69b62d77542c1bb1ad998aae4f616828e689f2281713417ef3051364eebdf06",
+        "a3c06e54f2b4d255ba4432b0ce31dc239c30c580091a77ebd8dffe4160c76972",
+        "2ab5f8172bfd883e6e6573ab94614eae4ecf95193bf36c19957f593467f81c35",
+        "311acdb49af758b9e548576e17a77c0fa78e9fecb82efcf88dd98713cd84893a",
+        "7f13e025ba9b67e24a08e8ced1a60b53901468e008c1f1ddc4f3be9fd786cd25",
+        "6517b60c786d0b130a46484a2994936f652033d41097e8e09e8faf955afc7fb1",
+        "e35808703b62bfdfbbe79187b42c689ede6e133da1da5dc41bceb7ecd307ebdc",
+        "a18d98e99a212ceda97470c0911294d120d5a15728bcc68f93c299b7a9190275",
+        "100be20d85f07418db67c513f4f0ef34dfdcaa6d1b34b46c6010d65deb5612dc",
+        "d13809d08f8bfcf4caf8049b9384017f28ef8a05f37d461b7f6a3efe51b58eb1",
+        "2a6561b021e90a1c6990120f61622d7ab8e6027db51dfb9f533c0a3c0dfb45d6",
+        "c6a0401c227b81f992d094573cfc97dc3da77ee21c29a063a2b616eb31ce9f2e",
+        "0c3c0d6bc17f8bc53d98ca8d1cc6c006ccdf18915f0c64b91c3ebfbeb6683b9f",
+        "93429afa1211d05581e14705ce33f9b6e30aa151524cd7c94923a3cd6fa98a2c",
+        "aabc475f3cc0bd6dbc065ea968ff1de2c71b029b298c8f217ff85cd276900460",
+        "a450c0865465a4fc9f7623346266aac75d50bd093b3fce9a059cc212bfee3bb0",
+        "e78e33c1f48b9f02a007628534ea7a3328f82053e0e6e5e03d321d3fdb116af7",
+        "449af9d576c79512490a48bb2fb04a1b580db64cd2ee5bf401925c5dbaff027b",
+        "ba1586da929d161ec82f475afb9de670884661047cd24831dab6a6259b857a9a",
+        "11f80ba2c14d4dd1b471d0901408ce73ccf830c92d2f4debd5e12784b0dfb30c",
+        "e5695f05dfa1db326fddc33b7c68b0cda42ca430781f076ffa2db06151ac6995",
+        "a4823796d75e2f287a7ff5dc913e8adac6085fcb2dbcabb13c6db2eb9acbafc2",
+        "05b200fb03c843e52c5c9e130892a0ca54475884b15542b5b2938b93aa7356ae",
+        "a344a85a63c82d52b6a94a9430534f19d30c6b191dd90fd0110876f82f8637a6"
+      ],
+      "outputContextHash": "b2fb895a18dbf06a2bbd39f34e87e7801d6676d0c56575244e9fbda9373b8e06",
+      "reviewedAt": "2026-11-19T15:56:58.466Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
