@@ -6,55 +6,42 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The previous cutover finding is resolved: paper forms are described as reconciled intake records, and trouble indicators distinguish permitted intake from late or unentered reports. No clear new problems were found in the changed paragraphs.",
+  "summary": "All checks pass. No previous findings were raised, so none remain unresolved. All changed paragraphs are accurate and well-scoped. The four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The ISO 45001 clause mappings (10.2, 5.4, 6.1.2) are correctly attributed to the ICC Safety page and hedged against the boundary that software alone does not satisfy a clause. External reviewer access is appropriately flagged as unconfirmed in the research. The import and cutover guidance is procedurally sound and does not introduce unsupported claims about vendor capability. The Ontario JHSC guide is cited in the final paragraph with an explicit caution that plants elsewhere must check their own rules. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus the allowed internal site path. No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2048 is within acceptable range of the 2000-word target.",
   "glossary": [
     {
-      "term": "Cutover",
-      "definition": "The point at which the new system becomes the record."
+      "term": "Gap list",
+      "definition": "The record of items identified during an audit rehearsal or audit view review, each with an owner and a date for resolution."
     },
     {
       "term": "Evidence map",
-      "definition": "A record listing, for each clause in scope, what the requirement asks, the records held, where they are kept and who owns them."
+      "definition": "A record listing each ISO 45001 clause in scope, the requirement it makes, the records the plant holds as evidence, where they are kept, and who owns them."
     },
     {
-      "term": "Gap list",
-      "definition": "A list of audit rehearsal gaps with an owner and date for each item."
+      "term": "Import plan",
+      "definition": "The record of the scope of a historical data migration, the mapping of old fields to new ones, decisions about unmapped fields, and the location of the original archive."
+    },
+    {
+      "term": "Cutover plan",
+      "definition": "The record of the date and method by which the new system becomes the authoritative record for incident and near-miss reports, including parallel-period rules, training schedule, and rollback criteria."
     }
   ],
   "roles": [
     "Safety lead",
-    "Safety coordinator",
     "Management representative",
     "Data owner",
-    "Implementation lead",
-    "Auditor",
-    "Supervisor",
-    "Investigator",
-    "Action owner",
-    "Floor reporter",
-    "Committee member"
+    "Implementation lead"
   ],
   "recordNames": [
     "Gap list",
-    "Open-questions list",
     "Evidence map",
     "Import plan",
-    "Cutover plan",
-    "Incident and near-miss log",
-    "Training records",
-    "Risk assessments",
-    "Committee minutes",
-    "Inspection reports",
-    "Paper intake forms"
+    "Cutover plan"
   ],
   "decisions": [
-    "Which audit-readiness gaps to close",
-    "How external reviewers will access records",
-    "What evidence supports each clause",
-    "Which historical records to import and how to map their fields",
-    "What to archive rather than import",
-    "When and how to cut over",
-    "What triggers rollback or extra support"
+    "Decide gaps to close before an audit",
+    "Decide evidence per clause",
+    "Decide scope and mapping of old fields to new ones",
+    "Decide cutover date and method"
   ],
   "pass": true,
   "deterministic": {
@@ -152,47 +139,47 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "e5c950b5fd3748aa2fc8fe69d93d2743bf839f59fe16d2993fbc21843ea19c12",
-  "contentHash": "94d98cb47056cac2076bdef246a51fa78d4cabc73f09b8f237b5dbba917ece29",
+  "inputHash": "dc106d011469f8a9dd1872ae8fe54c1121ab0d575c9c5073795ea54267c3e12d",
+  "contentHash": "24f6b392192b041a99e144daf58143d99425631ad57c0c88ebd6f7b119997eaa",
   "paragraphHashes": [
     "aa5cfe9324a927d25fdadbb23710176894b047f80094774c64824e34df0ac231",
-    "7feaed12d72543ef24df5a255993ce5440e7453d901189e15282a74afd02cd05",
+    "879381afd179a44807a2e9e976fb07a8bdff87d9a2fd0f4e3ffff13c64216cb1",
     "8502b3e65313cea93884d9ae5828a3bd349d558854e309d75007b0cfebf2c8f0",
     "94836d684f8b86ae896106ab30b220b703ad71f80dc0f38551b0e9723d7cdebc",
-    "d649f312c87b448f9e2cd9be63cd74d266f25edcfcda97d0c1ff738461efb8de",
+    "16ba18236431386fd712cd66312773da41d9c515a1f7615ace1c2a5b3a0b4447",
     "ed646d1cab8bbc59208c21a97526b4d35d3dc08aa860e999a2e3247d910451fe",
-    "d8644f35607db988b1b38e2b05108c9a92402c4043a60680a0dd6e3d2b61aea6",
-    "d42eeb9167ce8ecb00e8f658736d32d0370f671d11e49ef3b18a99aefb56aa93",
+    "1dcfb906289c92d8b24b88b39d4c7c09afa6df6ca0d6892fe4e7f537bd45423a",
+    "80ab50951382516da82cc0e8220eb5feb07b676b5ede74854258082acca35496",
     "6402f1693514245db836d2ca76fe397935ff2837de66f9a0fd26356feb320a31",
     "f81337ed35e74a923cdc9a81f8aa4bc4c24d323e379ad152f225f6a59bdf8e4b",
     "a033ef252e91555007bd4a7c31f666ecdd4982e1875fe8142b7fdb4e7a6c2e5e",
-    "31fc0711f8a8e4c026af382cab6e085366a0e4f082a4e36c7c585ccb4d278a59",
-    "f2f4a308f288818ad364d63e4c5fe51b2fd7632e636e3f328faac4c120455875",
-    "fd7e3a599275dcd9c4db60fe19ae8af42c3581e20fda3f7b3d135512ace210e3",
+    "a08d620d6f131d5dd932399050911843fd7f94191f1ada927a5883ad7610c270",
+    "32bf68e7dc91349bbfaed00ad821ac68886f2a56f799688a5fe52b1c2ac91b49",
+    "3289fb03c77e34c12d2f29f21866bbcb877e9b528c84221446c52ebc4c4c2d9a",
     "87b7b27c0168d0e1e5b11d309d090b93ebba398fdcd10fcad83e6b65459420d2",
-    "fa0255a00b27de8aa323732b1e6eb262fb51b8577302a9697c9c5a3c59320be9",
-    "cbd9d3d5ee6c8b63e2d02fa594f0db82b7bf59c0d9a01daaea60e03a90f56f37",
+    "539df251cb34d0fcecc9005a42ff8dd571618f9b64de470c201b9544e2e6d327",
+    "a8554390607b2c1efd8bcfc5685feef6b79c476c6cd65026d4696e9657d2fe02",
     "840980c2504ac05687a06c810910a8d52c9b661930d272fb686bf042be2c157d",
     "2c11f6b9e0ea32ae25ce8027e9d8585c973058380f6b8e61cfec577b7e98797f",
-    "cca6fb5337b2126dba075f1ea0c4ff28f14c472713329dfc778592bd60912d56",
-    "d23dd7b7c796ce1c99bcd99ec9dfd5be3769b5507063d1850005e715a86227ae",
+    "ea127e3c04a2845f1ecce7ba7b3d9e2c32a6a5bb513785ea42cc24671809ed80",
+    "b6f2f59beb7eba4ba1bc9c0b94cbe4d6ec2a3d612f7f1945a49e3ba537b58a33",
     "346d121f58c9d3ba6856b754b98cb5fa90c752af9fcc6349ee70ad4f51a5546f",
     "2c25d57ddc53c62adf159145a4ce332402230f963d8c3db955213cd0868a9334",
     "d1b50ec30e1b8b7a68d2d54b3bb507060d5b3f9c0e8d65bbff57dcdbda916389",
     "5a12f344731b1fbe198edeb2304b57bd0a5ef124b456b6c9ffe942425963158a",
-    "6a9db1a8742993f67aa343da246f215908d92048e9c83f0ca418495e20b44b00",
-    "dfa1852d0c92035c4810fc2c700c6313b8cb48261eceabccee06546427dae54f",
+    "ce0e59143ce75e7a78642dc0a11f796b32f0a3c0dd3014de6ccedb083a82e040",
+    "0babd74a82c754c3b25656456326fb335d58faca5443697b3808fa9a31e0bda0",
     "31f20a9fe45049a1bc110dfb044f2b6005c18ca22edfb85282dc6495b7e01e95",
-    "6a73f030a61e229fc9253c1fbfb63961f195099db75016cf1fb45afcf7d1cf68",
-    "16cd88fe25dcc721c059f7d7a65470b4a6e1f127a842c1ddba5bfe15ace0ba34",
-    "ee3b2899f0a49c788611cf405d6c68edc4dc55d0400dd02b9f25eeaaaac34bec",
+    "40d52d496d570e927da818a94851322e226dc8c10403d4a3d92851cb2f6db0c0",
+    "d7b69576fb4b4a28beb6b5f198ef59973e1222f82b8f8268e4496f02e870653c",
+    "dce7dc1951f8873d8b9db0ca0e363790b1ec04842f71414967176df8bca187ce",
     "92727dab5784d0fdbb993c9c9cd7678427265d3df2270c3e25878b6b43c4dfe3",
-    "6329d5e79c03392fe5504b94015d1499a4856eba48bdd46c1d753eb8201a22ad",
-    "eecb0569033e7bb485c8e7b01a45109c40b9dca6ce89faedcb3c21d8f5b64459",
+    "0e9349f25c52d8560d29b2a71d9cb27a7df153ca05c9ee3da46730e9b1444f70",
+    "4b0eabc5243510c67a5830248a15a610a26b8c97b89cee05385cd8a435bb213a",
     "01871a91c376d4b6f595c355534e87571f72c9071e3b52429807194e72867dbc",
     "6cdc3e10f8fd45d105304ba5f2bb7060c881d2681a7768ec99810712537bc184"
   ],
-  "outputContextHash": "b107bd894cecc30f6783d1924646e93663b1bc998f23d97a8418d45b483183f7",
-  "reviewedAt": "2026-11-16T08:53:28.250Z",
+  "outputContextHash": "711a2d67cb03d4e5765b277518f9c078c9a3fefd54225a72f65267d123000469",
+  "reviewedAt": "2026-11-19T16:24:52.355Z",
   "reviewer": "Configured independent chapter reviewer"
 }

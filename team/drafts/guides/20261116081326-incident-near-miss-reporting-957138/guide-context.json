@@ -105,6 +105,22 @@
     {
       "term": "Feedback record",
       "definition": "A feedback entry or note in the team meeting record showing what was shared with reporters about closed reports, within the plant's privacy rules."
+    },
+    {
+      "term": "Gap list",
+      "definition": "The record of items identified during an audit rehearsal or audit view review, each with an owner and a date for resolution."
+    },
+    {
+      "term": "Evidence map",
+      "definition": "A record listing each ISO 45001 clause in scope, the requirement it makes, the records the plant holds as evidence, where they are kept, and who owns them."
+    },
+    {
+      "term": "Import plan",
+      "definition": "The record of the scope of a historical data migration, the mapping of old fields to new ones, decisions about unmapped fields, and the location of the original archive."
+    },
+    {
+      "term": "Cutover plan",
+      "definition": "The record of the date and method by which the new system becomes the authoritative record for incident and near-miss reports, including parallel-period rules, training schedule, and rollback criteria."
     }
   ],
   "roles": [
@@ -134,7 +150,10 @@
     "Area supervisor",
     "Committee chair",
     "Committee member",
-    "Worker member"
+    "Worker member",
+    "Management representative",
+    "Data owner",
+    "Implementation lead"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -167,7 +186,11 @@
     "Access rule",
     "Meeting record",
     "Feedback record",
-    "Written response"
+    "Written response",
+    "Gap list",
+    "Evidence map",
+    "Import plan",
+    "Cutover plan"
   ],
   "example": {
     "label": "Illustrative example",
@@ -262,6 +285,18 @@
         "Decide which patterns to raise",
         "Decide feedback to reporters",
         "Accept or explain a committee recommendation"
+      ]
+    },
+    {
+      "slug": "audit-evidence-migration",
+      "title": "Prepare audit evidence and migrate existing incident logs",
+      "summary": "All checks pass. No previous findings were raised, so none remain unresolved. All changed paragraphs are accurate and well-scoped. The four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The ISO 45001 clause mappings (10.2, 5.4, 6.1.2) are correctly attributed to the ICC Safety page and hedged against the boundary that software alone does not satisfy a clause. External reviewer access is appropriately flagged as unconfirmed in the research. The import and cutover guidance is procedurally sound and does not introduce unsupported claims about vendor capability. The Ontario JHSC guide is cited in the final paragraph with an explicit caution that plants elsewhere must check their own rules. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus the allowed internal site path. No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2048 is within acceptable range of the 2000-word target.",
+      "bodyHash": "6a4fa3254e6a8ce7d5a0adea3e91e7b88d83655a900188dd4da90a125cec66e1",
+      "decisions": [
+        "Decide gaps to close before an audit",
+        "Decide evidence per clause",
+        "Decide scope and mapping of old fields to new ones",
+        "Decide cutover date and method"
       ]
     }
   ],
