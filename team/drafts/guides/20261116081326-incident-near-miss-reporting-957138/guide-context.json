@@ -97,6 +97,18 @@
     {
       "term": "Recommendation",
       "definition": "A proposal for a change."
+    },
+    {
+      "term": "Cutover",
+      "definition": "The point at which the new system becomes the record."
+    },
+    {
+      "term": "Evidence map",
+      "definition": "A record listing, for each clause in scope, what the requirement asks, the records held, where they are kept and who owns them."
+    },
+    {
+      "term": "Gap list",
+      "definition": "A list of audit rehearsal gaps with an owner and date for each item."
     }
   ],
   "roles": [
@@ -140,7 +152,11 @@
     "Leadership team",
     "Quality manager",
     "Committee chair",
-    "Worker committee member"
+    "Worker committee member",
+    "Management representative",
+    "Data owner",
+    "Implementation lead",
+    "Committee member"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -194,7 +210,16 @@
     "Meeting record",
     "Written response",
     "Recommendation register",
-    "Feedback entry"
+    "Feedback entry",
+    "Gap list",
+    "Open-questions list",
+    "Evidence map",
+    "Import plan",
+    "Cutover plan",
+    "Risk assessments",
+    "Committee minutes",
+    "Inspection reports",
+    "Paper intake forms"
   ],
   "example": {
     "label": "Illustrative example",
@@ -307,6 +332,21 @@
         "Whether to accept a committee recommendation, accept it in part, or explain why not",
         "How to track recommendations if the product does not cover them",
         "What feedback to share with reporters within privacy rules"
+      ]
+    },
+    {
+      "slug": "audit-evidence-migration",
+      "title": "Prepare audit evidence and migrate existing incident logs",
+      "summary": "The previous cutover finding is resolved: paper forms are described as reconciled intake records, and trouble indicators distinguish permitted intake from late or unentered reports. No clear new problems were found in the changed paragraphs.",
+      "bodyHash": "a8d7069e2803ccd3e33b968f0b9006b5b2eda29f4cff320032158ccb5c93a89f",
+      "decisions": [
+        "Which audit-readiness gaps to close",
+        "How external reviewers will access records",
+        "What evidence supports each clause",
+        "Which historical records to import and how to map their fields",
+        "What to archive rather than import",
+        "When and how to cut over",
+        "What triggers rollback or extra support"
       ]
     }
   ],

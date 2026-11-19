@@ -152,7 +152,7 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "50cdeec2568e0975dddc3578ff4052a1598196680a550210e62ef4bf50a2878f",
+  "inputHash": "a4b741b1a5ac3928d5570cbe9e122708941dde4daff8570f500d880d625d7d8a",
   "contentHash": "94d98cb47056cac2076bdef246a51fa78d4cabc73f09b8f237b5dbba917ece29",
   "paragraphHashes": [
     "aa5cfe9324a927d25fdadbb23710176894b047f80094774c64824e34df0ac231",
@@ -192,8 +192,8 @@
     "01871a91c376d4b6f595c355534e87571f72c9071e3b52429807194e72867dbc",
     "6cdc3e10f8fd45d105304ba5f2bb7060c881d2681a7768ec99810712537bc184"
   ],
-  "outputContextHash": "04c92cbd128243339c7b7eb20326319c8e3efcac3c009b1ba03b0c9548a0c995",
-  "reviewedAt": "2026-11-19T15:46:01.029Z",
+  "outputContextHash": "84084880dde2082d8079a8ed2071ff232e30521ed61ea9a0466fd74a54696e4e",
+  "reviewedAt": "2026-11-19T15:58:36.438Z",
   "reviewer": "Configured independent chapter reviewer",
   "carried": true,
   "carriedFrom": "2026-11-16T08:53:28.250Z"
