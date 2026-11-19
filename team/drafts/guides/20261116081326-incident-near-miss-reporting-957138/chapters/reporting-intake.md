@@ -57,7 +57,7 @@ Follow-up is the hardest part. An anonymous reporter may not be reachable to exp
 
 A board near the entry listing actions taken can work, but only after a reviewer removes names, photos, locations, and other details that could identify the reporter, and only where the plant's disclosure policy allows it. Where safe disclosure is not possible, use a non-public option, such as telling the safety committee or area supervisors in general terms what changed, after a reviewer has checked the wording for identifying context.
 
-Watch for misuse as well as underuse. A small number of anonymous reports may be personal complaints, or may name a colleague. Decide in advance how the plant handles a report that is really about a person rather than a condition. Often the right step is to route it to human resources under that function's own process and to record in the log that it was redirected and by whom.
+Watch for misuse as well as underuse. A small number of anonymous reports may be personal complaints or may name a colleague. Decide in advance how the plant handles a report that is really about a person rather than a condition. Often the right step is to route it to human resources under that function's own process and to record in the log that it was redirected and by whom.
 
 Add open questions for the vendor: how an anonymous reporter can receive a reply, what protections apply, and whether anonymous reports are both marked as anonymous and kept in the same log as named reports. Make the last one a demonstration criterion.
 

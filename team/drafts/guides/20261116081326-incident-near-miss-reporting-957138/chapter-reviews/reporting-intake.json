@@ -6,53 +6,50 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "Both previous findings are resolved, and the changed paragraphs present no clear new problems. No FAQ is assigned or included.",
+  "summary": "All checks pass. The two changed paragraphs are accurate and well-scoped: the first correctly frames ICC Safety field configuration as a published description requiring demonstration confirmation and notes the anonymous-form field configurability is unconfirmed; the second gives clear procedural guidance on misuse without introducing unsupported claims. No previous findings were raised, so none remain unresolved. All factual claims about ICC Safety capabilities are hedged as published descriptions. The Ontario JHSC guide is cited with an appropriate caution about site-specific obligations. Workflow elements (role, input, decision, record, exception) are present across all four subsections. The illustrative example is labeled and uses an unnamed Canadian manufacturer. No FAQ section appears, consistent with the plan assigning none. Links use only the two supplied source URLs plus allowed internal site paths. No scope boundary violations, readability problems, or repetition were detected.",
   "glossary": [
     {
+      "term": "Placement list",
+      "definition": "A record of chosen QR code or access-point locations on the floor, including the person responsible for each and the check schedule."
+    },
+    {
       "term": "Review entry",
-      "definition": "The record of the first-review step."
+      "definition": "The record created when a reviewer first reads a new report, showing who reviewed it, when, and what decision was made."
+    },
+    {
+      "term": "Reporter fields",
+      "definition": "Fields completed by the floor reporter at the point of work, covering description, who was affected, location, time, injury or damage indicator, and optional photo."
+    },
+    {
+      "term": "Reviewer fields",
+      "definition": "Fields completed by the first reviewer when reading a new report, covering category and hand-off to the severity process."
+    },
+    {
+      "term": "Investigator fields",
+      "definition": "Fields completed later in the process covering causes, evidence, and conclusions."
     },
     {
       "term": "Report form specification",
-      "definition": "A record of each field’s name, who completes it, whether it is required, and its accepted values."
+      "definition": "The record of the final form design stating field name, who completes it, whether it is required, and what values it accepts."
     }
   ],
   "roles": [
-    "Reporter",
-    "Operator",
     "Safety coordinator",
-    "Reviewer",
-    "Investigator",
-    "Supervisor",
     "Safety lead",
     "Operations supervisor",
-    "Backup reviewer",
-    "Human resources",
-    "Safety committee",
-    "Vendor",
-    "Maintenance"
+    "Reviewer"
   ],
   "recordNames": [
     "Report form specification",
-    "Anonymous reporting policy",
     "Placement list",
-    "Review entry",
-    "Report log",
-    "Sample reports",
-    "Paper card",
-    "Access-point check record"
+    "Policy and routing rule",
+    "Review entry"
   ],
   "decisions": [
-    "Which report fields are required or optional",
-    "When anonymous reporting is accepted and who reads anonymous reports first",
-    "How anonymous reports that name a person are handled",
-    "Where floor access points are placed and what alternatives are provided",
-    "Who reviews new reports and what response target applies",
-    "Whether a report is complete enough to act on",
-    "How to categorize a report and hand it off to the severity process",
-    "Who is told about a report",
-    "How related reports are linked",
-    "What feedback can safely be given to reporters"
+    "Decide required versus optional fields",
+    "Decide when anonymous reporting is accepted and who reads anonymous reports first",
+    "Decide placement of access points",
+    "Decide whether to rate, investigate, or close a new report"
   ],
   "pass": true,
   "deterministic": {
@@ -150,8 +147,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "de708dcabb2da52e76a1b6cb5caf5a7354a02fe219104a26b355a8ddef776dbd",
-  "contentHash": "0657f871ac5dc5468f6d46ab45b3b14a9d3bfd65aae0a17cd6748943d3e127dd",
+  "inputHash": "c6675033dea317274f2c869b7d590ef192b8263e8104a2b44bc98e5cfc9790fc",
+  "contentHash": "2b8d32a900b4bc036414a2d50717c4d2295b336f1aa89876eb2abdc44e1a26a8",
   "paragraphHashes": [
     "aff7e7a74342cfcf4d8728b7d9613e733214b911dcb1ff5717b186582661cb4b",
     "385044940c42c3fc0c2c61043ee7688963c96cea93d0355537dc60522a0ef9b1",
@@ -159,7 +156,7 @@
     "464695c63284ed1ee38427ab4ea4ddaa5c33d51349b473466bc59917bb594c61",
     "60ff9fbcdb15321106922f9261ddfb652f29114572769362fda3e8d2ba96d85b",
     "065a982fa1137975108876eda82cc80a5c36fb83e4e7bc64c0dc39ba608559a8",
-    "6dff0fa65ad23bcffe9187c8ebb3f2f474188f355fa42f330c40d676b8aa2e49",
+    "2969de9d8e0adaed05b5e39a30b32af8b34bb8780a313d61b3e61c2b2f1be44f",
     "3fad0aa389e05e9b8064ef121512642550ef7048f13d46099a7696346aaf3cb8",
     "783aeda34fa09750c045740aea673d4e6ced79b427b17561584590bf93c31486",
     "362c9669b38fb7948a49f4bbfe1a1fd98862026a46ab3ee854ccd9484cfe8af6",
@@ -171,7 +168,7 @@
     "10ce5db9f7fc991f3176bcac3302a8407103bece71f5f9f19c9e3c4304b06dca",
     "fbcb8dc05654d9586534c342db74d1e4dc4b7da00e343413b2fe0df10a9411de",
     "5c605a3b90a13acdd709639d4072ff8ded9ba656307e13e3bd22f21b2217119b",
-    "c86f82772ce0166b9fa28ff7fa3aa04562a13d5f9e359549db6d0ab48d253f28",
+    "0a89cba8cd690f0a89dc86d6dee0752f8e69d9f4eec85986a01de7754aade874",
     "20f1b0d778173fb2c60051e02e6c96f9350e8f113412f3b598c9c71ff68895c2",
     "c50984ff45050c24d8cc055ccafd61507df016b2b83390b5ec35d5335cea7e4f",
     "4371a3b852fb6dbcff882e429fd812be28dbdd0b159c1f4c91bb3c3e3a8ae562",
@@ -192,9 +189,7 @@
     "3b36f68fcffa67af8b4917d4a4413351482642355bb28d28ebaa5642945b6f5c",
     "540eaa34a012f383e249ae3ad9c90723fd2463a3adb8ced2c4751f49245696eb"
   ],
-  "outputContextHash": "8c3b53593bf55ee6f731aa66489c7d8ff39e5423717d352a9026d99ec64298ee",
-  "reviewedAt": "2026-11-19T15:57:03.367Z",
-  "reviewer": "Configured independent chapter reviewer",
-  "carried": true,
-  "carriedFrom": "2026-11-16T08:32:52.336Z"
+  "outputContextHash": "6a9116842063a8ce7e880af6f80f366ce609033670e8e9dba3edd66660a32de1",
+  "reviewedAt": "2026-11-19T16:12:26.033Z",
+  "reviewer": "Configured independent chapter reviewer"
 }
