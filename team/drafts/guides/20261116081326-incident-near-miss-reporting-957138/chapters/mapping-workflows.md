@@ -27,7 +27,7 @@ A plant may already collect reports of incidents and near-misses. The trouble ca
 
 Write the problem down in operating terms before looking at any product. Ask three plain questions: How many different places can a report start? Who decides whether it is written down? What happens to it afterward? The answers show whether the plant has a reporting process or a collection of habits.
 
-The ICC [Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes the same pattern from the vendor's side. It says near-misses go unreported because reporting means finding a form and a supervisor; investigations start from a blank page after an incident; and a safety committee may not see patterns early. Read this as the vendor's description of a possible problem, not as measured evidence of its prevalence across plants or at any particular plant. Use it to prompt questions in the plant being studied.
+The ICC [Safety module page](https://isocertificationconsultants.ca/solutions/safety/) presents a possible reporting problem as part of its market description. It says near-misses go unreported because reporting means finding a form and a supervisor; investigations start from a blank page after an incident; and a safety committee may not see patterns early. Read this as the vendor's description of a possible problem, not as measured evidence of its prevalence across plants or at any particular plant. It is not a diagnosis of the plant being studied; use observations and records from that plant to establish whether the problem occurs there.
 
 Definitions come next, because software cannot log what the team has not defined. Agree on wording for three categories:
 

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "topicId": "incident-near-miss-reporting",
+  "slug": "incident-and-near-miss-reporting-software",
+  "title": "Incident and near-miss reporting software for Canadian quality and operations teams",
+  "description": "How to choose and implement incident and near-miss reporting software: map the workflow, compare capabilities, rate severity, link actions and train teams.",
+  "primaryKeyword": "incident and near-miss reporting software",
+  "keywords": [
+    "incident and near-miss reporting software",
+    "near miss reporting",
+    "workplace incident log"
+  ],
+  "audience": "Canadian quality and operations teams",
+  "author": "ISO Certification Consultants Editorial Team",
+  "date": "2026-11-16",
+  "introductionFile": "introduction.md",
+  "chapters": [
+    {
+      "slug": "mapping-workflows",
+      "file": "chapters/mapping-workflows.md"
+    },
+    {
+      "slug": "evaluating-software",
+      "file": "chapters/evaluating-software.md"
+    },
+    {
+      "slug": "reporting-intake",
+      "file": "chapters/reporting-intake.md"
+    },
+    {
+      "slug": "severity-triage",
+      "file": "chapters/severity-triage.md"
+    },
+    {
+      "slug": "investigation",
+      "file": "chapters/investigation.md"
+    },
+    {
+      "slug": "corrective-actions",
+      "file": "chapters/corrective-actions.md"
+    },
+    {
+      "slug": "committee-visibility",
+      "file": "chapters/committee-visibility.md"
+    },
+    {
+      "slug": "audit-evidence-migration",
+      "file": "chapters/audit-evidence-migration.md"
+    },
+    {
+      "slug": "ongoing-operation",
+      "file": "chapters/ongoing-operation.md"
+    }
+  ],
+  "sources": [
+    {
+      "id": "icc-safety",
+      "sourceType": "primary",
+      "title": "ICC Safety module (ISO 45001) page",
+      "publisher": "ISO Certification Consultants Inc.",
+      "url": "https://isocertificationconsultants.ca/solutions/safety/",
+      "retrievedAt": "2026-11-16",
+      "supportedClaims": [
+        "The published ICC page describes incident and near-miss reporting in which severity is set from the level of harm. These are published descriptions; availability and configuration must be confirmed in a demonstration and no capability is advertised as verified.",
+        "The page describes a QR code on the floor that opens an anonymous report form with no login, and anonymous reports appear in the safety dashboard marked as anonymous.",
+        "The page describes a health and safety dashboard with its own permissions, separate from quality, switched on per organization.",
+        "The page states incidents that need corrective action are carried into the Improvements module, and the auditor view shows corrective actions linked to each incident.",
+        "The page describes an auditor view with the incident and near-miss log showing severity and status, floor reports including anonymous ones, and linked corrective actions.",
+        "The page maps the module to ISO 45001:2018 clauses 10.2 (incident, nonconformity and corrective action), 5.4 (consultation and participation of workers) and 6.1.2 (hazard identification and assessment of risks and opportunities); a mapping is not a statement that software alone satisfies a clause.",
+        "The page describes setup in four steps: map processes with named owners, configure modules (fields, checklists, terminology, routing), onboard standards, and deploy to the floor with training and a certified consultant reviewing configuration through to audit.",
+        "The page states every AI output is a suggestion that a person reviews before it enters a controlled record.",
+        "The page describes the problem as near-misses going unreported because reporting needs a form and a supervisor, investigations starting from a blank page, and committees not seeing patterns early.",
+        "The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions."
+      ]
+    },
+    {
+      "id": "ontario-jhsc-guide",
+      "sourceType": "primary",
+      "title": "Guide for health and safety committees and representatives",
+      "publisher": "Government of Ontario, Ministry of Labour",
+      "url": "https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "retrievedAt": "2026-11-16",
+      "supportedClaims": [
+        "Under Ontario's Occupational Health and Safety Act, workplaces with 6 to 19 workers need a health and safety representative, and workplaces with 20 or more workers need a joint health and safety committee.",
+        "At least half of committee members must be workers who do not exercise managerial functions.",
+        "A joint committee must meet at least once every three months, and a worker member inspects the workplace at least once a month.",
+        "An employer must respond in writing within 21 days to written recommendations from the committee.",
+        "The page was confirmed through search-result content because direct fetch returned HTTP 403; requirements should be checked against the current official page and are Ontario-specific, not national."
+      ]
+    }
+  ],
+  "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "researchSnapshotHash": "49b91b730bf35718b32cddfea2d2c8a9ef14b7ecb93d67ae2ed9baa041eaccdc",
+  "productionSlotId": "2026-W47-slot-1"
+}
