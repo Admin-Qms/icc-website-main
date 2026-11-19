@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections are present and match the plan's titles, key points, workflow elements, evaluation criteria, and examples. Changed paragraphs introduce the problem statement and cite the ICC Safety page correctly, framing it as the vendor's description rather than measured data, consistent with the supported claim. Every factual claim about the ICC Safety page and the Ontario JHSC guide is supported by the supplied research. Workflow roles, inputs, decisions, records, and exceptions are assigned as planned. Both illustrative examples are labeled as such and use unnamed hypothetical manufacturers. The Ontario-specific caveat is correctly stated. No FAQ section appears, which is correct because the plan assigns none. No scope boundary is crossed into vendor comparison, form design, severity rules, or corrective action mechanics. Terminology is consistent throughout. No repetition, broken internal paths, or unresolvable links are present. No previous findings were raised.",
+  "summary": "The page maps the current-state incident and near-miss reporting workflow across four subsections that match the plan exactly. All factual claims about ICC Safety capabilities are correctly framed as published descriptions requiring demonstration confirmation. The Ontario JHSC source is cited only where Ontario-specific regulatory content is discussed, with an explicit caution against assuming those rules apply nationally. Workflow elements (role, input, decision, record, exception) are present in each subsection. Illustrative examples are labeled and use an unnamed Canadian manufacturer. No FAQ section appears, which is correct because the plan assigns none. The changed paragraph correctly presents ICC Safety page content as a vendor problem description rather than measured data. No previous findings were raised. Links use the two supplied source URLs plus an allowed internal path. No scope boundary violations were detected.",
   "glossary": [
     {
       "term": "Incident",
@@ -18,11 +18,11 @@
     },
     {
       "term": "Acceptance criteria",
-      "definition": "Statements a demonstration can prove or fail to prove, derived from the plant's own process map and decision table, used to evaluate software against the plant's workflow."
+      "definition": "Statements that a software demonstration can prove or fail to prove, derived from the plant's own problem statement, process map, and decision table."
     },
     {
       "term": "Dead end",
-      "definition": "A step in a reporting process after which no record shows a decision was made, leaving the report unresolved."
+      "definition": "A step in the reporting process after which no record shows a decision was made, leaving a report unresolved."
     }
   ],
   "roles": [
@@ -31,15 +31,13 @@
     "Safety coordinator",
     "Operations manager",
     "Evaluation lead",
-    "Floor worker",
-    "Reporter",
+    "Floor reporter",
     "Investigator",
     "Action owner",
     "Maintenance",
     "Production supervisor",
     "Quality team",
-    "Joint health and safety committee",
-    "Health and safety representative"
+    "Reporter"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -47,18 +45,18 @@
     "Role and decision table",
     "Acceptance criteria list",
     "Log entry",
-    "Scoring sheet"
+    "Investigation notes",
+    "Corrective action record"
   ],
   "decisions": [
     "Decide what counts as an incident, a near-miss, and a hazard report",
     "Decide whether a report is accepted into the log",
-    "Rate the severity of a report",
-    "Decide who investigates",
+    "Rate severity of a report",
+    "Assign who investigates",
     "Decide whether corrective action is required",
-    "Decide which steps in the workflow are required versus habit",
+    "Decide which steps are required and which are habit",
     "Assign a named owner and a backup to each decision",
     "Decide which steps the software must support first",
-    "Rank acceptance criteria as mandatory or desirable",
     "Decide who attends each demonstration"
   ],
   "pass": true,
@@ -157,13 +155,13 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "c643ef001ca132db535e1d1de37b1e1e96e256added3475d1c058b441bbabb2a",
-  "contentHash": "5d4070462970f1c24aaa2986dffcaf7eaadbf02aa48876e64c7c0e220a7d61e1",
+  "inputHash": "e6d2ec999be7a8854eaaaf5dd27fd86163f3632b171bb5168261c733c825ea86",
+  "contentHash": "852fa6ece74ebb85b75b0c3da18e7ac912306ad78f313f0d3246b6b4978860a4",
   "paragraphHashes": [
     "f76b01dfeb43ba98b65318b672f03c50ad4fc8b866cb798740da1ebd493ade1a",
     "4fe7a5e80429d71bfd7297521af9977fa8a3ce2a59d98f61b8b849fdd13cc97c",
     "a52574b16d93e1fb49355dad5440c1a38a20d9f5c5bf24daed29ac0a0d707b5c",
-    "01a168708d8a91cb9cfaf2af9853289515452a63bb7336e8b8efbae788fcb61b",
+    "c9ff5bc1141e6185b7d07e68bda12c0e74911fefe428d4368ce025d6851cd1f7",
     "98d88b690f426b76b6117623156ff1e8ee2202ead7bca9b05e21274a6f7bee1d",
     "efd0f20015cb51b41637bd5d9d6e1e9bcda8ad4068b04629f03091f7b5d251e3",
     "10d231d898042b432e37bf1b97933e25bdd0ed9a4ebe6df07278b66f5669c095",
@@ -204,7 +202,7 @@
     "0584cbb58b3a39502b0f90fa2f1affbdb7b327004441c4c018b64705dcb469a8",
     "3c1bbab94a9236ccf5e7debf73cded1fdc6e7c48a67f8b213a13b6bf7789d7ac"
   ],
-  "outputContextHash": "0b911e37588312d3a27f4e79c2465f7a19b23dc64a6d19ecc11d47d780914af0",
-  "reviewedAt": "2026-11-19T15:55:33.194Z",
+  "outputContextHash": "86df062805ca784436730c6330023ebeaa16d655c5ce6865fe34045e4064b189",
+  "reviewedAt": "2026-11-19T16:09:47.190Z",
   "reviewer": "Configured independent chapter reviewer"
 }
