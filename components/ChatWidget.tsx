@@ -6,6 +6,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { ArrowRight, ChevronDown, Phone } from "./Icons";
 import { SITE } from "@/lib/site";
+import { ANTHONY_MANNELLA } from "@/lib/people";
 import { chatReplyMarkdown, safeSiteHref } from "@/lib/chatLinks";
 import { CHAT_HISTORY_KEY, CHAT_HISTORY_TTL_MS, lastFiveExchanges, modelMessagesFromHistory, readStoredChatHistory, serializeChatHistory } from "@/lib/chatHistory";
 import { ChatRequestError, requestChat } from "@/lib/chatClient";
@@ -25,11 +26,11 @@ function AssistantAvatar({ small = false }: { small?: boolean }) {
       className={`block shrink-0 overflow-hidden rounded-full border-2 border-white bg-teal-100 shadow-sm ${small ? "h-7 w-7 sm:h-9 sm:w-9" : "h-9 w-9 sm:h-12 sm:w-12"}`}
     >
       <Image
-        src="/images/logo-mark.png"
+        src={ANTHONY_MANNELLA.photo}
         alt=""
         width={96}
         height={96}
-        className="h-full w-full object-contain p-1"
+        className="h-full w-full object-cover object-[center_38%]"
       />
     </span>
   );
@@ -328,7 +329,7 @@ export function ChatWidget() {
       {!open && (
         <div className="flex items-center gap-1.5 rounded-full border border-teal-200 bg-white p-1.5 shadow-[0_14px_38px_-14px_rgba(22,43,77,0.55)] sm:gap-2 sm:p-2">
           <AssistantAvatar small />
-          <span className="mr-1 text-xs font-semibold text-navy-900">AI Assistant</span>
+          <span className="mr-1 text-xs font-semibold text-navy-900">Need Help?</span>
           <a
             href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
             aria-label={`Call us at ${SITE.phone}`}
@@ -371,7 +372,7 @@ export function ChatWidget() {
             >
               <AssistantAvatar />
               <span className="min-w-0 flex-1">
-                <span className="block truncate font-heading text-sm font-semibold text-white sm:text-base">AI Assistant</span>
+                <span className="block truncate font-heading text-sm font-semibold text-white sm:text-base">Need Help?</span>
                 <span className="block truncate text-[11px] text-teal-200 sm:text-xs">Automated answers about the platform</span>
               </span>
             </button>
