@@ -898,12 +898,15 @@ async function auditClaims(post, { call, adjudicate, cacheDir = CLAIMS_CACHE_DIR
   if (post.slug != null && (typeof post.slug !== 'string' || !checkSlug({ slug: { current: post.slug } }).pass)) throw new Error('Invalid slug for claims audit cache');
   const { loadStandardsFacts } = require('./contextLoader');
   const facts = loadStandardsFacts();
+  const cloud = require('../shared/config').CLOUD_ROUTINE;
+  const { claimsScreenSchema, claimsAdjudicationSchema, exactKeys, CLAIM_RULES } = require('./reviewContracts');
   const result = await (call || require('../shared/claude').claudeJSONFast)(
     CLAIMS_AUDIT_PROMPT,
     `${facts ? `${facts}\n\nFor rule 6, treat this table as correct even where it differs from what you remember: a draft that calls a superseded edition "current" is a violation.\n\n` : ''}TITLE: ${post.title}\nMETA DESCRIPTION: ${post.description}\n\nDRAFT:\n${post.body}`,
-    4096
+    4096, ...(cloud ? [{ schema: claimsScreenSchema }] : [])
   );
-  if (!Array.isArray(result?.findings) || result.findings.some(f => !f || !['rule', 'text', 'reason'].every(key => typeof f[key] === 'string' && f[key].trim()))) throw new Error('Required claims reviewer returned an invalid result');
+  if (!Array.isArray(result?.findings) || result.findings.some(f => !f || !['rule', 'text', 'reason'].every(key => typeof f[key] === 'string' && f[key].trim())) ||
+      (cloud && (!exactKeys(result, ['findings']) || result.findings.some(f => !exactKeys(f, ['rule', 'text', 'reason']) || !CLAIM_RULES.includes(f.rule))))) throw new Error('Required claims reviewer returned an invalid result');
   const raw = result.findings;
   let decisions = [];
   if (raw.length) {
@@ -911,12 +914,13 @@ async function auditClaims(post, { call, adjudicate, cacheDir = CLAIMS_CACHE_DIR
       CLAIMS_ADJUDICATION_PROMPT,
       JSON.stringify({ standardsFacts: facts, title: post.title, metaDescription: post.description,
         draft: post.body, screeningFindings: raw.map((finding, index) => ({ ...finding, index })) }),
-      4096
+      4096, ...(cloud ? [{ schema: claimsAdjudicationSchema }] : [])
     );
     if (!Array.isArray(resolution?.decisions) || resolution.decisions.length !== raw.length ||
         resolution.decisions.some(d => !d || !Number.isInteger(d.index) || d.index < 0 || d.index >= raw.length ||
           !['violation', 'clear', 'uncertain'].includes(d.verdict) || typeof d.reason !== 'string' || !d.reason.trim()) ||
-        new Set(resolution.decisions.map(d => d.index)).size !== raw.length) {
+        new Set(resolution.decisions.map(d => d.index)).size !== raw.length ||
+        (cloud && (!exactKeys(resolution, ['decisions']) || resolution.decisions.some(d => !exactKeys(d, ['index', 'verdict', 'reason']))))) {
       throw new Error('Required claims adjudication returned an invalid or incomplete result');
     }
     decisions = resolution.decisions.slice().sort((a, b) => a.index - b.index);

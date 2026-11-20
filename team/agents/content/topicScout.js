@@ -19,7 +19,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const guideConfig = require('../shared/guideConfig');
-const { KEYWORD_QUEUE_PATH } = require('../shared/config');
+const { KEYWORD_QUEUE_PATH, CLOUD_ROUTINE } = require('../shared/config');
+const { topicReviewSchema, exactKeys } = require('./reviewContracts');
 const { listPosts, normalizeUrl } = require('../shared/contentStore');
 const { normalize } = require('../shared/guideTopics');
 const { validSlug } = require('../../../lib/guide-contract.cjs');
@@ -122,7 +123,8 @@ function createTopicScout(paths = DEFAULT_PATHS, { listPublishedPosts = listPost
     let result;
     try { result = await reviewer(system, user, 2048); } catch(error) { return { verdict: 'unavailable', findings: [`Reviewer unavailable: ${String(error.message).slice(0, 200)}`], rules: {} }; }
     const rules = result?.rules;
-    const valid = rules && typeof rules === 'object' && Object.keys(REVIEW_RULES).every(k => ['pass', 'fail'].includes(rules[k])) && Array.isArray(result.findings);
+    const valid = rules && typeof rules === 'object' && Object.keys(REVIEW_RULES).every(k => ['pass', 'fail'].includes(rules[k])) && Array.isArray(result.findings)
+      && (!CLOUD_ROUTINE || (exactKeys(result, ['rules', 'findings']) && exactKeys(rules, Object.keys(REVIEW_RULES)) && result.findings.every(f => typeof f === 'string' && f.trim())));
     if (!valid) return { verdict: 'unavailable', findings: ['Reviewer returned an invalid verdict'], rules: {} };
     const failed = Object.keys(REVIEW_RULES).filter(k => rules[k] === 'fail');
     return { verdict: failed.length ? 'reject' : 'approve', findings: result.findings.map(String), rules };
@@ -298,7 +300,7 @@ async function pdfToText(bytes) {
 async function defaultReviewer(system, user, maxTokens) {
   const { claudeJSONFast, hasLLMKey } = require('../shared/claude');
   if (!hasLLMKey()) throw new Error('No LLM key configured for the scout reviewer');
-  return claudeJSONFast(system, user, maxTokens);
+  return claudeJSONFast(system, user, maxTokens, ...(CLOUD_ROUTINE ? [{ schema: topicReviewSchema(Object.keys(REVIEW_RULES)) }] : []));
 }
 
 // One line for the scout's commit message and status line; reads only fields every report has.
