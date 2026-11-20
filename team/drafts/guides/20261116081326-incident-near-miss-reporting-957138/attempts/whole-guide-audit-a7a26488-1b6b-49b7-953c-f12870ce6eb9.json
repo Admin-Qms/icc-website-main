@@ -1,0 +1,194 @@
+{
+  "inputHash": "54d37674785e7cd90484518a6a02d5b43a4e81131d4bfa88e6da2ba7fd743d44",
+  "reviewContextHash": "cc244deb169db2ff1c12ab9cefd524f3aba90300b5d54a106d576cfc585b9b85",
+  "reviewedAt": "2026-11-20T14:35:22.610Z",
+  "screening": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "The guide claims the ICC Safety page describes 'severity set from the level of harm' and states this repeatedly across multiple chapters (mapping-workflows, severity-triage, ongoing-operation). However, the research source only establishes this as a published description to be verified in a demonstration, not as a confirmed capability. The guide presents this claim as fact rather than as an unverified vendor statement in several contexts where it goes beyond the source's cautious framing.",
+      "The guide states 'The page describes an auditor view with the incident and near-miss log showing severity and status, floor reports including anonymous ones, and linked corrective actions' and repeats this exact phrase verbatim in audit-evidence-migration chapter ('The page describes an auditor view. According to the page, it shows the incident and near-miss log with severity and status, floor reports including anonymous ones, and the corrective actions linked to each incident.') This is near-verbatim repetition across different chapters beyond what is necessary for cross-reference.",
+      "The guide repeatedly states without qualification that the ICC page 'describes' or 'says' specific features (anonymous QR code reporting, corrective actions carried into Improvements module, separate dashboard with permissions). While each individual statement is technically supported by the research, the cumulative effect treats these descriptions as more established than the source warrants. The research explicitly notes these are 'published descriptions; availability and configuration must be confirmed in a demonstration and no capability is advertised as verified' - a caveat the guide does not consistently maintain in every application.",
+      "The guide does not adequately distinguish between what the ICC page actually states versus what it does not address. For example, it states 'The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting' as an open statement in the introduction, but then in later chapters asks evaluation questions about these without always explicitly restating that the page is silent on them, potentially creating an impression these are confirmed gaps rather than unverified absence of information.",
+      "The guide provides illustrative examples labeled as hypothetical but several chapters repeat nearly identical structural patterns (unnamed Canadian manufacturer, specific details, decision being made) with minimal variation. While each example is individually labeled as invented, the repetitive pattern itself across chapters (severity-triage, corrective-actions, audit-evidence-migration) creates cumulative length that may exceed the guidance on 'substantially copied paragraphs or examples, not merely recurring subject matter.'",
+      "The guide's treatment of Ontario's health and safety committee rules creates potential inconsistency. It correctly states 'The guide uses them as an example. Plants in other provinces, and federally regulated sites, have their own rules. Do not assume Ontario's requirements apply elsewhere' but then uses the Ontario guide as the primary cited authority for committee and recommendation requirements across multiple chapters without consistently repeating the jurisdictional qualification in every application.",
+      "The research source explicitly notes 'Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed' but the guide discusses field configurability and severity level selection in several chapters as though these are established capabilities, with only occasional reminders that they are 'questions for a demonstration.'",
+      "The guide references the ICC Safety page's claim that 'Every AI output is a suggestion that a person reviews before it enters a controlled record' but does not confirm whether this applies only to specific features or to all AI assistance in the module. The research source states this as ICC's statement, but the guide applies it as a design principle throughout without maintaining the distinction between what ICC states and what may be true of the product.",
+      "The severity-triage chapter presents a 'generic training illustration' table with three severity levels and states 'These three levels are an illustration for building a scale, not a recommended standard, and each plant should write definitions that match its own hazards.' However, this directly follows the statement 'The ICC page states severity is set from the level of harm; define each level in plain words with examples before configuring anything.' The sequence could mislead a reader into believing the three-level table reflects what the page describes, when it is explicitly not.",
+      "The guide states in the introduction 'The ICC Safety page publishes a description' and treats multiple descriptions as equivalent evidence without distinguishing between ones that were explicitly verified by the research ('ROOT-BROWSER-VERIFIED on 2026-11-19: Codex root directly read the primary ICC Safety page') and ones that were not. All statements are presented with similar confidence.",
+      "The reporting-intake chapter states 'The page mentions configuring terminology' and later 'Ask for a demonstration of that with an example' but does not establish that the anonymous form's terminology can be configured separately from general terminology. The source says the page 'mentions' this for modules generally, not specifically for the anonymous reporting form.",
+      "The guide claims in multiple chapters that the plant should 'Ask the vendor' for clarification on topics the page does not address. While appropriate as evaluation guidance, it creates an accumulation of open questions that might give an impression the page is more sparse than it actually is on some topics, versus genuinely silent on others."
+    ]
+  },
+  "adjudication": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "dimensionReasons": {
+      "claims": "Every factual assertion about ICC capabilities is explicitly attributed to the published ICC Safety page and consistently framed as a published description to confirm in a demonstration. The guide states the page 'describes' or 'says' features and immediately qualifies that these are published descriptions, not verified capabilities. The severity-from-harm statement appears as 'the ICC Safety module page states that severity is set from the level of harm' (page:4:paragraph:2), which accurately reflects source:0:claim:0 and source:0:claim:10. The three-level table is explicitly labelled 'a generic training illustration' with a disclaimer that it does not reflect ICC configuration (page:4:paragraph:4, page:4:paragraph:5). Ontario rules are consistently qualified with jurisdictional caveats. AI is discussed by quoting the ICC page statement and applying it as a design principle, which is legitimate use of a vendor description. No assertion goes beyond what the sources support or removes the evaluation-question framing the sources require.",
+      "consistency": "The guide consistently applies evaluation-question framing for unverified capabilities and jurisdictional qualifications for Ontario rules throughout all nine chapters. The introduction at page:0:paragraph:4 through page:0:paragraph:6 sets out the framework honestly, and each chapter applies it. Where Ontario rules are cited, the qualification 'confirm the rules for your own jurisdiction' or equivalent recurs at each material application (page:1:paragraph:26, page:4:paragraph:33, page:5:paragraph:34, page:6:paragraph:26, page:7:paragraph:11, page:7:paragraph:20, page:8:paragraph:35). The AI principle is applied consistently as a design rule derived from a vendor statement, which is not inconsistent. The guide does not contradict itself on what is known versus what must be confirmed.",
+      "repetition": "The auditor-view description recurs across chapters but each instance uses different surrounding text, different context and different evaluation questions. Page:0:paragraph:4 introduces it; page:1:paragraph:34 uses it to illustrate acceptance criteria; page:2:paragraph:26 examines it in the evidence-and-permissions evaluation context; page:5:paragraph:33 asks whether the investigation appears in it; page:6:paragraph:22 uses it to set a linking standard; page:8:paragraph:2 rehearses it for audit preparation; page:9:paragraph:6 uses it to frame quarterly review. Each occurrence serves a distinct chapter purpose and none is a substantially copied paragraph. The illustrative examples each involve a different scenario (guard gap notes, demonstration scoring, forklift rating dispute, intake form field reduction, dock signal gap, action linking, committee dashboard, audit rehearsal, import pilot, quarterly sample) and are not substantially copied. Short recurrence of factual cautions about jurisdictional limits and demonstration requirements is permissible under the maintained writing rule."
+    },
+    "unresolvedFindings": [
+      "The reporting-intake chapter (page:3:paragraph:6) states 'The page generally mentions configuring module fields, checklists, terminology, and routing; it does not confirm that the anonymous form itself has configurable fields' and directs the reader to ask the vendor. This is an accurate and honest boundary statement. No overclaim is made about anonymous-form field configurability; the finding is therefore not a defect but an accurate declaration of a research gap, which the guide handles correctly by directing evaluation rather than asserting capability."
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "clear",
+        "reason": "The guide presents severity-from-harm consistently as a published vendor description requiring demonstration confirmation. At page:4:paragraph:2 it states 'the ICC Safety module page states that severity is set from the level of harm. That is a sound starting principle for any tool, and it gives the plant a direct question for a demonstration.' At page:1:paragraph:34 it says 'Treat each of those descriptions as a question for a demonstration, not as a verified promise.' The framing matches source:0:claim:0 and source:0:claim:10, which describe it as a published description with confirmation required. No instance removes the evaluation-question framing.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:10",
+          "page:4:paragraph:2",
+          "page:1:paragraph:34",
+          "page:1:paragraph:35"
+        ]
+      },
+      {
+        "index": 1,
+        "verdict": "clear",
+        "reason": "Each occurrence of the auditor-view description serves a distinct chapter purpose. Page:0:paragraph:4 introduces the source. Page:1:paragraph:34 uses it to illustrate acceptance criteria. Page:2:paragraph:26 uses it to structure the evidence examination. Page:5:paragraph:33 asks whether investigations appear there. Page:6:paragraph:22 uses it to define a linking standard. Page:8:paragraph:2 uses it as the starting point for audit rehearsal. The surrounding prose, purpose and evaluation questions differ in each case. The passages are not substantially copied paragraphs; they share a subject-matter reference to a source claim, which is permissible recurrence under the maintained writing rule.",
+        "evidenceIds": [
+          "source:0:claim:4",
+          "page:0:paragraph:4",
+          "page:1:paragraph:34",
+          "page:2:paragraph:26",
+          "page:5:paragraph:33",
+          "page:6:paragraph:22",
+          "page:8:paragraph:2"
+        ]
+      },
+      {
+        "index": 2,
+        "verdict": "clear",
+        "reason": "Each description of an ICC capability is introduced with attribution to the published page and paired with an instruction to confirm in a demonstration. The guide states in the introduction at page:0:paragraph:4 that 'These are published descriptions. The guide does not treat any of them as a verified capability.' Page:2:paragraph:3 notes the page describes configuring module fields but 'does not establish which anonymous-report form fields are present or configurable.' Page:3:paragraph:6 says the research 'does not establish which fields the form includes. That detail is a question for a demonstration.' Source:0:claim:0 and source:0:claim:10 record these as published descriptions with confirmation required, and the guide honours that consistently.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:1",
+          "source:0:claim:2",
+          "source:0:claim:3",
+          "source:0:claim:10",
+          "page:0:paragraph:4",
+          "page:2:paragraph:3",
+          "page:3:paragraph:6"
+        ]
+      },
+      {
+        "index": 3,
+        "verdict": "clear",
+        "reason": "The guide explicitly lists the gaps at page:0:paragraph:6 ('Several matters are not covered by the research behind this guide, and the guide treats them as open questions for a demonstration: pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, how existing logs could be imported, and how external reviewers would be given access'). Later chapters reference specific gaps with 'the page does not state' or 'ask the vendor' language that is consistent with this framing. Source:0:claim:9 records these as evaluation questions, and the guide applies that designation consistently.",
+        "evidenceIds": [
+          "source:0:claim:9",
+          "page:0:paragraph:6",
+          "page:2:paragraph:9",
+          "page:4:paragraph:32",
+          "page:6:paragraph:17"
+        ]
+      },
+      {
+        "index": 4,
+        "verdict": "clear",
+        "reason": "The illustrative examples across chapters each involve different scenarios with different decisions: a guard-gap classification problem (page:1:paragraph:8), an acceptance-criteria demonstration (page:1:paragraph:39), a vendor scoring session with two vendors and rating history (page:2:paragraph:18), a form field reduction trial (page:3:paragraph:8), a forklift near-miss rating dispute (page:4:paragraph:9), an action assignment for a guard fix (page:6:paragraph:16), a committee dashboard access design (page:7:paragraph:7), an audit rehearsal finding a missing link (page:8:paragraph:8), a clause mapping exercise (page:8:paragraph:17), and a data import pilot with date errors (page:8:paragraph:26). The structural label 'Illustrative example' and the formula 'unnamed Canadian manufacturer' are a consistent disclosure convention, not substantially copied prose. Subject-matter recurrence in this convention is permissible.",
+        "evidenceIds": [
+          "page:1:paragraph:8",
+          "page:1:paragraph:39",
+          "page:2:paragraph:18",
+          "page:3:paragraph:8",
+          "page:4:paragraph:9",
+          "page:6:paragraph:16",
+          "page:7:paragraph:7",
+          "page:8:paragraph:8",
+          "page:8:paragraph:17",
+          "page:8:paragraph:26"
+        ]
+      },
+      {
+        "index": 5,
+        "verdict": "clear",
+        "reason": "The Ontario jurisdictional qualification recurs at each material application of Ontario-specific rules. Page:1:paragraph:26 states 'Do not assume Ontario's requirements apply elsewhere; confirm the rules that apply to each site with the relevant authority.' Page:4:paragraph:33 notes provincial and federal rules differ and directs plants to consult the applicable authority. Page:7:paragraph:11 states 'Those figures are Ontario's and apply to the workplaces the guide describes. A plant should check the current official page and the rules for its own province.' Page:7:paragraph:20 qualifies the 21-day rule with 'Applicability and exceptions depend on the workplace and legislation, which governs; plants elsewhere should confirm their own rules.' The qualification is present at every significant application and matches source:1:claim:5.",
+        "evidenceIds": [
+          "source:1:claim:5",
+          "page:1:paragraph:26",
+          "page:4:paragraph:33",
+          "page:7:paragraph:11",
+          "page:7:paragraph:20",
+          "page:8:paragraph:35"
+        ]
+      },
+      {
+        "index": 6,
+        "verdict": "clear",
+        "reason": "The guide explicitly states the limits of research on field configurability and severity levels. Page:3:paragraph:6 states 'The research reviewed for this guide does not establish which fields the form includes. That detail is a question for a demonstration' and 'it does not confirm that the anonymous form itself has configurable fields.' Page:4:paragraph:5 states 'The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.' These declarations match source:0:claim:10, which records that 'Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed.' The guide does not assert these as confirmed capabilities.",
+        "evidenceIds": [
+          "source:0:claim:10",
+          "page:3:paragraph:6",
+          "page:4:paragraph:5",
+          "page:4:paragraph:2"
+        ]
+      },
+      {
+        "index": 7,
+        "verdict": "clear",
+        "reason": "The guide attributes the AI statement to the ICC page and uses it as a design principle, which is a legitimate application of a vendor claim. Page:0:paragraph:7 states 'Where artificial intelligence is discussed, the published ICC page states that every AI output in the software is a suggestion a person reviews before it enters a controlled record, and the guide uses that as a design principle.' Page:2:paragraph:27 says 'The page states that every AI output in the software is a suggestion a person reviews before it enters a controlled record. That is a useful design principle for any product, and the plant should ask for specifics.' Page:5:paragraph:26 credits the ICC page and directs evaluation questions. Source:0:claim:7 records the AI statement as a page description. The guide applies it conditionally and does not assert it as a verified product behavior.",
+        "evidenceIds": [
+          "source:0:claim:7",
+          "page:0:paragraph:7",
+          "page:2:paragraph:27",
+          "page:5:paragraph:26",
+          "page:5:paragraph:31"
+        ]
+      },
+      {
+        "index": 8,
+        "verdict": "clear",
+        "reason": "The three-level table at page:4:paragraph:4 is introduced as 'a generic training illustration for designing a scale' and the following paragraph at page:4:paragraph:5 states 'These three levels are an illustration for building a scale, not a recommended standard, and each plant should write definitions that match its own hazards and its own approach to risk. The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.' The disclaimer is explicit and placed immediately after the table. The sequence leading from the ICC severity-from-harm statement to the illustrative table does not assert any connection between the two; the paragraph separating them makes clear they are distinct.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:10",
+          "page:4:paragraph:2",
+          "page:4:paragraph:3",
+          "page:4:paragraph:4",
+          "page:4:paragraph:5"
+        ]
+      },
+      {
+        "index": 9,
+        "verdict": "clear",
+        "reason": "The guide does not claim any individual statement is ROOT-BROWSER-VERIFIED beyond what the research records establish. The source records include source:0:claim:10 as a ROOT-BROWSER-VERIFIED summary and source:1:claim:0 as ROOT-BROWSER-VERIFIED for the Ontario guide. The guide presents all ICC page descriptions with the same consistent framing of 'published descriptions' requiring demonstration confirmation, which is appropriate because source:0:claim:10 notes the browser-verified read confirmed the described features as vendor descriptions, not a verified plant condition. The guide's consistent treatment of all descriptions as evaluation questions is therefore correct, not misleadingly uniform.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:10",
+          "source:1:claim:0",
+          "page:0:paragraph:4",
+          "page:0:paragraph:5"
+        ]
+      },
+      {
+        "index": 10,
+        "verdict": "clear",
+        "reason": "Page:3:paragraph:6 states explicitly: 'The page generally mentions configuring module fields, checklists, terminology, and routing; it does not confirm that the anonymous form itself has configurable fields. Ask the vendor to show whether a form field can be renamed or added using a plant example.' This directly acknowledges the distinction between general module configurability and anonymous-form-specific configurability, which is precisely the boundary the finding identifies. The guide does not assert the anonymous form has configurable fields; it marks this as an unconfirmed question for a demonstration. Source:0:claim:10 supports this as an unconfirmed detail.",
+        "evidenceIds": [
+          "source:0:claim:10",
+          "source:0:claim:6",
+          "page:3:paragraph:6",
+          "page:3:paragraph:24"
+        ]
+      },
+      {
+        "index": 11,
+        "verdict": "clear",
+        "reason": "The accumulation of 'Ask the vendor' instructions is an accurate reflection of the number of topics the research records as unconfirmed or absent from the ICC page. Source:0:claim:9 and source:0:claim:10 explicitly list pricing, notifications, injury classification beyond severity, regulatory reporting, import mechanics, and anonymous-form field configuration as unconfirmed or absent. Directing evaluation questions to each of these is accurate guidance, not a mischaracterization of the page's coverage. The guide does not describe any of these as page-confirmed gaps; it describes them as open questions, which matches the research records.",
+        "evidenceIds": [
+          "source:0:claim:9",
+          "source:0:claim:10",
+          "page:0:paragraph:6",
+          "page:2:paragraph:9",
+          "page:3:paragraph:25",
+          "page:4:paragraph:32"
+        ]
+      }
+    ]
+  }
+}
