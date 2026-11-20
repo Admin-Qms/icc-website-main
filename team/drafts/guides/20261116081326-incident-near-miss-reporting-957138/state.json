@@ -34,7 +34,7 @@
     ]
   },
   "productionSlotId": "2026-W47-slot-1",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-workflows": {
       "hash": "e5c529af216186caf054858837eb93c0c09852261a5428c4c5726ae149b49de3",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-20T14:09:34.102Z",
+  "updatedAt": "2026-11-20T14:23:11.152Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -3179,7 +3179,687 @@
   },
   "researchHash": "787552eb0e3e1cfe85cdfe24d931bb36d1c07e11f1c769c73a00896fc2258901",
   "outlineHash": "4666dbc28ac080c95dd5aa8d49380276ee7b8565a827d1777a0aebbc61cb105b",
-  "audit": null,
+  "audit": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "unresolvedFindings": [],
+    "screening": {
+      "claims": "failed",
+      "consistency": "failed",
+      "repetition": "failed",
+      "unresolvedFindings": [
+        "The guide describes ICC's severity scale as set from the level of harm but presents only a generic illustrative table (Low/Medium/High) with examples like 'a cable across a walkway' that are not attributed to ICC or verified as ICC's actual levels. The research does not confirm ICC's actual severity levels, their definitions, or whether they are configurable to match the plant's own harm scale. This creates a gap between the published claim 'severity is set from the level of harm' and the unverified assertion that the plant can define levels in its own words using the product.",
+        "The guide repeatedly states the ICC page 'does not describe' or 'does not state' notifications, alerts, regulatory reporting, import procedures, external reviewer access, PIN access, pricing, injury classification and other capabilities, then treats these as 'open questions for the vendor' and 'evaluation questions'. However, the guide itself then provides detailed guidance on how to handle these topics (e.g., 'Ask whether routing is configured: whether a rating can trigger a message' in the severity-triage chapter, 'Ask the vendor to show how related reports are connected' in reporting-intake chapter, and 'Ask the vendor how the product holds evidence' in investigation chapter). This creates a logical inconsistency: if a capability is unverified, the guide should not provide prescriptive guidance on testing it as though the feature may exist, because that implies the vendor description supports its evaluation, which contradicts the disclaimer that it is not described.",
+        "The opening chapter states: 'The guide does not treat any of them as a verified capability, and it asks the reader to confirm each one in a demonstration.' Yet the mapping chapter states the ICC page 'describes an auditor view with the incident and near-miss log showing severity and status, floor reports including anonymous ones, and corrective actions linked to each incident' and provides this as a basis for a rehearsal, treating the auditor view as a confirmed feature for testing purposes rather than an unverified capability requiring demonstration.",
+        "The guide makes a distinction between 'published descriptions' and 'verified capabilities' and repeatedly disclaims that the ICC page does not confirm specific configuration details. However, in multiple chapters (e.g., 'intake' and 'severity-triage'), the guide provides tables and instructions for testing whether the product can be configured in certain ways (e.g., configurable fields, severity-scale rewriting, permission role-limiting) without evidence that ICC's product supports or restricts those tests. This blurs the line between asking about an unconfirmed feature and providing guidance as though configuration is likely possible.",
+        "In the 'ongoing-operation' chapter, the guide provides ten detailed FAQ answers that address questions such as 'Should anonymous reporting be allowed?' and 'How should incidents link to corrective actions?' with prescriptive guidance. These answers treat ICC features (anonymous reporting via QR code, linking to Improvements module) as established facts to be used in the answers, contradicting the guide's repeated stance that these are unverified capabilities. For example, the anonymous-reporting answer states 'The ICC page describes an anonymous report form opened by a QR code on the floor, with no login' and provides guidance on implementing it, which presents the feature as confirmed for practical adoption rather than as a claim to be tested.",
+        "The guide presents one illustrative example in the introduction ('An unnamed Canadian manufacturer evaluates incident and near-miss reporting software for one production area; all situations and records are hypothetical, not customer results') but then provides multiple illustrative examples throughout each chapter (e.g., 'An unnamed Canadian manufacturer finds three differently worded notes,' 'The team drops a vendor that cannot show a report becoming an action,' 'A scenario shows that a floor report waits for the supervisor to return'). These examples become increasingly detailed and specific, blurring the boundary between hypothetical illustration and plausible implementation guidance. The guide does not consistently label each scenario with 'Illustrative example' or restate the hypothetical disclaimer.",
+        "In the 'ongoing-operation' chapter FAQ section, the guide states: 'The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4 and 6.1.2' and then immediately asks plants to 'keep any statements about compliance modest and tie each to a record the plant can show, and have a qualified person confirm clause details against the standard itself.' This guidance warns against overclaiming yet simultaneously references the ICC mapping as a basis for the plant's own evidence map, treating a published description as a starting point for compliance work without reiterating that the mapping is unverified.",
+        "The guide's section on configuring modules states: 'The page generally describes configuring module fields and terminology, but it does not establish which anonymous-report form fields are present or configurable, and that form's wording can change.' However, the reporting-intake chapter then instructs: 'Choose wording carefully. A field called \"incident category\" means little to someone who has just seen a forklift nearly strike a rack. \"What happened?\" with a short pick list of the plant's most common event types works better.' This provides prescriptive guidance on form wording and field renaming as though ICC supports both, without evidence of the capability.",
+        "The guide repeatedly refers to 'The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/)' in multiple chapters and cross-references itself, stating findings 'described' or 'published' by ICC. However, the opening research states 'ROOT-BROWSER-VERIFIED on 2026-11-19: Codex root directly read the primary ICC Safety page in Chrome. It describes severity by harm, an anonymous QR no-login form, separate dashboard and permissions, corrective-action handoff, and numbered configuration sections 01–04.' The word 'describes' is used both for what the page actually states and for what the guide attributes to it in later chapters, creating ambiguity about whether each chapter's reference is to a verified statement or an inference.",
+        "The guide's chapters on severity-triage and corrective-actions instruct the plant to 'ask the vendor' whether specific features exist (e.g., 'Ask the vendor how routing is configured: whether a rating can trigger a message to named roles, how a message is delivered, whether the reader must acknowledge it'). This frames the question as one to ask ICC, implying ICC may have the capability. However, the opening states the ICC page 'does not state notifications or alerts,' so the chapter's instruction to test whether messages can be delivered contradicts the foundational research by implying ICC might support messages when the page does not describe them.",
+        "The guide's advice to 'Ask the vendor to show whether a form field can be renamed or added using a plant example' in the reporting-intake chapter is ungrounded in evidence that ICC forms are configurable. The research states the page 'generally describes configuring module fields and terminology,' but does not confirm that the anonymous-report form specifically can be renamed. The chapter treats field-renaming as a testable feature without acknowledging that it may not be supported.",
+        "The guide states: 'The [Ontario guide](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) describes committees for Ontario workplaces, and plants elsewhere should check the rules that apply to their sites.' However, the committee-visibility chapter repeats this instruction four times in nearly identical words ('The plant should check its own obligations with the authority that applies to its site'; 'confirm the rules that apply with the relevant authority'; 'check the rules for the relevant province instead of assuming Ontario's apply nationally'). This substantial near-verbatim repetition of the same instruction across multiple subsections violates the maintained writing rule against substantially copied guidance.",
+        "The guide's mapping chapter states: 'The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4, and 6.1.2. These are the page's own descriptions.' The research confirms ICC publishes this mapping. However, the guide then states: 'A mapping of this kind says that the module may produce records relevant to the clause. It does not say that using the module satisfies the clause.' This disclaimer is correct but is then repeated almost verbatim in the FAQ section: 'The plant remains responsible for its processes, its records and its own interpretation of the standard. Keep any statements about compliance modest and tie each to a record the plant can show, and have a qualified person confirm clause details against the standard itself.' The core principle (mapping is not compliance proof) is stated twice with similar reasoning in two chapters, constituting repetition of a substantial guidance element.",
+        "The guide provides a generic severity-scale table with three levels (Low, Medium, High) labeled as 'an illustration for building a scale, not a recommended standard.' However, the guide does not confirm whether this table structure matches ICC's own levels, whether ICC offers three or more levels, or whether ICC's levels can be renamed. The table serves as a template for plants to build their own scale, but the guide presents it in the same context as ICC's severity-rating design without clarifying that ICC's actual implementation is unconfirmed.",
+        "The research indicates the ICC page states 'every AI output is a suggestion that a person reviews before it enters a controlled record.' However, the investigation chapter treats this as a design principle the plant should enforce: 'Where AI drafts anything, a person reviews it before it enters the record, as the ICC page states.' This conflates the ICC page's description with the plant's own adoption requirement, implying ICC's AI output exists as a feature when the page only states the principle if AI is used.",
+        "The guide instructs: 'The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) is not backed by research in this guide that describes import capability or procedures, so ask the vendor directly.' Yet earlier chapters reference the page's descriptions of other features (anonymous reporting, severity, auditor view) as if they are verified. This selective skepticism—treating import as unverified while treating other ICC descriptions as confirmed for testing—creates an inconsistency in how the guide treats ICC's published descriptions across different sections.",
+        "The guide's FAQ section answers the question 'Does software guarantee ISO 45001 compliance?' by stating: 'The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4 and 6.1.2, but a mapping points to possible evidence and does not guarantee that a clause is met.' This answer uses the ICC page's mapping as a basis for the answer, treating the mapping as an established starting point for the plant's own understanding, which may overclaim the mapping's scope without acknowledging that the map's accuracy is unverified beyond the page itself."
+      ]
+    },
+    "adjudication": {
+      "claims": "passed",
+      "consistency": "passed",
+      "repetition": "passed",
+      "dimensionReasons": {
+        "claims": "The guide consistently presents ICC-sourced claims with appropriate attribution and qualification. It describes severity as 'set from the level of harm,' the QR-code anonymous form, the separate dashboard with permissions, corrective-action handoff to Improvements, and the auditor view—all drawn from browser-verified source records (source:0:claim:0 through source:0:claim:10). The generic Low/Medium/High severity table is explicitly labeled 'a generic training illustration for designing a scale' and 'not an ICC screen, a list of ICC levels, or evidence of ICC configuration.' Guidance on routing, field renaming, and notifications is framed as evaluation questions to ask the vendor, not as asserted ICC capabilities. The maintained writing rule is satisfied: unverified capabilities appear as evaluation questions, explicit hypotheticals are labeled, and no genuinely unsupported assertion that a feature exists is made.",
+        "consistency": "The guide is internally consistent throughout. The opening introduction states that ICC descriptions are 'published descriptions' to be confirmed in a demonstration, and each chapter honors that by framing ICC references as claims to test. Using published descriptions as a basis for evaluation questions ('ask the vendor whether…') is not inconsistent with disclaiming verification—it is the appropriate way to structure evaluation guidance. The auditor view is used as a 'basis for rehearsal' while still labeled a published description requiring demonstration confirmation (page:8:paragraph:2). Using the ISO 45001 clause mapping as a starting point while disclaiming that it proves compliance is similarly consistent. No chapter contradicts the foundational framing.",
+        "repetition": "No substantially copied paragraphs or examples appear across chapters. The Ontario jurisdiction caution ('plants elsewhere should check the rules that apply to their sites') recurs briefly in multiple chapters because each chapter independently touches on provincial regulation, and the maintained writing rule explicitly permits necessary short factual cautions and jurisdiction qualifications to recur across standalone chapters. The compliance-is-not-guaranteed disclaimer appears in the audit-evidence chapter and the FAQ, but the two passages are worded differently and serve different rhetorical purposes (one building an evidence map, one answering a direct question). These are recurring subject matters with distinct wording, not substantially copied paragraphs."
+      },
+      "unresolvedFindings": [],
+      "decisions": [
+        {
+          "index": 0,
+          "verdict": "clear",
+          "reason": "The guide explicitly labels the Low/Medium/High table as 'a generic training illustration for designing a scale, not a recommended standard' and states 'The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.' The claim that severity is 'set from the level of harm' is accurately sourced to the ICC page (source:0:claim:0) with the caveat that it is a published description to confirm in demonstration. No unsupported assertion about ICC's specific configurable levels is made.",
+          "evidenceIds": [
+            "source:0:claim:0",
+            "page:4:paragraph:4",
+            "page:4:paragraph:5"
+          ]
+        },
+        {
+          "index": 1,
+          "verdict": "clear",
+          "reason": "Advising a reader to ask a vendor whether a capability exists is not an assertion that the capability exists. The guide explicitly states the ICC page does not describe notifications, alerts, regulatory reporting, import or PIN access (source:0:claim:9) and treats each as an evaluation question. Guidance such as 'Ask whether routing is configured: whether a rating can trigger a message' is a correctly framed evaluation criterion, not a claim that ICC has the feature. This is consistent with the maintained writing rule that conditional advice and evaluation questions are not promises.",
+          "evidenceIds": [
+            "source:0:claim:9",
+            "page:4:paragraph:16",
+            "page:2:paragraph:9"
+          ]
+        },
+        {
+          "index": 2,
+          "verdict": "clear",
+          "reason": "The guide presents the auditor view as a published description from the ICC page (source:0:claim:4) and in the audit-evidence chapter explicitly states 'That is a published description. Ask the vendor to show the view with the plant's own sample records' (page:8:paragraph:2). Using a published description to structure a rehearsal while labeling it as unverified is appropriate evaluation guidance, not an assertion that the feature is confirmed.",
+          "evidenceIds": [
+            "source:0:claim:4",
+            "page:8:paragraph:2"
+          ]
+        },
+        {
+          "index": 3,
+          "verdict": "clear",
+          "reason": "Providing tables and instructions for testing whether ICC supports configurable fields is evaluation guidance, not an assertion that ICC supports them. The guide states 'The page generally mentions configuring module fields, checklists, terminology, and routing; it does not confirm that the anonymous form itself has configurable fields. Ask the vendor to show whether a form field can be renamed' (page:3:paragraph:6). Testing a capability in a demonstration is the correct response to an unconfirmed published description.",
+          "evidenceIds": [
+            "source:0:claim:6",
+            "page:3:paragraph:6",
+            "page:2:paragraph:3"
+          ]
+        },
+        {
+          "index": 4,
+          "verdict": "clear",
+          "reason": "The FAQ answers correctly attribute ICC features to the published page and frame them as published descriptions. The anonymous-reporting answer states 'The ICC page describes an anonymous report form opened by a QR code on the floor, with no login' (page:9:paragraph:21), which is accurate per source:0:claim:1. The answer then says 'If the plant accepts anonymous reports, it should decide…' and 'The policy should be written down'—guidance on what the plant should do if it adopts the feature, not a claim that the feature is verified. This is conditional advice, not an unsupported assertion.",
+          "evidenceIds": [
+            "source:0:claim:1",
+            "page:9:paragraph:21",
+            "page:9:paragraph:25"
+          ]
+        },
+        {
+          "index": 5,
+          "verdict": "clear",
+          "reason": "Every substantive example in the guide is labeled 'Illustrative example:' in bold with the prefix 'An unnamed Canadian manufacturer' and concludes with 'The scenario is invented and does not describe a customer result' or similar. The examples cited in the finding (three notes about a guard gap, a vendor dropping example, a floor report waiting) are all either labeled illustrative examples or are brief procedural prompts clearly framed as 'one option' or 'might look like,' not presented as measured outcomes. The guide is consistent in its labeling.",
+          "evidenceIds": [
+            "page:0:paragraph:7",
+            "page:1:paragraph:8",
+            "page:1:paragraph:39",
+            "page:4:paragraph:9"
+          ]
+        },
+        {
+          "index": 6,
+          "verdict": "clear",
+          "reason": "Using the ICC clause mapping as a starting point for building an evidence map while simultaneously stating 'A mapping of this kind says that the module may produce records relevant to the clause. It does not say that using the module satisfies the clause' (page:8:paragraph:11) is internally consistent. The source confirms ICC publishes this mapping (source:0:claim:5), and the guide accurately quotes it while disclaiming compliance. The FAQ section's parallel warning ('mapping points to possible evidence and does not guarantee that a clause is met') is the same principle, correctly restated in a different context.",
+          "evidenceIds": [
+            "source:0:claim:5",
+            "page:8:paragraph:11",
+            "page:9:paragraph:31"
+          ]
+        },
+        {
+          "index": 7,
+          "verdict": "clear",
+          "reason": "The reporting-intake chapter's guidance on choosing clear field wording ('What happened?' instead of 'incident category') is general form-design advice, not an assertion that ICC supports field renaming. The chapter separately and explicitly states the page does not confirm the anonymous form has configurable fields and instructs the reader to ask the vendor (page:3:paragraph:6). Practical form-design advice and an evaluation question about ICC's configuration capabilities are different topics and are kept apart.",
+          "evidenceIds": [
+            "page:3:paragraph:6",
+            "page:3:paragraph:7",
+            "source:0:claim:10"
+          ]
+        },
+        {
+          "index": 8,
+          "verdict": "clear",
+          "reason": "The root-browser-verified source record (source:0:claim:10) uses 'describes' consistently to mean 'the page states.' Each subsequent chapter reference to the ICC page as 'describing' a feature uses the same meaning and accompanies it with a qualification that the description must be confirmed in a demonstration. No chapter attributes to the page something the source records do not support. The ambiguity alleged in the finding does not exist: 'describes' is used uniformly to mean 'the vendor's published page states,' and each use is accompanied by appropriate qualification.",
+          "evidenceIds": [
+            "source:0:claim:10",
+            "page:0:paragraph:4",
+            "page:2:paragraph:3"
+          ]
+        },
+        {
+          "index": 9,
+          "verdict": "clear",
+          "reason": "Instructing a plant to ask the vendor whether a feature exists when the page does not describe it is precisely the correct evaluation behavior. The guide acknowledges the ICC page does not state notifications or alerts (source:0:claim:9) and then tells the plant to ask the vendor how routing works. That sequence—note the absence from the published description, ask the vendor—is the evaluation methodology the guide teaches throughout. It does not imply ICC has the feature; it acknowledges the gap and directs the reader to close it.",
+          "evidenceIds": [
+            "source:0:claim:9",
+            "page:4:paragraph:16",
+            "page:6:paragraph:17"
+          ]
+        },
+        {
+          "index": 10,
+          "verdict": "clear",
+          "reason": "The source records confirm the ICC page 'generally describes configuring module fields, checklists, terminology, and routing' (source:0:claim:6, source:0:claim:10). The guide relies on that general description to frame an evaluation question about whether the anonymous form specifically can be renamed, while explicitly stating the page does not confirm that specific form (page:3:paragraph:6). Asking a vendor to demonstrate a possible capability that general module-configuration language might support is appropriate evaluation guidance, not an unsupported assertion.",
+          "evidenceIds": [
+            "source:0:claim:6",
+            "source:0:claim:10",
+            "page:3:paragraph:6"
+          ]
+        },
+        {
+          "index": 11,
+          "verdict": "clear",
+          "reason": "The jurisdiction caution ('plants elsewhere should check the rules that apply to their sites') is a short factual qualification that must recur in each chapter that touches on provincial regulation, because each chapter is a standalone page per the evaluation rules. The caution appears in briefly varying forms across chapters, not as substantially copied paragraphs. The maintained writing rule explicitly permits necessary short factual cautions and jurisdiction qualifications to recur across standalone chapters. No two passages are substantially copied; they are distinct in length, context and surrounding content.",
+          "evidenceIds": [
+            "page:1:paragraph:26",
+            "page:4:paragraph:33",
+            "page:7:paragraph:11",
+            "page:5:paragraph:34"
+          ]
+        },
+        {
+          "index": 12,
+          "verdict": "clear",
+          "reason": "The 'mapping is not compliance proof' principle appears once in the audit-evidence chapter building an evidence map (page:8:paragraph:11) and once in the FAQ answering a direct question about software and ISO 45001 compliance (page:9:paragraph:31). The two passages have different wording, different surrounding content, different purposes and different levels of detail. The maintained writing rule fails repetition only for substantially copied paragraphs or examples, not for a recurring subject matter or short factual caution. This principle is a necessary recurring caution, not a substantially copied passage.",
+          "evidenceIds": [
+            "page:8:paragraph:11",
+            "page:9:paragraph:31",
+            "source:0:claim:5"
+          ]
+        },
+        {
+          "index": 13,
+          "verdict": "clear",
+          "reason": "The severity table is explicitly labeled 'a generic training illustration for designing a scale, not a recommended standard' and 'not an ICC screen, a list of ICC levels, or evidence of ICC configuration' (page:4:paragraph:3, page:4:paragraph:5). The guide expressly states 'The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.' No claim is made that the table reflects ICC's implementation. The finding's concern is directly addressed by the guide's own text.",
+          "evidenceIds": [
+            "page:4:paragraph:3",
+            "page:4:paragraph:5",
+            "source:0:claim:0"
+          ]
+        },
+        {
+          "index": 14,
+          "verdict": "clear",
+          "reason": "The ICC page's statement that every AI output is a suggestion a person reviews before entering a controlled record (source:0:claim:7) is a published vendor description. Using it as a 'design principle' for the plant's own review policy is appropriate: the guide says 'the plant can use that as a rule for itself' (page:5:paragraph:31), framing it as an adopted principle rather than a confirmed ICC feature. The investigation chapter similarly states 'Where AI drafts anything, a person reviews it before it enters the record, as the ICC page states'—this attributes the principle accurately to the page as a published source, not as a verified implementation.",
+          "evidenceIds": [
+            "source:0:claim:7",
+            "page:5:paragraph:31",
+            "page:5:paragraph:26"
+          ]
+        },
+        {
+          "index": 15,
+          "verdict": "clear",
+          "reason": "The guide explicitly states the ICC page is 'not backed by research in this guide that describes import capability or procedures' (page:8:paragraph:21), treats this as an open question, and applies the same open-question framing to other ICC features throughout. Features like anonymous reporting and the auditor view are grounded in browser-verified source claims (source:0:claim:1, source:0:claim:4) while import is not, so the distinction in treatment follows the evidence, not selective skepticism. This is consistent, evidence-based differentiation.",
+          "evidenceIds": [
+            "source:0:claim:1",
+            "source:0:claim:4",
+            "page:8:paragraph:21"
+          ]
+        },
+        {
+          "index": 16,
+          "verdict": "clear",
+          "reason": "The FAQ answer accurately states the ICC page maps to three clauses (source:0:claim:5) and immediately disclaims that this mapping does not guarantee compliance (page:9:paragraph:31). Using a verified published mapping as a starting point for a compliance discussion while disclaiming what it proves is precisely the appropriate use of such evidence. The source confirms ICC publishes this mapping, and the guide does not assert the map's accuracy beyond what the page states.",
+          "evidenceIds": [
+            "source:0:claim:5",
+            "page:9:paragraph:31",
+            "page:8:paragraph:11"
+          ]
+        }
+      ]
+    },
+    "resolvedEvidence": [
+      {
+        "index": 0,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:0",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 0,
+            "quote": "The published ICC page describes incident and near-miss reporting in which severity is set from the level of harm. These are published descriptions; availability and configuration must be confirmed in a demonstration and no capability is advertised as verified."
+          },
+          {
+            "evidenceId": "page:4:paragraph:4",
+            "kind": "page",
+            "id": "severity-triage",
+            "paragraph": 4,
+            "quote": "| Level | Plain description | Typical example prompt |\n|---|---|---|\n| Low | No harm; a condition that could contribute to harm later | A cable across a walkway, caught before anyone tripped |\n| Medium | Minor harm, or a close call with the potential for it | A near-miss with a lift truck at a blind corner |\n| High | Serious harm, or a close call with the potential for it | A guard missing during a running cycle |\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:5",
+            "kind": "page",
+            "id": "severity-triage",
+            "paragraph": 5,
+            "quote": "These three levels are an illustration for building a scale, not a recommended standard, and each plant should write definitions that match its own hazards and its own approach to risk. The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:9",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 9,
+            "quote": "The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions."
+          },
+          {
+            "evidenceId": "page:4:paragraph:16",
+            "kind": "page",
+            "id": "severity-triage",
+            "paragraph": 16,
+            "quote": "The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) describes a health and safety dashboard with its own permissions, separate from quality, but it does not state notifications or alerts. Ask the vendor how routing is configured: whether a rating can trigger a message to named roles, how a message is delivered, whether the reader must acknowledge it, and what happens if nobody does. Ask the vendor to show the fallback step with a sample report left unread. If routing depends on someone checking a screen, record that as a limitation and decide how the plant will cover it.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:9",
+            "kind": "page",
+            "id": "evaluating-software",
+            "paragraph": 9,
+            "quote": "Pay attention to what the page does not say. The ICC page, for example, does not state pricing, notifications or alerts, injury classification beyond severity, or regulatory reporting. Those are not defects in the page; they are questions for the sheet. Listing them now prevents a pleasant demonstration from hiding a gap that matters to the plant.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:4",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 4,
+            "quote": "The page describes an auditor view with the incident and near-miss log showing severity and status, floor reports including anonymous ones, and linked corrective actions."
+          },
+          {
+            "evidenceId": "page:8:paragraph:2",
+            "kind": "page",
+            "id": "audit-evidence-migration",
+            "paragraph": 2,
+            "quote": "The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes an auditor view. According to the page, it shows the incident and near-miss log with severity and status, floor reports including anonymous ones, and the corrective actions linked to each incident. That is a published description. Ask the vendor to show the view with the plant's own sample records, including an anonymous report and an incident with two actions, and check whether it gives the reviewer what they would ask for.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 6,
+            "quote": "The page describes setup in four steps: map processes with named owners, configure modules (fields, checklists, terminology, routing), onboard standards, and deploy to the floor with training and a certified consultant reviewing configuration through to audit."
+          },
+          {
+            "evidenceId": "page:3:paragraph:6",
+            "kind": "page",
+            "id": "reporting-intake",
+            "paragraph": 6,
+            "quote": "The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes incident and near-miss reporting in the product and a severity set from the level of harm. The research reviewed for this guide does not establish which fields the form includes. That detail is a question for a demonstration: which fields are standard, which can the plant add or remove, and whether the wording can be changed to match how the floor talks? The page generally mentions configuring module fields, checklists, terminology, and routing; it does not confirm that the anonymous form itself has configurable fields. Ask the vendor to show whether a form field can be renamed or added using a plant example.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:3",
+            "kind": "page",
+            "id": "evaluating-software",
+            "paragraph": 3,
+            "quote": "Published descriptions are a legitimate starting point, as long as the team treats them as claims to be tested. The ICC [Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes incident and near-miss reporting, an anonymous report form opened by a QR code on the floor, a health and safety dashboard with its own permissions, and incidents that need corrective action to be carried into the Improvements module. The page generally describes configuring module fields and terminology, but it does not establish which anonymous-report form fields are present or configurable, or whether that form's wording can change. In a demonstration, compare an incident that needs action with one that does not. Ask who initiates the handoff, whether it is automatic, what information moves, and how the linked records remain visible. Each published description becomes a line in the demonstration plan, to be seen working with the plant's own sample reports.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 1,
+            "quote": "The page describes a QR code on the floor that opens an anonymous report form with no login, and anonymous reports appear in the safety dashboard marked as anonymous."
+          },
+          {
+            "evidenceId": "page:9:paragraph:21",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 21,
+            "quote": "It is a policy decision for the plant. The ICC page describes an anonymous report form opened by a QR code on the floor, with no login. If the plant accepts anonymous reports, it should decide who reads them first, avoid identifying details, and plan how outcomes are shared without pointing to a reporter. The policy should be written down, shared with the floor and applied consistently, since an anonymous route that is promised but not respected will lose people's trust quickly.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:25",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 25,
+            "quote": "The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) says incidents that need corrective action are carried into the Improvements module, and that the auditor view shows the linked actions. A plant should decide which reports need action, give each action an owner and a date, keep the link to the incident and check effectiveness before closing. Where an action responds to a committee recommendation or an audit finding, link those records as well so the response can be traced from any starting point.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:7",
+            "kind": "page",
+            "id": "incident-and-near-miss-reporting-software",
+            "paragraph": 7,
+            "quote": "Throughout, scenarios that begin with **Illustrative example:** are hypothetical and name no business. They show how a decision might look in practice and do not describe any customer or result. Where artificial intelligence is discussed, the published ICC page states that every AI output in the software is a suggestion a person reviews before it enters a controlled record, and the guide uses that as a design principle: a draft is not a decision.\n\n"
+          },
+          {
+            "evidenceId": "page:1:paragraph:8",
+            "kind": "page",
+            "id": "mapping-workflows",
+            "paragraph": 8,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer finds three differently worded notes about the same missing guard fastener on one line. One sits on a clipboard, one in an email, and one in a shift handover sheet. Nobody is certain whether the three notes count as one near-miss or three. The safety lead writes a rule that reports describing the same condition and location are linked to a single record, and adds the three notes to the log as one entry with three sources.\n\n"
+          },
+          {
+            "evidenceId": "page:1:paragraph:39",
+            "kind": "page",
+            "id": "mapping-workflows",
+            "paragraph": 39,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer lists a criterion asking the vendor to show an anonymous floor report becoming a rated record with a linked corrective action. During the demonstration, the team uses a sample report about a wet floor near a loading dock. The criterion passes only if every step is shown with the plant's own wording and a named owner, so a generic screen does not count.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:9",
+            "kind": "page",
+            "id": "severity-triage",
+            "paragraph": 9,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer finds that two coordinators rate the same forklift near-miss differently, one as Low and one as Medium. The safety lead rewrites the boundary to say that a near-miss involving moving equipment and a pedestrian path is at least Medium, and adds the report to the scale as an example. The scenario is invented and shows no real outcome.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:5",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 5,
+            "quote": "The page maps the module to ISO 45001:2018 clauses 10.2 (incident, nonconformity and corrective action), 5.4 (consultation and participation of workers) and 6.1.2 (hazard identification and assessment of risks and opportunities); a mapping is not a statement that software alone satisfies a clause."
+          },
+          {
+            "evidenceId": "page:8:paragraph:11",
+            "kind": "page",
+            "id": "audit-evidence-migration",
+            "paragraph": 11,
+            "quote": "The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4, and 6.1.2. Clause 10.2 concerns incident, nonconformity, and corrective action. Clause 5.4 concerns consultation and participation of workers. Clause 6.1.2 concerns hazard identification and the assessment of risks and opportunities. These are the page's own descriptions. A mapping of this kind says that the module may produce records relevant to the clause. It does not say that using the module satisfies the clause, and the plant remains responsible for meeting its requirements.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:31",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 31,
+            "quote": "No. The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4 and 6.1.2, but a mapping points to possible evidence and does not guarantee that a clause is met. The plant remains responsible for its processes, its records and its own interpretation of the standard. Keep any statements about compliance modest and tie each to a record the plant can show, and have a qualified person confirm clause details against the standard itself.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "evidence": [
+          {
+            "evidenceId": "page:3:paragraph:6",
+            "kind": "page",
+            "id": "reporting-intake",
+            "paragraph": 6,
+            "quote": "The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes incident and near-miss reporting in the product and a severity set from the level of harm. The research reviewed for this guide does not establish which fields the form includes. That detail is a question for a demonstration: which fields are standard, which can the plant add or remove, and whether the wording can be changed to match how the floor talks? The page generally mentions configuring module fields, checklists, terminology, and routing; it does not confirm that the anonymous form itself has configurable fields. Ask the vendor to show whether a form field can be renamed or added using a plant example.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:7",
+            "kind": "page",
+            "id": "reporting-intake",
+            "paragraph": 7,
+            "quote": "Choose wording carefully. A field called \"incident category\" means little to someone who has just seen a forklift nearly strike a rack. \"What happened?\" with a short pick list of the plant's most common event types works better. Test the draft form on three or four people who did not help write it and watch where they hesitate.\n\n"
+          },
+          {
+            "evidenceId": "source:0:claim:10",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 10,
+            "quote": "ROOT-BROWSER-VERIFIED on 2026-11-19: Codex root directly read the primary ICC Safety page in Chrome. It describes severity by harm, an anonymous QR no-login form, separate dashboard and permissions, corrective-action handoff, and numbered configuration sections 01–04 for mapping, configuring modules including fields, checklists, terminology and routing, onboarding standards, and deployment and training. These are vendor descriptions, not a verified plant condition or guaranteed implementation workflow. Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed."
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:10",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 10,
+            "quote": "ROOT-BROWSER-VERIFIED on 2026-11-19: Codex root directly read the primary ICC Safety page in Chrome. It describes severity by harm, an anonymous QR no-login form, separate dashboard and permissions, corrective-action handoff, and numbered configuration sections 01–04 for mapping, configuring modules including fields, checklists, terminology and routing, onboarding standards, and deployment and training. These are vendor descriptions, not a verified plant condition or guaranteed implementation workflow. Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed."
+          },
+          {
+            "evidenceId": "page:0:paragraph:4",
+            "kind": "page",
+            "id": "incident-and-near-miss-reporting-software",
+            "paragraph": 4,
+            "quote": "Two sources shape the guide's factual statements about products and rules. The first is the published [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/). It describes incident and near-miss reporting with severity set from the level of harm, an anonymous report form opened by a QR code on the floor, a health and safety dashboard with its own permissions, and incidents that need corrective action carried into the Improvements module. It also describes an auditor view and a mapping to three clauses of ISO 45001:2018. These are published descriptions. The guide does not treat any of them as a verified capability, and it asks the reader to confirm each one in a demonstration.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:3",
+            "kind": "page",
+            "id": "evaluating-software",
+            "paragraph": 3,
+            "quote": "Published descriptions are a legitimate starting point, as long as the team treats them as claims to be tested. The ICC [Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes incident and near-miss reporting, an anonymous report form opened by a QR code on the floor, a health and safety dashboard with its own permissions, and incidents that need corrective action to be carried into the Improvements module. The page generally describes configuring module fields and terminology, but it does not establish which anonymous-report form fields are present or configurable, or whether that form's wording can change. In a demonstration, compare an incident that needs action with one that does not. Ask who initiates the handoff, whether it is automatic, what information moves, and how the linked records remain visible. Each published description becomes a line in the demonstration plan, to be seen working with the plant's own sample reports.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 9,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:9",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 9,
+            "quote": "The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions."
+          },
+          {
+            "evidenceId": "page:4:paragraph:16",
+            "kind": "page",
+            "id": "severity-triage",
+            "paragraph": 16,
+            "quote": "The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) describes a health and safety dashboard with its own permissions, separate from quality, but it does not state notifications or alerts. Ask the vendor how routing is configured: whether a rating can trigger a message to named roles, how a message is delivered, whether the reader must acknowledge it, and what happens if nobody does. Ask the vendor to show the fallback step with a sample report left unread. If routing depends on someone checking a screen, record that as a limitation and decide how the plant will cover it.\n\n"
+          },
+          {
+            "evidenceId": "page:6:paragraph:17",
+            "kind": "page",
+            "id": "corrective-actions",
+            "paragraph": 17,
+            "quote": "Ask the vendor how due dates behave. The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) does not state notifications or reminders, so find out whether the owner is told when an action is assigned, whether anyone sees actions approaching or past their due date and who is told when a date is missed. If the product does not do this, decide how the plant will cover it, for example with a weekly review of open actions in the safety meeting.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 10,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 6,
+            "quote": "The page describes setup in four steps: map processes with named owners, configure modules (fields, checklists, terminology, routing), onboard standards, and deploy to the floor with training and a certified consultant reviewing configuration through to audit."
+          },
+          {
+            "evidenceId": "source:0:claim:10",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 10,
+            "quote": "ROOT-BROWSER-VERIFIED on 2026-11-19: Codex root directly read the primary ICC Safety page in Chrome. It describes severity by harm, an anonymous QR no-login form, separate dashboard and permissions, corrective-action handoff, and numbered configuration sections 01–04 for mapping, configuring modules including fields, checklists, terminology and routing, onboarding standards, and deployment and training. These are vendor descriptions, not a verified plant condition or guaranteed implementation workflow. Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed."
+          },
+          {
+            "evidenceId": "page:3:paragraph:6",
+            "kind": "page",
+            "id": "reporting-intake",
+            "paragraph": 6,
+            "quote": "The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes incident and near-miss reporting in the product and a severity set from the level of harm. The research reviewed for this guide does not establish which fields the form includes. That detail is a question for a demonstration: which fields are standard, which can the plant add or remove, and whether the wording can be changed to match how the floor talks? The page generally mentions configuring module fields, checklists, terminology, and routing; it does not confirm that the anonymous form itself has configurable fields. Ask the vendor to show whether a form field can be renamed or added using a plant example.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 11,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:26",
+            "kind": "page",
+            "id": "mapping-workflows",
+            "paragraph": 26,
+            "quote": "Regulation shapes some of these assignments. Where a joint health and safety committee or health and safety representative exists, the committee or representative has a defined role. The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) describes that role for Ontario workplaces, including rules based on the number of workers. Other provinces and federally regulated workplaces have their own rules. Do not assume Ontario's requirements apply elsewhere; confirm the rules that apply to each site with the relevant authority. The ICC page mentioned earlier also does not describe regulatory duties, so those remain a separate question for the plant to answer.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:33",
+            "kind": "page",
+            "id": "severity-triage",
+            "paragraph": 33,
+            "quote": "Provincial and federal rules differ, and the sources reviewed for this guide do not set out reporting deadlines. The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) describes committees and representatives for Ontario workplaces, and it is not a statement of when an incident must be reported to the province. Plants in other provinces and federally regulated sites need to consult the authority that applies to them. Where in doubt, the plant should ask the authority or a qualified adviser.\n\n"
+          },
+          {
+            "evidenceId": "page:7:paragraph:11",
+            "kind": "page",
+            "id": "committee-visibility",
+            "paragraph": 11,
+            "quote": "The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) describes how committees work for the workplaces it covers. As described there, a joint health and safety committee meets at least once every three months, and worker workplace inspections are generally monthly, subject to the guide's inspector, regulatory, and impracticability exceptions. Those figures are Ontario's and apply to the workplaces the guide describes. A plant should check the current official page and the rules for its own province, because requirements differ by jurisdiction and by workplace size.\n\n"
+          },
+          {
+            "evidenceId": "page:5:paragraph:34",
+            "kind": "page",
+            "id": "investigation",
+            "paragraph": 34,
+            "quote": "Close the loop with the people involved where appropriate. Tell the reporter, where known, that the investigation is complete and what it found, in terms the plant is comfortable sharing. Where a joint health and safety committee exists, its role is defined by the province; the Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) describes it for Ontario, and plants elsewhere should check the rules that apply to them."
+          }
+        ]
+      },
+      {
+        "index": 12,
+        "evidence": [
+          {
+            "evidenceId": "page:8:paragraph:11",
+            "kind": "page",
+            "id": "audit-evidence-migration",
+            "paragraph": 11,
+            "quote": "The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4, and 6.1.2. Clause 10.2 concerns incident, nonconformity, and corrective action. Clause 5.4 concerns consultation and participation of workers. Clause 6.1.2 concerns hazard identification and the assessment of risks and opportunities. These are the page's own descriptions. A mapping of this kind says that the module may produce records relevant to the clause. It does not say that using the module satisfies the clause, and the plant remains responsible for meeting its requirements.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:31",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 31,
+            "quote": "No. The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4 and 6.1.2, but a mapping points to possible evidence and does not guarantee that a clause is met. The plant remains responsible for its processes, its records and its own interpretation of the standard. Keep any statements about compliance modest and tie each to a record the plant can show, and have a qualified person confirm clause details against the standard itself.\n\n"
+          },
+          {
+            "evidenceId": "source:0:claim:5",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 5,
+            "quote": "The page maps the module to ISO 45001:2018 clauses 10.2 (incident, nonconformity and corrective action), 5.4 (consultation and participation of workers) and 6.1.2 (hazard identification and assessment of risks and opportunities); a mapping is not a statement that software alone satisfies a clause."
+          }
+        ]
+      },
+      {
+        "index": 13,
+        "evidence": [
+          {
+            "evidenceId": "page:4:paragraph:3",
+            "kind": "page",
+            "id": "severity-triage",
+            "paragraph": 3,
+            "quote": "Begin with the plant's own history. Gather a sample of past reports from paper logs, email, and handover sheets, and sort them by how much harm each caused or could have caused. Three or four levels are a reasonable illustrative starting point, which the plant can adjust after testing. Fewer levels may blur important differences, and more levels may invite arguments about the boundary between neighbors. The table below is a generic training illustration for designing a scale. It is not an ICC screen, a list of ICC levels, or evidence of ICC configuration; the available product levels and choices are unconfirmed.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:5",
+            "kind": "page",
+            "id": "severity-triage",
+            "paragraph": 5,
+            "quote": "These three levels are an illustration for building a scale, not a recommended standard, and each plant should write definitions that match its own hazards and its own approach to risk. The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.\n\n"
+          },
+          {
+            "evidenceId": "source:0:claim:0",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 0,
+            "quote": "The published ICC page describes incident and near-miss reporting in which severity is set from the level of harm. These are published descriptions; availability and configuration must be confirmed in a demonstration and no capability is advertised as verified."
+          }
+        ]
+      },
+      {
+        "index": 14,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:7",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 7,
+            "quote": "The page states every AI output is a suggestion that a person reviews before it enters a controlled record."
+          },
+          {
+            "evidenceId": "page:5:paragraph:31",
+            "kind": "page",
+            "id": "investigation",
+            "paragraph": 31,
+            "quote": "Where the software offers any drafting assistance, the reviewer's check matters more. The ICC page says AI output is a suggestion a person reviews before it enters a controlled record. The plant can use that as a rule for itself: no drafted text becomes part of an accepted investigation until a named person has read and approved it, and the record shows who did.\n\n"
+          },
+          {
+            "evidenceId": "page:5:paragraph:26",
+            "kind": "page",
+            "id": "investigation",
+            "paragraph": 26,
+            "quote": "The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) states that every AI output in the software is a suggestion a person reviews before it enters a controlled record. If any AI assistance appears in an investigation, such as a suggested summary, ask the vendor what it does and where the person's review is recorded. The investigator remains responsible for the cause statement.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 15,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 1,
+            "quote": "The page describes a QR code on the floor that opens an anonymous report form with no login, and anonymous reports appear in the safety dashboard marked as anonymous."
+          },
+          {
+            "evidenceId": "source:0:claim:4",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 4,
+            "quote": "The page describes an auditor view with the incident and near-miss log showing severity and status, floor reports including anonymous ones, and linked corrective actions."
+          },
+          {
+            "evidenceId": "page:8:paragraph:21",
+            "kind": "page",
+            "id": "audit-evidence-migration",
+            "paragraph": 21,
+            "quote": "The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) is not backed by research in this guide that describes import capability or procedures, so ask the vendor directly. Can records be loaded in bulk, and in what format? Which fields are required? How are ratings from an old scale mapped to the new one? What happens to attachments? Are imported records marked as imported, so they can be told apart from records made in the system? Get the answers in writing.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 16,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:5",
+            "kind": "source",
+            "id": "icc-safety",
+            "paragraph": 5,
+            "quote": "The page maps the module to ISO 45001:2018 clauses 10.2 (incident, nonconformity and corrective action), 5.4 (consultation and participation of workers) and 6.1.2 (hazard identification and assessment of risks and opportunities); a mapping is not a statement that software alone satisfies a clause."
+          },
+          {
+            "evidenceId": "page:9:paragraph:31",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 31,
+            "quote": "No. The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4 and 6.1.2, but a mapping points to possible evidence and does not guarantee that a clause is met. The plant remains responsible for its processes, its records and its own interpretation of the standard. Keep any statements about compliance modest and tie each to a record the plant can show, and have a qualified person confirm clause details against the standard itself.\n\n"
+          },
+          {
+            "evidenceId": "page:8:paragraph:11",
+            "kind": "page",
+            "id": "audit-evidence-migration",
+            "paragraph": 11,
+            "quote": "The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4, and 6.1.2. Clause 10.2 concerns incident, nonconformity, and corrective action. Clause 5.4 concerns consultation and participation of workers. Clause 6.1.2 concerns hazard identification and the assessment of risks and opportunities. These are the page's own descriptions. A mapping of this kind says that the module may produce records relevant to the clause. It does not say that using the module satisfies the clause, and the plant remains responsible for meeting its requirements.\n\n"
+          }
+        ]
+      }
+    ],
+    "inputHash": "9644664e32be09795ccbc2778066afe19fed301a9958590362f517685e17e52a",
+    "reviewContextHash": "0c485adcbc06cd773eb6e6c71ff4379842beb3cdc42e5298ccaf34208732c09e",
+    "pageHashes": {
+      "incident-and-near-miss-reporting-software": "068495ffc3e7de2417129430448c4c2f791459468f287c354ead5119732e6e80",
+      "mapping-workflows": "e70af05e51b19a8fcdb2d273d9b885d2a9a8de49af25ac2f51573a90ba509827",
+      "evaluating-software": "d0635b8a66313762474b0f06a0aab53e6bd03db5b6e604b1ad1c06a4221d5ca3",
+      "reporting-intake": "28230981305009573002903ee675cce3eedaf963af7bbb738c52f18fbbc03da5",
+      "severity-triage": "6d6def03f78defc322b9661be52aa29b2065795ba96cf1ce8b16824f890c39ee",
+      "investigation": "86cfbd85240303d863b1eae42cc5f19569aeebb52556706a858c8af93a5622c0",
+      "corrective-actions": "44f40d17a58d9200181101428b7db6bf8ca2bca2810104a0978cfde91b79aaed",
+      "committee-visibility": "15927e028f3c5f51b09262ccc49c45efa77ffe042e1afd695758bc634884dd25",
+      "audit-evidence-migration": "6a4fa3254e6a8ce7d5a0adea3e91e7b88d83655a900188dd4da90a125cec66e1",
+      "ongoing-operation": "09e7ae1e66d924dda1c32c4d14c78c8305220943017dcb9d95a331aabab2a9e5"
+    },
+    "reviewer": "Configured claude independent review",
+    "reviewedAt": "2026-11-20T14:23:11.150Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }
