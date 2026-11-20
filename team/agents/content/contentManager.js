@@ -214,7 +214,9 @@ async function publishDaily(options = {}) {
             });
           }
         } catch (err) {
-          if (require('./sessionImages').sessionMode()) return fail('Required originality review could not run');
+          if (require('./sessionImages').sessionMode()) return fail('Required originality review could not run', {
+            reviewFailure: plagiarismChecker.failureDetails(err),
+          });
           log("contentManager", "originality-error", err.message);
         }
       } else {
