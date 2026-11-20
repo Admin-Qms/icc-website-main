@@ -19,6 +19,20 @@ imageBrief: >-
 sourceIds:
   - icc-safety
 capabilityIds: []
+wordCount: 2031
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/evaluating-software.webp
+  alt: >-
+    An evaluation team testing a tablet reporting form at a shop-floor
+    workstation; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 20e8bd1a56e008495b17c73b9ecca3bae68939178ae8efc3df239f32f509d7b0
+  sha256: 44b58240953e0d3db65099546d15245564fda75d3cf238f5f9fe4bc590363daa
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Build a workflow-based shortlist
 

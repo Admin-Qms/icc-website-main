@@ -20,6 +20,20 @@ sourceIds:
   - icc-safety
   - ontario-jhsc-guide
 capabilityIds: []
+wordCount: 2060
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/severity-triage.webp
+  alt: >-
+    A safety coordinator reviewing reports at a dock office desk; authentic
+    manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 24d2030809bb03f555c4baf57634ceef0ae80c9a0694f996bcd1f7edeef9ba9d
+  sha256: 33f7a3967ed5139f1528fb3979fdbb53051f09acb0bb5ff954ae9996bc31ee0e
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Define a harm-based scale
 

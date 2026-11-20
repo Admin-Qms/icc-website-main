@@ -20,6 +20,20 @@ sourceIds:
   - icc-safety
   - ontario-jhsc-guide
 capabilityIds: []
+wordCount: 2059
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/mapping-workflows.webp
+  alt: >-
+    A quality lead and a supervisor walking a press line with a paper incident
+    log; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: ca633ea2da1d78507e92c5fbb5e96744d792e23556ad33c951842329b1b635e2
+  sha256: 74bff36cf2926e402fae9683188dbecba232674bdb6be8c5bf605b9c61b5f8a9
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Define the reporting problem
 

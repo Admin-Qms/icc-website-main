@@ -18,6 +18,20 @@ imageBrief: >-
 sourceIds:
   - icc-safety
 capabilityIds: []
+wordCount: 2048
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/audit-evidence-migration.webp
+  alt: >-
+    An auditor and safety coordinator reviewing printed incident log pages at a
+    table; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: e580d975df80ee223a4665b410d3450118688b586edba1fa1d9b5a88fc357a8f
+  sha256: 8cb2edb6fc082fb67b056f1db4702da50c3570d4720fe252cffba9c668021a6f
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Know what an auditor sees
 

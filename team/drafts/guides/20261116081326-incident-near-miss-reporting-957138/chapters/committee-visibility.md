@@ -20,6 +20,20 @@ sourceIds:
   - icc-safety
   - ontario-jhsc-guide
 capabilityIds: []
+wordCount: 2018
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/committee-visibility.webp
+  alt: >-
+    A joint safety committee reviewing a wall display of open actions on a plant
+    floor; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 96cccf72955d66c94918d1f819ce3beb191f8e036bae6ebe816ac5ceb640c069
+  sha256: 8351e889d849bec61ba5d8d63490deb047c2cd1ce59c2afdbae2cb7313838395
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Share the right dashboard
 

@@ -18,6 +18,20 @@ imageBrief: >-
 sourceIds:
   - icc-safety
 capabilityIds: []
+wordCount: 2053
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/reporting-intake.webp
+  alt: >-
+    A floor operator scanning a posted QR code beside a machine cell; authentic
+    manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 01f7068df3419a4b5edd6622ce9481339f592915011c0a15664c55d8f876929f
+  sha256: dc3dfc1b9cb1f637a437da8c963b06c85cb2360316d967a9f4c4ffc1ca2456ad
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Define the report fields
 

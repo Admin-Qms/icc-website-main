@@ -20,6 +20,20 @@ sourceIds:
   - icc-safety
   - ontario-jhsc-guide
 capabilityIds: []
+wordCount: 2021
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/ongoing-operation.webp
+  alt: >-
+    A safety lead reviewing a printed monthly summary beside a production line;
+    authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 33af88301675811c8087860fafee7d09977426280c876662b10fcf683485217c
+  sha256: 5aa65fe9c7760344a482bca8df6155f40cc2c30f62e14c3556a219f07f74733f
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Review the workflow and evidence
 

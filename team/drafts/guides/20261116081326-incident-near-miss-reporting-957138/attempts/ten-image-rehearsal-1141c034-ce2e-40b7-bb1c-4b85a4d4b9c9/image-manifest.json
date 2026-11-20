@@ -1,0 +1,102 @@
+[
+  {
+    "id": "incident-and-near-miss-reporting-software",
+    "webp": "40d8599e3554bbd58d93ebde57408f3978b3dd6405bbc9e01543c977c6e49f83",
+    "input": "9c419a9641305bae68a5334f8a371418a1424a892095d801a288497d897ecd69",
+    "request": "7da34fc2912005869d8597aaf5e4422fda3480d3042aeae888da29eef4e2ac14",
+    "sidecar": "af3535660f31ea1b0bc48ccda36620423c65c0800876556e48b8eb8a95554380",
+    "source": "codex",
+    "width": 1200,
+    "height": 675
+  },
+  {
+    "id": "mapping-workflows",
+    "webp": "74bff36cf2926e402fae9683188dbecba232674bdb6be8c5bf605b9c61b5f8a9",
+    "input": "ca633ea2da1d78507e92c5fbb5e96744d792e23556ad33c951842329b1b635e2",
+    "request": "ee93c4ffa65864ce68404228f70acdcc86fa275a4ca0e5f4e95c00f25d872673",
+    "sidecar": "3e77779cfd066370201fdbd0812704159ac9071f7b926306815ad42a2893b9b2",
+    "source": "codex",
+    "width": 1200,
+    "height": 675
+  },
+  {
+    "id": "evaluating-software",
+    "webp": "44b58240953e0d3db65099546d15245564fda75d3cf238f5f9fe4bc590363daa",
+    "input": "20e8bd1a56e008495b17c73b9ecca3bae68939178ae8efc3df239f32f509d7b0",
+    "request": "19a8a7c0f670538d2ad6ee16d535ca16e752f913dcaa41f92fc7ef06dba38966",
+    "sidecar": "c590ea7695ed888064e72505c2b153fec6304ebe709deda9b889d963a32cee91",
+    "source": "codex",
+    "width": 1200,
+    "height": 675
+  },
+  {
+    "id": "reporting-intake",
+    "webp": "dc3dfc1b9cb1f637a437da8c963b06c85cb2360316d967a9f4c4ffc1ca2456ad",
+    "input": "01f7068df3419a4b5edd6622ce9481339f592915011c0a15664c55d8f876929f",
+    "request": "ec4e5587f5b4b7eb2e27a8e8a1c8f20e602eb729552f57394409014defb69da6",
+    "sidecar": "6b4f836187c1df81977f38efd9d0df2e01a5cf6073fca12d044db185e41a36cf",
+    "source": "codex",
+    "width": 1200,
+    "height": 675
+  },
+  {
+    "id": "severity-triage",
+    "webp": "33f7a3967ed5139f1528fb3979fdbb53051f09acb0bb5ff954ae9996bc31ee0e",
+    "input": "24d2030809bb03f555c4baf57634ceef0ae80c9a0694f996bcd1f7edeef9ba9d",
+    "request": "256f4b5af7c2da7b411ff0ad53a68f4f4787f36c6bb6f127199a505909a04df9",
+    "sidecar": "6c994cf24abcdbe11d424b0fce5abd6ef53de5ae8eaa4d1342a93d473831f499",
+    "source": "codex",
+    "width": 1200,
+    "height": 675
+  },
+  {
+    "id": "investigation",
+    "webp": "688be8906283985a8bc87b4be0f18e3695b5f2785fed26a8446a90a110e8f50d",
+    "input": "cb0624935b7dbe2e32e5589dda772aa44e94318bd81f1fe584a314bc7e179bc0",
+    "request": "95b9646e9b329cb97732d86effe5d9853a5efd396ecab0ca4b3ee4397ab1a0cb",
+    "sidecar": "89293bab71331c6ad9054cf8e65cdd9a343ed1ab99b9254999dc4a34b6e7c1e0",
+    "source": "codex",
+    "width": 1200,
+    "height": 675
+  },
+  {
+    "id": "corrective-actions",
+    "webp": "5fbf7fdfbd65c6f63a3707d28718c1d064a986de6a6190428dc455d44cd29375",
+    "input": "bd1f30b83586f89ce4052fe9201fada51ec63747fa51dbc9daf3aa5ecbf2ecaa",
+    "request": "8cc2026f0dcbc0bb044eacc1bc0a88e5d6808ffc9b86362c41f9baaebab99640",
+    "sidecar": "785d0854af5aa37fb807167162ad46e7a5f39d63547e8f8ba704de2c8fcf4586",
+    "source": "codex",
+    "width": 1200,
+    "height": 675
+  },
+  {
+    "id": "committee-visibility",
+    "webp": "8351e889d849bec61ba5d8d63490deb047c2cd1ce59c2afdbae2cb7313838395",
+    "input": "96cccf72955d66c94918d1f819ce3beb191f8e036bae6ebe816ac5ceb640c069",
+    "request": "edcf87d009ce81ee557eaea7cd90b56a6e68f06c894013421b43e5cc936a4774",
+    "sidecar": "e16b695e39eb3034fbe2ef818295d6a26e066704e78eb5f590b2e7aaac69edbe",
+    "source": "codex",
+    "width": 1200,
+    "height": 675
+  },
+  {
+    "id": "audit-evidence-migration",
+    "webp": "8cb2edb6fc082fb67b056f1db4702da50c3570d4720fe252cffba9c668021a6f",
+    "input": "e580d975df80ee223a4665b410d3450118688b586edba1fa1d9b5a88fc357a8f",
+    "request": "08d7f41375551d430dd49b65b9a0aba64315a741f7af703f1e444657fd5623eb",
+    "sidecar": "2da42cba1417f0aa70e748ed27f656ace4c097328ce3290f91c97289efadafb5",
+    "source": "codex",
+    "width": 1200,
+    "height": 675
+  },
+  {
+    "id": "ongoing-operation",
+    "webp": "5aa65fe9c7760344a482bca8df6155f40cc2c30f62e14c3556a219f07f74733f",
+    "input": "33af88301675811c8087860fafee7d09977426280c876662b10fcf683485217c",
+    "request": "64a4bab95af36d67525d64526cd7bf6d9ca3c83fd2a26f6370e23fb14012faad",
+    "sidecar": "1e7fb3dc06c4388ffc99c1035f2135632ddf308857e063b230ccd738f2b165e0",
+    "source": "codex",
+    "width": 1200,
+    "height": 675
+  }
+]

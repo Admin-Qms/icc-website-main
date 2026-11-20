@@ -18,6 +18,20 @@ imageBrief: >-
 sourceIds:
   - icc-safety
 capabilityIds: []
+wordCount: 2069
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/corrective-actions.webp
+  alt: >-
+    A supervisor and maintenance technician reviewing a fixed machine guard;
+    authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: bd1f30b83586f89ce4052fe9201fada51ec63747fa51dbc9daf3aa5ecbf2ecaa
+  sha256: 5fbf7fdfbd65c6f63a3707d28718c1d064a986de6a6190428dc455d44cd29375
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Link incidents to corrective action and follow-up
 

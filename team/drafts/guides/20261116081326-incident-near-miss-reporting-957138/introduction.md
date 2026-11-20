@@ -20,6 +20,20 @@ sourceIds:
   - icc-safety
   - ontario-jhsc-guide
 capabilityIds: []
+wordCount: 1512
+readTime: 8
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/incident-and-near-miss-reporting-software.webp
+  alt: >-
+    A manufacturing safety coordinator reviewing a floor report beside a
+    production cell; authentic industrial setting, no text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 9c419a9641305bae68a5334f8a371418a1424a892095d801a288497d897ecd69
+  sha256: 40d8599e3554bbd58d93ebde57408f3978b3dd6405bbc9e01543c977c6e49f83
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## The operational problem
 
@@ -73,4 +87,4 @@ Keep the work in proportion. A small plant may use short versions of many steps,
 
 Finally, plan for review. A system that is not reviewed may drift, and the final chapter describes a simple quarterly sample with baselines and an exception log. A review is also the point at which the plant decides what to improve next and what to ask the vendor to change.
 
-The guide makes no claim that software alone produces safer work or satisfies a standard. It offers a way to ask better questions, to test answers against real reports and to leave a clear record of what was decided and why. 
+The guide makes no claim that software alone produces safer work or satisfies a standard. It offers a way to ask better questions, to test answers against real reports and to leave a clear record of what was decided and why.
