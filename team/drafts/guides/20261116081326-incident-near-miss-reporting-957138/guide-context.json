@@ -109,6 +109,18 @@
     {
       "term": "Cutover plan",
       "definition": "The record of the date and method by which the new system becomes the authoritative record for incident and near-miss reports, including parallel-period rules, training schedule, and rollback criteria."
+    },
+    {
+      "term": "Exception log",
+      "definition": "A running record of each time the reporting process failed in a material way, used to identify repeats and prompt process or configuration changes."
+    },
+    {
+      "term": "Review findings",
+      "definition": "The record produced by a periodic workflow review, listing what the sample showed, what will change, who owns each change and by when."
+    },
+    {
+      "term": "Approved answers",
+      "definition": "The set of FAQ responses the safety lead has verified against the plant's actual sources and authorised for use with supervisors, committees, auditors and leadership."
     }
   ],
   "roles": [
@@ -178,7 +190,10 @@
     "Gap list",
     "Evidence map",
     "Import plan",
-    "Cutover plan"
+    "Cutover plan",
+    "Review findings",
+    "Approved answers",
+    "Demonstration results"
   ],
   "example": {
     "label": "Illustrative example",
@@ -285,6 +300,17 @@
         "Decide evidence per clause",
         "Decide scope and mapping of old fields to new ones",
         "Decide cutover date and method"
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Review performance, answer common questions and prepare a demonstration",
+      "summary": "This is a re-review. No previous findings were raised, so none remain unresolved. All changed paragraphs are accurate and well-scoped. The three subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The ISO 45001 clause mappings (10.2, 5.4, 6.1.2) are correctly attributed to the ICC Safety page and hedged with the appropriate boundary that a mapping does not guarantee a clause is met. External reviewer access is correctly flagged as unconfirmed in the research. The Ontario JHSC guide is cited only in the FAQ subsection with an explicit caution that plants elsewhere must check their own rules. The FAQ subsection is plan-assigned and present; no FAQ content appears in the introduction or other subsections. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus the allowed internal site path /contact/. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2021 is within acceptable range of the 2000-word target. All changed paragraphs introduce no new unsupported claims.",
+      "bodyHash": "09e7ae1e66d924dda1c32c4d14c78c8305220943017dcb9d95a331aabab2a9e5",
+      "decisions": [
+        "Decide improvements to prioritize",
+        "Answer within evidence",
+        "Proceed, ask for clarification or reject"
       ]
     }
   ],
