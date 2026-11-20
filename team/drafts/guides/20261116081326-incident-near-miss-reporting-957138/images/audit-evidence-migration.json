@@ -1,0 +1,20 @@
+{
+  "id": "audit-evidence-migration",
+  "width": 1200,
+  "height": 675,
+  "sha256": "8cb2edb6fc082fb67b056f1db4702da50c3570d4720fe252cffba9c668021a6f",
+  "source": "codex",
+  "sourceId": "e580d975df80ee223a4665b410d3450118688b586edba1fa1d9b5a88fc357a8f",
+  "inputHash": "e580d975df80ee223a4665b410d3450118688b586edba1fa1d9b5a88fc357a8f",
+  "alt": "An auditor and safety coordinator reviewing printed incident log pages at a table; authentic manufacturing environment, no readable text or logos",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "08d7f41375551d430dd49b65b9a0aba64315a741f7af703f1e444657fd5623eb",
+  "request": {
+    "id": "audit-evidence-migration",
+    "scene": "An auditor and safety coordinator reviewing printed incident log pages at a table; authentic manufacturing environment, no readable text or logos",
+    "kind": "hero",
+    "alt": "An auditor and safety coordinator reviewing printed incident log pages at a table; authentic manufacturing environment, no readable text or logos",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: An auditor and safety coordinator reviewing printed incident log pages at a table; authentic manufacturing environment, no readable text or logos.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-20T15:01:41.912Z"
+}
