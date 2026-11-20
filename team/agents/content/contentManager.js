@@ -211,6 +211,7 @@ async function publishDaily(options = {}) {
           if (!origResult.pass) {
             return fail(`Originality check failed (${origResult.score}/100): ${origResult.rewriteInstructions || "too close to existing articles"}`, {
               issues: (origResult.flaggedSentences || []).map((f) => `originality: "${String(f.text).slice(0, 80)}" — ${f.reason}`),
+              ...(require('./sessionImages').sessionMode() ? { originalityReview: origResult } : {}),
             });
           }
         } catch (err) {
