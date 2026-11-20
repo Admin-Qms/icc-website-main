@@ -17,18 +17,72 @@
     {
       "term": "Workflow owner",
       "definition": "The role accountable for decisions and records in a defined workflow."
+    },
+    {
+      "term": "Incident",
+      "definition": "An event that caused harm, damage, or a stoppage."
+    },
+    {
+      "term": "Hazard report",
+      "definition": "A condition someone noticed before any event occurred."
+    },
+    {
+      "term": "Acceptance criteria",
+      "definition": "Statements that a software demonstration can prove or fail to prove, derived from the plant's own problem statement, process map, and decision table."
+    },
+    {
+      "term": "Dead end",
+      "definition": "A step in the reporting process after which no record shows a decision was made, leaving a report unresolved."
     }
   ],
   "roles": [
     "Quality owner",
     "Process owner",
-    "Operator"
+    "Operator",
+    "Quality or safety lead",
+    "Supervisor",
+    "Safety coordinator",
+    "Operations manager",
+    "Evaluation lead",
+    "Floor reporter",
+    "Investigator",
+    "Action owner",
+    "Maintenance",
+    "Production supervisor",
+    "Quality team",
+    "Reporter"
   ],
-  "recordNames": [],
+  "recordNames": [
+    "Written definitions with an owner",
+    "Current-state process map",
+    "Role and decision table",
+    "Acceptance criteria list",
+    "Log entry",
+    "Investigation notes",
+    "Corrective action record"
+  ],
   "example": {
     "label": "Illustrative example",
     "description": "An unnamed Canadian manufacturer evaluates incident and near-miss reporting software for one production area; all situations and records are hypothetical, not customer results."
   },
-  "reviewedChapters": [],
+  "reviewedChapters": [
+    {
+      "slug": "mapping-workflows",
+      "title": "Map how incidents and near-misses are reported today",
+      "summary": "The page maps the current-state incident and near-miss reporting workflow across four subsections that match the plan exactly. All factual claims about ICC Safety capabilities are correctly framed as published descriptions requiring demonstration confirmation. The Ontario JHSC source is cited only where Ontario-specific regulatory content is discussed, with an explicit caution against assuming those rules apply nationally. Workflow elements (role, input, decision, record, exception) are present in each subsection. Illustrative examples are labeled and use an unnamed Canadian manufacturer. No FAQ section appears, which is correct because the plan assigns none. The changed paragraph correctly presents ICC Safety page content as a vendor problem description rather than measured data. No previous findings were raised. Links use the two supplied source URLs plus an allowed internal path. No scope boundary violations were detected.",
+      "bodyHash": "e70af05e51b19a8fcdb2d273d9b885d2a9a8de49af25ac2f51573a90ba509827",
+      "decisions": [
+        "Decide what counts as an incident, a near-miss, and a hazard report",
+        "Decide whether a report is accepted into the log",
+        "Rate severity of a report",
+        "Assign who investigates",
+        "Decide whether corrective action is required",
+        "Decide which steps are required and which are habit",
+        "Assign a named owner and a backup to each decision",
+        "Decide which steps the software must support first",
+        "Decide who attends each demonstration"
+      ]
+    }
+  ],
   "researchHash": "787552eb0e3e1cfe85cdfe24d931bb36d1c07e11f1c769c73a00896fc2258901"
 }
