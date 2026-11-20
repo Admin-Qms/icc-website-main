@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All checks pass. No previous findings were raised, so none remain unresolved. The six changed paragraphs are accurate and well-scoped: ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation; the exception and no-action guidance paragraphs add procedural depth without introducing unsupported claims; the action-writing guidance is concrete and actionable; and the three effectiveness-verification paragraphs are distinct in purpose and do not repeat one another. All four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. The illustrative example uses an unnamed Canadian manufacturer and is marked hypothetical in each occurrence. The Ontario JHSC guide is cited only in the third subsection and with an appropriate caution that plants outside Ontario must confirm what applies to them. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus an allowed internal site path. No FAQ section appears anywhere in the page, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations were detected; committee trend review and general CAPA practice are correctly deferred. Word count of approximately 2053 is within acceptable range of the 2000-word target.",
+  "summary": "All checks pass. No previous findings were raised, so none remain unresolved. The two changed paragraphs introduce no unsupported claims: the introductory heading is unchanged in substance, and the guidance on high-rated reports correctly advises assessing existing hazards, applicable duties and controls without asserting any ICC Safety capability beyond what the research supports. All four subsections align with the plan: roles, inputs, decisions, records, exceptions and evaluation criteria are present and correctly attributed across Decide which reports need action, Assign owners and due dates, Keep the link to the incident, and Verify effectiveness. ICC Safety capability claims throughout are framed as published descriptions requiring demonstration confirmation, consistent with the research source constraints. The Ontario JHSC guide is cited accurately in the Keep the link section with an explicit caution that plants outside Ontario must check their own rules. All illustrative examples are labeled as hypothetical and not customer results, and each uses the same unnamed Canadian manufacturer scenario established in context. No FAQ section appears anywhere in the page, consistent with the plan assigning none. Links use only the two supplied source URLs and allowed internal site paths. No scope boundary violations were detected; general CAPA practice and committee trend review are not covered. Word count of approximately 2069 is within acceptable range of the 2000-word target. No readability problems or problematic repetition were detected.",
   "glossary": [],
   "roles": [
     "Safety lead",
@@ -121,15 +121,16 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "f0e7a5bd9cafa9bcc8a8f465de7fc67869c1519efd2f044b01da80671d4486d5",
-  "contentHash": "d21bb59421dc6212c308665ea487f4a0be1b5e390370dd53007a54e22322507f",
+  "inputHash": "f796e6740c36ea5ef6c7e44669908020115960f6ac491ab951ed398d408c1592",
+  "contentHash": "c02a189d6ccf188d171f2ba37cc6995a264704a556b7f2f800bda2a891332d6e",
   "paragraphHashes": [
+    "82ea91b7da7702ca945ef0806f6d09352c0d8250ae99e515a5eeca08fa542c07",
     "82f646335f48d03090551d1161f36470fb7df00dcd424e63e2b7c0b547453c7e",
     "47e56fe9d9e62e3bb5dcec4b8ffa839d0003def940b5aa6248b515f9bf4ced9e",
     "aede39f213da1106dce0cd7b07427bbaec0e685a0acc88d5533727a18c5ac038",
     "cbb41c25f31ae4e6b64c06bd539277ae7a3457bb34d55a8f8336d805b6325307",
     "88894e171d1aca42a82e16f6840157f327704b65f5b2b1392845c231e5f441a9",
-    "924cf7b93314bcc51058ba9dcd6e7ec4b7aaf925ecb9b3a4278e672868821bd7",
+    "501825df3d5f889e840191d9aaa7c72760e2cb27a0fb2f90a8aca803b72a16cc",
     "722ffe79eccfa6aae5d964927d2275598ed03d13ecd88452e1c0fdc27b759e5e",
     "11f53862b85f09e2c1c01a17b2f180d21383eeff04423ead76af17f6d2195d10",
     "a1753dfe5f1881ffa88f62bc740f9834d67e14b66f91c258a3c0dbb972a9ec03",
@@ -164,7 +165,7 @@
     "75b5f43a8dab17533a6630832dee8cdd4a2033401eb989c39b415c014936122a",
     "c760fc2c242351a82bf5cf331761715c70d277d2ce7d8cd2834310a98bc2547d"
   ],
-  "outputContextHash": "b6d0e84b39d4268c1f6347385e72c68c5c5a5c7fb5f8df144ce5e57828ba2490",
-  "reviewedAt": "2026-11-19T16:16:19.423Z",
+  "outputContextHash": "a66405f93adb7d59a99d44a51e6fa4d82bfc40de905830175d436e0d69233b8c",
+  "reviewedAt": "2026-11-20T14:09:18.122Z",
   "reviewer": "Configured independent chapter reviewer"
 }

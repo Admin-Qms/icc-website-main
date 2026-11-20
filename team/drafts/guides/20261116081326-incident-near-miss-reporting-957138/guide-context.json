@@ -132,7 +132,11 @@
     "Assignment entry",
     "Evidence list",
     "Cause statement",
-    "Reviewed conclusion"
+    "Reviewed conclusion",
+    "Decision with reason",
+    "Action entry",
+    "Linked records",
+    "Effectiveness check"
   ],
   "example": {
     "label": "Illustrative example",
@@ -202,6 +206,18 @@
         "Decide what evidence is sufficient",
         "Decide causes",
         "Accept or return the draft investigation"
+      ]
+    },
+    {
+      "slug": "corrective-actions",
+      "title": "Link incidents to corrective action and follow-up",
+      "summary": "All checks pass. No previous findings were raised, so none remain unresolved. The two changed paragraphs introduce no unsupported claims: the introductory heading is unchanged in substance, and the guidance on high-rated reports correctly advises assessing existing hazards, applicable duties and controls without asserting any ICC Safety capability beyond what the research supports. All four subsections align with the plan: roles, inputs, decisions, records, exceptions and evaluation criteria are present and correctly attributed across Decide which reports need action, Assign owners and due dates, Keep the link to the incident, and Verify effectiveness. ICC Safety capability claims throughout are framed as published descriptions requiring demonstration confirmation, consistent with the research source constraints. The Ontario JHSC guide is cited accurately in the Keep the link section with an explicit caution that plants outside Ontario must check their own rules. All illustrative examples are labeled as hypothetical and not customer results, and each uses the same unnamed Canadian manufacturer scenario established in context. No FAQ section appears anywhere in the page, consistent with the plan assigning none. Links use only the two supplied source URLs and allowed internal site paths. No scope boundary violations were detected; general CAPA practice and committee trend review are not covered. Word count of approximately 2069 is within acceptable range of the 2000-word target. No readability problems or problematic repetition were detected.",
+      "bodyHash": "44f40d17a58d9200181101428b7db6bf8ca2bca2810104a0978cfde91b79aaed",
+      "decisions": [
+        "Decide whether action is needed",
+        "Accept the action and date",
+        "Decide closure",
+        "Decide effective or reopen"
       ]
     }
   ],

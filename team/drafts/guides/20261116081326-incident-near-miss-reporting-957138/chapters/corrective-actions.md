@@ -19,6 +19,8 @@ sourceIds:
   - icc-safety
 capabilityIds: []
 ---
+## Link incidents to corrective action and follow-up
+
 ## Decide which reports need action
 
 Not every report calls for a corrective action, and not every action needs the same weight. The decision should be made deliberately, by a named person, and written down. The safety lead usually makes it after the investigation or the first review. The input is the reviewed report or investigation. The decision is whether action is needed and, if so, of what kind. The record is the decision with its reason.
