@@ -1,0 +1,20 @@
+{
+  "id": "hero",
+  "width": 1200,
+  "height": 675,
+  "sha256": "658e992e9e5ab3d8d395bebe4dc40dfc1c2fd5376167809c73b9faf4dc2cf317",
+  "source": "codex",
+  "sourceId": "bc8fd9f2687c50e14448e4ae8966b31d3bed4d773d6514f855096ff18078db79",
+  "inputHash": "bc8fd9f2687c50e14448e4ae8966b31d3bed4d773d6514f855096ff18078db79",
+  "alt": "5 ISO 9001 Quality Objectives Myths That Derail Ontario Manufacturers",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "e4117f3157fd23eaf0dcdd3a8b53847dd45ac44e24bc11dad1d37b6a6c0677f4",
+  "request": {
+    "id": "hero",
+    "scene": "Industrial quality work related to iso 9001 quality objectives examples manufacturing",
+    "kind": "hero",
+    "alt": "5 ISO 9001 Quality Objectives Myths That Derail Ontario Manufacturers",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: Industrial quality work related to iso 9001 quality objectives examples manufacturing.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-20T16:51:39.002Z"
+}

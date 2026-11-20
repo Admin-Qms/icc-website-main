@@ -1,0 +1,20 @@
+{
+  "id": "inline-1",
+  "width": 1200,
+  "height": 675,
+  "sha256": "afa4be647c606d0f18af22ba50ba29de2395e17ec394682702dac771936a1320",
+  "source": "codex",
+  "sourceId": "c0f2be490d18ec775d00306c15c5bbbcea67db858b23477ee2adfd9f41cd9be0",
+  "inputHash": "c0f2be490d18ec775d00306c15c5bbbcea67db858b23477ee2adfd9f41cd9be0",
+  "alt": "a manufacturing inspector examining a machined component with a digital caliper beside a production line",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "4b69e87561d9ffcb0367496785f4eeae3dc1fa2ede4fcf5f5acdb1600ba7a8b9",
+  "request": {
+    "id": "inline-1",
+    "scene": "a manufacturing inspector examining a machined component with a digital caliper beside a production line",
+    "kind": "inline",
+    "alt": "a manufacturing inspector examining a machined component with a digital caliper beside a production line",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nMid-shot of the task itself: hands, tool and part fill the frame, the background softly out of focus.\nScene: a manufacturing inspector examining a machined component with a digital caliper beside a production line.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-20T16:51:46.293Z"
+}

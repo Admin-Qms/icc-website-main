@@ -1,0 +1,20 @@
+{
+  "id": "inline-2",
+  "width": 1200,
+  "height": 675,
+  "sha256": "3a874031d05cc7681c9d2a0d8d09f0385587c77aff97333e22c27406f4d637f2",
+  "source": "codex",
+  "sourceId": "28b570b025973667f683521affe0430579bcc485bb53095f8e2c1e42fd5a9553",
+  "inputHash": "28b570b025973667f683521affe0430579bcc485bb53095f8e2c1e42fd5a9553",
+  "alt": "a technician checking a machine control panel and production readings on a metalworking shop floor",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "fc6a888f8794377e73b4fc88d5995e5b17f3f140dc99b3248652f2b6b2b5ced5",
+  "request": {
+    "id": "inline-2",
+    "scene": "a technician checking a machine control panel and production readings on a metalworking shop floor",
+    "kind": "inline",
+    "alt": "a technician checking a machine control panel and production readings on a metalworking shop floor",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nMid-shot of the task itself: hands, tool and part fill the frame, the background softly out of focus.\nScene: a technician checking a machine control panel and production readings on a metalworking shop floor.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-20T16:51:52.421Z"
+}
