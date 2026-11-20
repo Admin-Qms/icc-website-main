@@ -1,5 +1,30 @@
 const { claudeCallFast: claudeCall } = require("../shared/claude");
 const { log } = require("../shared/logger");
+const crypto = require('node:crypto');
+const reviewFailures = new WeakMap();
+
+// Return only locally classified metadata. Provider error bodies, model prose,
+// headers and credentials must never enter routine logs or saved JSON reports.
+function failureDetails(error) {
+  return reviewFailures.get(error) || { stage: 'comparison-or-logging', category: 'unexpected-failure' };
+}
+
+async function checkOriginality(article, existingArticles) {
+  const trace = { stage: 'comparison-context' };
+  try {
+    return await evaluateOriginality(article, existingArticles, trace);
+  } catch (error) {
+    let category = 'unexpected-failure';
+    const message = typeof error?.message === 'string' ? error.message : '';
+    if (message === 'No JSON in plagiarism check response') category = 'missing-json';
+    else if (message === 'Invalid or contradictory originality review verdict') category = 'invalid-verdict';
+    else if (trace.stage === 'parse' && error instanceof SyntaxError) category = 'invalid-json';
+    else if (/^Model reply was cut off at the \d+-token limit$/.test(message)) category = 'truncated';
+    else if (message.startsWith('Every text provider failed — ')) category = 'provider-failure';
+    if (error && typeof error === 'object') reviewFailures.set(error, { ...trace, category });
+    throw error;
+  }
+}
 
 const SYSTEM_PROMPT = `You are the Originality & Plagiarism Checker for ISO Certification Consultant. You operate with 30 years of editorial and academic integrity experience. You operate at an IQ of 148 (top 0.1% of cognitive ability) — bringing exceptional analytical depth, first-principles reasoning, and pattern recognition that far exceeds industry norms. Your outputs reflect genius-level precision, insight, and strategic thinking. Your job is to ensure every article published is genuinely unique, original, and free from:
 
@@ -51,7 +76,7 @@ Return JSON:
   "rewriteInstructions": "null if pass, otherwise specific rewrite guidance"
 }`;
 
-async function checkOriginality(article, existingArticles) {
+async function evaluateOriginality(article, existingArticles, trace) {
   log("plagiarismChecker", "checking", `"${article.title}"`);
 
   // Build self-plagiarism context from existing articles if provided
@@ -91,6 +116,7 @@ ${s.costs.length > 0 ? `Costs: ${s.costs.map((c) => `"${c}"`).join("; ")}` : ""}
     }
   }
 
+  trace.stage = 'request';
   const raw = await claudeCall(
     SYSTEM_PROMPT,
     `Analyze this article for originality and plagiarism risk:
@@ -107,6 +133,11 @@ Score this article 0–100 for originality. Pass threshold is 85. Check for self
     2048
   );
 
+  trace.stage = 'parse';
+  if (typeof raw === 'string') {
+    trace.responseBytes = Buffer.byteLength(raw);
+    trace.responseHash = crypto.createHash('sha256').update(raw).digest('hex');
+  }
   const cleaned = raw.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
   const start = cleaned.indexOf("{");
   const end = cleaned.lastIndexOf("}");
@@ -114,12 +145,14 @@ Score this article 0–100 for originality. Pass threshold is 85. Check for self
 
   const result = JSON.parse(cleaned.slice(start, end + 1));
 
+  trace.stage = 'verdict';
   const valid = result && typeof result.pass === 'boolean' && Number.isFinite(result.score) && result.score >= 0 && result.score <= 100
     && Array.isArray(result.flaggedSentences) && Array.isArray(result.selfPlagiarismFlags)
     && result.flaggedSentences.every(f => f && typeof f.text === 'string' && typeof f.reason === 'string')
     && result.selfPlagiarismFlags.every(f => f && typeof f.text === 'string' && typeof f.similarTo === 'string' && Number.isFinite(f.similarity));
   if (!valid || (result.pass && result.score < 85)) throw new Error('Invalid or contradictory originality review verdict');
 
+  trace.stage = 'result-logging';
   log(
     "plagiarismChecker",
     "scored",
@@ -145,4 +178,4 @@ Score this article 0–100 for originality. Pass threshold is 85. Check for self
   return result;
 }
 
-module.exports = { checkOriginality };
+module.exports = { checkOriginality, failureDetails };
