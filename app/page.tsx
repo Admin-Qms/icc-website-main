@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Hero } from "@/components/home/Hero";
 import { Benefits } from "@/components/home/Benefits";
+import { CustomerLogos } from "@/components/home/CustomerLogos";
 import { SectionHeading, CTASection } from "@/components/ui";
 import { Check } from "@/components/Icons";
 import { ANTHONY_MANNELLA } from "@/lib/people";
@@ -32,6 +33,8 @@ export default function Home() {
   return (
     <>
       <Hero />
+
+      <CustomerLogos />
 
       <Benefits />
 
