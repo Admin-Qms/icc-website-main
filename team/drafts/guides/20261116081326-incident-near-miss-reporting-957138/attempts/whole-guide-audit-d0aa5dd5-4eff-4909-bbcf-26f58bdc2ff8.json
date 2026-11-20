@@ -1,0 +1,11 @@
+{
+  "inputHash": "54d37674785e7cd90484518a6a02d5b43a4e81131d4bfa88e6da2ba7fd743d44",
+  "reviewContextHash": "3720736fb2b5dde047a27a170dbcc1a850002e4f590ee1b7bbe1ca3fde7a4cc6",
+  "reviewedAt": "2026-11-20T16:34:52.565Z",
+  "screening": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "unresolvedFindings": []
+  }
+}
