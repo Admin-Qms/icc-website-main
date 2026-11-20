@@ -92,6 +92,30 @@ test('real normalized evidence remains a failed originality verdict rather than 
   assert.deepEqual(actual, verdict);
 });
 
+test('Cloud comparison title grammar is bound to each request without leaking prior titles', async () => {
+  const seen = [];
+  llm._providers.claude = async (_tier, _system, _user, _budget, options) => {
+    const names = options?.schema?.properties.selfPlagiarismFlags.items.properties.similarTo.enum;
+    seen.push(names);
+    return { text: JSON.stringify({ pass: true, score: 88, flaggedSentences: [],
+      selfPlagiarismFlags: [{ text: 'A common technical phrase.', similarTo: names?.[0] || 'Invented comparison title', similarity: 0.9 }],
+      aiClicheCount: 0, genericParagraphCount: 0, overallAssessment: 'Original with a shared technical phrase.', rewriteInstructions: null }),
+    truncated: false, stopReason: 'end_turn' };
+  };
+  for (const title of ['First supplied comparison', 'Second supplied comparison']) {
+    const result = await checker.checkOriginality({ title: 'Fixture', body: 'A common technical phrase.' }, [{ title, body: 'A common technical phrase.' }]);
+    assert.equal(result.score, 88);
+    assert.equal(result.selfPlagiarismFlags[0].similarTo, title);
+  }
+  assert.deepEqual(seen, [['First supplied comparison'], ['Second supplied comparison']]);
+  llm._providers.claude = async (_tier, _system, _user, _budget, options) => {
+    assert.equal(options.schema.properties.selfPlagiarismFlags.items.properties.similarTo.enum, undefined);
+    return { text: JSON.stringify({ pass: true, score: 88, flaggedSentences: [], selfPlagiarismFlags: [], aiClicheCount: 0,
+      genericParagraphCount: 0, overallAssessment: 'Original.', rewriteInstructions: null }), truncated: false, stopReason: 'end_turn' };
+  };
+  assert.equal((await checker.checkOriginality({ title: 'Fixture', body: 'Original prose.' }, [])).pass, true);
+});
+
 test('Cloud originality requests schema-constrained output from the same fast reviewer', async () => {
   const verdict = { pass: true, score: 92, flaggedSentences: [], selfPlagiarismFlags: [],
     aiClicheCount: 0, genericParagraphCount: 0, overallAssessment: 'Original public draft.', rewriteInstructions: null };

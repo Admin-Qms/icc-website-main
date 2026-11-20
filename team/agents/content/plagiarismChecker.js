@@ -46,6 +46,17 @@ const ORIGINALITY_SCHEMA = {
   },
 };
 
+function originalitySchema(existingArticles) {
+  const schema = structuredClone(ORIGINALITY_SCHEMA);
+  const titles = [...new Set((existingArticles || []).slice(0, 15)
+    .filter(post => post && typeof post.body === 'string' && post.body.length && typeof post.title === 'string' && post.title.trim())
+    .map(post => post.title))];
+  // Prevent invented comparisons in the wire response as well as rejecting them
+  // locally. Clone per request so a later draft never inherits an earlier list.
+  if (titles.length) schema.properties.selfPlagiarismFlags.items.properties.similarTo.enum = titles;
+  return schema;
+}
+
 function observeResponse(trace, text) {
   trace.stage = 'parse';
   if (typeof text === 'string') {
@@ -167,7 +178,7 @@ ${selfPlagiarismContext}
 
 Score this article 0–100 for originality. Pass threshold is 85. Check for self-plagiarism against the existing articles above. Return ONLY valid JSON.`,
     CLOUD_ROUTINE ? 4096 : 2048,
-    CLOUD_ROUTINE ? { schema: ORIGINALITY_SCHEMA, onResponse: ({ text }) => observeResponse(trace, text) } : undefined
+    CLOUD_ROUTINE ? { schema: originalitySchema(existingArticles), onResponse: ({ text }) => observeResponse(trace, text) } : undefined
   );
 
   let result;
