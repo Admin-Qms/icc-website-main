@@ -90,7 +90,7 @@
       "wordCount": 2048,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-19T16:24:39.098Z"
+      "checkpointedAt": "2026-11-20T14:09:26.586Z"
     },
     "ongoing-operation": {
       "hash": "112053ee92b61469129cdaf007a29a0c681ed249102519a4a90e75294b64ac5d",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-20T14:09:22.543Z",
+  "updatedAt": "2026-11-20T14:09:26.596Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -1326,7 +1326,7 @@
     "reviewedChapters": [],
     "researchHash": "787552eb0e3e1cfe85cdfe24d931bb36d1c07e11f1c769c73a00896fc2258901"
   },
-  "contextHash": "7b644818609e00a76618af5faacc7134c25ab668256527eaf3d246a62c7ffe8f",
+  "contextHash": "8d9543dfea353a28757531f9bbdeaa82df3cee328b1942341f9864eaa2236347",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2626,6 +2626,193 @@
       "reviewer": "Configured independent chapter reviewer",
       "carried": true,
       "carriedFrom": "2026-11-19T16:23:30.999Z"
+    },
+    "audit-evidence-migration": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All checks pass. No previous findings were raised, so none remain unresolved. All changed paragraphs are accurate and well-scoped. The four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The ISO 45001 clause mappings (10.2, 5.4, 6.1.2) are correctly attributed to the ICC Safety page and hedged against the boundary that software alone does not satisfy a clause. External reviewer access is appropriately flagged as unconfirmed in the research. The import and cutover guidance is procedurally sound and does not introduce unsupported claims about vendor capability. The Ontario JHSC guide is cited in the final paragraph with an explicit caution that plants elsewhere must check their own rules. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus the allowed internal site path. No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2048 is within acceptable range of the 2000-word target.",
+      "glossary": [
+        {
+          "term": "Gap list",
+          "definition": "The record of items identified during an audit rehearsal or audit view review, each with an owner and a date for resolution."
+        },
+        {
+          "term": "Evidence map",
+          "definition": "A record listing each ISO 45001 clause in scope, the requirement it makes, the records the plant holds as evidence, where they are kept, and who owns them."
+        },
+        {
+          "term": "Import plan",
+          "definition": "The record of the scope of a historical data migration, the mapping of old fields to new ones, decisions about unmapped fields, and the location of the original archive."
+        },
+        {
+          "term": "Cutover plan",
+          "definition": "The record of the date and method by which the new system becomes the authoritative record for incident and near-miss reports, including parallel-period rules, training schedule, and rollback criteria."
+        }
+      ],
+      "roles": [
+        "Safety lead",
+        "Management representative",
+        "Data owner",
+        "Implementation lead"
+      ],
+      "recordNames": [
+        "Gap list",
+        "Evidence map",
+        "Import plan",
+        "Cutover plan"
+      ],
+      "decisions": [
+        "Decide gaps to close before an audit",
+        "Decide evidence per clause",
+        "Decide scope and mapping of old fields to new ones",
+        "Decide cutover date and method"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Know what an auditor sees",
+            "section": "Know what an auditor sees"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Know what an auditor sees; semantic review verifies support",
+            "section": "Know what an auditor sees"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Map clauses without overclaiming",
+            "section": "Map clauses without overclaiming"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Map clauses without overclaiming; semantic review verifies support",
+            "section": "Map clauses without overclaiming"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Clean and import existing logs",
+            "section": "Clean and import existing logs"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Clean and import existing logs; semantic review verifies support",
+            "section": "Clean and import existing logs"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Plan cutover and training",
+            "section": "Plan cutover and training"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Plan cutover and training; semantic review verifies support",
+            "section": "Plan cutover and training"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "d21687769d09b03c353ed9c1ba15472fbd5814ab3622370fb4eb7791df37aaec",
+      "contentHash": "24f6b392192b041a99e144daf58143d99425631ad57c0c88ebd6f7b119997eaa",
+      "paragraphHashes": [
+        "aa5cfe9324a927d25fdadbb23710176894b047f80094774c64824e34df0ac231",
+        "879381afd179a44807a2e9e976fb07a8bdff87d9a2fd0f4e3ffff13c64216cb1",
+        "8502b3e65313cea93884d9ae5828a3bd349d558854e309d75007b0cfebf2c8f0",
+        "94836d684f8b86ae896106ab30b220b703ad71f80dc0f38551b0e9723d7cdebc",
+        "16ba18236431386fd712cd66312773da41d9c515a1f7615ace1c2a5b3a0b4447",
+        "ed646d1cab8bbc59208c21a97526b4d35d3dc08aa860e999a2e3247d910451fe",
+        "1dcfb906289c92d8b24b88b39d4c7c09afa6df6ca0d6892fe4e7f537bd45423a",
+        "80ab50951382516da82cc0e8220eb5feb07b676b5ede74854258082acca35496",
+        "6402f1693514245db836d2ca76fe397935ff2837de66f9a0fd26356feb320a31",
+        "f81337ed35e74a923cdc9a81f8aa4bc4c24d323e379ad152f225f6a59bdf8e4b",
+        "a033ef252e91555007bd4a7c31f666ecdd4982e1875fe8142b7fdb4e7a6c2e5e",
+        "a08d620d6f131d5dd932399050911843fd7f94191f1ada927a5883ad7610c270",
+        "32bf68e7dc91349bbfaed00ad821ac68886f2a56f799688a5fe52b1c2ac91b49",
+        "3289fb03c77e34c12d2f29f21866bbcb877e9b528c84221446c52ebc4c4c2d9a",
+        "87b7b27c0168d0e1e5b11d309d090b93ebba398fdcd10fcad83e6b65459420d2",
+        "539df251cb34d0fcecc9005a42ff8dd571618f9b64de470c201b9544e2e6d327",
+        "a8554390607b2c1efd8bcfc5685feef6b79c476c6cd65026d4696e9657d2fe02",
+        "840980c2504ac05687a06c810910a8d52c9b661930d272fb686bf042be2c157d",
+        "2c11f6b9e0ea32ae25ce8027e9d8585c973058380f6b8e61cfec577b7e98797f",
+        "ea127e3c04a2845f1ecce7ba7b3d9e2c32a6a5bb513785ea42cc24671809ed80",
+        "b6f2f59beb7eba4ba1bc9c0b94cbe4d6ec2a3d612f7f1945a49e3ba537b58a33",
+        "346d121f58c9d3ba6856b754b98cb5fa90c752af9fcc6349ee70ad4f51a5546f",
+        "2c25d57ddc53c62adf159145a4ce332402230f963d8c3db955213cd0868a9334",
+        "d1b50ec30e1b8b7a68d2d54b3bb507060d5b3f9c0e8d65bbff57dcdbda916389",
+        "5a12f344731b1fbe198edeb2304b57bd0a5ef124b456b6c9ffe942425963158a",
+        "ce0e59143ce75e7a78642dc0a11f796b32f0a3c0dd3014de6ccedb083a82e040",
+        "0babd74a82c754c3b25656456326fb335d58faca5443697b3808fa9a31e0bda0",
+        "31f20a9fe45049a1bc110dfb044f2b6005c18ca22edfb85282dc6495b7e01e95",
+        "40d52d496d570e927da818a94851322e226dc8c10403d4a3d92851cb2f6db0c0",
+        "d7b69576fb4b4a28beb6b5f198ef59973e1222f82b8f8268e4496f02e870653c",
+        "dce7dc1951f8873d8b9db0ca0e363790b1ec04842f71414967176df8bca187ce",
+        "92727dab5784d0fdbb993c9c9cd7678427265d3df2270c3e25878b6b43c4dfe3",
+        "0e9349f25c52d8560d29b2a71d9cb27a7df153ca05c9ee3da46730e9b1444f70",
+        "4b0eabc5243510c67a5830248a15a610a26b8c97b89cee05385cd8a435bb213a",
+        "01871a91c376d4b6f595c355534e87571f72c9071e3b52429807194e72867dbc",
+        "6cdc3e10f8fd45d105304ba5f2bb7060c881d2681a7768ec99810712537bc184"
+      ],
+      "outputContextHash": "8d9543dfea353a28757531f9bbdeaa82df3cee328b1942341f9864eaa2236347",
+      "reviewedAt": "2026-11-20T14:09:26.591Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-19T16:24:52.355Z"
     }
   },
   "researchHash": "787552eb0e3e1cfe85cdfe24d931bb36d1c07e11f1c769c73a00896fc2258901",
