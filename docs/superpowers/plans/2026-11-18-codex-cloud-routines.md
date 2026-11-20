@@ -162,13 +162,13 @@ Review decisions: canonical skills use plain forwarding files instead of unverif
 **Consumes:** the three published configurations. **Produces:** a readiness matrix with sanitized evidence for each environment and a list of unresolved blockers.
 
 - [x] Complete initial nonpublishing probes in all three environments; results and limitations are recorded above. Scout's image was a capability check, not a new operational dependency.
-- [ ] Resolve the confirmed settings/actions above, then rerun missing Claude calls and failed Blogs source retrieval in fresh tasks. Keep actual writes, scheduling and long-run resume explicitly unverified until separately exercised.
-- [ ] Check environment root handling: blog/guide scripts must run at the repo root even when mounted in a subdirectory. Setup cannot assume all three mounts match.
-- [ ] Configure `LLM_PROVIDERS=claude` and a working `CLAUDE_API_KEY` for all three environments; keep OpenAI/Gemini/Pexels image API fallbacks disabled for scheduled runs. Do not remove credentials used elsewhere without checking their scope.
-- [ ] Permit package installation, GitHub Git/API endpoints, `api.anthropic.com`, ICC, and required trusted-source hosts/redirects. Use the actual source-fetch policy, not a blanket requirement that `iso.org` return 200: its known 403 needs an approved accessible source such as the existing committee PDFs.
-- [ ] Republish changed environments, then repeat only failed checks in fresh tasks. A task created before republishing retains its prior configuration.
-- [ ] Verify a paused scheduled probe binds the intended environment and Terra model, with the same image tool/file access. A manual cloud task alone does not prove scheduler support. If unavailable, leave migration blocked and present the concrete supported alternative for owner decision; do not substitute a local timer.
-- [ ] Before cutover, perform an explicitly authorized isolated Git write/checkpoint exercise, checking identity, branch rules and workflow triggers. Keep actual `main`/`guide-state` writes out of the initial probe.
+- [x] Resolve the confirmed settings/actions above, then rerun missing Claude calls and failed Blogs source retrieval in fresh tasks. Actual writes, timed same-chat scheduling and complete checkpointed guide recovery were subsequently exercised; see the completed-cutover receipts.
+- [x] Check environment root handling: blog/guide scripts must run at the repo root even when mounted in a subdirectory. Setup cannot assume all three mounts match.
+- [x] Configure `LLM_PROVIDERS=claude` and a working `CLAUDE_API_KEY` for all three environments; keep OpenAI/Gemini/Pexels image API fallbacks disabled for scheduled runs. Do not remove credentials used elsewhere without checking their scope.
+- [x] Permit package installation, GitHub Git/API endpoints, `api.anthropic.com`, ICC, and required trusted-source hosts/redirects. Use the actual source-fetch policy, not a blanket requirement that `iso.org` return 200: its known 403 needs an approved accessible source such as the existing committee PDFs.
+- [x] Republish changed environments, then repeat only failed checks in fresh tasks. A task created before republishing retains its prior configuration.
+- [x] Verify a paused scheduled probe binds the intended environment and Terra model, with the same image tool/file access. A manual cloud task alone does not prove scheduler support. If unavailable, leave migration blocked and present the concrete supported alternative for owner decision; do not substitute a local timer.
+- [x] Before cutover, perform an explicitly authorized isolated Git write/checkpoint exercise, checking identity, branch rules and workflow triggers. Keep actual `main`/`guide-state` writes out of the initial probe.
 
 ## Task 2: Add session-generated asset import without bypassing gates
 
@@ -180,9 +180,9 @@ Review decisions: canonical skills use plain forwarding files instead of unverif
 - [x] Implement `importSessionImage({file, request, directory})` returning normalized bytes plus dimensions, SHA-256, `source: 'codex'`, a source ID, generated-image terms reference and alt text. Record the exact request/prompt and available tool artifact ID; do not label a claimed model/source as independently attested.
 - [x] Normalize once using existing sharp processing. Resolve requests from managed draft/job data, accept only known request IDs, reject nonregular/missing/nonraster files and path traversal, and use atomic checkpoint writes. Imported files cannot write directly to public output folders.
 - [x] Expose a session-import image mode that requires registered assets and never calls `generateCodexImage`, OpenAI, Gemini or Pexels. Do not repurpose the existing local `codex` provider without preserving local callers.
-- [ ] Test the existing maximum two inline blog markers and hero, plus all ten guide page images. Preserve current optional/required image semantics and the final gates; do not silently delete an already assigned imported asset if it disappears.
+- [x] Test the existing maximum two inline blog markers and hero, plus all ten guide page images. Preserve current optional/required image semantics and the final gates; do not silently delete an already assigned imported asset if it disappears.
 - [x] Test duplicate bytes across assets/published content, corrupt images, unknown IDs, changed checkpoints, and retry after incomplete checkpointing. Repeated successful import is idempotent; a different file for an already checkpointed image requires explicit reconciliation.
-- [ ] Test a fresh-run restore of all image bytes/metadata, then reuse without recompression or tool/API calls. Reuse the existing guide image tests.
+- [x] Test a fresh-run restore of all image bytes/metadata, then reuse without recompression or tool/API calls. Reuse the existing guide image tests.
 - [x] Add a pre-image validation command for blog text and guide editorial readiness so rejected text does not consume image allowance. Keep final validation after images and re-review when text changes.
 - [x] Run only changed behavior test files with `node --test <paths>` in this separate node:test repository; no application build/typecheck in this task.
 
@@ -190,12 +190,12 @@ Review decisions: canonical skills use plain forwarding files instead of unverif
 
 **Files:** shared provider/config code, publication scripts, state/provider/pipeline tests. **Consumes:** imported assets. **Produces:** review failures stop publication; completed checkpoint data cannot be erased by overlapping runs.
 
-- [ ] Set and verify Claude-only routing for helpers/reviews. Keep reviewer prompts and the current two editorial correction passes; the migration does not weaken unsupported-claim findings in the unfinished incident guide.
-- [ ] Add a failing review test for a missing/truncated verdict, provider outage and a rejected claim. Require complete expected review fields and explicit passes before accepting a verdict. Log provider/model names without credentials.
+- [x] Set and verify Claude-only routing for helpers/reviews. Keep reviewer prompts and the current two editorial correction passes; the migration does not weaken unsupported-claim findings in the unfinished incident guide.
+- [x] Add a failing review test for a missing/truncated verdict, provider outage and a rejected claim. Require complete expected review fields and explicit passes before accepting a verdict. Log provider/model names without credentials.
 - [x] Add an isolated bare-Git behavioral test with two checkouts: both restore one state snapshot, the first saves a new checkpoint, then the stale checkout tries to save. It must refuse rather than reparent a stale snapshot on the newer fetched branch.
 - [x] Track the restored state revision and verify it before save; use non-force Git updates and stop on conflict. Do not auto-merge guide state or delete locks to make the test pass.
-- [ ] Add durable blog checkpoints on a separate orphan `blog-state` branch, limited to managed daily blog drafts and imported assets. Add a `save-state` command to the blog script; restore only the relevant slot, checkpoint after text and each image, exclude locks/secrets, and use the same stale-revision guard. Prove a fresh clone reuses the saved bytes and a published/expired slot is never replayed with `--force`. Verify branch write access and that hosting ignores this state branch before cutover.
-- [ ] Exercise two blog publication attempts for the same date/slug and main moving during a publish. Preserve the date/slug gate and revalidate the merged tree before a production push when necessary.
+- [x] Add durable blog checkpoints on a separate orphan `blog-state` branch, limited to managed daily blog drafts and imported assets. Add a `save-state` command to the blog script; restore only the relevant slot, checkpoint after text and each image, exclude locks/secrets, and use the same stale-revision guard. Prove a fresh clone reuses the saved bytes and a published/expired slot is never replayed with `--force`. Verify branch write access and that hosting ignores this state branch before cutover.
+- [x] Exercise two blog publication attempts for the same date/slug and main moving during a publish. Preserve the date/slug gate and revalidate the merged tree before a production push when necessary.
 - [x] Verify scheduler overlap prevention if offered; otherwise add a cross-run ownership guard suitable for independent cloud VMs. Process-local lock files alone do not serialize independent runs. Keep the Git stale-state guard as the final protection.
 - [x] Run the changed provider, state and pipeline tests. Keep full suites/build for the separately authorized release.
 
