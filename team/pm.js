@@ -799,6 +799,7 @@ function printBlogResult(result) {
     console.log(chalk.yellow(`\n  Nothing to do: ${result.reason}`));
   } else {
     console.log(chalk.red.bold(`\n  Pipeline Failed: ${result.reason}`));
+    if (result.reviewFailure) console.log(`  Review failure: ${JSON.stringify(result.reviewFailure)}`);
     if (result.title) console.log(`  Title:   ${result.title}`);
     for (const issue of result.issues || []) console.log(chalk.red(`    - ${issue}`));
     console.log(chalk.gray("  Nothing was written to content/ or public/."));
