@@ -180,6 +180,8 @@
     "f3bb9a0ad1361bc9018f365c62ef0fc7cd57f6453ab21f9015c8271696029da4"
   ],
   "outputContextHash": "d5444e73bb11e3cdcd6a00bc451aed27a560b728d5bc7c64259526235c8952f6",
-  "reviewedAt": "2026-11-19T16:11:06.134Z",
-  "reviewer": "Configured independent chapter reviewer"
+  "reviewedAt": "2026-11-20T14:29:38.533Z",
+  "reviewer": "Configured independent chapter reviewer",
+  "carried": true,
+  "carriedFrom": "2026-11-19T16:11:06.134Z"
 }
