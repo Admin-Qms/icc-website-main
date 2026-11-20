@@ -33,7 +33,7 @@ Write criteria that guide the decision. Useful questions include the following:
 - Does the cause point to something the plant controls?
 - Is the cost of acting small compared with the possible harm?
 
-The plant can weigh these as it sees fit. A low-rated report may still need action if it repeats, and a high-rated one may need only a record if the cause was an unrepeatable circumstance. What matters is that the reasoning is visible.
+The plant can weigh these as it sees fit. A low-rated report may still need action if it repeats. For a high-rated report, assess existing hazards, applicable duties and necessary controls before deciding what action is needed, even if the immediate circumstances seem unrepeatable. What matters is that the reasoning is visible.
 
 Distinguish a correction from a corrective action. A correction deals with the immediate problem, such as putting the guard back or cleaning up a spill. A corrective action deals with the cause, so the problem does not return, such as changing how guards are checked at shift start. Both may be needed, and they may have different owners and dates. Recording them separately makes it easier to see whether the cause was addressed or only the symptom.
 

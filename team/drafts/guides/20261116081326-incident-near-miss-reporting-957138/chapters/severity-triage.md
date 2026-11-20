@@ -37,7 +37,7 @@ Begin with the plant's own history. Gather a sample of past reports from paper l
 
 These three levels are an illustration for building a scale, not a recommended standard, and each plant should write definitions that match its own hazards and its own approach to risk. The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.
 
-Decide how near-misses are rated. A near-miss caused no harm, so a rating based on actual harm would always be the lowest. Most plants rate a near-miss by the harm that could reasonably have occurred, and the scale should say so in plain words. The same event can then receive the same rating whether or not someone happened to be standing in the wrong place.
+Decide how near-misses are rated. A near-miss caused no harm, so a rating based on actual harm would always be the lowest. Rate a near-miss by the harm that could reasonably have occurred, and state that approach in the scale. The same event can then receive the same rating whether or not someone happened to be standing in the wrong place.
 
 Test the scale before relying on it. Give two people the same ten past reports and ask each to rate them without conferring. Where their ratings differ, the definition at that boundary is unclear. Rewrite it, using the disputed reports as examples, and test again. Keep the examples with the definitions so that new reviewers can learn the scale from real cases rather than from adjectives.
 
