@@ -81,6 +81,18 @@
     {
       "term": "Reviewed conclusion",
       "definition": "The accepted output of a completed investigation, comprising the cause statement and recommendations, bearing the reviewer's name and the date of acceptance."
+    },
+    {
+      "term": "Access rule",
+      "definition": "The record of what each role or group may see in the dashboard, decided by the safety lead and used to control visibility into incident data."
+    },
+    {
+      "term": "Meeting record",
+      "definition": "The record of a committee meeting showing which reports and actions were examined, which patterns were raised, and who will follow up."
+    },
+    {
+      "term": "Feedback record",
+      "definition": "A feedback entry or note in the team meeting record showing what was shared with reporters about closed reports, within the plant's privacy rules."
     }
   ],
   "roles": [
@@ -107,7 +119,10 @@
     "Operations supervisor",
     "Reviewer",
     "Plant manager",
-    "Area supervisor"
+    "Area supervisor",
+    "Committee chair",
+    "Committee member",
+    "Worker member"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -136,7 +151,11 @@
     "Decision with reason",
     "Action entry",
     "Linked records",
-    "Effectiveness check"
+    "Effectiveness check",
+    "Access rule",
+    "Meeting record",
+    "Feedback record",
+    "Written response"
   ],
   "example": {
     "label": "Illustrative example",
@@ -218,6 +237,19 @@
         "Accept the action and date",
         "Decide closure",
         "Decide effective or reopen"
+      ]
+    },
+    {
+      "slug": "committee-visibility",
+      "title": "Give committees and workers visibility into incident data",
+      "summary": "All checks pass. No previous findings were raised, so none remain unresolved. The five changed paragraphs are accurate and well-scoped: the anonymous-report paragraph correctly cites the ICC Safety page claim and adds appropriate privacy guidance; both Ontario guide paragraphs accurately reflect the verified source claims (quarterly meetings, monthly inspections, 21 calendar days, implementation timetable, written reasons) with correct caveats about Ontario-specific applicability; the patterns paragraph provides sound interpretive guidance without unsupported claims; and the deadline-process paragraph gives concrete procedural advice without overstating regulatory requirements. All unchanged text was already reviewed and cleared. All four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited only where Ontario-specific content applies, with appropriate jurisdictional caveats in every instance. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide). No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2018 is within acceptable range of the 2000-word target.",
+      "bodyHash": "15927e028f3c5f51b09262ccc49c45efa77ffe042e1afd695758bc634884dd25",
+      "decisions": [
+        "Decide committee access",
+        "Decide whether anonymous reports show to the committee",
+        "Decide which patterns to raise",
+        "Decide feedback to reporters",
+        "Accept or explain a committee recommendation"
       ]
     }
   ],
