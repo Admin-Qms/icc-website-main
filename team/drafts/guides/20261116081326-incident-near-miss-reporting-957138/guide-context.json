@@ -65,6 +65,22 @@
     {
       "term": "Report form specification",
       "definition": "The record of the final form design stating field name, who completes it, whether it is required, and what values it accepts."
+    },
+    {
+      "term": "Assignment entry",
+      "definition": "The record created when an investigator is assigned to an investigation, naming the investigator, the scope and the date, and showing every subsequent change with a date and a name."
+    },
+    {
+      "term": "Evidence list",
+      "definition": "The record kept with the incident of all items collected during an investigation, noting what each item is, who collected it, when and where it is held."
+    },
+    {
+      "term": "Cause statement",
+      "definition": "The record of what the investigator and supervisor concluded caused or contributed to the event, distinguishing observed facts, reported information and inferences, and showing which evidence supports each point."
+    },
+    {
+      "term": "Reviewed conclusion",
+      "definition": "The accepted output of a completed investigation, comprising the cause statement and recommendations, bearing the reviewer's name and the date of acceptance."
     }
   ],
   "roles": [
@@ -90,7 +106,8 @@
     "Safety lead",
     "Operations supervisor",
     "Reviewer",
-    "Plant manager"
+    "Plant manager",
+    "Area supervisor"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -111,7 +128,11 @@
     "Severity scale",
     "Routing table",
     "Rating history",
-    "Regulatory checklist"
+    "Regulatory checklist",
+    "Assignment entry",
+    "Evidence list",
+    "Cause statement",
+    "Reviewed conclusion"
   ],
   "example": {
     "label": "Illustrative example",
@@ -169,6 +190,18 @@
         "Decide routing and response time",
         "Decide the final rating",
         "Decide which events need external notice"
+      ]
+    },
+    {
+      "slug": "investigation",
+      "title": "Run investigations from a structured record",
+      "summary": "All checks pass. The page matches the plan exactly across four subsections: Assign and scope the investigation, Collect evidence, Analyze causes without blame, and Record conclusions and review. Each subsection contains the required workflow elements (role, input, decision, record, exception) and an evaluation criterion drawn from the plan. The illustrative example in the first subsection is correctly labeled as invented and not a customer result. All ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation, in line with the research source constraints. The ICC page's statement that investigations start from a blank page is correctly presented as a vendor-described pain point rather than measured data. The AI-output review claim appears twice—once in the cause analysis section and once in the conclusions section—but the two occurrences serve distinct purposes (introducing the AI concern in context of cause analysis, and reinforcing it as a reviewer obligation in the conclusions step), so this does not constitute problematic repetition. The Ontario JHSC guide is cited only in the final subsection and with an explicit caution that plants outside Ontario must check their own rules. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus an allowed internal site path. No FAQ section appears anywhere in the page, consistent with the plan assigning none. No scope boundary violations were detected; corrective action tracking is appropriately deferred to the next chapter. Word count of approximately 2028 is within acceptable range of the 2000-word target. No previous findings were raised, so none remain unresolved.",
+      "bodyHash": "86cfbd85240303d863b1eae42cc5f19569aeebb52556706a858c8af93a5622c0",
+      "decisions": [
+        "Decide who investigates and how deeply",
+        "Decide what evidence is sufficient",
+        "Decide causes",
+        "Accept or return the draft investigation"
       ]
     }
   ],
