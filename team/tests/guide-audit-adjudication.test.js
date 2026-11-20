@@ -8,7 +8,7 @@ const screen = () => ({ claims: 'failed', consistency: 'failed', repetition: 'fa
 const clear = () => ({
   claims: 'passed', consistency: 'passed', repetition: 'passed', unresolvedFindings: [],
   dimensionReasons: { claims: 'The supplied evidence supports the qualified statements.', consistency: 'The pages distinguish recommendations from verified features consistently.', repetition: 'There are no nearly verbatim duplicated paragraphs.' },
-  decisions: [0, 1].map(index => ({ index, verdict: 'clear', reason: 'The supplied source and qualified prose resolve this allegation.', evidence: [{ kind: 'source', id: 'iso-documentation', quote: 'Preserve documented information and revision evidence' }] })),
+  decisions: [0, 1].map(index => ({ index, verdict: 'clear', reason: 'The supplied source and qualified prose resolve this allegation.', evidenceIds: ['source:0:claim:0'] })),
 });
 async function ready(t, options = {}, cloud = true) {
   const config = require('../agents/shared/config'); const original = config.CLOUD_ROUTINE;
@@ -25,15 +25,32 @@ test('disputed cloud findings require a complete independent verdict and retain 
   const { service, job, store } = await ready(t, { auditor: async () => screen(), auditAdjudicator: async (_prompt, message, _tokens, options) => {
     const payload = JSON.parse(message);
     assert.deepEqual(payload.screening, screen());
-    assert.ok(payload.pages.every(p => p.slug && p.body));
+    assert.ok(payload.pages.every(p => p.slug && p.paragraphs.length));
     assert.equal(options.schema.additionalProperties, false);
     return clear();
   } });
   const result = await service.reviewGuide(job.id);
   assert.equal(result.claims, 'passed'); assert.equal(result.repetition, 'passed');
   assert.deepEqual(result.screening, screen()); assert.deepEqual(result.adjudication, clear());
+  assert.equal(result.resolvedEvidence[0].evidence[0].quote, 'Preserve documented information and revision evidence');
   assert.deepEqual(JSON.parse(fs.readFileSync(path.join(job.directory, 'audit.json'))), result);
   assert.deepEqual(store.loadJob(job.id).audit, result);
+});
+
+test('adjudication receives complete lossless Markdown blocks and resolves selected page evidence exactly', async t => {
+  const { adjudicateGuideAudit } = require('../agents/content/guideAudit');
+  const body = '## Heading\r\n\r\nIf offered, test the feature.\r\n \r\n| Role | Decision |\n| --- | --- |\n| Owner | [Review](/contact/) |\n\nLast paragraph.';
+  const research = { sources: [{ id: 'primary', retrievedAt: '2026-11-19', supportedClaims: ['A general description, not confirmation of every form field.'] }] };
+  const result = await adjudicateGuideAudit(screen(), { pages: [{ slug: 'first-page', title: 'First', description: 'Description', body }], outline: {}, research }, async (_prompt, message) => {
+    const payload = JSON.parse(message);
+    assert.equal(payload.pages[0].paragraphs.map(p => p.text).join(''), body);
+    assert.equal(payload.pages[0].title, 'First'); assert.equal(payload.pages[0].description, 'Description');
+    assert.equal(payload.research.sources[0].retrievedAt, '2026-11-19');
+    assert.equal(payload.research.sources[0].supportedClaims[0].text, 'A general description, not confirmation of every form field.');
+    const response = clear(); response.decisions.forEach(d => { d.evidenceIds = [payload.pages[0].paragraphs.find(p => p.text.startsWith('| Role')).evidenceId]; });
+    return response;
+  });
+  assert.equal(result.resolvedEvidence[0].evidence[0].quote, '| Role | Decision |\n| --- | --- |\n| Owner | [Review](/contact/) |\n\n');
 });
 
 for (const verdict of ['violation', 'uncertain']) test(`${verdict} on any finding cannot clear a failed guide`, async t => {
@@ -59,9 +76,9 @@ const invalid = [
   ['missing dimension verdict', r => { delete r.repetition; }],
   ['missing dimension reason', r => { delete r.dimensionReasons.repetition; }],
   ['invalid verdict', r => { r.decisions[0].verdict = 'approved'; }],
-  ['clear without evidence', r => { r.decisions[0].evidence = []; }],
-  ['invented evidence quote', r => { r.decisions[0].evidence[0].quote = 'This source was never supplied.'; }],
-  ['unknown evidence source', r => { r.decisions[0].evidence[0].id = 'not-a-source'; }],
+  ['clear without evidence', r => { r.decisions[0].evidenceIds = []; }],
+  ['unknown evidence block', r => { r.decisions[0].evidenceIds = ['source:0:claim:999']; }],
+  ['unknown evidence source', r => { r.decisions[0].evidenceIds = ['source:999:claim:0']; }],
   ['unexplained failed dimension', r => { r.repetition = 'failed'; }],
   ['passed verdict with new unresolved findings', r => { r.unresolvedFindings = ['A genuine additional defect remains.']; }],
 ];
