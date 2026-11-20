@@ -1,0 +1,20 @@
+{
+  "id": "mapping-workflows",
+  "width": 1200,
+  "height": 675,
+  "sha256": "74bff36cf2926e402fae9683188dbecba232674bdb6be8c5bf605b9c61b5f8a9",
+  "source": "codex",
+  "sourceId": "ca633ea2da1d78507e92c5fbb5e96744d792e23556ad33c951842329b1b635e2",
+  "inputHash": "ca633ea2da1d78507e92c5fbb5e96744d792e23556ad33c951842329b1b635e2",
+  "alt": "A quality lead and a supervisor walking a press line with a paper incident log; authentic manufacturing environment, no readable text or logos",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "ee93c4ffa65864ce68404228f70acdcc86fa275a4ca0e5f4e95c00f25d872673",
+  "request": {
+    "id": "mapping-workflows",
+    "scene": "A quality lead and a supervisor walking a press line with a paper incident log; authentic manufacturing environment, no readable text or logos",
+    "kind": "hero",
+    "alt": "A quality lead and a supervisor walking a press line with a paper incident log; authentic manufacturing environment, no readable text or logos",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: A quality lead and a supervisor walking a press line with a paper incident log; authentic manufacturing environment, no readable text or logos.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-20T14:56:42.841Z"
+}
