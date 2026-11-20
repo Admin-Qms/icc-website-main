@@ -18,6 +18,20 @@ imageBrief: >-
 sourceIds:
   - icc-safety
 capabilityIds: []
+wordCount: 2053
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/reporting-intake.webp
+  alt: >-
+    A floor operator scanning a posted QR code beside a machine cell; authentic
+    manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 01f7068df3419a4b5edd6622ce9481339f592915011c0a15664c55d8f876929f
+  sha256: dc3dfc1b9cb1f637a437da8c963b06c85cb2360316d967a9f4c4ffc1ca2456ad
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Define the report fields
 
@@ -33,7 +47,7 @@ Separate three groups of fields:
 
 Keeping the groups apart protects the reporter from questions only an investigator can answer. It also keeps ownership clear, because each group has a named role.
 
-The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes incident and near-miss reporting in the product and a severity set from the level of harm. The research reviewed for this guide does not establish which fields the form includes. That detail is a question for a demonstration: which fields are standard, which can the plant add or remove, and whether the wording can be changed to match how the floor talks? The page's setup description mentions configuring fields, checklists, terminology, and routing, so ask the vendor to show a field being renamed or added with an example from the plant.
+The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes incident and near-miss reporting in the product and a severity set from the level of harm. The research reviewed for this guide does not establish which fields the form includes. That detail is a question for a demonstration: which fields are standard, which can the plant add or remove, and whether the wording can be changed to match how the floor talks? The page generally mentions configuring module fields, checklists, terminology, and routing; it does not confirm that the anonymous form itself has configurable fields. Ask the vendor to show whether a form field can be renamed or added using a plant example.
 
 Choose wording carefully. A field called "incident category" means little to someone who has just seen a forklift nearly strike a rack. "What happened?" with a short pick list of the plant's most common event types works better. Test the draft form on three or four people who did not help write it and watch where they hesitate.
 
@@ -57,7 +71,7 @@ Follow-up is the hardest part. An anonymous reporter may not be reachable to exp
 
 A board near the entry listing actions taken can work, but only after a reviewer removes names, photos, locations, and other details that could identify the reporter, and only where the plant's disclosure policy allows it. Where safe disclosure is not possible, use a non-public option, such as telling the safety committee or area supervisors in general terms what changed, after a reviewer has checked the wording for identifying context.
 
-Watch for misuse as well as underuse. A small number of anonymous reports may be personal complaints, or may name a colleague. Decide in advance how the plant handles a report that is really about a person rather than a condition. Often the right step is to route it to human resources under that function's own process and to record in the log that it was redirected and by whom.
+Watch for misuse as well as underuse. A small number of anonymous reports may be personal complaints or may name a colleague. Decide in advance how the plant handles a report that is really about a person rather than a condition. Often the right step is to route it to human resources under that function's own process and to record in the log that it was redirected and by whom.
 
 Add open questions for the vendor: how an anonymous reporter can receive a reply, what protections apply, and whether anonymous reports are both marked as anonymous and kept in the same log as named reports. Make the last one a demonstration criterion.
 

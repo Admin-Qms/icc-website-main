@@ -18,6 +18,19 @@ imageBrief: >-
 sourceIds:
   - icc-safety
 capabilityIds: []
+wordCount: 2028
+readTime: 11
+image:
+  src: /images/guides/incident-and-near-miss-reporting-software/investigation.webp
+  alt: >-
+    An investigator interviewing an operator beside a machine guard; authentic
+    manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: cb0624935b7dbe2e32e5589dda772aa44e94318bd81f1fe584a314bc7e179bc0
+  sha256: 688be8906283985a8bc87b4be0f18e3695b5f2785fed26a8446a90a110e8f50d
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Assign and scope the investigation
 

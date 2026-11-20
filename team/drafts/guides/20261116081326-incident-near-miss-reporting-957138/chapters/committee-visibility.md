@@ -20,6 +20,20 @@ sourceIds:
   - icc-safety
   - ontario-jhsc-guide
 capabilityIds: []
+wordCount: 2018
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/committee-visibility.webp
+  alt: >-
+    A joint safety committee reviewing a wall display of open actions on a plant
+    floor; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 96cccf72955d66c94918d1f819ce3beb191f8e036bae6ebe816ac5ceb640c069
+  sha256: 8351e889d849bec61ba5d8d63490deb047c2cd1ce59c2afdbae2cb7313838395
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Share the right dashboard
 
@@ -29,7 +43,7 @@ The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/sa
 
 Decide what a committee needs to do its job. Counts by area, category, and rating over time, a list of open actions with owners and dates, and a list of reports awaiting first review are usually enough to prepare a meeting. Names of individuals are usually not needed for that purpose. Where detail is needed to understand a case, the committee can ask the safety lead for it through a defined route, and the request can be recorded.
 
-Take particular care with anonymous reports. The page says anonymous reports appear in the dashboard marked as anonymous. The plant should decide whether the committee sees them in full, in summary, or only as counts, and should make sure that details such as location or time do not make a reporter easy to identify. Make the choice part of the anonymity policy described earlier, and tell the floor what the committee can see.
+Take particular care with anonymous reports. The page says anonymous reports appear in the dashboard marked as anonymous. The plant should decide whether the committee sees them in full, in summary, or only as counts, and should make sure that details such as location or time do not make a reporter easy to identify. Make the choice part of the anonymity policy described earlier, and tell the floor what the committee can see. Before sharing a report, the safety lead should check whether its details could identify the person who filed it.
 
 Separate the safety view from other views where the plant wants that. The page's description of separate permissions suggests this is possible, and a demonstration should show it. A quality manager who needs to see actions linked to safety events may not need to see the detail of injuries, and the reverse may also hold. Ask whether access can be limited by role, area, or site, and how changes to access are recorded.
 
@@ -43,11 +57,11 @@ The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) 
 
 The committee chair owns this review. The input is the log and the dashboard. The decision is which patterns to raise with the plant. The record is the meeting record. The exception to plan for is that the rules about committees differ outside Ontario, so the plant should confirm what applies at each site.
 
-The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) describes how committees work for the workplaces it covers. As described there, a joint health and safety committee meets at least once every three months, and a worker member inspects the workplace at least once a month. Those figures are Ontario's and apply to the workplaces the guide describes. A plant should check the current official page and the rules for its own province, because requirements differ by jurisdiction and by workplace size.
+The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) describes how committees work for the workplaces it covers. As described there, a joint health and safety committee meets at least once every three months, and worker workplace inspections are generally monthly, subject to the guide's inspector, regulatory, and impracticability exceptions. Those figures are Ontario's and apply to the workplaces the guide describes. A plant should check the current official page and the rules for its own province, because requirements differ by jurisdiction and by workplace size.
 
 Whatever the legal minimum, a plant may choose a monthly look at the log rather than a quarterly one. Choose a rhythm that matches how fast conditions change, and make sure the log is ready beforehand. Ask the safety coordinator to prepare a standard pack from the dashboard, so the meeting spends its time discussing and not assembling.
 
-Look for patterns of several kinds. Repeats in one location may point to a physical condition. Clusters on one shift may point to staffing or supervision. Repeated categories may suggest a gap in training or equipment. A rise in reports can mean more events, or can mean that reporting has improved, so interpret changes in counts with care and look at ratings and content, not just numbers.
+Look for patterns of several kinds. Repeats in one location may point to a physical condition. Clusters on one shift may point to staffing or supervision. Repeated categories may suggest a gap in training or equipment. A rise in reports can mean more events, or it can mean that reporting has improved, so interpret changes in counts with care and look at ratings and content, not just numbers.
 
 Use the inspection findings alongside the log. Where a worker member inspects the workplace, the inspection notes and the reports may point to the same conditions. Bring them into the same discussion and record where they agree and where they differ. Ask the vendor how inspection findings can be recorded alongside reports; the research reviewed for this guide does not describe that for the safety module.
 
@@ -61,9 +75,9 @@ Check the follow-up list at the next meeting, since a pattern that is discussed 
 
 Committees may make recommendations, and in the Ontario workplaces the guide covers, the employer has duties when they are in writing. The plant's process should make sure recommendations are recorded, answered, and tracked. The operations manager normally owns the response, with help from the safety lead. The input is the written recommendation. The decision is whether to accept it, accept it in part, or explain why not. The record is the written response. The exception to plan for is a response that is overdue.
 
-The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) states that an employer must respond in writing within 21 days to written recommendations from the committee. That timeline applies to the Ontario workplaces the guide covers. Plants elsewhere should confirm the rule that applies to them, and all plants should check the current wording on the official page, since the research behind this guide could not retrieve the full page directly.
+The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) states that an employer must respond in writing within 21 days to written recommendations from the committee. The guide describes 21 calendar days, an implementation timetable for accepted recommendations, and written reasons for rejected ones. Applicability and exceptions depend on the workplace and legislation, which governs; plants elsewhere should confirm their own rules.
 
-Build a simple process around the deadline. When a recommendation arrives, record its date and assign it to an owner. Set a reminder at an intermediate point and a target for the response well before the limit. Draft the response, review it with the safety lead and send it, then record the date. Check the current requirements for what a response must contain and when it is due.
+Build a simple process around the deadline. When a recommendation arrives, record its date and assign it to an owner. Set a reminder at an intermediate point and a target for the response well before the limit. Draft the response, review it with the safety lead, and send it, then record the date. Check the current requirements for what a response must contain and when it is due.
 
 Make responses useful. A response that says only "noted" does little for the committee. A better response says whether the recommendation is accepted, what will be done, who is responsible, and by when, or why the plant will not act and what it will do instead. Where a recommendation leads to a corrective action, link the two records so the committee can follow the result.
 

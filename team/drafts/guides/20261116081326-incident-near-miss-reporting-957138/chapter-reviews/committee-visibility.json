@@ -6,51 +6,38 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "Both previous findings are resolved. The changed paragraphs present no clear new problems. No FAQ is assigned or included.",
+  "summary": "All checks pass. No previous findings were raised, so none remain unresolved. The five changed paragraphs are accurate and well-scoped: the anonymous-report paragraph correctly cites the ICC Safety page claim and adds appropriate privacy guidance; both Ontario guide paragraphs accurately reflect the verified source claims (quarterly meetings, monthly inspections, 21 calendar days, implementation timetable, written reasons) with correct caveats about Ontario-specific applicability; the patterns paragraph provides sound interpretive guidance without unsupported claims; and the deadline-process paragraph gives concrete procedural advice without overstating regulatory requirements. All unchanged text was already reviewed and cleared. All four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited only where Ontario-specific content applies, with appropriate jurisdictional caveats in every instance. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide). No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2018 is within acceptable range of the 2000-word target.",
   "glossary": [
     {
       "term": "Access rule",
-      "definition": "A record of what each group may see."
+      "definition": "The record of what each role or group may see in the dashboard, decided by the safety lead and used to control visibility into incident data."
     },
     {
-      "term": "Recommendation",
-      "definition": "A proposal for a change."
+      "term": "Meeting record",
+      "definition": "The record of a committee meeting showing which reports and actions were examined, which patterns were raised, and who will follow up."
+    },
+    {
+      "term": "Feedback record",
+      "definition": "A feedback entry or note in the team meeting record showing what was shared with reporters about closed reports, within the plant's privacy rules."
     }
   ],
   "roles": [
-    "Safety lead",
-    "Safety committee",
-    "Health and safety representative",
-    "Supervisor",
-    "Floor supervisor",
-    "Quality manager",
-    "Administrator",
     "Committee chair",
-    "Safety coordinator",
-    "Worker committee member",
-    "Operations manager",
-    "Reporter"
+    "Committee member",
+    "Worker member"
   ],
   "recordNames": [
     "Access rule",
-    "Anonymity policy",
-    "Committee pack",
-    "Incident log",
-    "Inspection notes",
     "Meeting record",
-    "Written recommendation",
-    "Written response",
-    "Recommendation register",
-    "Feedback entry"
+    "Feedback record",
+    "Written response"
   ],
   "decisions": [
-    "What each group may see on the dashboard",
-    "Whether the committee sees anonymous reports in full, in summary, or as counts",
-    "Which patterns to raise with the plant",
-    "How often to review the log",
-    "Whether to accept a committee recommendation, accept it in part, or explain why not",
-    "How to track recommendations if the product does not cover them",
-    "What feedback to share with reporters within privacy rules"
+    "Decide committee access",
+    "Decide whether anonymous reports show to the committee",
+    "Decide which patterns to raise",
+    "Decide feedback to reporters",
+    "Accept or explain a committee recommendation"
   ],
   "pass": true,
   "deterministic": {
@@ -148,31 +135,31 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "bac0c8d868dc6deeec02f80d110969129dd1b46c7fc2f00c6945069080bd5736",
-  "contentHash": "b241c4b800f86a4571e7171444a19070cb3b4b90e254ff52de27e6099f82a45d",
+  "inputHash": "5c22c5a14cd9a1e4b6de5caa1710f56563f864b02052a4709708093c75e01d18",
+  "contentHash": "6c4ddc3f49e2848f55e615795114741f630dcff1630275bbb5427334e82a0dce",
   "paragraphHashes": [
     "9afe419089b62e1a15e5cf1e643d4b897a160f452b681cbfe9c3b9282981051a",
     "5d74ffc253c463c3fd0e559835cd043bcffdc828aaced9c323b47bb6a31e2cc1",
     "e2cc8ed513fdedc6cae46bb18bfdd952ddb6d462e6f71dc5ef6fdcee6eb0934f",
     "e83ad9446bc48bbe54d2814fb52a1ef7d26101056fb2a8f76abf90acf7efd46a",
-    "bc3b3ec849d991332b36a1bbc0d688e579b43ab37367cb0061fb8d650461f568",
+    "17a82dae76abcdc0ed5ca5a5fbc88f80898d1f00018e0484e15883161eb81ca4",
     "ff7841097566a63201b523a4b3ea25df9b26bef9f501a5f66ddcfec131706576",
     "2541b176b37e9eb3a167a60aec5f281040fe28b78dfcaa261b7a36f9f1cb6fd0",
     "2200c5e6435e3f37e4f9b6e112343c66bdaaa340ef8751f0c68a8e36718b0306",
     "200d976422e659798635a0bc578a0a7cbabaf788127c076b4829d04940f66eb6",
     "c11e18e7d4903694ebde1e6a68faaa1453409e40cf916f0785d6ba7c8bbd54ce",
     "c02345e186494a791e78343d9114cde8bb78e7302986be467f09d43c0ff55c36",
-    "4721f3a6882254a86dcf7dbdbc491d203aea8d653b0dc1acb874764802097885",
+    "df8980010397ab3b1d7a03e012e5c8041cf5fc922e07088ca40ad24894b74c8b",
     "6ab4f9b1d5fbbe586a234c511a8ceb21b64dd002d8897e371e3a7a2d3cadd320",
-    "4459888ceefaf39004d4d82bcf9711f7b13c2c9b60e78a3602c9b2eb59312205",
+    "fc6760cf2331d227e58857888b9382aa187aed4c156df18dd100ede6ce1cd693",
     "ef06c2977b5c8f6f1721577d53f96e4c4905d350ea64f7153905ec17064ac263",
     "ed0c68da38c7982a1e899d45775ce8de9fe468c0160d3640a38dd6b0f542f0ce",
     "03e14827e6db6a3a18d35f0ea30e4fb114654a4b7ca84726a6b6ac219aaafe15",
     "8b3dff7695445ed9b135c4274aefdc99f19a775864a3f7b3b1628b0f16c5f0aa",
     "672c3a70d62cbfc5e8844f37f0f3b6e270ca02ed3fe552b6e5b66e7cf40a9f6c",
     "b0c5ab5b5775e4654c23b3f434429a988f7a4742f7227c75995009e95bf510a3",
-    "06dc0be4cbf9cd858a27cbe43036bb968b9cc2e35ac09784cdd8c916dcf7786a",
-    "159e13b31588117634042fa55e070e033f77d2c5ea8f24d45230764d1f0e0136",
+    "88619052ea446749494f82e4464dd1758931f60b852294d7237b087b73259cbe",
+    "1317e41646e8d289a95ee798a527c71ba69706bab88824166c96aa689f0a42a4",
     "5d6ff872598f53f348c97975acd92cc1c748a5e688f5a59bce59555147ff0c90",
     "d9e33adf29a69cb11a2cdf3f755733f2bcf47a983c30fc2aab6ae0c589e6318c",
     "e8b8289d7a36d516f8767d8766503be8d5aed092dd16dc25412e711f43bd1cd0",
@@ -189,7 +176,9 @@
     "ea747d361dd3f17f5449363c2162de5b00e4a1f4a5945ab00ad62705b2d20cc4",
     "f6755ab69d1ae0089b0dceb7c86af121db52f8f5d0f28a9c036a96a7afc1e8ae"
   ],
-  "outputContextHash": "54291456efd5457b4fb58c013e0cadeb5e9cb2417d4e6cb8dfd0330004689356",
-  "reviewedAt": "2026-11-16T08:48:36.818Z",
-  "reviewer": "Configured independent chapter reviewer"
+  "outputContextHash": "7b644818609e00a76618af5faacc7134c25ab668256527eaf3d246a62c7ffe8f",
+  "reviewedAt": "2026-11-20T14:29:57.872Z",
+  "reviewer": "Configured independent chapter reviewer",
+  "carried": true,
+  "carriedFrom": "2026-11-19T16:23:30.999Z"
 }

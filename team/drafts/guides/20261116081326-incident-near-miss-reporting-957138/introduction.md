@@ -20,6 +20,20 @@ sourceIds:
   - icc-safety
   - ontario-jhsc-guide
 capabilityIds: []
+wordCount: 1512
+readTime: 8
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/incident-and-near-miss-reporting-software.webp
+  alt: >-
+    A manufacturing safety coordinator reviewing a floor report beside a
+    production cell; authentic industrial setting, no text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 9c419a9641305bae68a5334f8a371418a1424a892095d801a288497d897ecd69
+  sha256: 40d8599e3554bbd58d93ebde57408f3978b3dd6405bbc9e01543c977c6e49f83
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## The operational problem
 
@@ -31,7 +45,7 @@ The guide is written for quality and operations teams in Canadian manufacturing 
 
 Two sources shape the guide's factual statements about products and rules. The first is the published [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/). It describes incident and near-miss reporting with severity set from the level of harm, an anonymous report form opened by a QR code on the floor, a health and safety dashboard with its own permissions, and incidents that need corrective action carried into the Improvements module. It also describes an auditor view and a mapping to three clauses of ISO 45001:2018. These are published descriptions. The guide does not treat any of them as a verified capability, and it asks the reader to confirm each one in a demonstration.
 
-The second is the Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives). It describes how joint health and safety committees and representatives work in the Ontario workplaces it covers. Its rules are Ontario's, and the guide uses them as an example. Plants in other provinces, and federally regulated sites, need to confirm the rules that apply to them. The page could not be retrieved directly while this guide was prepared, so statements from it were confirmed through search results and should be checked against the current official page.
+The second is the Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives). It describes how joint health and safety committees and representatives work in the Ontario workplaces it covers. Its rules are Ontario's, and the guide uses them as an example. Plants in other provinces, and federally regulated sites, need to confirm the rules that apply to them.
 
 Several matters are not covered by the research behind this guide, and the guide treats them as open questions for a demonstration: pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, how existing logs could be imported, and how external reviewers would be given access.
 
@@ -63,7 +77,7 @@ An evaluation works best when it is planned like a small project. Name a lead, s
 
 Begin with the present state. Before any software is considered, trace how reports are actually made and what happens next, using real recent reports. The first chapter describes this in detail. The outcome is a map, a decision table and a set of acceptance criteria that tie the evaluation to the plant's own work.
 
-Then run a structured evaluation. Use the acceptance criteria to shortlist, send the same sample reports to each vendor and score what is shown. Record the open questions that published descriptions do not answer, and ask for written responses. Keep a clear line between what was demonstrated, what was described and what was promised for later.
+Then run a structured evaluation. Use the acceptance criteria to shortlist, send the same sample reports to each vendor and score what is shown. Record the open questions that published descriptions do not answer, and ask for written responses. Keep a clear line between what was demonstrated, what was described and what was promised for later. Record the decision owner and the unresolved evaluation questions so the team can follow up with each vendor before choosing a system.
 
 Decide the configuration before the switch. Reporting fields, severity levels, routing, permissions and the way anonymous reports are handled are design choices, and the plant should make them deliberately and write them down. The chapters on intake, severity and visibility set out the decisions and the records they should produce.
 
@@ -73,4 +87,4 @@ Keep the work in proportion. A small plant may use short versions of many steps,
 
 Finally, plan for review. A system that is not reviewed may drift, and the final chapter describes a simple quarterly sample with baselines and an exception log. A review is also the point at which the plant decides what to improve next and what to ask the vendor to change.
 
-The guide makes no claim that software alone produces safer work or satisfies a standard. It offers a way to ask better questions, to test answers against real reports and to leave a clear record of what was decided and why. The readers who benefit most will be those who use it with their own reports in hand.
+The guide makes no claim that software alone produces safer work or satisfies a standard. It offers a way to ask better questions, to test answers against real reports and to leave a clear record of what was decided and why.

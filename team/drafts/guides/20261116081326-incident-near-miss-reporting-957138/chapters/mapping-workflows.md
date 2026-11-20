@@ -20,14 +20,28 @@ sourceIds:
   - icc-safety
   - ontario-jhsc-guide
 capabilityIds: []
+wordCount: 2059
+readTime: 11
+image:
+  src: >-
+    /images/guides/incident-and-near-miss-reporting-software/mapping-workflows.webp
+  alt: >-
+    A quality lead and a supervisor walking a press line with a paper incident
+    log; authentic manufacturing environment, no readable text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: ca633ea2da1d78507e92c5fbb5e96744d792e23556ad33c951842329b1b635e2
+  sha256: 74bff36cf2926e402fae9683188dbecba232674bdb6be8c5bf605b9c61b5f8a9
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Define the reporting problem
 
-A plant may already collect reports of incidents and near-misses. The trouble can be how they arrive. A note on a clipboard, a message to a supervisor, an email to the safety coordinator, and a comment at a shift meeting all describe real events, yet none of them lands in one log. Incidents and near-misses reported on paper or by email may not be consistently logged, rated for severity, or linked to corrective action. That sentence is the problem statement for this guide, and every later chapter returns to it.
+A plant may already collect reports of incidents and near-misses. The trouble can be how they arrive. A note on a clipboard, a message to a supervisor, an email to the safety coordinator, and a comment at a shift meeting all describe real events, yet none of them lands in one log. Incidents and near-misses reported on paper or by email may not be consistently logged, rated for severity, or linked to corrective action. That situation is the problem statement for this guide, and every later chapter returns to it.
 
-Write the problem down in operating terms before looking at any product. Ask three plain questions. How many different places can a report start? Who decides whether it is written down? What happens to it afterward? The answers show whether the plant has a reporting process or a collection of habits.
+Write the problem down in operating terms before looking at any product. Ask three plain questions: How many different places can a report start? Who decides whether it is written down? What happens to it afterward? The answers show whether the plant has a reporting process or a collection of habits.
 
-The ICC [Safety module page](https://isocertificationconsultants.ca/solutions/safety/) describes the same pattern from the vendor's side. It says near-misses go unreported because reporting means finding a form and a supervisor; investigations start from a blank page after an incident; and a safety committee may not see patterns early. Read this as the vendor's description of a common problem, not as measured data about any plant. Use it to prompt questions in the plant being studied.
+The ICC [Safety module page](https://isocertificationconsultants.ca/solutions/safety/) presents a possible reporting problem as part of its market description. It says near-misses go unreported because reporting means finding a form and a supervisor; investigations start from a blank page after an incident; and a safety committee may not see patterns early. Read this as the vendor's description of a possible problem, not as measured evidence of its prevalence across plants or at any particular plant. It is not a diagnosis of the plant being studied; use observations and records from that plant to establish whether the problem occurs there.
 
 Definitions come next, because software cannot log what the team has not defined. Agree on wording for three categories:
 

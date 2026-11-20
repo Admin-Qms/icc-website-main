@@ -1,0 +1,359 @@
+{
+  "inputHash": "9644664e32be09795ccbc2778066afe19fed301a9958590362f517685e17e52a",
+  "reviewContextHash": "4b401cdaa9f1eea122a99476f00041cc02fa6f518c351f44e9fa1e0f93734d6a",
+  "reviewedAt": "2026-11-20T14:10:28.047Z",
+  "screening": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "ICC Safety page claims about configurable form fields: The guide states 'The page generally mentions configuring module fields, checklists, terminology, and routing; it does not confirm that the anonymous form itself has configurable fields' and 'Ask the vendor to show whether a form field can be renamed or added using a plant example.' However, the supportedClaims in the research state 'configurable modules (fields, checklists, terminology, routing)' as a published description. The guide contradicts the research by stating the page does not confirm form field configurability when the research indicates it does describe configurable fields.",
+      "ICC Safety page claims about notifications and alerts: The guide repeatedly states 'The page does not state notifications or alerts' and treats this as an open question. However, the supportedClaims explicitly state 'The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions.' The research already confirms these are unaddressed, yet the guide repeatedly rediscovers and re-states this as new information across multiple chapters, particularly in reporting-intake, severity-triage, and corrective-actions sections.",
+      "ICC Safety page claims about import capability: The guide states 'The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) is not backed by research in this guide that describes import capability or procedures' and 'ask the vendor directly.' However, the supportedClaims state 'The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions' but do not explicitly exclude import. The guide conflates 'not researched' with 'not stated on the page' without maintaining the distinction the research requires.",
+      "Mapping of ISO 45001:2018 clauses: The guide repeatedly states 'The ICC page maps its safety module to ISO 45001:2018 clauses...' and 'A mapping is a pointer to possible evidence and does not guarantee that a clause is met.' The research supportedClaims state 'The page maps the module to ISO 45001:2018 clauses 10.2 (incident, nonconformity and corrective action), 5.4 (consultation and participation of workers) and 6.1.2 (hazard identification and assessment of risks and opportunities); a mapping is not a statement that software alone satisfies a clause.' The guide's repeated assertion that 'a mapping does not guarantee compliance' becomes a redundant disclaimer that, while accurate, is stated so frequently (at least 6 times across chapters) that it qualifies as near-word-for-word repetition of the same cautionary principle.",
+      "Ontario health and safety committee requirements: The guide states 'The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) describes how committees work for the workplaces it covers. As described there, a joint health and safety committee meets at least once every three months, and worker workplace inspections are generally monthly...' This appears verbatim or nearly verbatim in both the mapping-workflows chapter ('Ontario's guide describes a joint health and safety committee meeting at least every three months. Worker workplace inspections are monthly...') and the committee-visibility chapter ('Ontario's guide describes a joint health and safety committee meeting at least once every three months and a worker member inspecting the workplace at least once a month...'). The phrasing and structure are duplicated across chapters.",
+      "Regulatory reporting disclaimers: The guide states 'The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) does not describe regulatory or authority reporting, so the plant should not assume the product handles it' and near-identical variations appear in severity-triage ('The page does not state regulatory reporting'), reporting-intake ('The page does not mention PIN access or notifications; treat those as questions'), and ongoing-operation sections. The same negation pattern repeats without substantive addition across chapters.",
+      "Missing primary evidence for claimed severity levels: The guide presents a table 'Illustrative example: | Level | Plain description | Typical example prompt |' with three severity levels (Low, Medium, High) in the severity-triage chapter, labeling it 'generic training illustration for designing a scale' and 'not an ICC screen, a list of ICC levels, or evidence of ICC configuration.' However, the guide does not provide primary evidence that the ICC Safety module supports exactly three levels, is configurable to other numbers, or uses the harm-based scale in a way that permits the plant to 'name and describe each one in its own words.' The research supportedClaims state 'The page describes severity by harm, an anonymous QR no-login form, separate dashboard and permissions, corrective-action handoff, and numbered configuration sections 01–04... Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed.' The guide treats the unconfirmed mechanism as a design exercise but does not resolve the gap.",
+      "Auditor view composition: The guide states the [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) 'describes an auditor view with the incident and near-miss log showing severity and status, floor reports including anonymous ones, and the corrective actions linked to each incident' multiple times (in audit-evidence-migration and ongoing-operation chapters). The research supportedClaims confirm 'The page describes an auditor view with the incident and near-miss log showing severity and status, floor reports including anonymous ones, and linked corrective actions.' However, the guide does not provide evidence that the investigation record itself appears in the auditor view, only that the incident log and linked corrective actions do. The guide writes 'Follow every link' and 'check that the log shows the reviewer and the date' without confirming that an investigator's review entry is part of the auditor view as stated on the ICC page.",
+      "Corrective action handoff mechanics: The guide states 'The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) says that incidents that need corrective action are carried into the Improvements module. The words \"that need\" imply a decision before the handoff, so ask the vendor to show what that decision looks like. Who marks a report as needing action? What information moves across to the Improvements module? Does the original report stay visible from the action, and does the action stay visible from the report? Test one report needing action and one that does not. Ask who initiates the transfer, whether it is automatic, what moves, and how both records remain linked; record what the vendor shows and any manual step. The page does not establish those mechanics.' The research supportedClaims state 'The page states incidents that need corrective action are carried into the Improvements module, and the auditor view shows corrective actions linked to each incident.' The guide correctly identifies the lack of detail about transfer mechanics but does not confirm whether 'carried into' means automatic or manual, what 'carried' includes, or whether a decision is logged before transfer. This gap remains unresolved.",
+      "Missing evidence on AI use in investigations: The guide states 'Where the software offers any drafting assistance, the reviewer's check matters more. The ICC page says AI output is a suggestion a person reviews before it enters a controlled record. The plant can use that as a rule for itself: no drafted text becomes part of an accepted investigation until a named person has read and approved it, and the record shows who did.' The research supportedClaims state 'The page states every AI output is a suggestion that a person reviews before it enters a controlled record.' However, the guide does not establish that the ICC Safety module contains AI-generated investigation text, only that the page states AI outputs in general are reviewed. The guide conflates a general design principle stated on the page with confirmation that AI is used in investigations, which the research does not affirm.",
+      "Anonymity protection and follow-up mechanisms: The guide states 'The ICC page describes a QR code on the floor that opens an anonymous report form with no login, and anonymous reports shown in the dashboard marked as anonymous.' and 'Decide when anonymity is allowed and how follow-up questions are handled when the reporter is unknown.' However, the research supportedClaims state only 'The page describes a QR code on the floor that opens an anonymous report form with no login, and anonymous reports appear in the safety dashboard marked as anonymous. The page does not state pricing, notifications or alerts...' The research does not confirm how follow-up questions are handled or whether two-way communication is possible. The guide treats this as a design question but does not confirm the page addresses it, leaving a gap between what is stated and what is assumed.",
+      "Permission scoping and role-based access: The guide states 'The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) describes a separate health and safety dashboard with its own permissions, separate from quality, switched on per organization' and asks 'Ask who can see which reports and how anonymous reports are protected.' The research supportedClaims confirm the page 'describes a health and safety dashboard with its own permissions, separate from quality, switched on per organization.' However, neither the page description nor the guide establishes granularity: whether permissions are role-based, site-based, or department-based; whether a floor reporter sees different data than a committee member; or how 'switched on per organization' affects access. The guide correctly identifies the lack of detail but does not resolve it beyond calling it an evaluation question.",
+      "Effectiveness check timing and method: The guide states 'Set the timing for the check. Too soon, and the change has not yet been tested by normal work; too late, and a problem may continue unnoticed.' and 'Ask the vendor how search and filtering work, and whether results can be saved or shared for a review meeting. The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) describes a log with severity and status, but the research reviewed does not describe search features, so test it with real examples.' The research supportedClaims state 'The page describes a health and safety dashboard... The page does not state notifications or alerts...' but do not address search or filtering. The guide correctly treats this as an open question but repeats it in multiple chapters without resolving it.",
+      "Ontario vs. other jurisdictions: The guide repeatedly emphasizes 'The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) is one example of the provincial material the team may need to read alongside the vendor's answers' and states 'plants elsewhere should check the rules that apply to them' in nearly identical language across the mapping-workflows, severity-triage, committee-visibility, and audit-evidence-migration chapters. While the disclaimer is accurate, it is repeated so often in nearly identical phrasing that it qualifies as near-verbatim repetition of the same jurisdictional caveat without adding substantive new guidance in each instance.",
+      "Missing evidence on configuration scope: The guide states the ICC page 'describes setup in four steps: map processes with named owners, configure modules (fields, checklists, terminology, routing), onboard standards, and deploy to the floor with training and a certified consultant reviewing configuration through to audit' and later asks 'The numbered descriptions do not establish a mandatory sequence or guaranteed implementation workflow. Ask which activities apply, their order and dependencies, who performs them, and what the plant must supply.' The research supportedClaims state 'The page describes setup in four steps: map processes with named owners, configure modules (fields, checklists, terminology, routing), onboard standards, and deploy to the floor with training and a certified consultant reviewing configuration through to audit.' However, neither the page nor the guide confirms whether all four steps are required, in what order they must occur, or what parts are vendor-supplied vs. plant-supplied. The guide correctly identifies this gap but does not close it.",
+      "Hypothetical examples labeling and disclaimer: The guide includes many 'Illustrative example:' sections followed by invented scenarios (e.g., 'An unnamed Canadian manufacturer...') with a repeated disclaimer 'The scenario is invented and shows no real result' or 'hypothetical and not a customer result.' While the disclaimer is accurate and consistent, the same phrase appears so frequently and identically (at least 20 times across the outline, chapters, and FAQ) that it becomes repetitive boilerplate without substantive contribution to the guide's factual claims after the first use.",
+      "Mapping to ISO 45001 and compliance: The guide states repeatedly that mapping does not equal compliance (stated in audit-evidence-migration and ongoing-operation): 'A mapping of this kind says that the module may produce records relevant to the clause. It does not say that using the module satisfies the clause, and the plant remains responsible for meeting its requirements' and 'The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4 and 6.1.2, but a mapping points to possible evidence and does not guarantee that a clause is met.' These statements use nearly identical language and structure ('mapping' + 'does not guarantee/satisfy' + 'plant remains responsible') and appear multiple times without meaningful elaboration, constituting near-word-for-word repetition.",
+      "Ontario committee recommendation response requirement: The guide states in committee-visibility 'The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) states that an employer must respond in writing within 21 days to written recommendations from the committee. The guide describes 21 calendar days, an implementation timetable for accepted recommendations, and written reasons for rejected ones.' The same statement appears verbatim or near-verbatim in the corrective-actions chapter ('Ontario's guide says an employer must respond in writing within 21 days to written committee recommendations; confirm current requirements.'). The phrasing and structure are duplicated across chapters without substantive new information.",
+      "Search and filtering capability gap: The guide repeatedly asks 'Ask the vendor how search and filtering work' and states 'the research reviewed for this guide does not describe search features, so test it with real examples' (in committee-visibility and corrective-actions chapters). These identical questions and disclaimers appear multiple times without resolution, and the guide does not establish whether the ICC page or any research addresses search capability at all, leaving this as a persistent unresolved gap.",
+      "Configuration field names and terminology: The guide states 'The safety coordinator should decide, using sample reports, which fields are required and which are optional and add a required field only when a report cannot be acted on without it' and later 'Choose wording carefully. A field called \"incident category\" means little to someone who has just seen a forklift nearly strike a rack. \"What happened?\" with a short pick list of the plant's most common event types works better.' This design guidance is repeated with nearly identical wording in both the reporting-intake chapter and the severity-triage chapter without substantive addition, treating field design and naming as a repeated recommendation.",
+      "Training and change management: The guide includes identical statements about training in multiple chapters: 'Tell [role] what came of their reports' appears in committee-visibility ('Supervisors are the natural person to tell a team what came of their reports, in a short and regular way') and in ongoing-operation ('A supervisor who thanks the reporter, logs the report, and says what will happen next supports the process'). The concept and phrasing overlap without adding new guidance in each repetition."
+    ]
+  },
+  "adjudication": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "dimensionReasons": {
+      "claims": "Two genuine claim defects are confirmed. Finding 0 is a real inaccuracy: the guide says on the reporting-intake page 'it does not confirm that the anonymous form itself has configurable fields' when the icc-safety source explicitly includes 'configure modules (fields, checklists, terminology, routing)' as a published description; this understates what the source actually says. Finding 9 is a real overclaim: the guide in the investigation chapter uses the page's general AI-output principle as if it confirms AI drafting assistance exists in the investigation module specifically, which the source does not affirm. These two are genuine defects sufficient to fail claims. Findings 2, 6, 7, 8, 10, 11, 12, 14, 18 are correctly handled open questions, not false statements. Findings 1, 3–5, 13, 15–17, 19–20 are repetition or editorial issues, not claim accuracy issues.",
+      "consistency": "The guide repeatedly distinguishes vendor-published descriptions from verified capabilities, labels every illustrative scenario as hypothetical, keeps the Ontario jurisdictional caveat clearly scoped, and separates regulatory duties from the internal log. These are consistent with the source record. However, finding 9 represents a local consistency failure: the guide treats the page's general AI statement as confirming AI use specifically in investigations, which is inconsistent with the source qualification that selectable severity levels and exact module mechanics remain unconfirmed. Finding 0 also creates a local inconsistency between the icc-safety supportedClaims (which include configurable fields as a published description) and the guide's narrower statement in reporting-intake. These two internal inconsistencies between source content and guide text are sufficient to fail consistency.",
+      "repetition": "Several instances of near-verbatim duplication of substantive text across standalone pages are confirmed. Finding 4: the Ontario committee meeting-frequency statement ('meets at least once every three months'/'worker workplace inspections are monthly') is reproduced in near-identical wording in both mapping-workflows and committee-visibility pages, which are standalone chapters. Finding 16/3: the mapping-does-not-guarantee-compliance formulation ('a mapping is a pointer to possible evidence and does not guarantee that a clause is met' / 'A mapping of this kind says that the module may produce records relevant to the clause. It does not say that using the module satisfies the clause') is reproduced in nearly verbatim form across audit-evidence-migration and ongoing-operation. Finding 17: the 21-day Ontario recommendation response requirement is stated in near-identical full detail in both committee-visibility and corrective-actions. These are not brief cross-references but substantively duplicated paragraphs across standalone pages, meeting the repetition failure threshold."
+    },
+    "unresolvedFindings": [
+      "Finding 8 (corrective action handoff mechanics) remains genuinely unresolved: neither the icc-safety source nor the guide confirms whether the handoff to the Improvements module is automatic or manual, what data moves, or whether a pre-handoff decision is logged. The guide correctly treats this as an open question but the gap is real and unfilled.",
+      "Finding 7 (auditor view composition): the icc-safety source confirms the auditor view shows the incident log, severity, status, floor reports including anonymous ones, and linked corrective actions. The guide additionally instructs readers to 'Follow every link' and check for a reviewer's entry, but neither the source nor the guide confirms that the investigation record or the reviewer's acceptance entry appears in the auditor view. This is an unresolved gap in the guide's audit-preparation guidance.",
+      "Finding 11 (permission granularity): the source confirms separate permissions and per-organization enabling but provides no detail on role-based, site-based, or department-based granularity. The guide correctly labels this an evaluation question but the gap is never closed and affects the accuracy of the committee-visibility dashboard guidance.",
+      "Finding 18 (search and filtering): neither the icc-safety source nor any other supplied source describes search or filtering capability in the safety log. The guide raises this as a question in multiple chapters but never confirms or denies it, leaving effectiveness-check and committee pattern-review guidance partially unsupported.",
+      "Finding 14 (configuration scope and sequence): the source describes four numbered setup steps but does not establish whether they are mandatory, sequential, or vendor-versus-plant-performed. The guide correctly identifies this gap but does not resolve it, affecting the evaluating-software and audit-evidence-migration chapters' guidance on setup effort."
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "violation",
+        "reason": "The guide's reporting-intake page states 'it does not confirm that the anonymous form itself has configurable fields,' which understates what the icc-safety source actually publishes. The source explicitly lists 'configure modules (fields, checklists, terminology, routing)' as a published description of the product. The guide's narrowing of this to exclude the anonymous form is not supported by any qualification in the source; the source makes no distinction between form types when describing field configurability. This is a genuine inaccuracy relative to the supplied evidence.",
+        "evidence": [
+          {
+            "kind": "source",
+            "id": "icc-safety",
+            "quote": "The page describes setup in four steps: map processes with named owners, configure modules (fields, checklists, terminology, routing), onboard standards, and deploy to the floor with training and a certified consultant reviewing configuration through to audit."
+          },
+          {
+            "kind": "page",
+            "id": "reporting-intake",
+            "quote": "The page generally mentions configuring module fields, checklists, terminology, and routing; it does not confirm that the anonymous form itself has configurable fields."
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "verdict": "clear",
+        "reason": "The finding treats the guide's repeated statement that 'the page does not state notifications or alerts' as rediscovering information, implying a redundancy problem. This is a repetition concern, not a claims-accuracy defect. The statement is factually accurate and consistent with the icc-safety supportedClaims. Repetition is assessed separately; there is no false claim here.",
+        "evidence": [
+          {
+            "kind": "source",
+            "id": "icc-safety",
+            "quote": "The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions."
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "verdict": "clear",
+        "reason": "The finding alleges the guide conflates 'not researched' with 'not stated on the page' regarding import capability. Examining the guide's audit-evidence-migration page, the text actually says 'The [ICC Safety page] is not backed by research in this guide that describes import capability or procedures, so ask the vendor directly.' This is a careful and accurate distinction: it does not say the page states no import capability, only that the research does not describe it. This is correct and not a false claim. The icc-safety source does not list import capability in any direction, so the guide's formulation is appropriately cautious.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "audit-evidence-migration",
+            "quote": "The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) is not backed by research in this guide that describes import capability or procedures, so ask the vendor directly."
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "verdict": "clear",
+        "reason": "This finding is a repetition concern, not a claims defect. The statement that a mapping does not guarantee compliance is accurate and consistent with the icc-safety source. Repetition across chapters is addressed under the repetition dimension; the accuracy of the individual claim is not in dispute.",
+        "evidence": [
+          {
+            "kind": "source",
+            "id": "icc-safety",
+            "quote": "a mapping is not a statement that software alone satisfies a clause."
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "verdict": "clear",
+        "reason": "This is a repetition concern across standalone pages, addressed under the repetition dimension. The factual content of each instance is accurate and consistent with the ontario-jhsc-guide source. No false claim is involved.",
+        "evidence": [
+          {
+            "kind": "source",
+            "id": "ontario-jhsc-guide",
+            "quote": "Joint health and safety committees meet at least every three months. Worker workplace inspections are monthly, subject to the stated inspector, regulatory and impracticability exceptions."
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "verdict": "clear",
+        "reason": "The finding identifies repetition of the regulatory-reporting disclaimer across chapters. The substance of each instance is accurate and consistent with the icc-safety source. This is a repetition concern, not a false claim.",
+        "evidence": [
+          {
+            "kind": "source",
+            "id": "icc-safety",
+            "quote": "The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions."
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "verdict": "clear",
+        "reason": "The guide explicitly labels the three-level severity table as a 'generic training illustration for designing a scale' and states it is 'not an ICC screen, a list of ICC levels, or evidence of ICC configuration.' It then correctly notes that 'selectable severity levels and handoff mechanics remain unconfirmed.' This is accurate handling of an unconfirmed capability. The guide does not assert ICC supports exactly three levels; the table is explicitly hypothetical. No false claim is present.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "severity-triage",
+            "quote": "These three levels are an illustration for building a scale, not a recommended standard, and each plant should write definitions that match its own hazards and its own approach to risk. The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them."
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "verdict": "uncertain",
+        "reason": "The icc-safety source confirms the auditor view shows the incident log, severity, status, floor reports including anonymous ones, and linked corrective actions. The guide in investigation and audit-evidence-migration chapters instructs readers to follow every link and check that the log shows the reviewer and date, but neither the source nor any supplied page confirms that the investigation record or reviewer's acceptance entry appears in the auditor view. The guide does not explicitly claim these appear in the auditor view, but it implies they should be traceable from it without confirming the source supports this. The gap cannot be resolved from supplied evidence.",
+        "evidence": [
+          {
+            "kind": "source",
+            "id": "icc-safety",
+            "quote": "The page describes an auditor view with the incident and near-miss log showing severity and status, floor reports including anonymous ones, and linked corrective actions."
+          },
+          {
+            "kind": "page",
+            "id": "audit-evidence-migration",
+            "quote": "Ask the vendor to show the view with the plant's own sample records, including an anonymous report and an incident with two actions, and check whether it gives the reviewer what they would ask for."
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "verdict": "uncertain",
+        "reason": "The icc-safety source states incidents that need corrective action are carried into the Improvements module and the auditor view shows corrective actions linked to each incident. The guide correctly identifies that the source does not establish whether the handoff is automatic or manual, what data moves, or whether a decision is logged before transfer. This gap is genuine and unresolved by any supplied evidence. The guide treats it as an evaluation question, which is accurate, but the unresolved mechanics remain a real limitation.",
+        "evidence": [
+          {
+            "kind": "source",
+            "id": "icc-safety",
+            "quote": "The page states incidents that need corrective action are carried into the Improvements module, and the auditor view shows corrective actions linked to each incident."
+          },
+          {
+            "kind": "page",
+            "id": "corrective-actions",
+            "quote": "Ask who initiates the transfer, whether it is automatic, what moves, and how both records remain linked; record what the vendor shows and any manual step. The page does not establish those mechanics."
+          }
+        ]
+      },
+      {
+        "index": 9,
+        "verdict": "violation",
+        "reason": "The guide in the investigation chapter uses the page's general AI-output principle ('every AI output is a suggestion a person reviews before it enters a controlled record') as if it confirms that AI drafting assistance exists in the investigation module. The icc-safety source states only a general principle; it does not affirm that AI is used in investigations specifically. The guide's framing—'Where the software offers any drafting assistance'—is conditional and therefore not a direct false claim, but the same chapter says 'If any AI assistance appears in an investigation, such as a suggested summary, ask the vendor what it does,' which also remains appropriately qualified. However, the investigation chapter more directly applies this principle as design guidance for investigation records without noting that AI use in investigations is unconfirmed. This is a genuine overclaim relative to the source, which does not affirm AI use in the investigation module.",
+        "evidence": [
+          {
+            "kind": "source",
+            "id": "icc-safety",
+            "quote": "The page states every AI output is a suggestion that a person reviews before it enters a controlled record."
+          },
+          {
+            "kind": "page",
+            "id": "investigation",
+            "quote": "Where the software offers any drafting assistance, the reviewer's check matters more. The ICC page says AI output is a suggestion a person reviews before it enters a controlled record. The plant can use that as a rule for itself: no drafted text becomes part of an accepted investigation until a named person has read and approved it, and the record shows who did."
+          }
+        ]
+      },
+      {
+        "index": 10,
+        "verdict": "clear",
+        "reason": "The guide presents follow-up for anonymous reporters as a design question, not a confirmed capability. It asks 'whether any two-way follow-up is possible' and states the page does not confirm this. The icc-safety source confirms the anonymous QR form and dashboard marking; it does not address follow-up. The guide correctly treats follow-up as an unresolved evaluation question. No false claim is present.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "reporting-intake",
+            "quote": "Follow-up is the hardest part. An anonymous reporter may not be reachable to explain what they meant, so ask the vendor whether any two-way follow-up is possible."
+          },
+          {
+            "kind": "source",
+            "id": "icc-safety",
+            "quote": "The page describes a QR code on the floor that opens an anonymous report form with no login, and anonymous reports appear in the safety dashboard marked as anonymous."
+          }
+        ]
+      },
+      {
+        "index": 11,
+        "verdict": "clear",
+        "reason": "The guide correctly attributes the separate permissions description to the icc-safety source and correctly labels permission granularity as an open evaluation question. It does not assert role-based or site-based granularity; it asks for it. The source confirms separate permissions and per-organization enabling; the guide does not go further than the source. No false claim is present.",
+        "evidence": [
+          {
+            "kind": "source",
+            "id": "icc-safety",
+            "quote": "The page describes a health and safety dashboard with its own permissions, separate from quality, switched on per organization."
+          },
+          {
+            "kind": "page",
+            "id": "evaluating-software",
+            "quote": "Ask who can file a report, who can read it, who can rate it, who can investigate, and who can close it. Ask whether those rights can differ by site or department, and how access changes are recorded."
+          }
+        ]
+      },
+      {
+        "index": 12,
+        "verdict": "clear",
+        "reason": "The guide correctly states the research does not describe search features and treats it as an evaluation question. This is an accurate characterization; no false claim is involved. The repetition of this question across chapters is a repetition concern, addressed under that dimension.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "corrective-actions",
+            "quote": "Ask the vendor how search and filtering work, and whether results can be saved or shared for a review meeting. The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) describes a log with severity and status, but the research reviewed does not describe search features, so test it with real examples."
+          }
+        ]
+      },
+      {
+        "index": 13,
+        "verdict": "clear",
+        "reason": "This is a repetition concern, not a false claim. The Ontario-versus-other-jurisdictions caveat is accurate each time it appears. Whether its frequency constitutes problematic repetition is addressed under the repetition dimension.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "mapping-workflows",
+            "quote": "Do not assume Ontario's requirements apply elsewhere; confirm the rules that apply to each site with the relevant authority."
+          }
+        ]
+      },
+      {
+        "index": 14,
+        "verdict": "clear",
+        "reason": "The guide accurately quotes the four-step setup description from the icc-safety source and correctly notes the numbered descriptions do not establish a mandatory sequence or verified implementation workflow. This is an accurate characterization of the source's limitations, not a false claim.",
+        "evidence": [
+          {
+            "kind": "source",
+            "id": "icc-safety",
+            "quote": "The page describes setup in four steps: map processes with named owners, configure modules (fields, checklists, terminology, routing), onboard standards, and deploy to the floor with training and a certified consultant reviewing configuration through to audit. These are vendor descriptions, not a verified plant condition or guaranteed implementation workflow."
+          },
+          {
+            "kind": "page",
+            "id": "audit-evidence-migration",
+            "quote": "The numbered descriptions do not establish a mandatory sequence or guaranteed implementation workflow. Ask which activities apply, their order and dependencies, who performs them, and what the plant must supply."
+          }
+        ]
+      },
+      {
+        "index": 15,
+        "verdict": "clear",
+        "reason": "Repeated identical disclaimers on hypothetical examples are a repetition/editorial concern, not a false claim. Each disclaimer is accurate. This is addressed under the repetition dimension.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "severity-triage",
+            "quote": "The scenario is hypothetical and not a customer result."
+          }
+        ]
+      },
+      {
+        "index": 16,
+        "verdict": "violation",
+        "reason": "The mapping-does-not-guarantee-compliance formulation is reproduced in nearly verbatim form across the audit-evidence-migration and ongoing-operation standalone pages, and also in the evaluating-software and committee-visibility pages. Comparing: audit-evidence-migration says 'A mapping of this kind says that the module may produce records relevant to the clause. It does not say that using the module satisfies the clause, and the plant remains responsible for meeting its requirements.' The ongoing-operation FAQ says 'the [ICC page] maps its safety module to ISO 45001:2018 clauses 10.2, 5.4 and 6.1.2, but a mapping points to possible evidence and does not guarantee that a clause is met.' These are not brief cross-references but are full substantive paragraphs duplicated across standalone pages, constituting near-verbatim repetition that fails the repetition standard.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "audit-evidence-migration",
+            "quote": "A mapping of this kind says that the module may produce records relevant to the clause. It does not say that using the module satisfies the clause, and the plant remains responsible for meeting its requirements."
+          },
+          {
+            "kind": "page",
+            "id": "ongoing-operation",
+            "quote": "The [ICC page](https://isocertificationconsultants.ca/solutions/safety/) maps its safety module to ISO 45001:2018 clauses 10.2, 5.4 and 6.1.2, but a mapping points to possible evidence and does not guarantee that a clause is met."
+          }
+        ]
+      },
+      {
+        "index": 17,
+        "verdict": "violation",
+        "reason": "The Ontario 21-day committee recommendation response requirement is stated in full substantive detail in both committee-visibility and corrective-actions as standalone pages. Committee-visibility: 'states that an employer must respond in writing within 21 days to written recommendations from the committee. The guide describes 21 calendar days, an implementation timetable for accepted recommendations, and written reasons for rejected ones.' Corrective-actions: 'Ontario's guide says an employer must respond in writing within 21 days to written committee recommendations; confirm current requirements.' While the second instance is shorter, the full detail version in committee-visibility and the corrective-actions reference together constitute cross-chapter duplication of a substantive rule across standalone pages, not a brief cross-reference. This is near-verbatim repetition across standalone pages.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "committee-visibility",
+            "quote": "The Government of Ontario's guide to health and safety committees and representatives states that an employer must respond in writing within 21 days to written recommendations from the committee. The guide describes 21 calendar days, an implementation timetable for accepted recommendations, and written reasons for rejected ones."
+          },
+          {
+            "kind": "page",
+            "id": "corrective-actions",
+            "quote": "Ontario's guide says an employer must respond in writing within 21 days to written committee recommendations; confirm current requirements."
+          }
+        ]
+      },
+      {
+        "index": 18,
+        "verdict": "clear",
+        "reason": "The repeated question about search and filtering is a repetition concern, not a false claim. Each instance accurately states the research does not describe this feature. This is addressed under the repetition dimension; no claim accuracy defect is involved.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "corrective-actions",
+            "quote": "Ask the vendor how search and filtering work, and whether results can be saved or shared for a review meeting. The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) describes a log with severity and status, but the research reviewed does not describe search features, so test it with real examples."
+          }
+        ]
+      },
+      {
+        "index": 19,
+        "verdict": "clear",
+        "reason": "The finding identifies similar field-naming guidance in reporting-intake and severity-triage. Reviewing the actual pages, the reporting-intake guidance covers form field design and wording, while the severity-triage chapter addresses severity level definitions and scale descriptions. The overlapping concept of 'choose plain wording' appears in both but in distinct contexts and with different examples. This does not meet the threshold of nearly verbatim duplicated paragraphs; the two passages address different design decisions.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "reporting-intake",
+            "quote": "Choose wording carefully. A field called 'incident category' means little to someone who has just seen a forklift nearly strike a rack."
+          },
+          {
+            "kind": "page",
+            "id": "severity-triage",
+            "quote": "Begin with the plant's own history. Gather a sample of past reports from paper logs, email, and handover sheets, and sort them by how much harm each caused or could have caused."
+          }
+        ]
+      },
+      {
+        "index": 20,
+        "verdict": "clear",
+        "reason": "The finding identifies conceptual overlap in supervisor training guidance across committee-visibility and ongoing-operation. Comparing the passages: committee-visibility discusses closing the loop with reporters and supervisor feedback as part of worker participation; ongoing-operation discusses supervisor reception of reports as part of training for the new system. The passages are thematically related but are not nearly verbatim duplicates; they describe different contexts (participation culture versus system training) with different wording. This does not meet the repetition threshold.",
+        "evidence": [
+          {
+            "kind": "page",
+            "id": "committee-visibility",
+            "quote": "The supervisor is the natural person to tell a team what came of their reports, in a short and regular way."
+          },
+          {
+            "kind": "page",
+            "id": "ongoing-operation",
+            "quote": "A supervisor who thanks the reporter, logs the report, and says what will happen next supports the process, and one who responds with irritation undermines it."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -6,65 +6,26 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The three previous findings are resolved, and the changed paragraphs present no clear new problems. No FAQ is assigned or included.",
-  "glossary": [
-    {
-      "term": "Severity scale",
-      "definition": "A set of harm-based rating levels with definitions and examples."
-    },
-    {
-      "term": "Routing table",
-      "definition": "A table naming who is told at each severity level, the expected first-response time, and a fallback role."
-    },
-    {
-      "term": "Rating history",
-      "definition": "A record of the original rating and changes, including who made them, when, and why."
-    },
-    {
-      "term": "Regulatory checklist",
-      "definition": "A checklist of applicable external notification duties, responsible roles, and filing records."
-    }
-  ],
+  "summary": "All checks pass. The single changed paragraph correctly instructs that near-misses be rated by potential harm rather than actual harm, which is consistent with the plan key point to rate near-misses by potential harm and say so explicitly, and raises no new unsupported claims. No previous findings were raised and none remain unresolved. All four subsections align with the plan: roles, inputs, decisions, records, and exceptions are present and correctly attributed. ICC Safety claims are framed as published descriptions requiring demonstration confirmation. The Ontario guide is cited accurately as a committees-and-representatives resource, not a source of reporting deadlines. The illustrative examples are labeled and use an unnamed Canadian manufacturer. No FAQ section appears, consistent with the plan assigning none. Links use only the two supplied source URLs and an allowed internal site path. No scope boundary violations, readability problems, or repetition were detected. No new glossary terms are introduced beyond those already defined in context.",
+  "glossary": [],
   "roles": [
     "Safety lead",
-    "Safety coordinator",
     "Operations manager",
-    "Area supervisor",
+    "Safety coordinator",
     "Plant manager",
-    "Supervisor",
-    "Reviewer",
-    "Reporter",
-    "Maintenance",
-    "Safety committee",
-    "Vendor",
-    "Qualified adviser"
+    "Supervisor"
   ],
   "recordNames": [
     "Severity scale",
     "Routing table",
     "Rating history",
-    "Regulatory checklist",
-    "Incident log",
-    "Past reports",
-    "Paper logs",
-    "Email",
-    "Handover sheets",
-    "Unreviewed-report check records",
-    "Incident record",
-    "External filing record",
-    "Demonstration criteria"
+    "Regulatory checklist"
   ],
   "decisions": [
-    "How to define severity levels and rate near-misses",
-    "Who rules when a report does not fit a level clearly",
-    "Who receives reports at each rating and how quickly they must respond",
-    "Who handles a report when the first recipient does not respond",
-    "Who may change a rating and what reason must be recorded",
-    "What final rating to assign to a disputed report",
-    "How to escalate a rating dispute that remains contested",
-    "How to detect and correct a rating change made without a reason",
-    "Which events require external notice and by when",
-    "Who decides, files and records external notices"
+    "Decide level definitions",
+    "Decide routing and response time",
+    "Decide the final rating",
+    "Decide which events need external notice"
   ],
   "pass": true,
   "deterministic": {
@@ -162,16 +123,16 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "8d1270f9a7e8723d65c25013fafe99f33ee679f1e2abb4051b44a8f274b069b0",
-  "contentHash": "e103c08ca0f9ac6c21006a8d34226af7afef55a8493ba3219ac3a8cf9942a7fa",
+  "inputHash": "048f9883c385bdc06f710045fcb8a9971927b7dbd4f55306eb1f00115d925d27",
+  "contentHash": "f8880456e1f93060c1af7bd44c716b1fd11a09ab201196ad803ca2e5d7d942bb",
   "paragraphHashes": [
     "82fbd9921bff8db5f3f7900ffb43d6c76724b7999d91c19657671dd3c840aadc",
     "31550d2d598fb5649ae7dcd7103f0272af101ce30028e7aea9c90e34ef465c4a",
     "aa9e46b1c881db1faa043928ebfdf127ce97cae99f7e9cb7db298dd8b2d6dc86",
-    "9fa1821ec189876e88cdea306dbcd2390a588d1bcd6ae2f2b123bbf4f0befb05",
+    "80311899b5bce6d1aaddd1adf56e6484c38b2ae44ff76817063f48aad79f5ae2",
     "f3c2cece87e57d66dc692f9b73c8a558f1ee58dab3987452f17d55cc61c3d0ff",
-    "a93657ef6dd95c935aba2a182f5a5baac945f38e1f7c41537f49e627759c0155",
-    "362f236c33e585fe23cdab9cfbfeb0cea1475bfd30d0fe57db323252fedd20f7",
+    "290232155c75bc93db630aeeda697a4c8af3121b07f1d182c3415bc1df970d96",
+    "f30d84f747351b79ac08e114e51e9ae4119d839bb603ce384071409f2023b5ed",
     "daa425fb7e4153022502e973fff091c6379b68f2de6aa4e9f4cf9de8dc88d85c",
     "f0f27f5bb092805b72592fe2f663c7309e20b389814e97d9d3b4ce52f9965fbb",
     "d58c4a942370837c23568f89694882ac2e9f387389f4cc1840d48bb7d90baa16",
@@ -183,7 +144,7 @@
     "deb27a38fcdfea868d94dfc539ee6041f7462c041c799330bb3c0093a8d7bd9e",
     "75b12f8db60ea32639dc8eb4c7e2b7acd99f3daac1dd79673e19a773d69f48a1",
     "2c72f4a6e06f0dc942675c230b68bd15a4f072c35aad3fe86b066864cf01442a",
-    "dca65c16a73c947bde44b502d500e04fdbe885095e642a813261f70c9ac5594d",
+    "c9d4672a70fe075d07de825f402f32f201c9c2dcef74f1adf35c410326e8c0fc",
     "22adb006f84e1cbee8e2d9b400cd2b48add9dbee73364be6c344c52a45cba02e",
     "aa2c37c1da1e9041fe4453957a3e41a17cd5bcf396be2c68d0b6e15a8b0b56fc",
     "91a16ce9012844f9777adea7d96006d36be9ffd57d4fe16c33a0b671897bb8be",
@@ -203,7 +164,9 @@
     "29e67430679feaf52e00cebb7d7edec03f98c10bbd334d83cbae18588f2cc513",
     "febdd27bc680fd5e5051e025f2240f949b091ad20d0964813bcb2572194e1f4c"
   ],
-  "outputContextHash": "b6f0f148bb4f64ce61304567ca06c7748deb9e882278d970b6c4671d2117d3b2",
-  "reviewedAt": "2026-11-16T08:37:05.713Z",
-  "reviewer": "Configured independent chapter reviewer"
+  "outputContextHash": "6eb25c49357d30ee64e1442ca161c1a426851b936e55725994acb3bd5a682122",
+  "reviewedAt": "2026-11-20T14:29:46.753Z",
+  "reviewer": "Configured independent chapter reviewer",
+  "carried": true,
+  "carriedFrom": "2026-11-20T14:07:56.432Z"
 }

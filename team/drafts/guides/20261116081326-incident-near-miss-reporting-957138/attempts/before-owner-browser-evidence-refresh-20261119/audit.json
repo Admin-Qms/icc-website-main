@@ -1,0 +1,28 @@
+{
+  "claims": "failed",
+  "consistency": "failed",
+  "repetition": "passed",
+  "unresolvedFindings": [
+    "In 'Map how incidents and near-misses are reported today' chapter, the attribution to ICC Safety page of describing 'the same pattern from the vendor's side' (near-misses unreported, investigations from blank page, committees missing patterns) is supported by evidence, but the guide then treats this vendor description as a prompt for the plant without explicitly clarifying whether this is a diagnosed problem at the target plant or the vendor's general market positioning. The supplied evidence shows these are published vendor descriptions, not measured data about prevalence, yet the guide's phrasing could mislead readers into treating vendor positioning as confirmed plant-level problems.",
+    "In 'Evaluate incident and near-miss reporting software' chapter, the guide states the ICC page 'describes incident and near-miss reporting, an anonymous report form opened by a QR code on the floor, a health and safety dashboard with its own permissions, and incidents that need corrective action to be carried into the Improvements module,' which is accurate per evidence. However, the guide later in 'Design reporting intake' states 'The research reviewed for this guide does not establish which fields the form includes' and asks whether 'wording can be changed to match how the floor talks.' This contradiction between chapters—first presenting the page's descriptions as if complete, then revealing gaps—creates inconsistency about what the evidence actually covers. The guide does not flag in the evaluation chapter that the form's field configurability remains unconfirmed.",
+    "In 'Rate severity and triage' chapter, the guide presents an illustrative three-level severity table (Low, Medium, High) with the disclaimer 'These three levels are an illustration for building a scale, not a recommended standard,' but then immediately states 'The research reviewed for this guide does not confirm which levels the product offers or whether the plant can change them.' This creates a contradiction: the table is presented as a neutral building aid, yet the guide simultaneously admits the evidence does not support any claim about the product's level structure. The illustration could mislead readers into assuming the product supports exactly three configurable levels.",
+    "The guide states in 'Link incidents to corrective action' that 'The ICC Safety module page describes setup in four steps' and later in 'Prepare audit evidence' repeats this claim. While the supplied evidence does describe these four setup steps (mapping, configuration, onboarding, deployment), the guide does not verify whether these steps are sequential, whether they are all required, or how they interact. The guide treats the step descriptions as a process model without confirming the model's actual workflow from the evidence.",
+    "In 'Rate severity and triage' chapter, the guide attributes to the ICC page the statement that 'incidents that need corrective action are carried into the Improvements module' and later asks 'what is carried across' as an open question. The supplied evidence confirms the ICC page states this, but the guide does not resolve the ambiguity about what 'carried' means mechanically: Does it happen automatically? Only for flagged incidents? Only when explicitly sent? This ambiguity is flagged as an open question but remains unresolved in the demonstration criteria, leaving readers without guidance on how to test it in a demo.",
+    "The guide states in 'Give committees and workers visibility' that 'The Ontario guide describes committees for Ontario workplaces' and cites the Government of Ontario guide. The research notes state 'The page could not be retrieved directly while this guide was prepared, so statements from it were confirmed through search results and should be checked against the current official page.' However, the guide presents Ontario-specific requirements as direct citations without clearly warning readers throughout the guide that these have not been retrieved from the current official source. This creates a risk that cited Ontario requirements may be outdated."
+  ],
+  "inputHash": "9a86507ed4c65c64118647f9f9b5375312ebd6e831bf7d270d8f4199b8ecf3a4",
+  "pageHashes": {
+    "incident-and-near-miss-reporting-software": "7c32732dd1caa203f1d5c4c5e4fd23568358cbc9f1ffd990757f1e15cde698b2",
+    "mapping-workflows": "80d151c33e7ee0148e876e6fd508bb8ab854ab2342fdac3adb911123009fa309",
+    "evaluating-software": "ab9e6b16822694946e0f17eab4d6750501d366aa64f3aab08d50182da6671a6c",
+    "reporting-intake": "4a43234f43fdb3acb3d65dbafdae95a6d731950cee4ff18c60d2c4a797aabab4",
+    "severity-triage": "8e8f04c1789c256bf16796afeb89aa235c1570d779aba9ddaac2ca54974210a2",
+    "investigation": "86cfbd85240303d863b1eae42cc5f19569aeebb52556706a858c8af93a5622c0",
+    "corrective-actions": "492fbb3d888bc5d1f32262ee7c325e5cbda3d63e1912debf5a68b6f25de675ee",
+    "committee-visibility": "0edc3cd98365b8a6d82bf3a522673d9102e488e253df89fad805c78305f7113a",
+    "audit-evidence-migration": "a8d7069e2803ccd3e33b968f0b9006b5b2eda29f4cff320032158ccb5c93a89f",
+    "ongoing-operation": "8cf4617f403f5a9e54299aa06833994f26054fc4dcdc5d6508641554eb5885d7"
+  },
+  "reviewer": "Configured claude independent review",
+  "reviewedAt": "2026-11-19T15:59:05.032Z"
+}

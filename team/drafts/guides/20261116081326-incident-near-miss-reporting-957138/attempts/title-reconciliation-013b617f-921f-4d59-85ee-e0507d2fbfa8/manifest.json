@@ -1,0 +1,23 @@
+{
+  "reason": "Owner-authorized unpublished legacy title reconciliation",
+  "oldTitle": "Review performance, answer common questions and prepare a demonstration",
+  "newTitle": "Run and improve incident and near-miss reporting software",
+  "files": {
+    "state.json": "dff3a4505a04e3e9872d65eab82e36dadaff581e75c1a1270f90e8221658284a",
+    "outline.json": "305288eb28c02b9c18df7dcfa11237a6a76eb6fdbdf03747d49119348a6effb3",
+    "guide-context.json": "c0a23d3b320262532885e472e899bf83023a0617dcc462a139dc7cee68b5d604",
+    "audit.json": "73ff2ea4e5101a948b5b2b505181b05739f680c1936429a6c8ec73d1e2f7b221",
+    "text-qa.json": "e76bdc07eecbb85cd6f01afc371770fac9e2f5bf5c0d9d74a64150a2279cde57",
+    "chapters/ongoing-operation.md": "768406e47e70134e5b38671fcd7dbca154e027c2dc9811820d659c67515bdd4b",
+    "chapter-briefs/audit-evidence-migration.md": "28f194b26a5426e50c6c41579e501a82205f0201d8052061a24d4d63812d4972",
+    "chapter-briefs/committee-visibility.md": "bc4c29cf405b99e25cb98398d2d9bf5bf73f46eff0d1a9238e25d0a641461eb5",
+    "chapter-briefs/corrective-actions.md": "ff297592dcb5f784ef1c54f43562ef3b0ac18c2887e31a4dd57238eb6a692f99",
+    "chapter-briefs/evaluating-software.md": "1e4a31cb88bb752f891cbfd6da538d12a5c28a960fc8450d49a43b588ca03b11",
+    "chapter-briefs/incident-and-near-miss-reporting-software.md": "5ed8815af758760acea62f5e4d6c63e360589a6123f601c24056696fba5cc16e",
+    "chapter-briefs/investigation.md": "5c0e470d06f053aa09c7495c5516c8cf88dd017817eb04c103ef727f2db852db",
+    "chapter-briefs/mapping-workflows.md": "aa2538d41e2bdf7d24f909a8f035dcc57c8621c577caec3f33ef23fcf5a4233a",
+    "chapter-briefs/ongoing-operation.md": "4d4e1fa601f8fae5ecd00bd11e29e983c607fa9ca078c6e93857e5204d7f9b56",
+    "chapter-briefs/reporting-intake.md": "9724feb0c2e9fd0ebc870001258a64a49f1fd5db6532a183b00a9cad920fb28e",
+    "chapter-briefs/severity-triage.md": "c46ba146dcc92fdbc312240626edcc6a44c18c49bf08658250fabc667350be5e"
+  }
+}

@@ -1,0 +1,2725 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "id": "schema-version",
+      "pass": true,
+      "message": "Guide schemaVersion must be 1"
+    },
+    {
+      "id": "guide-slug",
+      "pass": true,
+      "message": "Guide slug must have 6–80 lowercase letters/digits with hyphens"
+    },
+    {
+      "id": "topic-id",
+      "pass": true,
+      "message": "A stable topic ID is required"
+    },
+    {
+      "id": "chapter-count",
+      "pass": true,
+      "message": "Nine complete chapters are required; ten plus an introduction exceeds the inclusive budget"
+    },
+    {
+      "id": "introduction-file",
+      "pass": true,
+      "message": "Introduction filename must be introduction.md"
+    },
+    {
+      "id": "manifest-metadata",
+      "pass": true,
+      "message": "Guide identity and author are required"
+    },
+    {
+      "id": "manifest-description",
+      "pass": true,
+      "message": "Guide description must be 120–160 characters"
+    },
+    {
+      "id": "manifest-date",
+      "pass": true,
+      "message": "Guide date must be valid and not in the future"
+    },
+    {
+      "id": "snapshot-hashes",
+      "pass": true,
+      "message": "Evidence snapshots must have SHA-256 hashes"
+    },
+    {
+      "id": "unique-chapters",
+      "pass": true,
+      "message": "Chapter slugs must be unique"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "severity-triage"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "investigation"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "chapter-order",
+      "pass": true,
+      "message": "Every chapter must exist in manifest order"
+    },
+    {
+      "id": "introduction-slug",
+      "pass": true,
+      "message": "Introduction slug must equal guide slug"
+    },
+    {
+      "id": "unique-titles",
+      "pass": true,
+      "message": "Every page needs a unique title"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "introduction-words",
+      "pass": true,
+      "message": "1512 visible words",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2059 visible words",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2031 visible words",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2053 visible words",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "severity-triage"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "severity-triage"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "severity-triage"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "severity-triage"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "severity-triage"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2060 visible words",
+      "page": "severity-triage"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "severity-triage"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "severity-triage"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "severity-triage"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "investigation"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "investigation"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "investigation"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "investigation"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "investigation"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2028 visible words",
+      "page": "investigation"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "investigation"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "investigation"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "investigation"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2069 visible words",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2018 visible words",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2048 visible words",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2021 visible words",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "total-words",
+      "pass": true,
+      "message": "19899 total visible words; maximum 20,000 includes introduction"
+    },
+    {
+      "id": "cross-chapter-repetition",
+      "pass": true,
+      "message": "No substantially copied paragraphs across guide pages"
+    },
+    {
+      "id": "audit-hash",
+      "pass": true,
+      "message": "Required review must match the current prose, metadata, links and evidence"
+    },
+    {
+      "id": "audit-identity",
+      "pass": true,
+      "message": "Review identity and date are required"
+    },
+    {
+      "id": "audit-claims",
+      "pass": true,
+      "message": "claims review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-consistency",
+      "pass": true,
+      "message": "consistency review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-repetition",
+      "pass": true,
+      "message": "repetition review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-findings",
+      "pass": true,
+      "message": "All required review findings must be resolved"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: The operational problem",
+      "section": "The operational problem",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: How to use this guide",
+      "section": "How to use this guide",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+      "section": "Planning evaluation and implementation",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "The introduction must name the assigned topic in both title and description",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "incident-and-near-miss-reporting-software"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Define the reporting problem",
+      "section": "Define the reporting problem",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Define the reporting problem; semantic review verifies support",
+      "section": "Define the reporting problem",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Trace reports, records and handoffs",
+      "section": "Trace reports, records and handoffs",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Trace reports, records and handoffs; semantic review verifies support",
+      "section": "Trace reports, records and handoffs",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Assign owners and decisions",
+      "section": "Assign owners and decisions",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Assign owners and decisions; semantic review verifies support",
+      "section": "Assign owners and decisions",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Set acceptance criteria for the software",
+      "section": "Set acceptance criteria for the software",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Set acceptance criteria for the software; semantic review verifies support",
+      "section": "Set acceptance criteria for the software",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Build a workflow-based shortlist",
+      "section": "Build a workflow-based shortlist",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Build a workflow-based shortlist; semantic review verifies support",
+      "section": "Build a workflow-based shortlist",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Test the decision points",
+      "section": "Test the decision points",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Test the decision points; semantic review verifies support",
+      "section": "Test the decision points",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Examine evidence, permissions and AI use",
+      "section": "Examine evidence, permissions and AI use",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Examine evidence, permissions and AI use; semantic review verifies support",
+      "section": "Examine evidence, permissions and AI use",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Compare setup, cost and support",
+      "section": "Compare setup, cost and support",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Compare setup, cost and support; semantic review verifies support",
+      "section": "Compare setup, cost and support",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "evaluating-software"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Define the report fields",
+      "section": "Define the report fields",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Define the report fields; semantic review verifies support",
+      "section": "Define the report fields",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Support anonymous floor reporting",
+      "section": "Support anonymous floor reporting",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Support anonymous floor reporting; semantic review verifies support",
+      "section": "Support anonymous floor reporting",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Make reporting reachable on the floor",
+      "section": "Make reporting reachable on the floor",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Make reporting reachable on the floor; semantic review verifies support",
+      "section": "Make reporting reachable on the floor",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Review new reports on arrival",
+      "section": "Review new reports on arrival",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Review new reports on arrival; semantic review verifies support",
+      "section": "Review new reports on arrival",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "reporting-intake"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "severity-triage"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "severity-triage"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "severity-triage"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "severity-triage"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "severity-triage"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "severity-triage"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "severity-triage"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Define a harm-based scale",
+      "section": "Define a harm-based scale",
+      "page": "severity-triage"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Define a harm-based scale; semantic review verifies support",
+      "section": "Define a harm-based scale",
+      "page": "severity-triage"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Route reports by rating",
+      "section": "Route reports by rating",
+      "page": "severity-triage"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Route reports by rating; semantic review verifies support",
+      "section": "Route reports by rating",
+      "page": "severity-triage"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Handle disputed ratings",
+      "section": "Handle disputed ratings",
+      "page": "severity-triage"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Handle disputed ratings; semantic review verifies support",
+      "section": "Handle disputed ratings",
+      "page": "severity-triage"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Separate regulatory duties from the log",
+      "section": "Separate regulatory duties from the log",
+      "page": "severity-triage"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Separate regulatory duties from the log; semantic review verifies support",
+      "section": "Separate regulatory duties from the log",
+      "page": "severity-triage"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "severity-triage"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "severity-triage"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "severity-triage"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "severity-triage"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "severity-triage"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "severity-triage"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "severity-triage"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "severity-triage"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "severity-triage"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "severity-triage"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "severity-triage"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "severity-triage"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "severity-triage"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "severity-triage"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "severity-triage"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "severity-triage"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "severity-triage"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "investigation"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "investigation"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "investigation"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "investigation"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "investigation"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "investigation"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "investigation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Assign and scope the investigation",
+      "section": "Assign and scope the investigation",
+      "page": "investigation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Assign and scope the investigation; semantic review verifies support",
+      "section": "Assign and scope the investigation",
+      "page": "investigation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Collect evidence",
+      "section": "Collect evidence",
+      "page": "investigation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Collect evidence; semantic review verifies support",
+      "section": "Collect evidence",
+      "page": "investigation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Analyze causes without blame",
+      "section": "Analyze causes without blame",
+      "page": "investigation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Analyze causes without blame; semantic review verifies support",
+      "section": "Analyze causes without blame",
+      "page": "investigation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Record conclusions and review",
+      "section": "Record conclusions and review",
+      "page": "investigation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Record conclusions and review; semantic review verifies support",
+      "section": "Record conclusions and review",
+      "page": "investigation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "investigation"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "investigation"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "investigation"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "investigation"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "investigation"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "investigation"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "investigation"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "investigation"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "investigation"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "investigation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "investigation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "investigation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "investigation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "investigation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "investigation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "investigation"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "investigation"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Decide which reports need action",
+      "section": "Decide which reports need action",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Decide which reports need action; semantic review verifies support",
+      "section": "Decide which reports need action",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Assign owners and due dates",
+      "section": "Assign owners and due dates",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Assign owners and due dates; semantic review verifies support",
+      "section": "Assign owners and due dates",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Keep the link to the incident",
+      "section": "Keep the link to the incident",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Keep the link to the incident; semantic review verifies support",
+      "section": "Keep the link to the incident",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Verify effectiveness",
+      "section": "Verify effectiveness",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Verify effectiveness; semantic review verifies support",
+      "section": "Verify effectiveness",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "corrective-actions"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Share the right dashboard",
+      "section": "Share the right dashboard",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Share the right dashboard; semantic review verifies support",
+      "section": "Share the right dashboard",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Review patterns on a set rhythm",
+      "section": "Review patterns on a set rhythm",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Review patterns on a set rhythm; semantic review verifies support",
+      "section": "Review patterns on a set rhythm",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Handle committee recommendations",
+      "section": "Handle committee recommendations",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Handle committee recommendations; semantic review verifies support",
+      "section": "Handle committee recommendations",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Support worker participation",
+      "section": "Support worker participation",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Support worker participation; semantic review verifies support",
+      "section": "Support worker participation",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "committee-visibility"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Know what an auditor sees",
+      "section": "Know what an auditor sees",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Know what an auditor sees; semantic review verifies support",
+      "section": "Know what an auditor sees",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Map clauses without overclaiming",
+      "section": "Map clauses without overclaiming",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Map clauses without overclaiming; semantic review verifies support",
+      "section": "Map clauses without overclaiming",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Clean and import existing logs",
+      "section": "Clean and import existing logs",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Clean and import existing logs; semantic review verifies support",
+      "section": "Clean and import existing logs",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Plan cutover and training",
+      "section": "Plan cutover and training",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Plan cutover and training; semantic review verifies support",
+      "section": "Plan cutover and training",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "audit-evidence-migration"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Review the workflow and evidence",
+      "section": "Review the workflow and evidence",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Review the workflow and evidence; semantic review verifies support",
+      "section": "Review the workflow and evidence",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Answer common questions without overclaiming",
+      "section": "Answer common questions without overclaiming",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Answer common questions without overclaiming; semantic review verifies support",
+      "section": "Answer common questions without overclaiming",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Prepare a focused ICC demonstration",
+      "section": "Prepare a focused ICC demonstration",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Prepare a focused ICC demonstration; semantic review verifies support",
+      "section": "Prepare a focused ICC demonstration",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What problem should incident and near-miss reporting software solve first?",
+      "section": "What problem should incident and near-miss reporting software solve first?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What is the difference between an incident and a near-miss?",
+      "section": "What is the difference between an incident and a near-miss?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: How should severity be rated?",
+      "section": "How should severity be rated?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Should anonymous reporting be allowed?",
+      "section": "Should anonymous reporting be allowed?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Which old logs should be migrated?",
+      "section": "Which old logs should be migrated?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: How should incidents link to corrective actions?",
+      "section": "How should incidents link to corrective actions?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What evidence should be ready for an auditor?",
+      "section": "What evidence should be ready for an auditor?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: How do safety committees use the log?",
+      "section": "How do safety committees use the log?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Does software guarantee ISO 45001 compliance?",
+      "section": "Does software guarantee ISO 45001 compliance?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What should be prepared for a software demonstration?",
+      "section": "What should be prepared for a software demonstration?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/safety/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: /contact/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-coverage",
+      "pass": true,
+      "message": "Eight to ten distinct visible FAQ questions required"
+    },
+    {
+      "id": "demonstration-invitation",
+      "pass": true,
+      "message": "The closing paragraph must invite a software demonstration at /contact/"
+    }
+  ],
+  "failures": [],
+  "wordCount": 19899
+}

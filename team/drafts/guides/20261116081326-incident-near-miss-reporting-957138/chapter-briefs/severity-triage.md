@@ -138,7 +138,7 @@ Avoid legal reporting thresholds; they depend on jurisdiction.
       "title": "ICC Safety module (ISO 45001) page",
       "publisher": "ISO Certification Consultants Inc.",
       "url": "https://isocertificationconsultants.ca/solutions/safety/",
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-19",
       "supportedClaims": [
         "The published ICC page describes incident and near-miss reporting in which severity is set from the level of harm. These are published descriptions; availability and configuration must be confirmed in a demonstration and no capability is advertised as verified.",
         "The page describes a QR code on the floor that opens an anonymous report form with no login, and anonymous reports appear in the safety dashboard marked as anonymous.",
@@ -149,7 +149,8 @@ Avoid legal reporting thresholds; they depend on jurisdiction.
         "The page describes setup in four steps: map processes with named owners, configure modules (fields, checklists, terminology, routing), onboard standards, and deploy to the floor with training and a certified consultant reviewing configuration through to audit.",
         "The page states every AI output is a suggestion that a person reviews before it enters a controlled record.",
         "The page describes the problem as near-misses going unreported because reporting needs a form and a supervisor, investigations starting from a blank page, and committees not seeing patterns early.",
-        "The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions."
+        "The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions.",
+        "ROOT-BROWSER-VERIFIED on 2026-11-19: Codex root directly read the primary ICC Safety page in Chrome. It describes severity by harm, an anonymous QR no-login form, separate dashboard and permissions, corrective-action handoff, and numbered configuration sections 01–04 for mapping, configuring modules including fields, checklists, terminology and routing, onboarding standards, and deployment and training. These are vendor descriptions, not a verified plant condition or guaranteed implementation workflow. Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed."
       ]
     },
     {
@@ -158,19 +159,20 @@ Avoid legal reporting thresholds; they depend on jurisdiction.
       "title": "Guide for health and safety committees and representatives",
       "publisher": "Government of Ontario, Ministry of Labour",
       "url": "https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives",
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-19",
       "supportedClaims": [
-        "Under Ontario's Occupational Health and Safety Act, workplaces with 6 to 19 workers need a health and safety representative, and workplaces with 20 or more workers need a joint health and safety committee.",
-        "At least half of committee members must be workers who do not exercise managerial functions.",
-        "A joint committee must meet at least once every three months, and a worker member inspects the workplace at least once a month.",
-        "An employer must respond in writing within 21 days to written recommendations from the committee.",
-        "The page was confirmed through search-result content because direct fetch returned HTTP 403; requirements should be checked against the current official page and are Ontario-specific, not national."
+        "ROOT-BROWSER-VERIFIED: Codex root directly read this primary Ontario government page in Chrome on 2026-11-19. The displayed title is Guide for health and safety committees and representatives and the page showed Updated August 17, 2026. Automated HTTP retrieval remains blocked with 403; no successful automated fetch is claimed.",
+        "Ontario thresholds generally use regularly employed workers. Workplaces with 6–19 generally select a representative where no joint health and safety committee is required. Designated-substance rules and director or minister orders can require committees below 20; construction and farming have specific provisions.",
+        "At least half of committee members are workers who do not exercise managerial functions.",
+        "Joint health and safety committees meet at least every three months. Worker workplace inspections are monthly, subject to the stated inspector, regulatory and impracticability exceptions.",
+        "Employers respond to written recommendations within 21 calendar days, providing an implementation timetable for accepted recommendations and written reasons for rejected recommendations.",
+        "These are Ontario-specific guide descriptions with qualifications and exceptions; legislation governs."
       ]
     }
   ],
   "capabilityIds": [],
   "capabilities": [],
-  "researchSnapshotHash": "49b91b730bf35718b32cddfea2d2c8a9ef14b7ecb93d67ae2ed9baa041eaccdc",
+  "researchSnapshotHash": "89eb84cf02240a1fc5228bd60012fe6e02d85a375ba852db33376640e662bc1b",
   "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 }
 
@@ -1004,7 +1006,7 @@ Avoid legal reporting thresholds; they depend on jurisdiction.
     },
     {
       "slug": "ongoing-operation",
-      "title": "Review performance, answer common questions and prepare a demonstration",
+      "title": "Run and improve incident and near-miss reporting software",
       "description": "Operating incident and near-miss reporting software over time: review the workflow, answer common questions without overclaiming and prepare a demonstration.",
       "targetWords": 2000,
       "chapterKeyword": "incident and near-miss reporting software ongoing review",

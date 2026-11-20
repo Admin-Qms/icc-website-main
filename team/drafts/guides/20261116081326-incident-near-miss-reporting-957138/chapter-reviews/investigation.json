@@ -6,63 +6,42 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The earlier heading and evidence-citation findings are resolved. The changed paragraphs present no clear new problems. No FAQ is assigned or included.",
+  "summary": "All checks pass. The page matches the plan exactly across four subsections: Assign and scope the investigation, Collect evidence, Analyze causes without blame, and Record conclusions and review. Each subsection contains the required workflow elements (role, input, decision, record, exception) and an evaluation criterion drawn from the plan. The illustrative example in the first subsection is correctly labeled as invented and not a customer result. All ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation, in line with the research source constraints. The ICC page's statement that investigations start from a blank page is correctly presented as a vendor-described pain point rather than measured data. The AI-output review claim appears twice—once in the cause analysis section and once in the conclusions section—but the two occurrences serve distinct purposes (introducing the AI concern in context of cause analysis, and reinforcing it as a reviewer obligation in the conclusions step), so this does not constitute problematic repetition. The Ontario JHSC guide is cited only in the final subsection and with an explicit caution that plants outside Ontario must check their own rules. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus an allowed internal site path. No FAQ section appears anywhere in the page, consistent with the plan assigning none. No scope boundary violations were detected; corrective action tracking is appropriately deferred to the next chapter. Word count of approximately 2028 is within acceptable range of the 2000-word target. No previous findings were raised, so none remain unresolved.",
   "glossary": [
     {
       "term": "Assignment entry",
-      "definition": "A record naming the investigator, investigation scope and date."
+      "definition": "The record created when an investigator is assigned to an investigation, naming the investigator, the scope and the date, and showing every subsequent change with a date and a name."
     },
     {
       "term": "Evidence list",
-      "definition": "A list of evidence items noting what each item is, who collected it, when and where it is held."
+      "definition": "The record kept with the incident of all items collected during an investigation, noting what each item is, who collected it, when and where it is held."
     },
     {
       "term": "Cause statement",
-      "definition": "A record of the investigation’s explanation that distinguishes observations, reports and conclusions and identifies supporting evidence."
+      "definition": "The record of what the investigator and supervisor concluded caused or contributed to the event, distinguishing observed facts, reported information and inferences, and showing which evidence supports each point."
     },
     {
       "term": "Reviewed conclusion",
-      "definition": "An investigation conclusion recorded with the reviewer’s name and date."
+      "definition": "The accepted output of a completed investigation, comprising the cause statement and recommendations, bearing the reviewer's name and the date of acceptance."
     }
   ],
   "roles": [
     "Safety coordinator",
     "Investigator",
     "Area supervisor",
-    "Maintenance planner",
-    "Reporter",
-    "Operator",
-    "Safety lead",
-    "Reviewer",
-    "Manager",
-    "Auditor",
-    "Joint health and safety committee",
-    "Vendor"
+    "Safety lead"
   ],
   "recordNames": [
-    "Rated report",
     "Assignment entry",
     "Evidence list",
-    "Incident record",
-    "Witness statements",
-    "Training records",
-    "Work instruction",
-    "Equipment maintenance and inspection records",
     "Cause statement",
-    "Investigation record",
-    "Reviewed conclusion",
-    "Incident log",
-    "Corrective actions"
+    "Reviewed conclusion"
   ],
   "decisions": [
-    "Who investigates and how deeply",
-    "Whether an investigator has a conflict",
-    "Who may reassign or widen an investigation",
-    "What evidence is sufficient and how to handle missing evidence",
-    "Who may access sensitive evidence",
-    "What caused or contributed to the event",
-    "Whether to accept or return the investigation",
-    "What findings can be shared with the reporter"
+    "Decide who investigates and how deeply",
+    "Decide what evidence is sufficient",
+    "Decide causes",
+    "Accept or return the draft investigation"
   ],
   "pass": true,
   "deterministic": {
@@ -160,8 +139,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "27176e1dd7cd3fbcca28d9258eeca4d6b27d22034fae8517ea7ee140b96a35c9",
-  "contentHash": "a25ac61dbbddd304a7a53a9d4677d3c589a812498ddd9636159a72dd5ac4eaeb",
+  "inputHash": "a07690f77ac1a913122354cdde55842f0b0c8ddc65b69c107836592f2e58e689",
+  "contentHash": "39735b497eb21b6a9ddc00bf5b01aed7cc0d0e3848f78bbf9455ae6ecb6c83f0",
   "paragraphHashes": [
     "ace057f0074a888a3f4e7aeafb4f1efe4005edc0ace3e116a5b67ee8c7e7f539",
     "d792e9390b141b0ffabbcec02d38abe86593429db16c526f7bb4bd6d2f677e46",
@@ -199,7 +178,9 @@
     "02ebc8cf9fbc068e7edcfd035b0e186c45c662652519bcfd5c5004e3c7a86c9b",
     "41357022a06d2e5aa0450dbe7b6d15c7744f3536cbc105009b7d3bb3017f56f2"
   ],
-  "outputContextHash": "5d5509d42c18d4f4a0174c76c8642c57ab7ee319a5ea2863ada2f78fd5f4250e",
-  "reviewedAt": "2026-11-16T08:39:34.643Z",
-  "reviewer": "Configured independent chapter reviewer"
+  "outputContextHash": "933a2347ed6606ff4067ac7e54c8e053b684317bf69aacf24c70f6cb6f9c6964",
+  "reviewedAt": "2026-11-20T14:29:50.499Z",
+  "reviewer": "Configured independent chapter reviewer",
+  "carried": true,
+  "carriedFrom": "2026-11-19T16:15:04.392Z"
 }

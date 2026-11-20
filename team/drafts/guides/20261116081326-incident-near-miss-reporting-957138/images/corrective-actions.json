@@ -1,0 +1,21 @@
+{
+  "id": "corrective-actions",
+  "width": 1200,
+  "height": 675,
+  "sha256": "5fbf7fdfbd65c6f63a3707d28718c1d064a986de6a6190428dc455d44cd29375",
+  "source": "codex",
+  "sourceId": "bd1f30b83586f89ce4052fe9201fada51ec63747fa51dbc9daf3aa5ecbf2ecaa",
+  "inputHash": "bd1f30b83586f89ce4052fe9201fada51ec63747fa51dbc9daf3aa5ecbf2ecaa",
+  "alt": "A supervisor and maintenance technician reviewing a fixed machine guard; authentic manufacturing environment, no readable text or logos",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "8cc2026f0dcbc0bb044eacc1bc0a88e5d6808ffc9b86362c41f9baaebab99640",
+  "request": {
+    "id": "corrective-actions",
+    "scene": "A supervisor and maintenance technician reviewing a fixed machine guard; authentic manufacturing environment, no readable text or logos",
+    "kind": "hero",
+    "alt": "A supervisor and maintenance technician reviewing a fixed machine guard; authentic manufacturing environment, no readable text or logos",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: A supervisor and maintenance technician reviewing a fixed machine guard; authentic manufacturing environment, no readable text or logos.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-20T15:00:21.374Z",
+  "src": "/images/guides/incident-and-near-miss-reporting-software/corrective-actions.webp"
+}
