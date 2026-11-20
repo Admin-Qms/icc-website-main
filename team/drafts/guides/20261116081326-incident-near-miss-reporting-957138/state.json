@@ -69,7 +69,7 @@
       "wordCount": 2028,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-20T14:08:00.775Z"
+      "checkpointedAt": "2026-11-20T14:29:50.492Z"
     },
     "corrective-actions": {
       "hash": "51fa9d90d97d835b8dd73521e1ddfd3547ba33bd416cc5e889cc9432dc8039e8",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-20T14:29:46.755Z",
+  "updatedAt": "2026-11-20T14:29:50.503Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
@@ -1326,7 +1326,7 @@
     "reviewedChapters": [],
     "researchHash": "787552eb0e3e1cfe85cdfe24d931bb36d1c07e11f1c769c73a00896fc2258901"
   },
-  "contextHash": "6eb25c49357d30ee64e1442ca161c1a426851b936e55725994acb3bd5a682122",
+  "contextHash": "933a2347ed6606ff4067ac7e54c8e053b684317bf69aacf24c70f6cb6f9c6964",
   "chapterReviews": {
     "mapping-workflows": {
       "claims": "passed",
@@ -2093,6 +2093,192 @@
       "reviewer": "Configured independent chapter reviewer",
       "carried": true,
       "carriedFrom": "2026-11-20T14:07:56.432Z"
+    },
+    "investigation": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All checks pass. The page matches the plan exactly across four subsections: Assign and scope the investigation, Collect evidence, Analyze causes without blame, and Record conclusions and review. Each subsection contains the required workflow elements (role, input, decision, record, exception) and an evaluation criterion drawn from the plan. The illustrative example in the first subsection is correctly labeled as invented and not a customer result. All ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation, in line with the research source constraints. The ICC page's statement that investigations start from a blank page is correctly presented as a vendor-described pain point rather than measured data. The AI-output review claim appears twice—once in the cause analysis section and once in the conclusions section—but the two occurrences serve distinct purposes (introducing the AI concern in context of cause analysis, and reinforcing it as a reviewer obligation in the conclusions step), so this does not constitute problematic repetition. The Ontario JHSC guide is cited only in the final subsection and with an explicit caution that plants outside Ontario must check their own rules. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus an allowed internal site path. No FAQ section appears anywhere in the page, consistent with the plan assigning none. No scope boundary violations were detected; corrective action tracking is appropriately deferred to the next chapter. Word count of approximately 2028 is within acceptable range of the 2000-word target. No previous findings were raised, so none remain unresolved.",
+      "glossary": [
+        {
+          "term": "Assignment entry",
+          "definition": "The record created when an investigator is assigned to an investigation, naming the investigator, the scope and the date, and showing every subsequent change with a date and a name."
+        },
+        {
+          "term": "Evidence list",
+          "definition": "The record kept with the incident of all items collected during an investigation, noting what each item is, who collected it, when and where it is held."
+        },
+        {
+          "term": "Cause statement",
+          "definition": "The record of what the investigator and supervisor concluded caused or contributed to the event, distinguishing observed facts, reported information and inferences, and showing which evidence supports each point."
+        },
+        {
+          "term": "Reviewed conclusion",
+          "definition": "The accepted output of a completed investigation, comprising the cause statement and recommendations, bearing the reviewer's name and the date of acceptance."
+        }
+      ],
+      "roles": [
+        "Safety coordinator",
+        "Investigator",
+        "Area supervisor",
+        "Safety lead"
+      ],
+      "recordNames": [
+        "Assignment entry",
+        "Evidence list",
+        "Cause statement",
+        "Reviewed conclusion"
+      ],
+      "decisions": [
+        "Decide who investigates and how deeply",
+        "Decide what evidence is sufficient",
+        "Decide causes",
+        "Accept or return the draft investigation"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assign and scope the investigation",
+            "section": "Assign and scope the investigation"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assign and scope the investigation; semantic review verifies support",
+            "section": "Assign and scope the investigation"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Collect evidence",
+            "section": "Collect evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Collect evidence; semantic review verifies support",
+            "section": "Collect evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Analyze causes without blame",
+            "section": "Analyze causes without blame"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Analyze causes without blame; semantic review verifies support",
+            "section": "Analyze causes without blame"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Record conclusions and review",
+            "section": "Record conclusions and review"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Record conclusions and review; semantic review verifies support",
+            "section": "Record conclusions and review"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "a07690f77ac1a913122354cdde55842f0b0c8ddc65b69c107836592f2e58e689",
+      "contentHash": "39735b497eb21b6a9ddc00bf5b01aed7cc0d0e3848f78bbf9455ae6ecb6c83f0",
+      "paragraphHashes": [
+        "ace057f0074a888a3f4e7aeafb4f1efe4005edc0ace3e116a5b67ee8c7e7f539",
+        "d792e9390b141b0ffabbcec02d38abe86593429db16c526f7bb4bd6d2f677e46",
+        "7b11988bcb4ffecdb626d05c19af657e35ccc10f35ba324f5c2d27eb60c7b287",
+        "0b4c5bade6eaed90c6735f88f8171c1bb19580717e8d8fec4468e433fb701b88",
+        "c8d1816db3c3b19af2baba6df0f88f4f69442139dfc60b4175da722d379ac58d",
+        "dc9a7ee1e914355f1161e99b032ff62b4765478ab0dbfa0e2373afd68a60aac7",
+        "01aeec6448dcbdce8262bff4c8e512840db6679dd8177f34f8155b23b9a7bb3f",
+        "edddb7e75aa62e15df7e076525db0edf00e0e202d9ed458989be99edc14fd6b4",
+        "de288489616c5e1c6b9a1be0482f219bddb7d84dc286f38a9b8fda11773aff8d",
+        "de743f82c96f101b732a10dbbea47fe8b1074fd8aec3475a688f90ce0fb83720",
+        "62522cab3da9821ef47f863c0a194195e20ef4fc2883861b196a582a6d66746a",
+        "feed4fdfab76bb8465c7b534c80d5ef10a47540ea016f87a54ef50997d6e5848",
+        "98700a2be499a8ab4ee35f6b67b8a896b2efc9440594b98e165d524307997517",
+        "8723111209c7df67cf595b9990a7a7f12fa190e53ace24b1232b5a5bc34a9945",
+        "3614950716da15a47a10fda58bf95e61a209f69d0cbdb284f3b4606ec0765b34",
+        "58e5b234ad0d00e5ea7d9005533c4658ec92448af6c91cb5aa53617a47581ace",
+        "610f5b9639370bac1554217bcc37ac7591c9c572ca9ab61af9c0b0e40e499a1d",
+        "55d865347eb4975e089d15caf6cf9c4104191f8c487162245e085697c3adc7ad",
+        "0a0d4bc0e6bed201f7ac452b52a20ccab0becf517c0a27a2561151cb0986609c",
+        "745565c93ad9e8911f83fe2fc521ac7d772ef3e3e70de32b157c43489567a219",
+        "7cbf26fc6e6f96d8727b9a096d07fda3469ee4eb2772391b650850f9c98b4afd",
+        "1c4f07fa6b7770063d67d7ce7b7ae791ddcd4878d0de933c242d2bd25c002da7",
+        "ed68bda15eba97edfa7f0d41dc1b3f8b4f72c7b904ce721b4816cf236ea46670",
+        "0f70cc0aa1d5dd130e6a4991dfd03e1e8b32b1abb519f2217baaf5b44d744a34",
+        "f4e5f13f0d38ab674b3937416d5bc48a8172b50b21a0d53196ef41cee6b3a90c",
+        "edad8ee68b785a732d57032c5431a2c35666505d9946f85da94f40276d9ad4c7",
+        "5a067f3450988fc8b9a404013c32bcd5b88e113bc3baccd077297384f6047feb",
+        "e84d6a25711e66e44a26ce05f8b399d61e4f1765591b12dbdb3c5d51fe068fd9",
+        "8922ba2c0f343790457cf93f44ca183ff36b59d3d937184eb1ae41098b1b67a6",
+        "aa30b9bf63676f7f3a7e73298306a2ffd9e7f94ccde3d415f2e995f4cc0583db",
+        "84a896fb52bdc510df0caee8854719f75c36b7864631f2e27786bc45d5fbcbad",
+        "e50564336afcf6acd2916423ac43d4a4854a7e32163935cb97fbd76fb6116736",
+        "a9473003caedb41813ff316411b432e5e686e62cd289edc57a3ff56b9d1b9e8c",
+        "02ebc8cf9fbc068e7edcfd035b0e186c45c662652519bcfd5c5004e3c7a86c9b",
+        "41357022a06d2e5aa0450dbe7b6d15c7744f3536cbc105009b7d3bb3017f56f2"
+      ],
+      "outputContextHash": "933a2347ed6606ff4067ac7e54c8e053b684317bf69aacf24c70f6cb6f9c6964",
+      "reviewedAt": "2026-11-20T14:29:50.499Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-19T16:15:04.392Z"
     }
   },
   "researchHash": "787552eb0e3e1cfe85cdfe24d931bb36d1c07e11f1c769c73a00896fc2258901",
