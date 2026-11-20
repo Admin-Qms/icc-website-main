@@ -172,6 +172,7 @@ async function callText(tier, systemPrompt, userMessage, maxTokens) {
 
 async function callJSON(tier, systemPrompt, userMessage, maxTokens, options) {
   const { text, truncated, stopReason } = await callLLM(tier, systemPrompt, userMessage, maxTokens, options);
+  options?.onResponse?.({ text, truncated, stopReason });
   if (truncated) throw new Error(`Model JSON reply was cut off at the ${maxTokens}-token limit`);
   if (options?.schema && stopReason !== 'end_turn') throw new Error('Schema-bound JSON reply requires end_turn completion');
   const cleaned = text.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();

@@ -56,7 +56,7 @@ function runPipeline(f, reviewAvailable) {
     const config = require('./team/agents/shared/config');
     config.REPORTS_DIR = path.join(root, 'reports'); config.MEMORY_DIR = path.join(root, 'memory'); config.KEYWORD_QUEUE_PATH = path.join(root, 'memory/queue.json');
     const llm = require('./team/agents/shared/claude');
-    llm._providers.claude = async () => ({text:JSON.stringify({score:100,pass:true,findings:[],flaggedSentences:[],selfPlagiarismFlags:[],aiClicheCount:0,rewriteInstructions:null}),truncated:false});
+    llm._providers.claude = async () => ({text:JSON.stringify({score:100,pass:true,findings:[],flaggedSentences:[],selfPlagiarismFlags:[],aiClicheCount:0,genericParagraphCount:0,overallAssessment:'Original fixture prose.',rewriteInstructions:null}),truncated:false,stopReason:'end_turn'});
     require('./team/agents/content/contentManager').publishDaily({fixture,dryRun:true})
       .then(result => fs.writeFileSync(path.join(root, 'result.json'), JSON.stringify(result)))
       .catch(error => { console.error(error.message); process.exitCode=1; });`;
