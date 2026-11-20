@@ -2,7 +2,13 @@
 
 > **For agentic workers:** Use superpowers:executing-plans to implement this plan task by task after owner review. Steps use checkboxes for tracking. On 2026-11-19 the Owner authorized finishing release checks, releasing the migration code, and switching routines individually only after every release check passes. Keep all existing Claude routines running until then. This authorization supersedes the historical probe-only restrictions below.
 
-## Current release checkpoint — 2026-11-20
+## Completed cutover — 2026-11-20
+
+All three routines now run on Codex Cloud: Scout, Guides, then Blog. Matching Claude triggers are paused and retained through at least December 4. Functional release `1b9620c416d8e03c96d35a0519c5ebdac7514c53` passed 308 pipeline tests, lint and build. Guide publication `7495de773530fc8e223fcec9411297e46cf6c940` and Blog publication `d6db50704251b7ccfbe6f89f86655839cb582a17` passed production deployment and live-page/image verification. See [current operational receipts](../../../team/CLOUD-SETUP.md#completed-release-and-handover--2026-11-20). Scout completed a safe empty run, not a positive new-topic approval.
+
+Seven daily blog slots, two guide slots and one scout slot remain future observation work; the fourteen-day rollback retention period has begun but has not elapsed. No maximum single-turn lifetime is established; verified checkpoint recovery handles interruptions. Earlier pending/failure statements below are retained as historical evidence and superseded by this completed-cutover checkpoint.
+
+## Historical pre-release checkpoint — 2026-11-20
 
 **Pre-release Cloud checks completed.** The ten-page guide at immutable candidate `cbe769a8f78a39503e33914fb1f5b9dc9af086bd` is ready for publication: 19,899 words, passed V2 independent audit, 443 text checks, ten verified session-generated images, successful publication dry-run and 473 final checks with zero failures. All ten images passed independent visual review. First-image interrupted-run recovery restored all 658 managed files byte for byte with an identical Git tree, strict non-legacy provenance validation and unchanged image/sidecar bytes. No production state or trigger was changed. Validated functional source is `cdac5381b9d29713f39de0fb0ab9bd93e50f0762`; local tests are 296 pipeline and 78 site checks, plus lint/build. Remaining operations are the authorized code release, production deployment verification and scout/blog/guide handovers one at a time. Prior paragraphs below retain the failure history and are superseded by this checkpoint.
 
@@ -156,13 +162,13 @@ Review decisions: canonical skills use plain forwarding files instead of unverif
 **Consumes:** the three published configurations. **Produces:** a readiness matrix with sanitized evidence for each environment and a list of unresolved blockers.
 
 - [x] Complete initial nonpublishing probes in all three environments; results and limitations are recorded above. Scout's image was a capability check, not a new operational dependency.
-- [ ] Resolve the confirmed settings/actions above, then rerun missing Claude calls and failed Blogs source retrieval in fresh tasks. Keep actual writes, scheduling and long-run resume explicitly unverified until separately exercised.
-- [ ] Check environment root handling: blog/guide scripts must run at the repo root even when mounted in a subdirectory. Setup cannot assume all three mounts match.
-- [ ] Configure `LLM_PROVIDERS=claude` and a working `CLAUDE_API_KEY` for all three environments; keep OpenAI/Gemini/Pexels image API fallbacks disabled for scheduled runs. Do not remove credentials used elsewhere without checking their scope.
-- [ ] Permit package installation, GitHub Git/API endpoints, `api.anthropic.com`, ICC, and required trusted-source hosts/redirects. Use the actual source-fetch policy, not a blanket requirement that `iso.org` return 200: its known 403 needs an approved accessible source such as the existing committee PDFs.
-- [ ] Republish changed environments, then repeat only failed checks in fresh tasks. A task created before republishing retains its prior configuration.
-- [ ] Verify a paused scheduled probe binds the intended environment and Terra model, with the same image tool/file access. A manual cloud task alone does not prove scheduler support. If unavailable, leave migration blocked and present the concrete supported alternative for owner decision; do not substitute a local timer.
-- [ ] Before cutover, perform an explicitly authorized isolated Git write/checkpoint exercise, checking identity, branch rules and workflow triggers. Keep actual `main`/`guide-state` writes out of the initial probe.
+- [x] Resolve the confirmed settings/actions above, then rerun missing Claude calls and failed Blogs source retrieval in fresh tasks. Actual writes, timed same-chat scheduling and complete checkpointed guide recovery were subsequently exercised; see the completed-cutover receipts.
+- [x] Check environment root handling: blog/guide scripts must run at the repo root even when mounted in a subdirectory. Setup cannot assume all three mounts match.
+- [x] Configure `LLM_PROVIDERS=claude` and a working `CLAUDE_API_KEY` for all three environments; keep OpenAI/Gemini/Pexels image API fallbacks disabled for scheduled runs. Do not remove credentials used elsewhere without checking their scope.
+- [x] Permit package installation, GitHub Git/API endpoints, `api.anthropic.com`, ICC, and required trusted-source hosts/redirects. Use the actual source-fetch policy, not a blanket requirement that `iso.org` return 200: its known 403 needs an approved accessible source such as the existing committee PDFs.
+- [x] Republish changed environments, then repeat only failed checks in fresh tasks. A task created before republishing retains its prior configuration.
+- [x] Verify a paused scheduled probe binds the intended environment and Terra model, with the same image tool/file access. A manual cloud task alone does not prove scheduler support. If unavailable, leave migration blocked and present the concrete supported alternative for owner decision; do not substitute a local timer.
+- [x] Before cutover, perform an explicitly authorized isolated Git write/checkpoint exercise, checking identity, branch rules and workflow triggers. Keep actual `main`/`guide-state` writes out of the initial probe.
 
 ## Task 2: Add session-generated asset import without bypassing gates
 
@@ -174,9 +180,9 @@ Review decisions: canonical skills use plain forwarding files instead of unverif
 - [x] Implement `importSessionImage({file, request, directory})` returning normalized bytes plus dimensions, SHA-256, `source: 'codex'`, a source ID, generated-image terms reference and alt text. Record the exact request/prompt and available tool artifact ID; do not label a claimed model/source as independently attested.
 - [x] Normalize once using existing sharp processing. Resolve requests from managed draft/job data, accept only known request IDs, reject nonregular/missing/nonraster files and path traversal, and use atomic checkpoint writes. Imported files cannot write directly to public output folders.
 - [x] Expose a session-import image mode that requires registered assets and never calls `generateCodexImage`, OpenAI, Gemini or Pexels. Do not repurpose the existing local `codex` provider without preserving local callers.
-- [ ] Test the existing maximum two inline blog markers and hero, plus all ten guide page images. Preserve current optional/required image semantics and the final gates; do not silently delete an already assigned imported asset if it disappears.
+- [x] Test the existing maximum two inline blog markers and hero, plus all ten guide page images. Preserve current optional/required image semantics and the final gates; do not silently delete an already assigned imported asset if it disappears.
 - [x] Test duplicate bytes across assets/published content, corrupt images, unknown IDs, changed checkpoints, and retry after incomplete checkpointing. Repeated successful import is idempotent; a different file for an already checkpointed image requires explicit reconciliation.
-- [ ] Test a fresh-run restore of all image bytes/metadata, then reuse without recompression or tool/API calls. Reuse the existing guide image tests.
+- [x] Test a fresh-run restore of all image bytes/metadata, then reuse without recompression or tool/API calls. Reuse the existing guide image tests.
 - [x] Add a pre-image validation command for blog text and guide editorial readiness so rejected text does not consume image allowance. Keep final validation after images and re-review when text changes.
 - [x] Run only changed behavior test files with `node --test <paths>` in this separate node:test repository; no application build/typecheck in this task.
 
@@ -184,12 +190,12 @@ Review decisions: canonical skills use plain forwarding files instead of unverif
 
 **Files:** shared provider/config code, publication scripts, state/provider/pipeline tests. **Consumes:** imported assets. **Produces:** review failures stop publication; completed checkpoint data cannot be erased by overlapping runs.
 
-- [ ] Set and verify Claude-only routing for helpers/reviews. Keep reviewer prompts and the current two editorial correction passes; the migration does not weaken unsupported-claim findings in the unfinished incident guide.
-- [ ] Add a failing review test for a missing/truncated verdict, provider outage and a rejected claim. Require complete expected review fields and explicit passes before accepting a verdict. Log provider/model names without credentials.
+- [x] Set and verify Claude-only routing for helpers/reviews. Keep reviewer prompts and the current two editorial correction passes; the migration does not weaken unsupported-claim findings in the unfinished incident guide.
+- [x] Add a failing review test for a missing/truncated verdict, provider outage and a rejected claim. Require complete expected review fields and explicit passes before accepting a verdict. Log provider/model names without credentials.
 - [x] Add an isolated bare-Git behavioral test with two checkouts: both restore one state snapshot, the first saves a new checkpoint, then the stale checkout tries to save. It must refuse rather than reparent a stale snapshot on the newer fetched branch.
 - [x] Track the restored state revision and verify it before save; use non-force Git updates and stop on conflict. Do not auto-merge guide state or delete locks to make the test pass.
-- [ ] Add durable blog checkpoints on a separate orphan `blog-state` branch, limited to managed daily blog drafts and imported assets. Add a `save-state` command to the blog script; restore only the relevant slot, checkpoint after text and each image, exclude locks/secrets, and use the same stale-revision guard. Prove a fresh clone reuses the saved bytes and a published/expired slot is never replayed with `--force`. Verify branch write access and that hosting ignores this state branch before cutover.
-- [ ] Exercise two blog publication attempts for the same date/slug and main moving during a publish. Preserve the date/slug gate and revalidate the merged tree before a production push when necessary.
+- [x] Add durable blog checkpoints on a separate orphan `blog-state` branch, limited to managed daily blog drafts and imported assets. Add a `save-state` command to the blog script; restore only the relevant slot, checkpoint after text and each image, exclude locks/secrets, and use the same stale-revision guard. Prove a fresh clone reuses the saved bytes and a published/expired slot is never replayed with `--force`. Verify branch write access and that hosting ignores this state branch before cutover.
+- [x] Exercise two blog publication attempts for the same date/slug and main moving during a publish. Preserve the date/slug gate and revalidate the merged tree before a production push when necessary.
 - [x] Verify scheduler overlap prevention if offered; otherwise add a cross-run ownership guard suitable for independent cloud VMs. Process-local lock files alone do not serialize independent runs. Keep the Git stale-state guard as the final protection.
 - [x] Run the changed provider, state and pipeline tests. Keep full suites/build for the separately authorized release.
 
@@ -198,24 +204,24 @@ Review decisions: canonical skills use plain forwarding files instead of unverif
 **Consumes:** Tasks 1–3. **Produces:** cloud-ready instructions and nonpublishing rehearsal evidence.
 
 - [x] Make `AGENTS.md` accurate and canonical using the current instructions and all three scoped standing approvals; `CLAUDE.md` imports it. Repair stale `.Codex` and nonexistent wrapper references rather than globally replacing Claude's name.
-- [ ] Reconcile the two skills from their actual current versions. Confirm both Codex and Claude cloud packaging follows a shared directory/symlink before adopting the pasted plan's symlink suggestion.
+- [x] Reconcile the two skills from their actual current versions. Canonical skills are ordinary files under `.agents/skills/`; legacy Claude skill entries are plain-text forwarders rather than unverified packaging-dependent symlinks.
 - [x] Update the exact routine prompts: brief/research → Terra writes → Claude editorial checks → missing image requests → built-in image tool → import → checkpoint/save → final gates → restricted script publication. Guide image import is saved after each image so quota exhaustion does not lose earlier images.
 - [x] Keep existing `RESULT:` summaries, with a clear saved-progress stage/reason for allowance exhaustion and API outages. Never retry a failed install, Git, integrity or publication step blindly.
-- [ ] Rehearse scout proposals in isolated paths, a complete blog fixture dry run, and a complete ten-page guide in isolated draft/report/content paths. Dry-run wrappers must not push live state or run builds inadvertently.
-- [ ] Interrupt after one reviewed page/image, start a fresh cloud task, and prove exact byte/hash resume. Complete a real-duration guide rehearsal to measure available task lifetime; do not promise a one-hour runtime based on docs silence.
-- [ ] Record the actual code revision, chosen models, environment versions, commands run and remaining gaps. Update owning docs after implementation. Do not record a planned check as passed.
+- [x] Rehearse scout proposals in isolated paths, a complete blog fixture dry run, and a complete ten-page guide in isolated draft/report/content paths. Dry-run wrappers must not push live state or run builds inadvertently.
+- [x] Interrupt after one reviewed page/image, start a fresh cloud task, and prove exact byte/hash resume. The complete ten-page checkpointed rehearsal and independent 658-file byte recovery passed. No maximum single-turn lifetime or one-hour guarantee is claimed.
+- [x] Record the actual code revision, chosen models, environment versions, commands run and remaining gaps. Update owning docs after implementation. Do not record a planned check as passed.
 
 ## Task 5: Release and cut over one routine at a time
 
 **Gate:** Owner has approved implementation and explicitly authorized release/cutover. Real writes, commits, builds and deployment checks happen only in that authorized phase.
 
-- [ ] Run the ICC pipeline tests, site build and applicable blog/guide link/metadata checks before release; inspect the exact diff and content-path publication allowlists. Do not run unrelated parent QMS suites for an ICC-only change.
-- [ ] Commit/release the approved implementation and verify each cloud environment has the intended revision.
-- [ ] Create three paused cloud schedules with the exact prompts, explicit timezone, Terra and environment bindings. Read back saved settings, including the next due times. Do not create a desktop-local automation as a cloud substitute.
-- [ ] Inventory the existing Claude triggers and any active runs; preserve their prompts/settings. Confirm these supplied IDs still match the intended routines: scout `trig_01V2mjdc9EYysBFUscUiDdBs`, blog `trig_016PSDw8sP67ywAiawjQgrZJ`, guides `trig_01QCftVc3PfJZmDPjnr6q4MP`.
-- [ ] Scout first: disable its Claude trigger, wait for any active run to finish, run Codex once, verify only the two queues/link bank changed through the script, then enable the cloud schedule.
-- [ ] Blog next: disable/wait, run once in an unpublished Toronto daily slot, verify Claude review, imported Codex images, content-only commit, actual deployment and live page, then enable schedule. Do not use `--force` to manufacture a second daily post.
-- [ ] Guides last: disable/wait, inspect current `guide-state` and resume the existing job if still unfinished. Correct only evidence-backed editorial findings; verify checkpoint pushes, final ten-page guide/images, content-only commit and live pages before enabling schedule.
+- [x] Run the ICC pipeline tests, site build and applicable blog/guide link/metadata checks before release; inspect the exact diff and content-path publication allowlists. Do not run unrelated parent QMS suites for an ICC-only change.
+- [x] Commit/release the approved implementation and verify each cloud environment has the intended revision.
+- [x] Create three paused cloud schedules with the exact prompts, explicit timezone, Terra and environment bindings. Read back saved settings, including the next due times. Do not create a desktop-local automation as a cloud substitute.
+- [x] Inventory the existing Claude triggers and any active runs; preserve their prompts/settings. Confirm these supplied IDs still match the intended routines: scout `trig_01V2mjdc9EYysBFUscUiDdBs`, blog `trig_016PSDw8sP67ywAiawjQgrZJ`, guides `trig_01QCftVc3PfJZmDPjnr6q4MP`.
+- [x] Scout first: disable its Claude trigger, wait for any active run to finish, run Codex once, verify only the two queues/link bank changed through the script, then enable the cloud schedule.
+- [x] Blog third (after its review repair): disable/wait, run once in an unpublished Toronto daily slot, verify Claude review, imported Codex images, content-only commit, actual deployment and live page, then enable schedule. Do not use `--force` to manufacture a second daily post.
+- [x] Guides second: disable/wait, inspect current `guide-state` and resume the existing job if still unfinished. Correct only evidence-backed editorial findings; verify checkpoint pushes, final ten-page guide/images, content-only commit and live pages before enabling schedule.
 - [ ] Observe seven consecutive daily blog slots, two guide slots and one scout slot, accounting for already-published slots, queue exhaustion and documented failures. Verify no duplicate publications, stale-state loss or paid image fallback; scheduling two guide runs does not prove two completed guides.
 - [ ] Retain disabled Claude triggers for 14 days. On rollback, pause the matching Codex schedule, wait for active runs, reconcile remote content/state, then re-enable only the matching Claude trigger. Never reset published history or push old guide-state snapshots.
 

@@ -1,6 +1,28 @@
 # ICC Codex Cloud migration
 
-Status on 2026-11-20: migration implementation and review repairs are released through `942cb8393c8536e14c9770bd4bc4fe8391687627`. Scout and Guides have completed their Codex cutovers; their matching Claude triggers are paused. Blog remains on its enabled Claude trigger while the final comparison-evidence repair is verified. The [implementation plan](../docs/superpowers/plans/2026-11-18-codex-cloud-routines.md) and dated evidence below record rollout checks; [AGENTS.md](../AGENTS.md) owns the publication scope. Historical permissions/results do not override this current status.
+Status on 2026-11-20: all three Owner-authorized Codex Cloud cutovers are complete (Scout, Guides, then Blog). Terra writes and uses built-in session images; Claude API independently reviews. Matching Claude triggers are paused and retained through at least 2026-12-04. The dated sections below are historical evidence, not current blockers. [AGENTS.md](../AGENTS.md) owns the restricted publication scope.
+
+## Completed release and handover — 2026-11-20
+
+Functional code is released through `1b9620c416d8e03c96d35a0519c5ebdac7514c53` (PRs #2–#7). The latest source passed 308 pipeline tests, lint and the site build; the initial release also passed 78 site/contact/chat/redirect tests. Review failures were preserved and corrected without reducing thresholds or changing providers. Schema-bound review contracts now cover all seven mandatory JSON review boundaries; local evidence and completion validation still fail closed.
+
+The guide audit now binds full indexed passages and source evidence to explicit decisions for every original finding, additional note and review dimension. Independent Sonnet adjudication resolves disagreements with the Haiku screen; missing, uncertain, malformed or unsupported decisions block publication. Two genuine content issues were corrected, and the unpublished chapter-title collision was reconciled with fresh managed reviews. Candidate `cbe769a8f78a39503e33914fb1f5b9dc9af086bd` passed all ten chapter reviews, 443 text checks, ten image checks and 473 final checks with zero failures, at 19,899 words. A separate cloud computer restored all 658 managed checkpoint files byte for byte, including the first generated image, without recompression or regeneration.
+
+The [incident and near-miss guide](https://isocertificationconsultants.ca/guides/incident-and-near-miss-reporting-software/) was published by the restricted wrapper in `7495de773530fc8e223fcec9411297e46cf6c940`: exactly the manifest, ten pages and ten images. All ten live pages, canonicals, structured data and exact image hashes passed. Vercel and backup run `44776424477` succeeded. An earlier concurrent-main change correctly stopped publication; its failed local checkout was preserved, then a fresh independent clone completed normal publication while main was held stable. Final guide-state was `4e6787b5bafbc038c05d2c08449c7b2d626ce978`.
+
+The [quality objectives blog](https://isocertificationconsultants.ca/blog/5-iso-9001-quality-objectives-myths-that-derail-ontario-manufacturers/) was published by the restricted wrapper in `d6db50704251b7ccfbe6f89f86655839cb582a17`, directly following the released functional code. Originality passed at 87/100, text QA at 24/24, with final image QA, build, publication scope and 2,915 internal-reference checks passing. Exactly the article and three WebP files were committed. Vercel and backup run `44787319204` succeeded; the live page, sitemap, canonical, BlogPosting schema and all three image bytes passed independent verification. The approved body and images were reused unchanged from checkpoint `fa1683a1477042288413af6417fe94c1f5f52c1d`; both publication leases were clear afterward. Blog recovery was also verified byte for byte in an independent checkout.
+
+Scout's actual timed production callback completed safely with `SCOUT_NOTHING_ACCEPTED`: zero approved, rejected or parked proposals and no queue mutation. This is a successful empty run, not evidence of a newly approved topic. Separate real proposal rehearsals verified rejection paths; no review policy was weakened.
+
+| Active native schedule | UTC recurrence | Saved automation | Next due after cutover |
+| --- | --- | --- | --- |
+| ICC Blogs | Daily 09:05 | `Automation_3d0747b5860c81919effd624a156e152` | 2026-11-21 09:05 UTC |
+| ICC Guides | Monday, Thursday 08:00 | `Automation_7a54c214d2f481919975a3040cd22d94` | 2026-11-23 08:00 UTC |
+| ICC Scout | Sunday 08:00 | `Automation_2decf1fa5e448191995b64b43815c2aa` | 2026-11-22 08:00 UTC |
+
+Each schedule uses its existing matching ICC environment and same cloud chat, with actual GPT-6.1 Terra selection verified in the model control. The environment IDs and runtime settings remain below. Previous Claude triggers are retained paused: Blog `trig_016PSDw8sP67ywAiawjQgrZJ`, Guides `trig_01QCftVc3PfJZmDPjnr6q4MP`, Scout `trig_01V2mjdc9EYysBFUscUiDdBs`. No duplicate scheduler is enabled. Do not delete them before the retention period or reset published history on rollback.
+
+Post-cutover observation remains outstanding: seven consecutive blog slots, two guide slots and one scout slot have not elapsed. Retention began November 20; fourteen days have not elapsed. A complete checkpointed guide was proven, but no maximum single-turn runtime or one-hour guarantee was established. The formal security plugin failed its bundled macOS module signature check; independent manual source review is recorded separately and is not a completed plugin scan.
 
 ## Release validation — 2026-11-19
 

@@ -1,8 +1,8 @@
 # ICC topic scout routine
 
-Status: cloud routine `icc-scout`, every Sunday 08:00 UTC, same environment and tools as the blog routine, no MCP connectors. Its job is to keep the two topic queues from running dry with no human involvement; it writes nothing else.
+Status: ICC Scout is active on Codex Cloud as of 2026-11-20, every Sunday 08:00 UTC. The previous Claude trigger `trig_01V2mjdc9EYysBFUscUiDdBs` is paused and retained for rollback. It keeps the two topic queues stocked through independent evidence/review gates and writes only its restricted paths. See `CLOUD-SETUP.md` for current environment settings.
 
-The environment needs the Custom network allowlist described under "Environment network access" in `team/GUIDE-ROUTINE.md`: `apply` fetches every proposed source, and a host outside the allowlist fails that fetch and rejects the topic. `www.iso.org` refuses automated fetches with HTTP 403, so cite the `committee.iso.org` PDFs for ISO guidance.
+The retained Claude rollback environment needs the Custom network allowlist described under "Environment network access" in `team/GUIDE-ROUTINE.md`: `apply` fetches every proposed source, and a host outside the allowlist fails that fetch and rejects the topic. `www.iso.org` refuses automated fetches with HTTP 403, so cite the `committee.iso.org` PDFs for ISO guidance.
 
 ## What it does
 
@@ -30,7 +30,7 @@ An approved topic's sources go into `external-link-bank.json` under `software_gu
 
 Edit the domain lists freely. The reviewer's five rules live in `REVIEW_RULES` in `topicScout.js`, and the hard rules next to them; both are covered by `team/tests/topic-scout.test.js`. The queue entry of every approved topic records which rules passed and the reviewer's findings, so a bad approval can be traced and the rule tightened.
 
-## Claude Code routine instructions — the routine's prompt
+## Legacy Claude Code rollback prompt
 
 The text below is the prompt of the cloud routine `icc-scout`. If it changes, update the routine too.
 
@@ -62,12 +62,12 @@ End your report with one line: `RESULT: pushed — <summary> | nothing to scout 
 
 ---
 
-## Codex Cloud candidate prompt (inactive)
+## Active Codex Cloud prompt (former candidate)
 
-The earlier prompt remains the active Claude routine during migration. The following prompt is for the separately authorized Codex cutover.
+The Owner enabled this Codex Cloud routine on 2026-11-20. The earlier Claude prompt is retained unchanged as a rollback reference; its trigger is paused.
 
 ```text
-Run the weekly ICC topic scout in ICC Scout with the actual session model GPT-6.1 Terra. This candidate is inactive until the Owner explicitly enables its schedule; migration probes must not execute this publication prompt.
+Run the weekly ICC topic scout in ICC Scout with the actual session model GPT-6.1 Terra. This is the active Owner-authorized scheduled prompt; readiness probes must not execute it.
 
 Read AGENTS.md, team/CLOUD-SETUP.md and the original scout instructions above, including proposal schema and five reviewer rules. Require ICC_CLOUD_ROUTINE=1. Run bash team/scripts/scheduled-scout-run.sh prepare. Research primary sources using web tools and open every proposed URL. Use only allowed domains and evidence retrieved successfully; do not bypass blocked or unavailable sources. Write team/reports/scout-proposals.json in the documented format. Claude independently reviews through the existing code gate; no other reviewer provider substitutes.
 
