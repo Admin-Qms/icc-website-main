@@ -132,10 +132,11 @@ test("closing demo: last paragraph must invite a demo at /contact", () => {
 
 const claimsPost = (body) => ({ slug: "claims-fixture", title: "ISO 14001 Internal Audits in Manufacturing", description: "What environmental managers need to know.", body });
 const claimsDir = (t) => { const dir = require("node:fs").mkdtempSync(require("node:path").join(require("node:os").tmpdir(), "icc-claims-")); t.after(() => require("node:fs").rmSync(dir, { recursive: true, force: true })); return dir; };
+const confirmClaims = async (_system, input) => ({ decisions: JSON.parse(input).screeningFindings.map(({ index }) => ({ index, verdict: 'violation', reason: 'Confirmed test violation.' })) });
 
 test("claims audit: a finding on the fixed title or meta description does not block the body", async (t) => {
   const call = async () => ({ findings: [{ rule: "STANDARD ACCURACY", text: "TITLE: ISO 14001 Internal Audits in Manufacturing", reason: "No edition" }] });
-  const result = await qa.auditClaims(claimsPost("A plant plans its audits by risk.\n\nRecords show the result."), { call, cacheDir: claimsDir(t) });
+  const result = await qa.auditClaims(claimsPost("A plant plans its audits by risk.\n\nRecords show the result."), { call, adjudicate: confirmClaims, cacheDir: claimsDir(t) });
   assert.deepEqual(result.findings, []);
   assert.equal(result.advisory.length, 1);
 });
@@ -143,12 +144,12 @@ test("claims audit: a finding on the fixed title or meta description does not bl
 test("claims audit: a retry only blocks on paragraphs that changed since an earlier clean audit", async (t) => {
   const cacheDir = claimsDir(t);
   const first = async () => ({ findings: [{ rule: "STATISTICS", text: "Most plants fail their first audit.", reason: "Unsupported generalization" }] });
-  await qa.auditClaims(claimsPost("A plant plans its audits by risk.\n\nMost plants fail their first audit."), { call: first, cacheDir });
+  await qa.auditClaims(claimsPost("A plant plans its audits by risk.\n\nMost plants fail their first audit."), { call: first, adjudicate: confirmClaims, cacheDir });
   const second = async () => ({ findings: [
     { rule: "EXAMPLES", text: "A plant plans its audits by risk.", reason: "Unlabelled scenario" },
     { rule: "STATISTICS", text: "Nearly all plants fail at first.", reason: "Unsupported generalization" },
   ] });
-  const result = await qa.auditClaims(claimsPost("A plant plans its audits by risk.\n\nNearly all plants fail at first."), { call: second, cacheDir });
+  const result = await qa.auditClaims(claimsPost("A plant plans its audits by risk.\n\nNearly all plants fail at first."), { call: second, adjudicate: confirmClaims, cacheDir });
   assert.deepEqual(result.findings.map((f) => f.text), ["Nearly all plants fail at first."]);
   assert.deepEqual(result.advisory.map((f) => f.text), ["A plant plans its audits by risk."]);
 });

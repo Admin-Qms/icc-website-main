@@ -26,6 +26,7 @@ function run(action) {
 }
 function registerGuideCommands(program) {
   const guide = program.command('guide').description('Software guides: shared research, chapter drafts, strict QA and local publication');
+  require('./sessionImageCLI').registerGuideImageCommands(guide);
   const topics = guide.command('topics').description('Guide topic backlog');
   topics.command('list').action(run(() => ({ topics: researcher.loadGuideQueue().map(q => ({ ...q, published: store.published().some(g => g.manifest.topicId === q.id), reserved: store.reservedTopicIds().has(q.id) })) })));
   topics.command('suggest').action(run(() => ({ candidates: researcher.suggestGuideTopics().map(q => ({ ...q, queries: researcher.guideResearchQueries(q) })) })));

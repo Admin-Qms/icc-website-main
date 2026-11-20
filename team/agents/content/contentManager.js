@@ -158,7 +158,7 @@ function savePreview(post) {
 }
 
 async function publishDaily(options = {}) {
-  const { dryRun = false, force = false, fixture = null } = options;
+  const { dryRun = false, force = false, fixture = null, textOnly = false } = options;
   const startTime = Date.now();
   const date = todayLocal();
   log("contentManager", "pipeline-v3", `starting daily blog publish${dryRun ? " (dry run)" : ""}${fixture ? ` from ${fixture}` : ""}`);
@@ -175,6 +175,13 @@ async function publishDaily(options = {}) {
 
   try {
     ensureDirs();
+    if (process.env.ICC_CLOUD_ROUTINE === '1') {
+      if (!fixture) return fail('Cloud session requires a saved draft fixture; API writing is disabled');
+      const saved = JSON.parse(fs.readFileSync(path.resolve(fixture), 'utf8'));
+      if (saved.slotDate !== date) return fail('Saved blog slot is expired or missing; prepare the current Toronto daily slot');
+      if (force) return fail('Cloud routines cannot force another daily publication');
+      require('./sessionImages').blogAssignment(fixture);
+    }
 
     // Step 0: one article per day. A dry run publishes nothing, so it is always allowed.
     if (!dryRun && !force) {
@@ -207,6 +214,7 @@ async function publishDaily(options = {}) {
             });
           }
         } catch (err) {
+          if (require('./sessionImages').sessionMode()) return fail('Required originality review could not run');
           log("contentManager", "originality-error", err.message);
         }
       } else {
@@ -297,7 +305,7 @@ async function publishDaily(options = {}) {
     qaResult = await contentQA.validateLocal(toPost(article, keywordBrief, slug, date), { phase: "text" });
 
     let patches = 0;
-    while (!qaResult.pass && patches < MAX_REWRITES) {
+    while (!qaResult.pass && patches < MAX_REWRITES && !require('./sessionImages').sessionMode()) {
       patches++;
       log("contentManager", "patch", `attempt ${patches} — ${qaResult.issues.join(" | ")}`);
       article = await rewritePatcher.patchArticle(article, qaResult, context);
@@ -310,24 +318,27 @@ async function publishDaily(options = {}) {
     }
     log("contentManager", "text-qa", `passed ${qaResult.score}`);
 
+    if (textOnly) return { success: true, dryRun: true, textOnly: true, title: article.title, slug, qaChecks: qaResult.checks };
+    const sessionImages = require('./sessionImages');
+    const imported = sessionImages.sessionMode() ? await sessionImages.blogImages(fixture) : null;
     // Step 9: Images — held in memory until the final gate passes
     log("contentManager", "step-9", "sourcing images");
     const exclude = new Set();
-    const hero = localHero ? await loadLocalHero(localHero) : await imageAgent.getHeroImage(article, { exclude });
+    const hero = imported ? imported.hero : localHero ? await loadLocalHero(localHero) : await imageAgent.getHeroImage(article, { exclude });
     if (!hero) {
       return fail("No hero image could be sourced — set PEXELS_API_KEY or GEMINI_API_KEY in team/.env");
     }
     exclude.add(hero.sha256);
     log("contentManager", "image", `hero from ${hero.source}${hero.credit ? ` (${hero.credit})` : ""}`);
 
-    const inlineImageResult = await inlineImageAgent.processInlineImagesLocal(article, slug, { exclude, max: MAX_INLINE_IMAGES });
+    const inlineImageResult = await inlineImageAgent.processInlineImagesLocal(article, slug, { exclude, max: MAX_INLINE_IMAGES, imported: imported?.inlineImages });
     article.body = normalizeBody(inlineImageResult.body, article.title);
     log("contentManager", "inline-images", `${inlineImageResult.count} images placed`);
 
     // Say plainly when images did not come from the first-choice provider, so a
     // scheduled run's report shows the fallback and the [imageAgent] lines explain it.
     const sources = [hero, ...inlineImageResult.images].map((img) => img.source).filter((src) => src && src !== "none");
-    const preferred = IMAGE_PROVIDERS[0];
+    const preferred = sessionImages.sessionMode() ? 'codex' : IMAGE_PROVIDERS[0];
     const fallbacks = sources.filter((src) => src !== preferred);
     log("contentManager", "images", `sources: ${sources.join(", ")}`);
     if (preferred && fallbacks.length) {
@@ -621,7 +632,7 @@ async function prepareBrief(options = {}) {
   const { force = false } = options;
   const date = todayLocal();
   ensureDirs();
-  log("contentManager", "brief", "preparing a brief for a Claude-written article");
+  log("contentManager", "brief", "preparing a brief for a session-written article");
 
   if (!force) {
     const already = listPosts().find((p) => p.date === date);
@@ -629,6 +640,23 @@ async function prepareBrief(options = {}) {
       return { success: false, skipped: true, reason: `An article dated ${date} is already published (/blog/${already.slug}). Use --force to prepare another.` };
     }
   }
+
+  const sessionDrafts = process.env.BLOG_DRAFT_DIR || path.join(path.resolve(__dirname, '../..'), 'drafts', 'blog');
+  const publishedSlots = new Set(listPosts().map(post => post.date));
+  const missedSlots = []; let resumed;
+  if (require('./sessionImages').sessionMode() && fs.existsSync(sessionDrafts)) {
+    for (const entry of fs.readdirSync(sessionDrafts, { withFileTypes: true })) {
+      if (!entry.isDirectory()) continue;
+      const folder = path.join(sessionDrafts, entry.name); const draftPath = path.join(folder, 'draft.json');
+      if (!fs.existsSync(draftPath)) continue;
+      const draft = JSON.parse(fs.readFileSync(draftPath, 'utf8'));
+      if (draft.slotDate && draft.slotDate < date && !publishedSlots.has(draft.slotDate)) missedSlots.push(draft.slotDate);
+      if (draft.slotDate === date) resumed = { success: true, resumed: true, folder, draftPath, briefPath: path.join(folder, 'brief.md'), title: draft.title, primaryKeyword: draft.primaryKeyword, slug: draft.slug, articleType: draft.articleType };
+    }
+  }
+
+  if (missedSlots.length) log('contentManager', 'brief', `Missed Toronto slots retained, never backdated: ${missedSlots.join(', ')}`);
+  if (resumed) return { ...resumed, missedSlots };
 
   const keywordBrief = await keywordResearcher.pickKeyword();
   const context = await contextLoader.loadContext(keywordBrief);
@@ -639,7 +667,7 @@ async function prepareBrief(options = {}) {
   }
 
   const slug = keywordBrief.slug || slugify(keywordBrief.title);
-  const folder = path.join(path.resolve(__dirname, "../.."), "drafts", `${date}-${slug}`);
+  const folder = require('./sessionImages').sessionMode() ? path.join(sessionDrafts, `${date}-${slug}`) : path.join(path.resolve(__dirname, "../.."), "drafts", `${date}-${slug}`);
   fs.mkdirSync(folder, { recursive: true });
 
   const rules = articleWriter.loadWritingRules();
@@ -691,6 +719,7 @@ async function prepareBrief(options = {}) {
   ].join("\n");
 
   const draft = {
+    ...(require('./sessionImages').sessionMode() ? { slotDate: date } : {}),
     title: keywordBrief.title,
     metaDescription: keywordBrief.metaDescription,
     primaryKeyword: keywordBrief.primaryKeyword,
@@ -705,7 +734,7 @@ async function prepareBrief(options = {}) {
   fs.writeFileSync(path.join(folder, "draft.json"), JSON.stringify(draft, null, 2) + "\n");
   log("contentManager", "brief", `written to ${folder}`);
 
-  return { success: true, folder, briefPath: path.join(folder, "brief.md"), draftPath: path.join(folder, "draft.json"), title: keywordBrief.title, primaryKeyword: keywordBrief.primaryKeyword, slug, articleType: type };
+  return { success: true, missedSlots, folder, briefPath: path.join(folder, "brief.md"), draftPath: path.join(folder, "draft.json"), title: keywordBrief.title, primaryKeyword: keywordBrief.primaryKeyword, slug, articleType: type };
 }
 
 async function previewNext() {

@@ -11,7 +11,11 @@ async function sourceGuideImages(bundle, directory) {
     const file = `${page.slug}.webp`; const filename = path.join(assets, file);
     const checkpoint = path.join(assets, `${page.slug}.json`);
     let raw;
-    if (fs.existsSync(filename)) {
+    const session = require('./sessionImages');
+    if (session.sessionMode()) {
+      raw = await session.readSessionImage(directory, session.requestFor({ id: page.slug, scene: page.imageBrief, alt: page.imageBrief }), { allowLegacy: true });
+      if (!raw) throw new Error(`Missing session image checkpoint for ${page.slug}; generate it with the built-in tool and import it`);
+    } else if (fs.existsSync(filename)) {
       const saved = page.image || (fs.existsSync(checkpoint) ? JSON.parse(fs.readFileSync(checkpoint, 'utf8')) : null);
       if (!saved) throw new Error(`Stored guide image lacks provenance: ${page.slug}; reconcile the interrupted image checkpoint`);
       const buffer = fs.readFileSync(filename);
@@ -20,6 +24,7 @@ async function sourceGuideImages(bundle, directory) {
       if (sha256 !== saved.sha256 || metadata.format !== 'webp' || metadata.width !== 1200 || metadata.height !== 675) throw new Error(`Stored guide image changed: ${page.slug}`);
       raw = { ...saved, buffer, sha256 };
     } else {
+      if (require('./sessionImages').sessionMode()) throw new Error(`Missing session image for ${page.slug}; generate it with the built-in tool and import it`);
       raw = await sourceImage({ scene: page.imageBrief, kind: 'hero', pexelsQueries: [page.imageBrief], alt: page.imageBrief, exclude });
       if (!raw) throw new Error(`No licensed unique guide image available for ${page.slug}`);
       fs.writeFileSync(filename, raw.buffer, { flag: 'wx' });
@@ -31,7 +36,8 @@ async function sourceGuideImages(bundle, directory) {
       licenseUrl: raw.licenseUrl || LICENSES[raw.source], ...(raw.credit ? { credit: raw.credit } : {}), ...(raw.creditUrl ? { creditUrl: raw.creditUrl } : {}) };
     if (!page.image.licenseUrl) throw new Error(`Image provider needs a verified licensing reference: ${raw.source}`);
     const temporary = `${checkpoint}.${crypto.randomUUID()}.tmp`;
-    fs.writeFileSync(temporary, JSON.stringify(page.image, null, 2) + '\n', { flag: 'wx' });
+    const { buffer, ...provenance } = raw;
+    fs.writeFileSync(temporary, JSON.stringify({ ...provenance, ...page.image }, null, 2) + '\n', { flag: 'wx' });
     fs.renameSync(temporary, checkpoint);
   }
   return bundle;

@@ -14,6 +14,7 @@ function setup(t) {
   const clone = path.join(root, 'clone'); sh(root, 'git', ['clone', '-q', origin, clone]);
   fs.mkdirSync(path.join(clone, 'team/scripts'), { recursive: true });
   fs.copyFileSync(SCRIPT, path.join(clone, 'team/scripts/scheduled-guide-run.sh'));
+  for (const name of ['routine-state.js', 'routine-common.sh', 'publication-scope.js']) fs.copyFileSync(path.join(__dirname, '../scripts', name), path.join(clone, 'team/scripts', name));
   fs.writeFileSync(path.join(clone, 'team/.gitignore'), 'drafts/*\nreports/\n');
   sh(clone, 'git', ['-c', 'user.name=t', '-c', 'user.email=t@example.com', 'add', '.']);
   sh(clone, 'git', ['-c', 'user.name=t', '-c', 'user.email=t@example.com', 'commit', '-q', '-m', 'seed']);
@@ -36,7 +37,7 @@ test('save-state pushes gitignored guide drafts to the state branch without lock
   const first = run(clone, ['save-state', 'test']);
   assert.equal(first.status, 0, first.stderr); assert.match(first.stdout, /STATE_SAVED\s*$/);
   const files = sh(origin, 'git', ['ls-tree', '-r', '--name-only', 'guide-state']).trim().split('\n').sort();
-  assert.deepEqual(files, ['team/drafts/guides/20261019-capa-abc123/chapters/one.md', 'team/drafts/guides/20261019-capa-abc123/state.json', 'team/drafts/guides/reservations/capa.json']);
+  assert.deepEqual(files, ['team/drafts/guides/20261019-capa-abc123/chapters/one.md', 'team/drafts/guides/20261019-capa-abc123/state.json', 'team/drafts/guides/reservations/capa.json', 'vercel.json']);
   assert.equal(sh(clone, 'git', ['status', '--porcelain']).trim(), '', 'the main index and working tree stay untouched');
 
   const second = run(clone, ['save-state', 'test']);
@@ -50,8 +51,9 @@ test('save-state pushes gitignored guide drafts to the state branch without lock
 
   // A fresh clone can restore exactly what was saved.
   const fresh = path.join(path.dirname(clone), 'fresh'); sh(path.dirname(clone), 'git', ['clone', '-q', origin, fresh]);
-  sh(fresh, 'git', ['fetch', '-q', 'origin', '+refs/heads/guide-state:refs/remotes/origin/guide-state']);
-  sh(fresh, 'bash', ['-c', 'git archive refs/remotes/origin/guide-state | tar -xf - -C .']);
+  fs.writeFileSync(path.join(fresh, 'vercel.json'), '{"sourceConfig":true}');
+  sh(fresh, process.execPath, ['team/scripts/routine-state.js', 'restore', '--kind', 'guides']);
+  assert.equal(fs.readFileSync(path.join(fresh, 'vercel.json'), 'utf8'), '{"sourceConfig":true}');
   assert.ok(fs.existsSync(path.join(fresh, 'team/drafts/guides/20261019-capa-abc123/chapters/two.md')));
   assert.ok(!fs.existsSync(path.join(fresh, 'team/drafts/guides/publication.lock')));
 });

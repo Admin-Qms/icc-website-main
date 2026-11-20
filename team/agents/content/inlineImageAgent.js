@@ -274,7 +274,7 @@ function pexelsQueryFor(description) {
   return [`${words.slice(0, 4).join(" ")} manufacturing`, `${words.slice(0, 2).join(" ")} factory industrial`];
 }
 
-async function processInlineImagesLocal(article, slug, { exclude = new Set(), max = 2 } = {}) {
+async function processInlineImagesLocal(article, slug, { exclude = new Set(), max = 2, imported } = {}) {
   const { sourceImage } = require("./imageAgent");
   const { imageUrl, stripImageMarkers } = require("../shared/contentStore");
 
@@ -292,17 +292,22 @@ async function processInlineImagesLocal(article, slug, { exclude = new Set(), ma
 
     let image = null;
     try {
-      image = await sourceImage({
+      image = imported ? imported[images.length] : await sourceImage({
         pexelsQueries: pexelsQueryFor(marker.query),
         scene: marker.query,
         kind: "inline",
         alt: marker.query.replace(/\s+/g, " ").trim(),
         exclude,
       });
+      if (imported && image && image.alt.replace(/\s+/g, ' ').trim() !== marker.query.replace(/\s+/g, ' ').trim()) throw new Error('Imported inline scene differs from the reviewed draft');
     } catch (err) {
+      if (imported) throw err;
       log("inlineImageAgent", file, `failed: ${err.message}`);
     }
 
+    if (!image && imported) throw new Error('Missing imported inline image');
+    if (image && imported && exclude.has(image.sha256)) throw new Error('Duplicate imported inline image');
+    if (image && imported) exclude.add(image.sha256);
     if (!image) {
       lines[marker.lineIndex] = "";
       continue;

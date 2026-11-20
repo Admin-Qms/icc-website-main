@@ -14,19 +14,24 @@ cd "$ROOT"
 GIT_ID=(-c "user.name=${GIT_AUTHOR_NAME:-ICC topic scout}" -c "user.email=${GIT_AUTHOR_EMAIL:-scout@isocertificationconsultants.ca}")
 FILES=(team/memory/keyword-queue.json team/memory/guide-topic-queue.json team/data/external-link-bank.json)
 
+ROUTINE_KIND=scout
+source team/scripts/routine-common.sh
+
 status() { echo; echo "$*"; }
 fail() { status "SCOUT_FAILED"; exit 1; }
 
 case "${1:-}" in
   prepare)
+    claim_routine
     git fetch origin main
     git checkout -q -B main origin/main
     npm ci --prefix team --no-audit --no-fund
     npm ci --no-audit --no-fund
-    node team/scripts/provider-status.js >&2 || true
+    node team/scripts/provider-status.js >&2
     out="$(mktemp)"
     node team/pm.js scout status 2>&1 | tee "$out" >&2 || true
     if grep -q '^NOTHING_TO_SCOUT' "$out"; then
+      release_routine
       status "NOTHING_TO_SCOUT"
     elif grep -q '^SCOUT_NEEDED' "$out"; then
       file="team/reports/scout-status.json"; mkdir -p team/reports
@@ -37,31 +42,42 @@ case "${1:-}" in
     fi
     ;;
 
+  release)
+    release_routine
+    ;;
+
   apply)
+    publication_clean_index
+    claim_publication
+    git pull --no-rebase -q origin main
     proposals="${2:?usage: scheduled-scout-run.sh apply <proposals.json>}"
     [ -f "$proposals" ] || fail
     out="$(mktemp)"
     node team/pm.js scout apply --fixture "$proposals" 2>&1 | tee "$out" >&2 || fail
     if grep -q '^SCOUT_NOTHING_ACCEPTED' "$out"; then
-      status "SCOUT_NOTHING_ACCEPTED"; exit 0
+      release_routine; status "SCOUT_NOTHING_ACCEPTED"; exit 0
     fi
     grep -q '^SCOUT_APPLIED' "$out" || fail
     if [ -z "$(git status --porcelain -- "${FILES[@]}")" ]; then
-      status "SCOUT_NOTHING_ACCEPTED"; exit 0
+      release_routine; status "SCOUT_NOTHING_ACCEPTED"; exit 0
     fi
-    npm --prefix team test || fail
+    run_content_tests || fail
     summary="$(sed -n 's/^SCOUT_SUMMARY //p' "$out" | tail -n 1)"
     [ -n "$summary" ] || fail
     # Only the queues and the link bank are committed, never code.
+    publication_clean_index
     git add -- "${FILES[@]}"
     git "${GIT_ID[@]}" commit -q -m "Topic scout: $summary"
     git pull --no-rebase -q origin main
-    git push -q origin main
+    assert_routine
+    if cloud_run; then node team/scripts/routine-state.js assert-lock --kind publish; fi
+    push_publication "${FILES[@]}"
+    release_routine
     status "SCOUT_PUSHED $summary"
     ;;
 
   *)
-    echo 'usage: scheduled-scout-run.sh prepare | apply <proposals.json>' >&2
+    echo 'usage: scheduled-scout-run.sh prepare | release | apply <proposals.json>' >&2
     exit 2
     ;;
 esac

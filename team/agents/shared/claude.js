@@ -9,6 +9,7 @@ const {
   OPENAI_API_KEY,
   OPENAI_TEXT_MODEL,
   OPENAI_TEXT_MODEL_FAST,
+  CLOUD_ROUTINE,
 } = require("./config");
 
 // Every agent reaches the model through this file, so the provider switch lives here.
@@ -43,7 +44,7 @@ function providerSummary() {
   return LLM_PROVIDERS.map((p) => `${p}: ${KEYS[p] ? "key set" : "key missing, skipped"}`).join("; ");
 }
 
-async function callClaude(tier, systemPrompt, userMessage, maxTokens) {
+async function callClaude(tier, systemPrompt, userMessage, maxTokens, options = {}) {
   if (!anthropicClient) {
     const Anthropic = require("@anthropic-ai/sdk");
     anthropicClient = new Anthropic({ apiKey: CLAUDE_API_KEY });
@@ -53,9 +54,10 @@ async function callClaude(tier, systemPrompt, userMessage, maxTokens) {
     max_tokens: maxTokens,
     system: systemPrompt,
     messages: [{ role: "user", content: userMessage }],
+    ...(options.schema ? { output_config: { format: { type: 'json_schema', schema: options.schema } } } : {}),
   });
   const text = response.content.find((b) => b.type === "text")?.text || "";
-  return { text, truncated: response.stop_reason === "max_tokens" };
+  return { text, truncated: response.stop_reason === "max_tokens", ...(options.schema ? { stopReason: response.stop_reason } : {}) };
 }
 
 async function callGemini(tier, systemPrompt, userMessage, maxTokens) {
@@ -127,10 +129,10 @@ function isRetryable(err) {
   );
 }
 
-async function callWithRetries(call, tier, systemPrompt, userMessage, maxTokens) {
+async function callWithRetries(call, tier, systemPrompt, userMessage, maxTokens, options) {
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
     try {
-      return await call(tier, systemPrompt, userMessage, maxTokens);
+      return await call(tier, systemPrompt, userMessage, maxTokens, options);
     } catch (err) {
       if (attempt === MAX_RETRIES || !isRetryable(err)) throw err;
       await new Promise((r) => setTimeout(r, RETRY_DELAY * attempt));
@@ -143,22 +145,23 @@ async function callWithRetries(call, tier, systemPrompt, userMessage, maxTokens)
  * errors, moving to the next provider when one fails (no credits, bad key, outage).
  * @returns {Promise<{text: string, truncated: boolean}>}
  */
-async function callLLM(tier, systemPrompt, userMessage, maxTokens) {
+async function callLLM(tier, systemPrompt, userMessage, maxTokens, options) {
   requireKey();
   const failures = [];
   for (const name of readyProviders()) {
     try {
-      return await callWithRetries(providers[name], tier, systemPrompt, userMessage, maxTokens);
+      return await callWithRetries(providers[name], tier, systemPrompt, userMessage, maxTokens, options);
     } catch (err) {
-      failures.push(`${name}: ${err.message}`);
-      console.warn(`[llm] ${name} failed (${err.message})${failures.length < readyProviders().length ? ", trying the next provider" : ""}`);
+      const reason = CLOUD_ROUTINE ? `provider request failed (status ${Number.isInteger(err.status) ? err.status : 'unavailable'})` : err.message;
+      failures.push(`${name}: ${reason}`);
+      console.warn(`[llm] ${name} failed (${reason})${failures.length < readyProviders().length ? ", trying the next provider" : ""}`);
     }
   }
   throw new Error(`Every text provider failed — ${failures.join(" | ")}`);
 }
 
 // A reply cut off at the token limit is an error for prose: publishing half an
-// article is worse than failing the run. JSON callers keep the repair path below.
+// article is worse than failing the run. JSON callers must also reject incomplete responses.
 async function callText(tier, systemPrompt, userMessage, maxTokens) {
   const { text, truncated } = await callLLM(tier, systemPrompt, userMessage, maxTokens);
   if (truncated) {
@@ -167,10 +170,12 @@ async function callText(tier, systemPrompt, userMessage, maxTokens) {
   return text;
 }
 
-async function callJSON(tier, systemPrompt, userMessage, maxTokens) {
-  const { text } = await callLLM(tier, systemPrompt, userMessage, maxTokens);
+async function callJSON(tier, systemPrompt, userMessage, maxTokens, options) {
+  const { text, truncated, stopReason } = await callLLM(tier, systemPrompt, userMessage, maxTokens, options);
+  if (truncated) throw new Error(`Model JSON reply was cut off at the ${maxTokens}-token limit`);
+  if (options?.schema && stopReason !== 'end_turn') throw new Error('Schema-bound JSON reply requires end_turn completion');
   const cleaned = text.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
-  return repairJSON(cleaned);
+  return JSON.parse(cleaned);
 }
 
 /**
@@ -182,59 +187,11 @@ async function claudeCall(systemPrompt, userMessage, maxTokens = 4096) {
 }
 
 /**
- * Attempt to repair truncated JSON by closing open structures.
- */
-function repairJSON(str) {
-  try { return JSON.parse(str); } catch { /* needs repair */ }
-
-  // Extract JSON object/array — strip any text before/after
-  let s = str;
-  const jsonStart = s.search(/[\[{]/);
-  if (jsonStart > 0) s = s.slice(jsonStart);
-
-  // Find where the top-level JSON ends and strip trailing text
-  let depth = 0, inStr = false, endPos = -1;
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === '"' && (i === 0 || s[i - 1] !== '\\')) { inStr = !inStr; continue; }
-    if (inStr) continue;
-    if (s[i] === '{' || s[i] === '[') depth++;
-    if (s[i] === '}' || s[i] === ']') { depth--; if (depth === 0) { endPos = i; break; } }
-  }
-  if (endPos > 0) {
-    s = s.slice(0, endPos + 1);
-    try { return JSON.parse(s); } catch { /* still broken, continue repair */ }
-  }
-
-  // Trim trailing incomplete string/value
-  s = s.replace(/,\s*$/, "").replace(/,\s*"[^"]*$/, "");
-
-  // Close open strings
-  const quoteCount = (s.match(/(?<!\\)"/g) || []).length;
-  if (quoteCount % 2 !== 0) s += '"';
-
-  // Close open brackets/braces
-  const opens = [];
-  inStr = false;
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === '"' && (i === 0 || s[i - 1] !== '\\')) { inStr = !inStr; continue; }
-    if (inStr) continue;
-    if (s[i] === '{' || s[i] === '[') opens.push(s[i]);
-    if (s[i] === '}' || s[i] === ']') opens.pop();
-  }
-  while (opens.length) {
-    const open = opens.pop();
-    s += open === '{' ? '}' : ']';
-  }
-
-  return JSON.parse(s);
-}
-
-/**
  * Call the writing model and parse the response as JSON.
- * Strips markdown fences if present. Repairs truncated JSON.
+ * Strips markdown fences if present; requires complete, valid JSON.
  */
-async function claudeJSON(systemPrompt, userMessage, maxTokens = 4096) {
-  return callJSON("main", systemPrompt, userMessage, maxTokens);
+async function claudeJSON(systemPrompt, userMessage, maxTokens = 4096, options) {
+  return callJSON("main", systemPrompt, userMessage, maxTokens, options);
 }
 
 /**
@@ -247,8 +204,8 @@ async function claudeCallFast(systemPrompt, userMessage, maxTokens = 4096) {
 /**
  * Call the fast model and parse the response as JSON.
  */
-async function claudeJSONFast(systemPrompt, userMessage, maxTokens = 4096) {
-  return callJSON("fast", systemPrompt, userMessage, maxTokens);
+async function claudeJSONFast(systemPrompt, userMessage, maxTokens = 4096, options) {
+  return callJSON("fast", systemPrompt, userMessage, maxTokens, options);
 }
 
 module.exports = { claudeCall, claudeJSON, claudeCallFast, claudeJSONFast, hasLLMKey, providerSummary, LLM_PROVIDER: LLM_PROVIDERS[0], _providers: providers };

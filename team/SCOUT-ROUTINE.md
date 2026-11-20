@@ -61,3 +61,17 @@ Rules that override anything else you might consider:
 End your report with one line: `RESULT: pushed — <summary> | nothing to scout | nothing accepted | failed — <reason>`.
 
 ---
+
+## Codex Cloud candidate prompt (inactive)
+
+The earlier prompt remains the active Claude routine during migration. The following prompt is for the separately authorized Codex cutover.
+
+```text
+Run the weekly ICC topic scout in ICC Scout with the actual session model GPT-6.1 Terra. This candidate is inactive until the Owner explicitly enables its schedule; migration probes must not execute this publication prompt.
+
+Read AGENTS.md, team/CLOUD-SETUP.md and the original scout instructions above, including proposal schema and five reviewer rules. Require ICC_CLOUD_ROUTINE=1. Run bash team/scripts/scheduled-scout-run.sh prepare. Research primary sources using web tools and open every proposed URL. Use only allowed domains and evidence retrieved successfully; do not bypass blocked or unavailable sources. Write team/reports/scout-proposals.json in the documented format. Claude independently reviews through the existing code gate; no other reviewer provider substitutes.
+
+Run bash team/scripts/scheduled-scout-run.sh apply team/reports/scout-proposals.json. Only that wrapper can update/commit/push the two queues and external link bank. Preserve existing reject/park behavior; reviewer outage must not approve proposals. Do not edit queues, bank, capability facts, prompts, rules, code or provider settings by hand. No publication or generation images are needed by scout. On failure preserve the proposal/report, run bash team/scripts/scheduled-scout-run.sh release, and report the stage/reason; do not retry Git/install failures blindly.
+
+End with the original RESULT summary, including accepted/rejected/parked counts and any failed stage.
+```

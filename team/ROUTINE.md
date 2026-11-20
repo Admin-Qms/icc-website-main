@@ -23,3 +23,19 @@ Rules that override anything else you might consider:
 - Never invent companies, people, quotes or statistics in the article. A scenario starts with `**Illustrative example:**` and names no business.
 
 End your report with one line: `RESULT: published | nothing to publish | failed — <reason>`.
+
+## Codex Cloud candidate prompt (inactive)
+
+The earlier prompt remains the active Claude routine during migration. The following prompt is for the separately authorized Codex cutover.
+
+```text
+Run the ICC daily blog in ICC Blogs with the actual session model GPT-6.1 Terra. This candidate is inactive until the Owner explicitly enables its schedule; migration probes must not execute this publication prompt.
+
+Read AGENTS.md, team/CLOUD-SETUP.md and .agents/skills/write-blog-article/SKILL.md. Require ICC_CLOUD_ROUTINE=1; do not print keys. Run bash team/scripts/scheduled-run.sh prepare. On NOTHING_TO_PUBLISH stop. Otherwise use its returned brief/draft folder, preserve fixed metadata, and write body.md following the complete brief and writing rules. Terra writes; Claude independently reviews through the CLI.
+
+Run node team/pm.js blog check-text --fixture <draft.json>; correct only the body, with at most two correction passes. Save through bash team/scripts/scheduled-run.sh save-state. Run node team/pm.js blog image-requests --fixture <draft.json>. Use each exact returned prompt with the built-in image tool, then import its real local artifact through node team/pm.js blog import-image --fixture <draft.json> --id <id> --file <artifact>. Save state after every import. Resume stored images; never use an image API or nested CLI. Run node team/pm.js blog publish --fixture <draft.json> --dry-run, then bash team/scripts/scheduled-run.sh publish <draft.json> only when all gates pass.
+
+A missing reviewer/key, exhausted allowance or other failure stops publication. Save safe progress if possible, release through bash team/scripts/scheduled-run.sh release, and report the actual saved stage/reason. If checkpointing fails, say progress is local and preserve it. Do not retry Git/integrity/install failures blindly. Never force a daily slot, edit checks, hand-write production output, commit or push directly.
+
+End with RESULT: published | nothing to publish | saved-progress — <stage and reason> | failed — <stage and reason>.
+```

@@ -770,6 +770,7 @@ program
 
 // ── blog ────────────────────────────────────────────────────────
 const blogCmd = program.command("blog").description("Daily blog publishing pipeline");
+require('./agents/content/sessionImageCLI').registerBlogImageCommands(blogCmd);
 
 // Prints one publishDaily() result and sets the exit code a scheduler can act on:
 // 0 = published (or nothing to do today), 1 = the run failed and nothing was written.

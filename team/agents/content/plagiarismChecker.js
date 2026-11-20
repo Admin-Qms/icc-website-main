@@ -114,8 +114,11 @@ Score this article 0–100 for originality. Pass threshold is 85. Check for self
 
   const result = JSON.parse(cleaned.slice(start, end + 1));
 
-  // Ensure selfPlagiarismFlags exists
-  if (!result.selfPlagiarismFlags) result.selfPlagiarismFlags = [];
+  const valid = result && typeof result.pass === 'boolean' && Number.isFinite(result.score) && result.score >= 0 && result.score <= 100
+    && Array.isArray(result.flaggedSentences) && Array.isArray(result.selfPlagiarismFlags)
+    && result.flaggedSentences.every(f => f && typeof f.text === 'string' && typeof f.reason === 'string')
+    && result.selfPlagiarismFlags.every(f => f && typeof f.text === 'string' && typeof f.similarTo === 'string' && Number.isFinite(f.similarity));
+  if (!valid || (result.pass && result.score < 85)) throw new Error('Invalid or contradictory originality review verdict');
 
   log(
     "plagiarismChecker",

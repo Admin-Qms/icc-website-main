@@ -98,3 +98,78 @@ test("an OpenAI reply cut off at the limit is reported, not published", async (t
   }), { status: 200 }));
   await assert.rejects(llm.claudeCall("system", "user", 512), /cut off at the 512-token limit/);
 });
+
+test('a truncated review JSON cannot be repaired into approval', async () => {
+  const llm = loadLLM({ LLM_PROVIDERS: 'claude', CLAUDE_API_KEY: 'test-review' });
+  llm._providers.claude = async () => ({ text: '{"findings":[]}', truncated: true });
+  await assert.rejects(llm.claudeJSONFast('review', 'draft', 512), /cut off|truncated/i);
+});
+
+test('incomplete review JSON cannot be repaired into approval', async () => {
+  const llm = loadLLM({ LLM_PROVIDERS: 'claude', CLAUDE_API_KEY: 'test-review' });
+  llm._providers.claude = async () => ({ text: '{"findings":[]', truncated: false });
+  await assert.rejects(llm.claudeJSONFast('review', 'draft', 512), /JSON|Expected|position|end/i);
+});
+
+test('cloud routines keep Claude reviews independent even with other provider keys present', async () => {
+  const llm = loadLLM({ ICC_CLOUD_ROUTINE: '1', LLM_PROVIDERS: 'openai,gemini', CLAUDE_API_KEY: '' });
+  try {
+    assert.equal(llm.hasLLMKey(), false, 'other providers cannot substitute for the required Claude reviewer');
+    await assert.rejects(llm.claudeJSONFast('review', 'draft', 512), /CLAUDE_API_KEY/);
+  } finally { delete process.env.ICC_CLOUD_ROUTINE; }
+});
+
+test('Claude JSON schema reaches the real SDK transport while ordinary JSON and text requests stay unchanged', async t => {
+  const llm = loadLLM({ LLM_PROVIDERS: 'claude', CLAUDE_API_KEY: 'test-schema-only' });
+  const bodies = [];
+  t.mock.method(globalThis, 'fetch', async (input, init) => {
+    const request = new Request(input, init);
+    assert.equal(new URL(request.url).pathname, '/v1/messages');
+    bodies.push(await request.json());
+    return new Response(JSON.stringify({ id: 'fixture', type: 'message', role: 'assistant', model: 'main-review-model', content: [{ type: 'text', text: '{"ok":true}' }], stop_reason: 'end_turn', stop_sequence: null, usage: { input_tokens: 1, output_tokens: 1 } }), { status: 200, headers: { 'content-type': 'application/json' } });
+  });
+  const schema = { type: 'object', properties: { ok: { type: 'boolean' } }, required: ['ok'], additionalProperties: false };
+  assert.deepEqual(await llm.claudeJSON('review system', 'review body', 8192, { schema }), { ok: true });
+  assert.deepEqual(await llm.claudeJSONFast('fast review system', 'fast review body', 8192, { schema }), { ok: true });
+  await llm.claudeJSON('ordinary system', 'ordinary body', 512);
+  await llm.claudeCallFast('edit system', 'edit body', 2048);
+  await llm.claudeJSONFast('ordinary fast system', 'ordinary fast body', 512);
+  assert.deepEqual(bodies[0], { model: 'claude-sonnet-4-6', max_tokens: 8192, system: 'review system', messages: [{ role: 'user', content: 'review body' }], output_config: { format: { type: 'json_schema', schema } } });
+  assert.deepEqual(bodies[1], { model: 'claude-haiku-4-5-20251001', max_tokens: 8192, system: 'fast review system', messages: [{ role: 'user', content: 'fast review body' }], output_config: { format: { type: 'json_schema', schema } } });
+  assert.deepEqual(bodies[2], { model: 'claude-sonnet-4-6', max_tokens: 512, system: 'ordinary system', messages: [{ role: 'user', content: 'ordinary body' }] });
+  assert.deepEqual(bodies[3], { model: 'claude-haiku-4-5-20251001', max_tokens: 2048, system: 'edit system', messages: [{ role: 'user', content: 'edit body' }] });
+  assert.deepEqual(bodies[4], { model: 'claude-haiku-4-5-20251001', max_tokens: 512, system: 'ordinary fast system', messages: [{ role: 'user', content: 'ordinary fast body' }] });
+});
+
+test('schema-bound JSON still rejects truncation, malformed replies and refusal without repair or new requests', async t => {
+  const llm = loadLLM({ LLM_PROVIDERS: 'claude', CLAUDE_API_KEY: 'test-schema-refusal' });
+  const schema = { type: 'object', properties: { ok: { type: 'boolean' } }, required: ['ok'], additionalProperties: false };
+  const replies = [
+    { text: '{"ok":true}', stop_reason: 'max_tokens', error: /cut off/ },
+    { text: '{"ok":', stop_reason: 'end_turn', error: /JSON|Expected|end/i },
+    { text: 'I cannot provide that review.', stop_reason: 'refusal', error: /end_turn/i },
+  ];
+  let requests = 0;
+  t.mock.method(globalThis, 'fetch', async () => {
+    const reply = replies[requests++];
+    assert.ok(reply, 'invalid model output must not trigger a repair request');
+    return new Response(JSON.stringify({ id: 'fixture', type: 'message', role: 'assistant', model: 'claude-sonnet-4-6', content: [{ type: 'text', text: reply.text }], stop_reason: reply.stop_reason, stop_sequence: null, usage: { input_tokens: 1, output_tokens: 1 } }), { status: 200, headers: { 'content-type': 'application/json' } });
+  });
+  for (const reply of replies) await assert.rejects(llm.claudeJSON('review', 'body', 8192, { schema }), reply.error);
+  assert.equal(requests, 3);
+});
+
+test('schema-bound verdicts require end_turn even when a refused or incomplete reply contains valid passing JSON', async t => {
+  const llm = loadLLM({ LLM_PROVIDERS: 'claude', CLAUDE_API_KEY: 'test-schema-stop' });
+  const schema = { type: 'object', properties: { pass: { type: 'boolean' } }, required: ['pass'], additionalProperties: false };
+  const reasons = ['refusal', 'pause_turn', 'stop_sequence', 'tool_use', undefined];
+  let requests = 0;
+  t.mock.method(globalThis, 'fetch', async () => {
+    const stop_reason = reasons[requests++ % reasons.length];
+    return new Response(JSON.stringify({ id: 'fixture', type: 'message', role: 'assistant', model: 'claude-sonnet-4-6', content: [{ type: 'text', text: '{"pass":true}' }], stop_reason, stop_sequence: null, usage: { input_tokens: 1, output_tokens: 1 } }), { status: 200, headers: { 'content-type': 'application/json' } });
+  });
+  for (const reason of reasons) await assert.rejects(llm.claudeJSON('review', 'body', 8192, { schema }), /end_turn|completion|stop reason/i, `refuse stop reason ${reason}`);
+  assert.equal(requests, reasons.length, 'invalid completions do not trigger retry or repair requests');
+  assert.deepEqual(await llm.claudeJSON('legacy', 'body', 512), { pass: true }, 'ordinary JSON callers retain their previous stop-reason handling');
+  assert.equal(requests, reasons.length + 1);
+});

@@ -2,6 +2,10 @@
 
 The daily blog pipeline is active. Software guides have a separate pipeline with a shared researcher, run twice a week (Monday and Thursday) by the cloud routine `icc-guides`; see `GUIDE-ROUTINE.md`. A weekly topic scout (`icc-scout`, Sundays) keeps both topic queues stocked; see `SCOUT-ROUTINE.md`. Other agents (SEO, security, ops, growth, web and legacy mega-articles) remain switched off.
 
+Codex Cloud migration is implemented locally but has not replaced these Claude routines. See [CLOUD-SETUP.md](CLOUD-SETUP.md) for session images, Claude review, environment settings and release gates.
+
+The Codex Cloud migration is not cut over. See [CLOUD-SETUP.md](CLOUD-SETUP.md) for the Terra writer, Claude reviewer, session-image workflow and release blockers.
+
 ## Setup
 
 ```bash
