@@ -1,0 +1,262 @@
+{
+  "inputHash": "54d37674785e7cd90484518a6a02d5b43a4e81131d4bfa88e6da2ba7fd743d44",
+  "reviewContextHash": "3720736fb2b5dde047a27a170dbcc1a850002e4f590ee1b7bbe1ca3fde7a4cc6",
+  "reviewedAt": "2026-11-20T14:45:43.188Z",
+  "screening": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "The guide claims the ICC Safety page describes 'severity set from the level of harm' and 'an anonymous QR code on the floor that opens an anonymous report form with no login needed' - these are stated as published descriptions that the guide treats as unverified claims. However, the primary source document (ROOT-BROWSER-VERIFIED excerpt) only confirms 'severity by harm, an anonymous QR no-login form' exist as vendor descriptions, with explicit qualifications that 'Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed.' The guide repeatedly asserts these as established facts ('The page describes...' 'The page states...') rather than consistently framing them as unconfirmed vendor claims requiring demonstration.",
+      "The guide states 'The page says investigations otherwise start from a blank page' (in investigation chapter) and 'investigations start from a blank page' (in introduction) - these are presented as ICC's description of a problem, but the source material does not confirm ICC made this exact claim. The research states ICC describes 'the problem as near-misses going unreported because reporting needs a form and a supervisor, investigations starting from a blank page, and committees not seeing patterns early' but this is a vendor problem description interpretation, not a direct quote verified against the primary source.",
+      "The guide repeatedly describes 'The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) describes...' or 'The ICC page says...' without consistently distinguishing between: (a) explicitly stated facts on the page, (b) reasonable inferences from the page, (c) unverified research characterizations of what the page describes. Example: 'The page describes setup in four steps' is stated as fact, but the source material says the page has 'numbered configuration sections 01–04' - the guide infers a 'four step setup' narrative that may not appear verbatim.",
+      "The guide states in the corrective-actions chapter: 'The [ICC Safety module page](https://isocertificationconsultants.ca/solutions/safety/) says that incidents that need corrective action are carried into the Improvements module.' This claim depends on ICC actually using the phrase 'that need corrective action' and 'carried into the Improvements module.' The research shows 'incidents that need corrective action are carried into the Improvements module' as a supported claim, but the guide does not verify the exact wording against the primary source.",
+      "In the committee-visibility chapter, the guide states: 'The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) says a safety committee may not see patterns early.' The source material describes this as ICC's problem description ('committees not seeing patterns early'), not as a direct statement 'The page says...' The guide attributes a problem characterization to ICC as though it were an explicit claim about committee visibility.",
+      "The guide includes substantial repetition of the same illustrative examples across multiple chapters (e.g., 'An unnamed Canadian manufacturer' format, guard/fastener scenarios, anonymity scenarios) and repeatedly reuses the same research sources and their qualifications without varying the presentation. The phrasing 'The scenario is hypothetical and not a customer result' appears identically in multiple chapters, suggesting template reuse rather than independent chapter writing.",
+      "The guide's FAQ section answers 'Does software guarantee ISO 45001 compliance?' by stating the ICC page 'maps its safety module to ISO 45001:2018 clauses 10.2, 5.4, and 6.1.2, but a mapping points to possible evidence and does not guarantee that a clause is met.' The research confirms ICC makes this mapping claim, but the guide does not verify in the FAQ itself that it has tested or confirmed this mapping language against the actual ICC page in the demonstration section - it relies on earlier chapters' characterizations.",
+      "The guide chapter on audit-evidence-migration states: 'The [ICC Safety page](https://isocertificationconsultants.ca/solutions/safety/) describes an auditor view. According to the page, it shows the incident and near-miss log with severity and status, floor reports including anonymous ones, and the corrective actions linked to each incident.' The source material supports 'auditor view shows corrective actions linked to each incident' but the parenthetical 'According to the page' suggests direct page language that is not verified as verbatim or confirmed as the page's own phrasing in the primary source.",
+      "The guide repeatedly states 'The research reviewed for this guide does not [describe X]' as a basis for treating topics as open questions - e.g., 'pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting' are listed as not stated on the page. However, the guide does not verify these absences against the full text of the primary source; it relies on the research summary. Where the research explicitly states 'The page does not state pricing, notifications or alerts, injury classification beyond severity, regulatory or authority reporting, e-signatures or PIN access; those are evaluation questions,' the guide treats this as confirmed fact, but does not independently verify the page does not contain such language.",
+      "The Ontario health and safety committee guide is cited extensively in multiple chapters with statements like 'The Government of Ontario's [guide to health and safety committees and representatives](https://www.ontario.ca/page/guide-health-and-safety-committees-and-representatives) describes joint health and safety committees...' - but the research includes a note 'Automated HTTP retrieval remains blocked with 403; no successful automated fetch is claimed.' This means the guide cites detailed Ontario rules (21-day response time, three-month meeting intervals, monthly inspections) without confirming them against the actual primary source document in this evaluation, relying instead on the research source's summary.",
+      "The guide includes a final section 'Prepare a focused ICC demonstration' that states 'When the plant is ready to see how its own reports, ratings, and actions would work in practice, [book a demo](/contact/)' - this is a call-to-action that positions the guide as promotional material for ICC while maintaining the frame that every claim is an 'evaluation question.' The guide's structure treats ICC's claims as research inputs to be tested, but the conclusion invites booking a demo with ICC specifically, blurring the boundary between neutral guidance and vendor promotion."
+    ]
+  },
+  "adjudication": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "dimensionReasons": {
+      "claims": "All material ICC capability claims in the guide are explicitly and consistently framed as published vendor descriptions requiring demonstration confirmation. The guide uses language such as 'The page describes...', 'That is a published description', 'Confirm each in a demonstration', and 'Treat each of those descriptions as a question for a demonstration, not as a verified promise.' The source records (source:0:claim:0 through source:0:claim:10) directly support each attributed ICC capability as browser-verified vendor descriptions. The source records explicitly note that 'availability and configuration must be confirmed in a demonstration and no capability is advertised as verified.' The guide correctly characterizes absences (pricing, notifications, regulatory reporting) as open questions, consistent with source:0:claim:9. The Ontario guide claims are attributed with jurisdiction qualifications throughout. No material unsupported factual assertion was found that would constitute a failed claim.",
+      "consistency": "The guide is internally consistent across all nine chapters. It applies the same framing conventions throughout: ICC page descriptions are always labeled as published vendor descriptions requiring demonstration; Ontario rules are always qualified as Ontario-specific with instructions to confirm applicable law; illustrative examples are always labeled hypothetical; and the AI-output principle is consistently applied. No chapter contradicts another on any material factual point. The guide's treatment of setup steps as 'numbered descriptions that do not establish a mandatory sequence or guaranteed implementation workflow' is consistent with source:0:claim:6 and source:0:claim:10. The ISO 45001 mapping disclaimer is applied consistently wherever mappings appear.",
+      "repetition": "The chapters cover distinct workflow topics: mapping, evaluation, intake, severity, investigation, corrective actions, committee visibility, audit/migration, and ongoing operation. Short recurring jurisdictional cautions (Ontario rules apply only where stated, confirm applicable law), the AI-output principle, and the demonstration-required framing are necessary cross-chapter factual qualifications, not substantially copied paragraphs. The illustrative examples differ in scenario and subject matter across chapters (guard fastener, forklift near-miss, anonymous report, rating dispute, pilot import, committee recommendation, demonstration). The closing label 'The scenario is invented and shows no real result' or similar is a required disclaimer recurrence, not a substantially copied paragraph. No chapter contains passages that are substantially copied from another chapter."
+    },
+    "additionalFindings": [
+      {
+        "verdict": "clear",
+        "reason": "Finding 0: The guide attributes 'severity set from the level of harm' and the anonymous QR no-login form consistently as published descriptions, not verified capabilities. Source:0:claim:0 confirms the page 'describes incident and near-miss reporting in which severity is set from the level of harm' and source:0:claim:1 confirms the QR anonymous form description. Source:0:claim:10 (ROOT-BROWSER-VERIFIED) confirms both exist as vendor descriptions. The guide explicitly cautions 'These are published descriptions' (page:0:paragraph:4) and 'Exact anonymous-form field configuration, selectable severity levels and handoff mechanics remain unconfirmed' is consistent with the guide's repeated 'confirm in a demonstration' framing. No overclaiming is present.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:1",
+          "source:0:claim:10",
+          "page:0:paragraph:4"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 1: The 'investigations start from a blank page' characterization is supported by source:0:claim:8, which records it as part of the page's vendor problem description. The guide in page:5:paragraph:2 explicitly labels it 'the vendor's description of a pain point, not as measured data,' and in page:1:paragraph:3 instructs the reader to 'Read this as the vendor's description of a possible problem, not as measured evidence.' The framing is appropriately conditional throughout.",
+        "evidenceIds": [
+          "source:0:claim:8",
+          "page:5:paragraph:2",
+          "page:1:paragraph:3"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 2: The 'four setup steps' characterization is supported by source:0:claim:6, which records the page as describing 'setup in four steps: map processes with named owners, configure modules (fields, checklists, terminology, routing), onboard standards, and deploy to the floor.' The guide in page:2:paragraph:33 and page:8:paragraph:29 adds explicit qualifications: 'These numbered descriptions do not establish a mandatory sequence or guaranteed implementation workflow.' This is not an overclaim; it is an attributed vendor description with an appropriate caveat.",
+        "evidenceIds": [
+          "source:0:claim:6",
+          "page:2:paragraph:33",
+          "page:8:paragraph:29"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 3: The corrective-action handoff claim is directly supported by source:0:claim:3, which records 'incidents that need corrective action are carried into the Improvements module' as a page description. The guide in page:6:paragraph:3 attributes this to the page and immediately instructs the reader to 'ask the vendor to show what that decision looks like' and to 'Test one report needing action and one that does not.' The claim is attributed and conditional.",
+        "evidenceIds": [
+          "source:0:claim:3",
+          "page:6:paragraph:3"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 4: The 'committee may not see patterns early' characterization is supported by source:0:claim:8, which records it as part of the ICC page's problem description. The guide in page:7:paragraph:9 attributes it to the ICC Safety page as a vendor description of a problem. The word 'says' in this context is consistent with the guide's use of 'says' throughout to attribute vendor-page statements rather than to assert verified facts.",
+        "evidenceIds": [
+          "source:0:claim:8",
+          "page:7:paragraph:9"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 5: Recurring example labels ('An unnamed Canadian manufacturer', 'The scenario is invented') are required disclaimer language applied to each distinct example, not substantially copied paragraphs. The examples across chapters differ in content: guard fastener (chapter 2), forklift near-miss rating (chapter 4), anonymous report (chapter 3), rating dispute (chapter 4), investigation assignment (chapter 5), corrective action (chapter 6), committee recommendation (chapter 7), rehearsal gap (chapter 8), import pilot (chapter 8), and demonstration session (chapter 9). The recurring disclaimer label is a necessary short factual caution that the rules explicitly permit to recur.",
+        "evidenceIds": [
+          "page:1:paragraph:8",
+          "page:4:paragraph:9",
+          "page:5:paragraph:8",
+          "page:6:paragraph:10",
+          "page:7:paragraph:7",
+          "page:8:paragraph:8",
+          "page:9:paragraph:11",
+          "page:9:paragraph:42"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 6: The ISO 45001 clause mapping claim in the FAQ is supported by source:0:claim:5, which records the mapping to clauses 10.2, 5.4, and 6.1.2 and explicitly states 'a mapping is not a statement that software alone satisfies a clause.' The guide in page:9:paragraph:31 applies that caveat correctly and attributes the mapping to the ICC page. No separate verification of the mapping language is required in the FAQ because the FAQ references earlier chapters and the original source.",
+        "evidenceIds": [
+          "source:0:claim:5",
+          "page:9:paragraph:31",
+          "page:8:paragraph:11"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 7: The auditor view description is supported by source:0:claim:4, which records the page as describing 'an auditor view with the incident and near-miss log showing severity and status, floor reports including anonymous ones, and linked corrective actions.' The guide in page:8:paragraph:2 attributes this to the page as 'a published description' and instructs the reader to 'Ask the vendor to show the view with the plant's own sample records.' The phrasing 'According to the page' is a standard attribution marker, not a claim of verbatim or verified phrasing.",
+        "evidenceIds": [
+          "source:0:claim:4",
+          "page:8:paragraph:2"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 8: The guide's treatment of absences (pricing, notifications, regulatory reporting) as open questions is directly supported by source:0:claim:9, which explicitly lists those items as not stated on the page and as evaluation questions. The guide applies this consistently throughout. The absence-verification approach is based on a browser-verified source record (source:0:claim:10), which is the appropriate evidentiary basis under the rules.",
+        "evidenceIds": [
+          "source:0:claim:9",
+          "source:0:claim:10",
+          "page:0:paragraph:6"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 9: The Ontario guide claims are drawn from source:1:claim:0, which records ROOT-BROWSER-VERIFIED direct reading of the Ontario page in Chrome on 2026-11-19. The 403 blocked automated HTTP retrieval does not disprove the separately recorded direct browser reading. The specific Ontario facts (21-day response, three-month meetings, monthly inspections, at-least-half worker members) are recorded in source:1:claim:1 through source:1:claim:4 as browser-verified. The rules distinguish inaccessible automated requests from separately recorded direct browser reading; the browser-verified provenance is sufficient. The guide qualifies every Ontario citation as Ontario-specific with instructions to confirm applicable law.",
+        "evidenceIds": [
+          "source:1:claim:0",
+          "source:1:claim:1",
+          "source:1:claim:2",
+          "source:1:claim:3",
+          "source:1:claim:4",
+          "source:1:claim:5",
+          "page:7:paragraph:11",
+          "page:7:paragraph:20"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 10: The 'book a demo' call-to-action at page:9:paragraph:43 is a standard vendor-guide element. The guide is explicitly written as an ICC implementation guide (the topic identifies it as such) and is transparently structured around ICC's published Safety module as the primary vendor example throughout. The guide does not conceal its vendor association; it explicitly names ICC in its title and treats ICC's page as the primary product reference throughout. The CTA does not constitute a misleading claim or an unsupported assertion; it is a disclosed commercial element of a vendor-produced guide.",
+        "evidenceIds": [
+          "page:9:paragraph:43",
+          "page:0:paragraph:4",
+          "page:0:paragraph:2"
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "clear",
+        "reason": "The severity and anonymous-QR claims are attributed as published vendor descriptions throughout the guide, with explicit instructions to confirm in a demonstration. Source records directly support both as browser-verified vendor descriptions. No overclaiming is present.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:1",
+          "source:0:claim:10",
+          "page:0:paragraph:4",
+          "page:1:paragraph:34",
+          "page:1:paragraph:35"
+        ]
+      },
+      {
+        "index": 1,
+        "verdict": "clear",
+        "reason": "The 'blank page' investigation characterization is sourced to source:0:claim:8 and is explicitly framed in the guide as a vendor problem description, not measured data. The guide instructs readers to treat it as such and to test it against their own experience.",
+        "evidenceIds": [
+          "source:0:claim:8",
+          "page:5:paragraph:2",
+          "page:1:paragraph:3"
+        ]
+      },
+      {
+        "index": 2,
+        "verdict": "clear",
+        "reason": "The four-step setup characterization is supported by source:0:claim:6 and source:0:claim:10. The guide adds explicit caveats that the numbered descriptions do not establish a mandatory sequence or verified workflow, satisfying the requirement for honest boundaries.",
+        "evidenceIds": [
+          "source:0:claim:6",
+          "source:0:claim:10",
+          "page:2:paragraph:33",
+          "page:8:paragraph:29"
+        ]
+      },
+      {
+        "index": 3,
+        "verdict": "clear",
+        "reason": "The corrective-action handoff claim is directly supported by source:0:claim:3 as a browser-verified vendor description. The guide attributes it to the page and directs readers to test it in a demonstration with specific questions about the mechanics.",
+        "evidenceIds": [
+          "source:0:claim:3",
+          "page:6:paragraph:3"
+        ]
+      },
+      {
+        "index": 4,
+        "verdict": "clear",
+        "reason": "The 'committee may not see patterns early' attribution is supported by source:0:claim:8 as part of the ICC page's problem description. The guide uses 'says' as a standard attribution marker consistent with its treatment of all ICC page descriptions throughout.",
+        "evidenceIds": [
+          "source:0:claim:8",
+          "page:7:paragraph:9"
+        ]
+      },
+      {
+        "index": 5,
+        "verdict": "clear",
+        "reason": "Recurring example labels and disclaimer phrases are required short factual cautions that the rules explicitly permit to recur across chapters. The underlying examples are substantively distinct across chapters. No substantially copied paragraphs are present.",
+        "evidenceIds": [
+          "page:1:paragraph:8",
+          "page:4:paragraph:9",
+          "page:5:paragraph:8",
+          "page:6:paragraph:10",
+          "page:9:paragraph:11",
+          "page:9:paragraph:42"
+        ]
+      },
+      {
+        "index": 6,
+        "verdict": "clear",
+        "reason": "The ISO 45001 clause mapping in the FAQ is supported by source:0:claim:5 and the guide applies the correct caveat that a mapping does not guarantee clause satisfaction. No independent re-verification is required in the FAQ because it references and is consistent with earlier chapters and the source record.",
+        "evidenceIds": [
+          "source:0:claim:5",
+          "page:9:paragraph:31",
+          "page:8:paragraph:11"
+        ]
+      },
+      {
+        "index": 7,
+        "verdict": "clear",
+        "reason": "The auditor view description is supported by source:0:claim:4 as a browser-verified vendor description. The guide labels it a published description and instructs demonstration confirmation. The attribution phrasing is consistent with the guide's standard approach.",
+        "evidenceIds": [
+          "source:0:claim:4",
+          "page:8:paragraph:2"
+        ]
+      },
+      {
+        "index": 8,
+        "verdict": "clear",
+        "reason": "Absence claims (pricing, notifications, regulatory reporting not stated on page) are directly supported by source:0:claim:9 and source:0:claim:10 (browser-verified). The guide treats them as open questions throughout, which is the correct handling.",
+        "evidenceIds": [
+          "source:0:claim:9",
+          "source:0:claim:10",
+          "page:0:paragraph:6"
+        ]
+      },
+      {
+        "index": 9,
+        "verdict": "clear",
+        "reason": "Ontario guide citations rely on source:1:claim:0 through source:1:claim:5, which record ROOT-BROWSER-VERIFIED direct reading in Chrome. The 403 automated-retrieval block does not disprove the browser-verified record. All Ontario claims are qualified as Ontario-specific with explicit instructions to confirm applicable law at each site.",
+        "evidenceIds": [
+          "source:1:claim:0",
+          "source:1:claim:1",
+          "source:1:claim:2",
+          "source:1:claim:3",
+          "source:1:claim:4",
+          "source:1:claim:5",
+          "page:7:paragraph:11",
+          "page:7:paragraph:20"
+        ]
+      },
+      {
+        "index": 10,
+        "verdict": "clear",
+        "reason": "The 'book a demo' CTA is a disclosed commercial element of a vendor-produced implementation guide. The guide's vendor association is transparent throughout. The CTA does not constitute a misleading claim or an unsupported factual assertion; it is consistent with the guide's explicitly stated purpose.",
+        "evidenceIds": [
+          "page:9:paragraph:43",
+          "page:0:paragraph:4"
+        ]
+      }
+    ]
+  }
+}

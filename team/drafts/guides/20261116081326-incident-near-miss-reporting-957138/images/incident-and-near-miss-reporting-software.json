@@ -1,0 +1,20 @@
+{
+  "id": "incident-and-near-miss-reporting-software",
+  "width": 1200,
+  "height": 675,
+  "sha256": "40d8599e3554bbd58d93ebde57408f3978b3dd6405bbc9e01543c977c6e49f83",
+  "source": "codex",
+  "sourceId": "9c419a9641305bae68a5334f8a371418a1424a892095d801a288497d897ecd69",
+  "inputHash": "9c419a9641305bae68a5334f8a371418a1424a892095d801a288497d897ecd69",
+  "alt": "A manufacturing safety coordinator reviewing a floor report beside a production cell; authentic industrial setting, no text or logos",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "7da34fc2912005869d8597aaf5e4422fda3480d3042aeae888da29eef4e2ac14",
+  "request": {
+    "id": "incident-and-near-miss-reporting-software",
+    "scene": "A manufacturing safety coordinator reviewing a floor report beside a production cell; authentic industrial setting, no text or logos",
+    "kind": "hero",
+    "alt": "A manufacturing safety coordinator reviewing a floor report beside a production cell; authentic industrial setting, no text or logos",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: A manufacturing safety coordinator reviewing a floor report beside a production cell; authentic industrial setting, no text or logos.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-20T14:49:27.259Z"
+}
