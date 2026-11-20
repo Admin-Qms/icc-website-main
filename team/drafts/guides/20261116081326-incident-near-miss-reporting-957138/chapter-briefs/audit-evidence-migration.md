@@ -1004,7 +1004,7 @@ Do not claim software alone satisfies a clause.
     },
     {
       "slug": "ongoing-operation",
-      "title": "Review performance, answer common questions and prepare a demonstration",
+      "title": "Run and improve incident and near-miss reporting software",
       "description": "Operating incident and near-miss reporting software over time: review the workflow, answer common questions without overclaiming and prepare a demonstration.",
       "targetWords": 2000,
       "chapterKeyword": "incident and near-miss reporting software ongoing review",
