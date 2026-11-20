@@ -1,4 +1,5 @@
-const { claudeCallFast: claudeCall } = require("../shared/claude");
+const { claudeCallFast: claudeCall, claudeJSONFast } = require("../shared/claude");
+const { CLOUD_ROUTINE } = require('../shared/config');
 const { log } = require("../shared/logger");
 const crypto = require('node:crypto');
 const reviewFailures = new WeakMap();
@@ -19,10 +20,33 @@ async function checkOriginality(article, existingArticles) {
     if (message === 'No JSON in plagiarism check response') category = 'missing-json';
     else if (message === 'Invalid or contradictory originality review verdict') category = 'invalid-verdict';
     else if (trace.stage === 'parse' && error instanceof SyntaxError) category = 'invalid-json';
-    else if (/^Model reply was cut off at the \d+-token limit$/.test(message)) category = 'truncated';
+    else if (/^Model(?: JSON)? reply was cut off at the \d+-token limit$/.test(message)) category = 'truncated';
+    else if (message === 'Schema-bound JSON reply requires end_turn completion') category = 'incomplete-response';
     else if (message.startsWith('Every text provider failed — ')) category = 'provider-failure';
     if (error && typeof error === 'object') reviewFailures.set(error, { ...trace, category });
     throw error;
+  }
+}
+
+const ORIGINALITY_SCHEMA = {
+  type: 'object', additionalProperties: false,
+  required: ['score', 'pass', 'flaggedSentences', 'selfPlagiarismFlags', 'aiClicheCount', 'genericParagraphCount', 'overallAssessment', 'rewriteInstructions'],
+  properties: {
+    score: { type: 'number' }, pass: { type: 'boolean' },
+    flaggedSentences: { type: 'array', items: { type: 'object', additionalProperties: false,
+      required: ['text', 'reason', 'suggestion'], properties: { text: { type: 'string' }, reason: { type: 'string' }, suggestion: { type: 'string' } } } },
+    selfPlagiarismFlags: { type: 'array', items: { type: 'object', additionalProperties: false,
+      required: ['text', 'similarTo', 'similarity'], properties: { text: { type: 'string' }, similarTo: { type: 'string' }, similarity: { type: 'number' } } } },
+    aiClicheCount: { type: 'integer' }, genericParagraphCount: { type: 'integer' },
+    overallAssessment: { type: 'string' }, rewriteInstructions: { anyOf: [{ type: 'string' }, { type: 'null' }] },
+  },
+};
+
+function observeResponse(trace, text) {
+  trace.stage = 'parse';
+  if (typeof text === 'string') {
+    trace.responseBytes = Buffer.byteLength(text);
+    trace.responseHash = crypto.createHash('sha256').update(text).digest('hex');
   }
 }
 
@@ -117,7 +141,7 @@ ${s.costs.length > 0 ? `Costs: ${s.costs.map((c) => `"${c}"`).join("; ")}` : ""}
   }
 
   trace.stage = 'request';
-  const raw = await claudeCall(
+  const response = await (CLOUD_ROUTINE ? claudeJSONFast : claudeCall)(
     SYSTEM_PROMPT,
     `Analyze this article for originality and plagiarism risk:
 
@@ -130,20 +154,20 @@ ${article.body}
 ${selfPlagiarismContext}
 
 Score this article 0–100 for originality. Pass threshold is 85. Check for self-plagiarism against the existing articles above. Return ONLY valid JSON.`,
-    2048
+    CLOUD_ROUTINE ? 4096 : 2048,
+    CLOUD_ROUTINE ? { schema: ORIGINALITY_SCHEMA, onResponse: ({ text }) => observeResponse(trace, text) } : undefined
   );
 
-  trace.stage = 'parse';
-  if (typeof raw === 'string') {
-    trace.responseBytes = Buffer.byteLength(raw);
-    trace.responseHash = crypto.createHash('sha256').update(raw).digest('hex');
+  let result;
+  if (CLOUD_ROUTINE) result = response;
+  else {
+    observeResponse(trace, response);
+    const cleaned = response.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
+    const start = cleaned.indexOf("{");
+    const end = cleaned.lastIndexOf("}");
+    if (start === -1 || end === -1) throw new Error("No JSON in plagiarism check response");
+    result = JSON.parse(cleaned.slice(start, end + 1));
   }
-  const cleaned = raw.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
-  const start = cleaned.indexOf("{");
-  const end = cleaned.lastIndexOf("}");
-  if (start === -1 || end === -1) throw new Error("No JSON in plagiarism check response");
-
-  const result = JSON.parse(cleaned.slice(start, end + 1));
 
   trace.stage = 'verdict';
   const valid = result && typeof result.pass === 'boolean' && Number.isFinite(result.score) && result.score >= 0 && result.score <= 100

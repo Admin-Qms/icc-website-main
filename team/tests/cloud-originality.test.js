@@ -7,7 +7,7 @@ const llm = require('../agents/shared/claude');
 const checker = require('../agents/content/plagiarismChecker');
 for (const verdict of [{ pass: 'false', score: 99 }, { pass: true }, { pass: true, score: 10 }, { pass: true, score: 99, flaggedSentences: 'unparsed' }]) {
   test(`originality rejects incomplete or contradictory verdict ${JSON.stringify(verdict)}`, async () => {
-    llm._providers.claude = async () => ({ text: JSON.stringify(verdict), truncated: false });
+    llm._providers.claude = async () => ({ text: JSON.stringify(verdict), truncated: false, stopReason: 'end_turn' });
     await assert.rejects(checker.checkOriginality({ title: 'Fixture', primaryKeyword: 'fixture', wordCount: 10, body: 'fixture prose' }, []), /verdict|review|originality/i);
   });
 }
@@ -28,9 +28,9 @@ test('normal Cloud text gate retains safe failure details without publishing', a
     body: 'Public draft prose.', slotDate: require('../agents/shared/contentStore').todayLocal(),
   }));
   const pipeline = require('../agents/content/contentManager');
-  for (const [reply, category] of [['not JSON', 'missing-json'], ['{"pass":', 'missing-json'],
+  for (const [reply, category] of [['not JSON', 'invalid-json'], ['{"pass":', 'invalid-json'],
     ['{"pass": nope}', 'invalid-json'], ['{"pass":true,"score":10}', 'invalid-verdict']]) {
-    llm._providers.claude = async () => ({ text: reply, truncated: false });
+    llm._providers.claude = async () => ({ text: reply, truncated: false, stopReason: 'end_turn' });
     const result = await pipeline.publishDaily({ fixture, dryRun: true, textOnly: true });
     assert.equal(result.success, false);
     assert.equal(result.reason, 'Required originality review could not run');
@@ -49,6 +49,19 @@ test('normal Cloud text gate retains safe failure details without publishing', a
   assert.equal(truncated.reviewFailure?.category, 'truncated');
   assert.deepEqual(fs.readdirSync(config.CONTENT_DIR), []);
   assert.deepEqual(fs.readdirSync(config.BLOG_IMAGE_DIR), []);
+});
+
+test('Cloud originality requests schema-constrained output from the same fast reviewer', async () => {
+  const verdict = { pass: true, score: 92, flaggedSentences: [], selfPlagiarismFlags: [],
+    aiClicheCount: 0, genericParagraphCount: 0, overallAssessment: 'Original public draft.', rewriteInstructions: null };
+  llm._providers.claude = async (tier, _system, _user, budget, options) => ({
+    text: tier === 'fast' && budget >= 4096 && options?.schema?.additionalProperties === false
+      && options.schema.required.includes('selfPlagiarismFlags') ? JSON.stringify(verdict) : '{invalid JSON}',
+    truncated: false, stopReason: 'end_turn',
+  });
+  assert.deepEqual(await checker.checkOriginality({ title: 'Fixture', body: 'Public draft.', wordCount: 2 }, []), verdict);
+  llm._providers.claude = async () => ({ text: JSON.stringify(verdict), truncated: false, stopReason: 'refusal' });
+  await assert.rejects(checker.checkOriginality({ title: 'Fixture', body: 'Public draft.' }, []), /end_turn/);
 });
 
 test('diagnostic classification preserves an unexpected original exception', async () => {
