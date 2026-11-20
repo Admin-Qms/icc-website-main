@@ -47,8 +47,49 @@ test('normal Cloud text gate retains safe failure details without publishing', a
   llm._providers.claude = async () => ({ text: 'partial', truncated: true });
   const truncated = await pipeline.publishDaily({ fixture, dryRun: true, textOnly: true });
   assert.equal(truncated.reviewFailure?.category, 'truncated');
+  const failedReview = { score: 82, pass: false, flaggedSentences: [{ text: 'Public draft prose.', reason: 'Generic opening.', suggestion: 'Use a concrete decision.' }],
+    selfPlagiarismFlags: [], aiClicheCount: 0, genericParagraphCount: 1, overallAssessment: 'Needs a specific opening.', rewriteInstructions: 'Use a concrete decision.' };
+  llm._providers.claude = async () => ({ text: JSON.stringify(failedReview), truncated: false, stopReason: 'end_turn' });
+  const blocked = await pipeline.publishDaily({ fixture, dryRun: true, textOnly: true });
+  assert.equal(blocked.success, false);
+  assert.deepEqual(blocked.originalityReview, failedReview, 'failed normal verdict remains available without replacing its score');
   assert.deepEqual(fs.readdirSync(config.CONTENT_DIR), []);
   assert.deepEqual(fs.readdirSync(config.BLOG_IMAGE_DIR), []);
+});
+
+test('Cloud reviewer receives canonical house rules rather than conflicting legacy examples alone', async () => {
+  let system;
+  llm._providers.claude = async (_tier, prompt) => {
+    system = prompt;
+    return { text: JSON.stringify({ pass: true, score: 92, flaggedSentences: [], selfPlagiarismFlags: [], aiClicheCount: 0,
+      genericParagraphCount: 0, overallAssessment: 'Original.', rewriteInstructions: null }), truncated: false, stopReason: 'end_turn' };
+  };
+  await checker.checkOriginality({ title: 'Fixture', body: 'An original public paragraph.' }, []);
+  const rules = require('node:fs').readFileSync(require('node:path').join(__dirname, '../data/writing-rules.md'), 'utf8');
+  assert.ok(system.includes(rules), 'the actual request carries the maintained writing constraints');
+});
+
+test('Cloud rejects invented article witnesses and unknown comparison titles even with a passing score', async () => {
+  const verdict = { pass: true, score: 99, flaggedSentences: [], selfPlagiarismFlags: [], aiClicheCount: 0,
+    genericParagraphCount: 0, overallAssessment: 'Original.', rewriteInstructions: null };
+  for (const changed of [
+    { flaggedSentences: [{ text: 'it is worth noting', reason: 'Cliche.', suggestion: 'Remove.' }] },
+    { selfPlagiarismFlags: [{ text: 'An original public paragraph.', similarTo: 'Invented comparison', similarity: 0.9 }] },
+  ]) {
+    llm._providers.claude = async () => ({ text: JSON.stringify({ ...verdict, ...changed }), truncated: false, stopReason: 'end_turn' });
+    await assert.rejects(checker.checkOriginality({ title: 'Fixture', body: 'An original public paragraph.' }, [{ title: 'Real comparison', body: 'Different prose.' }]), /evidence/i);
+  }
+});
+
+test('real normalized evidence remains a failed originality verdict rather than being cleared', async () => {
+  const quote = "A shipping supervisor checks the shift's record.";
+  const verdict = { pass: false, score: 82, flaggedSentences: [{ text: quote, reason: 'Repeated opening.', suggestion: 'Use a different opening.' }],
+    selfPlagiarismFlags: [{ text: quote, similarTo: 'Real comparison', similarity: 0.95 }], aiClicheCount: 0,
+    genericParagraphCount: 1, overallAssessment: 'Repeated opening.', rewriteInstructions: 'Use a different opening.' };
+  llm._providers.claude = async () => ({ text: JSON.stringify(verdict), truncated: false, stopReason: 'end_turn' });
+  const actual = await checker.checkOriginality({ title: 'Fixture', body: 'A **shipping supervisor** checks\n the shift’s record.' },
+    [{ title: 'Real comparison', body: quote }]);
+  assert.deepEqual(actual, verdict);
 });
 
 test('Cloud originality requests schema-constrained output from the same fast reviewer', async () => {
