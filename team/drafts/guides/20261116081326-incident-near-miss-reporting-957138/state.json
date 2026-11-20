@@ -93,11 +93,11 @@
       "checkpointedAt": "2026-11-20T14:30:01.337Z"
     },
     "ongoing-operation": {
-      "hash": "dd5cd994909eefb3c70c2fa6431a9f46143fec8f9d46967da75121afa6bea2cf",
+      "hash": "f4c375e541ade3ae98702c8f7b9423bde889e48ea34bff54dcaacb0e59538655",
       "wordCount": 2021,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-20T14:31:55.495Z"
+      "checkpointedAt": "2026-11-20T14:34:42.782Z"
     },
     "incident-and-near-miss-reporting-software": {
       "hash": "6d3734ef585f0d73d462cd38415145a29e28a26462ea85bcf9e2383dcb50d95c",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-16T08:13:26.503Z",
-  "updatedAt": "2026-11-20T14:31:55.497Z",
+  "updatedAt": "2026-11-20T14:34:42.784Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "incident-near-miss-reporting",
