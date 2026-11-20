@@ -41,6 +41,30 @@
     {
       "term": "Written comparison",
       "definition": "A structured document recording vendor answers on setup effort, cost, and support responsibilities, used as the evaluation record for the final subsection."
+    },
+    {
+      "term": "Placement list",
+      "definition": "A record of chosen QR code or access-point locations on the floor, including the person responsible for each and the check schedule."
+    },
+    {
+      "term": "Review entry",
+      "definition": "The record created when a reviewer first reads a new report, showing who reviewed it, when, and what decision was made."
+    },
+    {
+      "term": "Reporter fields",
+      "definition": "Fields completed by the floor reporter at the point of work, covering description, who was affected, location, time, injury or damage indicator, and optional photo."
+    },
+    {
+      "term": "Reviewer fields",
+      "definition": "Fields completed by the first reviewer when reading a new report, covering category and hand-off to the severity process."
+    },
+    {
+      "term": "Investigator fields",
+      "definition": "Fields completed later in the process covering causes, evidence, and conclusions."
+    },
+    {
+      "term": "Report form specification",
+      "definition": "The record of the final form design stating field name, who completes it, whether it is required, and what values it accepts."
     }
   ],
   "roles": [
@@ -62,7 +86,10 @@
     "IT and safety lead",
     "Floor supervisor",
     "Administrator",
-    "Decision owner"
+    "Decision owner",
+    "Safety lead",
+    "Operations supervisor",
+    "Reviewer"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -75,7 +102,11 @@
     "Shortlist with reasons",
     "Scored demonstration sheet",
     "Permission matrix",
-    "Written comparison"
+    "Written comparison",
+    "Report form specification",
+    "Placement list",
+    "Policy and routing rule",
+    "Review entry"
   ],
   "example": {
     "label": "Illustrative example",
@@ -109,6 +140,18 @@
         "Decide whether each decision is captured and attributable",
         "Decide access rules",
         "Decide whether setup effort and support fit"
+      ]
+    },
+    {
+      "slug": "reporting-intake",
+      "title": "Design reporting intake for incident and near-miss reporting software",
+      "summary": "All checks pass. The two changed paragraphs are accurate and well-scoped: the first correctly frames ICC Safety field configuration as a published description requiring demonstration confirmation and notes the anonymous-form field configurability is unconfirmed; the second gives clear procedural guidance on misuse without introducing unsupported claims. No previous findings were raised, so none remain unresolved. All factual claims about ICC Safety capabilities are hedged as published descriptions. The Ontario JHSC guide is cited with an appropriate caution about site-specific obligations. Workflow elements (role, input, decision, record, exception) are present across all four subsections. The illustrative example is labeled and uses an unnamed Canadian manufacturer. No FAQ section appears, consistent with the plan assigning none. Links use only the two supplied source URLs plus allowed internal site paths. No scope boundary violations, readability problems, or repetition were detected.",
+      "bodyHash": "28230981305009573002903ee675cce3eedaf963af7bbb738c52f18fbbc03da5",
+      "decisions": [
+        "Decide required versus optional fields",
+        "Decide when anonymous reporting is accepted and who reads anonymous reports first",
+        "Decide placement of access points",
+        "Decide whether to rate, investigate, or close a new report"
       ]
     }
   ],
