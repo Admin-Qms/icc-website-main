@@ -1,8 +1,8 @@
 # ICC guide routine
 
-Status: created as the Claude Code cloud routine `icc-guides` (2026-10-15, `trig_01QCftVc3PfJZmDPjnr6q4MP`), Monday and Thursday 08:00 UTC (4:00 AM Toronto in summer, 3:00 AM in winter), same cloud environment and tools as the blog routine, no MCP connectors. Enabled on 2026-10-15 once the cloud commands reached `main`; manage it at https://claude.ai/code/routines. Target: two **complete guides** per Toronto ISO week, using the Monday and Thursday production slots. Daily blogs retain their separate cadence. The routine's prompt is the block at the end of this file; the standing approval that lets it push a gate-passing guide to `main` is in the root `AGENTS.md`.
+Status: ICC Guides is active on Codex Cloud as of 2026-11-20, Monday and Thursday 08:00 UTC. The previous Claude trigger `trig_01QCftVc3PfJZmDPjnr6q4MP` is paused and retained for rollback. Target: two complete guides per Toronto ISO week, using the Monday and Thursday production slots. The active prompt is below; scoped publication approval remains in `AGENTS.md`. See `CLOUD-SETUP.md` for current settings and release evidence.
 
-## Environment network access
+## Legacy Claude environment network access
 
 The routine's cloud environment must have **Network access: Custom** (open the routine, Edit, the environment's settings icon under the environment selector, Network access), keeping the default package-manager list and allowing every domain in `team/data/trusted-source-domains.json` both bare and as a wildcard, because a wildcard covers only subdomains and some sites serve from the bare domain (`iaf.nu` redirects every request to `https://iaf.nu/`): `iso.org`, `*.iso.org`, `iec.ch`, `*.iec.ch`, `nist.gov`, `*.nist.gov`, `canada.ca`, `*.canada.ca`, `gc.ca`, `*.gc.ca`, `ontario.ca`, `*.ontario.ca`, `ccohs.ca`, `*.ccohs.ca`, `scc-ccn.ca`, `*.scc-ccn.ca`, `iaf.nu`, `*.iaf.nu`, `iafcertsearch.org`, `*.iafcertsearch.org`, `iatfglobaloversight.org`, `*.iatfglobaloversight.org`, `aiag.org`, `*.aiag.org`, `vda-qmc.de`, `*.vda-qmc.de`, `isocertificationconsultants.ca`, `*.isocertificationconsultants.ca`. The scout's `apply` fetches PDFs as well as web pages and reads their text, so the `committee.iso.org` PDFs pass its topic check. On the default Trusted setting the research stage cannot reach those hosts (WebFetch returned `getaddrinfo ENOTFOUND` for `iso.org` and `isocertificationconsultants.ca` on the CAPA job, 2026-10-19) and the run stops with nothing written. Separately, `www.iso.org` answers automated fetches with HTTP 403 from anywhere; link-bank entries marked `search` are confirmed through search results, and the Auditing Practices Group PDFs on `committee.iso.org` fetch normally. Each seeded topic in `memory/guide-topic-queue.json` also needs approved sources in `team/data/external-link-bank.json` before its run; the research gate accepts only exact URLs from that file.
 
@@ -10,7 +10,7 @@ The routine's cloud environment must have **Network access: Custom** (open the r
 
 A cloud run starts from a fresh clone, and `team/drafts/guides/` and `team/reports/guides/` are gitignored. `scheduled-guide-run.sh` therefore keeps them on the orphan branch `guide-state`: `prepare` restores the branch into the checkout before `guide brief --scheduled`, and `save-state`, `review` and `publish` push the folders back (lock files are never saved; they belong to a sandbox that no longer exists). A run that ends mid-guide loses nothing that was saved, and the next run resumes the same job: in scheduled mode `guide brief` resumes any unpublished slot job, from any week and on any day, before it reserves a new slot. A reviewed-but-unsaved page is lost, which is why the prompt saves after every reviewed page.
 
-The branch holds drafts only. Vercel, once connected, should ignore builds for `guide-state` (Project Settings → Git → Ignored Build Step), and the GitHub Action only builds `main`.
+The branch holds drafts only. Managed state and lease snapshots carry the fixed `vercel.json` deployment-disabled marker; actual remote probes verified no deployments. The GitHub Action only builds `main`. See `CLOUD-SETUP.md`.
 
 The shared `keywordResearcher` selects an approved software topic from `memory/guide-topic-queue.json` and supplies primary-source queries. The queue is a backlog of subjects, not a second research agent. Explicit assignments use `guide brief --topic-id <id>` or an exact approved topic/alias. Unknown topics require editorial approval before entering the queue.
 
@@ -70,7 +70,7 @@ The API writer command reviews each written page before the runner advances. Dir
 
 `guide preview --job <id> --port 3502` is an interactive long-running development server using the real site renderer. It rejects production mode, labels the draft, adds noindex headers/metadata and serves only allowlisted, hash-verified job images. It does not copy draft content or assets into public directories. Stop the preview after inspection.
 
-## Claude Code routine instructions — the routine's prompt
+## Legacy Claude Code rollback prompt
 
 The text below is the prompt of the cloud routine `icc-guides`. It is written for a fresh clone of `Admin-Qms/icc-website-main` with the same environment as the blog routine (LLM and image keys in its variables). If this text changes, update the routine too.
 
@@ -101,12 +101,12 @@ End your report with one line: `RESULT: published | in progress — <pages revie
 
 ---
 
-## Codex Cloud candidate prompt (inactive)
+## Active Codex Cloud prompt (former candidate)
 
-The earlier prompt remains the active Claude routine during migration. The following prompt is for the separately authorized Codex cutover.
+The Owner enabled this Codex Cloud routine on 2026-11-20. The earlier Claude prompt is retained unchanged as a rollback reference; its trigger is paused.
 
 ```text
-Run the ICC software guide in ICC Guides with the actual session model GPT-6.1 Terra. This candidate is inactive until the Owner explicitly enables its schedule; migration probes must not execute this publication prompt.
+Run the ICC software guide in ICC Guides with the actual session model GPT-6.1 Terra. This is the active Owner-authorized scheduled prompt; readiness probes must not execute it.
 
 Read AGENTS.md, team/CLOUD-SETUP.md, .agents/skills/write-software-guide/SKILL.md, team/GUIDE-WRITER.md and team/data/guide-writing-rules.md. Require ICC_CLOUD_ROUTINE=1. Run bash team/scripts/scheduled-guide-run.sh prepare. Stop on NOTHING_TO_GENERATE. Resume the assigned unfinished job before any new one. For a new job research only approved primary sources into research-input.json from its template, run guide outline and guide research with the proposed fixture, then save-state. Never invent evidence or change the link bank.
 

@@ -2,11 +2,9 @@
 
 The daily blog pipeline is active. Software guides have a separate pipeline with a shared researcher, run twice a week (Monday and Thursday) by the cloud routine `icc-guides`; see `GUIDE-ROUTINE.md`. A weekly topic scout (`icc-scout`, Sundays) keeps both topic queues stocked; see `SCOUT-ROUTINE.md`. Other agents (SEO, security, ops, growth, web and legacy mega-articles) remain switched off.
 
-Codex Cloud migration is implemented locally but has not replaced these Claude routines. See [CLOUD-SETUP.md](CLOUD-SETUP.md) for session images, Claude review, environment settings and release gates.
+All three routines moved to Codex Cloud on 2026-11-20: Terra writes, the built-in image tool uses the included Codex allowance, and Claude API independently reviews. Previous Claude triggers are paused and retained for rollback. See [CLOUD-SETUP.md](CLOUD-SETUP.md) for active schedules, environment settings and release evidence.
 
-The Codex Cloud migration is not cut over. See [CLOUD-SETUP.md](CLOUD-SETUP.md) for the Terra writer, Claude reviewer, session-image workflow and release blockers.
-
-## Setup
+## Local / legacy setup
 
 ```bash
 cd team
@@ -18,11 +16,11 @@ cp .env.example .env      # then add GEMINI_API_KEY (and PEXELS_API_KEY if you h
 
 Two ways to get an article.
 
-**Claude writes it** (how the schedule works):
+**The session writes it** (Terra in the active cloud schedules):
 
 ```bash
 node pm.js blog brief                       # picks the topic, writes drafts/<date>-<slug>/brief.md + draft.json
-# write body.md in that folder (Claude Code: use the write-blog-article skill)
+# write body.md using .agents/skills/write-blog-article/SKILL.md
 node pm.js blog publish --fixture drafts/<date>-<slug>/draft.json
 ```
 

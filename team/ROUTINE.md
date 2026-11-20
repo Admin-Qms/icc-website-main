@@ -1,4 +1,8 @@
-# Scheduled blog run — the routine's prompt
+# Scheduled blog run
+
+Active: ICC Blogs on Codex Cloud, daily 09:05 UTC. See the active prompt below and `CLOUD-SETUP.md`.
+
+## Legacy Claude rollback prompt
 
 Copy the text below into the cloud routine's instructions. It is written for a fresh clone of `Admin-Qms/icc-website-main` with the `icc-blog` environment (keys in its variables).
 
@@ -24,12 +28,12 @@ Rules that override anything else you might consider:
 
 End your report with one line: `RESULT: published | nothing to publish | failed — <reason>`.
 
-## Codex Cloud candidate prompt (inactive)
+## Active Codex Cloud prompt (former candidate)
 
-The earlier prompt remains the active Claude routine during migration. The following prompt is for the separately authorized Codex cutover.
+The Owner enabled this Codex Cloud routine on 2026-11-20. The earlier Claude prompt is retained unchanged as a rollback reference; its trigger is paused.
 
 ```text
-Run the ICC daily blog in ICC Blogs with the actual session model GPT-6.1 Terra. This candidate is inactive until the Owner explicitly enables its schedule; migration probes must not execute this publication prompt.
+Run the ICC daily blog in ICC Blogs with the actual session model GPT-6.1 Terra. This is the active Owner-authorized scheduled prompt; readiness probes must not execute it.
 
 Read AGENTS.md, team/CLOUD-SETUP.md and .agents/skills/write-blog-article/SKILL.md. Require ICC_CLOUD_ROUTINE=1; do not print keys. Run bash team/scripts/scheduled-run.sh prepare. On NOTHING_TO_PUBLISH stop. Otherwise use its returned brief/draft folder, preserve fixed metadata, and write body.md following the complete brief and writing rules. Terra writes; Claude independently reviews through the CLI.
 

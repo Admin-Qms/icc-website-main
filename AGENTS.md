@@ -17,12 +17,12 @@ You report to **the Owner (CEO)** — the human. the Owner sets vision, approves
 **Tech Stack (current as of 2026-10-03):**
 - Frontend: Next.js 14 (App Router), React, TypeScript, Tailwind CSS — a static export (`output: "export"`); all site content is in `lib/site.ts`
 - Blog: Markdown files in the repo — `content/blog/<slug>.md`, images in `public/images/blog/<slug>/`, read at build time by `lib/blog.ts`. There is no CMS.
-- Writing: the active Claude routines write from managed briefs. The Codex Cloud candidate uses GPT-6.1 Terra for prose and Claude API for helpers/reviews, retaining the Sonnet chapter / Haiku fast-audit split in `team/agents/shared/config.js`. See `team/CLOUD-SETUP.md`; migration is not cut over.
+- Writing: active Codex Cloud routines use GPT-6.1 Terra for prose and Claude API for helpers/reviews, retaining the Sonnet chapter / Haiku fast-audit split in `team/agents/shared/config.js`. All three cutovers completed on 2026-11-20; previous Claude triggers are paused and retained for rollback. See `team/CLOUD-SETUP.md`.
 - Images: legacy runs retain their configured providers. `ICC_CLOUD_ROUTINE=1` forces `IMAGE_PROVIDERS=session` and `LLM_PROVIDERS=claude`: use the session's built-in image tool, then the managed import commands. No API image fallback or nested CLI. All output uses `team/data/image-style.json` and 1200x675 WebP, with hashes/provenance verified before publication.
 - Deployment: repo `https://github.com/Admin-Qms/icc-website-main`. The live site (isocertificationconsultants.ca) is a Vercel project; once it is connected to this repo, every push to `main` deploys. The GitHub Action that builds the export to the `deploy` branch (for cPanel) is kept as a backup.
 - Brand: the company is **ISO Certification Consultants Inc.** (plural) — `SITE` in `lib/site.ts` is the source for name, domain, email, logo path, the Web3Forms key and the BBB profile. The contact form posts to Web3Forms (no server in a static export).
 - Testing: `npm --prefix team test` (node:test) for the blog pipeline; `npm run build` for the site
-- Scheduling: a Claude Code cloud routine (prompt in `team/ROUTINE.md`, script in `team/scripts/scheduled-run.sh`) that publishes a gate-passing article straight to `main` every morning, and a second routine (prompt in `team/GUIDE-ROUTINE.md`, script in `team/scripts/scheduled-guide-run.sh`) that writes and publishes a software guide on Mondays and Thursdays, keeping unfinished drafts on the `guide-state` branch, and a third (prompt in `team/SCOUT-ROUTINE.md`, script in `team/scripts/scheduled-scout-run.sh`) that tops up both topic queues every Sunday, approving guide topics through an independent reviewer gate with no human step. See the standing approval sections below.
+- Scheduling: a Codex Cloud routine (prompt in `team/ROUTINE.md`, script in `team/scripts/scheduled-run.sh`) that publishes a gate-passing article straight to `main` every morning, and a second routine (prompt in `team/GUIDE-ROUTINE.md`, script in `team/scripts/scheduled-guide-run.sh`) that writes and publishes a software guide on Mondays and Thursdays, keeping unfinished drafts on the `guide-state` branch, and a third (prompt in `team/SCOUT-ROUTINE.md`, script in `team/scripts/scheduled-scout-run.sh`) that tops up both topic queues every Sunday, approving guide topics through an independent reviewer gate with no human step. See the standing approval sections below.
 
 **What is active and what is not:**
 - **Active:** the weekly topic scout and the daily blog pipeline — `node team/pm.js blog publish` (see `team/README.md`) — and the twice-weekly guide pipeline — `node team/pm.js guide ...` driven by `team/scripts/scheduled-guide-run.sh` (see `team/GUIDE-ROUTINE.md`).
@@ -301,7 +301,7 @@ When a task requires expertise not covered by existing agents:
 
 ## DAILY OPERATIONS SCHEDULE
 
-All times Eastern (America/Toronto). Pipeline runs on Windows laptop via Claude Cowork.
+The following wider organizational schedule is historical and inactive. Active Codex Cloud schedules are blog daily 09:05 UTC, guides Monday/Thursday 08:00 UTC, and scout Sunday 08:00 UTC; they run without either laptop. Toronto dates still determine publication slots.
 
 ```
 5:00 AM  -  COO: System health check (uptime, SSL, DNS)
@@ -559,13 +559,13 @@ The previous sprint table (BlogPosting schema, canonicals, contact form, OG imag
 
 ## Codex Cloud migration status and scope
 
-Existing Claude routines remain active until the Owner authorizes cutover after all release checks pass. Candidate prompts in the three routine documents are inactive. Implementation authorization does not authorize a real scheduled prepare, publication, push, deployment or trigger switch during migration testing.
+The Owner-authorized cutovers completed on 2026-11-20: Scout, then Guides, then Blog after its review repairs. Active Codex Cloud prompts are in the three routine documents. Matching Claude triggers are paused and retained for at least 14 days (through 2026-12-04), not deleted. Readiness probes still do not authorize prepare, publication, state writes or trigger changes. See `team/CLOUD-SETUP.md` for verified release and schedule receipts.
 
-After explicit cutover of each matching routine, its standing approval below also covers the Codex Cloud session running the corresponding candidate prompt, using its saved ICC environment and the restricted script. It additionally covers managed image imports and blog `save-state` on `blog-state`. Routine locks live on `icc-routine-locks`; acquire once through prepare, retain through checkpoints, and release with the matching wrapper when stopping. Do not remove or bypass locks. Missing Claude access, image allowance or integrity failure saves safe progress and stops; never change providers to obtain a pass.
+After explicit cutover of each matching routine, its standing approval below also covers the Codex Cloud session running the corresponding active prompt, using its saved ICC environment and the restricted script. It additionally covers managed image imports and blog `save-state` on `blog-state`. Routine locks live on `icc-routine-locks`; acquire once through prepare, retain through checkpoints, and release with the matching wrapper when stopping. Do not remove or bypass locks. Missing Claude access, image allowance or integrity failure saves safe progress and stops; never change providers to obtain a pass.
 
 ## SCHEDULED BLOG RUN — STANDING APPROVAL
 
-When a session's prompt is the scheduled blog run (the text in `team/ROUTINE.md`, run by a Claude Code cloud routine against this repository), the Owner has approved in advance, with no further confirmation, exactly this:
+When a session's prompt is the scheduled blog run (the text in `team/ROUTINE.md`, run by the active Codex Cloud routine or the retained Claude rollback routine against this repository), the Owner has approved in advance, with no further confirmation, exactly this:
 
 1. Running `bash team/scripts/scheduled-run.sh prepare`.
 2. Writing `body.md` for the brief it produces, following `.agents/skills/write-blog-article/SKILL.md` and `team/data/writing-rules.md`.
@@ -575,7 +575,7 @@ That run may not: edit code, prompts, checks, rules, the link bank or the standa
 
 ## SCHEDULED GUIDE RUN — STANDING APPROVAL
 
-When a session's prompt is the scheduled guide run (the prompt block at the end of `team/GUIDE-ROUTINE.md`, run by the Claude Code cloud routine `icc-guides` against this repository), the Owner has approved in advance, with no further confirmation, exactly this:
+When a session's prompt is the scheduled guide run (the prompt block at the end of `team/GUIDE-ROUTINE.md`, run by the active Codex Cloud ICC Guides routine or retained Claude rollback routine `icc-guides` against this repository), the Owner has approved in advance, with no further confirmation, exactly this:
 
 1. Running `bash team/scripts/scheduled-guide-run.sh prepare`, which restores unfinished guide drafts from the `guide-state` branch and reserves or resumes the production slot.
 2. Researching the assigned topic with the web tools, writing the research fixture, and running `node team/pm.js guide outline` and `guide research` to freeze the outline and chapter briefs.
@@ -588,7 +588,7 @@ That run may not: edit code, prompts, skills, checks, rules, the link bank, the 
 
 ## SCHEDULED TOPIC SCOUT — STANDING APPROVAL
 
-When a session's prompt is the weekly topic scout (the prompt block at the end of `team/SCOUT-ROUTINE.md`, run by the Claude Code cloud routine `icc-scout`), the Owner has approved in advance, with no further confirmation, exactly this:
+When a session's prompt is the weekly topic scout (the prompt block at the end of `team/SCOUT-ROUTINE.md`, run by the active Codex Cloud ICC Scout routine or retained Claude rollback routine `icc-scout`), the Owner has approved in advance, with no further confirmation, exactly this:
 
 1. Running `bash team/scripts/scheduled-scout-run.sh prepare`.
 2. Researching topics and primary sources with the web tools and writing `team/reports/scout-proposals.json`.
@@ -611,7 +611,7 @@ Active: CTO Division (10 agents), CMO Division (23 agents + 1 planned), COO Divi
 Total: 37 operational | 8 on roadmap | 48 total agent roles
 
 Current sprint: Automated Blog
-Active: daily blog pipeline (team/pm.js blog publish). All other agents are switched off.
+Active: daily blog, twice-weekly guides and weekly scout through their restricted Codex Cloud wrappers. Other agents are switched off.
 Blockers: see the CURRENT SPRINT tables above.
 
 Ready for orders.
