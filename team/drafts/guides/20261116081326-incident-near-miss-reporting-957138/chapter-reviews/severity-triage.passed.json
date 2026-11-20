@@ -6,27 +6,14 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All checks pass. The changed paragraph correctly frames the illustrative severity table as a generic training illustration and explicitly states that available product levels and choices are unconfirmed, consistent with the research source constraints. No previous findings were raised, so none remain unresolved. All four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited with an explicit caution that it describes committees and representatives, not reporting deadlines. Links use only the two supplied source URLs and an allowed internal site path. No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or repetition were detected. Word count of approximately 2064 is within acceptable range of the 2000-word target.",
-  "glossary": [
-    {
-      "term": "Routing table",
-      "definition": "A record that lists, for each severity rating, the role to be notified, the expected time for a first response, and the fallback role if no response is received."
-    },
-    {
-      "term": "Rating history",
-      "definition": "The record of all ratings assigned to a report, showing the original rating, any subsequent changes, the name of the person who made each change, the date, and the stated reason."
-    },
-    {
-      "term": "Regulatory checklist",
-      "definition": "A record kept apart from the severity scale that lists each applicable jurisdiction, the authority responsible, the contact for questions, and the contractual or regulatory duties that may require external notice following an incident."
-    }
-  ],
+  "summary": "All checks pass. The single changed paragraph correctly instructs that near-misses be rated by potential harm rather than actual harm, which is consistent with the plan key point to rate near-misses by potential harm and say so explicitly, and raises no new unsupported claims. No previous findings were raised and none remain unresolved. All four subsections align with the plan: roles, inputs, decisions, records, and exceptions are present and correctly attributed. ICC Safety claims are framed as published descriptions requiring demonstration confirmation. The Ontario guide is cited accurately as a committees-and-representatives resource, not a source of reporting deadlines. The illustrative examples are labeled and use an unnamed Canadian manufacturer. No FAQ section appears, consistent with the plan assigning none. Links use only the two supplied source URLs and an allowed internal site path. No scope boundary violations, readability problems, or repetition were detected. No new glossary terms are introduced beyond those already defined in context.",
+  "glossary": [],
   "roles": [
     "Safety lead",
     "Operations manager",
     "Safety coordinator",
     "Plant manager",
-    "Area supervisor"
+    "Supervisor"
   ],
   "recordNames": [
     "Severity scale",
@@ -136,8 +123,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "985f8d6b4d8e880eea49d4f22f14cfe01cf4f14b3fefd3d2aa4e4b96e73d4c7b",
-  "contentHash": "c1c8221ef26ef974a0b2072dced58d03881035314737ffc0ca336658d8998d9b",
+  "inputHash": "048f9883c385bdc06f710045fcb8a9971927b7dbd4f55306eb1f00115d925d27",
+  "contentHash": "f8880456e1f93060c1af7bd44c716b1fd11a09ab201196ad803ca2e5d7d942bb",
   "paragraphHashes": [
     "82fbd9921bff8db5f3f7900ffb43d6c76724b7999d91c19657671dd3c840aadc",
     "31550d2d598fb5649ae7dcd7103f0272af101ce30028e7aea9c90e34ef465c4a",
@@ -145,7 +132,7 @@
     "80311899b5bce6d1aaddd1adf56e6484c38b2ae44ff76817063f48aad79f5ae2",
     "f3c2cece87e57d66dc692f9b73c8a558f1ee58dab3987452f17d55cc61c3d0ff",
     "290232155c75bc93db630aeeda697a4c8af3121b07f1d182c3415bc1df970d96",
-    "362f236c33e585fe23cdab9cfbfeb0cea1475bfd30d0fe57db323252fedd20f7",
+    "f30d84f747351b79ac08e114e51e9ae4119d839bb603ce384071409f2023b5ed",
     "daa425fb7e4153022502e973fff091c6379b68f2de6aa4e9f4cf9de8dc88d85c",
     "f0f27f5bb092805b72592fe2f663c7309e20b389814e97d9d3b4ce52f9965fbb",
     "d58c4a942370837c23568f89694882ac2e9f387389f4cc1840d48bb7d90baa16",
@@ -177,7 +164,7 @@
     "29e67430679feaf52e00cebb7d7edec03f98c10bbd334d83cbae18588f2cc513",
     "febdd27bc680fd5e5051e025f2240f949b091ad20d0964813bcb2572194e1f4c"
   ],
-  "outputContextHash": "11a6c1d03ab6e69a13ad8e1a443ae7d82eed743da213e6c72231d17a641f5b06",
-  "reviewedAt": "2026-11-19T16:13:45.267Z",
+  "outputContextHash": "6eb25c49357d30ee64e1442ca161c1a426851b936e55725994acb3bd5a682122",
+  "reviewedAt": "2026-11-20T14:07:56.432Z",
   "reviewer": "Configured independent chapter reviewer"
 }

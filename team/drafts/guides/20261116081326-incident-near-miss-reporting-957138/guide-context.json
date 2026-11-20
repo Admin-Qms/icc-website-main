@@ -65,74 +65,6 @@
     {
       "term": "Report form specification",
       "definition": "The record of the final form design stating field name, who completes it, whether it is required, and what values it accepts."
-    },
-    {
-      "term": "Routing table",
-      "definition": "A record that lists, for each severity rating, the role to be notified, the expected time for a first response, and the fallback role if no response is received."
-    },
-    {
-      "term": "Rating history",
-      "definition": "The record of all ratings assigned to a report, showing the original rating, any subsequent changes, the name of the person who made each change, the date, and the stated reason."
-    },
-    {
-      "term": "Regulatory checklist",
-      "definition": "A record kept apart from the severity scale that lists each applicable jurisdiction, the authority responsible, the contact for questions, and the contractual or regulatory duties that may require external notice following an incident."
-    },
-    {
-      "term": "Assignment entry",
-      "definition": "The record created when an investigator is assigned to an investigation, naming the investigator, the scope and the date, and showing every subsequent change with a date and a name."
-    },
-    {
-      "term": "Evidence list",
-      "definition": "The record kept with the incident of all items collected during an investigation, noting what each item is, who collected it, when and where it is held."
-    },
-    {
-      "term": "Cause statement",
-      "definition": "The record of what the investigator and supervisor concluded caused or contributed to the event, distinguishing observed facts, reported information and inferences, and showing which evidence supports each point."
-    },
-    {
-      "term": "Reviewed conclusion",
-      "definition": "The accepted output of a completed investigation, comprising the cause statement and recommendations, bearing the reviewer's name and the date of acceptance."
-    },
-    {
-      "term": "Access rule",
-      "definition": "The record of what each role or group may see in the dashboard, decided by the safety lead and used to control visibility into incident data."
-    },
-    {
-      "term": "Meeting record",
-      "definition": "The record of a committee meeting showing which reports and actions were examined, which patterns were raised, and who will follow up."
-    },
-    {
-      "term": "Feedback record",
-      "definition": "A feedback entry or note in the team meeting record showing what was shared with reporters about closed reports, within the plant's privacy rules."
-    },
-    {
-      "term": "Gap list",
-      "definition": "The record of items identified during an audit rehearsal or audit view review, each with an owner and a date for resolution."
-    },
-    {
-      "term": "Evidence map",
-      "definition": "A record listing each ISO 45001 clause in scope, the requirement it makes, the records the plant holds as evidence, where they are kept, and who owns them."
-    },
-    {
-      "term": "Import plan",
-      "definition": "The record of the scope of a historical data migration, the mapping of old fields to new ones, decisions about unmapped fields, and the location of the original archive."
-    },
-    {
-      "term": "Cutover plan",
-      "definition": "The record of the date and method by which the new system becomes the authoritative record for incident and near-miss reports, including parallel-period rules, training schedule, and rollback criteria."
-    },
-    {
-      "term": "Exception log",
-      "definition": "A running record of each time the reporting process failed in a material way, used to identify repeats and prompt process or configuration changes."
-    },
-    {
-      "term": "Review findings",
-      "definition": "The record produced by a periodic workflow review, listing what the sample showed, what will change, who owns each change and by when."
-    },
-    {
-      "term": "Approved answers",
-      "definition": "The set of FAQ responses the safety lead has verified against the plant's actual sources and authorised for use with supervisors, committees, auditors and leadership."
     }
   ],
   "roles": [
@@ -158,14 +90,7 @@
     "Safety lead",
     "Operations supervisor",
     "Reviewer",
-    "Plant manager",
-    "Area supervisor",
-    "Committee chair",
-    "Committee member",
-    "Worker member",
-    "Management representative",
-    "Data owner",
-    "Implementation lead"
+    "Plant manager"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -186,26 +111,7 @@
     "Severity scale",
     "Routing table",
     "Rating history",
-    "Regulatory checklist",
-    "Assignment entry",
-    "Evidence list",
-    "Cause statement",
-    "Reviewed conclusion",
-    "Decision with reason",
-    "Action entry",
-    "Linked records",
-    "Effectiveness check",
-    "Access rule",
-    "Meeting record",
-    "Feedback record",
-    "Written response",
-    "Gap list",
-    "Evidence map",
-    "Import plan",
-    "Cutover plan",
-    "Review findings",
-    "Approved answers",
-    "Demonstration results"
+    "Regulatory checklist"
   ],
   "example": {
     "label": "Illustrative example",
@@ -256,84 +162,13 @@
     {
       "slug": "severity-triage",
       "title": "Rate severity and triage in incident and near-miss reporting software",
-      "summary": "All checks pass. The changed paragraph correctly frames the illustrative severity table as a generic training illustration and explicitly states that available product levels and choices are unconfirmed, consistent with the research source constraints. No previous findings were raised, so none remain unresolved. All four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited with an explicit caution that it describes committees and representatives, not reporting deadlines. Links use only the two supplied source URLs and an allowed internal site path. No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or repetition were detected. Word count of approximately 2064 is within acceptable range of the 2000-word target.",
-      "bodyHash": "54707b71e667f802bf4914b5a1c3f83c1b3afe8a6ba3e1d5553fa67728b14176",
+      "summary": "All checks pass. The single changed paragraph correctly instructs that near-misses be rated by potential harm rather than actual harm, which is consistent with the plan key point to rate near-misses by potential harm and say so explicitly, and raises no new unsupported claims. No previous findings were raised and none remain unresolved. All four subsections align with the plan: roles, inputs, decisions, records, and exceptions are present and correctly attributed. ICC Safety claims are framed as published descriptions requiring demonstration confirmation. The Ontario guide is cited accurately as a committees-and-representatives resource, not a source of reporting deadlines. The illustrative examples are labeled and use an unnamed Canadian manufacturer. No FAQ section appears, consistent with the plan assigning none. Links use only the two supplied source URLs and an allowed internal site path. No scope boundary violations, readability problems, or repetition were detected. No new glossary terms are introduced beyond those already defined in context.",
+      "bodyHash": "6d6def03f78defc322b9661be52aa29b2065795ba96cf1ce8b16824f890c39ee",
       "decisions": [
         "Decide level definitions",
         "Decide routing and response time",
         "Decide the final rating",
         "Decide which events need external notice"
-      ]
-    },
-    {
-      "slug": "investigation",
-      "title": "Run investigations from a structured record",
-      "summary": "All checks pass. The page matches the plan exactly across four subsections: Assign and scope the investigation, Collect evidence, Analyze causes without blame, and Record conclusions and review. Each subsection contains the required workflow elements (role, input, decision, record, exception) and an evaluation criterion drawn from the plan. The illustrative example in the first subsection is correctly labeled as invented and not a customer result. All ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation, in line with the research source constraints. The ICC page's statement that investigations start from a blank page is correctly presented as a vendor-described pain point rather than measured data. The AI-output review claim appears twice—once in the cause analysis section and once in the conclusions section—but the two occurrences serve distinct purposes (introducing the AI concern in context of cause analysis, and reinforcing it as a reviewer obligation in the conclusions step), so this does not constitute problematic repetition. The Ontario JHSC guide is cited only in the final subsection and with an explicit caution that plants outside Ontario must check their own rules. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus an allowed internal site path. No FAQ section appears anywhere in the page, consistent with the plan assigning none. No scope boundary violations were detected; corrective action tracking is appropriately deferred to the next chapter. Word count of approximately 2028 is within acceptable range of the 2000-word target. No previous findings were raised, so none remain unresolved.",
-      "bodyHash": "86cfbd85240303d863b1eae42cc5f19569aeebb52556706a858c8af93a5622c0",
-      "decisions": [
-        "Decide who investigates and how deeply",
-        "Decide what evidence is sufficient",
-        "Decide causes",
-        "Accept or return the draft investigation"
-      ]
-    },
-    {
-      "slug": "corrective-actions",
-      "title": "Link incidents to corrective action and follow-up",
-      "summary": "All checks pass. No previous findings were raised, so none remain unresolved. The six changed paragraphs are accurate and well-scoped: ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation; the exception and no-action guidance paragraphs add procedural depth without introducing unsupported claims; the action-writing guidance is concrete and actionable; and the three effectiveness-verification paragraphs are distinct in purpose and do not repeat one another. All four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. The illustrative example uses an unnamed Canadian manufacturer and is marked hypothetical in each occurrence. The Ontario JHSC guide is cited only in the third subsection and with an appropriate caution that plants outside Ontario must confirm what applies to them. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus an allowed internal site path. No FAQ section appears anywhere in the page, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations were detected; committee trend review and general CAPA practice are correctly deferred. Word count of approximately 2053 is within acceptable range of the 2000-word target.",
-      "bodyHash": "b21025e4ebac16597f8b8debbcfb4926961ae78c4f016956d891c6c3da783374",
-      "decisions": [
-        "Decide whether action is needed",
-        "Accept the action and date",
-        "Decide closure",
-        "Decide effective or reopen"
-      ]
-    },
-    {
-      "slug": "committee-visibility",
-      "title": "Give committees and workers visibility into incident data",
-      "summary": "All checks pass. No previous findings were raised, so none remain unresolved. The five changed paragraphs are accurate and well-scoped: the anonymous-report paragraph correctly cites the ICC Safety page claim and adds appropriate privacy guidance; both Ontario guide paragraphs accurately reflect the verified source claims (quarterly meetings, monthly inspections, 21 calendar days, implementation timetable, written reasons) with correct caveats about Ontario-specific applicability; the patterns paragraph provides sound interpretive guidance without unsupported claims; and the deadline-process paragraph gives concrete procedural advice without overstating regulatory requirements. All unchanged text was already reviewed and cleared. All four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited only where Ontario-specific content applies, with appropriate jurisdictional caveats in every instance. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide). No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2018 is within acceptable range of the 2000-word target.",
-      "bodyHash": "15927e028f3c5f51b09262ccc49c45efa77ffe042e1afd695758bc634884dd25",
-      "decisions": [
-        "Decide committee access",
-        "Decide whether anonymous reports show to the committee",
-        "Decide which patterns to raise",
-        "Decide feedback to reporters",
-        "Accept or explain a committee recommendation"
-      ]
-    },
-    {
-      "slug": "audit-evidence-migration",
-      "title": "Prepare audit evidence and migrate existing incident logs",
-      "summary": "All checks pass. No previous findings were raised, so none remain unresolved. All changed paragraphs are accurate and well-scoped. The four subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The ISO 45001 clause mappings (10.2, 5.4, 6.1.2) are correctly attributed to the ICC Safety page and hedged against the boundary that software alone does not satisfy a clause. External reviewer access is appropriately flagged as unconfirmed in the research. The import and cutover guidance is procedurally sound and does not introduce unsupported claims about vendor capability. The Ontario JHSC guide is cited in the final paragraph with an explicit caution that plants elsewhere must check their own rules. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus the allowed internal site path. No FAQ section appears, consistent with the plan assigning none to any subsection of this chapter. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2048 is within acceptable range of the 2000-word target.",
-      "bodyHash": "6a4fa3254e6a8ce7d5a0adea3e91e7b88d83655a900188dd4da90a125cec66e1",
-      "decisions": [
-        "Decide gaps to close before an audit",
-        "Decide evidence per clause",
-        "Decide scope and mapping of old fields to new ones",
-        "Decide cutover date and method"
-      ]
-    },
-    {
-      "slug": "ongoing-operation",
-      "title": "Review performance, answer common questions and prepare a demonstration",
-      "summary": "This is a re-review. No previous findings were raised, so none remain unresolved. All changed paragraphs are accurate and well-scoped. The three subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The ISO 45001 clause mappings (10.2, 5.4, 6.1.2) are correctly attributed to the ICC Safety page and hedged with the appropriate boundary that a mapping does not guarantee a clause is met. External reviewer access is correctly flagged as unconfirmed in the research. The Ontario JHSC guide is cited only in the FAQ subsection with an explicit caution that plants elsewhere must check their own rules. The FAQ subsection is plan-assigned and present; no FAQ content appears in the introduction or other subsections. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus the allowed internal site path /contact/. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2021 is within acceptable range of the 2000-word target. All changed paragraphs introduce no new unsupported claims.",
-      "bodyHash": "09e7ae1e66d924dda1c32c4d14c78c8305220943017dcb9d95a331aabab2a9e5",
-      "decisions": [
-        "Decide improvements to prioritize",
-        "Answer within evidence",
-        "Proceed, ask for clarification or reject"
-      ]
-    },
-    {
-      "slug": "incident-and-near-miss-reporting-software",
-      "title": "Incident and near-miss reporting software for Canadian quality and operations teams",
-      "summary": "All checks pass. No previous findings were raised, so none remain unresolved. The three changed paragraphs are accurate and well-scoped: the Ontario guide paragraph correctly attributes the source, restricts its application to Ontario workplaces, and explicitly cautions plants in other provinces and federally regulated sites to confirm their own rules; the structured evaluation paragraph gives sound procedural guidance without introducing unsupported vendor claims and correctly instructs recording the decision owner and unresolved evaluation questions; the closing paragraph accurately disclaims any guarantee that software alone produces safer work or satisfies a standard. All unchanged text was already reviewed and cleared. The three subsections match the plan exactly: The operational problem introduces the guide's purpose and audience; How to use this guide provides the ordered chapter overview; Planning evaluation and implementation covers the evaluation and implementation lifecycle. No workflow decisions, roles, records or exceptions are misattributed or omitted. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The Ontario JHSC guide is cited with appropriate jurisdictional caveats. Both source URLs are used correctly and no unrecognised URLs appear. No FAQ section is present, consistent with the plan assigning none to any subsection of this introduction chapter. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 1512 is within acceptable range of the 1500-word target.",
-      "bodyHash": "068495ffc3e7de2417129430448c4c2f791459468f287c354ead5119732e6e80",
-      "decisions": [
-        "Decide the configuration before the switch",
-        "Decide the scope of existing log import",
-        "Decide what to improve next and what to ask the vendor to change"
       ]
     }
   ],
