@@ -165,6 +165,8 @@
     "febdd27bc680fd5e5051e025f2240f949b091ad20d0964813bcb2572194e1f4c"
   ],
   "outputContextHash": "6eb25c49357d30ee64e1442ca161c1a426851b936e55725994acb3bd5a682122",
-  "reviewedAt": "2026-11-20T14:07:56.432Z",
-  "reviewer": "Configured independent chapter reviewer"
+  "reviewedAt": "2026-11-20T14:29:46.753Z",
+  "reviewer": "Configured independent chapter reviewer",
+  "carried": true,
+  "carriedFrom": "2026-11-20T14:07:56.432Z"
 }

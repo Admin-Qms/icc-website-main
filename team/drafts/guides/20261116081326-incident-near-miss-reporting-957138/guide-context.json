@@ -89,7 +89,8 @@
     "Decision owner",
     "Safety lead",
     "Operations supervisor",
-    "Reviewer"
+    "Reviewer",
+    "Plant manager"
   ],
   "recordNames": [
     "Written definitions with an owner",
@@ -106,7 +107,11 @@
     "Report form specification",
     "Placement list",
     "Policy and routing rule",
-    "Review entry"
+    "Review entry",
+    "Severity scale",
+    "Routing table",
+    "Rating history",
+    "Regulatory checklist"
   ],
   "example": {
     "label": "Illustrative example",
@@ -152,6 +157,18 @@
         "Decide when anonymous reporting is accepted and who reads anonymous reports first",
         "Decide placement of access points",
         "Decide whether to rate, investigate, or close a new report"
+      ]
+    },
+    {
+      "slug": "severity-triage",
+      "title": "Rate severity and triage in incident and near-miss reporting software",
+      "summary": "All checks pass. The single changed paragraph correctly instructs that near-misses be rated by potential harm rather than actual harm, which is consistent with the plan key point to rate near-misses by potential harm and say so explicitly, and raises no new unsupported claims. No previous findings were raised and none remain unresolved. All four subsections align with the plan: roles, inputs, decisions, records, and exceptions are present and correctly attributed. ICC Safety claims are framed as published descriptions requiring demonstration confirmation. The Ontario guide is cited accurately as a committees-and-representatives resource, not a source of reporting deadlines. The illustrative examples are labeled and use an unnamed Canadian manufacturer. No FAQ section appears, consistent with the plan assigning none. Links use only the two supplied source URLs and an allowed internal site path. No scope boundary violations, readability problems, or repetition were detected. No new glossary terms are introduced beyond those already defined in context.",
+      "bodyHash": "6d6def03f78defc322b9661be52aa29b2065795ba96cf1ce8b16824f890c39ee",
+      "decisions": [
+        "Decide level definitions",
+        "Decide routing and response time",
+        "Decide the final rating",
+        "Decide which events need external notice"
       ]
     }
   ],
