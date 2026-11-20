@@ -1,0 +1,20 @@
+{
+  "id": "reporting-intake",
+  "width": 1200,
+  "height": 675,
+  "sha256": "dc3dfc1b9cb1f637a437da8c963b06c85cb2360316d967a9f4c4ffc1ca2456ad",
+  "source": "codex",
+  "sourceId": "01f7068df3419a4b5edd6622ce9481339f592915011c0a15664c55d8f876929f",
+  "inputHash": "01f7068df3419a4b5edd6622ce9481339f592915011c0a15664c55d8f876929f",
+  "alt": "A floor operator scanning a posted QR code beside a machine cell; authentic manufacturing environment, no readable text or logos",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "ec4e5587f5b4b7eb2e27a8e8a1c8f20e602eb729552f57394409014defb69da6",
+  "request": {
+    "id": "reporting-intake",
+    "scene": "A floor operator scanning a posted QR code beside a machine cell; authentic manufacturing environment, no readable text or logos",
+    "kind": "hero",
+    "alt": "A floor operator scanning a posted QR code beside a machine cell; authentic manufacturing environment, no readable text or logos",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: A floor operator scanning a posted QR code beside a machine cell; authentic manufacturing environment, no readable text or logos.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-20T14:58:09.856Z"
+}
