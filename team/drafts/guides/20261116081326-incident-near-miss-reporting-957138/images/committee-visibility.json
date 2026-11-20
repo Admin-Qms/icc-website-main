@@ -1,0 +1,20 @@
+{
+  "id": "committee-visibility",
+  "width": 1200,
+  "height": 675,
+  "sha256": "8351e889d849bec61ba5d8d63490deb047c2cd1ce59c2afdbae2cb7313838395",
+  "source": "codex",
+  "sourceId": "96cccf72955d66c94918d1f819ce3beb191f8e036bae6ebe816ac5ceb640c069",
+  "inputHash": "96cccf72955d66c94918d1f819ce3beb191f8e036bae6ebe816ac5ceb640c069",
+  "alt": "A joint safety committee reviewing a wall display of open actions on a plant floor; authentic manufacturing environment, no readable text or logos",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "edcf87d009ce81ee557eaea7cd90b56a6e68f06c894013421b43e5cc936a4774",
+  "request": {
+    "id": "committee-visibility",
+    "scene": "A joint safety committee reviewing a wall display of open actions on a plant floor; authentic manufacturing environment, no readable text or logos",
+    "kind": "hero",
+    "alt": "A joint safety committee reviewing a wall display of open actions on a plant floor; authentic manufacturing environment, no readable text or logos",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: A joint safety committee reviewing a wall display of open actions on a plant floor; authentic manufacturing environment, no readable text or logos.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-20T15:01:01.379Z"
+}
