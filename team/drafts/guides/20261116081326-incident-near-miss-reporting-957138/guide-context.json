@@ -109,6 +109,14 @@
     {
       "term": "Cutover plan",
       "definition": "The record of the date and method by which the new system becomes the authoritative record for incident and near-miss reports, including parallel-period rules, training schedule, and rollback criteria."
+    },
+    {
+      "term": "Exception log",
+      "definition": "A running record of each time the reporting process failed in a way that mattered, reviewed for repeats and used to prompt process or settings changes."
+    },
+    {
+      "term": "Review findings",
+      "definition": "The record produced by a periodic workflow review, capturing what was sampled, what was found, and what will change."
     }
   ],
   "roles": [
@@ -178,7 +186,11 @@
     "Gap list",
     "Evidence map",
     "Import plan",
-    "Cutover plan"
+    "Cutover plan",
+    "Review findings",
+    "Approved answers",
+    "Demonstration results",
+    "Exception log"
   ],
   "example": {
     "label": "Illustrative example",
@@ -285,6 +297,17 @@
         "Decide evidence per clause",
         "Decide scope and mapping of old fields to new ones",
         "Decide cutover date and method"
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Run and improve incident and near-miss reporting software",
+      "summary": "All checks pass. No previous findings were raised, so none remain unresolved. All paragraphs listed in previousReview.changedParagraphs are accurate and well-scoped. The three subsections match the plan exactly: workflow elements (role, input, decision, record, exception) and evaluation criteria are present in each. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The ISO 45001 clause mappings (10.2, 5.4, 6.1.2) are correctly attributed to the ICC Safety page and hedged with the boundary that software alone does not satisfy a clause. External reviewer access is appropriately flagged as unconfirmed by the research. The Ontario JHSC guide is cited only in the committees FAQ answer with an explicit caution that plants elsewhere must check their own rules. Both illustrative examples are labeled as invented and not customer results, using the same unnamed Canadian manufacturer scenario. The FAQ subsection is present in the second chapter as assigned by the plan, and no FAQ content appears in the first or third subsections. Links use only the two supplied source URLs and the allowed internal site path /contact/. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of 2021 is within acceptable range of the 2000-word target.",
+      "bodyHash": "9fc6ba1edcfd090eac93a075bf9cc837289373c318e395d439ca8f39dc3eec3d",
+      "decisions": [
+        "Decide improvements to prioritize",
+        "Answer within the evidence",
+        "Proceed, clarify or reject"
       ]
     }
   ],

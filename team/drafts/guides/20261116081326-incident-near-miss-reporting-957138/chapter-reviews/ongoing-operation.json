@@ -6,33 +6,35 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "This is a re-review. No previous findings were raised, so none remain unresolved. All changed paragraphs are accurate and well-scoped. The three subsections match the plan exactly: workflow elements (role, input, decision, record, exception), evaluation criteria, and labeled illustrative examples are present throughout. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The ISO 45001 clause mappings (10.2, 5.4, 6.1.2) are correctly attributed to the ICC Safety page and hedged with the appropriate boundary that a mapping does not guarantee a clause is met. External reviewer access is correctly flagged as unconfirmed in the research. The Ontario JHSC guide is cited only in the FAQ subsection with an explicit caution that plants elsewhere must check their own rules. The FAQ subsection is plan-assigned and present; no FAQ content appears in the introduction or other subsections. Links use only the two supplied source URLs (icc-safety and ontario-jhsc-guide) plus the allowed internal site path /contact/. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of approximately 2021 is within acceptable range of the 2000-word target. All changed paragraphs introduce no new unsupported claims.",
+  "summary": "All checks pass. No previous findings were raised, so none remain unresolved. All paragraphs listed in previousReview.changedParagraphs are accurate and well-scoped. The three subsections match the plan exactly: workflow elements (role, input, decision, record, exception) and evaluation criteria are present in each. ICC Safety capability claims are consistently framed as published descriptions requiring demonstration confirmation. The ISO 45001 clause mappings (10.2, 5.4, 6.1.2) are correctly attributed to the ICC Safety page and hedged with the boundary that software alone does not satisfy a clause. External reviewer access is appropriately flagged as unconfirmed by the research. The Ontario JHSC guide is cited only in the committees FAQ answer with an explicit caution that plants elsewhere must check their own rules. Both illustrative examples are labeled as invented and not customer results, using the same unnamed Canadian manufacturer scenario. The FAQ subsection is present in the second chapter as assigned by the plan, and no FAQ content appears in the first or third subsections. Links use only the two supplied source URLs and the allowed internal site path /contact/. No scope boundary violations, readability problems, or problematic repetition were detected. Word count of 2021 is within acceptable range of the 2000-word target.",
   "glossary": [
     {
       "term": "Exception log",
-      "definition": "A running record of each time the reporting process failed in a material way, used to identify repeats and prompt process or configuration changes."
+      "definition": "A running record of each time the reporting process failed in a way that mattered, reviewed for repeats and used to prompt process or settings changes."
     },
     {
       "term": "Review findings",
-      "definition": "The record produced by a periodic workflow review, listing what the sample showed, what will change, who owns each change and by when."
-    },
-    {
-      "term": "Approved answers",
-      "definition": "The set of FAQ responses the safety lead has verified against the plant's actual sources and authorised for use with supervisors, committees, auditors and leadership."
+      "definition": "The record produced by a periodic workflow review, capturing what was sampled, what was found, and what will change."
     }
   ],
   "roles": [
-    "Evaluation lead"
+    "Safety lead",
+    "Evaluation lead",
+    "Floor reporter",
+    "Investigator",
+    "Action owner",
+    "Committee member"
   ],
   "recordNames": [
     "Review findings",
     "Approved answers",
-    "Demonstration results"
+    "Demonstration results",
+    "Exception log"
   ],
   "decisions": [
     "Decide improvements to prioritize",
-    "Answer within evidence",
-    "Proceed, ask for clarification or reject"
+    "Answer within the evidence",
+    "Proceed, clarify or reject"
   ],
   "pass": true,
   "deterministic": {
@@ -178,57 +180,55 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "69a3f8fb7c3adf5093253357468e15518e2e74d29a6b9b7ed57b99e9405f44f1",
-  "contentHash": "5ce6c8f224706ec0f1735372d67393313a4e13a9e60c8a1becfdfd0b9f7c441c",
+  "inputHash": "c6b86e866584d754e9d0de1a662e7895a528b923f6425859014901b9514fea19",
+  "contentHash": "c1982e6c48afa25f60bd1a5d673d8b8cce21b8114f3d7a589feb2a6daf5501cf",
   "paragraphHashes": [
     "2bc931bc3c3b35b7daa7d442f6f176389d11af5145d5a5aab237cf206fe58b5d",
-    "b4a74cd3fe9bedcc8b1c2654a82f78948f6a7d0e6ccaeee354eac6441c416a96",
-    "032caddc9924df0532c8a45e5422c6cb9627984fa6b1640540b5a9c82659948d",
-    "dd687906162481c3de2bb723f2e6ff03be2ca5a62cfc52594ec847261c30c1e6",
+    "e4499a19852c467642ea82bf304711e9fbcaba05ee3046f4705c50218c6ecf6f",
+    "b24798298dc9707d221770bf5f7a546689acec98f6346bedcd5da2f0e2d14721",
+    "f67e17f2f422146b542013ed57a6e4616a7673037e55c7d7deba159abc96bd59",
     "421d172b4b80408cab39f9b514b8a39742b7b0af46cdb24be0213a1566aa3c84",
     "b28e43c4b60f60300b9bc8d1754c52643c6ac2b54d2e0b11703fcae003fc863f",
-    "cf1cd02a77066c904c538afc91a9443a3772e83b54f0809225f88bef7815dbdd",
-    "acf2ab65313dc6995025b14c510d3e922410368614cedd196078dee5bd3bbe10",
-    "7d47055446dc9d0b0f36e064c3290801d37922735f526b4ca7c12bef62a25839",
-    "45645ce2166c38ddada0d0d73a9e83cf7bfac7cc6bfc76052147fff90d4ced7b",
+    "5dd8421cf9acfa7141eea2c8394714adf5491af31e50837888bacf4a42f02ada",
+    "6b287a1b65edb073e95951c7ba829261195a29542e67f33c85ee58e7e46f55ac",
+    "90bb05ab56161c0159b35d5bcacddf8d7b203e9bfb5c7dd7dd785fab63a1c7c0",
+    "b49f558eaa92f65af4b55cf17222f4a5821e876728e40d0d0755749a65cf9505",
     "902cb4171665e2efacaa54cd9d3897df75d8fe1e5da4e3102bb1311e86623211",
     "6471d92aea7a49d01876fe2a52a463cfc1b2d86416000dc04150c2fb59616c7e",
     "835b1dc517c9a5d5236167fbbfbd5904028df308b573558373d45075da3c83ff",
-    "e4988391cb532b329513f457d0a7d40d30f8deaaa2636667869d12458ab12a11",
+    "dc5a44036eb339a91e51dad492553ec58d3afdbb2c7fd4a570cb5533900edc04",
     "44086d3fac4ffaf24dc9b381ff84fd4b75a7d1a4c9b8d28e3aede977dded5d90",
-    "787270d0260246244e8461b36c58381fb1a17dbbaa30190c12274ad1c999a599",
+    "ff2e194819aaa817dc198c100ba8b421b1a9bf81328a60b26d01f309309aec60",
     "f245d31b9c57a33f202df619555fe2da4063fe2b3cdf4e21629149ee1fe976a6",
-    "865b03ce887c6bd9b244cfafa7d56f626f63e292433f558b50c113ee331a6967",
+    "c01172d53f9283af4442aba7caa6f5c1a0f87e53500d6f989c5c55bc0d07ece6",
     "2df6d38821c07c42e5cb9c84025534a1d20a371601475e857342792821839cd6",
-    "25e0891c17d1bf591af9f297394e794e18579b4c2b4f0de3b1245cf1dac9b642",
+    "3c53a74124c982827d29de1695e9d80d22a98eb0fae9b558f2e9e99c4285becd",
     "9785ab9dcd44a589710371c673c659ca16440b670af7246d0873dfbb747852fd",
-    "07cb5e5b4c36f87d2fabcace08e757476ee5ef82d2bf3a69217f0ff6535c615a",
+    "2c58a4782629df298115a5d8e0c681bb379f38c66ff53ec00535bfddcf8d2154",
     "64f9a9e16eac3de29d9506cba2e3e5c88fc6d605a44916ce25439f59eac8f864",
-    "19bb24163cf2b14fc85189f9c2a6ac8f326f4b5271c5439972fbf37066da1657",
+    "b07dd0a9711fbf54d297f26da0a964de568dde7907e2411786d7f69e08ad6416",
     "0e7b2eece90f332c9800b8e33e57c6c209a1ea70c2251eee7f7325286d7289ce",
-    "c6067669be48902aa3c698c0a116b63f3705f5c7d2de455c20fba97503567c60",
+    "dbc1058468c32c52422d8963401cbaee109d9176d6430556ab99d67ef7bfe6b8",
     "c4f0ad1df76a0b2654123caa2b6862ccfe70f56e6728e1261ebe734e9ef2018f",
-    "300cde6bccbba1efbd464c47ccbaf8e393a9d7002f313c078b8868716a1941d6",
+    "d75a0a75a1383f04c01ca77f517d38144576abdcee5977d04f460874d0a22a88",
     "f5c0e4bb4acbded9c480f5ef610b8e713785d7eb0ccc3d75922780225ee566da",
     "9308a7736eb692e6f8c15caf81428314b0718c22f11f72102d7ab7f8707e0e6c",
     "5df8f7f16c2e02e31a2969925c830c2ee94a635366c2c607325b31daba344fc7",
-    "48aeb83d9818abc11cfa8d6dd18b2c530794e82438c2d0d290c5991a662473fd",
+    "a118345a23c5ad81875b83f80b84c9a26e5e69641559c2edece5160a3eab240a",
     "bd3a3593cc22147298aa13e1113c82a7c8065dfaeb1240d028caac656ee3461b",
-    "83e19c6f4b303fc428afe9ebbaf95409283533eec3dc89baa2f8b56e6a5cf04c",
+    "8d1ff5160cd69d9b3832626a244ac47eb040a331445cb7411a2c2746550f659c",
     "ac43e547805a25abcabae23250e3e118d94cd32d666214991c6e40d3b3e789f6",
-    "81acac4af18a74c5cefdd2ec6da9bcb199047ee12a40829fbf4b57317d188188",
+    "5467acce741f6ad943972b4a770044c9f0333f38ecc14f38b8f7fb1a41c953a1",
     "0724221785b376d55118b8ccc92066c4500f5dea95571f47fc075bb8920218b9",
-    "d96ea1542f71afc00dc014a2270cd059a1703b95a114fc1a88ca9f3f06cde72b",
-    "a04afa20b70a91959353d65b324232102cbbb654e8e7aca480ffb2dec00e3e47",
-    "aebb21534ceb3a8e2b04a50d4db69fe1715e8d1afce25bc17917546e1b55c612",
-    "a486935db1da1909ac2b4c83883c2ce2fe5bcffdedfa96e6f0f1624de7410c51",
-    "61a82da024dfaa365ad7659ef65d15ca5482cad8a046c83ca921ae2d37e30dc1",
+    "efed3afb5aa66fab56b1af3ab69b55cf3653d0de2196798551000b50b0dca158",
+    "ce628f0d4d6c6a1a32d01b8e04697d81cc371ffc1796af8eb5d7f0cd56c765a9",
+    "3aed67566beabb0d2a931def7d857d7ec52197d9e64d579e2099c590f6b3da74",
+    "062a2eb7f8e1b4dc762c8b8a5fdda759aaab5100253d5d19e5868205ddebdf51",
+    "7291efb5c08a51da6283883c3f5f6e4644d4f511120b7a9025582c2832b3b97a",
     "7000843fa9c3e3cdafe07d23b2bc7253b88aafb8513827613cfc1d3cd04e3784",
-    "8a34c9e07746b9d50618e968a17f2f13530851cf582af735f8a8971f94ff5ed4"
+    "0f81eba3d0f7ce918d7e78eb0d6777b6d5f90186647eac228bb1370b6decd385"
   ],
-  "outputContextHash": "742b9e4bb65700f495f4cc0ad715f03da13462644850bf4df64f3d66f9bd8228",
-  "reviewedAt": "2026-11-20T14:09:30.282Z",
-  "reviewer": "Configured independent chapter reviewer",
-  "carried": true,
-  "carriedFrom": "2026-11-19T16:29:11.181Z"
+  "outputContextHash": "aa000c8b82e6c6ba2e96f57e8bded2af685ef5528ff5812794a305f978d5a630",
+  "reviewedAt": "2026-11-20T14:31:22.276Z",
+  "reviewer": "Configured independent chapter reviewer"
 }
