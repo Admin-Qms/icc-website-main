@@ -1,0 +1,281 @@
+{
+  "inputHash": "8bd3ded61c7f8ad9958d32ab2b5d2f4f0b89e880507d5d2d75acd8a3827fd0d5",
+  "reviewContextHash": "99a09eeabaf74f554063590f41580783a7f8277afe3f6cbccaf512e8706e94c1",
+  "reviewedAt": "2026-11-23T15:55:57.934Z",
+  "screening": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "Unresolved: The ISO 9001 Auditing Practices Group disclaimer statement recurs substantially verbatim across multiple chapters. In mapping-current-processes: 'The [ISO auditing guidance collection] provides educational material on evidence collection. The collection says its guidance is not definitive and is not intended as specified requirements, a benchmark, or mandatory audit criteria.' In evaluating-process-software: 'Educational material on evidence collection is available from the [ISO auditing guidance collection]...The collection says its guidance is not definitive and is not intended as specified requirements, a benchmark, or mandatory audit criteria.' In process-architecture: 'The [ISO auditing guidance collection] offers educational material on process auditing.' In mapping-workflows: 'The [ISO auditing guidance collection] includes educational material on evidence collection.' In documents-and-evidence: 'The [ISO auditing guidance collection] provides educational material on evidence. If the destination does not answer the reader's question...'. In ongoing-operation: 'The [ISO auditing guidance collection] includes educational material on improvement.' The multi-clause disclaimer about 'not definitive' and 'not intended as specified requirements, a benchmark, or mandatory audit criteria' appears in full or near-full form in at least mapping-current-processes and evaluating-process-software, with shortened or partial invocations in other chapters. This constitutes substantially copied text across chapters beyond what is necessary as a brief factual caution, violating the repetition standard that permits recurrence of subject matter and short factual cautions but not substantially identical multi-sentence passages.",
+      "Unresolved: Identical workflow table structure and near-identical content recurs in mapping-current-processes (subsection 'Identify process boundaries') without material adaptation for different chapters. The table with columns 'Boundary question,' 'Evidence to examine,' 'Decision to record' appears as a one-time tool, not as substantially duplicated text across pages, so this does not independently fail repetition; however, it supports the broader pattern of standardized language.",
+      "Unresolved: The phrase 'Illustrative example' and its associated scaffold (naming an unnamed manufacturer, marking work as hypothetical, emphasizing non-evidence status) recurs in every chapter with consistent structure. While this is an intentional design element and the outline explicitly includes an example label per chapter, the identical framing—'An unnamed Canadian manufacturer evaluates a hypothetical [process element]...This scenario is hypothetical; it is not a case study or a measured customer result'—appears word-for-word or near word-for-word in mapping-current-processes, evaluating-process-software, process-architecture, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, and ongoing-operation. The near-identical meta-disclaimer about not being a case study or measured result constitutes unnecessary repetition beyond what a chapter-specific example requires.",
+      "Unresolved (Claims): The guide repeatedly cites the ICC process management page as describing 'named process owners,' 'named owners,' or similar phrasing and states 'The [page] describes named process owners...This is a published vendor description, not proof that a particular plant has accepted responsibility or that access is configured appropriately' or close variants. Across multiple chapters (process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, ongoing-operation), the guide makes claims that the vendor page 'describes' or 'presents' process owners, flowcharts, controlled-document links, and configuration activities. The research supportedClaims for icc-processes confirms 'The page describes named process owners and links from processes to controlled documents and standard clauses' and 'The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training.' These vendor claims are factually supported by the primary source. However, the guide's repeated assertion that published descriptions do not establish local behavior or proof is accurate but becomes a near-formulaic disclaimer: the same warning is applied almost identically whenever the ICC page is cited. While the caution is appropriate and factually sound, the repetitive application of identical qualify language (e.g., 'The [page] describes X...This is a published vendor description, not proof that a particular site...') without material variation across six or more chapters constitutes repetitive qualifying language that exceeds the threshold for a brief jurisdictional or factual caution.",
+      "Unresolved (Claims): The guide consistently asserts that software claims require demonstration and that published descriptions do not establish implementation behavior. This assertion is accurate and well-supported by the instructions ('Apply the maintained writing rule: unverified capabilities are evaluation questions, not promises'), but the form in which it appears—nearly identical across chapters as 'Ask the supplier to demonstrate...The [published description] does not establish [specific detail]...Record what was shown, what was described, and what remains unanswered'—constitutes repetitive methodological language. The underlying claim is sound (capabilities should be tested before acceptance), but its application across nine chapters in nearly identical form violates the repetition principle by using substantially copied explanatory passages rather than chapter-specific application of the shared principle.",
+      "Unresolved (Consistency): The guide states in the introduction that 'The team should not erase the disagreement merely to make the map look complete' (ongoing-operation), but earlier in mapping-current-processes it instructs 'Do not let a polished diagram imply agreement that has not been reached.' These convey the same guidance but use different language. More significantly, in process-ownership the guide says 'The map should not present an uncertain relationship as settled merely because the diagram has space for a connecting line,' while in mapping-current-processes it says 'Do not treat a diagram as evidence that the actual handoff works.' All three formulations address the same underlying principle (avoid falsely implying certainty), but they recur across chapters with sufficient frequency and variation that readers encounter multiple phrasings of the same guidance without a clear reason why each chapter requires its own version. This is not an inconsistency in meaning but a minor consistency issue: the core principle should be stated once and referenced, rather than paraphrased across chapters.",
+      "Unresolved (Consistency): The 'Illustrative example' format consistently uses the phrase 'An unnamed Canadian manufacturer' and closes with 'This scenario is hypothetical; it is not a case study or a measured customer result.' The outline specifies this structure, but it results in repetitive and potentially confusing language when applied to every chapter. For instance, mapping-current-processes opens its first example with 'On a hypothetical production order' and closes with the standard disclaimer, while evaluating-process-software uses 'Compare two hypothetical views' with the same closing. The repetition of this exact disclaimer language across nine chapters without variation or chapter-specific adaptation is a styling and writing efficiency issue, not a factual claim error, but it violates the repetition standard for 'nearly verbatim' examples.",
+      "Unresolved (Completeness of FAQ): The 'Frequently asked questions' subsection appears only in the ongoing-operation chapter. The outline specifies 'Frequently asked questions' as a subsection in that chapter and includes nine faqQuestions in the outline. However, the body of ongoing-operation includes a '## Frequently asked questions' section with nine questions and answers. The FAQ section is present and complete but appears only in one chapter rather than distributed across the guide. This is not a factual error but raises a minor organizational consistency question: the FAQ should either appear in every chapter as a cross-reference or be clearly positioned only in the final chapter. The current placement is acceptable but unexplained.",
+      "Unresolved (Claims Accuracy - Software Features): The guide states in multiple places that 'The page states AI output is a suggestion reviewed by a person before entry into a controlled record' (introduction, planning evaluation section). The supportedClaims confirm this: 'The page states AI output is a suggestion reviewed by a person before entry into a controlled record.' This is a factually accurate citation. However, the guide does not explain what 'AI output' refers to in the context of the ICC process management module, nor does the research provide capability details about which outputs are AI-generated. The guide correctly treats this as a vendor statement to be verified, but it does not define the scope (e.g., does AI generate map suggestions, process descriptions, or something else?). This is not a failed claim but an incomplete explanation that could mislead a reader about what the vendor actually proposes for AI assistance.",
+      "Unresolved (Boundaries): The outline specifies boundaries for each chapter to 'Leave [other activity] to its assigned chapter.' Every chapter includes these boundaries in the outline. However, the actual body text does not explicitly reference or respect these boundaries in every case. For example, the mapping-current-processes chapter discusses 'turning the purpose into acceptance criteria' and mentions 'contacting a vendor,' which could reasonably be assigned to the evaluating-process-software chapter. The guide does not fail to cover the boundaries, but it does not consistently enforce them in the body text, creating minor ambiguity about which chapter is responsible for which decision. This is a structural consistency issue rather than a factual error but should be noted.",
+      "Claim that cannot be fully verified from research: The guide asserts throughout that the ICC module supports 'PDF process charts' and that these are 'reviewed before acceptance.' The supportedClaims state 'The page describes industry starting templates and review of supported PDF process charts before acceptance.' The research confirms that the vendor page makes this claim. However, the guide does not specify what 'review' entails, who performs it, or what 'acceptance' means in this context. The guide correctly notes that this is a vendor description and not proof, but it also does not clarify whether this review is performed by the vendor, the customer, or an agreed third party. This ambiguity is noted but not resolved.",
+      "Unresolved: The introduction states 'The same source says AI output is a suggestion reviewed by a person before entry into a controlled record. Treat that description as a starting point for questions about the proposed use.' This is factually supported by the research. However, later in the document (planning evaluation and implementation section), the guide repeats this claim and adds: 'A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.' This correct guidance is repeated with minimal variation in multiple places, reinforcing the repetition issue noted elsewhere."
+    ]
+  },
+  "adjudication": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "failed",
+    "dimensionReasons": {
+      "claims": "All vendor capability claims in the guide are either directly supported by source evidence or explicitly framed as vendor descriptions to be verified. The ICC process management page is described as presenting level-one maps, level-two flowcharts, named owners, document links, PDF chart review, configuration activities, and AI-suggestion language—each of these is confirmed by source:0:claim:0 through source:0:claim:5. Every citation is qualified with language such as 'published vendor description,' 'not proof,' or 'ask the supplier to demonstrate.' The ISO APG source is cited only for its educational papers and its own disclaimer, confirmed by source:1:claim:0 and source:1:claim:1. No capability is asserted as proven installed behavior. The screening's claims-failed verdict is not supported: the screener itself acknowledges the vendor claims are factually supported and the qualifications are accurate. The 'repetitive qualifying language' concern is a repetition issue, not a claims-accuracy issue. Claims passes.",
+      "consistency": "All guidance in the guide applies the same underlying principle throughout: unverified capabilities are evaluation questions, process assignments require evidence, and diagrams do not substitute for organizational decisions. The screener identifies instances where the same principle—avoid implying false certainty—is stated in different words across chapters. Inspecting the actual passages, each formulation is contextually appropriate to its chapter topic: page:1:paragraph:14 addresses boundary discrepancies, page:3:paragraph:26 addresses interface lines, page:9:paragraph:7 addresses open-question visibility. These are not contradictions; they are chapter-specific applications of a shared principle. The ISO APG disclaimer is qualified consistently throughout. The illustrative example structure is applied consistently and identically by design per the outline. No passage in the guide contradicts another on any factual or prescriptive point. Consistency passes.",
+      "repetition": "The guide contains substantially copied multi-sentence passages that recur across chapters beyond what is necessary as a brief factual caution. Inspecting the actual page paragraphs: page:0:paragraph:6 contains the full ISO APG disclaimer ('The collection says its guidance is not definitive and is not intended as specified requirements, a benchmark, or mandatory audit criteria'); page:2:paragraph:7 contains a nearly identical full-form disclaimer invocation for the same source in the same operative context. The illustrative-example meta-disclaimer ('This scenario is hypothetical; it is not a case study or a measured customer result') appears word-for-word in page:0:paragraph:7 and is structurally reproduced in page:1:paragraph:7, page:2:paragraph:8, page:2:paragraph:15, page:3:paragraph:7, page:4:paragraph:7, page:5:paragraph:6, page:6:paragraph:6, page:7:paragraph:6, page:8:paragraph:6, page:9:paragraph:6, and others. The instructions permit short factual cautions and jurisdiction qualifications to recur; they prohibit substantially copied paragraphs or examples. The identical meta-disclaimer sentence and the near-verbatim ISO APG multi-clause disclaimer exceed that threshold. Repetition fails."
+    },
+    "additionalFindings": [
+      {
+        "verdict": "clear",
+        "reason": "Finding 1 (index 0): The ISO APG disclaimer recurs substantially verbatim in page:0:paragraph:6 and page:2:paragraph:7 (both contain the full multi-clause disclaimer), with shortened invocations elsewhere. This is a genuine repetition defect resolved under the repetition dimension. It is not a separate claims or consistency defect.",
+        "evidenceIds": [
+          "page:0:paragraph:6",
+          "page:2:paragraph:7",
+          "source:1:claim:1"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 2 (index 1): The boundary-question table appears once in page:1:paragraph:13 within the mapping-current-processes chapter. It does not recur in other chapters. The screener itself concedes this 'does not independently fail repetition.' No violation.",
+        "evidenceIds": [
+          "page:1:paragraph:13"
+        ]
+      },
+      {
+        "verdict": "violation",
+        "reason": "Finding 3 (index 2): The illustrative-example meta-disclaimer ('This scenario is hypothetical; it is not a case study or a measured customer result') appears verbatim or near-verbatim across multiple chapter pages. page:0:paragraph:7 uses the full form; subsequent chapters reproduce the same closing sentence. The instructions permit short factual cautions to recur but prohibit substantially copied examples. The identical closing disclaimer sentence is a substantially copied passage, not merely recurring subject matter. This contributes to the repetition failure.",
+        "evidenceIds": [
+          "page:0:paragraph:7",
+          "page:1:paragraph:7",
+          "page:2:paragraph:8",
+          "page:3:paragraph:7",
+          "page:4:paragraph:7",
+          "page:5:paragraph:6",
+          "page:6:paragraph:6",
+          "page:7:paragraph:6",
+          "page:8:paragraph:6",
+          "page:9:paragraph:6"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 4 (index 3): The guide accurately cites vendor page claims about named owners, flowcharts, and configuration activities, confirmed by source:0:claim:1 and source:0:claim:4. The qualifying language ('published vendor description, not proof') is accurate and appropriate. That the same type of qualification recurs is a repetition concern, not a claims defect. The screener itself acknowledges the claims are factually supported.",
+        "evidenceIds": [
+          "source:0:claim:1",
+          "source:0:claim:4",
+          "page:4:paragraph:3",
+          "page:4:paragraph:12"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 4 continuation / Finding 5 (index 4): The evaluation methodology ('ask the supplier to demonstrate...record what was shown') is a consistent operational recommendation, not a false capability claim. Applying a consistent evaluation principle across chapters is not a claims defect. The repetition concern is captured under the repetition dimension.",
+        "evidenceIds": [
+          "page:2:paragraph:6",
+          "page:5:paragraph:3",
+          "page:7:paragraph:20"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 5 / index 5 (consistency): Different chapter-specific wordings of the principle 'avoid implying false certainty in diagrams' are contextually applied to different subjects—boundaries, interfaces, open questions—and do not contradict each other. The instructions require inconsistency in meaning to fail consistency, not mere paraphrase of a shared principle. No contradiction exists.",
+        "evidenceIds": [
+          "page:1:paragraph:14",
+          "page:3:paragraph:26",
+          "page:4:paragraph:23",
+          "page:9:paragraph:7"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 6 / index 6 (consistency): The illustrative-example framing is an intentional structural element specified by the outline. Uniform application of a required structural element is not a consistency defect. The repetition concern is captured under the repetition dimension.",
+        "evidenceIds": [
+          "page:0:paragraph:7",
+          "page:1:paragraph:7",
+          "page:2:paragraph:8"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 7 / index 7 (FAQ completeness): The outline places 'Frequently asked questions' as a subsection of the ongoing-operation chapter only. The guide implements this correctly at page:9:paragraph:16 through page:9:paragraph:34. Placement in the final chapter per the outline is correct and not a defect.",
+        "evidenceIds": [
+          "page:9:paragraph:16",
+          "page:9:paragraph:17",
+          "page:9:paragraph:34"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 8 / index 8 (AI output scope): The guide accurately cites source:0:claim:5 ('AI output is a suggestion reviewed by a person before entry into a controlled record') and explicitly frames it as a vendor statement to be verified with follow-up questions. The guide does not misrepresent the scope of AI output; it correctly treats the vendor description as a starting point. No claim is made about what the AI generates.",
+        "evidenceIds": [
+          "source:0:claim:5",
+          "page:0:paragraph:18"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 9 / index 9 (chapter boundaries): The outline boundary rules govern what each chapter should not cover in depth. The brief mention of 'contacting a vendor' and 'acceptance criteria' in mapping-current-processes provides context for the mapping purpose and is not a substantive treatment of software evaluation. Chapter boundaries are organizational guidelines, not factual claims. No defect in claims or consistency.",
+        "evidenceIds": [
+          "page:1:paragraph:9",
+          "page:1:paragraph:4"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 10 / index 10 (PDF review): The guide accurately cites source:0:claim:2 ('review of supported PDF process charts before acceptance') and qualifies it as a vendor description. Ambiguity about who performs the review is a matter the guide correctly flags as requiring confirmation. The guide does not assert more than the source supports.",
+        "evidenceIds": [
+          "source:0:claim:2",
+          "page:1:paragraph:26",
+          "page:7:paragraph:2",
+          "page:7:paragraph:20"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 11 / index 11 (AI output repetition): The AI-output guidance appears in page:0:paragraph:18 and is briefly referenced in context elsewhere. This is a short factual caution permissibly recurring across a long guide. The fuller treatment is in one location; the subsequent references are abbreviated. This does not independently add a new repetition violation beyond what is already captured under the repetition dimension verdict.",
+        "evidenceIds": [
+          "page:0:paragraph:18",
+          "source:0:claim:5"
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "violation",
+        "reason": "The ISO APG disclaimer recurs in substantially verbatim multi-sentence form. page:0:paragraph:6 contains the full statement ('The collection says its guidance is not definitive and is not intended as specified requirements, a benchmark, or mandatory audit criteria'); page:2:paragraph:7 reproduces an equivalent full invocation in operative context. The instructions allow short factual cautions to recur but prohibit substantially copied paragraphs. The multi-clause disclaimer exceeds a short factual caution. Genuine repetition defect confirmed.",
+        "evidenceIds": [
+          "page:0:paragraph:6",
+          "page:2:paragraph:7",
+          "source:1:claim:1"
+        ]
+      },
+      {
+        "index": 1,
+        "verdict": "clear",
+        "reason": "The boundary-question table appears exactly once at page:1:paragraph:13. The screener's own text concedes it 'does not independently fail repetition.' No duplication of this table was found in other chapter pages on inspection. No violation.",
+        "evidenceIds": [
+          "page:1:paragraph:13"
+        ]
+      },
+      {
+        "index": 2,
+        "verdict": "violation",
+        "reason": "The illustrative-example meta-disclaimer sentence ('This scenario is hypothetical; it is not a case study or a measured customer result') is reproduced verbatim in page:0:paragraph:7 and in functionally identical form across page:1:paragraph:7, page:2:paragraph:8, page:3:paragraph:7, page:4:paragraph:7, page:5:paragraph:6, page:6:paragraph:6, page:7:paragraph:6, page:8:paragraph:6, and page:9:paragraph:6. While the outline requires a labeled example per chapter, it does not require an identical closing disclaimer sentence. Verbatim repetition of the same sentence across nine chapters is a substantially copied passage, not merely recurring subject matter. Genuine repetition defect confirmed.",
+        "evidenceIds": [
+          "page:0:paragraph:7",
+          "page:1:paragraph:7",
+          "page:2:paragraph:8",
+          "page:3:paragraph:7",
+          "page:4:paragraph:7",
+          "page:5:paragraph:6",
+          "page:6:paragraph:6",
+          "page:7:paragraph:6",
+          "page:8:paragraph:6",
+          "page:9:paragraph:6"
+        ]
+      },
+      {
+        "index": 3,
+        "verdict": "clear",
+        "reason": "The guide's citations of the ICC page as describing named owners, flowcharts, and configuration activities are confirmed by source:0:claim:1 and source:0:claim:4. The qualifying language is accurate. The screener identifies this as a claims issue but its own analysis concedes the claims are factually supported. Repetitive qualifying language is a repetition issue, not a claims defect. No false assertion is made.",
+        "evidenceIds": [
+          "source:0:claim:1",
+          "source:0:claim:4",
+          "page:4:paragraph:3",
+          "page:4:paragraph:28"
+        ]
+      },
+      {
+        "index": 4,
+        "verdict": "clear",
+        "reason": "Applying a consistent evaluation methodology across chapters ('ask the supplier to demonstrate') is not a false capability claim. The underlying recommendation is accurate and the instructions require evaluation questions rather than unverified promises. This is a repetition stylistic concern, not a claims defect. No unverified capability is asserted.",
+        "evidenceIds": [
+          "page:2:paragraph:5",
+          "page:2:paragraph:6",
+          "page:5:paragraph:11",
+          "page:7:paragraph:20"
+        ]
+      },
+      {
+        "index": 5,
+        "verdict": "clear",
+        "reason": "The three formulations identified by the screener ('Do not let a polished diagram imply agreement,' 'The map should not present an uncertain relationship as settled,' 'The team should not erase the disagreement') each address the same principle applied to different chapter contexts—process boundaries, process architecture interfaces, and ongoing maintenance respectively. No formulation contradicts another. Consistency requires absence of contradiction, not verbal uniformity. No inconsistency defect.",
+        "evidenceIds": [
+          "page:1:paragraph:14",
+          "page:3:paragraph:26",
+          "page:4:paragraph:23",
+          "page:9:paragraph:7"
+        ]
+      },
+      {
+        "index": 6,
+        "verdict": "clear",
+        "reason": "The uniform illustrative-example framing is a required structural element per the outline. Consistent application of a required element is not a consistency defect. The repetition concern is addressed under the repetition dimension. No consistency violation.",
+        "evidenceIds": [
+          "page:0:paragraph:7",
+          "page:1:paragraph:7",
+          "page:2:paragraph:8",
+          "page:3:paragraph:15"
+        ]
+      },
+      {
+        "index": 7,
+        "verdict": "clear",
+        "reason": "The FAQ section is placed in the ongoing-operation chapter per the outline's explicit assignment. page:9:paragraph:16 through page:9:paragraph:34 implement all nine faqQuestions listed in the outline. Placement in the final chapter is correct and consistent with the outline. No defect.",
+        "evidenceIds": [
+          "page:9:paragraph:16",
+          "page:9:paragraph:17",
+          "page:9:paragraph:18",
+          "page:9:paragraph:34"
+        ]
+      },
+      {
+        "index": 8,
+        "verdict": "clear",
+        "reason": "The AI output statement is cited accurately from source:0:claim:5 and treated throughout as a vendor statement requiring verification. The guide does not define what the AI generates because the source does not establish that; treating the scope as unknown is correct behavior per the maintained writing rule. No misleading claim.",
+        "evidenceIds": [
+          "source:0:claim:5",
+          "page:0:paragraph:18",
+          "source:0:claim:6"
+        ]
+      },
+      {
+        "index": 9,
+        "verdict": "clear",
+        "reason": "Brief preparatory mentions of vendor evaluation criteria in page:1:paragraph:9 provide context for defining a mapping purpose and do not constitute substantive treatment of software evaluation that belongs exclusively to the evaluating-process-software chapter. The boundary rules govern depth of treatment, not incidental contextual references. No structural defect rises to a claims or consistency failure.",
+        "evidenceIds": [
+          "page:1:paragraph:9",
+          "page:2:paragraph:1",
+          "page:2:paragraph:3"
+        ]
+      },
+      {
+        "index": 10,
+        "verdict": "clear",
+        "reason": "The PDF chart review claim is cited accurately per source:0:claim:2 and qualified as a vendor description. The guide explicitly directs the reader to confirm the procedure for the actual implementation. Ambiguity about reviewer identity is a gap the guide correctly flags as requiring confirmation rather than asserting a specific answer. No false claim.",
+        "evidenceIds": [
+          "source:0:claim:2",
+          "page:7:paragraph:2",
+          "page:7:paragraph:20",
+          "page:1:paragraph:26"
+        ]
+      },
+      {
+        "index": 11,
+        "verdict": "clear",
+        "reason": "The AI-output caution at page:0:paragraph:18 is the primary treatment. Subsequent brief references are contextually abbreviated and do not reproduce the multi-sentence passage verbatim. This does not independently add a new repetition violation beyond findings 0 and 2 already captured. No separate defect.",
+        "evidenceIds": [
+          "page:0:paragraph:18",
+          "source:0:claim:5"
+        ]
+      }
+    ]
+  }
+}
