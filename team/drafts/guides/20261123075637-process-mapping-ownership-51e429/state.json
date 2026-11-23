@@ -34,7 +34,7 @@
     ]
   },
   "productionSlotId": "2026-W48-slot-1",
-  "stage": "writing",
+  "stage": "reviewing",
   "pages": {
     "mapping-current-processes": {
       "hash": "e0bc0078ea2b7d80f9c83006463c396713613a00c6de35e3ba11413a911b35fb",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T14:40:56.119Z",
+  "updatedAt": "2026-11-23T14:44:04.898Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -3310,7 +3310,1965 @@
   },
   "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5",
   "outlineHash": "8f7e2d2ef46b225b52579a73be0a95456d8d75889d40ef52e297518d9eec3586",
-  "audit": null,
+  "audit": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "The pages provided (mapping-current-processes, evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, ongoing-operation) show heavy repetition of opening statements, example structures, and closing directives. For instance, multiple chapters begin with identical framing (e.g., 'The [ICC page] describes...' followed by the same qualifying statement 'This published description is a reason to ask...' or 'This is a published vendor description...'). The example label structure ('An unnamed Canadian manufacturer...The example is hypothetical and does not describe...') recurs nearly identically across chapters.",
+      "The illustrative example pattern is prescribed identically in the outline for every subsection: a scenario involving an unnamed manufacturer, a hypothetical process, identified roles performing a task, and a closing statement ('The example is hypothetical and does not describe a measured customer result' or similar). This standardized example template, repeated across all 32+ subsections, constitutes repetition of structure and explanatory approach rather than genuinely varied illustrative content.",
+      "Multiple chapters reference the same ICC process page and ISO APG collection with identical qualifying language. For example, 'The [ICC page] describes...This published description is a reason to ask...' or 'The [ISO guidance collection] offers educational papers and expressly states...applicable requirements still need separate assessment' recurs across multiple chapters. While short factual cautions and cross-references are permitted to recur, the identical framing and structure of these references across chapters suggests template-based repetition rather than chapter-specific application.",
+      "The pages provided show that opening paragraphs often begin with 'A [process/decision type] is [definition]' or 'A [decision type] works better when [condition],' followed by vendor description qualification ('The [ICC page] describes...' or 'The [ISO guidance collection]...'), then an example. This three-part structure recurs across pages, suggesting systematic repetition of a template rather than chapter-specific composition. For example: mapping-current-processes page begins with definitions and process-owner role; the evaluating-process-software page begins with evaluation structure; the process-architecture page begins with architecture purpose—yet each follows the same underlying framework of definition + vendor description + example + organization guidance.",
+      "The qualifying statement about vendor descriptions appears in nearly identical form across multiple pages: 'That published description is a reason to ask how [X]; it is not proof that [Y].' This exact pattern recurs in evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, and rollout-and-training pages, constituting repetition of a core explanatory phrase across chapters."
+    ],
+    "screening": {
+      "claims": "failed",
+      "consistency": "failed",
+      "repetition": "failed",
+      "unresolvedFindings": [
+        "The outline structure prescribes identical subsections and workflow descriptions across all nine chapters without variation. Each subsection repeats the same workflow template (role, input, decision, record, exception) and identical evaluation criteria verbatim. This creates substantial repetition across chapters rather than chapter-specific content. For example, every subsection across all chapters uses: 'The role Assigned process owner, The input Current process records and relevant evidence, The decision Determine ownership, acceptance and next action, The record Documented decision and its owner, The exception Missing evidence, conflicting ownership or unavailable access' and 'Test the decision with representative process records and exceptions.' This is not merely recurring subject matter but nearly verbatim duplication of explanatory structure.",
+        "The outline indicates that each of the nine chapters should cover distinct phases (mapping current, evaluating software, designing architecture, assigning owners, mapping workflows, connecting documents, migration, rollout, maintenance) yet prescribes identical subsection templates and identical workflow descriptions for each. This suggests the generated content likely repeats the same underlying explanation structure across all nine chapters with only process-specific nouns substituted, rather than genuinely distinct chapter content.",
+        "The pages provided (mapping-current-processes, evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, ongoing-operation) show heavy repetition of opening statements, example structures, and closing directives. For instance, multiple chapters begin with identical framing (e.g., 'The [ICC page] describes...' followed by the same qualifying statement 'This published description is a reason to ask...' or 'This is a published vendor description...'). The example label structure ('An unnamed Canadian manufacturer...The example is hypothetical and does not describe...') recurs nearly identically across chapters.",
+        "The outline's boundaries list for each chapter instructs authors to 'Leave [specific task] to its assigned chapter,' creating artificial compartmentalization. However, the prescribed identical workflow template across chapters means that if content was generated from this outline, the same decision-analysis process would be described identically in each chapter despite being applied to different tasks. This would constitute substantial repetition, not distinct chapter scope.",
+        "The illustrative example pattern is prescribed identically in the outline for every subsection: a scenario involving an unnamed manufacturer, a hypothetical process, identified roles performing a task, and a closing statement ('The example is hypothetical and does not describe a measured customer result' or similar). This standardized example template, repeated across all 32+ subsections, constitutes repetition of structure and explanatory approach rather than genuinely varied illustrative content.",
+        "Multiple chapters reference the same ICC process page and ISO APG collection with identical qualifying language. For example, 'The [ICC page] describes...This published description is a reason to ask...' or 'The [ISO guidance collection] offers educational papers and expressly states...applicable requirements still need separate assessment' recurs across multiple chapters. While short factual cautions and cross-references are permitted to recur, the identical framing and structure of these references across chapters suggests template-based repetition rather than chapter-specific application.",
+        "The outline requires every chapter to include subsections on the same topic (e.g., 'Define owner responsibilities,' 'Assign decisions and backups,' 'Resolve ownership conflicts,' 'Review ownership over time') with identical evaluation criteria and workflow templates. Even if the process-specific nouns differ, the underlying instructional structure and decision framework would be duplicated across chapters, violating the standard that substantially copied paragraphs or explanations constitute repetition.",
+        "The sourceIds arrays in the outline show that icc-processes and iso-apg are cited in every single subsection across all nine chapters. The supportedClaims for these sources are general and non-specific to individual chapters (e.g., 'The page describes a level-one process map...' 'The site provides educational papers on quality management system auditing...'). This means every chapter is relying on the same general claims from the same two sources, suggesting that if content was generated, it would repeat the same vendor descriptions and guidance statements across all chapters with minimal variation.",
+        "The FAQ section at the end (nine questions) and the 'Prepare a software demonstration' subsection in the final chapter prescribe a standardized list and standardized demonstration-planning structure. These are described in the outline as fixed content, yet they also reference the same ICC page and ISO guidance in the same manner as earlier chapters, extending the repetition pattern into the concluding material.",
+        "The outline's estimatedWords (19,500) across nine chapters averages ~2,167 words per chapter. The targetWords per chapter ranges from 2,000-2,000 (identical). The chapters' prescribed subsections (4 per chapter, 32+ total subsections) with identical workflow templates and evaluation criteria suggest that if content was generated to meet this word count under these constraints, it would necessarily reuse explanatory text and framework across chapters rather than develop distinct approaches to each phase. This structural constraint makes substantial repetition likely.",
+        "The outline's definition of 'Illustrative example' at the global level prescribes a fixed label and structure: 'An unnamed Canadian manufacturer evaluates a hypothetical map for a production workflow; all situations and records are hypothetical.' This same label and similar structure recur in every subsection's example field, making the example approach itself a repeated element rather than genuinely varied illustration.",
+        "The body text of the mapping-current-processes page includes a subsection 'Define the mapping purpose' that uses the workflow table structure and discusses the same ICC page and ISO guidance in similar language as the outline prescribes. This suggests that if the outline was followed, the same framing and decision structure would recur in later chapters' treatment of different tasks (e.g., 'Define owner responsibilities,' 'Set evaluation criteria,' 'Group processes by purpose'), creating substantial repetition across chapters.",
+        "The outline boundary instructions instruct each chapter to 'Leave [task] to its assigned chapter,' yet the prescribed workflow and evaluation structure for each chapter is identical. This creates a logical inconsistency: if each chapter's underlying decision process is the same (role, input, decision, record, exception, evaluation criteria), the boundary instructions do not create distinct chapter scope—they merely partition which process type is discussed in each, while the analytical framework remains the same throughout. When the analytical framework is repeated identically across all chapters, that constitutes substantial repetition.",
+        "The sourceIds in the outline show only two sources (icc-processes and iso-apg) cited across all chapters. Both are cited in every subsection. The supportedClaims for each source are generic and not chapter-specific. This two-source constraint across nine chapters, with generic claims, means that if content was generated, it would necessarily repeat the same source citations, qualifications, and vendor-description paraphrasing across all chapters, as there are no additional sources to differentiate chapter-specific evidence.",
+        "The outline prescribes that every chapter include an imageBrief ('A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos'—identical across all chapters) and a scope statement that follows the same pattern for each chapter ('Cover [task] for process mapping software. Explain roles, inputs, decisions, records, exceptions and evaluation criteria without asserting unverified capabilities.'—templated). This makes the visual and concluding framework itself a repeated element.",
+        "The pages provided show that opening paragraphs often begin with 'A [process/decision type] is [definition]' or 'A [decision type] works better when [condition],' followed by vendor description qualification ('The [ICC page] describes...' or 'The [ISO guidance collection]...'), then an example. This three-part structure recurs across pages, suggesting systematic repetition of a template rather than chapter-specific composition. For example: mapping-current-processes page begins with definitions and process-owner role; the evaluating-process-software page begins with evaluation structure; the process-architecture page begins with architecture purpose—yet each follows the same underlying framework of definition + vendor description + example + organization guidance.",
+        "The qualifying statement about vendor descriptions appears in nearly identical form across multiple pages: 'That published description is a reason to ask how [X]; it is not proof that [Y].' This exact pattern recurs in evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, and rollout-and-training pages, constituting repetition of a core explanatory phrase across chapters.",
+        "The outline's introduction (1,500 words) is separate from the nine chapters. The body text of the introduction page provided includes sections ('The operational problem,' 'How to use this guide,' 'Planning evaluation and implementation') that recap the nine chapters and reference the same ICC and ISO sources with similar qualifying language. This recaps rather than introduces distinct information from chapters and extends the repetition pattern into the introduction itself.",
+        "No primary evidence (actual audit criteria, ISO clause text, confirmed software specifications, verified case results, demonstrated capabilities under realistic conditions, or independent evaluation findings) is supplied for the core claims. The outline cites only two sources: an ICC vendor page and an ISO APG educational guidance collection. The ICC page claims are summarized in vendor-favorable language ('process map grouped into management, customer-facing, core and support categories'; 'named process owners'; 'AI output is a suggestion reviewed by a person'). The ISO APG source explicitly states its guidance is not definitive or mandatory audit criteria. No independent evidence corroborates the ICC capabilities or confirms that the described features work as stated in an actual installation. The guide relies on vendor descriptions and disclaimers rather than verifiable evidence.",
+        "The claim that 'The page states AI output is a suggestion reviewed by a person before entry into a controlled record' is unverified. The guide presents this as fact but does not establish: (a) whether this is ICC's actual default behavior or a possible configuration, (b) how 'reviewed by a person' is enforced technically or organizationally, (c) whether the reviewed output requires additional approval before it becomes a controlled record, (d) what the actual workflow is for rejected suggestions, or (e) whether this applies to all types of AI output or only specific scenarios. The guide does not cite evidence that this feature exists in a deployed installation.",
+        "The guide asserts that the ICC process management module describes 'industry starting templates' but does not provide evidence of which industries, what templates are included, or whether templates are customizable. It references 'review of supported PDF process charts before acceptance' but does not establish which file formats are supported, what review criteria are applied, who performs the review, or whether the review is automatic or manual. These are presented as features without evidence that they function as described.",
+        "The guide states that the ICC process page 'describes broad configuration activities including process mapping, module configuration, standards onboarding and deployment with training' but does not establish the scope, sequence, or outcome of each activity. It acknowledges 'Details and applicability require demonstration' but does not retain or escalate that caveat into the body chapters, which prescribe decision workflows as if implementation details are settled.",
+        "The outline's repeated instruction to 'Distinguish vendor descriptions, general recommendations and the site's verified evidence' in every subsection's keyPoints suggests the generated content should explicitly separate these three categories in each subsection. However, the body text pages provided do not consistently follow this discipline. Many paragraphs blend vendor descriptions, general recommendations, and organizational guidance without clearly marking which is which, particularly in illustrative examples and in the closing guidance of each section.",
+        "The guide's claim that the [ICC page] 'describes links from processes to controlled documents and standard clauses' is accepted as fact without evidence of what 'standard clauses' means (ISO 9001:2015 clauses? All clauses or selected ones? How is the mapping maintained?). The guide does not establish whether these links are pre-populated in templates or created by each organization, or how they are updated when standards or clauses change.",
+        "The outline notes that ISO 9001:2015 clauses 4.4 and 5.3 are mapped to the ICC module. However, no evidence is provided that this mapping is verified, complete, or sufficient. The guide does not cite ISO 9001:2015 text or explain how clause 4.4 (Processes to achieve objectives) and clause 5.3 (Organizational roles, responsibilities, and authorities) are addressed by software alone versus organizational decisions. The claim that 'this mapping is not proof that software alone satisfies requirements' is correct, but the guide does not explain what the mapping does establish or how to evaluate it.",
+        "The guide does not establish whether the described process mapping, ownership assignment, document linking, and review workflow are general quality management practices (which would apply regardless of software) or specific features of the ICC product. By interleaving vendor descriptions with general organizational guidance, it creates ambiguity about which decisions are ICC-specific and which are universally applicable. For example, 'Assign decisions and backups' is presented as a chapter topic, but it is not clear whether ICC provides specific functionality to assign and track backups or whether this is a human organizational decision that happens to be discussed in the context of using the software.",
+        "The guide repeatedly qualifies unverified claims by instructing readers to 'Ask for a demonstration' or 'Record what was demonstrated separately from what was described.' This is good practice, but it does not substitute for evidence. The guide should either provide evidence that the described functionality exists or should explicitly state that it does not know whether the functionality exists. By deferring verification to future demonstrations, the guide presents vendor descriptions as plausible without evidence.",
+        "The illustrative examples are consistently labeled as hypothetical and do not describe actual customer results, which is appropriate. However, the guide does not distinguish between examples that illustrate general organizational practices (which could apply to any team) and examples that illustrate software-specific workflows or capabilities. For instance, 'An unnamed Canadian manufacturer reviews ownership of a production workflow' could be describing a universal practice or an ICC-specific feature; the guide does not clarify.",
+        "The 'Frequently asked questions' section in the final chapter includes nine questions, but none of them are presented as questions readers actually asked. Instead, they are prescriptive answers to questions the guide assumes readers have. For example, 'What should a process map show first?' is answered with guidance ('Begin with the purpose...') rather than evidence of what readers actually need or what ICC actually supports. The FAQ does not reference previous chapters, evaluate unresolved issues, or identify gaps that could not be closed in the guide.",
+        "The guide's final subsection, 'Prepare a software demonstration,' prescribes a process (select a representative workflow, prepare a sample, agree on criteria, attend the presentation, record observations) without evidence that this process is effective or that ICC supports the proposed demonstration scenario. It instructs: 'Ask to see how the proposed arrangement would represent the selected sample,' but does not establish what the presenter will show or how the organization can verify that the demonstration behavior matches installed behavior.",
+        "The guide's claim that the outline includes 'evaluation questions' and 'clearly labeled hypothetical' content to distinguish unverified claims from promises is undermined by the fact that many chapters present evaluation questions as if they should be asked of the vendor, without establishing what evidence would constitute a satisfactory answer or what the organization should do if the vendor cannot demonstrate a capability.",
+        "The outline's emphasis on 'maintained writing rule: unverified capabilities are evaluation questions, not promises' is not consistently applied in the body text. For instance, the guide states that the ICC page 'describes AI output is a suggestion reviewed by a person before entry into a controlled record' without marking this as an unverified capability or framing it as an evaluation question that should be tested in a demonstration.",
+        "The guide does not evaluate whether the nine-chapter sequence (mapping current, evaluating software, designing architecture, assigning owners, mapping workflows, connecting documents, migration, rollout, maintenance) is appropriate for all organizations or whether some organizations might need a different sequence. It presents the sequence as normative without evidence that this order is effective or necessary.",
+        "The guide's treatment of 'process owner' as a defined role (The role accountable for decisions and review of a defined process) is appropriate for a glossary, but the guide does not establish whether ICC's software supports this role definition, enforces accountability, or tracks decisions. It presents the role concept as a general practice without distinguishing software-specific features."
+      ]
+    },
+    "adjudication": {
+      "claims": "passed",
+      "consistency": "passed",
+      "repetition": "failed",
+      "dimensionReasons": {
+        "claims": "The guide consistently frames ICC vendor descriptions as published statements to be tested rather than confirmed capabilities. For example, page:0:paragraph:5 states the ICC page descriptions 'are not evidence that a particular plant has a given problem, that every configuration behaves identically, or that a software map alone satisfies a standard.' Page:0:paragraph:18 treats the AI-output description as 'a starting point for questions about the proposed use.' Page:9:paragraph:32 explicitly states 'No. A software view can help people organize or find process information, but a link or map alone does not establish that work meets applicable requirements.' No chapter asserts unverified ICC capabilities as facts. Claims dimension passes.",
+        "consistency": "The guide's treatment of sources is internally consistent. Source:0:claim:5 (AI output reviewed by a person) is reflected in page:0:paragraph:18 as a starting point for questions, not a promise. Source:0:claim:3 (clause mapping is not proof software alone satisfies requirements) is reflected in page:9:paragraph:32. Source:0:claim:6 (vendor descriptions are not verified installed behavior) is reflected throughout. Source:1:claim:1 (ISO APG guidance is not definitive or mandatory) is reflected in every chapter's ISO APG reference, e.g., page:1:paragraph:5, page:2:paragraph:8, page:3:paragraph:6. No chapter contradicts these source-level qualifications. Consistency dimension passes.",
+        "repetition": "The actual page paragraphs show substantially copied structural patterns across all nine chapters. The qualifying phrase pattern 'The [ICC page] describes X. That published description is a reason to ask...' or 'This is a published vendor description...' appears in nearly identical form across pages 1 through 9: compare page:1:paragraph:4, page:2:paragraph:5, page:3:paragraph:3, page:4:paragraph:3, page:5:paragraph:3, page:6:paragraph:2, page:7:paragraph:2, page:8:paragraph:2, page:9:paragraph:2. The ISO APG qualifying paragraph ('The collection states that its guidance is not definitive or mandatory audit criteria. It can help frame questions...while the organization separately assesses its requirements') is reproduced nearly verbatim across page:1:paragraph:5, page:2:paragraph:8, page:3:paragraph:6, page:4:paragraph:6, page:5:paragraph:5, page:6:paragraph:5, page:7:paragraph:5, page:8:paragraph:5, page:9:paragraph:5. The illustrative example closing formula ('The example is hypothetical and does not describe a measured customer result' or near-identical variants) is copied verbatim or near-verbatim across page:1:paragraph:7, page:2:paragraph:9, page:3:paragraph:7, page:4:paragraph:7, page:5:paragraph:6, page:6:paragraph:6, page:7:paragraph:6, page:8:paragraph:6, page:9:paragraph:6. Each chapter's closing paragraph follows the same template: cite the ICC process page, then state 'The [lasting/reliable/workable] [outcome] comes from the organization's own [decisions/evidence/choices].' These are substantially copied paragraphs and closing formulas, not merely recurring subject matter or short factual cautions. Repetition dimension fails."
+      },
+      "additionalFindings": [
+        {
+          "verdict": "clear",
+          "reason": "Finding 18: The screening asserts no primary evidence is supplied and the guide relies on vendor descriptions without independent corroboration. The guide's maintained writing rule explicitly designates unverified capabilities as evaluation questions, not promises. Source:0:claim:6 records that vendor page descriptions are not verified installed behavior. The guide consistently marks ICC descriptions as published statements to test (page:0:paragraph:5, page:0:paragraph:17) and ISO APG as non-mandatory guidance (page:0:paragraph:6). A guide structured as evaluation and implementation advice is not required to supply independent corroboration of vendor claims; it is required not to assert them as confirmed facts, which it does not. No claims violation results from this structure.",
+          "evidenceIds": [
+            "source:0:claim:6",
+            "page:0:paragraph:5",
+            "page:0:paragraph:17"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 19: The AI-output claim from source:0:claim:5 ('AI output is a suggestion reviewed by a person before entry into a controlled record') is reproduced in page:0:paragraph:18 explicitly as a starting point for questions: 'Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.' This is not an assertion that the feature exists as described; it is an explicitly conditional discussion framing an evaluation question. No claims violation.",
+          "evidenceIds": [
+            "source:0:claim:5",
+            "page:0:paragraph:18"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 20: Industry starting templates and PDF review are described as published vendor descriptions in page:0:paragraph:17 ('Confirm how those descriptions apply to the proposed implementation. They do not establish that every file, permission, link, or recovery action works in a particular way. Ask for a demonstration of the relevant scenario'). Page:1:paragraph:26 also treats the PDF review description as a demonstration question. These are evaluation questions, not asserted capabilities.",
+          "evidenceIds": [
+            "source:0:claim:2",
+            "page:0:paragraph:17",
+            "page:1:paragraph:26"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 21: Source:0:claim:4 records that 'Details and applicability require demonstration.' Page:0:paragraph:17 reproduces this qualification. The body chapters consistently instruct readers to confirm how descriptions apply and to ask for demonstrations rather than treating configuration activities as settled. The caveat is carried forward throughout.",
+          "evidenceIds": [
+            "source:0:claim:4",
+            "page:0:paragraph:17"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 22: The guide does blend vendor descriptions with organizational guidance but does so within a framework that consistently labels ICC descriptions as 'published vendor descriptions,' ISO APG as non-mandatory educational guidance, and organizational decisions as the reader's own responsibility. The maintained writing rule does not require a formal three-column table in every paragraph; it requires that unverified capabilities not be asserted as promises, which the guide observes throughout. No actionable claims violation.",
+          "evidenceIds": [
+            "page:0:paragraph:5",
+            "page:0:paragraph:6",
+            "source:0:claim:6"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 23: The guide treats links to controlled documents and standard clauses as a published vendor description to test (page:6:paragraph:2: 'That published description is a useful starting point for a demonstration. It does not establish that a particular plant has chosen the right documents, configured access, or verified every link.'). Open questions about what 'standard clauses' means and how links are maintained are exactly the kind of evaluation questions the guide invites the reader to ask. No unsupported assertion results.",
+          "evidenceIds": [
+            "source:0:claim:1",
+            "page:6:paragraph:2"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 24: Source:0:claim:3 explicitly records that the clause 4.4/5.3 mapping is 'not proof that software alone satisfies requirements.' Page:9:paragraph:32 states the same conclusion. The guide does not explain what the mapping does establish beyond being a vendor description to evaluate, which is consistent with the maintained writing rule that the mapping notation itself is not a confirmed capability.",
+          "evidenceIds": [
+            "source:0:claim:3",
+            "page:9:paragraph:32"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 25: The guide's interleaving of vendor descriptions with general organizational guidance is a structural choice of an evaluation and implementation guide. Throughout, ICC-specific descriptions are labeled as such and general organizational practices are presented as the reader's own decisions. The guide does not claim ICC provides specific functionality to enforce backup assignments; it presents those as organizational decisions the reader should make. No misleading promise results.",
+          "evidenceIds": [
+            "page:4:paragraph:12",
+            "page:0:paragraph:5"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 26: Deferring verification to future demonstrations is exactly the approach required by the maintained writing rule for unverified capabilities. The guide does not present vendor descriptions as plausible facts; it frames them as starting points for evaluation questions. This is not a defect under the applicable evaluation standard.",
+          "evidenceIds": [
+            "page:0:paragraph:17",
+            "page:2:paragraph:5"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 27: Illustrative examples labeled as hypothetical and not describing actual customer results satisfy the guide's requirement to label hypothetical content. The guide is not required to distinguish whether an example illustrates general practice versus software-specific workflow, provided no unverified software capability is asserted. No claims violation results.",
+          "evidenceIds": [
+            "page:0:paragraph:7",
+            "page:0:paragraph:13"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 28: FAQ questions prescribing general guidance answers rather than citing reader-submitted questions is a standard editorial approach. The FAQ does not assert unverified ICC capabilities. The ISO APG qualification is repeated in page:9:paragraph:30. No claims or consistency violation results from the FAQ format.",
+          "evidenceIds": [
+            "page:9:paragraph:30",
+            "page:9:paragraph:32"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 29: The demonstration-planning section frames all demonstration steps as evaluation questions, not as confirmed supplier commitments. Page:9:paragraph:38 instructs: 'If the scenario cannot be shown, record the reason and the person who will obtain the answer rather than treating the feature as present.' This is properly conditional guidance, not an unsupported assertion.",
+          "evidenceIds": [
+            "page:9:paragraph:37",
+            "page:9:paragraph:38"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 30: The guide explicitly provides actionable evaluation criteria throughout. For example, page:2:paragraph:6–7 provides observable outcome prompts. Page:9:paragraph:40 instructs separating demonstrated outcomes from verbal commitments. The guide does not need to predict every possible negative vendor response to constitute adequate evaluation guidance.",
+          "evidenceIds": [
+            "page:2:paragraph:6",
+            "page:2:paragraph:7",
+            "page:9:paragraph:40"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 31: The AI-output description is reproduced in page:0:paragraph:18 with explicit framing as a starting point for questions and an explicit instruction not to assume it supplies an unverified product capability. The maintained writing rule is applied to this specific claim.",
+          "evidenceIds": [
+            "source:0:claim:5",
+            "page:0:paragraph:18"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 32: The guide presents the nine-chapter sequence in page:0:paragraph:10–11 as a structure for identifying already-made decisions and remaining questions, not as a normative prescription for every organization. Page:0:paragraph:12 says chapters can be read in order or individually. No claims violation from not evaluating alternative sequences.",
+          "evidenceIds": [
+            "page:0:paragraph:10",
+            "page:0:paragraph:12"
+          ]
+        },
+        {
+          "verdict": "clear",
+          "reason": "Finding 33: The guide presents 'process owner' as a general organizational role concept and treats ICC's display of named owners as a published description to demonstrate (page:4:paragraph:3). It does not claim ICC enforces accountability or tracks decisions automatically. No unsupported capability assertion results.",
+          "evidenceIds": [
+            "page:4:paragraph:3",
+            "page:0:paragraph:4"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "index": 0,
+          "verdict": "clear",
+          "reason": "The outline's workflow template (role, input, decision, record, exception) and identical evaluation criteria fields are structural scaffolding for the outline document, not prose paragraphs in the guide. The repetition standard fails for substantially copied paragraphs or examples in the actual page content. The outline template must be distinguished from the page prose. However, this finding is relevant context for assessing whether the actual page paragraphs repeat a template, which is addressed in finding 2 and the overall repetition dimension.",
+          "evidenceIds": [
+            "page:1:paragraph:2",
+            "page:2:paragraph:3",
+            "page:3:paragraph:2"
+          ]
+        },
+        {
+          "index": 1,
+          "verdict": "clear",
+          "reason": "The concern that distinct phases might share the same underlying framework is a prediction about content quality, not a finding about actual page content. The actual chapters have distinct topical coverage: chapter 1 covers mapping current processes, chapter 2 covers software evaluation criteria, chapter 3 covers architecture design, chapter 4 covers ownership assignment, etc. Having a shared analytical framework (define, test, record, escalate) applied to different subjects is not itself repetition of substantially copied paragraphs. The repetition finding must be grounded in actual copied passages, addressed separately.",
+          "evidenceIds": [
+            "page:1:paragraph:1",
+            "page:2:paragraph:2",
+            "page:3:paragraph:1",
+            "page:4:paragraph:1"
+          ]
+        },
+        {
+          "index": 2,
+          "verdict": "violation",
+          "reason": "The actual page paragraphs confirm substantially copied structural patterns. The ISO APG qualifying paragraph is reproduced nearly verbatim across nine chapters. Compare page:1:paragraph:5 ('The site states that the guidance is not definitive and is not mandatory audit criteria. Use it to frame questions about evidence...'), page:2:paragraph:8 ('it states that its guidance is not definitive or mandatory audit criteria. Use it to develop questions about evidence, while assessing the requirements and arrangements applicable to the organization separately'), page:3:paragraph:6 ('Its guidance is not definitive or mandatory audit criteria. It can prompt questions...'), page:4:paragraph:6 ('It says the guidance is not definitive or mandatory audit criteria. It can help a team frame questions...'), pages 5–9 follow the same near-verbatim pattern. The illustrative example closing ('The example is hypothetical and does not describe a measured customer result') is reproduced verbatim or near-verbatim in every chapter. The final chapter closing paragraph template recurs identically. These are substantially copied paragraphs, not merely recurring subject matter or short factual cautions.",
+          "evidenceIds": [
+            "page:1:paragraph:5",
+            "page:2:paragraph:8",
+            "page:3:paragraph:6",
+            "page:4:paragraph:6",
+            "page:5:paragraph:5",
+            "page:6:paragraph:5",
+            "page:7:paragraph:5",
+            "page:8:paragraph:5",
+            "page:9:paragraph:5",
+            "page:1:paragraph:7",
+            "page:2:paragraph:9",
+            "page:3:paragraph:7",
+            "page:4:paragraph:7",
+            "page:5:paragraph:6",
+            "page:6:paragraph:6",
+            "page:7:paragraph:6",
+            "page:8:paragraph:6",
+            "page:9:paragraph:6"
+          ]
+        },
+        {
+          "index": 3,
+          "verdict": "clear",
+          "reason": "The boundary instructions are outline scaffolding, not page content. The fact that chapters have the same analytical framework does not by itself constitute substantially copied paragraphs. This finding duplicates the concerns in finding 0 and 2. The actual repetition issue is addressed in finding 2.",
+          "evidenceIds": [
+            "page:1:paragraph:1",
+            "page:2:paragraph:2",
+            "page:3:paragraph:1"
+          ]
+        },
+        {
+          "index": 4,
+          "verdict": "violation",
+          "reason": "The illustrative example closing formula is reproduced nearly verbatim in every chapter's example paragraph. Page:1:paragraph:7 ends 'The scenario is hypothetical and describes no customer result.' Page:2:paragraph:9 ends 'This hypothetical exercise tests the team's criteria; it does not describe a measured customer result.' Page:3:paragraph:7 ends 'The situation is hypothetical and does not describe a measured plant outcome.' Page:4:paragraph:7 ends 'The example describes a possible discussion, not a measured result at a customer site.' Pages 5–9 follow the same formula. While the label 'Illustrative example' is a required recurring short label, the full example paragraphs including the closing disclaimer formula across all nine chapters constitute substantially copied closing language repeated beyond what a short factual caution requires.",
+          "evidenceIds": [
+            "page:1:paragraph:7",
+            "page:2:paragraph:9",
+            "page:3:paragraph:7",
+            "page:4:paragraph:7",
+            "page:5:paragraph:6",
+            "page:6:paragraph:6",
+            "page:7:paragraph:6",
+            "page:8:paragraph:6",
+            "page:9:paragraph:6"
+          ]
+        },
+        {
+          "index": 5,
+          "verdict": "violation",
+          "reason": "The qualifying phrase applied to both sources recurs in nearly identical form across all nine chapters. For example, the ICC description qualifier pattern ('That published description is a useful starting point for a demonstration. It does not establish that a particular plant has...') appears in page:1:paragraph:4, page:2:paragraph:5, page:3:paragraph:3, page:4:paragraph:3, page:5:paragraph:3, page:6:paragraph:2, page:7:paragraph:2, page:8:paragraph:2, page:9:paragraph:2 with only minor noun substitutions. This exceeds a short factual caution: it is a full paragraph-length qualifying formula reproduced across all nine chapters.",
+          "evidenceIds": [
+            "page:1:paragraph:4",
+            "page:2:paragraph:5",
+            "page:3:paragraph:3",
+            "page:4:paragraph:3",
+            "page:5:paragraph:3",
+            "page:6:paragraph:2",
+            "page:7:paragraph:2",
+            "page:8:paragraph:2",
+            "page:9:paragraph:2"
+          ]
+        },
+        {
+          "index": 6,
+          "verdict": "clear",
+          "reason": "The subsection topics within the ownership chapter ('Define owner responsibilities,' 'Assign decisions and backups,' 'Resolve ownership conflicts,' 'Review ownership over time') are all within a single chapter covering a single subject. The finding conflates chapter-internal subsection structure with cross-chapter repetition. Cross-chapter repetition of the ISO APG and ICC qualifying paragraphs is addressed in findings 2 and 5.",
+          "evidenceIds": [
+            "page:4:paragraph:0",
+            "page:4:paragraph:10",
+            "page:4:paragraph:18",
+            "page:4:paragraph:26"
+          ]
+        },
+        {
+          "index": 7,
+          "verdict": "clear",
+          "reason": "Two sources cited across all chapters is a structural feature, not in itself a violation. The repetition concern is whether the actual prose reproduces the same citations and qualifications in substantially copied form, which is established in findings 2 and 5. This finding is duplicative of those and does not add an independent violation beyond what is already captured.",
+          "evidenceIds": [
+            "source:0:claim:0",
+            "source:1:claim:1"
+          ]
+        },
+        {
+          "index": 8,
+          "verdict": "clear",
+          "reason": "The FAQ section and demonstration-planning subsection are topically distinct concluding material. The FAQ contains nine distinct questions with substantively different answers across pages 9:paragraph:17–34. The demonstration-planning section provides structured preparation guidance. These reference the same two sources with similar qualifications, but that recurrence is already captured in findings 2 and 5. The FAQ and demonstration subsection are not themselves substantially copied from earlier chapters.",
+          "evidenceIds": [
+            "page:9:paragraph:17",
+            "page:9:paragraph:19",
+            "page:9:paragraph:21",
+            "page:9:paragraph:35",
+            "page:9:paragraph:36"
+          ]
+        },
+        {
+          "index": 9,
+          "verdict": "clear",
+          "reason": "Word count constraints and structural prescriptions are outline considerations, not evidence of actual page-level repetition. This finding is predictive rather than grounded in specific copied passages. Actual repetition is addressed in findings 2, 4, and 5.",
+          "evidenceIds": [
+            "page:1:paragraph:1",
+            "page:2:paragraph:2"
+          ]
+        },
+        {
+          "index": 10,
+          "verdict": "clear",
+          "reason": "The 'Illustrative example' label is a required recurring short label per the guide's established hypothetical example convention. Recurrence of the label itself is explicitly permitted. The repetition issue lies in the closing disclaimer formula within each example paragraph, addressed in finding 4.",
+          "evidenceIds": [
+            "page:0:paragraph:7",
+            "page:1:paragraph:7"
+          ]
+        },
+        {
+          "index": 11,
+          "verdict": "clear",
+          "reason": "This finding is predictive inference from the outline structure rather than identification of a specific copied passage. The concern about cross-chapter repetition of the qualifying framework is established in findings 2 and 5 through actual page evidence. This finding does not add an independent violation.",
+          "evidenceIds": [
+            "page:1:paragraph:4",
+            "page:1:paragraph:5"
+          ]
+        },
+        {
+          "index": 12,
+          "verdict": "clear",
+          "reason": "Identical analytical frameworks applied to different subject matter are not substantially copied paragraphs. The repetition standard requires substantially copied paragraphs or examples, not shared organizational structures. The actual violations are in findings 2, 4, and 5 where specific paragraph-level language is reproduced.",
+          "evidenceIds": [
+            "page:1:paragraph:2",
+            "page:2:paragraph:3",
+            "page:3:paragraph:2"
+          ]
+        },
+        {
+          "index": 13,
+          "verdict": "clear",
+          "reason": "Two-source constraint is a structural feature addressed in finding 7. Actual prose-level repetition from these sources is captured in findings 2 and 5. This is duplicative.",
+          "evidenceIds": [
+            "source:0:claim:0",
+            "source:1:claim:0"
+          ]
+        },
+        {
+          "index": 14,
+          "verdict": "clear",
+          "reason": "Image briefs and scope statements are outline metadata, not page prose. The repetition standard applies to substantially copied paragraphs in the actual guide content. Identical outline metadata does not constitute guide-level repetition.",
+          "evidenceIds": [
+            "page:1:paragraph:0",
+            "page:2:paragraph:0"
+          ]
+        },
+        {
+          "index": 15,
+          "verdict": "violation",
+          "reason": "The three-part opening structure (definition sentence + ICC page qualifier paragraph + ISO APG qualifier paragraph) recurs in the first subsection of nearly every chapter. Compare page:1:paragraph:1–5, page:2:paragraph:2–5 (skipping the opening sentence fragment), page:3:paragraph:1–3, page:4:paragraph:1–3, page:5:paragraph:1–3, page:6:paragraph:1–2, page:7:paragraph:1–2, page:8:paragraph:1–2, page:9:paragraph:1–2. The specific two-source qualifier paragraphs within this structure are the substantially copied elements (already identified in findings 2 and 5), confirming the pattern finding.",
+          "evidenceIds": [
+            "page:1:paragraph:1",
+            "page:1:paragraph:4",
+            "page:1:paragraph:5",
+            "page:2:paragraph:2",
+            "page:2:paragraph:5",
+            "page:2:paragraph:8",
+            "page:3:paragraph:1",
+            "page:3:paragraph:3",
+            "page:3:paragraph:6"
+          ]
+        },
+        {
+          "index": 16,
+          "verdict": "violation",
+          "reason": "The qualifying statement 'That published description is a reason to ask how [X]; it is not proof that [Y]' or its near-identical variants appears in page:1:paragraph:4, page:2:paragraph:5, page:3:paragraph:10, page:4:paragraph:3, page:5:paragraph:3, page:6:paragraph:2, page:7:paragraph:2, page:8:paragraph:2, page:9:paragraph:2. This is a core explanatory phrase reproduced in substantially identical form across nine chapters, constituting a substantially copied paragraph-level formula beyond a short factual caution.",
+          "evidenceIds": [
+            "page:1:paragraph:4",
+            "page:2:paragraph:5",
+            "page:3:paragraph:10",
+            "page:4:paragraph:3",
+            "page:5:paragraph:3",
+            "page:6:paragraph:2",
+            "page:7:paragraph:2",
+            "page:8:paragraph:2",
+            "page:9:paragraph:2"
+          ]
+        },
+        {
+          "index": 17,
+          "verdict": "clear",
+          "reason": "An introduction that previews the nine chapters and references the same two sources with qualifying language is structurally appropriate for a guide introduction. The introduction serves a distinct navigational purpose and does not reproduce chapter body paragraphs verbatim. Recurrence of source references in both introduction and chapters is expected. This finding does not establish a substantially copied paragraph between the introduction and any specific chapter.",
+          "evidenceIds": [
+            "page:0:paragraph:5",
+            "page:0:paragraph:6",
+            "page:0:paragraph:11"
+          ]
+        },
+        {
+          "index": 18,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "source:0:claim:6",
+            "page:0:paragraph:5",
+            "page:0:paragraph:17"
+          ]
+        },
+        {
+          "index": 19,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "source:0:claim:5",
+            "page:0:paragraph:18"
+          ]
+        },
+        {
+          "index": 20,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "source:0:claim:2",
+            "page:0:paragraph:17"
+          ]
+        },
+        {
+          "index": 21,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "source:0:claim:4",
+            "page:0:paragraph:17"
+          ]
+        },
+        {
+          "index": 22,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "page:0:paragraph:5",
+            "page:0:paragraph:6"
+          ]
+        },
+        {
+          "index": 23,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "source:0:claim:1",
+            "page:6:paragraph:2"
+          ]
+        },
+        {
+          "index": 24,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "source:0:claim:3",
+            "page:9:paragraph:32"
+          ]
+        },
+        {
+          "index": 25,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "page:4:paragraph:12",
+            "page:0:paragraph:5"
+          ]
+        },
+        {
+          "index": 26,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "page:0:paragraph:17",
+            "page:2:paragraph:5"
+          ]
+        },
+        {
+          "index": 27,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "page:0:paragraph:7",
+            "page:0:paragraph:13"
+          ]
+        },
+        {
+          "index": 28,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "page:9:paragraph:30",
+            "page:9:paragraph:32"
+          ]
+        },
+        {
+          "index": 29,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "page:9:paragraph:37",
+            "page:9:paragraph:38"
+          ]
+        },
+        {
+          "index": 30,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "page:2:paragraph:6",
+            "page:2:paragraph:7",
+            "page:9:paragraph:40"
+          ]
+        },
+        {
+          "index": 31,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "source:0:claim:5",
+            "page:0:paragraph:18"
+          ]
+        },
+        {
+          "index": 32,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "page:0:paragraph:10",
+            "page:0:paragraph:12"
+          ]
+        },
+        {
+          "index": 33,
+          "verdict": "clear",
+          "reason": "Addressed in additionalFindings above. No claims violation.",
+          "evidenceIds": [
+            "page:4:paragraph:3",
+            "page:0:paragraph:4"
+          ]
+        }
+      ]
+    },
+    "resolvedEvidence": [
+      {
+        "index": 0,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:2",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 2,
+            "quote": "The process owner is responsible for agreeing on the purpose with the people who use the process. The inputs are the current work, the records it produces, and the questions the organization needs answered. The owner decides which workflow to examine and records that choice with the map. If the people involved cannot agree on the purpose, record the disagreement and resolve it before treating the map as a basis for a software decision.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:3",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 3,
+            "quote": "The input to the evaluation should include a current map or draft, an example record, and a list of known exceptions. The process owner agrees on what the team will test and who will judge the result. The quality lead records the decision, including evidence observed and questions left open. If there is no agreed process owner, record that gap before treating a demonstration as a reliable indication of operational readiness.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:2",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 2,
+            "quote": "The quality lead can assemble a working list from existing maps and process records. The process owners and operations manager then examine the list together. For each item, identify its purpose, the people who depend on its output, and whether it belongs within the scope of the proposed architecture. Record disputed entries and the person who will resolve them. A list compiled by one department may omit work that another department treats as an essential input.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:1",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 1,
+            "quote": "A useful process map starts with a decision the organization needs to make. A quality lead might need to establish where a customer requirement becomes an instruction, while an operations manager might need to understand why a handoff is delayed. Write that decision down before selecting symbols or opening a drawing tool. The reason for the map determines which people, records, and boundaries matter.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:2",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 2,
+            "quote": "A useful evaluation starts with decisions that a quality and operations team must make, not with a feature list. Select a representative workflow and identify the people who will use its map, inspect supporting records, or maintain it. Ask each person what information is needed to complete a real task. A process owner might need to understand an unresolved interface; an operator might need to find the current instruction for a production step. These are separate tests, even when the same map supports both.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:1",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 1,
+            "quote": "A process architecture gives the organization a way to see how its work fits together. It is a structure for making and maintaining decisions about the collection of processes, rather than a substitute for understanding any one workflow. Start with the processes the team has identified and ask what each contributes. The aim is a grouping that helps readers find work and understand relationships, not a diagram that merely reproduces the organization chart.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:1",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 1,
+            "quote": "A process owner is accountable for decisions and review of a defined process. The assignment is useful when the people involved understand which decisions belong to the role, which need others' input, and what happens when the owner cannot act. A name on a map is a starting point for that conversation, not proof that responsibility has been accepted or that the owner can carry it out.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:5",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 5,
+            "quote": "The [ISO 9001 Auditing Practices Group](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational papers on quality management system auditing, including the process approach and evidence collection. Its site states that the guidance is not definitive and is not mandatory audit criteria. Use it to frame questions about evidence, then check the requirements and arrangements that apply to the organization. A software map alone does not establish conformity.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:8",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 8,
+            "quote": "These prompts are evaluation criteria, not claims about a particular product. The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational material about process-based auditing and evidence; it states that its guidance is not definitive or mandatory audit criteria. Use it to develop questions about evidence, while assessing the requirements and arrangements applicable to the organization separately. Software selection does not by itself establish conformity.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:6",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 6,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) includes educational material about process-based auditing. Its guidance is not definitive or mandatory audit criteria. It can prompt questions about how a process interacts with others and what evidence is available, but it does not dictate the names or structure of this organization's architecture. Applicable requirements and the organization's arrangements still need their own assessment.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:6",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 6,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) contains educational material about process-based auditing and evidence. It says the guidance is not definitive or mandatory audit criteria. It can help a team frame questions about a process and its evidence, but it does not assign this organization's owners or replace the applicable requirements and local arrangements.\n\n"
+          },
+          {
+            "evidenceId": "page:5:paragraph:5",
+            "kind": "page",
+            "id": "mapping-workflows",
+            "paragraph": 5,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) includes educational material on process auditing and evidence collection. The collection states that its guidance is not definitive or mandatory audit criteria. It can help frame questions about what evidence supports an explanation, while the organization separately assesses its applicable requirements and arrangements.\n\n"
+          },
+          {
+            "evidenceId": "page:6:paragraph:5",
+            "kind": "page",
+            "id": "documents-and-evidence",
+            "paragraph": 5,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational material about auditing and evidence. The collection states that its guidance is not definitive and is not mandatory audit criteria. It can help a team ask how evidence supports an explanation, while applicable requirements and the organization's document controls must be assessed separately. A software link alone does not establish conformity.\n\n"
+          },
+          {
+            "evidenceId": "page:7:paragraph:5",
+            "kind": "page",
+            "id": "migration-and-configuration",
+            "paragraph": 5,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) includes educational material about process auditing and evidence collection. The collection states that its guidance is not definitive or mandatory audit criteria. It can prompt questions about what evidence supports a map's scope and use, while the organization separately assesses its requirements and migration decisions.\n\n"
+          },
+          {
+            "evidenceId": "page:8:paragraph:5",
+            "kind": "page",
+            "id": "rollout-and-training",
+            "paragraph": 5,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) includes educational papers on process auditing and evidence. It states that the guidance is not definitive or mandatory audit criteria. It can help frame questions about evidence and process explanations, but it does not prescribe this organization's training plan or prove that a participant is competent for a particular role.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:5",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 5,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) includes educational material about process auditing and improvement. The collection states that its guidance is not definitive or mandatory audit criteria. It can help frame questions about evidence and process relationships, but the organization must assess its own applicable requirements and review arrangements.\n\n"
+          },
+          {
+            "evidenceId": "page:1:paragraph:7",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 7,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer chooses a production release workflow for a software evaluation. The quality lead wants to see who receives inspection evidence before a supervisor releases a batch. The team agrees to map from receipt of the production order to the release decision, while recording the connection to the separate customer-complaint process. The scenario is hypothetical and describes no customer result.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:9",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 9,
+            "quote": "**Illustrative example:** An unnamed manufacturer wants to compare how two proposed approaches present a production workflow. The quality lead selects a sample process, the owner identifies an exception that occurs at a handoff, and an operator agrees to follow the route without coaching. The team writes down the outcome each person needs before seeing a demonstration. This hypothetical exercise tests the team's criteria; it does not describe a measured customer result.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:7",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 7,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer gathers the people involved in a production workflow to review a proposed overview. The quality lead groups related work by purpose, while the operations manager checks whether a reader can locate the production process without knowing the internal department names. The team flags a support activity that appears in two places and records a decision owner. The situation is hypothetical and does not describe a measured plant outcome.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:7",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 7,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer reviews ownership of a production workflow. The proposed owner, a floor supervisor, and a quality lead use a hypothetical process record to identify which decisions affect the workflow. They agree that the owner will bring a disputed boundary to the relevant people, while an operations manager decides how to resolve a resource issue. The example describes a possible discussion, not a measured result at a customer site.\n\n"
+          },
+          {
+            "evidenceId": "page:5:paragraph:6",
+            "kind": "page",
+            "id": "mapping-workflows",
+            "paragraph": 6,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer examines a hypothetical production workflow. The process owner chooses a completed example, an operator explains what information was used at a decision point, and the supervisor identifies a case in which the input could not be accepted. The quality lead records the sample and the unresolved question. The example is not a description of a measured customer outcome.\n\n"
+          },
+          {
+            "evidenceId": "page:6:paragraph:6",
+            "kind": "page",
+            "id": "documents-and-evidence",
+            "paragraph": 6,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer examines a hypothetical production workflow. The operator identifies an instruction used at a decision point; the quality lead identifies where the accepted instruction is maintained. The process owner checks whether the document applies to the sample and records a question about a second product line. This example does not describe an actual customer's conditions or results.\n\n"
+          },
+          {
+            "evidenceId": "page:7:paragraph:6",
+            "kind": "page",
+            "id": "migration-and-configuration",
+            "paragraph": 6,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer inventories a hypothetical production workflow map. The process owner identifies its scope, the floor supervisor explains a local variation, and the quality lead locates a related instruction. The team discovers that two copies have different labels and records a decision owner. The example is hypothetical and does not describe a customer's results or an actual implementation.\n\n"
+          },
+          {
+            "evidenceId": "page:8:paragraph:6",
+            "kind": "page",
+            "id": "rollout-and-training",
+            "paragraph": 6,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer prepares a hypothetical production workflow exercise. The operator practices locating the applicable instruction, the supervisor follows an incomplete-input question, and the process owner explains where the decision is recorded. The quality lead notes which parts of the exercise require clarification. This scenario is illustrative and does not describe an actual customer or measured result.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:6",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 6,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer examines a hypothetical change to a production handoff. The process owner brings the current map and a sample record to the operator and supervisor. They identify a difference in the information the receiving role needs, and the quality lead records who will decide how to update the explanation. The scenario is hypothetical and does not describe an actual customer result.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:1",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 1,
+            "quote": "A useful process map starts with a decision the organization needs to make. A quality lead might need to establish where a customer requirement becomes an instruction, while an operations manager might need to understand why a handoff is delayed. Write that decision down before selecting symbols or opening a drawing tool. The reason for the map determines which people, records, and boundaries matter.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:2",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 2,
+            "quote": "A useful evaluation starts with decisions that a quality and operations team must make, not with a feature list. Select a representative workflow and identify the people who will use its map, inspect supporting records, or maintain it. Ask each person what information is needed to complete a real task. A process owner might need to understand an unresolved interface; an operator might need to find the current instruction for a production step. These are separate tests, even when the same map supports both.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:1",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 1,
+            "quote": "A process architecture gives the organization a way to see how its work fits together. It is a structure for making and maintaining decisions about the collection of processes, rather than a substitute for understanding any one workflow. Start with the processes the team has identified and ask what each contributes. The aim is a grouping that helps readers find work and understand relationships, not a diagram that merely reproduces the organization chart.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:7",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 7,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer chooses a production release workflow for a software evaluation. The quality lead wants to see who receives inspection evidence before a supervisor releases a batch. The team agrees to map from receipt of the production order to the release decision, while recording the connection to the separate customer-complaint process. The scenario is hypothetical and describes no customer result.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:9",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 9,
+            "quote": "**Illustrative example:** An unnamed manufacturer wants to compare how two proposed approaches present a production workflow. The quality lead selects a sample process, the owner identifies an exception that occurs at a handoff, and an operator agrees to follow the route without coaching. The team writes down the outcome each person needs before seeing a demonstration. This hypothetical exercise tests the team's criteria; it does not describe a measured customer result.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:7",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 7,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer gathers the people involved in a production workflow to review a proposed overview. The quality lead groups related work by purpose, while the operations manager checks whether a reader can locate the production process without knowing the internal department names. The team flags a support activity that appears in two places and records a decision owner. The situation is hypothetical and does not describe a measured plant outcome.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:7",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 7,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer reviews ownership of a production workflow. The proposed owner, a floor supervisor, and a quality lead use a hypothetical process record to identify which decisions affect the workflow. They agree that the owner will bring a disputed boundary to the relevant people, while an operations manager decides how to resolve a resource issue. The example describes a possible discussion, not a measured result at a customer site.\n\n"
+          },
+          {
+            "evidenceId": "page:5:paragraph:6",
+            "kind": "page",
+            "id": "mapping-workflows",
+            "paragraph": 6,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer examines a hypothetical production workflow. The process owner chooses a completed example, an operator explains what information was used at a decision point, and the supervisor identifies a case in which the input could not be accepted. The quality lead records the sample and the unresolved question. The example is not a description of a measured customer outcome.\n\n"
+          },
+          {
+            "evidenceId": "page:6:paragraph:6",
+            "kind": "page",
+            "id": "documents-and-evidence",
+            "paragraph": 6,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer examines a hypothetical production workflow. The operator identifies an instruction used at a decision point; the quality lead identifies where the accepted instruction is maintained. The process owner checks whether the document applies to the sample and records a question about a second product line. This example does not describe an actual customer's conditions or results.\n\n"
+          },
+          {
+            "evidenceId": "page:7:paragraph:6",
+            "kind": "page",
+            "id": "migration-and-configuration",
+            "paragraph": 6,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer inventories a hypothetical production workflow map. The process owner identifies its scope, the floor supervisor explains a local variation, and the quality lead locates a related instruction. The team discovers that two copies have different labels and records a decision owner. The example is hypothetical and does not describe a customer's results or an actual implementation.\n\n"
+          },
+          {
+            "evidenceId": "page:8:paragraph:6",
+            "kind": "page",
+            "id": "rollout-and-training",
+            "paragraph": 6,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer prepares a hypothetical production workflow exercise. The operator practices locating the applicable instruction, the supervisor follows an incomplete-input question, and the process owner explains where the decision is recorded. The quality lead notes which parts of the exercise require clarification. This scenario is illustrative and does not describe an actual customer or measured result.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:6",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 6,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer examines a hypothetical change to a production handoff. The process owner brings the current map and a sample record to the operator and supervisor. They identify a difference in the information the receiving role needs, and the quality lead records who will decide how to update the explanation. The scenario is hypothetical and does not describe an actual customer result.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:4",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 4,
+            "quote": "The published [ICC Processes page](https://isocertificationconsultants.ca/solutions/processes/) describes a top-level map grouped by category, a flowchart for each process, a named owner, and links to documents and clauses. Treat those as the vendor's descriptions to test in a demonstration. The page does not establish whether a particular plant's existing maps are current or whether its chosen workflow is well controlled. That conclusion requires the plant's own evidence.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:5",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a top-level process map, process flowcharts, owners, and links to controlled documents. Use those published descriptions to frame demonstration questions. They do not establish how a particular installation is configured or whether a specific access rule is available. Ask the supplier to show the proposed arrangement using material the team recognizes, then record what was demonstrated separately from what was described.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:3",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 3,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one map grouped into management, customer-facing, core, and support categories. That is a published vendor description and a useful example to discuss; it is not evidence that every organization must adopt those exact groups. An organization should test whether its own labels help the intended readers recognize the work, and ask how the proposed software arrangement would represent its choices.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:3",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 3,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes named process owners and a connection between processes and controlled documents. This is a published vendor description, not evidence that any particular person has accepted a role at a site. Ask how a proposed arrangement displays ownership and how the team would confirm that the displayed information is current. Exact permissions and change behavior should be demonstrated rather than inferred from the page.\n\n"
+          },
+          {
+            "evidenceId": "page:5:paragraph:3",
+            "kind": "page",
+            "id": "mapping-workflows",
+            "paragraph": 3,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-two flowchart for each process and links to controlled documents. This published description is a reason to ask how an organization could represent its workflow; it is not proof that a particular map or document is accurate. The process owner still needs to examine the organization's evidence and agree on the scope of the proposed map.\n\n"
+          },
+          {
+            "evidenceId": "page:6:paragraph:2",
+            "kind": "page",
+            "id": "documents-and-evidence",
+            "paragraph": 2,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes links from processes to controlled documents and standard clauses. That published description is a useful starting point for a demonstration. It does not establish that a particular plant has chosen the right documents, configured access, or verified every link. Those decisions depend on the organization's own evidence and arrangements.\n\n"
+          },
+          {
+            "evidenceId": "page:7:paragraph:2",
+            "kind": "page",
+            "id": "migration-and-configuration",
+            "paragraph": 2,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes industry starting templates and review of supported PDF process charts before acceptance. It also describes broad configuration activities. These are published vendor descriptions, not proof that every file can be imported, that a particular conversion will preserve its meaning, or that a site must follow a fixed sequence. Ask which formats and review steps apply to the proposed implementation.\n\n"
+          },
+          {
+            "evidenceId": "page:8:paragraph:2",
+            "kind": "page",
+            "id": "rollout-and-training",
+            "paragraph": 2,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes deployment and training as part of its published configuration activities. It does not establish the content, duration, or outcome of training for a particular site. Ask the supplier what support is proposed and agree on the organization's responsibilities. Record what has been demonstrated or committed, along with any conditions that remain open.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:2",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 2,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes process owners, flowcharts, and links to controlled documents. These are published vendor descriptions, not evidence that a particular installation automatically detects changes or updates a map. Ask how the proposed arrangement supports the organization's chosen review process, and record what is demonstrated separately from what is described.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "evidence": [
+          {
+            "evidenceId": "page:4:paragraph:0",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 0,
+            "quote": "## Define owner responsibilities\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:10",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 10,
+            "quote": "## Assign decisions and backups\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:18",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 18,
+            "quote": "## Resolve ownership conflicts\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:26",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 26,
+            "quote": "## Review ownership over time\n\n"
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:0",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 0,
+            "quote": "The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process."
+          },
+          {
+            "evidenceId": "source:1:claim:1",
+            "kind": "source",
+            "id": "iso-apg",
+            "paragraph": 1,
+            "quote": "The site says its guidance is not definitive and is not intended as specified requirements, a benchmark or mandatory audit criteria."
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "evidence": [
+          {
+            "evidenceId": "page:9:paragraph:17",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 17,
+            "quote": "### What should a process map show first?\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:19",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 19,
+            "quote": "### Who owns a process?\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:21",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 21,
+            "quote": "### How should process interfaces be recorded?\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:35",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 35,
+            "quote": "## Prepare a software demonstration\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:36",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 36,
+            "quote": "A useful demonstration brings together the questions accumulated during mapping, ownership, migration, and review. The process owner can select a representative workflow, the quality lead can prepare an appropriate sample record, and the operations manager can identify who should participate. Agree on the decisions the session should inform before asking for a presentation. This keeps the discussion tied to the organization's work instead of a generic feature tour.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 9,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:1",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 1,
+            "quote": "A useful process map starts with a decision the organization needs to make. A quality lead might need to establish where a customer requirement becomes an instruction, while an operations manager might need to understand why a handoff is delayed. Write that decision down before selecting symbols or opening a drawing tool. The reason for the map determines which people, records, and boundaries matter.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:2",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 2,
+            "quote": "A useful evaluation starts with decisions that a quality and operations team must make, not with a feature list. Select a representative workflow and identify the people who will use its map, inspect supporting records, or maintain it. Ask each person what information is needed to complete a real task. A process owner might need to understand an unresolved interface; an operator might need to find the current instruction for a production step. These are separate tests, even when the same map supports both.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 10,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:7",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 7,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer evaluates a hypothetical map for a production workflow. The operator explains an input used at a decision point, the supervisor identifies the next role, and the process owner records a question about an exception. The quality lead checks the sample record and notes what remains uncertain. This scenario is hypothetical; it is not a case study or a measured customer result.\n\n"
+          },
+          {
+            "evidenceId": "page:1:paragraph:7",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 7,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer chooses a production release workflow for a software evaluation. The quality lead wants to see who receives inspection evidence before a supervisor releases a batch. The team agrees to map from receipt of the production order to the release decision, while recording the connection to the separate customer-complaint process. The scenario is hypothetical and describes no customer result.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 11,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:4",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 4,
+            "quote": "The published [ICC Processes page](https://isocertificationconsultants.ca/solutions/processes/) describes a top-level map grouped by category, a flowchart for each process, a named owner, and links to documents and clauses. Treat those as the vendor's descriptions to test in a demonstration. The page does not establish whether a particular plant's existing maps are current or whether its chosen workflow is well controlled. That conclusion requires the plant's own evidence.\n\n"
+          },
+          {
+            "evidenceId": "page:1:paragraph:5",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 5,
+            "quote": "The [ISO 9001 Auditing Practices Group](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational papers on quality management system auditing, including the process approach and evidence collection. Its site states that the guidance is not definitive and is not mandatory audit criteria. Use it to frame questions about evidence, then check the requirements and arrangements that apply to the organization. A software map alone does not establish conformity.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 12,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:2",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 2,
+            "quote": "The process owner is responsible for agreeing on the purpose with the people who use the process. The inputs are the current work, the records it produces, and the questions the organization needs answered. The owner decides which workflow to examine and records that choice with the map. If the people involved cannot agree on the purpose, record the disagreement and resolve it before treating the map as a basis for a software decision.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:3",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 3,
+            "quote": "The input to the evaluation should include a current map or draft, an example record, and a list of known exceptions. The process owner agrees on what the team will test and who will judge the result. The quality lead records the decision, including evidence observed and questions left open. If there is no agreed process owner, record that gap before treating a demonstration as a reliable indication of operational readiness.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:2",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 2,
+            "quote": "The quality lead can assemble a working list from existing maps and process records. The process owners and operations manager then examine the list together. For each item, identify its purpose, the people who depend on its output, and whether it belongs within the scope of the proposed architecture. Record disputed entries and the person who will resolve them. A list compiled by one department may omit work that another department treats as an essential input.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 13,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:0",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 0,
+            "quote": "The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process."
+          },
+          {
+            "evidenceId": "source:1:claim:0",
+            "kind": "source",
+            "id": "iso-apg",
+            "paragraph": 0,
+            "quote": "The ISO 9001 Auditing Practices Group site provides educational papers on quality management system auditing, including a process-based approach and risk-based thinking."
+          }
+        ]
+      },
+      {
+        "index": 14,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:0",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 0,
+            "quote": "## Define the mapping purpose\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:0",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 0,
+            "quote": "## Set evaluation criteria\n\n"
+          }
+        ]
+      },
+      {
+        "index": 15,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:1",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 1,
+            "quote": "A useful process map starts with a decision the organization needs to make. A quality lead might need to establish where a customer requirement becomes an instruction, while an operations manager might need to understand why a handoff is delayed. Write that decision down before selecting symbols or opening a drawing tool. The reason for the map determines which people, records, and boundaries matter.\n\n"
+          },
+          {
+            "evidenceId": "page:1:paragraph:4",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 4,
+            "quote": "The published [ICC Processes page](https://isocertificationconsultants.ca/solutions/processes/) describes a top-level map grouped by category, a flowchart for each process, a named owner, and links to documents and clauses. Treat those as the vendor's descriptions to test in a demonstration. The page does not establish whether a particular plant's existing maps are current or whether its chosen workflow is well controlled. That conclusion requires the plant's own evidence.\n\n"
+          },
+          {
+            "evidenceId": "page:1:paragraph:5",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 5,
+            "quote": "The [ISO 9001 Auditing Practices Group](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational papers on quality management system auditing, including the process approach and evidence collection. Its site states that the guidance is not definitive and is not mandatory audit criteria. Use it to frame questions about evidence, then check the requirements and arrangements that apply to the organization. A software map alone does not establish conformity.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:2",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 2,
+            "quote": "A useful evaluation starts with decisions that a quality and operations team must make, not with a feature list. Select a representative workflow and identify the people who will use its map, inspect supporting records, or maintain it. Ask each person what information is needed to complete a real task. A process owner might need to understand an unresolved interface; an operator might need to find the current instruction for a production step. These are separate tests, even when the same map supports both.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:5",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a top-level process map, process flowcharts, owners, and links to controlled documents. Use those published descriptions to frame demonstration questions. They do not establish how a particular installation is configured or whether a specific access rule is available. Ask the supplier to show the proposed arrangement using material the team recognizes, then record what was demonstrated separately from what was described.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:8",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 8,
+            "quote": "These prompts are evaluation criteria, not claims about a particular product. The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational material about process-based auditing and evidence; it states that its guidance is not definitive or mandatory audit criteria. Use it to develop questions about evidence, while assessing the requirements and arrangements applicable to the organization separately. Software selection does not by itself establish conformity.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:1",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 1,
+            "quote": "A process architecture gives the organization a way to see how its work fits together. It is a structure for making and maintaining decisions about the collection of processes, rather than a substitute for understanding any one workflow. Start with the processes the team has identified and ask what each contributes. The aim is a grouping that helps readers find work and understand relationships, not a diagram that merely reproduces the organization chart.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:3",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 3,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one map grouped into management, customer-facing, core, and support categories. That is a published vendor description and a useful example to discuss; it is not evidence that every organization must adopt those exact groups. An organization should test whether its own labels help the intended readers recognize the work, and ask how the proposed software arrangement would represent its choices.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:6",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 6,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) includes educational material about process-based auditing. Its guidance is not definitive or mandatory audit criteria. It can prompt questions about how a process interacts with others and what evidence is available, but it does not dictate the names or structure of this organization's architecture. Applicable requirements and the organization's arrangements still need their own assessment.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 16,
+        "evidence": [
+          {
+            "evidenceId": "page:1:paragraph:4",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 4,
+            "quote": "The published [ICC Processes page](https://isocertificationconsultants.ca/solutions/processes/) describes a top-level map grouped by category, a flowchart for each process, a named owner, and links to documents and clauses. Treat those as the vendor's descriptions to test in a demonstration. The page does not establish whether a particular plant's existing maps are current or whether its chosen workflow is well controlled. That conclusion requires the plant's own evidence.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:5",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a top-level process map, process flowcharts, owners, and links to controlled documents. Use those published descriptions to frame demonstration questions. They do not establish how a particular installation is configured or whether a specific access rule is available. Ask the supplier to show the proposed arrangement using material the team recognizes, then record what was demonstrated separately from what was described.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:10",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 10,
+            "quote": "The [ICC description](https://isocertificationconsultants.ca/solutions/processes/) presents a top-level process map and detailed flowcharts. Use that description as a point of comparison when designing an overview. It does not establish the layout, navigation, or configuration of a particular installation. Ask for a demonstration of the proposed arrangement using the organization's own sample, and distinguish what is shown from what remains a design question.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:3",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 3,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes named process owners and a connection between processes and controlled documents. This is a published vendor description, not evidence that any particular person has accepted a role at a site. Ask how a proposed arrangement displays ownership and how the team would confirm that the displayed information is current. Exact permissions and change behavior should be demonstrated rather than inferred from the page.\n\n"
+          },
+          {
+            "evidenceId": "page:5:paragraph:3",
+            "kind": "page",
+            "id": "mapping-workflows",
+            "paragraph": 3,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-two flowchart for each process and links to controlled documents. This published description is a reason to ask how an organization could represent its workflow; it is not proof that a particular map or document is accurate. The process owner still needs to examine the organization's evidence and agree on the scope of the proposed map.\n\n"
+          },
+          {
+            "evidenceId": "page:6:paragraph:2",
+            "kind": "page",
+            "id": "documents-and-evidence",
+            "paragraph": 2,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes links from processes to controlled documents and standard clauses. That published description is a useful starting point for a demonstration. It does not establish that a particular plant has chosen the right documents, configured access, or verified every link. Those decisions depend on the organization's own evidence and arrangements.\n\n"
+          },
+          {
+            "evidenceId": "page:7:paragraph:2",
+            "kind": "page",
+            "id": "migration-and-configuration",
+            "paragraph": 2,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes industry starting templates and review of supported PDF process charts before acceptance. It also describes broad configuration activities. These are published vendor descriptions, not proof that every file can be imported, that a particular conversion will preserve its meaning, or that a site must follow a fixed sequence. Ask which formats and review steps apply to the proposed implementation.\n\n"
+          },
+          {
+            "evidenceId": "page:8:paragraph:2",
+            "kind": "page",
+            "id": "rollout-and-training",
+            "paragraph": 2,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes deployment and training as part of its published configuration activities. It does not establish the content, duration, or outcome of training for a particular site. Ask the supplier what support is proposed and agree on the organization's responsibilities. Record what has been demonstrated or committed, along with any conditions that remain open.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:2",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 2,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes process owners, flowcharts, and links to controlled documents. These are published vendor descriptions, not evidence that a particular installation automatically detects changes or updates a map. Ask how the proposed arrangement supports the organization's chosen review process, and record what is demonstrated separately from what is described.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 17,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:5",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one process map grouped into management, customer-facing, core, and support categories, with a level-two flowchart for each process. It also describes named owners and links from processes to controlled documents and standard clauses. Those are published vendor descriptions. They are not evidence that a particular plant has a given problem, that every configuration behaves identically, or that a software map alone satisfies a standard.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:6",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 6,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational papers about quality management system auditing, including a process-based approach and evidence collection. The collection says its guidance is not definitive and is not intended as specified requirements, a benchmark, or mandatory audit criteria. Use it to frame questions about evidence and relationships, while assessing the requirements and arrangements that apply to the organization separately.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:11",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 11,
+            "quote": "1. **Map current processes.** Define why the map is needed, agree on the boundary, and examine inputs, outputs, handoffs, and exceptions with the people who do the work.\n2. **Evaluate process mapping software.** Set observable criteria and test a representative route, separating a supplier statement from a demonstrated outcome and an unanswered question.\n3. **Design a process architecture.** Group processes by purpose, define an overview, connect levels of detail, and review important interfaces.\n4. **Assign process owners.** Describe decisions and limits of authority, agree on backups, resolve conflicts, and revisit assignments when circumstances change.\n5. **Map workflows and decisions.** Use task evidence to draw steps and decision points, describe exceptions, and validate the explanation with workers.\n6. **Connect documents and evidence.** Identify relevant information, test the relationship to a process step, and plan how revisions and inaccessible destinations are handled.\n7. **Plan migration and configuration.** Inventory existing maps, prepare a representative sample, review a pilot, and agree on cutover and recovery decisions.\n8. **Train teams and roll out.** Practice role-based tasks, use representative participants, stage the rollout, and evaluate feedback before expanding.\n9. **Maintain process maps and improve.** Review the explanation after change, examine the review workflow, use the FAQs, and prepare a focused software demonstration.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 18,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 6,
+            "quote": "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
+          },
+          {
+            "evidenceId": "page:0:paragraph:5",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one process map grouped into management, customer-facing, core, and support categories, with a level-two flowchart for each process. It also describes named owners and links from processes to controlled documents and standard clauses. Those are published vendor descriptions. They are not evidence that a particular plant has a given problem, that every configuration behaves identically, or that a software map alone satisfies a standard.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:17",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 17,
+            "quote": "The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes industry starting templates, review of supported PDF process charts before acceptance, and broad activities including process mapping, configuration, standards onboarding, and deployment with training. Confirm how those descriptions apply to the proposed implementation. They do not establish that every file, permission, link, or recovery action works in a particular way. Ask for a demonstration of the relevant scenario and keep any conditions with the evaluation decision.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 19,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:5",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 5,
+            "quote": "The page states AI output is a suggestion reviewed by a person before entry into a controlled record."
+          },
+          {
+            "evidenceId": "page:0:paragraph:18",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 18,
+            "quote": "The same source says AI output is a suggestion reviewed by a person before entry into a controlled record. Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 20,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:2",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 2,
+            "quote": "The page describes industry starting templates and review of supported PDF process charts before acceptance."
+          },
+          {
+            "evidenceId": "page:0:paragraph:17",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 17,
+            "quote": "The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes industry starting templates, review of supported PDF process charts before acceptance, and broad activities including process mapping, configuration, standards onboarding, and deployment with training. Confirm how those descriptions apply to the proposed implementation. They do not establish that every file, permission, link, or recovery action works in a particular way. Ask for a demonstration of the relevant scenario and keep any conditions with the evaluation decision.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 21,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:4",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 4,
+            "quote": "The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training. Details and applicability require demonstration."
+          },
+          {
+            "evidenceId": "page:0:paragraph:17",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 17,
+            "quote": "The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes industry starting templates, review of supported PDF process charts before acceptance, and broad activities including process mapping, configuration, standards onboarding, and deployment with training. Confirm how those descriptions apply to the proposed implementation. They do not establish that every file, permission, link, or recovery action works in a particular way. Ask for a demonstration of the relevant scenario and keep any conditions with the evaluation decision.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 22,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:5",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one process map grouped into management, customer-facing, core, and support categories, with a level-two flowchart for each process. It also describes named owners and links from processes to controlled documents and standard clauses. Those are published vendor descriptions. They are not evidence that a particular plant has a given problem, that every configuration behaves identically, or that a software map alone satisfies a standard.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:6",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 6,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational papers about quality management system auditing, including a process-based approach and evidence collection. The collection says its guidance is not definitive and is not intended as specified requirements, a benchmark, or mandatory audit criteria. Use it to frame questions about evidence and relationships, while assessing the requirements and arrangements that apply to the organization separately.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 23,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 1,
+            "quote": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+          },
+          {
+            "evidenceId": "page:6:paragraph:2",
+            "kind": "page",
+            "id": "documents-and-evidence",
+            "paragraph": 2,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes links from processes to controlled documents and standard clauses. That published description is a useful starting point for a demonstration. It does not establish that a particular plant has chosen the right documents, configured access, or verified every link. Those decisions depend on the organization's own evidence and arrangements.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 24,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:3",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 3,
+            "quote": "The vendor maps the module to ISO 9001:2015 clauses 4.4 and 5.3; this mapping is not proof that software alone satisfies requirements."
+          },
+          {
+            "evidenceId": "page:9:paragraph:32",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 32,
+            "quote": "No. A software view can help people organize or find process information, but a link or map alone does not establish that work meets applicable requirements. Evaluate the organization's processes and evidence, clarify responsibility for decisions, and use the relevant certification and audit arrangements. The vendor's published descriptions are not a guarantee of an outcome for an individual site.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 25,
+        "evidence": [
+          {
+            "evidenceId": "page:4:paragraph:12",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 12,
+            "quote": "The [ICC page](https://isocertificationconsultants.ca/solutions/processes/) describes process owners; it does not establish a particular backup workflow or automatic reassignment. Ask the supplier how the proposed configuration would display a backup, if that is needed, and what changes can be demonstrated. Until the organization has seen and accepted the arrangement, treat the answer as an evaluation question rather than a product promise.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:5",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one process map grouped into management, customer-facing, core, and support categories, with a level-two flowchart for each process. It also describes named owners and links from processes to controlled documents and standard clauses. Those are published vendor descriptions. They are not evidence that a particular plant has a given problem, that every configuration behaves identically, or that a software map alone satisfies a standard.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 26,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:17",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 17,
+            "quote": "The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes industry starting templates, review of supported PDF process charts before acceptance, and broad activities including process mapping, configuration, standards onboarding, and deployment with training. Confirm how those descriptions apply to the proposed implementation. They do not establish that every file, permission, link, or recovery action works in a particular way. Ask for a demonstration of the relevant scenario and keep any conditions with the evaluation decision.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:5",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a top-level process map, process flowcharts, owners, and links to controlled documents. Use those published descriptions to frame demonstration questions. They do not establish how a particular installation is configured or whether a specific access rule is available. Ask the supplier to show the proposed arrangement using material the team recognizes, then record what was demonstrated separately from what was described.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 27,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:7",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 7,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer evaluates a hypothetical map for a production workflow. The operator explains an input used at a decision point, the supervisor identifies the next role, and the process owner records a question about an exception. The quality lead checks the sample record and notes what remains uncertain. This scenario is hypothetical; it is not a case study or a measured customer result.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:13",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 13,
+            "quote": "The guide uses the same hypothetical manufacturer to make questions concrete. It does not claim that this business exists or that a particular plant achieved a result. Where an example describes a role, record, or decision, adapt the question to the organization's actual evidence and authority. A process that spans several sites may require additional clarification about local scope; a shared name on a map does not settle that question by itself.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 28,
+        "evidence": [
+          {
+            "evidenceId": "page:9:paragraph:30",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 30,
+            "quote": "Provide an understandable explanation of the process and access to the relevant evidence under the organization's arrangements. A reviewer should be able to distinguish the map, an instruction, and a record of an instance of work. The [ISO guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) offers educational papers and expressly states that its guidance is not mandatory audit criteria; applicable requirements still need separate assessment.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:32",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 32,
+            "quote": "No. A software view can help people organize or find process information, but a link or map alone does not establish that work meets applicable requirements. Evaluate the organization's processes and evidence, clarify responsibility for decisions, and use the relevant certification and audit arrangements. The vendor's published descriptions are not a guarantee of an outcome for an individual site.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 29,
+        "evidence": [
+          {
+            "evidenceId": "page:9:paragraph:37",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 37,
+            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) presents a top-level map, process flowcharts, named owners, and document links. Ask to see how the proposed arrangement would represent the selected sample. Questions about role permissions, revision handling, unavailable destinations, and recovery should be demonstrated or recorded for follow-up; the published description does not establish every implementation detail.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:38",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 38,
+            "quote": "Prepare an exception as well as the normal route. A reader might need to identify the next decision when an instruction cannot be opened, or the owner might need to explain what happens when two people disagree about a handoff. Ask the presenter to show the proposed response using a suitable test environment. If the scenario cannot be shown, record the reason and the person who will obtain the answer rather than treating the feature as present.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 30,
+        "evidence": [
+          {
+            "evidenceId": "page:2:paragraph:6",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 6,
+            "quote": "Agree on a small set of observable outcomes before the session. For each one, name a user, a starting point, and an output the user should be able to find or verify. Include an exception: a missing document, an unclear owner, or a record that belongs to another process. If the demonstration cannot cover that exception, record it as open rather than marking the criterion satisfied by inference. A practical evaluation can use the following prompts:\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:7",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 7,
+            "quote": "- Can a reader locate the relevant process from a starting view without relying on a presenter to explain the route?\n- Can the team identify the owner shown for the example and determine whom to contact when that owner is unavailable?\n- Can a reviewer trace the example to its supporting instruction and distinguish the information shown from information that still needs confirmation?\n- Can the team document what was not demonstrated, along with a person responsible for following up?\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:40",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 40,
+            "quote": "At the end of the session, compare the observations with the agreed criteria. Separate a demonstrated outcome from a verbal commitment, an organizational task, and an unresolved question. Name the person who can accept a limitation or request more evidence. If the result depends on configuration, make that condition explicit in the decision record and confirm what will be checked before relying on it.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 31,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:5",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 5,
+            "quote": "The page states AI output is a suggestion reviewed by a person before entry into a controlled record."
+          },
+          {
+            "evidenceId": "page:0:paragraph:18",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 18,
+            "quote": "The same source says AI output is a suggestion reviewed by a person before entry into a controlled record. Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 32,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:10",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 10,
+            "quote": "The guide follows a sequence from understanding the present work to maintaining an agreed explanation. Teams do not need to pretend that every process begins from a blank page. Use the sequence to identify the decisions already made, the evidence that supports them, and the questions that need further work before a map or software arrangement is relied upon.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:12",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 12,
+            "quote": "Each chapter addresses a distinct decision. The early pages help establish what work is being described; the middle pages deal with ownership, workflow, and supporting information; the later pages address implementation and maintenance. Read them in order for a complete plan, or use the relevant chapter to investigate a specific open decision while preserving the context of its neighboring processes.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 33,
+        "evidence": [
+          {
+            "evidenceId": "page:4:paragraph:3",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 3,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes named process owners and a connection between processes and controlled documents. This is a published vendor description, not evidence that any particular person has accepted a role at a site. Ask how a proposed arrangement displays ownership and how the team would confirm that the displayed information is current. Exact permissions and change behavior should be demonstrated rather than inferred from the page.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:4",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 4,
+            "quote": "A process owner is the role accountable for decisions and review of a defined process. A process boundary is an agreed statement of where a mapped process starts and ends, including the triggering event, output, and recipient. A handoff is the point where one role passes an output to another; the receiving role needs enough information to act. These terms help the team discuss its own work, but a label alone does not prove that an assignment or interface is agreed.\n\n"
+          }
+        ]
+      }
+    ],
+    "additionalEvidence": [
+      {
+        "index": 0,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 6,
+            "quote": "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
+          },
+          {
+            "evidenceId": "page:0:paragraph:5",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one process map grouped into management, customer-facing, core, and support categories, with a level-two flowchart for each process. It also describes named owners and links from processes to controlled documents and standard clauses. Those are published vendor descriptions. They are not evidence that a particular plant has a given problem, that every configuration behaves identically, or that a software map alone satisfies a standard.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:17",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 17,
+            "quote": "The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes industry starting templates, review of supported PDF process charts before acceptance, and broad activities including process mapping, configuration, standards onboarding, and deployment with training. Confirm how those descriptions apply to the proposed implementation. They do not establish that every file, permission, link, or recovery action works in a particular way. Ask for a demonstration of the relevant scenario and keep any conditions with the evaluation decision.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:5",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 5,
+            "quote": "The page states AI output is a suggestion reviewed by a person before entry into a controlled record."
+          },
+          {
+            "evidenceId": "page:0:paragraph:18",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 18,
+            "quote": "The same source says AI output is a suggestion reviewed by a person before entry into a controlled record. Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:2",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 2,
+            "quote": "The page describes industry starting templates and review of supported PDF process charts before acceptance."
+          },
+          {
+            "evidenceId": "page:0:paragraph:17",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 17,
+            "quote": "The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes industry starting templates, review of supported PDF process charts before acceptance, and broad activities including process mapping, configuration, standards onboarding, and deployment with training. Confirm how those descriptions apply to the proposed implementation. They do not establish that every file, permission, link, or recovery action works in a particular way. Ask for a demonstration of the relevant scenario and keep any conditions with the evaluation decision.\n\n"
+          },
+          {
+            "evidenceId": "page:1:paragraph:26",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 26,
+            "quote": "Do not assume that an imported diagram carries all of its relationships. The vendor page describes review of supported PDF charts before acceptance, but the plant should ask what a sample import preserves and what must be checked or entered again. Keep the source chart available for comparison and have an owner verify a representative sample before accepting the result. Import capabilities and formats should be confirmed for the actual file in the demonstration.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:4",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 4,
+            "quote": "The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training. Details and applicability require demonstration."
+          },
+          {
+            "evidenceId": "page:0:paragraph:17",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 17,
+            "quote": "The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes industry starting templates, review of supported PDF process charts before acceptance, and broad activities including process mapping, configuration, standards onboarding, and deployment with training. Confirm how those descriptions apply to the proposed implementation. They do not establish that every file, permission, link, or recovery action works in a particular way. Ask for a demonstration of the relevant scenario and keep any conditions with the evaluation decision.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:5",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one process map grouped into management, customer-facing, core, and support categories, with a level-two flowchart for each process. It also describes named owners and links from processes to controlled documents and standard clauses. Those are published vendor descriptions. They are not evidence that a particular plant has a given problem, that every configuration behaves identically, or that a software map alone satisfies a standard.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:6",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 6,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational papers about quality management system auditing, including a process-based approach and evidence collection. The collection says its guidance is not definitive and is not intended as specified requirements, a benchmark, or mandatory audit criteria. Use it to frame questions about evidence and relationships, while assessing the requirements and arrangements that apply to the organization separately.\n\n"
+          },
+          {
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 6,
+            "quote": "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 1,
+            "quote": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+          },
+          {
+            "evidenceId": "page:6:paragraph:2",
+            "kind": "page",
+            "id": "documents-and-evidence",
+            "paragraph": 2,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes links from processes to controlled documents and standard clauses. That published description is a useful starting point for a demonstration. It does not establish that a particular plant has chosen the right documents, configured access, or verified every link. Those decisions depend on the organization's own evidence and arrangements.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:3",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 3,
+            "quote": "The vendor maps the module to ISO 9001:2015 clauses 4.4 and 5.3; this mapping is not proof that software alone satisfies requirements."
+          },
+          {
+            "evidenceId": "page:9:paragraph:32",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 32,
+            "quote": "No. A software view can help people organize or find process information, but a link or map alone does not establish that work meets applicable requirements. Evaluate the organization's processes and evidence, clarify responsibility for decisions, and use the relevant certification and audit arrangements. The vendor's published descriptions are not a guarantee of an outcome for an individual site.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "evidence": [
+          {
+            "evidenceId": "page:4:paragraph:12",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 12,
+            "quote": "The [ICC page](https://isocertificationconsultants.ca/solutions/processes/) describes process owners; it does not establish a particular backup workflow or automatic reassignment. Ask the supplier how the proposed configuration would display a backup, if that is needed, and what changes can be demonstrated. Until the organization has seen and accepted the arrangement, treat the answer as an evaluation question rather than a product promise.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:5",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one process map grouped into management, customer-facing, core, and support categories, with a level-two flowchart for each process. It also describes named owners and links from processes to controlled documents and standard clauses. Those are published vendor descriptions. They are not evidence that a particular plant has a given problem, that every configuration behaves identically, or that a software map alone satisfies a standard.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:17",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 17,
+            "quote": "The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes industry starting templates, review of supported PDF process charts before acceptance, and broad activities including process mapping, configuration, standards onboarding, and deployment with training. Confirm how those descriptions apply to the proposed implementation. They do not establish that every file, permission, link, or recovery action works in a particular way. Ask for a demonstration of the relevant scenario and keep any conditions with the evaluation decision.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:5",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 5,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a top-level process map, process flowcharts, owners, and links to controlled documents. Use those published descriptions to frame demonstration questions. They do not establish how a particular installation is configured or whether a specific access rule is available. Ask the supplier to show the proposed arrangement using material the team recognizes, then record what was demonstrated separately from what was described.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 9,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:7",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 7,
+            "quote": "**Illustrative example:** An unnamed Canadian manufacturer evaluates a hypothetical map for a production workflow. The operator explains an input used at a decision point, the supervisor identifies the next role, and the process owner records a question about an exception. The quality lead checks the sample record and notes what remains uncertain. This scenario is hypothetical; it is not a case study or a measured customer result.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:13",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 13,
+            "quote": "The guide uses the same hypothetical manufacturer to make questions concrete. It does not claim that this business exists or that a particular plant achieved a result. Where an example describes a role, record, or decision, adapt the question to the organization's actual evidence and authority. A process that spans several sites may require additional clarification about local scope; a shared name on a map does not settle that question by itself.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 10,
+        "evidence": [
+          {
+            "evidenceId": "page:9:paragraph:30",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 30,
+            "quote": "Provide an understandable explanation of the process and access to the relevant evidence under the organization's arrangements. A reviewer should be able to distinguish the map, an instruction, and a record of an instance of work. The [ISO guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) offers educational papers and expressly states that its guidance is not mandatory audit criteria; applicable requirements still need separate assessment.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:32",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 32,
+            "quote": "No. A software view can help people organize or find process information, but a link or map alone does not establish that work meets applicable requirements. Evaluate the organization's processes and evidence, clarify responsibility for decisions, and use the relevant certification and audit arrangements. The vendor's published descriptions are not a guarantee of an outcome for an individual site.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 11,
+        "evidence": [
+          {
+            "evidenceId": "page:9:paragraph:37",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 37,
+            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) presents a top-level map, process flowcharts, named owners, and document links. Ask to see how the proposed arrangement would represent the selected sample. Questions about role permissions, revision handling, unavailable destinations, and recovery should be demonstrated or recorded for follow-up; the published description does not establish every implementation detail.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:38",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 38,
+            "quote": "Prepare an exception as well as the normal route. A reader might need to identify the next decision when an instruction cannot be opened, or the owner might need to explain what happens when two people disagree about a handoff. Ask the presenter to show the proposed response using a suitable test environment. If the scenario cannot be shown, record the reason and the person who will obtain the answer rather than treating the feature as present.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 12,
+        "evidence": [
+          {
+            "evidenceId": "page:2:paragraph:6",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 6,
+            "quote": "Agree on a small set of observable outcomes before the session. For each one, name a user, a starting point, and an output the user should be able to find or verify. Include an exception: a missing document, an unclear owner, or a record that belongs to another process. If the demonstration cannot cover that exception, record it as open rather than marking the criterion satisfied by inference. A practical evaluation can use the following prompts:\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:7",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 7,
+            "quote": "- Can a reader locate the relevant process from a starting view without relying on a presenter to explain the route?\n- Can the team identify the owner shown for the example and determine whom to contact when that owner is unavailable?\n- Can a reviewer trace the example to its supporting instruction and distinguish the information shown from information that still needs confirmation?\n- Can the team document what was not demonstrated, along with a person responsible for following up?\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:40",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 40,
+            "quote": "At the end of the session, compare the observations with the agreed criteria. Separate a demonstrated outcome from a verbal commitment, an organizational task, and an unresolved question. Name the person who can accept a limitation or request more evidence. If the result depends on configuration, make that condition explicit in the decision record and confirm what will be checked before relying on it.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 13,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:5",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 5,
+            "quote": "The page states AI output is a suggestion reviewed by a person before entry into a controlled record."
+          },
+          {
+            "evidenceId": "page:0:paragraph:18",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 18,
+            "quote": "The same source says AI output is a suggestion reviewed by a person before entry into a controlled record. Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 14,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:10",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 10,
+            "quote": "The guide follows a sequence from understanding the present work to maintaining an agreed explanation. Teams do not need to pretend that every process begins from a blank page. Use the sequence to identify the decisions already made, the evidence that supports them, and the questions that need further work before a map or software arrangement is relied upon.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:12",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 12,
+            "quote": "Each chapter addresses a distinct decision. The early pages help establish what work is being described; the middle pages deal with ownership, workflow, and supporting information; the later pages address implementation and maintenance. Read them in order for a complete plan, or use the relevant chapter to investigate a specific open decision while preserving the context of its neighboring processes.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 15,
+        "evidence": [
+          {
+            "evidenceId": "page:4:paragraph:3",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 3,
+            "quote": "The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes named process owners and a connection between processes and controlled documents. This is a published vendor description, not evidence that any particular person has accepted a role at a site. Ask how a proposed arrangement displays ownership and how the team would confirm that the displayed information is current. Exact permissions and change behavior should be demonstrated rather than inferred from the page.\n\n"
+          },
+          {
+            "evidenceId": "page:0:paragraph:4",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 4,
+            "quote": "A process owner is the role accountable for decisions and review of a defined process. A process boundary is an agreed statement of where a mapped process starts and ends, including the triggering event, output, and recipient. A handoff is the point where one role passes an output to another; the receiving role needs enough information to act. These terms help the team discuss its own work, but a label alone does not prove that an assignment or interface is agreed.\n\n"
+          }
+        ]
+      }
+    ],
+    "inputHash": "62e0cfab30c6db02bc23f7f831d5c9533d7ce02c150698f50c89e562a3ece787",
+    "reviewContextHash": "99a09eeabaf74f554063590f41580783a7f8277afe3f6cbccaf512e8706e94c1",
+    "pageHashes": {
+      "process-mapping-software-for-quality-management": "e8f424f3ae4856e0985b0721312bf4d99de40a94caa08a25e91bba25bf210f4a",
+      "mapping-current-processes": "b198c2f3c6eba2cd1fd752684269894b6fa58d852d6ecf8072e91f6b9c786625",
+      "evaluating-process-software": "ceccc2bd8d2b219828d0ae1718f8f5d4db321e16ddc8e48f98538c21cb908f25",
+      "process-architecture": "44835046026b3ab0057192ba3cc707e3cf621df808877f661e0747e317b0664e",
+      "process-ownership": "585972279ea8da224f7213617c1ab4b3aaf04ceb99e62e973f6ab1a1610af859",
+      "mapping-workflows": "9540813782a172e1ff307e52ef1b55af883e33ea5e21b3595a35fd2a2680bcd3",
+      "documents-and-evidence": "f10cf32a6e97537ceadba801be1d12e7135d389ca15979e2e70ce510ca8fd9b7",
+      "migration-and-configuration": "e8fc4af2b671386f96d756e0d43478c4f91383d3f0b3f82d08160265990b61c7",
+      "rollout-and-training": "923b07d63a74c6511373852eff169f87cfa1fd8446d0ff3656fb5c0e38b24d8a",
+      "ongoing-operation": "db4c66773c068b5da25b661deb74c344cea430d572329797f932df46c773a4d2"
+    },
+    "reviewer": "Configured claude independent review",
+    "reviewedAt": "2026-11-23T14:44:04.892Z"
+  },
   "generationCompletedAt": null,
   "finalReport": null
 }
