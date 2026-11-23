@@ -43,7 +43,10 @@
     "Decision owner",
     "Assigned process owner",
     "Backup",
-    "Worker"
+    "Worker",
+    "Reviewer",
+    "Responsible person",
+    "Normal reader"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -60,7 +63,10 @@
     "Responsibility statement",
     "Interim arrangement record with responsible person",
     "Decision record stating scope, people consulted, decision-maker, agreed assignment, and conditions",
-    "Review record noting version, scope, participants, sample used, and decisions reached"
+    "Review record noting version, scope, participants, sample used, and decisions reached",
+    "Review record capturing step, sample, intended reader, and observed result",
+    "Change record connecting the decision to the process and affected destination",
+    "Traceability review record identifying process scope, sample, participants, observations, and conditions on acceptance"
   ],
   "example": {
     "label": "Illustrative example",
@@ -143,6 +149,24 @@
         "Decide whether a draft is suitable for a limited purpose while an issue remains open",
         "Decide whether another sample, a discussion, or escalation is needed before the map is accepted",
         "Record the decision owner and an interim action where no route is agreed"
+      ]
+    },
+    {
+      "slug": "documents-and-evidence",
+      "title": "Connect documents and evidence: process mapping software for quality management",
+      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, exceptions, and evaluation criteria. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
+      "bodyHash": "327d7d990548e02343e84a483ef4ada81af8ad4a2c20a0413bec4705c08ab35b",
+      "decisions": [
+        "Determine ownership, acceptance and next action for each proposed document connection",
+        "Decide whether a candidate link helps the intended reader and record why a disputed item was included or left open",
+        "Decide what question the reader is trying to answer before connecting a completed record to a process step",
+        "Decide whether further investigation is needed when a second sample differs from the first",
+        "Decide how the organization will handle the period before a revision issue is resolved",
+        "Identify an approved alternative route, restrict reliance on a draft, or escalate an unresolved revision question",
+        "Decide whether the process description needs an update when a revision changes the meaning of a decision or role",
+        "Assign follow-up for an observation when a reader reaches an older copy or cannot open a destination",
+        "Agree on acceptance criteria before the traceability walkthrough",
+        "Assign an open issue rather than substituting a similar file when a reader cannot open an instruction"
       ]
     }
   ],

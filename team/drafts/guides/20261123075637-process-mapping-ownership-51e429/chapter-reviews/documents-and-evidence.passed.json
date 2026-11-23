@@ -6,28 +6,36 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition across sections.",
+  "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, exceptions, and evaluation criteria. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
   "glossary": [],
   "roles": [
     "Process owner",
     "Quality lead",
     "Operator",
-    "Assigned process owner"
+    "Worker",
+    "Reviewer",
+    "Responsible person",
+    "Decision-maker",
+    "Supplier",
+    "Normal reader"
   ],
   "recordNames": [
     "Documented decision and its owner",
     "Review record capturing step, sample, intended reader, and observed result",
     "Change record connecting the decision to the process and affected destination",
-    "Record of observed evidence and open questions from traceability walkthrough"
+    "Traceability review record identifying process scope, sample, participants, observations, and conditions on acceptance"
   ],
   "decisions": [
-    "Determine ownership, acceptance and next action",
-    "Decide what question the reader is trying to answer before connecting a record to a process step",
-    "Decide whether a connection helps the intended reader and record why a disputed item was included or left open",
-    "Decide who will examine a process link when the destination is revised, withdrawn, or moved",
-    "Decide how the organization will handle the period before a revision issue is resolved and record the interim decision and its owner",
+    "Determine ownership, acceptance and next action for each proposed document connection",
+    "Decide whether a candidate link helps the intended reader and record why a disputed item was included or left open",
+    "Decide what question the reader is trying to answer before connecting a completed record to a process step",
+    "Decide whether further investigation is needed when a second sample differs from the first",
+    "Decide how the organization will handle the period before a revision issue is resolved",
+    "Identify an approved alternative route, restrict reliance on a draft, or escalate an unresolved revision question",
+    "Decide whether the process description needs an update when a revision changes the meaning of a decision or role",
+    "Assign follow-up for an observation when a reader reaches an older copy or cannot open a destination",
     "Agree on acceptance criteria before the traceability walkthrough",
-    "Decide whether further investigation is needed when a second sample differs from the first"
+    "Assign an open issue rather than substituting a similar file when a reader cannot open an instruction"
   ],
   "pass": true,
   "deterministic": {
@@ -125,16 +133,16 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "a97cb45bf221109aaee267e4a58a65b936a4d2e46e44413b797d6b4e74d931ee",
-  "contentHash": "708b3ce6fd25e23099bc64045abc164cb9f314323f9a1cfda8e67004ada2e5a9",
+  "inputHash": "08cdeb3bbb5e8933c9da5ca3889912d94070555622018ad131b1f3a52abeace2",
+  "contentHash": "3cd8c4b1aa42a52a74e57470dbc9c4debf229f3c0ade2ced8abd34b3d422aa8f",
   "paragraphHashes": [
     "f18b264cdb8c3f7273614d52a7e119a09c578ee766dcfc72f5c2a4ad46cb2ae5",
     "160ea73a9cf51e3e041491c8cf15d74db077ea46bdd5063e9b355eb8ec70121a",
-    "0a24fd1e4afbd7387f1740e326c4601b3bdef664a154c78496abcf0312b2d054",
+    "b107c482411273e2eb71e71958e7823b703cf5b6a4ea093b6daf108c820a978d",
     "9d00364e766de5cacc094ae319de6c410f1401f217ed66977bb5804fcfc848ce",
     "3e57b9c6af011c412d918b21691d38755119123c26860d930f2a52755f61224b",
-    "223390daf639fdc5579528532d12abab24d3de7a643265fea7ad1c3e185e2cc0",
-    "c6a0d78e19e1ab00ba7bee589bac4b33c8e2f6568bfb3074ec497e15bf40aaf8",
+    "245d0ad77cf80f48ea8c62c9a68e0e3382dfd5405f9c30ab3258e44d086ccf2f",
+    "9512c21c2f6942714d03076c225af88bb101bc87a23ecc4f8e37ea86117328ba",
     "4c01aa91aad241b24ae91e6985b52444cf78a31b42b4e58408f22dcd9b604beb",
     "fe6a5848c97a9e0b25ae2adb94b65925e0bb4b4bb3bf0a7ed7413d2c0082ef20",
     "2eb85aa7a4f26769a48832b6eeda0d5435678351bc032a6e80e1b327390a6ee4",
@@ -163,9 +171,9 @@
     "f970807a2be2930a172a7a20ad0298b14a210c657d36253338b07f14cb108c8d",
     "5fdf8537b58484658149e5083eb97de309658028791d899de203989578ef2aa1",
     "1032930a9d8d94acadfbd5ba55cd160c543e36b2c5c094354132310e5ee5b098",
-    "c343b1e65cf8957bfca6827d940bc308e21864164283487e15749ea26bc63c36"
+    "d6f0e57dfe2617e15a437bb900e8c6b16a2f2f0aa2d693ad73ccb9e8a71e4be9"
   ],
-  "outputContextHash": "d15b3659afad7199cb10f6d5d5330b59e4ebae7c0c84122177122d5fa7c0e56d",
-  "reviewedAt": "2026-11-23T14:25:55.268Z",
+  "outputContextHash": "3d95b37d2e97e54b95a060dc5560460a7c13ab057f26661c53cd923b189aa688",
+  "reviewedAt": "2026-11-23T14:59:17.643Z",
   "reviewer": "Configured independent chapter reviewer"
 }
