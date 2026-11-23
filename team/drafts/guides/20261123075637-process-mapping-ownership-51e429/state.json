@@ -44,11 +44,11 @@
       "checkpointedAt": "2026-11-23T15:11:44.692Z"
     },
     "evaluating-process-software": {
-      "hash": "5fd9fd832cf70791ab3e29a7f8fe2844ebdeb37fd855e013322cedefca364783",
-      "wordCount": 2002,
+      "hash": "fd6ce1b32f37f6ce630c7d1bfa91afc521b7436a502008e62b56323a8260b3f0",
+      "wordCount": 2010,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-23T14:51:57.749Z"
+      "checkpointedAt": "2026-11-23T15:13:09.978Z"
     },
     "process-architecture": {
       "hash": "3b02e72d67bc7fff45c7d75efb45b89a130c2d08020506017e0ae3125bb02925",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T15:11:57.801Z",
+  "updatedAt": "2026-11-23T15:13:17.845Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -1418,7 +1418,7 @@
     "reviewedChapters": [],
     "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
   },
-  "contextHash": "ab1faf70b87074bf295406bdbcf9f9c7e1935435e51ef1389d6c80076afc8d21",
+  "contextHash": "8ba4ec15e165d8c79c93e501bddd74d05903349e0b4fb982d032c464f36954a3",
   "chapterReviews": {
     "mapping-current-processes": {
       "claims": "passed",
@@ -1599,6 +1599,171 @@
       ],
       "outputContextHash": "ab1faf70b87074bf295406bdbcf9f9c7e1935435e51ef1389d6c80076afc8d21",
       "reviewedAt": "2026-11-23T15:11:57.794Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "evaluating-process-software": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All four subsections cover evaluate process mapping software within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. The changed paragraphs introduce no new problems, and there are no unresolved findings from the previous review. The page passes all checks.",
+      "glossary": [],
+      "roles": [
+        "Process owner",
+        "Operator",
+        "Quality lead",
+        "Operations manager"
+      ],
+      "recordNames": [
+        "Demonstration record",
+        "Evaluation record",
+        "Comparison record"
+      ],
+      "decisions": [
+        "Determine which criteria are requirements versus preferences before the evaluation session",
+        "Record whether each demonstrated outcome was shown or remains open",
+        "Assign a responsible person for each unanswered question before selection",
+        "Decide whether available evidence supports a selection or whether further information is required",
+        "Record any supplier commitment with its scope, responsible party, and confirmation conditions",
+        "Decide what consequence a gap has for the intended use before accepting or rejecting an option"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Set evaluation criteria",
+            "section": "Set evaluation criteria"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Set evaluation criteria; semantic review verifies support",
+            "section": "Set evaluation criteria"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Compare maps and flowcharts",
+            "section": "Compare maps and flowcharts"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Compare maps and flowcharts; semantic review verifies support",
+            "section": "Compare maps and flowcharts"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Test ownership and access",
+            "section": "Test ownership and access"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Test ownership and access; semantic review verifies support",
+            "section": "Test ownership and access"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Document gaps and commitments",
+            "section": "Document gaps and commitments"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Document gaps and commitments; semantic review verifies support",
+            "section": "Document gaps and commitments"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "23a572d3273540e3d85ac9f01cf83f19f1b4566a733b2bd7606609a6bf5cb17b",
+      "contentHash": "4abab185b2847afa3ce31842d0c3466dc77f92b14be16ac2d9fbecbb26f525ec",
+      "paragraphHashes": [
+        "05812d5ff246bd7ad664b512dbeac0eebf4869f9311e3234bfcf8fa1bef427b6",
+        "55deaeec376025ac41b1c86c4b746cb396a63b3f8a02a8a5874f80ffb5782f0a",
+        "0bcbde8a42ac61b9891b8a3026838cbbef561388c724217b4199a4101707cb40",
+        "4b670cb5c6397efed63c411f76d875db0b184c4b6448fcb6064cf537980afb5f",
+        "d3d1d25b535d52c925d85351737538df6f9fe367912648672186f2d75f3e57f1",
+        "2b8fac29e955f998f6e0f3139d9bf0ec9c497d29351aed4d8aaba5c5765513f4",
+        "734c4f1b8d53e8d784bbaa2f872a145fc1523a90c0913d0c9d79da432a213c54",
+        "ca01e1309b14661320b16bdd8c8cdd568fd62c03e74b27946f07b6772da93656",
+        "5fdc1ae2d34b20346ea833bda6cd542a076955be3ae9aa3c93ce57eb65964cf8",
+        "fd8146a442e194983a6382bd9b1526a0d3f42ffa14d0a52199000f38e32a258d",
+        "2176801827cb74ead8a1ccbae43413a6ce316a6fd07ef758629b121dc4b0c2bd",
+        "34f7e0aed5223829c543e61f8ace6da97f8871b8fa4fcddbbacdbf576caf3a1d",
+        "cc5f4daa424854528b03a88d940e7d47d9d4baa84d9726f29669db6b0d630880",
+        "a95de209bea31298f77759dce7396d942fa7cc1632b081b7f7806e0765c7f868",
+        "643912317dfa63723fe8631c5b14aa6b0bb1d0d54118889296b7ea491e6b85a7",
+        "7dbadfd3bdbd7513f2b8a15e9baebff6aabfd072486f36b94ae679993ebc6808",
+        "198b138a946caa1ad24057a9dd63235a3c1b2811764bf5dc887c04700306037d",
+        "225c1baee45a9e1df236bb9a100f8d0569c0d8d0fdc65f2d2b14a3f291917a8e",
+        "acb80756ed76ccb45ddf298db28ef0b2173d67ea310b2441af7c1586ad598b36",
+        "3182dfce24c0579824b74a7a3ce222404d2ec3ce0fbe2bb9e2c28ac0f3268075",
+        "f5fe0e2c133001ffee1332454e8fa6472bd182a4f6f1348083ff9eef9e1affb4",
+        "f78d3d1b67037167b4af5beb63645ecd5ac33baba7e70e0c9c3a18ff9dd2dca8",
+        "ae50184dc0eec95a3fab947c6eb0252415012d59c6224874c30e57f9913545ee",
+        "2afae8c9663c7b74394f3d98df0009db9abbd2d3213b353821f90b0dd662ba12",
+        "12172b83422d251c0c72d92293694e63d7e5c6c04f25cb31bd15bddd7260a75c",
+        "03c1b753d211263941560487b086905df545c107d214c2288a619be7892e147a",
+        "a5460557da135f4cef6c2871d6b55315840ff98ecdaddfad6e769e92ee7869e2",
+        "977ef73bfa5db2b0f337bb501327461ad52901d9c7b7923343e5892fac860b6f",
+        "2edadac49e9b5b18b578deb6dccbb6ab256832f19f5d06035792d5be423bc2b4",
+        "3f3b172c0c43e952e540e1f261e68b11588a033573c927da57d3ce1b8b2aea70",
+        "18c484157ba06d6868ce590928deb357124382c4c6eec55e5b05eacfbdd33429",
+        "33cdf26073d7601e645521d08196db2d94958e4d0fbb3b8237a4ceb505b14808"
+      ],
+      "outputContextHash": "8ba4ec15e165d8c79c93e501bddd74d05903349e0b4fb982d032c464f36954a3",
+      "reviewedAt": "2026-11-23T15:13:17.839Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

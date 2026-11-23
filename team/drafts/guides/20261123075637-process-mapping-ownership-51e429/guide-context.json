@@ -22,14 +22,18 @@
     "Supervisor",
     "Quality lead",
     "Floor supervisor",
-    "Vendor"
+    "Vendor",
+    "Operations manager"
   ],
   "recordNames": [
     "Documented decision and its owner",
     "Map including what it includes, excludes, and the decisions it supports",
     "Completed process record or physical output",
     "Vendor statements or demonstrated behavior record",
-    "Review record noting date, evidence examined, disagreements, and resolution owners"
+    "Review record noting date, evidence examined, disagreements, and resolution owners",
+    "Demonstration record",
+    "Evaluation record",
+    "Comparison record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -50,6 +54,20 @@
         "Decide whether the boundary or the actual handoff needs clarification when inspection evidence arrives after release",
         "Assign a resolution owner for any unresolved escalation route",
         "Decide who can view, propose, review, and release a map change and how those decisions are recorded"
+      ]
+    },
+    {
+      "slug": "evaluating-process-software",
+      "title": "Evaluate process mapping software: process mapping software for quality management",
+      "summary": "All four subsections cover evaluate process mapping software within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. The changed paragraphs introduce no new problems, and there are no unresolved findings from the previous review. The page passes all checks.",
+      "bodyHash": "fc6d31c59910077a59c03eb424a3b76a01dce9698a42684755a9445b5c1761f5",
+      "decisions": [
+        "Determine which criteria are requirements versus preferences before the evaluation session",
+        "Record whether each demonstrated outcome was shown or remains open",
+        "Assign a responsible person for each unanswered question before selection",
+        "Decide whether available evidence supports a selection or whether further information is required",
+        "Record any supplier commitment with its scope, responsible party, and confirmation conditions",
+        "Decide what consequence a gap has for the intended use before accepting or rejecting an option"
       ]
     }
   ],
