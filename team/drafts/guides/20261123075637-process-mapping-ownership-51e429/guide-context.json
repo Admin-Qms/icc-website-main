@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "topicId": "process-mapping-ownership",
+  "glossary": [
+    {
+      "term": "Process owner",
+      "definition": "The role accountable for decisions and review of a defined process."
+    }
+  ],
+  "roles": [
+    "Quality owner",
+    "Process owner",
+    "Operator"
+  ],
+  "recordNames": [],
+  "example": {
+    "label": "Illustrative example",
+    "description": "An unnamed Canadian manufacturer evaluates a process map for a production workflow; all situations and records are hypothetical."
+  },
+  "reviewedChapters": [],
+  "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
+}

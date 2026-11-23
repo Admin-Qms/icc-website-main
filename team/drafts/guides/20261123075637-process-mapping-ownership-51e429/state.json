@@ -34,8 +34,1324 @@
     ]
   },
   "productionSlotId": "2026-W48-slot-1",
-  "stage": "reserved",
+  "stage": "outlined",
   "pages": {},
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T07:56:37.738Z"
+  "updatedAt": "2026-11-23T07:58:20.427Z",
+  "manifest": {
+    "schemaVersion": 1,
+    "topicId": "process-mapping-ownership",
+    "slug": "process-mapping-software-for-quality-management",
+    "title": "Process mapping software for quality management in Canadian operations",
+    "description": "How to choose and implement process mapping software for quality management: map workflows, assign owners, link documents and evaluate tools.",
+    "primaryKeyword": "process mapping software for quality management",
+    "keywords": [
+      "process mapping software for quality management",
+      "process owner assignment",
+      "process flowchart documents linked"
+    ],
+    "audience": "Canadian quality and operations teams",
+    "author": "ISO Certification Consultants Editorial Team",
+    "date": "2026-11-23",
+    "introductionFile": "introduction.md",
+    "chapters": [
+      {
+        "slug": "mapping-current-processes",
+        "file": "chapters/mapping-current-processes.md"
+      },
+      {
+        "slug": "evaluating-process-software",
+        "file": "chapters/evaluating-process-software.md"
+      },
+      {
+        "slug": "process-architecture",
+        "file": "chapters/process-architecture.md"
+      },
+      {
+        "slug": "process-ownership",
+        "file": "chapters/process-ownership.md"
+      },
+      {
+        "slug": "mapping-workflows",
+        "file": "chapters/mapping-workflows.md"
+      },
+      {
+        "slug": "documents-and-evidence",
+        "file": "chapters/documents-and-evidence.md"
+      },
+      {
+        "slug": "migration-and-configuration",
+        "file": "chapters/migration-and-configuration.md"
+      },
+      {
+        "slug": "rollout-and-training",
+        "file": "chapters/rollout-and-training.md"
+      },
+      {
+        "slug": "ongoing-operation",
+        "file": "chapters/ongoing-operation.md"
+      }
+    ],
+    "sources": [
+      {
+        "id": "icc-processes",
+        "sourceType": "primary",
+        "title": "Process Management Software",
+        "publisher": "ISO Certification Consultants Inc.",
+        "url": "https://isocertificationconsultants.ca/solutions/processes/",
+        "retrievedAt": "2026-11-23",
+        "supportedClaims": [
+          "The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process.",
+          "The page describes named process owners and links from processes to controlled documents and standard clauses.",
+          "The page describes industry starting templates and review of supported PDF process charts before acceptance.",
+          "The vendor maps the module to ISO 9001:2015 clauses 4.4 and 5.3; this mapping is not proof that software alone satisfies requirements.",
+          "The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training. Details and applicability require demonstration.",
+          "The page states AI output is a suggestion reviewed by a person before entry into a controlled record.",
+          "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
+        ]
+      },
+      {
+        "id": "iso-apg",
+        "sourceType": "primary",
+        "title": "ISO 9001 Auditing Practices Group",
+        "publisher": "ISO 9001 Auditing Practices Group",
+        "url": "https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "retrievedAt": "2026-11-23",
+        "supportedClaims": [
+          "The ISO 9001 Auditing Practices Group site provides educational papers on quality management system auditing, including a process-based approach and risk-based thinking.",
+          "The site says its guidance is not definitive and is not intended as specified requirements, a benchmark or mandatory audit criteria.",
+          "Its ISO 9001:2015 auditing topics include processes, evidence collection, audit planning and improvement."
+        ]
+      }
+    ],
+    "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "researchSnapshotHash": "b85d1e7a66b7ea6abc1f9c30e18db4d6da2fa5c706af53070daecbf77dac6a7b",
+    "productionSlotId": "2026-W48-slot-1"
+  },
+  "assignments": {
+    "process-mapping-software-for-quality-management": {
+      "slug": "process-mapping-software-for-quality-management",
+      "title": "Process mapping software for quality management in Canadian operations",
+      "description": "How to choose and implement process mapping software for quality management: map workflows, assign owners, link documents and evaluate tools.",
+      "primaryKeyword": "process mapping software for quality management",
+      "keywords": [
+        "process mapping software for quality management",
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-11-23",
+      "imageBrief": "A manufacturing quality lead reviewing a process map beside a production cell; authentic industrial setting, no text or logos",
+      "sourceIds": [
+        "icc-processes",
+        "iso-apg"
+      ],
+      "capabilityIds": []
+    },
+    "mapping-current-processes": {
+      "slug": "mapping-current-processes",
+      "title": "Map current processes: process mapping software for quality management",
+      "description": "Map current processes in process mapping software for quality management: define the mapping purpose; identify process boundaries; trace inputs and outputs.",
+      "primaryKeyword": "process mapping software for quality management",
+      "keywords": [
+        "process mapping software for quality management map current processes",
+        "process mapping software for quality management",
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-11-23",
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "sourceIds": [
+        "icc-processes",
+        "iso-apg"
+      ],
+      "capabilityIds": []
+    },
+    "evaluating-process-software": {
+      "slug": "evaluating-process-software",
+      "title": "Evaluate process mapping software: process mapping software for quality management",
+      "description": "Evaluate process mapping software in process mapping software for quality management: set evaluation criteria; compare maps and flowcharts.",
+      "primaryKeyword": "process mapping software for quality management",
+      "keywords": [
+        "process mapping software for quality management evaluate process mapping software",
+        "process mapping software for quality management",
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-11-23",
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "sourceIds": [
+        "icc-processes",
+        "iso-apg"
+      ],
+      "capabilityIds": []
+    },
+    "process-architecture": {
+      "slug": "process-architecture",
+      "title": "Design a process architecture: process mapping software for quality management",
+      "description": "Design a process architecture in process mapping software for quality management: group processes by purpose and define the top-level map.",
+      "primaryKeyword": "process mapping software for quality management",
+      "keywords": [
+        "process mapping software for quality management design a process architecture",
+        "process mapping software for quality management",
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-11-23",
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "sourceIds": [
+        "icc-processes",
+        "iso-apg"
+      ],
+      "capabilityIds": []
+    },
+    "process-ownership": {
+      "slug": "process-ownership",
+      "title": "Assign process owners: process mapping software for quality management",
+      "description": "Assign process owners in process mapping software for quality management: define owner responsibilities; assign decisions and backups.",
+      "primaryKeyword": "process mapping software for quality management",
+      "keywords": [
+        "process mapping software for quality management assign process owners",
+        "process mapping software for quality management",
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-11-23",
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "sourceIds": [
+        "icc-processes",
+        "iso-apg"
+      ],
+      "capabilityIds": []
+    },
+    "mapping-workflows": {
+      "slug": "mapping-workflows",
+      "title": "Map workflows and decisions: process mapping software for quality management",
+      "description": "Map workflows and decisions in process mapping software for quality management: gather task evidence; draw steps and decision points.",
+      "primaryKeyword": "process mapping software for quality management",
+      "keywords": [
+        "process mapping software for quality management map workflows and decisions",
+        "process mapping software for quality management",
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-11-23",
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "sourceIds": [
+        "icc-processes",
+        "iso-apg"
+      ],
+      "capabilityIds": []
+    },
+    "documents-and-evidence": {
+      "slug": "documents-and-evidence",
+      "title": "Connect documents and evidence: process mapping software for quality management",
+      "description": "Connect documents and evidence in process mapping software for quality management: identify controlled documents and link records to process steps.",
+      "primaryKeyword": "process mapping software for quality management",
+      "keywords": [
+        "process mapping software for quality management connect documents and evidence",
+        "process mapping software for quality management",
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-11-23",
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "sourceIds": [
+        "icc-processes",
+        "iso-apg"
+      ],
+      "capabilityIds": []
+    },
+    "migration-and-configuration": {
+      "slug": "migration-and-configuration",
+      "title": "Plan migration and configuration: process mapping software for quality management",
+      "description": "Plan migration and configuration in process mapping software for quality management: inventory existing maps; prepare files and relationships.",
+      "primaryKeyword": "process mapping software for quality management",
+      "keywords": [
+        "process mapping software for quality management plan migration and configuration",
+        "process mapping software for quality management",
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-11-23",
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "sourceIds": [
+        "icc-processes",
+        "iso-apg"
+      ],
+      "capabilityIds": []
+    },
+    "rollout-and-training": {
+      "slug": "rollout-and-training",
+      "title": "Train teams and roll out: process mapping software for quality management",
+      "description": "Train teams and roll out in process mapping software for quality management: prepare role-based training and pilot with representative users.",
+      "primaryKeyword": "process mapping software for quality management",
+      "keywords": [
+        "process mapping software for quality management train teams and roll out",
+        "process mapping software for quality management",
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-11-23",
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "sourceIds": [
+        "icc-processes",
+        "iso-apg"
+      ],
+      "capabilityIds": []
+    },
+    "ongoing-operation": {
+      "slug": "ongoing-operation",
+      "title": "Maintain process maps and improve: process mapping software for quality management",
+      "description": "Maintain process maps and improve in process mapping software for quality management: review maps after change and measure the review workflow.",
+      "primaryKeyword": "process mapping software for quality management",
+      "keywords": [
+        "process mapping software for quality management maintain process maps and improve",
+        "process mapping software for quality management",
+        "process owner assignment",
+        "process flowchart documents linked"
+      ],
+      "author": "ISO Certification Consultants Editorial Team",
+      "date": "2026-11-23",
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "sourceIds": [
+        "icc-processes",
+        "iso-apg"
+      ],
+      "capabilityIds": []
+    }
+  },
+  "pagePlans": {
+    "process-mapping-software-for-quality-management": {
+      "slug": "process-mapping-software-for-quality-management",
+      "title": "Process mapping software for quality management in Canadian operations",
+      "description": "How to choose and implement process mapping software for quality management: map workflows, assign owners, link documents and evaluate tools.",
+      "imageBrief": "A manufacturing quality lead reviewing a process map beside a production cell; authentic industrial setting, no text or logos",
+      "targetWords": 1500,
+      "subsections": [
+        "The operational problem",
+        "How to use this guide",
+        "Planning evaluation and implementation"
+      ],
+      "scope": "Introduce the complete guide, its audience and the decisions it helps make. Include an ordered overview, useful internal/primary links, no product promises."
+    },
+    "mapping-current-processes": {
+      "slug": "mapping-current-processes",
+      "title": "Map current processes: process mapping software for quality management",
+      "description": "Map current processes in process mapping software for quality management: define the mapping purpose; identify process boundaries; trace inputs and outputs.",
+      "targetWords": 2000,
+      "chapterKeyword": "process mapping software for quality management map current processes",
+      "boundaries": [
+        "Leave evaluate process mapping software to its assigned chapter.",
+        "Leave design a process architecture to its assigned chapter.",
+        "Leave assign process owners to its assigned chapter.",
+        "Leave map workflows and decisions to its assigned chapter.",
+        "Leave connect documents and evidence to its assigned chapter.",
+        "Leave plan migration and configuration to its assigned chapter.",
+        "Leave train teams and roll out to its assigned chapter.",
+        "Leave maintain process maps and improve to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Define the mapping purpose",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain define the mapping purpose as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Identify process boundaries",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain identify process boundaries as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Trace inputs and outputs",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain trace inputs and outputs as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Record handoffs and exceptions",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain record handoffs and exceptions as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        }
+      ],
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "scope": "Cover map current processes for process mapping software. Explain roles, inputs, decisions, records, exceptions and evaluation criteria without asserting unverified capabilities."
+    },
+    "evaluating-process-software": {
+      "slug": "evaluating-process-software",
+      "title": "Evaluate process mapping software: process mapping software for quality management",
+      "description": "Evaluate process mapping software in process mapping software for quality management: set evaluation criteria; compare maps and flowcharts.",
+      "targetWords": 2000,
+      "chapterKeyword": "process mapping software for quality management evaluate process mapping software",
+      "boundaries": [
+        "Leave map current processes to its assigned chapter.",
+        "Leave design a process architecture to its assigned chapter.",
+        "Leave assign process owners to its assigned chapter.",
+        "Leave map workflows and decisions to its assigned chapter.",
+        "Leave connect documents and evidence to its assigned chapter.",
+        "Leave plan migration and configuration to its assigned chapter.",
+        "Leave train teams and roll out to its assigned chapter.",
+        "Leave maintain process maps and improve to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Set evaluation criteria",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain set evaluation criteria as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Compare maps and flowcharts",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain compare maps and flowcharts as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Test ownership and access",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain test ownership and access as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Document gaps and commitments",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain document gaps and commitments as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        }
+      ],
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "scope": "Cover evaluate process mapping software for process mapping software. Explain roles, inputs, decisions, records, exceptions and evaluation criteria without asserting unverified capabilities."
+    },
+    "process-architecture": {
+      "slug": "process-architecture",
+      "title": "Design a process architecture: process mapping software for quality management",
+      "description": "Design a process architecture in process mapping software for quality management: group processes by purpose and define the top-level map.",
+      "targetWords": 2000,
+      "chapterKeyword": "process mapping software for quality management design a process architecture",
+      "boundaries": [
+        "Leave map current processes to its assigned chapter.",
+        "Leave evaluate process mapping software to its assigned chapter.",
+        "Leave assign process owners to its assigned chapter.",
+        "Leave map workflows and decisions to its assigned chapter.",
+        "Leave connect documents and evidence to its assigned chapter.",
+        "Leave plan migration and configuration to its assigned chapter.",
+        "Leave train teams and roll out to its assigned chapter.",
+        "Leave maintain process maps and improve to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Group processes by purpose",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain group processes by purpose as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Define the top-level map",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain define the top-level map as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Connect levels of detail",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain connect levels of detail as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Review interfaces between processes",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain review interfaces between processes as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        }
+      ],
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "scope": "Cover design a process architecture for process mapping software. Explain roles, inputs, decisions, records, exceptions and evaluation criteria without asserting unverified capabilities."
+    },
+    "process-ownership": {
+      "slug": "process-ownership",
+      "title": "Assign process owners: process mapping software for quality management",
+      "description": "Assign process owners in process mapping software for quality management: define owner responsibilities; assign decisions and backups.",
+      "targetWords": 2000,
+      "chapterKeyword": "process mapping software for quality management assign process owners",
+      "boundaries": [
+        "Leave map current processes to its assigned chapter.",
+        "Leave evaluate process mapping software to its assigned chapter.",
+        "Leave design a process architecture to its assigned chapter.",
+        "Leave map workflows and decisions to its assigned chapter.",
+        "Leave connect documents and evidence to its assigned chapter.",
+        "Leave plan migration and configuration to its assigned chapter.",
+        "Leave train teams and roll out to its assigned chapter.",
+        "Leave maintain process maps and improve to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Define owner responsibilities",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain define owner responsibilities as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Assign decisions and backups",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain assign decisions and backups as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Resolve ownership conflicts",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain resolve ownership conflicts as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Review ownership over time",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain review ownership over time as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        }
+      ],
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "scope": "Cover assign process owners for process mapping software. Explain roles, inputs, decisions, records, exceptions and evaluation criteria without asserting unverified capabilities."
+    },
+    "mapping-workflows": {
+      "slug": "mapping-workflows",
+      "title": "Map workflows and decisions: process mapping software for quality management",
+      "description": "Map workflows and decisions in process mapping software for quality management: gather task evidence; draw steps and decision points.",
+      "targetWords": 2000,
+      "chapterKeyword": "process mapping software for quality management map workflows and decisions",
+      "boundaries": [
+        "Leave map current processes to its assigned chapter.",
+        "Leave evaluate process mapping software to its assigned chapter.",
+        "Leave design a process architecture to its assigned chapter.",
+        "Leave assign process owners to its assigned chapter.",
+        "Leave connect documents and evidence to its assigned chapter.",
+        "Leave plan migration and configuration to its assigned chapter.",
+        "Leave train teams and roll out to its assigned chapter.",
+        "Leave maintain process maps and improve to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Gather task evidence",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain gather task evidence as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Draw steps and decision points",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain draw steps and decision points as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Describe exceptions and handoffs",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain describe exceptions and handoffs as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Validate a map with workers",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain validate a map with workers as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        }
+      ],
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "scope": "Cover map workflows and decisions for process mapping software. Explain roles, inputs, decisions, records, exceptions and evaluation criteria without asserting unverified capabilities."
+    },
+    "documents-and-evidence": {
+      "slug": "documents-and-evidence",
+      "title": "Connect documents and evidence: process mapping software for quality management",
+      "description": "Connect documents and evidence in process mapping software for quality management: identify controlled documents and link records to process steps.",
+      "targetWords": 2000,
+      "chapterKeyword": "process mapping software for quality management connect documents and evidence",
+      "boundaries": [
+        "Leave map current processes to its assigned chapter.",
+        "Leave evaluate process mapping software to its assigned chapter.",
+        "Leave design a process architecture to its assigned chapter.",
+        "Leave assign process owners to its assigned chapter.",
+        "Leave map workflows and decisions to its assigned chapter.",
+        "Leave plan migration and configuration to its assigned chapter.",
+        "Leave train teams and roll out to its assigned chapter.",
+        "Leave maintain process maps and improve to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Identify controlled documents",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain identify controlled documents as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Link records to process steps",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain link records to process steps as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Handle revisions and obsolete links",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain handle revisions and obsolete links as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Test traceability during review",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain test traceability during review as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        }
+      ],
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "scope": "Cover connect documents and evidence for process mapping software. Explain roles, inputs, decisions, records, exceptions and evaluation criteria without asserting unverified capabilities."
+    },
+    "migration-and-configuration": {
+      "slug": "migration-and-configuration",
+      "title": "Plan migration and configuration: process mapping software for quality management",
+      "description": "Plan migration and configuration in process mapping software for quality management: inventory existing maps; prepare files and relationships.",
+      "targetWords": 2000,
+      "chapterKeyword": "process mapping software for quality management plan migration and configuration",
+      "boundaries": [
+        "Leave map current processes to its assigned chapter.",
+        "Leave evaluate process mapping software to its assigned chapter.",
+        "Leave design a process architecture to its assigned chapter.",
+        "Leave assign process owners to its assigned chapter.",
+        "Leave map workflows and decisions to its assigned chapter.",
+        "Leave connect documents and evidence to its assigned chapter.",
+        "Leave train teams and roll out to its assigned chapter.",
+        "Leave maintain process maps and improve to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Inventory existing maps",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain inventory existing maps as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Prepare files and relationships",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain prepare files and relationships as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Pilot imports and review results",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain pilot imports and review results as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Plan cutover and recovery",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain plan cutover and recovery as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        }
+      ],
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "scope": "Cover plan migration and configuration for process mapping software. Explain roles, inputs, decisions, records, exceptions and evaluation criteria without asserting unverified capabilities."
+    },
+    "rollout-and-training": {
+      "slug": "rollout-and-training",
+      "title": "Train teams and roll out: process mapping software for quality management",
+      "description": "Train teams and roll out in process mapping software for quality management: prepare role-based training and pilot with representative users.",
+      "targetWords": 2000,
+      "chapterKeyword": "process mapping software for quality management train teams and roll out",
+      "boundaries": [
+        "Leave map current processes to its assigned chapter.",
+        "Leave evaluate process mapping software to its assigned chapter.",
+        "Leave design a process architecture to its assigned chapter.",
+        "Leave assign process owners to its assigned chapter.",
+        "Leave map workflows and decisions to its assigned chapter.",
+        "Leave connect documents and evidence to its assigned chapter.",
+        "Leave plan migration and configuration to its assigned chapter.",
+        "Leave maintain process maps and improve to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Prepare role-based training",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain prepare role-based training as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Pilot with representative users",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain pilot with representative users as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Manage staged rollout",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain manage staged rollout as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Evaluate use and feedback",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain evaluate use and feedback as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        }
+      ],
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "scope": "Cover train teams and roll out for process mapping software. Explain roles, inputs, decisions, records, exceptions and evaluation criteria without asserting unverified capabilities."
+    },
+    "ongoing-operation": {
+      "slug": "ongoing-operation",
+      "title": "Maintain process maps and improve: process mapping software for quality management",
+      "description": "Maintain process maps and improve in process mapping software for quality management: review maps after change and measure the review workflow.",
+      "targetWords": 2000,
+      "chapterKeyword": "process mapping software for quality management maintain process maps and improve",
+      "boundaries": [
+        "Leave map current processes to its assigned chapter.",
+        "Leave evaluate process mapping software to its assigned chapter.",
+        "Leave design a process architecture to its assigned chapter.",
+        "Leave assign process owners to its assigned chapter.",
+        "Leave map workflows and decisions to its assigned chapter.",
+        "Leave connect documents and evidence to its assigned chapter.",
+        "Leave plan migration and configuration to its assigned chapter.",
+        "Leave train teams and roll out to its assigned chapter."
+      ],
+      "subsections": [
+        {
+          "title": "Review maps after change",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain review maps after change as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Measure the review workflow",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain measure the review workflow as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Frequently asked questions",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain frequently asked questions as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        },
+        {
+          "title": "Prepare a software demonstration",
+          "sourceIds": [
+            "icc-processes",
+            "iso-apg"
+          ],
+          "keyPoints": [
+            "Explain prepare a software demonstration as an evaluation or implementation decision.",
+            "Distinguish vendor descriptions, general recommendations and the site’s verified evidence."
+          ],
+          "workflow": {
+            "role": "Assigned process owner",
+            "input": "Current process records and relevant evidence",
+            "decision": "Determine ownership, acceptance and next action",
+            "record": "Documented decision and its owner",
+            "exception": "Missing evidence, conflicting ownership or unavailable access"
+          },
+          "evaluationCriteria": [
+            "Test the decision with representative process records and exceptions."
+          ],
+          "example": "Illustrative example: an unnamed manufacturer tests the decision using a hypothetical production process."
+        }
+      ],
+      "imageBrief": "A manufacturing quality professional reviewing process evidence beside an active production area; authentic industrial setting, no readable text or logos",
+      "scope": "Cover maintain process maps and improve for process mapping software. Explain roles, inputs, decisions, records, exceptions and evaluation criteria without asserting unverified capabilities."
+    }
+  },
+  "initialContext": {
+    "schemaVersion": 1,
+    "topicId": "process-mapping-ownership",
+    "glossary": [
+      {
+        "term": "Process owner",
+        "definition": "The role accountable for decisions and review of a defined process."
+      }
+    ],
+    "roles": [
+      "Quality owner",
+      "Process owner",
+      "Operator"
+    ],
+    "recordNames": [],
+    "example": {
+      "label": "Illustrative example",
+      "description": "An unnamed Canadian manufacturer evaluates a process map for a production workflow; all situations and records are hypothetical."
+    },
+    "reviewedChapters": [],
+    "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
+  },
+  "contextHash": "49c600db5dbcbec048669cbfebf6a08c65d6f2893ec943e3b4506f5aff7d8256",
+  "chapterReviews": {},
+  "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5",
+  "outlineHash": "8f7e2d2ef46b225b52579a73be0a95456d8d75889d40ef52e297518d9eec3586",
+  "audit": null,
+  "generationCompletedAt": null,
+  "finalReport": null
 }

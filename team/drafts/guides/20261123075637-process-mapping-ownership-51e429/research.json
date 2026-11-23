@@ -1,0 +1,39 @@
+{
+  "topicId": "process-mapping-ownership",
+  "sources": [
+    {
+      "id": "icc-processes",
+      "sourceType": "primary",
+      "title": "Process Management Software",
+      "publisher": "ISO Certification Consultants Inc.",
+      "url": "https://isocertificationconsultants.ca/solutions/processes/",
+      "retrievedAt": "2026-11-23",
+      "supportedClaims": [
+        "The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process.",
+        "The page describes named process owners and links from processes to controlled documents and standard clauses.",
+        "The page describes industry starting templates and review of supported PDF process charts before acceptance.",
+        "The vendor maps the module to ISO 9001:2015 clauses 4.4 and 5.3; this mapping is not proof that software alone satisfies requirements.",
+        "The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training. Details and applicability require demonstration.",
+        "The page states AI output is a suggestion reviewed by a person before entry into a controlled record.",
+        "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
+      ]
+    },
+    {
+      "id": "iso-apg",
+      "sourceType": "primary",
+      "title": "ISO 9001 Auditing Practices Group",
+      "publisher": "ISO 9001 Auditing Practices Group",
+      "url": "https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "retrievedAt": "2026-11-23",
+      "supportedClaims": [
+        "The ISO 9001 Auditing Practices Group site provides educational papers on quality management system auditing, including a process-based approach and risk-based thinking.",
+        "The site says its guidance is not definitive and is not intended as specified requirements, a benchmark or mandatory audit criteria.",
+        "Its ISO 9001:2015 auditing topics include processes, evidence collection, audit planning and improvement."
+      ]
+    }
+  ],
+  "capabilityIds": [],
+  "capabilities": [],
+  "researchSnapshotHash": "b85d1e7a66b7ea6abc1f9c30e18db4d6da2fa5c706af53070daecbf77dac6a7b",
+  "capabilitySnapshotHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}
