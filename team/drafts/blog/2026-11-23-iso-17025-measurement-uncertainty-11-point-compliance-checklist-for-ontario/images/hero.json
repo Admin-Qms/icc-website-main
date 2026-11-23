@@ -1,0 +1,20 @@
+{
+  "id": "hero",
+  "width": 1200,
+  "height": 675,
+  "sha256": "c422faddfc74d57e2d6eff87da9e590dfc6759cd1b623519ddc7809db9e2c2ff",
+  "source": "codex",
+  "sourceId": "971582f07936c6f7f450c514ddf1d0ce9a7bf44e596d615b504e7f65c714ee7b",
+  "inputHash": "971582f07936c6f7f450c514ddf1d0ce9a7bf44e596d615b504e7f65c714ee7b",
+  "alt": "ISO 17025 Measurement Uncertainty: 11-Point Compliance Checklist for Ontario Testing Labs",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "8be4c1b20a123d439f18cb941d847f9ba00c52ca3840149b44edb4943009e616",
+  "request": {
+    "id": "hero",
+    "scene": "Industrial quality work related to iso 17025 measurement uncertainty requirements",
+    "kind": "hero",
+    "alt": "ISO 17025 Measurement Uncertainty: 11-Point Compliance Checklist for Ontario Testing Labs",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: Industrial quality work related to iso 17025 measurement uncertainty requirements.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-23T13:55:36.534Z"
+}
