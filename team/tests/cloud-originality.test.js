@@ -49,10 +49,10 @@ test('normal Cloud text gate retains safe failure details without publishing', a
   assert.equal(truncated.reviewFailure?.category, 'truncated');
   const failedReview = { score: 82, pass: false, flaggedSentences: [{ text: 'Public draft prose.', reason: 'Generic opening.', suggestion: 'Use a concrete decision.' }],
     selfPlagiarismFlags: [], aiClicheCount: 0, genericParagraphCount: 1, overallAssessment: 'Needs a specific opening.', rewriteInstructions: 'Use a concrete decision.' };
-  llm._providers.claude = async () => ({ text: JSON.stringify(failedReview), truncated: false, stopReason: 'end_turn' });
+  llm._providers.claude = async () => ({ text: JSON.stringify({ ...failedReview, flaggedSentences: [{ evidenceId: 'article:paragraph:0', reason: 'Generic opening.', suggestion: 'Use a concrete decision.' }] }), truncated: false, stopReason: 'end_turn' });
   const blocked = await pipeline.publishDaily({ fixture, dryRun: true, textOnly: true });
   assert.equal(blocked.success, false);
-  assert.deepEqual(blocked.originalityReview, failedReview, 'failed normal verdict remains available without replacing its score');
+  assert.deepEqual(blocked.originalityReview, { ...failedReview, flaggedSentences: [{ ...failedReview.flaggedSentences[0], evidenceId: 'article:paragraph:0' }] }, 'failed normal verdict and literal evidence remain available without replacing its score');
   assert.deepEqual(fs.readdirSync(config.CONTENT_DIR), []);
   assert.deepEqual(fs.readdirSync(config.BLOG_IMAGE_DIR), []);
 });
@@ -73,8 +73,8 @@ test('Cloud rejects invented article witnesses and unknown comparison titles eve
   const verdict = { pass: true, score: 99, flaggedSentences: [], selfPlagiarismFlags: [], aiClicheCount: 0,
     genericParagraphCount: 0, overallAssessment: 'Original.', rewriteInstructions: null };
   for (const changed of [
-    { flaggedSentences: [{ text: 'it is worth noting', reason: 'Cliche.', suggestion: 'Remove.' }] },
-    { selfPlagiarismFlags: [{ text: 'An original public paragraph.', similarTo: 'Invented comparison', similarity: 0.9 }] },
+    { flaggedSentences: [{ evidenceId: 'article:paragraph:99', reason: 'Cliche.', suggestion: 'Remove.' }] },
+    { selfPlagiarismFlags: [{ evidenceId: 'article:paragraph:0', similarTo: 'Invented comparison', similarity: 0.9 }] },
   ]) {
     llm._providers.claude = async () => ({ text: JSON.stringify({ ...verdict, ...changed }), truncated: false, stopReason: 'end_turn' });
     await assert.rejects(checker.checkOriginality({ title: 'Fixture', body: 'An original public paragraph.' }, [{ title: 'Real comparison', body: 'Different prose.' }]), /evidence/i);
@@ -86,10 +86,11 @@ test('real normalized evidence remains a failed originality verdict rather than 
   const verdict = { pass: false, score: 82, flaggedSentences: [{ text: quote, reason: 'Repeated opening.', suggestion: 'Use a different opening.' }],
     selfPlagiarismFlags: [{ text: quote, similarTo: 'Real comparison', similarity: 0.95 }], aiClicheCount: 0,
     genericParagraphCount: 1, overallAssessment: 'Repeated opening.', rewriteInstructions: 'Use a different opening.' };
-  llm._providers.claude = async () => ({ text: JSON.stringify(verdict), truncated: false, stopReason: 'end_turn' });
-  const actual = await checker.checkOriginality({ title: 'Fixture', body: 'A **shipping supervisor** checks\n the shift’s record.' },
-    [{ title: 'Real comparison', body: quote }]);
-  assert.deepEqual(actual, verdict);
+  const body = 'A **shipping supervisor** checks\n the shift’s record.';
+  const wire = { ...verdict, flaggedSentences: [{ evidenceId: 'article:paragraph:0', reason: 'Repeated opening.', suggestion: 'Use a different opening.' }], selfPlagiarismFlags: [{ evidenceId: 'article:paragraph:0', similarTo: 'Real comparison', similarity: 0.95 }] };
+  llm._providers.claude = async () => ({ text: JSON.stringify(wire), truncated: false, stopReason: 'end_turn' });
+  const actual = await checker.checkOriginality({ title: 'Fixture', body }, [{ title: 'Real comparison', body: quote }]);
+  assert.deepEqual(actual, { ...wire, flaggedSentences: [{ ...wire.flaggedSentences[0], text: body }], selfPlagiarismFlags: [{ ...wire.selfPlagiarismFlags[0], text: body }] });
 });
 
 test('Cloud comparison title grammar is bound to each request without leaking prior titles', async () => {
@@ -98,7 +99,7 @@ test('Cloud comparison title grammar is bound to each request without leaking pr
     const names = options?.schema?.properties.selfPlagiarismFlags.items.properties.similarTo.enum;
     seen.push(names);
     return { text: JSON.stringify({ pass: true, score: 88, flaggedSentences: [],
-      selfPlagiarismFlags: [{ text: 'A common technical phrase.', similarTo: names?.[0] || 'Invented comparison title', similarity: 0.9 }],
+      selfPlagiarismFlags: [{ evidenceId: 'article:paragraph:0', similarTo: names?.[0] || 'Invented comparison title', similarity: 0.9 }],
       aiClicheCount: 0, genericParagraphCount: 0, overallAssessment: 'Original with a shared technical phrase.', rewriteInstructions: null }),
     truncated: false, stopReason: 'end_turn' };
   };
