@@ -22,13 +22,21 @@
     "Quality lead",
     "Operations manager",
     "Supervisor",
-    "Floor supervisor"
+    "Floor supervisor",
+    "Quality and operations team",
+    "Supplier",
+    "Presenter",
+    "Test reader",
+    "Decision-maker"
   ],
   "recordNames": [
     "Documented decision and its owner",
     "Completed process map with boundary record",
     "Vendor statement or demonstrated behavior record",
-    "Review record noting date, evidence examined, disagreements, and resolution owners"
+    "Review record noting date, evidence examined, disagreements, and resolution owners",
+    "Evaluation record",
+    "Demonstration record",
+    "Comparison record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -48,6 +56,23 @@
         "Record whether each vendor behavior was shown, described, or left unanswered",
         "Assign a resolution owner for any unresolved exception or boundary",
         "Decide who can view, propose, review, and release a change to a process map"
+      ]
+    },
+    {
+      "slug": "evaluating-process-software",
+      "title": "Evaluate process mapping software: process mapping software for quality management",
+      "summary": "All four subsections cover assigned workflow roles, inputs, decisions, records, and exceptions. Changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised, and no new problems are identified in the changed paragraphs. The page passes all checks.",
+      "bodyHash": "79693fc7d2ee4c88b29bb8794be0e68acfdd38c28f5149fd7f9dd376f367dce9",
+      "decisions": [
+        "Name the decision the quality and operations team must make before beginning evaluation",
+        "Agree on what the team will test and who will judge the result",
+        "Separate requirements from preferences in the evaluation record",
+        "Agree on observable outcomes before the demonstration session",
+        "Record what was not demonstrated and assign follow-up responsibility",
+        "Decide whether a gap is a reason to reject an option or requires another session or agreed temporary procedure",
+        "Decide whether available evidence supports a selection or whether further information is required",
+        "Keep commercial and operational decisions separate in the record",
+        "Determine cause before assigning a cause to an unavailable linked item"
       ]
     }
   ],

@@ -6,30 +6,35 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All six dimensions pass. The page aligns with its plan brief, covers all four assigned subsections without scope drift, cites only the two assigned source URLs plus one permitted internal path, maintains clear and readable prose, avoids significant repetition, and correctly omits an FAQ section. Each subsection addresses its assigned workflow role, input, decision, record, and exception elements. The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate and support their sentences. Vendor descriptions are consistently distinguished from verified installed behavior throughout.",
+  "summary": "All four subsections cover assigned workflow roles, inputs, decisions, records, and exceptions. Changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised, and no new problems are identified in the changed paragraphs. The page passes all checks.",
   "glossary": [],
   "roles": [
+    "Quality and operations team",
+    "Quality lead",
     "Process owner",
     "Operator",
-    "Quality lead",
-    "Operations manager"
+    "Operations manager",
+    "Supplier",
+    "Presenter",
+    "Test reader",
+    "Decision-maker"
   ],
   "recordNames": [
     "Evaluation record",
     "Demonstration record",
-    "Gap and commitments record"
+    "Comparison record",
+    "Documented decision and its owner"
   ],
   "decisions": [
-    "Agree on what the team will test and who will judge the result before the demonstration",
-    "Record the decision including evidence observed and questions left open",
-    "Separate a requirement from a preference and record which decision each item supports",
-    "Document what was not demonstrated along with a person responsible for following up",
-    "Record the route actually shown and any explanation necessary to make the route understandable",
-    "Record discrepancies between the agreed sample and the operator's located answer",
-    "Record what was demonstrated separately from what was described by the supplier",
-    "List unanswered access and ownership questions and assign follow-up",
-    "Decide what consequence a gap has for the intended use and name the person who can accept the risk or request further evidence",
-    "Decide whether available evidence supports a selection or whether further information is required"
+    "Name the decision the quality and operations team must make before beginning evaluation",
+    "Agree on what the team will test and who will judge the result",
+    "Separate requirements from preferences in the evaluation record",
+    "Agree on observable outcomes before the demonstration session",
+    "Record what was not demonstrated and assign follow-up responsibility",
+    "Decide whether a gap is a reason to reject an option or requires another session or agreed temporary procedure",
+    "Decide whether available evidence supports a selection or whether further information is required",
+    "Keep commercial and operational decisions separate in the record",
+    "Determine cause before assigning a cause to an unavailable linked item"
   ],
   "pass": true,
   "deterministic": {
@@ -127,19 +132,18 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "8360b2d55d13b7a0e6cf209fba84791ee27b48eeaf750b7277fb7f943ce67bf9",
-  "contentHash": "df058536c2f4ae0dddf0e1ffa6ebb6960777144574d83d81b4ccead9071fd6fa",
+  "inputHash": "72ddcd7686579540233e4b2274197490e5a5280ab52d3cd066d71282dca8084e",
+  "contentHash": "a8c032e2ba736b97ab49811927701ca85d2c350ac4ec5f67fec6a48153e495a2",
   "paragraphHashes": [
     "05812d5ff246bd7ad664b512dbeac0eebf4869f9311e3234bfcf8fa1bef427b6",
-    "e45a7977694de52e02fb849ef6a8c16df24a92a5d9384762d4b9568e7c00ce37",
-    "3584eb2f0f32a365c8fb9458abd93b6283f97902aea9756db32a35db766e0814",
+    "55deaeec376025ac41b1c86c4b746cb396a63b3f8a02a8a5874f80ffb5782f0a",
     "0bcbde8a42ac61b9891b8a3026838cbbef561388c724217b4199a4101707cb40",
     "4b670cb5c6397efed63c411f76d875db0b184c4b6448fcb6064cf537980afb5f",
-    "8cdc4d8c2e98d88cad1a350bee78cc96fd786fdc00d4a364d222074501737638",
+    "d40eddc4cf817900b00bb40fb374d2bacb87ed275b47d0a4117c88d3103e778a",
     "2b8fac29e955f998f6e0f3139d9bf0ec9c497d29351aed4d8aaba5c5765513f4",
     "734c4f1b8d53e8d784bbaa2f872a145fc1523a90c0913d0c9d79da432a213c54",
-    "f26b7ed286ec44afb17bea4df18fb8b9d38a65ebf4b5a9927eee52af41af2a21",
-    "c40d9b2c295a711bdaf7ccc299c361a090ba42789fa8648987abda237ea644a3",
+    "ca01e1309b14661320b16bdd8c8cdd568fd62c03e74b27946f07b6772da93656",
+    "f080d5ec028f06cc29fa36031877c42c9069377673275028e3e2a4409a80a9e9",
     "fd8146a442e194983a6382bd9b1526a0d3f42ffa14d0a52199000f38e32a258d",
     "2176801827cb74ead8a1ccbae43413a6ce316a6fd07ef758629b121dc4b0c2bd",
     "34f7e0aed5223829c543e61f8ace6da97f8871b8fa4fcddbbacdbf576caf3a1d",
@@ -161,9 +165,10 @@
     "977ef73bfa5db2b0f337bb501327461ad52901d9c7b7923343e5892fac860b6f",
     "2edadac49e9b5b18b578deb6dccbb6ab256832f19f5d06035792d5be423bc2b4",
     "1b290ea5a3da64c918dd9ab10f075d8612e82a9b2356f1c5c3f4f17b8c72f82e",
-    "6dfc723574cd52810bb86bbd1a76ccdbe3968c1a146b84d51aeb1d9cfe4d02a7"
+    "18c484157ba06d6868ce590928deb357124382c4c6eec55e5b05eacfbdd33429",
+    "33cdf26073d7601e645521d08196db2d94958e4d0fbb3b8237a4ceb505b14808"
   ],
-  "outputContextHash": "05e831458e35069f6b041743b55610b220aaf697d13ccf66ae4c05a3d61b3a73",
-  "reviewedAt": "2026-11-23T13:59:14.276Z",
+  "outputContextHash": "4513cad7313cdd0f789a9575744d8c3fd841b8eba9cb97d62ae2b94df2aa3112",
+  "reviewedAt": "2026-11-23T14:52:05.396Z",
   "reviewer": "Configured independent chapter reviewer"
 }

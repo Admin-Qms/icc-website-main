@@ -27,15 +27,13 @@ capabilityIds: []
 ---
 ## Set evaluation criteria
 
-An agreed evaluation record also helps the team explain its choice to colleagues who could not attend.
-
-A useful evaluation starts with decisions that a quality and operations team must make, not with a feature list. Select a representative workflow and identify the people who will use its map, inspect supporting records, or maintain it. Ask each person what information is needed to complete a real task. A process owner might need to understand an unresolved interface; an operator might need to find the current instruction for a production step. These are separate tests, even when the same map supports both.
+A selection meeting needs a record that colleagues who missed the demonstration can inspect. Begin by naming the decision the quality and operations team must make. Select a representative workflow and identify the people who will use its map, inspect supporting records, or maintain it. Ask each person what information is needed to complete a real task. A process owner might need to understand an unresolved interface; an operator might need to find the current instruction for a production step. These are separate tests, even when the same map supports both.
 
 The input to the evaluation should include a current map or draft, an example record, and a list of known exceptions. The process owner agrees on what the team will test and who will judge the result. The quality lead records the decision, including evidence observed and questions left open. If there is no agreed process owner, record that gap before treating a demonstration as a reliable indication of operational readiness.
 
 Separate a requirement from a preference. A requirement describes an outcome the organization has decided it needs, such as finding an applicable instruction from a process view. A preference might describe how the link should appear. Both can matter, but the evaluation record should show which decision each item supports and who authorized it. That distinction gives the team a way to compare alternatives without assuming that every attractive screen addresses a real problem.
 
-The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes a top-level process map, process flowcharts, owners, and links to controlled documents. Use those published descriptions to frame demonstration questions. They do not establish how a particular installation is configured or whether a specific access rule is available. Ask the supplier to show the proposed arrangement using material the team recognizes, then record what was demonstrated separately from what was described.
+For a comparison, the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes an overview, flowcharts, owners, and controlled-document links. Select one sample and ask the presenter to show a reader moving from its overview entry to the applicable instruction. In the evaluation record, separate the demonstrated route from an access rule that was only described; the published page does not establish that rule for a particular installation.
 
 Agree on a small set of observable outcomes before the session. For each one, name a user, a starting point, and an output the user should be able to find or verify. Include an exception: a missing document, an unclear owner, or a record that belongs to another process. If the demonstration cannot cover that exception, record it as open rather than marking the criterion satisfied by inference. A practical evaluation can use the following prompts:
 
@@ -44,9 +42,9 @@ Agree on a small set of observable outcomes before the session. For each one, na
 - Can a reviewer trace the example to its supporting instruction and distinguish the information shown from information that still needs confirmation?
 - Can the team document what was not demonstrated, along with a person responsible for following up?
 
-These prompts are evaluation criteria, not claims about a particular product. The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational material about process-based auditing and evidence; it states that its guidance is not definitive or mandatory audit criteria. Use it to develop questions about evidence, while assessing the requirements and arrangements applicable to the organization separately. Software selection does not by itself establish conformity.
+The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) supplies educational material for an evidence question: what would the reviewer need to see to verify the sample's route? Its guidance is not definitive or mandatory audit criteria. Record the evidence actually observed and assess applicable requirements separately; a selection decision does not establish conformity.
 
-**Illustrative example:** An unnamed manufacturer wants to compare how two proposed approaches present a production workflow. The quality lead selects a sample process, the owner identifies an exception that occurs at a handoff, and an operator agrees to follow the route without coaching. The team writes down the outcome each person needs before seeing a demonstration. This hypothetical exercise tests the team's criteria; it does not describe a measured customer result.
+**Illustrative example:** In a hypothetical comparison, an operator is asked to locate the receiving role for an incomplete production record in two proposed views. The owner records the expected answer before either demonstration; the quality lead notes where the operator needs coaching. A view that requires an unexplained prompt receives a follow-up question rather than an automatic passing mark.
 
 ## Compare maps and flowcharts
 
@@ -90,4 +88,6 @@ When evidence conflicts, preserve both observations and identify the next action
 
 For the hypothetical manufacturer, the quality lead compiles the demonstration record and reviews it with the process owner and operations manager. The record shows which sample tasks were completed, which questions were answered only in discussion, and which exceptions still need testing. The owner then decides whether the available evidence supports a selection or whether further information is required. That decision belongs to the organization, not to the demonstration itself.
 
-A team can use the site's [process management information](/solutions/processes/) as a starting point for discussing the published approach, then bring its own sample and criteria to a demonstration. The value of the exercise is a traceable decision: the team knows what it needed, what it observed, who accepted the outcome, and what remains to be checked before relying on the proposed arrangement.
+Before comparing the answers, check whether both presenters used the same sample and whether the test reader had the intended access. If the conditions differed, record that limitation alongside the result.
+
+After the demonstrations, give the decision-maker the sample, observations, open access questions, and any configuration dependencies in one record. If an essential exception was not shown, identify who will obtain that answer before selection. The [process management information](https://isocertificationconsultants.ca/solutions/processes/) is a source for the vendor's published approach; the comparison record explains which claims the team actually tested.
