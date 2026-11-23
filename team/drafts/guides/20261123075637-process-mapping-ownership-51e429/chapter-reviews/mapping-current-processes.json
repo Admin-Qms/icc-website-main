@@ -1,49 +1,25 @@
 {
-  "claims": "passed",
-  "scope": "passed",
-  "readability": "passed",
-  "links": "passed",
-  "repetition": "passed",
-  "faq": "passed",
-  "findings": [],
-  "summary": "All four subsections cover map current processes within the assigned scope, correctly attribute vendor descriptions and ISO APG guidance, include workflow elements (roles, inputs, decisions, records, exceptions), provide the required illustrative example, and use the two permitted source URLs appropriately. No FAQ sections are present, which is correct as none are assigned. No unresolved findings from the previous review exist, and the changed paragraphs introduce no new problems. The page passes all checks.",
-  "glossary": [
+  "claims": "failed",
+  "scope": "failed",
+  "readability": "failed",
+  "links": "failed",
+  "repetition": "failed",
+  "faq": "failed",
+  "findings": [
     {
-      "term": "Process boundary",
-      "definition": "An agreed statement of where mapped work starts and ends, identifying the inputs received, outputs handed off, and decisions for which the owner is responsible."
-    },
-    {
-      "term": "Handoff",
-      "definition": "The transfer of an output from one role or process to a receiving role, considered complete only when the receiver has what it needs to act."
+      "section": "Page",
+      "reason": "The page shell supplies H1",
+      "action": "Correct the indicated subsection while preserving verified facts"
     }
   ],
-  "roles": [
-    "Process owner",
-    "Supervisor",
-    "Quality lead",
-    "Floor supervisor",
-    "Vendor"
-  ],
-  "recordNames": [
-    "Documented decision and its owner",
-    "Map including what it includes, excludes, and the decisions it supports",
-    "Completed process record or physical output",
-    "Vendor statements or demonstrated behavior record",
-    "Review record noting date, evidence examined, disagreements, and resolution owners"
-  ],
-  "decisions": [
-    "Determine ownership, acceptance and next action for the mapping purpose",
-    "Resolve disagreement on mapping purpose before treating the map as a basis for a software decision",
-    "Decide which workflow to examine and record that choice with the map",
-    "Determine whether a boundary difference belongs on a common map, a linked local instruction, or a separate process",
-    "Decide whether a process, instruction, or role assignment needs correction when written procedure differs from actual records",
-    "Decide whether the boundary or the actual handoff needs clarification when inspection evidence arrives after release",
-    "Assign a resolution owner for any unresolved escalation route",
-    "Decide who can view, propose, review, and release a map change and how those decisions are recorded"
-  ],
-  "pass": true,
+  "summary": "",
+  "glossary": [],
+  "roles": [],
+  "recordNames": [],
+  "decisions": [],
+  "pass": false,
   "deterministic": {
-    "pass": true,
+    "pass": false,
     "checks": [
       {
         "id": "unresolved-marker",
@@ -77,7 +53,7 @@
       },
       {
         "id": "single-h1",
-        "pass": true,
+        "pass": false,
         "message": "The page shell supplies H1"
       },
       {
@@ -134,18 +110,25 @@
         "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
       }
     ],
-    "failures": []
+    "failures": [
+      {
+        "id": "single-h1",
+        "pass": false,
+        "message": "The page shell supplies H1"
+      }
+    ]
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "da049cfc658d661ff8000811b99cba40c50dab10d84b5f02aafa281737674b24",
-  "contentHash": "0624a85f97525b3081780b7a863cc0599084b4f0f4578ee7d16bb72f43d4ecbb",
+  "inputHash": "a5d7ec0f3d0b209e42c1b6b8a39e43bd87af3ddd5d8f47f1723eb270b8dfe692",
+  "contentHash": "275274ecb290064ac87decc11c26afbdde9e2e5093120ed8c90e963825e4887f",
   "paragraphHashes": [
+    "3b697c6c513b51772416460369cc3ce4ddcaef598a93da84951a57457d97efec",
     "f03b8f70e7e42732e660db0849712ed5a4eb924a80a990869cde6c04a2e6d20f",
     "cf7f495b6334b9dfdb166ff124698ac0932aac0ca7a3341d320e8c7766ba6d8c",
     "c9fd75fd2bd93c254cfccf457bc0234f3c129aa66f5c23d56b31330d3fd921a2",
     "f69f22b93eb1f8db354d8e66cd6aa9010caf01045e87d3a1576866390b8829f1",
     "84ed006ae5d7cd40a7a4aaf8a7920ca9d6e74f55427ba089fce06372b1ee8423",
-    "9cdd89f25ebfc080170ee0a5a31060c404370c2452eed7750204cedaf7a8585a",
+    "edfe67a73b14c9e146cad0fddade357643fe98211db753ee0f4f54b82f8bcda7",
     "3cedc5189cdade2da18582aa279e41b1e31f86fe99306332ccf880123e08a360",
     "b870fc2e2ddfdea49d29c38eefc17e3efbaf30fbdc4fd248bc2fe1ef82427cea",
     "bf770e5a454349af2ebafcb92aa675456a531ee9d54f1358ebbbbeedfa7b29da",
@@ -175,7 +158,7 @@
     "7935d39e3ae4d6494a9e448a30beeda17f72fc246eb4c9be286a57eec3872ca8",
     "748900ca7641aca70e0f13ba39892bb1d7c427e70cdab2104eac31e1ded55a7e"
   ],
-  "outputContextHash": "ab1faf70b87074bf295406bdbcf9f9c7e1935435e51ef1389d6c80076afc8d21",
-  "reviewedAt": "2026-11-23T15:11:57.794Z",
+  "outputContextHash": "49c600db5dbcbec048669cbfebf6a08c65d6f2893ec943e3b4506f5aff7d8256",
+  "reviewedAt": "2026-11-23T15:29:41.921Z",
   "reviewer": "Configured independent chapter reviewer"
 }

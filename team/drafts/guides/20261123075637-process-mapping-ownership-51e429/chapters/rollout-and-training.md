@@ -31,7 +31,7 @@ Build training around a representative process rather than a tour of every scree
 
 Use a suitable sample that participants are allowed to see. The process owner should confirm that the example reflects the agreed scope, and the quality lead should explain any limitations. A hypothetical or sanitized record may be more appropriate than a real production record for a demonstration. The objective is to practice the decision and route, not to expose information unnecessarily.
 
-The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational material on evidence and states that its guidance is not definitive or mandatory audit criteria. For a training exercise, record the participant's starting point and the task completed; attendance alone cannot show whether that person could find the appropriate information without help.
+For the training exercise, record the participant’s starting point, the task, and whether help was needed to find the applicable information. The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) offers educational material on evidence. If an access problem prevents the task, assign an investigation and repeat that portion under the intended role conditions before treating it as completed.
 
 **Illustrative example:** During a hypothetical rehearsal, an operator locates the production map but cannot open its instruction. The supervisor repeats the route under the same access conditions and notes the failure. Assign an access investigation, give the participant an agreed interim source, and repeat that task before using attendance as evidence of readiness.
 

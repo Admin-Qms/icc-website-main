@@ -22,6 +22,8 @@ sourceIds:
   - iso-apg
 capabilityIds: []
 ---
+# Map current processes: process mapping software for quality management
+
 ## Define the mapping purpose
 
 Trace a single release boundary before choosing a display format. Start at the production order, stop at the release decision, and mark the separate complaint process as an interface. Ask the receiving role what inspection evidence it needs; a missing answer is a boundary question for the owner, not a reason to extend the map indefinitely.
@@ -32,7 +34,7 @@ A map for day-to-day operation needs enough detail for a person to find the next
 
 A reader evaluating the boundary needs an overview entry, a release step, and the applicable instruction. The [ICC Processes page](https://isocertificationconsultants.ca/solutions/processes/) describes categorized maps, flowcharts, owners, and document links; use the sample to ask how those elements would be shown. Compare the proposed route with the plant's own evidence before deciding whether it describes current work.
 
-For an audit rehearsal, use the [ISO 9001 Auditing Practices Group's educational guidance](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) to frame an evidence question: which record would a reviewer examine at the release decision? The collection says its guidance is not definitive or mandatory audit criteria. Identify the applicable requirements separately and note where the sample does not answer the question.
+For an audit rehearsal, ask which record would show what the supervisor considered at release. The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) offers educational material on evidence collection. Give the reviewer the sample and the stated boundary; if the record does not answer the question, mark the gap and ask the process owner who can supply the missing explanation before the map is accepted.
 
 Start with a small scope that can be traced end to end. A single production workflow can expose a missing owner or unclear handoff without requiring the team to map the entire business at once. Record what the map includes, what it excludes, and the decisions it is intended to support. If an adjacent process is important but outside scope, name the interface rather than silently treating the other process as part of the work. Ask the receiving role whether the stated output is sufficient to proceed.
 

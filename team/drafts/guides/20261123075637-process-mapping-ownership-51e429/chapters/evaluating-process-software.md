@@ -42,7 +42,7 @@ Agree on a small set of observable outcomes before the session. For each one, na
 - Can a reviewer trace the example to its supporting instruction and distinguish the information shown from information that still needs confirmation?
 - Can the team document what was not demonstrated, along with a person responsible for following up?
 
-The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) supplies educational material for an evidence question: what would the reviewer need to see to verify the sample's route? Its guidance is not definitive or mandatory audit criteria. Record the evidence actually observed and assess applicable requirements separately; a selection decision does not establish conformity.
+Compare the evidence available for each proposed route, using the same sample and reader role. Educational material on evidence collection is available from the [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html). Record whether the presenter showed the relevant destination or only described it, then ask the decision-maker whether an unanswered access question prevents a fair comparison of the two approaches.
 
 **Illustrative example:** Compare two hypothetical views of the same incomplete production record. In the first, the receiving role is visible from the overview; in the second, the reader must open a separate detail. The process owner states the expected answer beforehand and the quality lead records the route, including any coaching. Decide which representation supports the agreed task rather than treating appearance as the result.
 

@@ -35,7 +35,7 @@ Start with the change and a representative process record. The process owner can
 
 A proposed change and an accepted change are different inputs. If an instruction is still under consideration, the team may need to evaluate its potential effect without presenting it as the current route. If the work has changed but the map has not, record the discrepancy and identify the next decision. The owner should not silently choose between conflicting accounts when the people responsible have not agreed which description applies.
 
-The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) includes educational material on improvement and states that its guidance is not definitive or mandatory audit criteria. In a map review, ask which record shows the changed handoff and who accepted the explanation. If neither can be identified, retain that gap as an open decision instead of treating a diagram update as evidence of agreement.
+When reviewing a changed handoff, identify the record showing the change and the person who accepted the revised explanation. The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) includes educational material on improvement. If either is missing, assign an owner for the gap and retain an interim route; updating the diagram alone does not answer who agreed to the change.
 
 **Illustrative example:** Triage a hypothetical production change in three entries: the receiving role needs a different field; the existing map names the old field; and the updated instruction is not yet accepted. The owner assigns a check to the receiving role and records an interim route. Once the instruction is accepted, a worker traces the changed handoff before the issue is closed.
 
@@ -85,7 +85,7 @@ Agree which events, such as a changed role, instruction, boundary, or handoff, s
 
 ### What should an auditor see?
 
-Provide an understandable explanation of the process and access to the relevant evidence under the organization's arrangements. A reviewer should be able to distinguish the map, an instruction, and a record of an instance of work. The [ISO guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) offers educational papers and expressly states that its guidance is not mandatory audit criteria; applicable requirements still need separate assessment.
+Provide an understandable process explanation and access to the relevant evidence under the organization’s arrangements. A reviewer should be able to distinguish the map, an instruction, and a record of an instance of work. The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) offers educational papers on evidence; select a sample and ask the process owner to explain how each item relates to the decision being examined.
 
 ### Does software guarantee certification?
 
