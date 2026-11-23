@@ -34,7 +34,10 @@
     "Reviewer",
     "Decision-maker",
     "Responsible person",
-    "Authorizing person"
+    "Authorizing person",
+    "Trainer",
+    "Authorized manager",
+    "Authorized decision-maker"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -62,7 +65,20 @@
     "Preparation record identifying source, expected scope and relationships, permitted sample, and known limitations",
     "Acceptance decision record identifying reviewers, checks performed, discrepancies, and conditions for proceeding",
     "Recovery plan identifying fallback source, decision authority, and discrepancy recording process",
-    "Transition decision record identifying accepted fallback source and person authorized to activate it"
+    "Transition decision record identifying accepted fallback source and person authorized to activate it",
+    "Training plan identifying decisions each role is expected to make and escalation routes",
+    "Training observation record noting scope, sample, roles, and open questions",
+    "Participant task outcome record noting starting point and task completed",
+    "Pilot scope and acceptance questions record",
+    "Pilot observation record noting route, help provided, and answers given after prompting",
+    "Ambiguous label clarification record",
+    "Staged rollout scope record noting processes, roles, and authorization conditions",
+    "Stage evidence review record noting task completion, access questions, and process owner acceptance",
+    "Rollout decision record noting scope, conditions, and authorized decision-maker",
+    "Issue record noting task attempted, agreed contact, and next action",
+    "Stage-end record noting scope, training observations, unresolved items, decision-maker, and acceptance conditions",
+    "Feedback record noting task attempted, starting point, expected information, and observed result",
+    "Follow-up decision record noting owner, interim guidance, and condition for closing"
   ],
   "example": {
     "label": "Illustrative example",
@@ -174,6 +190,24 @@
         "Decide whether to accept the pilot result or escalate a discrepancy based on consequence for intended use",
         "Decide whether a transition must wait when a readiness question is unknown",
         "Return the transition decision to its authorizer if a later issue changes the accepted assumptions"
+      ]
+    },
+    {
+      "slug": "rollout-and-training",
+      "title": "Train teams and roll out: process mapping software for quality management",
+      "summary": "The page covers all four assigned subsections within the stated scope of training and rollout for process mapping software for quality management. All changed paragraphs are consistent with the plan's workflow elements, correctly attribute vendor and ISO APG sources, include clearly labeled illustrative examples, and avoid asserting unverified capabilities. Source URLs are drawn from the two permitted research sources. No FAQ sections appear, which is correct as none are assigned. No findings from the previous review remain unresolved, and no new problems appear in the changed paragraphs. The page passes all checks.",
+      "bodyHash": "d56779181965f0cf475067286c47960c54b65d777f6c8af3041318506a1dd280",
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Decide whether attendance constitutes evidence of readiness or whether a task outcome record is required",
+        "Decide the agreed interim source when access fails during training",
+        "Decide whether to repeat an affected exercise before judging a role ready for the next stage",
+        "Decide whether the pilot provides enough evidence to proceed, needs another targeted test, or should pause",
+        "Record the pilot decision, its scope, and any conditions",
+        "Decide whether to hold, narrow, or reverse a rollout stage when a critical question remains unanswered",
+        "Decide whether to authorize expansion to the next stage based on evidence from the previous stage",
+        "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed",
+        "Decide whether the next action is to clarify a label, investigate access, or seek more evidence before choosing a training or configuration response"
       ]
     }
   ],

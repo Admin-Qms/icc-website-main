@@ -37,7 +37,7 @@ The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-
 
 Define what a participant should be able to do before deciding how to judge the session. A useful observation might be that the person can find the correct process, explain the next step, and identify whom to contact when a record is missing. If the person needs help, record where the explanation or access arrangement was unclear. Attendance by itself does not show that the intended task can be performed.
 
-The trainer should distinguish attendance from the participant’s task outcome. Record the scope, sample, roles, and open questions; if access fails or the example conflicts with the current process, assign the next decision. Repeat the affected exercise after the issue is resolved before judging that role ready for the next stage.
+The trainer should distinguish attendance from the participant's task outcome. Record the scope, sample, roles, and open questions; if access fails or the example conflicts with the current process, assign the next decision. Repeat the affected exercise after the issue is resolved before judging that role ready for the next stage.
 
 ## Pilot with representative users
 
@@ -49,7 +49,7 @@ Agree on the pilot's scope and acceptance questions in advance. A participant mi
 
 Represent the range of work that matters to the decision. If the process differs across sites, a pilot at one site may not establish that the same explanation works at another. If a role has different access from the presenter, test the route using an appropriate account or equivalent demonstration. Where a condition cannot be tested, record it as unknown and decide who will obtain the missing evidence.
 
-**Illustrative example:** During a hypothetical user pilot, the operator uses a hypothetical production example without the map author's guidance. The supervisor then follows an exception route, and the process owner compares both explanations with the agreed workflow. The quality lead notes an ambiguous label and assigns a person to clarify it. Clarify the ambiguous label and repeat the affected pilot task before assessing the reader’s route.
+**Illustrative example:** During a hypothetical user pilot, the operator uses a hypothetical production example without the map author's guidance. The supervisor then follows an exception route, and the process owner compares both explanations with the agreed workflow. The quality lead notes an ambiguous label and assigns a person to clarify it. Clarify the ambiguous label and repeat the affected pilot task before assessing the reader's route.
 
 Feedback should identify the task and the point at which the reader became uncertain. "The map is confusing" is a useful signal, but it does not by itself tell the owner whether the label, the process explanation, or access to a linked document needs attention. Ask the participant what they expected to find and what they saw. Retain that distinction when recording the follow-up decision.
 
