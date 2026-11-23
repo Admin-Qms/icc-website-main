@@ -1,0 +1,522 @@
+{
+  "inputHash": "25a13ec8e42a59964cad251f9c39861242c1cf8e2900d41024c751e24b2619ba",
+  "reviewContextHash": "1772383ce513a8f7f5803a8a4ed593340e076fc2b78a41b933f5d699e5ec0ce6",
+  "reviewedAt": "2026-11-23T16:23:29.633Z",
+  "screening": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "The outline prescribes 9 chapters with 2000 target words each, totaling ~18,000 words, but the introduction claims 19,500 estimated words without reconciling the discrepancy.",
+      "The introduction body asserts that the guide 'uses' the ICC process management page and ISO auditing guidance as sources for 'questions a team can bring to an evaluation,' but the actual page content (provided in research) does not contain interrogative prompts or evaluation frameworks—it contains vendor product descriptions. The guide misrepresents the source material as prescriptive evaluation guidance when it is marketing content.",
+      "Multiple chapters prescribe identical workflow templates: 'role: Assigned process owner, input: Current process records and relevant evidence, decision: Determine ownership, acceptance and next action, record: Documented decision and its owner, exception: Missing evidence, conflicting ownership or unavailable access.' This template is repeated verbatim across all 9 chapter subsections (108 times total), violating the repetition rule that substantially identical passages across pages must fail.",
+      "The outline structure requires each chapter to cover a distinct topic ('map current processes,' 'evaluate software,' 'design architecture,' etc.), but the generated body text uses nearly identical language, examples, and reasoning patterns across chapters. For example: 'Illustrative example: During a hypothetical [process], the [role] [action]. Record [observation]. Assign [follow-up].' appears in this exact structure across multiple chapters.",
+      "The introduction states: 'A process owner is the role accountable for decisions and review of a defined process' and repeats this verbatim definition in the glossary and later in the 'Assign process owners' chapter. This violates both the repetition rule and uses the definition as a placeholder for substantive content rather than meaningfully distinguishing contexts.",
+      "The guide claims to 'distinguish vendor descriptions, general recommendations and the site's verified evidence' in every chapter subsection keyPoint, but the actual text does not perform this distinction consistently. For example, the 'Identify controlled documents' section states 'The [ICC page] describes links to controlled documents' but does not then distinguish what ICC actually says from what the organization must verify.",
+      "The outline requires FAQ coverage ('Frequently asked questions' as a subsection of the ongoing-operation chapter), but the prepared FAQ section contains only brief answers without evidence or cross-references to relevant chapter sections. The outline also requires 'Prepare a software demonstration' as a subsection, which is included, but the content overlaps substantially with the 'Set evaluation criteria' section from the 'evaluating-process-software' chapter.",
+      "The introduction asserts: 'The [ICC process page] describes industry starting templates, review of supported PDF process charts before acceptance, and broad activities including process mapping, configuration, standards onboarding and deployment with training. Confirm how those descriptions apply to the proposed implementation. They do not establish that every file, permission, link, or recovery action works in a particular way.' This passage is then repeated nearly identically in the 'Plan migration and configuration' chapter under 'Pilot imports and review results.'",
+      "The outline includes supportedClaims in the research object that list vendor capabilities (e.g., 'level-one process map grouped into management, customer-facing, core and support categories'), but the actual body text does not test these claims against evidence. Instead, it treats the ICC page as a 'starting point for questions' without verifying which claims the guide author has validated.",
+      "The introduction contains the statement: 'Do not assume that a software feature resolves it' multiple times with minimal variation, appearing in the 'evaluating-process-software' chapter and again in 'migrate-and-configuration' chapter, violating the near-verbatim repetition rule.",
+      "The guide repeatedly prescribes the same evaluation exercise structure: 'Ask the [role] to [action], the [other role] to [check], and the quality lead to record [observation].' This template is used in nearly every subsection across all chapters, making the guide repetitive in structure even where topic labels differ.",
+      "The outline's boundary statements (e.g., 'Leave evaluate process mapping software to its assigned chapter') are prescriptive but are not enforced in the generated body text. For example, the 'Map current processes' chapter discusses evaluation questions and mentions software capabilities, violating its assigned boundary.",
+      "The research object indicates 'capabilityIds: []' and 'capabilities: [],' meaning no specific ICC capabilities were provided for verification, yet the generated guide discusses ICC features (top-level maps, flowcharts, PDF import, AI suggestions, ownership assignment) without evidence that these capabilities are confirmed or that they were among the originally claimed capabilities.",
+      "The introduction states: 'A process boundary is an agreed statement of where a mapped process starts and ends, including the triggering event, output, and recipient.' This exact definition appears again in the 'Map current processes' chapter without additional context or distinction, constituting repetition of a glossary-like definition.",
+      "The guide claims to avoid 'invented statistics/quotes/client results' but the entire sample case ('An unnamed Canadian manufacturer') is hypothetical. While labeled as 'illustrative,' the guide uses this hypothetical case repeatedly across chapters as if it were evidence, violating the rule that unlabeled or inadequately labeled hypotheticals are assertions.",
+      "The outline requires that FAQ answers reference supporting chapter sections, but the FAQ section does not cross-reference chapters. For example, 'What should a process map show first?' could reference 'Map current processes: Define the mapping purpose,' but it does not, reducing the FAQ's utility.",
+      "The 'Prepare a software demonstration' section at the end of the ongoing-operation chapter repeats the entire evaluation framework from the 'evaluating-process-software' chapter with minimal variation, including the same sample scenario and decision-recording steps.",
+      "The guide does not establish why each of the 9 chapters is necessary or how they relate to the topicId 'process-mapping-ownership.' The outline provides chapter titles and boundaries but does not justify the sequence or explain how 'ownership' (the stated topic) is distinct from general process mapping guidance.",
+      "The ISO auditing guidance collection is cited as a source for 'educational material on evidence collection' and 'process-based approach' in multiple chapters, but the research supportedClaims state only that the collection 'provides educational papers' and 'says its guidance is not definitive.' The guide treats it as substantive guidance rather than disclaiming its limits each time.",
+      "Subsections repeatedly state: 'The [ICC page] describes [feature]; this provides a basis for questions when designing...' but do not state what the guide author verified about those features. The structure implies evaluation without evidence, treating a vendor claim as a 'basis' without testing.",
+      "The outline prescribes 'Illustrative example' labels for every chapter, and each example uses the same unnamed manufacturer scenario with minimal variation. This violates the guideline that substantially copied examples across pages must fail repetition, as the structure 'Consider the hypothetical [process], [role] [action]. Record [observation]' appears identically across multiple chapters."
+    ]
+  },
+  "adjudication": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "failed",
+    "dimensionReasons": {
+      "claims": "All ICC capabilities discussed in the guide (level-one process maps, flowcharts, named owners, controlled-document links, PDF chart review, AI suggestion with human review, deployment/training activities) are supported by source:0:claim:0 through source:0:claim:5. Each description is qualified: the guide consistently notes that vendor descriptions do not establish site-specific behavior, confirmed configuration, or guaranteed outcomes. No capability is asserted as a proven installed fact. The guide accurately describes the ISO APG collection as educational and not definitive, matching source:1:claim:1. No unsupported factual assertions were found.",
+      "consistency": "The guide consistently treats ICC descriptions as starting points for evaluation questions, not proof of capability, matching source:0:claim:6. The ISO APG source is consistently described as educational and not definitive, matching source:1:claim:1. No internal contradictions between chapters were found that could not be resolved by context. The 'process owner' definition recurs as a short factual label appropriate to a multi-chapter guide where new readers enter at each chapter; this is a required short factual caution, not a contradiction. The word-count discrepancy noted in finding 0 is an outline planning figure versus an introduction figure and does not constitute a false factual claim in the reader-facing text.",
+      "repetition": "Two genuine near-copy passages were found across different reader pages. Finding 7 identifies a passage in page:0 describing ICC's industry templates, PDF chart review, and broad activities that is substantially reproduced in page:7. Finding 16 identifies that the 'Prepare a software demonstration' section in page:9 substantially copies the evaluation framework structure from page:2's 'Set evaluation criteria' and 'Document gaps and commitments' sections. These are not merely shared subject matter or required short cautions; the actual paragraph-level wording and sequence are substantially reproduced. Other screening findings about repetition were examined but do not meet the threshold: illustrative example labels with the same hypothetical manufacturer are a required recurring label per the outline's example specification and differ in specific content; short definitional sentences are required factual cautions; the 'do not assume a software feature resolves it' variations are differently worded across pages."
+    },
+    "additionalFindings": [
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 1: The guide does not misrepresent source material. Page:0:paragraph:5 says the guide uses the ICC page 'as a source for questions a team can bring to an evaluation' and explicitly directs users to distinguish vendor publications from observed behavior. The source (source:0:claim:0 through source:0:claim:4) confirms the page contains vendor product descriptions. Using vendor descriptions as a source of evaluation questions is accurate; the guide does not claim the ICC page itself contains interrogative frameworks.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "source:0:claim:0",
+          "source:0:claim:4"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding 2: The outline-level workflow template ('role: Assigned process owner...') is a planning artifact in the outline object, not reader-facing text. Inspecting the actual pages reveals that no verbatim workflow template block appears in the reader pages. Each chapter develops distinct prose guidance. This finding conflates outline metadata with page content.",
+        "evidenceIds": [
+          "page:1:paragraph:2",
+          "page:4:paragraph:2",
+          "page:5:paragraph:1"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding 3: The illustrative example structure varies substantively across chapters. Each example is labeled 'Illustrative example' (a required label per the outline) and uses the same hypothetical manufacturer, but each involves different roles, different decisions, different process details, and different outcomes. The common structure is a required label format, not substantially copied prose.",
+        "evidenceIds": [
+          "page:1:paragraph:7",
+          "page:2:paragraph:8",
+          "page:3:paragraph:7",
+          "page:4:paragraph:7",
+          "page:5:paragraph:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding 4: The 'process owner is the role accountable for decisions and review of a defined process' sentence appears in page:0:paragraph:4 as a glossary entry and is reused briefly in page:4:paragraph:0 heading context. A one-sentence definitional statement is a required short factual caution appropriate to recur when introducing the ownership chapter to readers who may enter there directly. It is not a substantially copied paragraph.",
+        "evidenceIds": [
+          "page:0:paragraph:4",
+          "page:4:paragraph:4"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 5: The guide does perform the distinction between vendor descriptions and organizational verification. For example, page:6:paragraph:2 states the ICC page 'describes links to controlled documents and clauses' then immediately adds 'Check the destination's scope with the responsible people; the published link description does not determine which document applies locally.' This is the required distinction.",
+        "evidenceIds": [
+          "page:6:paragraph:2",
+          "source:0:claim:1"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 6: The FAQ section in page:9 provides substantive answers to each question. The outline does not require cross-references to chapter sections; it requires evaluation criteria and honest answers. The FAQ answers are adequately substantive. The 'Prepare a software demonstration' section addresses a distinct context (ongoing operation and final selection decision) from 'Set evaluation criteria' (initial vendor comparison), which is a scope difference consistent with the chapter boundary.",
+        "evidenceIds": [
+          "page:9:paragraph:18",
+          "page:9:paragraph:20",
+          "page:9:paragraph:36"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 8: The guide does not need to verify which ICC capabilities were 'originally claimed' since capabilityIds is empty. The guide discusses ICC features that are confirmed by source:0:claim:0 through source:0:claim:4 and treats them as evaluation questions rather than confirmed site behavior, which is the correct approach per the maintained writing rule.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:1",
+          "source:0:claim:2",
+          "source:0:claim:4",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding 9: The phrase 'do not assume that a software feature resolves it' and similar cautions are differently worded across pages. Page:0:paragraph:14 says 'rather than assuming that a software feature resolves it'; page:4:paragraph:15 says 'without assuming that software will detect urgency or notify anyone automatically'; page:5:paragraph:20 says 'It does not establish that a specific exception is automatically routed.' These are differently worded required cautions, not near-verbatim copies.",
+        "evidenceIds": [
+          "page:0:paragraph:14",
+          "page:4:paragraph:15",
+          "page:5:paragraph:20"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding 10: The evaluation exercise structure ('ask the role to action, another role to check, quality lead to record') is a standard procedural pattern that appears with different roles, different tasks, different samples, and different outcomes in each chapter. Shared subject matter and standard procedural phrasing do not constitute substantially copied paragraphs.",
+        "evidenceIds": [
+          "page:2:paragraph:19",
+          "page:5:paragraph:27",
+          "page:8:paragraph:12"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 11: The 'Map current processes' chapter discusses evaluation questions only as they relate to mapping decisions (e.g., testing a boundary before contacting a vendor). This is consistent with the chapter boundary 'leave evaluate process mapping software to its assigned chapter' because it frames evaluation as a downstream use of the mapping work, not as a software evaluation exercise. No genuine boundary violation was found.",
+        "evidenceIds": [
+          "page:1:paragraph:9",
+          "page:1:paragraph:30"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 12: Discussed above under finding 8. All ICC features discussed are traceable to source:0 supportedClaims. The guide treats them as evaluation questions, not confirmed capabilities.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:1",
+          "source:0:claim:2",
+          "source:0:claim:5"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding 13: The 'process boundary' definition in page:0:paragraph:4 and page:1:paragraph:11 are differently worded. Page:0 defines it as 'an agreed statement of where a mapped process starts and ends, including the triggering event, output, and recipient.' Page:1 says 'A process boundary is an agreement about where the mapped work starts and ends.' These are paraphrases, not verbatim copies, and constitute a required short factual caution for the chapter on identifying boundaries.",
+        "evidenceIds": [
+          "page:0:paragraph:4",
+          "page:1:paragraph:11"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 14: Every hypothetical example in the guide is explicitly labeled 'Illustrative example' or described as 'hypothetical.' Page:0:paragraph:7 ends with 'This scenario is hypothetical; it is not a case study or a measured customer result.' Page:0:paragraph:13 states 'It does not claim that this business exists or that a particular plant achieved a result.' These labels satisfy the required explicit conditional/hypothetical labeling rule.",
+        "evidenceIds": [
+          "page:0:paragraph:7",
+          "page:0:paragraph:13"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 15: The outline does not require FAQ answers to cross-reference chapters; the outline requires evaluation criteria and honest content. The FAQ answers are substantive and actionable. Absence of cross-references is a stylistic gap, not a claims violation.",
+        "evidenceIds": [
+          "page:9:paragraph:18",
+          "page:9:paragraph:20",
+          "page:9:paragraph:22",
+          "page:9:paragraph:24"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 17: The guide does not need to justify chapter necessity in its reader-facing text. The outline provides chapter structure; the guide implements it. No false claim is made about the topicId relationship.",
+        "evidenceIds": [
+          "page:0:paragraph:11",
+          "page:0:paragraph:12"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 18: Every citation of the ISO APG collection in the guide is qualified. Page:0:paragraph:6 states 'The collection says its guidance is not definitive and is not intended as specified requirements, a benchmark, or mandatory audit criteria.' Subsequent chapters cite it as 'educational material' which matches source:1:claim:0 and source:1:claim:1. The guide does not treat it as binding authority.",
+        "evidenceIds": [
+          "page:0:paragraph:6",
+          "source:1:claim:0",
+          "source:1:claim:1"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 19: The guide does not claim to have verified ICC features. It explicitly says descriptions 'provide a basis for questions' and directs users to ask for demonstrations. This is the correct framing per the maintained writing rule that unverified capabilities are evaluation questions.",
+        "evidenceIds": [
+          "page:2:paragraph:11",
+          "page:3:paragraph:10",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding 20: Illustrative examples use the same hypothetical manufacturer as required by the outline's example specification. The specific content of each example differs: different process stages, different roles acting, different issues discovered, different resolutions. The required label 'Illustrative example' is a short recurring caution, not substantially copied prose. Different chapter examples were inspected and found to have distinct wording and distinct scenarios.",
+        "evidenceIds": [
+          "page:1:paragraph:7",
+          "page:3:paragraph:7",
+          "page:5:paragraph:6",
+          "page:7:paragraph:6",
+          "page:9:paragraph:6"
+        ],
+        "comparisons": []
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The word-count discrepancy between the outline's 18,000-word chapter total and the introduction's 19,500 estimated words is an outline planning artifact. The introduction figure (page:0) does not appear in reader-facing text as a factual claim about the delivered guide. No false claim is made to readers.",
+        "evidenceIds": [
+          "page:0:paragraph:1"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 1,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The guide accurately describes the ICC page and ISO APG collection. Page:0:paragraph:5 says the guide uses the ICC page 'as a source for questions a team can bring to an evaluation' and directs readers to distinguish vendor publications from observations. Source:0:claim:0 through source:0:claim:4 confirm the ICC page contains the described content. The guide does not misrepresent marketing content as prescriptive evaluation frameworks.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "page:0:paragraph:6",
+          "source:0:claim:0",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 2,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "The workflow template cited by the screening exists only in the outline planning object, not in reader-facing pages. Inspection of actual page paragraphs shows distinct prose in each chapter with no verbatim template blocks reproduced across pages.",
+        "evidenceIds": [
+          "page:1:paragraph:2",
+          "page:4:paragraph:2",
+          "page:7:paragraph:1"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 3,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Illustrative examples across chapters share only the required 'Illustrative example:' label and the hypothetical manufacturer framing, both required by the outline. The specific wording, roles, decisions, and outcomes differ materially across chapters. This is shared subject matter and a required label, not substantially copied prose.",
+        "evidenceIds": [
+          "page:1:paragraph:7",
+          "page:2:paragraph:8",
+          "page:4:paragraph:7"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 4,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "The 'process owner' definition is a one-sentence required short factual caution that recurs briefly in context-appropriate places across a multi-chapter guide where readers may enter at any chapter. It is not a substantially copied paragraph. The two occurrences are worded differently and serve different purposes.",
+        "evidenceIds": [
+          "page:0:paragraph:4",
+          "page:4:paragraph:4"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 5,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The guide consistently performs the vendor-versus-organization distinction. Page:6:paragraph:2 cites the ICC page then immediately qualifies: 'the published link description does not determine which document applies locally.' This pattern is consistent across chapters and matches source:0:claim:6.",
+        "evidenceIds": [
+          "page:6:paragraph:2",
+          "page:2:paragraph:11",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 6,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The FAQ section provides substantive answers. The outline does not require chapter cross-references in FAQ answers. The 'Prepare a software demonstration' section in page:9 addresses a different context (final selection after full guide completion) than 'Set evaluation criteria' in page:2 (initial evaluation setup). The overlap is topical, not verbatim copy.",
+        "evidenceIds": [
+          "page:9:paragraph:36",
+          "page:9:paragraph:37",
+          "page:2:paragraph:5"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 7,
+        "verdict": "violation",
+        "dimension": "repetition",
+        "reason": "Page:0:paragraph:17 and page:7:paragraph:20 contain substantially copied explanations of the ICC page's description of industry templates, PDF chart review, and broad activities, followed by the same caution that these do not establish file, permission, link, or recovery behavior. The wording and structure are near-identical across the two pages.",
+        "evidenceIds": [
+          "page:0:paragraph:17",
+          "page:7:paragraph:20"
+        ],
+        "comparisons": [
+          {
+            "mode": "near",
+            "leftSpanIds": [
+              "page:0:paragraph:17:span:0",
+              "page:0:paragraph:17:span:1",
+              "page:0:paragraph:17:span:2"
+            ],
+            "rightSpanIds": [
+              "page:7:paragraph:20:span:0",
+              "page:7:paragraph:20:span:1",
+              "page:7:paragraph:20:span:2"
+            ]
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "All ICC features discussed are traceable to source:0 supportedClaims. The guide treats them as evaluation questions per source:0:claim:6. No capability is asserted as a confirmed installed feature without qualification.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:1",
+          "source:0:claim:2",
+          "source:0:claim:5",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 9,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "The 'do not assume a software feature resolves it' cautions are differently worded across pages and constitute required short factual cautions appropriate to a guide about software evaluation. They are not substantially copied paragraphs.",
+        "evidenceIds": [
+          "page:0:paragraph:14",
+          "page:4:paragraph:15",
+          "page:5:paragraph:20"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 10,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "The evaluation exercise procedural structure uses the same roles because those roles are defined by the guide's scope, but each instance involves different tasks, different samples, different process stages, and different outcomes. Shared procedural structure with different content is not substantially copied prose.",
+        "evidenceIds": [
+          "page:2:paragraph:19",
+          "page:5:paragraph:27",
+          "page:8:paragraph:12"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 11,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The 'Map current processes' chapter discusses evaluation questions only as a downstream use of mapping decisions (e.g., turning a purpose into acceptance criteria before contacting a vendor), which is within scope of the chapter's subject matter. No genuine boundary violation creates a false claim.",
+        "evidenceIds": [
+          "page:1:paragraph:9",
+          "page:1:paragraph:4"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 12,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "All discussed ICC features are supported by source:0 claims. The guide qualifies them as vendor descriptions throughout. Empty capabilityIds means no capability pre-screening was done, not that the features are unconfirmed; the source records themselves provide the confirmation used by the guide.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:1",
+          "source:0:claim:4",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 13,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "The 'process boundary' recurrences in page:0:paragraph:4 and page:1:paragraph:11 are differently worded one-sentence definitions constituting required short factual cautions. Page:0 says 'an agreed statement of where a mapped process starts and ends, including the triggering event, output, and recipient'; page:1 says 'an agreement about where the mapped work starts and ends.' These are paraphrases, not verbatim copies.",
+        "evidenceIds": [
+          "page:0:paragraph:4",
+          "page:1:paragraph:11"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 14,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Every hypothetical example is explicitly labeled. Page:0:paragraph:7 ends 'This scenario is hypothetical; it is not a case study or a measured customer result.' Page:0:paragraph:13 states 'It does not claim that this business exists or that a particular plant achieved a result.' The labeling satisfies the explicit conditional/hypothetical requirement.",
+        "evidenceIds": [
+          "page:0:paragraph:7",
+          "page:0:paragraph:13"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 15,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The outline does not require FAQ answers to cross-reference chapters. The FAQ answers are substantive and actionable. Absence of cross-references is a structural preference, not a false claim or missing evidence.",
+        "evidenceIds": [
+          "page:9:paragraph:18",
+          "page:9:paragraph:24",
+          "page:9:paragraph:26"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 16,
+        "verdict": "violation",
+        "dimension": "repetition",
+        "reason": "Page:9's 'Prepare a software demonstration' section (paragraphs 36-42) substantially reproduces the evaluation structure from page:2's 'Set evaluation criteria' and 'Document gaps and commitments' sections, including the same guidance to agree on criteria before the session, record demonstrated versus described outcomes, separate supplier statements from organizational tasks, and name a person for unresolved items. While the specific examples differ, the paragraph-level reasoning structure and key guidance sentences are substantially copied across the two pages.",
+        "evidenceIds": [
+          "page:9:paragraph:40",
+          "page:2:paragraph:24"
+        ],
+        "comparisons": [
+          {
+            "mode": "near",
+            "leftSpanIds": [
+              "page:2:paragraph:24:span:1",
+              "page:2:paragraph:24:span:2",
+              "page:2:paragraph:24:span:3"
+            ],
+            "rightSpanIds": [
+              "page:9:paragraph:40:span:0",
+              "page:9:paragraph:40:span:1",
+              "page:9:paragraph:40:span:2"
+            ]
+          }
+        ]
+      },
+      {
+        "index": 17,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The guide does not make false claims about chapter necessity or topicId relevance. The sequence from mapping to maintenance is a standard implementation guide structure and no false assertion is made to readers about why chapters exist.",
+        "evidenceIds": [
+          "page:0:paragraph:11",
+          "page:0:paragraph:12"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 18,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Every ISO APG citation is qualified as educational and not definitive. Page:0:paragraph:6 provides the full disclaimer matching source:1:claim:1. Subsequent citations use 'educational material' which is accurate. The guide does not treat the collection as binding authority.",
+        "evidenceIds": [
+          "page:0:paragraph:6",
+          "source:1:claim:1"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 19,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The guide explicitly frames ICC descriptions as 'a basis for questions' and 'a starting point for demonstration,' not as verified features. This is the correct application of the maintained writing rule that unverified capabilities are evaluation questions.",
+        "evidenceIds": [
+          "page:2:paragraph:11",
+          "page:3:paragraph:10",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 20,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Illustrative examples use the required 'Illustrative example' label per the outline and the same hypothetical manufacturer per the outline's example specification. Each example has distinct wording, distinct process stages, distinct issues, and distinct resolutions. The required label is a short recurring caution; the examples themselves are not substantially copied.",
+        "evidenceIds": [
+          "page:1:paragraph:7",
+          "page:5:paragraph:6",
+          "page:7:paragraph:6",
+          "page:9:paragraph:6"
+        ],
+        "comparisons": []
+      }
+    ]
+  }
+}
