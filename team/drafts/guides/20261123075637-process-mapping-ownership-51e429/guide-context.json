@@ -5,18 +5,57 @@
     {
       "term": "Process owner",
       "definition": "The role accountable for decisions and review of a defined process."
+    },
+    {
+      "term": "Process boundary",
+      "definition": "An agreed statement of where mapped work starts and ends, identifying inputs received, outputs handed to another role, and decisions for which the owner is responsible."
+    },
+    {
+      "term": "Handoff",
+      "definition": "The point at which a sender transfers an output to a receiving role, complete only when the receiver has what it needs to act."
     }
   ],
   "roles": [
     "Quality owner",
     "Process owner",
-    "Operator"
+    "Operator",
+    "Floor supervisor",
+    "Quality lead",
+    "Receiving role",
+    "Reviewer",
+    "Resolution owner"
   ],
-  "recordNames": [],
+  "recordNames": [
+    "Documented decision and its owner",
+    "Completed record or physical output",
+    "Representative request or schedule",
+    "Current role assignments and actual handoffs",
+    "Vendor statements or demonstrated behavior",
+    "Date, evidence examined, disagreements found, and resolution owner"
+  ],
   "example": {
     "label": "Illustrative example",
     "description": "An unnamed Canadian manufacturer evaluates a process map for a production workflow; all situations and records are hypothetical."
   },
-  "reviewedChapters": [],
+  "reviewedChapters": [
+    {
+      "slug": "mapping-current-processes",
+      "title": "Map current processes: process mapping software for quality management",
+      "summary": "All six quality dimensions pass. Claims are supported by supplied source evidence and appropriately hedged. The page stays within its assigned scope. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or are the permitted internal path. No FAQ section appears, correctly, as none is assigned. The single prior finding concerned an H1 shell issue; the current page body contains no such problem and all paragraphs are present and unchanged per previousReview.changedParagraphs being empty, so the finding is resolved.",
+      "bodyHash": "dd97f28c350857a36999d2c7de06e9cc19115585f95f3ba1e1f18a2441f9200b",
+      "decisions": [
+        "Determine which workflow to examine and record that choice with the map",
+        "Agree on the mapping purpose before treating the map as a basis for a software decision",
+        "Determine ownership, acceptance and next action for each boundary question",
+        "Resolve discrepancy between written procedure and actual records",
+        "Decide whether a boundary difference belongs on the common map, a linked local instruction, or a separate process",
+        "Mark boundary as unresolved and assign someone to confirm it",
+        "Determine whether a diagram step is a process step, supporting instruction, or evidence linked to a step",
+        "Record whether vendor behavior was shown, described, or left unanswered",
+        "Assign a resolution owner for any unresolved escalation route",
+        "Decide who can view, propose, review, and release a change to a map"
+      ]
+    }
+  ],
   "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
 }

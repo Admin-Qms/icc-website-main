@@ -6,41 +6,109 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections cover map current processes within the assigned scope, correctly attribute vendor descriptions and ISO APG guidance, include workflow elements (roles, inputs, decisions, records, exceptions), provide the required illustrative example, and use the two permitted source URLs appropriately. No FAQ sections are present, which is correct as none are assigned. No unresolved findings from the previous review exist, and the changed paragraphs introduce no new problems. The page passes all checks.",
+  "summary": "All six quality dimensions pass. Claims are supported by supplied source evidence and appropriately hedged. The page stays within its assigned scope. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or are the permitted internal path. No FAQ section appears, correctly, as none is assigned. The single prior finding concerned an H1 shell issue; the current page body contains no such problem and all paragraphs are present and unchanged per previousReview.changedParagraphs being empty, so the finding is resolved.",
   "glossary": [
     {
       "term": "Process boundary",
-      "definition": "An agreed statement of where mapped work starts and ends, identifying the inputs received, outputs handed off, and decisions for which the owner is responsible."
+      "definition": "An agreed statement of where mapped work starts and ends, identifying inputs received, outputs handed to another role, and decisions for which the owner is responsible."
     },
     {
       "term": "Handoff",
-      "definition": "The transfer of an output from one role or process to a receiving role, considered complete only when the receiver has what it needs to act."
+      "definition": "The point at which a sender transfers an output to a receiving role, complete only when the receiver has what it needs to act."
     }
   ],
   "roles": [
     "Process owner",
-    "Supervisor",
-    "Quality lead",
     "Floor supervisor",
-    "Vendor"
+    "Quality lead",
+    "Receiving role",
+    "Operator",
+    "Reviewer",
+    "Resolution owner"
   ],
   "recordNames": [
     "Documented decision and its owner",
-    "Map including what it includes, excludes, and the decisions it supports",
-    "Completed process record or physical output",
-    "Vendor statements or demonstrated behavior record",
-    "Review record noting date, evidence examined, disagreements, and resolution owners"
+    "Completed record or physical output",
+    "Representative request or schedule",
+    "Current role assignments and actual handoffs",
+    "Vendor statements or demonstrated behavior",
+    "Date, evidence examined, disagreements found, and resolution owner"
   ],
   "decisions": [
-    "Determine ownership, acceptance and next action for the mapping purpose",
-    "Resolve disagreement on mapping purpose before treating the map as a basis for a software decision",
-    "Decide which workflow to examine and record that choice with the map",
-    "Determine whether a boundary difference belongs on a common map, a linked local instruction, or a separate process",
-    "Decide whether a process, instruction, or role assignment needs correction when written procedure differs from actual records",
-    "Decide whether the boundary or the actual handoff needs clarification when inspection evidence arrives after release",
+    "Determine which workflow to examine and record that choice with the map",
+    "Agree on the mapping purpose before treating the map as a basis for a software decision",
+    "Determine ownership, acceptance and next action for each boundary question",
+    "Resolve discrepancy between written procedure and actual records",
+    "Decide whether a boundary difference belongs on the common map, a linked local instruction, or a separate process",
+    "Mark boundary as unresolved and assign someone to confirm it",
+    "Determine whether a diagram step is a process step, supporting instruction, or evidence linked to a step",
+    "Record whether vendor behavior was shown, described, or left unanswered",
     "Assign a resolution owner for any unresolved escalation route",
-    "Decide who can view, propose, review, and release a map change and how those decisions are recorded"
+    "Decide who can view, propose, review, and release a change to a map"
   ],
+  "previousFindingDecisions": [
+    {
+      "index": 0,
+      "verdict": "clear",
+      "reason": "The prior finding flagged an H1 shell issue in the page. The current page body opens with a valid H2 heading '## Define the mapping purpose' and all subsequent sections use H2 headings. No H1 shell problem is present in any paragraph of the current page content.",
+      "evidenceIds": [
+        "page:paragraph:0",
+        "page:paragraph:10",
+        "page:paragraph:19",
+        "page:paragraph:27"
+      ]
+    }
+  ],
+  "resolution": {
+    "protocol": "indexed-chapter-resolution-v1",
+    "previousFindings": [
+      {
+        "section": "Page",
+        "reason": "The page shell supplies H1",
+        "action": "Correct the indicated subsection while preserving verified facts"
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "clear",
+        "reason": "The prior finding flagged an H1 shell issue in the page. The current page body opens with a valid H2 heading '## Define the mapping purpose' and all subsequent sections use H2 headings. No H1 shell problem is present in any paragraph of the current page content.",
+        "evidenceIds": [
+          "page:paragraph:0",
+          "page:paragraph:10",
+          "page:paragraph:19",
+          "page:paragraph:27"
+        ]
+      }
+    ],
+    "resolvedEvidence": [
+      {
+        "index": 0,
+        "evidence": [
+          {
+            "evidenceId": "page:paragraph:0",
+            "kind": "page",
+            "text": "## Define the mapping purpose\n\n"
+          },
+          {
+            "evidenceId": "page:paragraph:10",
+            "kind": "page",
+            "text": "## Identify process boundaries\n\n"
+          },
+          {
+            "evidenceId": "page:paragraph:19",
+            "kind": "page",
+            "text": "## Trace inputs and outputs\n\n"
+          },
+          {
+            "evidenceId": "page:paragraph:27",
+            "kind": "page",
+            "text": "## Record handoffs and exceptions\n\n"
+          }
+        ]
+      }
+    ]
+  },
   "pass": true,
   "deterministic": {
     "pass": true,
@@ -137,15 +205,15 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "da049cfc658d661ff8000811b99cba40c50dab10d84b5f02aafa281737674b24",
-  "contentHash": "0624a85f97525b3081780b7a863cc0599084b4f0f4578ee7d16bb72f43d4ecbb",
+  "inputHash": "607a2b7e291482eb1ee9155c64dbabce8eb24933c6ea45805bb806be31fe3a90",
+  "contentHash": "6ffb58d369f5a7d8f19070814999455690a57ab2c7dc5885f4282178a1aed751",
   "paragraphHashes": [
     "f03b8f70e7e42732e660db0849712ed5a4eb924a80a990869cde6c04a2e6d20f",
     "cf7f495b6334b9dfdb166ff124698ac0932aac0ca7a3341d320e8c7766ba6d8c",
     "c9fd75fd2bd93c254cfccf457bc0234f3c129aa66f5c23d56b31330d3fd921a2",
     "f69f22b93eb1f8db354d8e66cd6aa9010caf01045e87d3a1576866390b8829f1",
     "84ed006ae5d7cd40a7a4aaf8a7920ca9d6e74f55427ba089fce06372b1ee8423",
-    "9cdd89f25ebfc080170ee0a5a31060c404370c2452eed7750204cedaf7a8585a",
+    "edfe67a73b14c9e146cad0fddade357643fe98211db753ee0f4f54b82f8bcda7",
     "3cedc5189cdade2da18582aa279e41b1e31f86fe99306332ccf880123e08a360",
     "b870fc2e2ddfdea49d29c38eefc17e3efbaf30fbdc4fd248bc2fe1ef82427cea",
     "bf770e5a454349af2ebafcb92aa675456a531ee9d54f1358ebbbbeedfa7b29da",
@@ -175,7 +243,7 @@
     "7935d39e3ae4d6494a9e448a30beeda17f72fc246eb4c9be286a57eec3872ca8",
     "748900ca7641aca70e0f13ba39892bb1d7c427e70cdab2104eac31e1ded55a7e"
   ],
-  "outputContextHash": "ab1faf70b87074bf295406bdbcf9f9c7e1935435e51ef1389d6c80076afc8d21",
-  "reviewedAt": "2026-11-23T15:11:57.794Z",
+  "outputContextHash": "821affd95985deaee9ce8aecaa5e01fa040b2581df8d317d4fc1c307934275bb",
+  "reviewedAt": "2026-11-23T15:40:30.142Z",
   "reviewer": "Configured independent chapter reviewer"
 }

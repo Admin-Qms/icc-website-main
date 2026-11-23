@@ -22,7 +22,6 @@ sourceIds:
   - iso-apg
 capabilityIds: []
 ---
-# Map current processes: process mapping software for quality management
 
 ## Define the mapping purpose
 
