@@ -6,28 +6,33 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections cover connect documents and evidence within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. There are no unresolved findings from the previous review, and the changed paragraphs introduce no new problems. The page passes all checks.",
+  "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The two changed paragraphs each introduce an ISO APG link with appropriate hedging, correctly attributing the source as educational material on evidence; both URLs match the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
   "glossary": [],
   "roles": [
     "Process owner",
     "Quality lead",
     "Operator",
-    "Worker",
-    "Reader",
     "Reviewer",
-    "Decision-maker",
-    "Responsible person"
+    "Supplier",
+    "Reader"
   ],
   "recordNames": [
-    "Review record capturing step, sample, intended reader, and observed result",
-    "Change record connecting decision to process and affected destination"
+    "Documented decision and its owner",
+    "Review record",
+    "Change record",
+    "Interim decision record"
   ],
   "decisions": [
-    "Determine ownership, acceptance and next action for each candidate document link",
-    "Decide whether the connection helps the intended reader and record why a disputed item was included or left open",
-    "Decide whether the process description needs an update when a revision changes the meaning of a decision or role",
-    "Decide how the organization will handle the period before a revision issue is resolved",
-    "Identify an approved alternative route, restrict reliance on a draft, or escalate when a link is unavailable",
+    "Determine ownership, acceptance and next action for each document connection",
+    "Decide whether a candidate document connection helps the intended reader",
+    "Record why a disputed item was included or left open",
+    "Decide whether the map scope needs correction when a destination mismatch is found",
+    "Determine what question the reader is trying to answer before connecting a record to a step",
+    "Decide whether the proposed arrangement is sufficient for its intended use",
+    "Decide how to handle the period before a revision issue is resolved",
+    "Decide whether a revision changes the meaning of a decision or a role",
+    "Assign follow-up for an older or inaccessible destination before allowing readers to rely on the route",
+    "Agree on acceptance criteria before the traceability walkthrough",
     "Accept the tested connection only for the scope and conditions the review supports",
     "Distinguish an access question from an obsolete destination before choosing a remedy"
   ],
@@ -127,15 +132,15 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "7f8945f8ee9b48609a71da8ce6ec9a0c9e2ab49e01536b3110224553ced21fa5",
-  "contentHash": "443ec56c0e1009ab16389f1b7acf4f2f649e7e18a2b72a42a55f9997caa8e2f7",
+  "inputHash": "478222a083b3988f23bbbdbec83c5e9fe3c860e6203361510aaaa011db73e7d9",
+  "contentHash": "4c99eb1e04852a44b2c09c5eb59189a9863e54c19419dbc2c39526e1165cb32e",
   "paragraphHashes": [
     "f18b264cdb8c3f7273614d52a7e119a09c578ee766dcfc72f5c2a4ad46cb2ae5",
     "160ea73a9cf51e3e041491c8cf15d74db077ea46bdd5063e9b355eb8ec70121a",
     "e6ff926540223664b51cbddccdfb66ec30b20c063f60210257ae98ab2ab99eae",
     "9d00364e766de5cacc094ae319de6c410f1401f217ed66977bb5804fcfc848ce",
     "3e57b9c6af011c412d918b21691d38755119123c26860d930f2a52755f61224b",
-    "245d0ad77cf80f48ea8c62c9a68e0e3382dfd5405f9c30ab3258e44d086ccf2f",
+    "4f6d1b72296fe4d897a1a8fbc9e42a80589639a9d00036af6267888842a4afb0",
     "7f629aa111fadba710d30a87e9ee370d31649e90ad5f46c3a46b6493a51302ab",
     "4c01aa91aad241b24ae91e6985b52444cf78a31b42b4e58408f22dcd9b604beb",
     "fe6a5848c97a9e0b25ae2adb94b65925e0bb4b4bb3bf0a7ed7413d2c0082ef20",
@@ -158,7 +163,7 @@
     "79add66079e063432a041bb2f35f62d134e57629f126046c958ebd1cff2fb958",
     "eaf2f25c079be0d36606f57e76c4f65bde43f313d0519b50a154a017a9b6bd92",
     "84d6d119f5dc08774fa24b96d7295cc5272613e2d0fafd9acd565beed3957747",
-    "559dfb177d1a6648de55cf5ed00e146fcf4bd9fe91d66cafcad20a7269cb5399",
+    "e19ba031a027ea455307b32716fe2c6e622ec52d26b876c2c11d9259c837a22a",
     "e852a0e9175c12886268133ddb5b13eb04967b4eba57ff0a68ef8221b5fb553d",
     "5c626a79b9a7f2654071df54b042d68e2b94e517454f00b615a0b8a857ce4a96",
     "17b5425ab886cd75ad4fc0ad63a38faf9fd5ae532e73e7b32ba2ef6a65a1bfdf",
@@ -167,7 +172,7 @@
     "c152a6d46072b34e25053d996069eef0f6a69668ccb550f3a03676749762f63b",
     "d6f0e57dfe2617e15a437bb900e8c6b16a2f2f0aa2d693ad73ccb9e8a71e4be9"
   ],
-  "outputContextHash": "b00cf81d1eb976ca95dfee888c18a5af0b9c03f0cc24133a4aad7d72f1bdc853",
-  "reviewedAt": "2026-11-23T15:18:38.208Z",
+  "outputContextHash": "bc4928ffa502fb2698fd38705458135f45669c36e1a31501f12976f3a7615cca",
+  "reviewedAt": "2026-11-23T15:51:05.220Z",
   "reviewer": "Configured independent chapter reviewer"
 }

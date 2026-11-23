@@ -55,7 +55,9 @@
     "Assignment record",
     "Interim arrangement record",
     "Decision record",
-    "Review record"
+    "Review record",
+    "Change record",
+    "Interim decision record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -140,6 +142,26 @@
         "Decide whether the draft is suitable for a limited purpose while an issue remains open",
         "Decide whether additional evidence is needed before accepting the map",
         "Accept a correction or assign further investigation"
+      ]
+    },
+    {
+      "slug": "documents-and-evidence",
+      "title": "Connect documents and evidence: process mapping software for quality management",
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The two changed paragraphs each introduce an ISO APG link with appropriate hedging, correctly attributing the source as educational material on evidence; both URLs match the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
+      "bodyHash": "586e3ea42d60ee668b0fe4130ff7276f19d4e2040d305e0e8fd9fe7193741795",
+      "decisions": [
+        "Determine ownership, acceptance and next action for each document connection",
+        "Decide whether a candidate document connection helps the intended reader",
+        "Record why a disputed item was included or left open",
+        "Decide whether the map scope needs correction when a destination mismatch is found",
+        "Determine what question the reader is trying to answer before connecting a record to a step",
+        "Decide whether the proposed arrangement is sufficient for its intended use",
+        "Decide how to handle the period before a revision issue is resolved",
+        "Decide whether a revision changes the meaning of a decision or a role",
+        "Assign follow-up for an older or inaccessible destination before allowing readers to rely on the route",
+        "Agree on acceptance criteria before the traceability walkthrough",
+        "Accept the tested connection only for the scope and conditions the review supports",
+        "Distinguish an access question from an obsolete destination before choosing a remedy"
       ]
     }
   ],
