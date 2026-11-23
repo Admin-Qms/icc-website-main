@@ -72,7 +72,10 @@
     "Pilot decision record with scope and conditions",
     "Stage scope, training observations, unresolved items, decision-maker, and acceptance conditions",
     "Feedback observation record with task, starting point, and result",
-    "Follow-up decision record with interim guidance and closing condition"
+    "Follow-up decision record with interim guidance and closing condition",
+    "Map-change record",
+    "Change-review record",
+    "Interim route record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -213,32 +216,20 @@
     {
       "slug": "ongoing-operation",
       "title": "Maintain process maps and improve: process mapping software for quality management",
-      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. Both changed paragraphs introduce ISO APG links with appropriate hedging, correctly attributing the source as educational material on improvement and evidence respectively; both URLs match the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. An FAQ section appears and is correctly assigned in the plan. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
-      "bodyHash": "c201df4caf517301aba1bf7441439deb53b6142723105fb4afc4e797e937ed56",
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The seven changed paragraphs in the 'Prepare a software demonstration' section are each examined: the ICC process management description link is correctly cited and appropriately hedged; the illustrative example is labeled hypothetical; workflow decisions, roles, and records are consistent with the plan; no unverified capabilities are asserted; and the section stays within its assigned scope. Claims throughout the page are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG educational guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match the supplied research source URLs or the permitted internal site path. The FAQ section is present and assigned by the plan; it covers appropriate evaluation and implementation questions without asserting unverified capabilities. Illustrative examples are clearly labeled hypothetical. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections.",
+      "bodyHash": "d5c548f3c325ec55c312fdf0617f7acd32e97bc0dea40639751b057a304811ba",
       "decisions": [
         "Determine which changes require review",
-        "Decide who needs to contribute to a map review",
+        "Determine who needs to contribute to a map review",
         "Record an unresolved question and assign an owner",
-        "Determine ownership, acceptance and next action for a changed handoff",
+        "Decide whether a proposed change or accepted change is the input to evaluation",
+        "Record a discrepancy between changed work and an unchanged map and identify the next decision",
+        "Assign an owner for a gap in acceptance evidence and retain an interim route",
         "Agree on a question before choosing a measure",
+        "Define what counts in the sample and who will interpret the result",
         "Decide whether to retain or replace a measure when the process changes",
-        "Record uncertainty in a measure decision",
-        "Decide whether the selection can proceed while an open item remains unanswered",
-        "Separate a demonstrated outcome from a verbal commitment and an unresolved question",
-        "Accept a limitation or request more evidence after a demonstration"
-      ]
-    },
-    {
-      "slug": "process-mapping-software-for-quality-management",
-      "title": "Process mapping software for quality management in Canadian operations",
-      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ICC process management page link with appropriate hedging, correctly distinguishing vendor-published descriptions from observed behavior and assigning follow-up for unanswered questions; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged. The page stays within its assigned introductory scope across all three subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned to this introduction. Workflow roles, records, decisions, and the illustrative example are present and consistent. Glossary terms introduced on this page match context definitions without restating them.",
-      "bodyHash": "5a707a0b5c60a8aa049f325deef26ccb95bee63d25c9aa49a02457faae6c8fea",
-      "decisions": [
-        "Assign follow-up when an important question about a vendor configuration remains unanswered",
-        "Distinguish an observed fact from a recommendation and an evaluation question",
-        "Record what was shown, what was described, what depended on configuration, and what remains unanswered",
-        "Identify the person who can decide the next action when a question is unanswered",
-        "Retain a limitation in the relevant record rather than assuming a software feature resolves it"
+        "Decide how to address a recurring problem identified by feedback",
+        "Identify who will confirm a proposed product response before the route is relied upon"
       ]
     }
   ],

@@ -6,34 +6,38 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. Both changed paragraphs introduce ISO APG links with appropriate hedging, correctly attributing the source as educational material on improvement and evidence respectively; both URLs match the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. An FAQ section appears and is correctly assigned in the plan. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
+  "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The seven changed paragraphs in the 'Prepare a software demonstration' section are each examined: the ICC process management description link is correctly cited and appropriately hedged; the illustrative example is labeled hypothetical; workflow decisions, roles, and records are consistent with the plan; no unverified capabilities are asserted; and the section stays within its assigned scope. Claims throughout the page are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG educational guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match the supplied research source URLs or the permitted internal site path. The FAQ section is present and assigned by the plan; it covers appropriate evaluation and implementation questions without asserting unverified capabilities. Illustrative examples are clearly labeled hypothetical. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections.",
   "glossary": [],
   "roles": [
     "Process owner",
     "Quality lead",
-    "Operations manager",
     "Worker",
-    "Operator",
-    "Supervisor"
+    "Operations manager",
+    "Supplier",
+    "Receiving role",
+    "Reader"
   ],
   "recordNames": [
     "Documented decision and its owner",
-    "Interim arrangement record",
-    "Review record",
     "Change record",
-    "Evaluation record"
+    "Review record",
+    "Map-change record",
+    "Change-review record",
+    "Evaluation record",
+    "Interim route record"
   ],
   "decisions": [
     "Determine which changes require review",
-    "Decide who needs to contribute to a map review",
+    "Determine who needs to contribute to a map review",
     "Record an unresolved question and assign an owner",
-    "Determine ownership, acceptance and next action for a changed handoff",
+    "Decide whether a proposed change or accepted change is the input to evaluation",
+    "Record a discrepancy between changed work and an unchanged map and identify the next decision",
+    "Assign an owner for a gap in acceptance evidence and retain an interim route",
     "Agree on a question before choosing a measure",
+    "Define what counts in the sample and who will interpret the result",
     "Decide whether to retain or replace a measure when the process changes",
-    "Record uncertainty in a measure decision",
-    "Decide whether the selection can proceed while an open item remains unanswered",
-    "Separate a demonstrated outcome from a verbal commitment and an unresolved question",
-    "Accept a limitation or request more evidence after a demonstration"
+    "Decide how to address a recurring problem identified by feedback",
+    "Identify who will confirm a proposed product response before the route is relied upon"
   ],
   "pass": true,
   "deterministic": {
@@ -185,8 +189,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "fb892ebd4671025b413324094ec062456bc6f2ec465940ed153df52bac7ed898",
-  "contentHash": "0dd8e033bd530d1041356d697d672ff27894e4089b0b4806ad1b85d9301739b6",
+  "inputHash": "2bcbd8ec298d1e2301e20eda350693714a78040e24d6c89115d791555420e792",
+  "contentHash": "b5a9216da17bbe1991a49fd30eddbec7509ee5c69187ef4222f04a1d3fd4e492",
   "paragraphHashes": [
     "6590f1eeef3c372da1cc642b78338785938c927df82ebf23d8631bb6b45fb7c3",
     "63f184f2959304fa85e8219abb4a56b27535c37594c88c9c686cb0d776176367",
@@ -224,16 +228,16 @@
     "2ae0b329922a3e5dff11ac7315b00721f3f6d068d98e056f4926e90895d5b7fc",
     "c2b5363db99a2f1721005345efcd8ea6d25fd95885ca3f2bbdc16661e8680284",
     "11025ca68aab3b3636c95064f49445dea47d5fddbfad35a8e17333f920cc6fe0",
-    "7d219e3ae85d8f721ad70f42b6520cabe0d7f6b9dd325b443657239c7cfb8b5d",
-    "b3a035c2ed9ab7e3b2d0791f2a0e6055b3d5170691605643f8fb90f717375d89",
-    "738f4a49e145ed0085282da06f16af1210c1ac5b5bfaabfb7530e428e592675a",
-    "15df493dddb1f572309e63ea331ddef1c91d5a40df55baa1652f856a7012a0a4",
-    "b43f1f54b03a69601b3da6daa9b7090b4183ab80c67d1d2f850293b8e14294a6",
-    "a6e4a0bd4eb2f66ab4b60a6c771a4baa2e5441d335961c48a34b085ca2468a03",
-    "356e67ad804210f06700274d86d44e7e0f5a365644a22f73819c7d1b3fcb070f",
+    "0c9b5024bf413829a81e2e76c7353e65bea4ca44ee9c89b62544fb5b2b942062",
+    "d1870a12e6852298e6c2ce1db4239c4da441a22602bb05332540747bae1ab065",
+    "30574e0dc97880f23273a2d0a4a096913f8e2e563e3c9c62d2587b54bcdb121e",
+    "c9208ba5dfd4c2082d4a39565ddc636a1c834260d8c06e463b7ae6eda01ae25a",
+    "cf629abe6cda38b1d3097b28ce4ebe9fcb1fd8afa1a5f72a21a340daac382c22",
+    "8c0e06e8a82f43a2bd3488a346ed0d242370eec70bcafae2c0f84705426e04f6",
+    "fcbde302c3d65f0cf595c360cd27b7f270c8052e85cdb623450293fc3c4041a2",
     "5c8dee673115738f06fbf2179b67786125f2d9113aab877c74bda15ae9237a06"
   ],
-  "outputContextHash": "ccb522246571a65ff8676b28724fcda57b7c73b0f65f5fe421ad6c0499b79953",
-  "reviewedAt": "2026-11-23T15:55:08.839Z",
+  "outputContextHash": "4fc3da60c079637648e24f10fb39bd25786cc32baf7fca1339c68a73e3c0cefa",
+  "reviewedAt": "2026-11-23T16:30:35.835Z",
   "reviewer": "Configured independent chapter reviewer"
 }
