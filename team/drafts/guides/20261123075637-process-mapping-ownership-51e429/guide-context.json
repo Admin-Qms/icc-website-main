@@ -28,7 +28,9 @@
     "Proposed owner",
     "Backup",
     "Worker",
-    "Assigned process owner"
+    "Assigned process owner",
+    "Receiving role",
+    "Map author"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -47,7 +49,9 @@
     "Draft responsibility statement",
     "Documented assignment record stating process, scope, assigned owner, decisions covered, and accepting person",
     "Interim arrangement record identifying who accepted it and what would trigger review",
-    "Decision record stating scope, people consulted, decision-maker, agreed assignment, and conditions"
+    "Decision record stating scope, people consulted, decision-maker, agreed assignment, and conditions",
+    "Validation record identifying map version, participants, sample, and decision",
+    "Review record identifying version examined, sample used, participants, and decisions remaining open"
   ],
   "example": {
     "label": "Illustrative example",
@@ -114,6 +118,20 @@
         "Determine who is authorized to resolve a conflicting ownership claim",
         "Decide when to examine assignments and which events warrant an earlier check",
         "Decide whether a single owner covers an agreed scope or whether local responsibilities need to be recorded separately"
+      ]
+    },
+    {
+      "slug": "mapping-workflows",
+      "title": "Map workflows and decisions: process mapping software for quality management",
+      "summary": "All four subsections cover map workflows and decisions within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. There are no unresolved findings from the previous review, and the changed paragraphs introduce no new problems. The page passes all checks.",
+      "bodyHash": "5ce32c13a9b292d7739e75ccc3029543a1645239a4dd84c37f178f9de48107a7",
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Decide whether the map should show current practice, an intended change, or an unresolved discrepancy",
+        "Decide whether another sample, a discussion, or escalation is needed before the map is accepted",
+        "Decide whether the draft is suitable for a limited purpose while an unresolved issue remains",
+        "Decide whether additional evidence is needed before accepting the map",
+        "Assign resolution owner for any unresolved boundary or exception"
       ]
     }
   ],

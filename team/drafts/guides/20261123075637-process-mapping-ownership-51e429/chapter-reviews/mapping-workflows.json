@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
+  "summary": "All four subsections cover map workflows and decisions within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. There are no unresolved findings from the previous review, and the changed paragraphs introduce no new problems. The page passes all checks.",
   "glossary": [],
   "roles": [
     "Process owner",
@@ -14,19 +14,21 @@
     "Floor supervisor",
     "Quality lead",
     "Supervisor",
-    "Worker"
+    "Receiving role",
+    "Worker",
+    "Map author"
   ],
   "recordNames": [
-    "Documented decision and its owner",
-    "Review record noting version, scope, participants, sample used, and decisions reached"
+    "Validation record identifying map version, participants, sample, and decision",
+    "Review record identifying version examined, sample used, participants, and decisions remaining open"
   ],
   "decisions": [
     "Determine ownership, acceptance and next action",
     "Decide whether the map should show current practice, an intended change, or an unresolved discrepancy",
-    "Decide whether additional evidence is needed before accepting the map",
-    "Decide whether a draft is suitable for a limited purpose while an issue remains open",
     "Decide whether another sample, a discussion, or escalation is needed before the map is accepted",
-    "Record the decision owner and an interim action where no route is agreed"
+    "Decide whether the draft is suitable for a limited purpose while an unresolved issue remains",
+    "Decide whether additional evidence is needed before accepting the map",
+    "Assign resolution owner for any unresolved boundary or exception"
   ],
   "pass": true,
   "deterministic": {
@@ -124,16 +126,16 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "c8ecb4b089e9145e843dd51a18a1e67992326341f8e1c48aa58e9424b2667e65",
-  "contentHash": "0b0e3645935623461dd18be6d130fa9296fdca32b2d5339d22aeec00ed9764e6",
+  "inputHash": "f8b74dcff837561df2970f0b7c19106ec8f4b7d09cb4f03977dec954b65652a5",
+  "contentHash": "44fea6e8995625f2a909ddc37c9608bed07f9570177f2e4d7abe70cb51aa3a55",
   "paragraphHashes": [
     "d8aa8eced6ecd41565081dc8ac296b86ca1c1c932ab91c924aaad28206a1b093",
     "67902617bf885111fea4a32170173e6209d25457b41b81f5e3f032b45b5801f6",
     "72bba05d2e191d15f284ed7bf29fea64b7d0f079121ec9cb641565dfcb7ef552",
-    "ec0adfcd9e1dd5f736effc83611fcfc15add290d228710d509c318646846d972",
+    "6577a030f35d3ce9b6fec2cd1606976b5ccf338e4200f368ab09d72dcbb1f069",
     "38ae535c644c92c5f104a2febed40055ecf581b80ed1015d46b77af182946bbe",
     "d5c1886aa258956d506bd74d578c010ca3c01b3d575c7797edb7a33bd794992e",
-    "92ddb642c909eab33b32505e349a939d582b51c88a32e55f6f7d4a23028dfb94",
+    "84481760f8cb5e4c7eb62bd4e2b8326e6bce5d91c628647ab2e3c874c5e53c1c",
     "e26f64369ee2fedd3a429f5e62df451dcf16bd2fe0253b3191b7d061857d90f5",
     "210352536ead3ed78884f7e912abe8f9598b3dda95a313cf3673956191a6e591",
     "665ff5d1275c29470fd1e725b28e885b080db7c3376fa273ffb7bbc1cfacb838",
@@ -142,7 +144,7 @@
     "699fd0a862a199fe08c14ae5165605fd4b7e8fa9b37fcff81156e00d91df1552",
     "f24ea3c01f2c3a07ad168c14999e9e99a1466481395ff412fb1a1b714a4e4c7f",
     "1654f640109778ac85085d5b05029bb98df58282dc957daf8ec6b380b1456e99",
-    "4f62638522ed50dd7bfe2b2f5c8f6cfaa4b3e1ca31911db322f88b08611bb410",
+    "14682a67ea93dc4bd234a3f16bfc8c878a5ca2e213e026bc07bc1825410ccba3",
     "f08f71869d087ace2984f9ed486f8ae7825f89d5dba009c72136ed538824eff4",
     "9f3fc27ae939616b7b28bedff71e7366524a0679e39055719fbbf8f1d0a84690",
     "749df13a443c61c8f35c52175e8f4b540b84c6737794ee1d6099d3b2c58a76a0",
@@ -151,7 +153,7 @@
     "37c4e0fd5bcc16dd01b6fa152a0a063281a4167928bb7cd3d0a7e9ece5e3b9ac",
     "76369158826512dd02fd9fb872f7b3e658cde398664db329fd15359c7bc18d2e",
     "ba319a629926d4fa7885ff87dff8ecd3393c3f6be12b908d79730f84253107fd",
-    "40c977367faa60201b75a54f1b26e4dab63bc18e71f1cb6bec59d6af34079711",
+    "a1ae47c8f94a4349d98c8cae283237831f0642e65c9ffb7f81b320c66ebbac79",
     "486dafe4fa78f5a892cbc6d00d64453952efa7395b4927ce9721299089b72b69",
     "540de109aad2a23668a1972f21c8647af7977c861eeac610ee624db5f3be30cf",
     "8ad47b6cf36b5995a88b26696b45edf827f1891d41d2cea9338654c372670d22",
@@ -159,11 +161,11 @@
     "1ed10fd0df3756314b8496692d2480756bdd3d92834cc61338f82470d6d8c50a",
     "f2c12f43743bb250dbcc19550d22fed8d10302910e398740368583d42ff65450",
     "a7f3a24440a4543a613093dca0617540c023f5286134225cf90c51d1cb566440",
-    "bb3ca51946452d2966751fda614e1abeb2709023d3f89dcc1852e1c7ace33b11",
-    "1659aa03c3731945d90cc8e0fde9bfccbcd54698caf6587d048878be5781a625",
+    "631113cfa3f4e12f0d9522093e42c87bd497555729727e0b2274898e1285e597",
+    "c7052b6d458e31d3170e5cfa9696f0bd7034864f7bf82c83832f0467c8d155e8",
     "6352099e04ade91fdaad8b888fd514b092c2028f033648aeade30d5d9c9122a5"
   ],
-  "outputContextHash": "6610e024cf0e1f9bf09320a914aa8cbde5c978b2343f2be47a1e54b2e2cd8fe3",
-  "reviewedAt": "2026-11-23T14:57:56.441Z",
+  "outputContextHash": "f4b44badab341ee49dc2febf9d1de3348a4c24484a928d224268ea5223aa13df",
+  "reviewedAt": "2026-11-23T15:17:17.747Z",
   "reviewer": "Configured independent chapter reviewer"
 }

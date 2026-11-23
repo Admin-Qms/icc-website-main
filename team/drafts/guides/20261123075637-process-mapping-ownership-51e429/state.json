@@ -65,11 +65,11 @@
       "checkpointedAt": "2026-11-23T15:15:49.209Z"
     },
     "mapping-workflows": {
-      "hash": "bc9a63e98bbe1c9724222e42fef2d7df968e10f78fdf79c5382f458d1164a6d8",
-      "wordCount": 2060,
+      "hash": "3ceae60b60fde560c8fcef4042c6ffd5764059882b3bb1bde41b6f16c9e3f2cc",
+      "wordCount": 2076,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-23T14:57:50.249Z"
+      "checkpointedAt": "2026-11-23T15:17:10.677Z"
     },
     "documents-and-evidence": {
       "hash": "89b2881a38dd81a0041712242ae063d575b3f47bc084fc65f255bb3a391b31b6",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T15:15:58.800Z",
+  "updatedAt": "2026-11-23T15:17:17.750Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -1418,7 +1418,7 @@
     "reviewedChapters": [],
     "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
   },
-  "contextHash": "4525b6bc746c6c866be2dd212dc670ae63d259b04e66a4b577e0cbfdcc615fec",
+  "contextHash": "f4b44badab341ee49dc2febf9d1de3348a4c24484a928d224268ea5223aa13df",
   "chapterReviews": {
     "mapping-current-processes": {
       "claims": "passed",
@@ -2111,6 +2111,177 @@
       ],
       "outputContextHash": "4525b6bc746c6c866be2dd212dc670ae63d259b04e66a4b577e0cbfdcc615fec",
       "reviewedAt": "2026-11-23T15:15:58.796Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "mapping-workflows": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All four subsections cover map workflows and decisions within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. There are no unresolved findings from the previous review, and the changed paragraphs introduce no new problems. The page passes all checks.",
+      "glossary": [],
+      "roles": [
+        "Process owner",
+        "Operator",
+        "Floor supervisor",
+        "Quality lead",
+        "Supervisor",
+        "Receiving role",
+        "Worker",
+        "Map author"
+      ],
+      "recordNames": [
+        "Validation record identifying map version, participants, sample, and decision",
+        "Review record identifying version examined, sample used, participants, and decisions remaining open"
+      ],
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Decide whether the map should show current practice, an intended change, or an unresolved discrepancy",
+        "Decide whether another sample, a discussion, or escalation is needed before the map is accepted",
+        "Decide whether the draft is suitable for a limited purpose while an unresolved issue remains",
+        "Decide whether additional evidence is needed before accepting the map",
+        "Assign resolution owner for any unresolved boundary or exception"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Gather task evidence",
+            "section": "Gather task evidence"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Gather task evidence; semantic review verifies support",
+            "section": "Gather task evidence"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Draw steps and decision points",
+            "section": "Draw steps and decision points"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Draw steps and decision points; semantic review verifies support",
+            "section": "Draw steps and decision points"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Describe exceptions and handoffs",
+            "section": "Describe exceptions and handoffs"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Describe exceptions and handoffs; semantic review verifies support",
+            "section": "Describe exceptions and handoffs"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Validate a map with workers",
+            "section": "Validate a map with workers"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Validate a map with workers; semantic review verifies support",
+            "section": "Validate a map with workers"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "f8b74dcff837561df2970f0b7c19106ec8f4b7d09cb4f03977dec954b65652a5",
+      "contentHash": "44fea6e8995625f2a909ddc37c9608bed07f9570177f2e4d7abe70cb51aa3a55",
+      "paragraphHashes": [
+        "d8aa8eced6ecd41565081dc8ac296b86ca1c1c932ab91c924aaad28206a1b093",
+        "67902617bf885111fea4a32170173e6209d25457b41b81f5e3f032b45b5801f6",
+        "72bba05d2e191d15f284ed7bf29fea64b7d0f079121ec9cb641565dfcb7ef552",
+        "6577a030f35d3ce9b6fec2cd1606976b5ccf338e4200f368ab09d72dcbb1f069",
+        "38ae535c644c92c5f104a2febed40055ecf581b80ed1015d46b77af182946bbe",
+        "d5c1886aa258956d506bd74d578c010ca3c01b3d575c7797edb7a33bd794992e",
+        "84481760f8cb5e4c7eb62bd4e2b8326e6bce5d91c628647ab2e3c874c5e53c1c",
+        "e26f64369ee2fedd3a429f5e62df451dcf16bd2fe0253b3191b7d061857d90f5",
+        "210352536ead3ed78884f7e912abe8f9598b3dda95a313cf3673956191a6e591",
+        "665ff5d1275c29470fd1e725b28e885b080db7c3376fa273ffb7bbc1cfacb838",
+        "354ae2ca3effdaeb03729fcf2aa64ec5e41af29b11ecaeef84606020286de592",
+        "f543328fd670358b16040d8cb76a11eecf875866213ad9676a14ca0bf26dcb94",
+        "699fd0a862a199fe08c14ae5165605fd4b7e8fa9b37fcff81156e00d91df1552",
+        "f24ea3c01f2c3a07ad168c14999e9e99a1466481395ff412fb1a1b714a4e4c7f",
+        "1654f640109778ac85085d5b05029bb98df58282dc957daf8ec6b380b1456e99",
+        "14682a67ea93dc4bd234a3f16bfc8c878a5ca2e213e026bc07bc1825410ccba3",
+        "f08f71869d087ace2984f9ed486f8ae7825f89d5dba009c72136ed538824eff4",
+        "9f3fc27ae939616b7b28bedff71e7366524a0679e39055719fbbf8f1d0a84690",
+        "749df13a443c61c8f35c52175e8f4b540b84c6737794ee1d6099d3b2c58a76a0",
+        "90ea2e33e7dc17bb3aea619dbd513301c2e45e919e50265d0b517ad1bc185a4c",
+        "21736b44582e8701293653d879def2d5bf3932a88ec9b88b4750a2447a9a0dec",
+        "37c4e0fd5bcc16dd01b6fa152a0a063281a4167928bb7cd3d0a7e9ece5e3b9ac",
+        "76369158826512dd02fd9fb872f7b3e658cde398664db329fd15359c7bc18d2e",
+        "ba319a629926d4fa7885ff87dff8ecd3393c3f6be12b908d79730f84253107fd",
+        "a1ae47c8f94a4349d98c8cae283237831f0642e65c9ffb7f81b320c66ebbac79",
+        "486dafe4fa78f5a892cbc6d00d64453952efa7395b4927ce9721299089b72b69",
+        "540de109aad2a23668a1972f21c8647af7977c861eeac610ee624db5f3be30cf",
+        "8ad47b6cf36b5995a88b26696b45edf827f1891d41d2cea9338654c372670d22",
+        "cd99b5fc84be1ea23b065992b194aa20e30a8f411537d4fcb98c72272508552a",
+        "1ed10fd0df3756314b8496692d2480756bdd3d92834cc61338f82470d6d8c50a",
+        "f2c12f43743bb250dbcc19550d22fed8d10302910e398740368583d42ff65450",
+        "a7f3a24440a4543a613093dca0617540c023f5286134225cf90c51d1cb566440",
+        "631113cfa3f4e12f0d9522093e42c87bd497555729727e0b2274898e1285e597",
+        "c7052b6d458e31d3170e5cfa9696f0bd7034864f7bf82c83832f0467c8d155e8",
+        "6352099e04ade91fdaad8b888fd514b092c2028f033648aeade30d5d9c9122a5"
+      ],
+      "outputContextHash": "f4b44badab341ee49dc2febf9d1de3348a4c24484a928d224268ea5223aa13df",
+      "reviewedAt": "2026-11-23T15:17:17.747Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
