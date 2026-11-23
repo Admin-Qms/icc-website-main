@@ -6,28 +6,42 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses its assigned workflow role (quality lead, process owners, operations manager), input (current process records and relevant evidence), decision (ownership, acceptance, next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership, unresolved relationships). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured plant outcome. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition.",
-  "glossary": [],
+  "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. Changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised, and no new problems are identified in the changed paragraphs. The page passes all checks.",
+  "glossary": [
+    {
+      "term": "Process architecture",
+      "definition": "A structure for grouping and relating an organization's processes so that readers can find work, understand relationships, and trace connections between overview and detail."
+    },
+    {
+      "term": "Top-level map",
+      "definition": "The entry point to a process architecture, showing agreed process groups and their relationships at a level of detail sufficient for a reader to find a process and identify adjacent processes without a presenter."
+    },
+    {
+      "term": "Interface",
+      "definition": "A represented relationship between two processes at the overview level, identifying what one process provides to another and who is accountable for an open issue on that connection."
+    }
+  ],
   "roles": [
     "Quality lead",
-    "Process owner",
     "Operations manager",
-    "Operator"
+    "Process owner",
+    "Operator",
+    "Test reader",
+    "Decision owner"
   ],
   "recordNames": [
     "Documented decision and its owner",
-    "Accepted overview with scope, reviewers, and outstanding exceptions"
+    "Accepted overview with scope, reviewers, and outstanding exceptions",
+    "Discrepancy record noting name or scope differences between levels",
+    "Open interface question with its decision owner"
   ],
   "decisions": [
-    "Determine whether a process belongs within the scope of the proposed architecture and record disputed entries with a resolution owner",
-    "Decide whether a process appearing in two groups is duplicated or serves more than one purpose",
-    "Record the agreed grouping conventions and what a connection means on the top-level map",
-    "Decide whether a shared process with local differences warrants a common entry with local details or separate entries",
-    "Record the accepted overview, its scope, the people who reviewed it, and outstanding exceptions",
-    "Decide whether a name or scope change between levels reflects a deliberate distinction or an error",
-    "Decide how the organization distinguishes shared, site-specific, and in-revision processes in its records",
-    "Decide how an interface should be represented and record agreement with any open questions and their decision owners",
-    "Mark unresolved relationships with a decision owner rather than presenting them as settled on the diagram"
+    "Determine which group owns a process that appears in more than one candidate group and mark the other entry as an interface",
+    "Decide whether a duplicated activity reflects a list error or a process that serves more than one purpose",
+    "Decide whether the top-level entry for a shared process refers to a common process with local details or requires separate entries",
+    "Decide whether a scope or name discrepancy between levels is a deliberate distinction or an error requiring correction",
+    "Decide whether an interface line on the overview adds useful information or should be removed",
+    "Assign a decision owner to any unresolved relationship before approving the overview"
   ],
   "pass": true,
   "deterministic": {
@@ -125,17 +139,17 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "596b0e3564a5087d1cfc671d73bfe99478f596623e5afd75167f27d61ef2d482",
-  "contentHash": "d2192ad711f11e5adc2b8761999fe728bd37132f95a73275439df9ed514c9514",
+  "inputHash": "1e95caaea6cc13acd89044daad9c537b81118fa436fe5e5ac01395035b0c06ab",
+  "contentHash": "5b885de2ebeba900baefc0c7e28255adc27c2ea8d3509bd7b15cae8a57a22520",
   "paragraphHashes": [
     "4174f3fe08495fc808f041cee728a1fe35ea809887e02f7ed094a8ca10fa6938",
     "d9441ae2a69cbb65f1a7a598d40382af803dfa0f727617dac27b2da1fca75dcf",
     "cac45eb35ba6c73aac963906242044824e13a13b3ed969c2d439839b5d6d7995",
-    "9a64ce5e9edd066ea3dc30de2a71bd8c104e3c593e045c377fa5aa48feb21bfa",
+    "975229b3632089788ca1b66ab352d6b02626d3b568dec5adbb22d3840e62a468",
     "17c6be76b8a798326dbc739b798adad9755f01efd5a1c1f184cab970c05d0461",
     "2aaa1477cf27140085ba0c2b3e4a258003150076624cc0899acbc3f3c56fba16",
-    "1e92689ab51d4fe4b5751c1d39d13bcc1e150de6191c84303d2f82e74ad27797",
-    "603703fca1b3e412edb0a210c9ee6b887322d609a14180c665255ffb4af6790c",
+    "70587ebfc62723cdf21cb9df63ac42dbfffed5cab7636d9999b07431dffa7f0c",
+    "a3243d9d4870a5b9f17625db3e20b04ecf0b0462976786b70a4d750f4a13fb8e",
     "38a3216e0f116776848d77a27488a1e01dcb4188b790b2b6d56303b721a05ed4",
     "9dc8fa46b3c6a745134c307b9d55d832ad0281cdc9ed6dd14764f0d47e777d35",
     "258d5e3f2657005e271e13dfabe6ae1be2c9984df21cb4ed3477558a65a6252c",
@@ -160,9 +174,9 @@
     "ae41c7759b56e5730a33053abf62ab6bffd747949e97ef9f9206908e519e8b4f",
     "86fee4c97af9f45bc23730280feb1239b0cd4b941952f283cbec4943822f03f4",
     "4b4f205a84e375412916bab584854b39c4614cfff6bd4648e91837742e0ac72e",
-    "64becf8ac227b44bfc521d2b95fdf46fdc7b5995184625a3fe72b9da6ff9dccf"
+    "8e6ee52b729e235fd7f933fd7af0d4a3f4c716da5e26464cdab496be630d9c4f"
   ],
-  "outputContextHash": "7a4c681046d266e891acb325eee8968dba7ebabc73637b939de3ea63fe85efe8",
-  "reviewedAt": "2026-11-23T14:06:11.675Z",
+  "outputContextHash": "78c09ae84899db837231a042eceb500fc682925d55a3d589025ac51980b29f3d",
+  "reviewedAt": "2026-11-23T14:54:53.423Z",
   "reviewer": "Configured independent chapter reviewer"
 }

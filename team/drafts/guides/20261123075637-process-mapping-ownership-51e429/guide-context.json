@@ -13,6 +13,18 @@
     {
       "term": "Handoff",
       "definition": "The point at which one role transfers an output to the next role, complete only when the receiving role has the information needed to act."
+    },
+    {
+      "term": "Process architecture",
+      "definition": "A structure for grouping and relating an organization's processes so that readers can find work, understand relationships, and trace connections between overview and detail."
+    },
+    {
+      "term": "Top-level map",
+      "definition": "The entry point to a process architecture, showing agreed process groups and their relationships at a level of detail sufficient for a reader to find a process and identify adjacent processes without a presenter."
+    },
+    {
+      "term": "Interface",
+      "definition": "A represented relationship between two processes at the overview level, identifying what one process provides to another and who is accountable for an open issue on that connection."
     }
   ],
   "roles": [
@@ -27,7 +39,8 @@
     "Supplier",
     "Presenter",
     "Test reader",
-    "Decision-maker"
+    "Decision-maker",
+    "Decision owner"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -36,7 +49,10 @@
     "Review record noting date, evidence examined, disagreements, and resolution owners",
     "Evaluation record",
     "Demonstration record",
-    "Comparison record"
+    "Comparison record",
+    "Accepted overview with scope, reviewers, and outstanding exceptions",
+    "Discrepancy record noting name or scope differences between levels",
+    "Open interface question with its decision owner"
   ],
   "example": {
     "label": "Illustrative example",
@@ -73,6 +89,20 @@
         "Decide whether available evidence supports a selection or whether further information is required",
         "Keep commercial and operational decisions separate in the record",
         "Determine cause before assigning a cause to an unavailable linked item"
+      ]
+    },
+    {
+      "slug": "process-architecture",
+      "title": "Design a process architecture: process mapping software for quality management",
+      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. Changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised, and no new problems are identified in the changed paragraphs. The page passes all checks.",
+      "bodyHash": "6db95509982ee9f1a891d8b691b0ff40c5407092b015775a0921b2090845105a",
+      "decisions": [
+        "Determine which group owns a process that appears in more than one candidate group and mark the other entry as an interface",
+        "Decide whether a duplicated activity reflects a list error or a process that serves more than one purpose",
+        "Decide whether the top-level entry for a shared process refers to a common process with local details or requires separate entries",
+        "Decide whether a scope or name discrepancy between levels is a deliberate distinction or an error requiring correction",
+        "Decide whether an interface line on the overview adds useful information or should be removed",
+        "Assign a decision owner to any unresolved relationship before approving the overview"
       ]
     }
   ],
