@@ -86,11 +86,11 @@
       "checkpointedAt": "2026-11-23T15:00:29.295Z"
     },
     "rollout-and-training": {
-      "hash": "db5872f76101c531b1a3188db060a5a285a0b5be6e24eb0cb288c4f1792a70ac",
-      "wordCount": 2052,
+      "hash": "dd33588b13bab2e0da97b9758624e093127831a6a3cd35ccae8cb4c8953f3c39",
+      "wordCount": 2066,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-23T14:31:02.202Z"
+      "checkpointedAt": "2026-11-23T15:01:53.424Z"
     },
     "ongoing-operation": {
       "hash": "9dc7e8d6840372192045273b47645924db6a663f913ec60f7cce147a0d27b7b3",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T15:00:40.939Z",
+  "updatedAt": "2026-11-23T15:02:02.005Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -1418,7 +1418,7 @@
     "reviewedChapters": [],
     "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
   },
-  "contextHash": "ae81fdfbf691650366460717a6eae334d0e3bff420648e1ba14aad7f7f6bda41",
+  "contextHash": "b88671a881490219340192ebf8eb9b7f8ee97a3f6618ca8dad88c601052aae13",
   "chapterReviews": {
     "mapping-current-processes": {
       "claims": "passed",
@@ -2669,6 +2669,178 @@
       ],
       "outputContextHash": "ae81fdfbf691650366460717a6eae334d0e3bff420648e1ba14aad7f7f6bda41",
       "reviewedAt": "2026-11-23T15:00:40.934Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "rollout-and-training": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, exceptions, and evaluation criteria. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
+      "glossary": [],
+      "roles": [
+        "Process owner",
+        "Quality lead",
+        "Operations manager",
+        "Operator",
+        "Supervisor"
+      ],
+      "recordNames": [
+        "Training record with scope, sample, roles involved, and open questions",
+        "Pilot acceptance decision record with scope and conditions",
+        "Staged rollout record with scope, training observations, unresolved items, decision-maker, and acceptance conditions",
+        "Feedback observation record with task, starting point, and observed result",
+        "Decision record with owner, interim guidance, and condition for closing"
+      ],
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Decide whether to proceed, run another targeted test, or pause based on pilot evidence",
+        "Decide whether to hold, narrow, or reverse a rollout stage when a critical question remains unanswered",
+        "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed",
+        "Record the decision on whether a remaining question is acceptable for a limited scope or must be resolved before proceeding"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Prepare role-based training",
+            "section": "Prepare role-based training"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Prepare role-based training; semantic review verifies support",
+            "section": "Prepare role-based training"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Pilot with representative users",
+            "section": "Pilot with representative users"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Pilot with representative users; semantic review verifies support",
+            "section": "Pilot with representative users"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Manage staged rollout",
+            "section": "Manage staged rollout"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Manage staged rollout; semantic review verifies support",
+            "section": "Manage staged rollout"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Evaluate use and feedback",
+            "section": "Evaluate use and feedback"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Evaluate use and feedback; semantic review verifies support",
+            "section": "Evaluate use and feedback"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "77a11c1392b140023437f55d973682d81b8744708ae451821006fb23a1985024",
+      "contentHash": "54dd556e762731ac699b542864ed06709a47d5ce49810fa1d9004907f1c11677",
+      "paragraphHashes": [
+        "8e244d287482d110baa1e880f0d50fb7809f734cc07752c79d25969d0826b2b9",
+        "4fd26f8f68f26f4e6b7dbc0d39e57f08f20e62f35a1a9d1b5b89eaedbca12c4d",
+        "ea5e5cda961aa454a876b85dac551bcb543653687f8950c012ffcbe950889613",
+        "a9a22785b6c3c9a0d86c6f30b79a1c70fce3bb747cceda88f49018d091bbb73b",
+        "1ede65876442cf357b43e4ec31ce8dc264f894255088ba477a3f3fa561fbb997",
+        "4e4e3ea3d33eb798db996506b4bf7b12a0402dbf5a6679cfe61a1d2b8180d113",
+        "f3231289ac30756f15fb801cb60e99475f8acbb2baef818bbeba58b8c69af22e",
+        "b901b1e67484250e7a2c16a5f0c8a3a05742200e018abbab8bfb58bdfeb8763c",
+        "1c917aef7042c51b6688a1ab72cc42fd25cd170c7c50bf9908523ece48350169",
+        "6e68bbc29fb75d740be4cbdda41e97aa9014651425ef98414926443e716257df",
+        "c46ba4e7b4405f9c070d73cbd6b6ca26c9e16ae543b083532beff5d69deb6a08",
+        "0853b2a9218581267b3776172f04709eb376fa44e79cdb465eba56363415925c",
+        "d7f645b662966de21c94d6615903068bcdd1541e05f660a19c8355a70c98c478",
+        "a3b12a3b555eb9adff3b203a74cc83894e5efe34c07a1af7deacc311447a8585",
+        "628f04d119bf0af0e3aaf7e9934eb18e4a35c9bd7bc0ce65d248cff1edf27666",
+        "03ffbb6a90627ae53933af408f1accc7b98d123691503a81406564f7acce368f",
+        "ec2c6ba74f532ebadd1f607ffce2a75944498a18e40249dd46619e3eca8dc981",
+        "fc791565f3f80198f0def86130d00b732f1b73ce6fa10bfe8b5d8b19ce0870fc",
+        "ff1afe178167e2b82ff912c7cbfb5a3d451119e57655c2d2ecb04a88f5787923",
+        "844e548f35ecd01e835d8f05cdd4b29cb6f0f6b2a716164be9eeefadd4882ac4",
+        "24268a004621c87b515ea989647d88f5f04e5b42d9015ac0c9c1b36a7b63bf7f",
+        "9a89ca0379c8b96b3b65a63ce60896ed8dabb7a9bc3057e3a55c6d5298113efa",
+        "c912a240d72f85ba4561fa7773375d09f927262602634d31f8de4f36fc5b4b7f",
+        "da78b54af36f08d8164a51be6bd82f2867ef01edd793a1cb648921cffbcf33d7",
+        "37b6caaf93a8dcfab9c4e531c9f119d6ec5421cbd2945d4a91d0c220e4872757",
+        "9aa48d4ae86da972bff44bc36b5389042f95fa8d366dbf1626411ab38660bf15",
+        "40bc06a00da3e58cee7358d373c5524bb2d5f619e4d75211fd498d0018a3e14d",
+        "2e72437fb3cce8207df5c6b4502314789b0113b3276c4a6b8759ce236ca59b79",
+        "b5f3482661cb5c7e3d53f7eb29dc0cb44cf65e6bf23ee490b35f7e4bc2e53cf8",
+        "1912e91a7f1be7f85b82596075a9d930ce998f41857a3723d479a079e613de8c",
+        "e77f92569963ae93aa60d4d0cfe32cf2dc82b4ba4360fbd122e7857b44f8290d",
+        "7db32477c110898a7c67e9694959ab62562a9a4347820314881574c82b8d0fde",
+        "ad0e87e8f8b1c5ac179275c22c02d13ba138d3be9c22f99010e6071fc00c4e95",
+        "0b78dc2036c8b8686a547b8ee045cf7932aa5bb739aaed953eba17eaba4c70da",
+        "e700247f6faf5828feb2eaa69a93d2ca46b27a6c125bd438dfdc4b1ac8a2e957",
+        "f099bc4599ed10c287a30f464ae6f1c35e68d5751aa0c6ef356fcb9022b68762",
+        "ddf6de72eb2cfe0acd15c7dcb655c7fc718c6ff13b26b43f85e44cc6784404a1"
+      ],
+      "outputContextHash": "b88671a881490219340192ebf8eb9b7f8ee97a3f6618ca8dad88c601052aae13",
+      "reviewedAt": "2026-11-23T15:02:02.003Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

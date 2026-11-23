@@ -6,33 +6,28 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition across sections.",
+  "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, exceptions, and evaluation criteria. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
   "glossary": [],
   "roles": [
     "Process owner",
     "Quality lead",
     "Operations manager",
-    "Supervisor",
-    "Operator"
+    "Operator",
+    "Supervisor"
   ],
   "recordNames": [
     "Training record with scope, sample, roles involved, and open questions",
-    "Pilot acceptance decision identifying reviewers, checks performed, discrepancies, and conditions for proceeding",
-    "Staged rollout record retaining scope, training observations, unresolved items, decision-maker, and acceptance conditions",
-    "Feedback record identifying task, starting point, and observed result"
+    "Pilot acceptance decision record with scope and conditions",
+    "Staged rollout record with scope, training observations, unresolved items, decision-maker, and acceptance conditions",
+    "Feedback observation record with task, starting point, and observed result",
+    "Decision record with owner, interim guidance, and condition for closing"
   ],
   "decisions": [
     "Determine ownership, acceptance and next action",
-    "Identify the decisions each role is expected to make and where questions go when the answer is unclear",
-    "Decide whether a hypothetical or sanitized record is more appropriate than a real production record for a demonstration",
-    "Distinguish participation from the outcome of the task before marking an exercise complete",
-    "Agree on the pilot scope and acceptance questions in advance",
-    "Record conditions that could not be tested as unknown and assign someone to obtain the missing evidence",
-    "Decide whether the pilot provides enough evidence to proceed, needs another targeted test, or should pause while an issue is resolved",
-    "Define the processes and roles included in each stage and identify the person who can authorize the next one",
-    "Decide whether a remaining question is acceptable for a limited scope and record the limitation",
-    "Hold, narrow, or reverse a stage when a critical question remains unanswered",
-    "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed"
+    "Decide whether to proceed, run another targeted test, or pause based on pilot evidence",
+    "Decide whether to hold, narrow, or reverse a rollout stage when a critical question remains unanswered",
+    "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed",
+    "Record the decision on whether a remaining question is acceptable for a limited scope or must be resolved before proceeding"
   ],
   "pass": true,
   "deterministic": {
@@ -130,16 +125,16 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "5c86c45d8f59c0283315f8a7c45f869449a0550b36fa89ed1007f1000c5aeaa8",
-  "contentHash": "6d68a579a81a3cedf4330b5862c7ec06c6bf9a95e7b555f4dcb58432b5891f4b",
+  "inputHash": "77a11c1392b140023437f55d973682d81b8744708ae451821006fb23a1985024",
+  "contentHash": "54dd556e762731ac699b542864ed06709a47d5ce49810fa1d9004907f1c11677",
   "paragraphHashes": [
     "8e244d287482d110baa1e880f0d50fb7809f734cc07752c79d25969d0826b2b9",
     "4fd26f8f68f26f4e6b7dbc0d39e57f08f20e62f35a1a9d1b5b89eaedbca12c4d",
-    "2a03e0715d0e2228bbf8eba28ca1aef8acc55c1845a4ee4d082345d23d254d67",
+    "ea5e5cda961aa454a876b85dac551bcb543653687f8950c012ffcbe950889613",
     "a9a22785b6c3c9a0d86c6f30b79a1c70fce3bb747cceda88f49018d091bbb73b",
     "1ede65876442cf357b43e4ec31ce8dc264f894255088ba477a3f3fa561fbb997",
-    "3deb7db3ba14d57c23bebeba09396be0fbc0c6700f72a97fe01f4244ab36ccd3",
-    "d45281ca4cba6bfa57cff6c8f9e958f453475f9be6065e00ca14f75433994151",
+    "4e4e3ea3d33eb798db996506b4bf7b12a0402dbf5a6679cfe61a1d2b8180d113",
+    "f3231289ac30756f15fb801cb60e99475f8acbb2baef818bbeba58b8c69af22e",
     "b901b1e67484250e7a2c16a5f0c8a3a05742200e018abbab8bfb58bdfeb8763c",
     "1c917aef7042c51b6688a1ab72cc42fd25cd170c7c50bf9908523ece48350169",
     "6e68bbc29fb75d740be4cbdda41e97aa9014651425ef98414926443e716257df",
@@ -169,9 +164,9 @@
     "0b78dc2036c8b8686a547b8ee045cf7932aa5bb739aaed953eba17eaba4c70da",
     "e700247f6faf5828feb2eaa69a93d2ca46b27a6c125bd438dfdc4b1ac8a2e957",
     "f099bc4599ed10c287a30f464ae6f1c35e68d5751aa0c6ef356fcb9022b68762",
-    "5cef7fe7a19597765e5e472927db0cc3da7b53b6a8458024b726e11fd7712073"
+    "ddf6de72eb2cfe0acd15c7dcb655c7fc718c6ff13b26b43f85e44cc6784404a1"
   ],
-  "outputContextHash": "3341ec48dc7924c29ce62d396d0b47f51a1a18f5adffaf18f0b7fd361e1e92db",
-  "reviewedAt": "2026-11-23T14:31:15.280Z",
+  "outputContextHash": "b88671a881490219340192ebf8eb9b7f8ee97a3f6618ca8dad88c601052aae13",
+  "reviewedAt": "2026-11-23T15:02:02.003Z",
   "reviewer": "Configured independent chapter reviewer"
 }

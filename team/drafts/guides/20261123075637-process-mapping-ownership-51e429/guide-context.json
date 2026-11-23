@@ -87,7 +87,12 @@
     "Migration inventory",
     "Preparation record",
     "Pilot acceptance decision record",
-    "Recovery instructions"
+    "Recovery instructions",
+    "Training record with scope, sample, roles involved, and open questions",
+    "Pilot acceptance decision record with scope and conditions",
+    "Staged rollout record with scope, training observations, unresolved items, decision-maker, and acceptance conditions",
+    "Feedback observation record with task, starting point, and observed result",
+    "Decision record with owner, interim guidance, and condition for closing"
   ],
   "example": {
     "label": "Illustrative example",
@@ -204,6 +209,19 @@
         "Decide whether a pilot finding requires updating the preparation plan",
         "Decide whether a transition must wait if a readiness question is unknown",
         "Decide whether an excluded item requires an interim route before cutover"
+      ]
+    },
+    {
+      "slug": "rollout-and-training",
+      "title": "Train teams and roll out: process mapping software for quality management",
+      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, exceptions, and evaluation criteria. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
+      "bodyHash": "9f5429d2bc8cb51d8a3f49d68d9dbf71705bdab54d29d33daca72a5b98c67b1d",
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Decide whether to proceed, run another targeted test, or pause based on pilot evidence",
+        "Decide whether to hold, narrow, or reverse a rollout stage when a critical question remains unanswered",
+        "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed",
+        "Record the decision on whether a remaining question is acceptable for a limited scope or must be resolved before proceeding"
       ]
     }
   ],
