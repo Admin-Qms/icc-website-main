@@ -1,0 +1,21 @@
+{
+  "status": "nonauthoritative QA trace",
+  "canonical_initial_prompt": "managed image request",
+  "edit_instruction": "Edit this exact photograph. Add muted safety-orange high-visibility vests to every visible worker who lacks one, keeping their existing workwear, safety glasses and gloves. Remove all readable or simulated text and labels from papers and equipment, leaving any paper blank. Preserve the central worker, machinery, industrial setting, pose, lighting, palette, and full wide framing. Do not add logos or signage.",
+  "artifacts": [
+    {
+      "role": "initial",
+      "tool_id": "exec-e72e575b-e01e-47ce-9163-33cda415a82b",
+      "source": "/workspace/generated_images/exec-e72e575b-e01e-47ce-9163-33cda415a82b.png",
+      "sha256": "993f49b03390639b7d4295f27891796e7d4c247c00bd0ce1d9e4e39e92855000",
+      "qa_file": "team/reports/guides/20261123075637-process-mapping-ownership-51e429/visual-qa/mapping-current-processes-initial.png"
+    },
+    {
+      "role": "edited",
+      "tool_id": "exec-3049060c-7687-428a-8472-a46bc5aaa36e",
+      "source": "/workspace/generated_images/exec-3049060c-7687-428a-8472-a46bc5aaa36e.png",
+      "sha256": "97c52c5f8e3db6613190ef6a007cc7b02cba086d972d9ec5492e491412433e5a",
+      "qa_file": "team/reports/guides/20261123075637-process-mapping-ownership-51e429/visual-qa/mapping-current-processes-edited.png"
+    }
+  ]
+}
