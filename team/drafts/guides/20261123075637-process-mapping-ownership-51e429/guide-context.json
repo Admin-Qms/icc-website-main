@@ -29,7 +29,11 @@
     "Supplier",
     "Decision owner",
     "New team member",
-    "Reader"
+    "Reader",
+    "Proposed owner",
+    "Worker",
+    "Backup",
+    "Production process owner"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -45,7 +49,12 @@
     "Accepted overview with scope and participants",
     "Outstanding exceptions with decision owner",
     "Discrepancy record",
-    "Open question with decision owner"
+    "Open question with decision owner",
+    "Accepted responsibility statement",
+    "Draft responsibility statement",
+    "Assignment record",
+    "Interim arrangement record",
+    "Decision record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -97,6 +106,21 @@
         "Decide how to distinguish shared, site-specific, or in-revision processes in the organization's records",
         "Record agreement on interface and identify open questions with their decision owners",
         "Decide whether to retain or remove a connecting line that adds no useful information"
+      ]
+    },
+    {
+      "slug": "process-ownership",
+      "title": "Assign process owners: process mapping software for quality management",
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ISO APG link with appropriate hedging, correctly attributing it as educational material on evidence collection; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. Both cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
+      "bodyHash": "876daaa463cec52c9d1c2e3fc206a00123126c0c2e67c3cf5faab68a802ca676",
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Determine which decisions a backup may handle, which require consultation, and which must wait for another authorized person",
+        "Identify the person authorized to decide a conflicting assignment",
+        "Decide whether to defer or escalate decisions during an owner absence",
+        "Decide when to examine assignments and which events warrant an earlier check",
+        "Decide how to address a gap in backup access or knowledge",
+        "Update applicable information through the organization's normal controls after an authorized decision is made"
       ]
     }
   ],

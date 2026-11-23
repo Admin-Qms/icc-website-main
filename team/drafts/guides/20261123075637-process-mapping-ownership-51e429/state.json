@@ -58,11 +58,11 @@
       "checkpointedAt": "2026-11-23T15:46:51.891Z"
     },
     "process-ownership": {
-      "hash": "4a69f7a6d581e3d1cb8b0bb202a4b4977cfb5d081bdc76005813d0b659161ad1",
-      "wordCount": 2020,
+      "hash": "3634fd0da6ab882a39222c70cbdc843b4423b95d89c77925823dd53d8c0b71a9",
+      "wordCount": 2022,
       "readTime": 11,
-      "status": "changed",
-      "checkpointedAt": "2026-11-23T15:15:49.209Z"
+      "status": "written",
+      "checkpointedAt": "2026-11-23T15:48:14.991Z"
     },
     "mapping-workflows": {
       "hash": "3ceae60b60fde560c8fcef4042c6ffd5764059882b3bb1bde41b6f16c9e3f2cc",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T15:47:02.871Z",
+  "updatedAt": "2026-11-23T15:48:23.505Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -1418,7 +1418,7 @@
     "reviewedChapters": [],
     "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
   },
-  "contextHash": "dc83c06112244f7ca087a597be98d655a72a4b83c73d5c7c5a3c3b69f4d7d286",
+  "contextHash": "f1a5da1879648b0eeace109b2103c6da1aeb9e496a00047552da70989936df09",
   "chapterReviews": {
     "mapping-current-processes": {
       "claims": "passed",
@@ -2007,6 +2007,181 @@
       ],
       "outputContextHash": "dc83c06112244f7ca087a597be98d655a72a4b83c73d5c7c5a3c3b69f4d7d286",
       "reviewedAt": "2026-11-23T15:47:02.867Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "process-ownership": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ISO APG link with appropriate hedging, correctly attributing it as educational material on evidence collection; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. Both cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
+      "glossary": [],
+      "roles": [
+        "Proposed owner",
+        "Operations manager",
+        "Worker",
+        "Quality lead",
+        "Backup",
+        "Production process owner",
+        "Floor supervisor"
+      ],
+      "recordNames": [
+        "Accepted responsibility statement",
+        "Draft responsibility statement",
+        "Documented decision and its owner",
+        "Assignment record",
+        "Interim arrangement record",
+        "Decision record"
+      ],
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Determine which decisions a backup may handle, which require consultation, and which must wait for another authorized person",
+        "Identify the person authorized to decide a conflicting assignment",
+        "Decide whether to defer or escalate decisions during an owner absence",
+        "Decide when to examine assignments and which events warrant an earlier check",
+        "Decide how to address a gap in backup access or knowledge",
+        "Update applicable information through the organization's normal controls after an authorized decision is made"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Define owner responsibilities",
+            "section": "Define owner responsibilities"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Define owner responsibilities; semantic review verifies support",
+            "section": "Define owner responsibilities"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Assign decisions and backups",
+            "section": "Assign decisions and backups"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Assign decisions and backups; semantic review verifies support",
+            "section": "Assign decisions and backups"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Resolve ownership conflicts",
+            "section": "Resolve ownership conflicts"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Resolve ownership conflicts; semantic review verifies support",
+            "section": "Resolve ownership conflicts"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Review ownership over time",
+            "section": "Review ownership over time"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Review ownership over time; semantic review verifies support",
+            "section": "Review ownership over time"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "4044e894071b436a6ba3f238a316896a693b9a5e40c174c6e155e237f6ef46f3",
+      "contentHash": "d5ef124473e833f2e7d89708feb732fd5f1424d0f484f259e203b7afa63bb07b",
+      "paragraphHashes": [
+        "243f2c99e4392af54e3a52acbc9d30b987be1507644c7597596ed2ccdbf15667",
+        "5f43f4ed44ead2fdc65eb38ca3a4c2962dffcc6738783fec377b88c58dd0cea6",
+        "082303579e9b0f6149401a190b3021ae1d31a247807e7e436c30f689c2abdc31",
+        "073d4e5e7208fafceffa94f75176eae1325f37ca34280d6f68b6c2ca132cb14f",
+        "3cf5a905b446730a0b8f4c7cd338d4ae5216610e71fd8d5a1f15de356f3c2760",
+        "db7b8583f0f45273ab472afaad077e7302c5ab486367dfc4bd768ac1639d9ed2",
+        "6c8c2e33c150ab03002bbdbe2d850d1c1714e787d328002fe7b89e8197f5207f",
+        "2632a5793734a1c211770cc1e9779e189e6bd31084d10f00b38f4241c960034b",
+        "21d642499df0d1728f900dffe8121cf36d9cb1da98e0eeaf9b085f59e2c9a26f",
+        "5bcef05071ece1f6b0176b525a4605b5f484df7852ee267c7c9112f9ff16c206",
+        "fad889f7334b2e8b966e158d5f187645c7a11bc4c6e02fa7a3cc0187a3287092",
+        "7c0c38026a47c495b232627bc2f10ca4f34f060d318dd44e03d6a99cf99c3fcd",
+        "ca305bbb649f20930d6de2376dc2f48c874d4240a1e93424b7caa66c8b9d5be7",
+        "b7365a4667bf69928b03604ca313daffc566cd7dfee46ed8a4cccb67b272037a",
+        "9847bb61ea873c22be77ed528e224146793289e54b7ae51ffe8950444926e518",
+        "d2bd4471f23aa99fea63be583dc86cf0f7787fb68e0917473546d1a0d27dac2f",
+        "090f691b0b8140a4598a905232c7cf31ce18d23996dc9d3db4fd2a3befc22ffd",
+        "812392f0aaaba735de5133093cbd0653c97606cd8d5ba5ff18d196d78551900d",
+        "73a15a6557eedc5f9f07084acfc2ef52d39eb9e91aaedee3b3de57f48b06bc11",
+        "a030ac4fca61107cf93579a37f6c6bbc64f6c5aaaf7fa6e174e6861fd64c0899",
+        "d0fe0a58b23ea9e9ce391396d335509a5ddd08bbe0cd8fa29caf5b5b8faedffa",
+        "92e389ddda93aa957f3a59d6963c4efca20c729bec02f914f90884b3de53c06e",
+        "177588ee7dc8b54e654ecbf30cf91abdf207d2b1c523f25fc4c5dc8108c6cbb3",
+        "138cd8c63b8b87bfdec424bb72f776ae7ed621bcc25de9bf3bc51e9a8e1bc23e",
+        "49edc18be373403f107e75a7e43653efb168bf96818809f17ee6004f09cc2424",
+        "22418464bdee57923eaaf084309db9363d58570f8cb3abb756517df72c531270",
+        "34629600b23280d40e59d0837db4d3e45bd20720f534d6fc3b26725ead593f46",
+        "450da5dea9e597e68a0c2f2f879c0be82e90f4ba19d2921cff49652874e3c067",
+        "4c13246debc06085357db62446ccae502d6ecb509b8623667cdf287559f13d19",
+        "d31aa8d7f0b66fe0ea1bbbbe57bc404ff6d47aceacfc0c0d7cccc1e6c3d51b47",
+        "1a103f2d859a34fca4de0dba1e814db8bfe888c28f21ce788fd526480d830685",
+        "3d186faa2173ce49fad7431855750e44fe43f1bbea030a08e2bcdbf69d321773",
+        "495d7d9db089ec9d6009105e08bc47445e74ddf2b57cfcafd4da87e8ee39be48",
+        "9da0e8ab3950577de58ccb6e0e0fee4a58008d2ead1650ec915276296f276a73",
+        "eb88703633b146e76fda9ab564c89191131316b3a13471c67b618297e91d63aa"
+      ],
+      "outputContextHash": "f1a5da1879648b0eeace109b2103c6da1aeb9e496a00047552da70989936df09",
+      "reviewedAt": "2026-11-23T15:48:23.502Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

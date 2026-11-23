@@ -6,33 +6,33 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections cover assign process owners within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. There are no unresolved findings from the previous review, and the changed paragraphs introduce no new problems. The page passes all checks.",
+  "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ISO APG link with appropriate hedging, correctly attributing it as educational material on evidence collection; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. Both cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
   "glossary": [],
   "roles": [
     "Proposed owner",
-    "Backup",
     "Operations manager",
     "Worker",
     "Quality lead",
-    "Floor supervisor",
-    "Assigned process owner"
+    "Backup",
+    "Production process owner",
+    "Floor supervisor"
   ],
   "recordNames": [
-    "Documented decision and its owner",
-    "Local decision record identifying scope and person accepting the role",
+    "Accepted responsibility statement",
     "Draft responsibility statement",
-    "Documented assignment record stating process, scope, assigned owner, decisions covered, and accepting person",
-    "Interim arrangement record identifying who accepted it and what would trigger review",
-    "Decision record stating scope, people consulted, decision-maker, agreed assignment, and conditions"
+    "Documented decision and its owner",
+    "Assignment record",
+    "Interim arrangement record",
+    "Decision record"
   ],
   "decisions": [
     "Determine ownership, acceptance and next action",
-    "Decide which decisions a backup may handle, which require consultation, and which must wait for another authorized person",
-    "Decide the distinction between a brief absence allowing deferral and a time-sensitive issue requiring immediate escalation",
-    "Decide the agreed escalation route for cross-process changes",
-    "Determine who is authorized to resolve a conflicting ownership claim",
+    "Determine which decisions a backup may handle, which require consultation, and which must wait for another authorized person",
+    "Identify the person authorized to decide a conflicting assignment",
+    "Decide whether to defer or escalate decisions during an owner absence",
     "Decide when to examine assignments and which events warrant an earlier check",
-    "Decide whether a single owner covers an agreed scope or whether local responsibilities need to be recorded separately"
+    "Decide how to address a gap in backup access or knowledge",
+    "Update applicable information through the organization's normal controls after an authorized decision is made"
   ],
   "pass": true,
   "deterministic": {
@@ -130,8 +130,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "ee84b7caf54806c18f2029a36cd90cf2f26283d4c46582fc7fe54d7446d6e6df",
-  "contentHash": "f4021d718f3de3cf6dbfb6b5f4c144a688e959fc38e5d9f646f9c3fbad178f6d",
+  "inputHash": "4044e894071b436a6ba3f238a316896a693b9a5e40c174c6e155e237f6ef46f3",
+  "contentHash": "d5ef124473e833f2e7d89708feb732fd5f1424d0f484f259e203b7afa63bb07b",
   "paragraphHashes": [
     "243f2c99e4392af54e3a52acbc9d30b987be1507644c7597596ed2ccdbf15667",
     "5f43f4ed44ead2fdc65eb38ca3a4c2962dffcc6738783fec377b88c58dd0cea6",
@@ -139,7 +139,7 @@
     "073d4e5e7208fafceffa94f75176eae1325f37ca34280d6f68b6c2ca132cb14f",
     "3cf5a905b446730a0b8f4c7cd338d4ae5216610e71fd8d5a1f15de356f3c2760",
     "db7b8583f0f45273ab472afaad077e7302c5ab486367dfc4bd768ac1639d9ed2",
-    "39866c8e02c6cd99d2e6fc189faa4e5f5537f315e352885476e5f2cb484705c6",
+    "6c8c2e33c150ab03002bbdbe2d850d1c1714e787d328002fe7b89e8197f5207f",
     "2632a5793734a1c211770cc1e9779e189e6bd31084d10f00b38f4241c960034b",
     "21d642499df0d1728f900dffe8121cf36d9cb1da98e0eeaf9b085f59e2c9a26f",
     "5bcef05071ece1f6b0176b525a4605b5f484df7852ee267c7c9112f9ff16c206",
@@ -169,7 +169,7 @@
     "9da0e8ab3950577de58ccb6e0e0fee4a58008d2ead1650ec915276296f276a73",
     "eb88703633b146e76fda9ab564c89191131316b3a13471c67b618297e91d63aa"
   ],
-  "outputContextHash": "4525b6bc746c6c866be2dd212dc670ae63d259b04e66a4b577e0cbfdcc615fec",
-  "reviewedAt": "2026-11-23T15:15:58.796Z",
+  "outputContextHash": "f1a5da1879648b0eeace109b2103c6da1aeb9e496a00047552da70989936df09",
+  "reviewedAt": "2026-11-23T15:48:23.502Z",
   "reviewer": "Configured independent chapter reviewer"
 }
