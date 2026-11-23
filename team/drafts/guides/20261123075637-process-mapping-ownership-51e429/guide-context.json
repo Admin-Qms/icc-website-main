@@ -23,7 +23,10 @@
     "Quality lead",
     "Receiving role",
     "Reviewer",
-    "Resolution owner"
+    "Resolution owner",
+    "Operations manager",
+    "Test reader",
+    "Supplier"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -31,7 +34,11 @@
     "Representative request or schedule",
     "Current role assignments and actual handoffs",
     "Vendor statements or demonstrated behavior",
-    "Date, evidence examined, disagreements found, and resolution owner"
+    "Date, evidence examined, disagreements found, and resolution owner",
+    "Demonstration record",
+    "Evaluation record",
+    "Access demonstration record",
+    "Comparison record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -54,6 +61,18 @@
         "Record whether vendor behavior was shown, described, or left unanswered",
         "Assign a resolution owner for any unresolved escalation route",
         "Decide who can view, propose, review, and release a change to a map"
+      ]
+    },
+    {
+      "slug": "evaluating-process-software",
+      "title": "Evaluate process mapping software: process mapping software for quality management",
+      "summary": "All six quality dimensions pass. Claims are appropriately hedged against vendor source descriptions and ISO APG educational guidance. The page stays within its assigned scope across all four subsections. Prose is readable and non-repetitive. All cited URLs are either supplied research source URLs or the permitted internal site path. No FAQ section appears, correctly, as none is assigned. The single changed paragraph introduces the ISO APG link with appropriate hedging and correctly attributes the source; no earlier findings were raised, and no new problems appear in the changed paragraph.",
+      "bodyHash": "bbd4397b3ec18ec1e84d93135057d837c9b421843366551815498a9241ac8d5c",
+      "decisions": [
+        "Decide which level of map detail answers the test question",
+        "Decide whether an unanswered access question prevents a fair comparison of two approaches",
+        "Decide whether available evidence supports a selection or whether further information is required",
+        "Decide what consequence a gap has for the intended use"
       ]
     }
   ],

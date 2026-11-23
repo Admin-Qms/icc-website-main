@@ -6,26 +6,25 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections cover evaluate process mapping software within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. The changed paragraphs introduce no new problems, and there are no unresolved findings from the previous review. The page passes all checks.",
+  "summary": "All six quality dimensions pass. Claims are appropriately hedged against vendor source descriptions and ISO APG educational guidance. The page stays within its assigned scope across all four subsections. Prose is readable and non-repetitive. All cited URLs are either supplied research source URLs or the permitted internal site path. No FAQ section appears, correctly, as none is assigned. The single changed paragraph introduces the ISO APG link with appropriate hedging and correctly attributes the source; no earlier findings were raised, and no new problems appear in the changed paragraph.",
   "glossary": [],
   "roles": [
-    "Process owner",
-    "Operator",
     "Quality lead",
-    "Operations manager"
+    "Operations manager",
+    "Test reader",
+    "Supplier"
   ],
   "recordNames": [
     "Demonstration record",
     "Evaluation record",
+    "Access demonstration record",
     "Comparison record"
   ],
   "decisions": [
-    "Determine which criteria are requirements versus preferences before the evaluation session",
-    "Record whether each demonstrated outcome was shown or remains open",
-    "Assign a responsible person for each unanswered question before selection",
+    "Decide which level of map detail answers the test question",
+    "Decide whether an unanswered access question prevents a fair comparison of two approaches",
     "Decide whether available evidence supports a selection or whether further information is required",
-    "Record any supplier commitment with its scope, responsible party, and confirmation conditions",
-    "Decide what consequence a gap has for the intended use before accepting or rejecting an option"
+    "Decide what consequence a gap has for the intended use"
   ],
   "pass": true,
   "deterministic": {
@@ -123,8 +122,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "23a572d3273540e3d85ac9f01cf83f19f1b4566a733b2bd7606609a6bf5cb17b",
-  "contentHash": "4abab185b2847afa3ce31842d0c3466dc77f92b14be16ac2d9fbecbb26f525ec",
+  "inputHash": "fa646bc43917b67a71c89ed69d32df011582bbed3c6fa979d4ccb0c8ce6234a9",
+  "contentHash": "d08c636adecc3806135cb6b641cbcf9abf93360f9e9798e0ec3087556d796496",
   "paragraphHashes": [
     "05812d5ff246bd7ad664b512dbeac0eebf4869f9311e3234bfcf8fa1bef427b6",
     "55deaeec376025ac41b1c86c4b746cb396a63b3f8a02a8a5874f80ffb5782f0a",
@@ -133,7 +132,7 @@
     "d3d1d25b535d52c925d85351737538df6f9fe367912648672186f2d75f3e57f1",
     "2b8fac29e955f998f6e0f3139d9bf0ec9c497d29351aed4d8aaba5c5765513f4",
     "734c4f1b8d53e8d784bbaa2f872a145fc1523a90c0913d0c9d79da432a213c54",
-    "ca01e1309b14661320b16bdd8c8cdd568fd62c03e74b27946f07b6772da93656",
+    "f806d94224791c1ab9da3a34ac020dd826241fa69bd3b4c67c7a1235f20348c6",
     "5fdc1ae2d34b20346ea833bda6cd542a076955be3ae9aa3c93ce57eb65964cf8",
     "fd8146a442e194983a6382bd9b1526a0d3f42ffa14d0a52199000f38e32a258d",
     "2176801827cb74ead8a1ccbae43413a6ce316a6fd07ef758629b121dc4b0c2bd",
@@ -159,7 +158,7 @@
     "18c484157ba06d6868ce590928deb357124382c4c6eec55e5b05eacfbdd33429",
     "33cdf26073d7601e645521d08196db2d94958e4d0fbb3b8237a4ceb505b14808"
   ],
-  "outputContextHash": "8ba4ec15e165d8c79c93e501bddd74d05903349e0b4fb982d032c464f36954a3",
-  "reviewedAt": "2026-11-23T15:13:17.839Z",
+  "outputContextHash": "792d7d94218eae542dd14bd02212b1126a5fe1d48ea0d0b80e170b8b8719f4ea",
+  "reviewedAt": "2026-11-23T15:45:43.349Z",
   "reviewer": "Configured independent chapter reviewer"
 }
