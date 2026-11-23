@@ -47,56 +47,56 @@
       "hash": "fd6ce1b32f37f6ce630c7d1bfa91afc521b7436a502008e62b56323a8260b3f0",
       "wordCount": 2010,
       "readTime": 11,
-      "status": "written",
+      "status": "changed",
       "checkpointedAt": "2026-11-23T15:13:09.978Z"
     },
     "process-architecture": {
       "hash": "37839a1107d33a8d8021736da220064978d99517e5d923efc83c82473bcc106b",
       "wordCount": 2003,
       "readTime": 11,
-      "status": "written",
+      "status": "changed",
       "checkpointedAt": "2026-11-23T15:14:26.854Z"
     },
     "process-ownership": {
       "hash": "4a69f7a6d581e3d1cb8b0bb202a4b4977cfb5d081bdc76005813d0b659161ad1",
       "wordCount": 2020,
       "readTime": 11,
-      "status": "written",
+      "status": "changed",
       "checkpointedAt": "2026-11-23T15:15:49.209Z"
     },
     "mapping-workflows": {
       "hash": "3ceae60b60fde560c8fcef4042c6ffd5764059882b3bb1bde41b6f16c9e3f2cc",
       "wordCount": 2076,
       "readTime": 11,
-      "status": "written",
+      "status": "changed",
       "checkpointedAt": "2026-11-23T15:17:10.677Z"
     },
     "documents-and-evidence": {
       "hash": "03c27985769b1000b9fea2e6f7aeca9098c36082e5e3c8078b207e515560cc3b",
       "wordCount": 2077,
       "readTime": 11,
-      "status": "written",
+      "status": "changed",
       "checkpointedAt": "2026-11-23T15:18:28.790Z"
     },
     "migration-and-configuration": {
       "hash": "99f76fabfa939ed9d1a6a4dc3dfe1b803d1fab89ed85f24e299e952f503beb90",
       "wordCount": 2053,
       "readTime": 11,
-      "status": "written",
+      "status": "changed",
       "checkpointedAt": "2026-11-23T15:19:48.470Z"
     },
     "rollout-and-training": {
       "hash": "ade2a48ea7a4741423950fb470b4658aa76007dff4244006cb54e8e4e0671365",
       "wordCount": 2062,
       "readTime": 11,
-      "status": "written",
+      "status": "changed",
       "checkpointedAt": "2026-11-23T15:21:09.938Z"
     },
     "ongoing-operation": {
       "hash": "ea154577365738348c6798c3cda2656569cb0305c2e77084c91b10beb28a3a46",
       "wordCount": 2026,
       "readTime": 11,
-      "status": "written",
+      "status": "changed",
       "checkpointedAt": "2026-11-23T15:22:37.694Z"
     },
     "process-mapping-software-for-quality-management": {
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T15:29:41.925Z",
+  "updatedAt": "2026-11-23T15:36:03.319Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
