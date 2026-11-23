@@ -25,7 +25,7 @@ capabilityIds: []
 
 A rollout works better when people can practice the tasks they will actually perform. Start with the accepted process scope and identify the readers, process owners, supervisors, and quality staff who will use the information. The process owner can explain the workflow; the quality lead can prepare representative records; and the operations manager can help make time for the people who need to participate. The training plan should identify the decisions each role is expected to make and where questions go when the answer is unclear.
 
-The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes deployment and training among its configuration activities. Ask which support is proposed for the intended users, then write a separate task for each role: locate an instruction, handle a missing input, or raise a map question. The published description does not establish the content or outcome of a particular site's training.
+Build an exercise around the decisions each role will make. The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) includes deployment and training in its published activities; agree separately on what support is proposed for the site. Ask an operator to find an instruction, a supervisor to follow an exception, and the owner to receive an unresolved question.
 
 Build training around a representative process rather than a tour of every screen. An operator may need to find the instruction applicable to a step, while a process owner may need to explain how a disputed map is reviewed. A supervisor may need to identify the next decision when information is missing. Each exercise should start with a realistic question and end with an observable answer or an identified escalation route.
 
@@ -33,11 +33,11 @@ Use a suitable sample that participants are allowed to see. The process owner sh
 
 The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational material on evidence and states that its guidance is not definitive or mandatory audit criteria. For a training exercise, record the participant's starting point and the task completed; attendance alone cannot show whether that person could find the appropriate information without help.
 
-**Illustrative example:** In a hypothetical training session, an operator can find the production map but cannot open the example instruction. The supervisor repeats the task under the same role conditions and records the point of failure. The process owner assigns an access investigation before the exercise is considered complete, rather than treating the session attendance as a successful test.
+**Illustrative example:** During a hypothetical rehearsal, an operator locates the production map but cannot open its instruction. The supervisor repeats the route under the same access conditions and notes the failure. Assign an access investigation, give the participant an agreed interim source, and repeat that task before using attendance as evidence of readiness.
 
 Define what a participant should be able to do before deciding how to judge the session. A useful observation might be that the person can find the correct process, explain the next step, and identify whom to contact when a record is missing. If the person needs help, record where the explanation or access arrangement was unclear. Attendance by itself does not show that the intended task can be performed.
 
-Keep a training record with the scope, sample, roles involved, and open questions under the organization's controls. If a participant cannot access the exercise or the sample conflicts with the current process, identify an owner for the next decision. Do not mark the exercise complete simply because the session ended; distinguish participation from the outcome of the task.
+The trainer should distinguish attendance from the participant’s task outcome. Record the scope, sample, roles, and open questions; if access fails or the example conflicts with the current process, assign the next decision. Repeat the affected exercise after the issue is resolved before judging that role ready for the next stage.
 
 ## Pilot with representative users
 
@@ -49,7 +49,7 @@ Agree on the pilot's scope and acceptance questions in advance. A participant mi
 
 Represent the range of work that matters to the decision. If the process differs across sites, a pilot at one site may not establish that the same explanation works at another. If a role has different access from the presenter, test the route using an appropriate account or equivalent demonstration. Where a condition cannot be tested, record it as unknown and decide who will obtain the missing evidence.
 
-For the illustrative manufacturer, the operator uses a hypothetical production example without the map author's guidance. The supervisor then follows an exception route, and the process owner compares both explanations with the agreed workflow. The quality lead notes an ambiguous label and assigns a person to clarify it. The sample is hypothetical; the observation does not claim a measured improvement at an actual plant.
+**Illustrative example:** During a hypothetical user pilot, the operator uses a hypothetical production example without the map author's guidance. The supervisor then follows an exception route, and the process owner compares both explanations with the agreed workflow. The quality lead notes an ambiguous label and assigns a person to clarify it. Clarify the ambiguous label and repeat the affected pilot task before assessing the reader’s route.
 
 Feedback should identify the task and the point at which the reader became uncertain. "The map is confusing" is a useful signal, but it does not by itself tell the owner whether the label, the process explanation, or access to a linked document needs attention. Ask the participant what they expected to find and what they saw. Retain that distinction when recording the follow-up decision.
 
@@ -67,7 +67,7 @@ Make the intended source of information clear for each stage. Participants need 
 
 Before expanding, review the evidence from the previous stage. Check whether representative users completed the intended tasks, whether important access questions were resolved, and whether the process owner accepted the relevant map. A remaining question may be acceptable for a limited scope if the authorized person understands and records the limitation. It should not be hidden in a general statement that the rollout is complete.
 
-For the hypothetical manufacturer, the operations manager proposes starting with the production workflow used in the pilot. The process owner confirms the intended scope, the quality lead lists the outstanding label question, and the supervisor explains which workers need the information. The team records who may authorize expansion and what evidence that person expects. The example is a possible planning discussion, not evidence of a real deployment.
+**Illustrative example:** For a hypothetical staged rollout, the operations manager proposes starting with the production workflow used in the pilot. The process owner confirms the intended scope, the quality lead lists the outstanding label question, and the supervisor explains which workers need the information. The team records who may authorize expansion and what evidence that person expects. The authorization decision should state the group included and the evidence required before expansion.
 
 Decide how issues will be raised during the stage. A worker who cannot find a current instruction needs an agreed contact and a way to describe the task attempted. The receiving person should determine the next action and record any decision that affects the process. Do not assume that a software system automatically routes or resolves the issue; ask how the proposed arrangement supports the organization's chosen process.
 
@@ -85,7 +85,7 @@ Use concrete prompts: What task were you trying to complete? Where did you begin
 
 Choose an appropriate sample of roles and situations rather than relying solely on the people who designed the rollout. Include someone who uses the process infrequently when that perspective matters. If feedback covers only one shift or location, record that limitation. A lack of reported problems is not proof that every intended user has been reached or that every route works.
 
-For the illustrative manufacturer, an operator reports difficulty locating a hypothetical instruction from the production workflow. The supervisor repeats the route with the same sample, and the quality lead records the starting point and observed result. The process owner decides whether the next action is to clarify a label, investigate access, or seek more evidence. The example does not claim a particular feature or actual customer result.
+**Illustrative example:** When hypothetical feedback arrives, an operator reports difficulty locating a hypothetical instruction from the production workflow. The supervisor repeats the route with the same sample, and the quality lead records the starting point and observed result. The process owner decides whether the next action is to clarify a label, investigate access, or seek more evidence. Investigate the observed route under the same access conditions before choosing a training or configuration response.
 
 When feedback conflicts, preserve the different observations and compare the conditions. Two readers may have different roles, access, or process scopes. The owner should determine whether the difference is expected and whether additional explanation is needed. If the evidence is insufficient, assign a follow-up rather than declaring one account incorrect.
 

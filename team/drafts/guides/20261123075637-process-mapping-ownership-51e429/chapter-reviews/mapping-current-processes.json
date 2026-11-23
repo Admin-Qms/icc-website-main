@@ -6,38 +6,40 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. Changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative example. No unassigned FAQ sections appear. No previous findings were raised. The page passes all checks.",
+  "summary": "All four subsections cover map current processes within the assigned scope, correctly attribute vendor descriptions and ISO APG guidance, include workflow elements (roles, inputs, decisions, records, exceptions), provide the required illustrative example, and use the two permitted source URLs appropriately. No FAQ sections are present, which is correct as none are assigned. No unresolved findings from the previous review exist, and the changed paragraphs introduce no new problems. The page passes all checks.",
   "glossary": [
     {
       "term": "Process boundary",
-      "definition": "An agreed statement of where mapped work starts and ends, naming the triggering event, the output, and the recipient, without implying that work outside the boundary is unimportant."
+      "definition": "An agreed statement of where mapped work starts and ends, identifying the inputs received, outputs handed off, and decisions for which the owner is responsible."
     },
     {
       "term": "Handoff",
-      "definition": "The point at which one role transfers an output to the next role, complete only when the receiving role has the information needed to act."
+      "definition": "The transfer of an output from one role or process to a receiving role, considered complete only when the receiver has what it needs to act."
     }
   ],
   "roles": [
     "Process owner",
-    "Quality lead",
-    "Operations manager",
     "Supervisor",
-    "Floor supervisor"
+    "Quality lead",
+    "Floor supervisor",
+    "Vendor"
   ],
   "recordNames": [
     "Documented decision and its owner",
-    "Completed process map with boundary record",
-    "Vendor statement or demonstrated behavior record",
+    "Map including what it includes, excludes, and the decisions it supports",
+    "Completed process record or physical output",
+    "Vendor statements or demonstrated behavior record",
     "Review record noting date, evidence examined, disagreements, and resolution owners"
   ],
   "decisions": [
-    "Agree on the mapping purpose before selecting symbols or opening a drawing tool",
-    "Determine which workflow to examine and record that choice with the map",
+    "Determine ownership, acceptance and next action for the mapping purpose",
     "Resolve disagreement on mapping purpose before treating the map as a basis for a software decision",
-    "Decide whether a site difference belongs on a common map, in a linked local instruction, or in a separate process",
-    "Record whether each vendor behavior was shown, described, or left unanswered",
-    "Assign a resolution owner for any unresolved exception or boundary",
-    "Decide who can view, propose, review, and release a change to a process map"
+    "Decide which workflow to examine and record that choice with the map",
+    "Determine whether a boundary difference belongs on a common map, a linked local instruction, or a separate process",
+    "Decide whether a process, instruction, or role assignment needs correction when written procedure differs from actual records",
+    "Decide whether the boundary or the actual handoff needs clarification when inspection evidence arrives after release",
+    "Assign a resolution owner for any unresolved escalation route",
+    "Decide who can view, propose, review, and release a map change and how those decisions are recorded"
   ],
   "pass": true,
   "deterministic": {
@@ -135,17 +137,17 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "e54f3077b19cdfe93250b633d6c4481aa0702669f044f007b8a877207959c583",
-  "contentHash": "7457a8f53c0778c8dc434b7ab95a9b461a3835fc45ea0c93a1f069d29096aa16",
+  "inputHash": "da049cfc658d661ff8000811b99cba40c50dab10d84b5f02aafa281737674b24",
+  "contentHash": "0624a85f97525b3081780b7a863cc0599084b4f0f4578ee7d16bb72f43d4ecbb",
   "paragraphHashes": [
     "f03b8f70e7e42732e660db0849712ed5a4eb924a80a990869cde6c04a2e6d20f",
-    "66937798e5ad3e50dae9f8165b4ac69bd685ee5151703069f619f86c88a19b85",
+    "cf7f495b6334b9dfdb166ff124698ac0932aac0ca7a3341d320e8c7766ba6d8c",
     "c9fd75fd2bd93c254cfccf457bc0234f3c129aa66f5c23d56b31330d3fd921a2",
     "f69f22b93eb1f8db354d8e66cd6aa9010caf01045e87d3a1576866390b8829f1",
-    "277f73af1591e8a46c858cccfcdf7c64916cad73df70782635d11ae6be940549",
+    "84ed006ae5d7cd40a7a4aaf8a7920ca9d6e74f55427ba089fce06372b1ee8423",
     "9cdd89f25ebfc080170ee0a5a31060c404370c2452eed7750204cedaf7a8585a",
-    "653aca5baa64b8333582b5786cb942e0dcf72229ac3a332175de32f0ce3a3441",
-    "c29a2da831f5a5ff0841fc749da94b4677a4066a555285944cda1e827ac4532f",
+    "3cedc5189cdade2da18582aa279e41b1e31f86fe99306332ccf880123e08a360",
+    "b870fc2e2ddfdea49d29c38eefc17e3efbaf30fbdc4fd248bc2fe1ef82427cea",
     "bf770e5a454349af2ebafcb92aa675456a531ee9d54f1358ebbbbeedfa7b29da",
     "05a567e0bc51bf0ca3a75b4b8439cc3421eab2bc98d0257a947b9d2a14fee871",
     "4e77897fab3192e70752a063eace167858ba2487ebcdff028f8cdb399524e7c4",
@@ -173,7 +175,7 @@
     "7935d39e3ae4d6494a9e448a30beeda17f72fc246eb4c9be286a57eec3872ca8",
     "748900ca7641aca70e0f13ba39892bb1d7c427e70cdab2104eac31e1ded55a7e"
   ],
-  "outputContextHash": "ebcf70c47914cd9a7dc8a3c3e043824d2d46fff65a52a5cea2d94f9ece1bc722",
-  "reviewedAt": "2026-11-23T14:49:58.035Z",
+  "outputContextHash": "ab1faf70b87074bf295406bdbcf9f9c7e1935435e51ef1389d6c80076afc8d21",
+  "reviewedAt": "2026-11-23T15:11:57.794Z",
   "reviewer": "Configured independent chapter reviewer"
 }

@@ -33,7 +33,7 @@ The input to the evaluation should include a current map or draft, an example re
 
 Separate a requirement from a preference. A requirement describes an outcome the organization has decided it needs, such as finding an applicable instruction from a process view. A preference might describe how the link should appear. Both can matter, but the evaluation record should show which decision each item supports and who authorized it. That distinction gives the team a way to compare alternatives without assuming that every attractive screen addresses a real problem.
 
-For a comparison, the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes an overview, flowcharts, owners, and controlled-document links. Select one sample and ask the presenter to show a reader moving from its overview entry to the applicable instruction. In the evaluation record, separate the demonstrated route from an access rule that was only described; the published page does not establish that rule for a particular installation.
+Use the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) to select an overview and a controlled-document link for a comparison. Give both presenters the same sample and ask the test reader to locate the applicable instruction. Record the number of prompts needed as an observation for that exercise, along with any access condition; the vendor's page does not confirm a site's configuration.
 
 Agree on a small set of observable outcomes before the session. For each one, name a user, a starting point, and an output the user should be able to find or verify. Include an exception: a missing document, an unclear owner, or a record that belongs to another process. If the demonstration cannot cover that exception, record it as open rather than marking the criterion satisfied by inference. A practical evaluation can use the following prompts:
 
@@ -44,7 +44,7 @@ Agree on a small set of observable outcomes before the session. For each one, na
 
 The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) supplies educational material for an evidence question: what would the reviewer need to see to verify the sample's route? Its guidance is not definitive or mandatory audit criteria. Record the evidence actually observed and assess applicable requirements separately; a selection decision does not establish conformity.
 
-**Illustrative example:** In a hypothetical comparison, an operator is asked to locate the receiving role for an incomplete production record in two proposed views. The owner records the expected answer before either demonstration; the quality lead notes where the operator needs coaching. A view that requires an unexplained prompt receives a follow-up question rather than an automatic passing mark.
+**Illustrative example:** Compare two hypothetical views of the same incomplete production record. In the first, the receiving role is visible from the overview; in the second, the reader must open a separate detail. The process owner states the expected answer beforehand and the quality lead records the route, including any coaching. Decide which representation supports the agreed task rather than treating appearance as the result.
 
 ## Compare maps and flowcharts
 
@@ -58,7 +58,7 @@ The process owner should also consider the amount of detail. An overview that sh
 
 Compare the way the sample represents interfaces as well as activities. A reader should be able to tell what output is passed and which role receives it, or see that the information is not yet agreed. Ask how the team would recognize an unresolved interface during preparation of a map. Do not treat a diagram as evidence that the actual handoff works; the operational team still needs to examine its own records and practice.
 
-For the hypothetical manufacturer's production workflow, the operator can be given the same starting point in each proposed presentation and asked to locate the next recipient of an output. The process owner compares the answer with the agreed sample, and the quality lead records discrepancies. A disagreement about the sample itself is not a software failure: resolve the sample with the people responsible for the work, then decide whether another demonstration is needed.
+**Illustrative example:** For a hypothetical side-by-side test, the operator can be given the same starting point in each proposed presentation and asked to locate the next recipient of an output. The process owner compares the answer with the agreed sample, and the quality lead records discrepancies. A disagreement about the sample itself is not a software failure: resolve the sample with the people responsible for the work, then decide whether another demonstration is needed.
 
 ## Test ownership and access
 
@@ -72,7 +72,7 @@ Include an exception in the test. For example, ask what happens when a person ca
 
 An access demonstration should also distinguish viewing a map from changing it. Ask who can propose a change, who can review it, and how a reader identifies the applicable information. Do not assume that a proposed workflow, automatic notification, or approval mechanism exists. If a supplier describes an arrangement, ask which parts are standard, which depend on configuration, and which require further confirmation. Record those qualifications alongside the answer.
 
-For the illustrative manufacturer, the process owner can select a sample instruction that the operator is authorized to use. The operator tries to reach it from the process view, while the quality lead notes whether the route was demonstrated and what information was unavailable. If a second role must verify a proposed change, the team asks to see that separate action. The test produces an observation about the sample; it is not proof of every future access arrangement.
+**Illustrative example:** Consider the hypothetical access test: the process owner can select a sample instruction that the operator is authorized to use. The operator tries to reach it from the process view, while the quality lead notes whether the route was demonstrated and what information was unavailable. If a second role must verify a proposed change, the team asks to see that separate action. Verify that each proposed view is tested with the same role and starting point before comparing access.
 
 ## Document gaps and commitments
 
@@ -86,7 +86,7 @@ Keep commercial and operational decisions separate. A supplier may offer a confi
 
 When evidence conflicts, preserve both observations and identify the next action. A presenter may describe a route that differs from what a test user observed. Record the test conditions, ask for clarification, and avoid choosing the more favorable statement without explanation. If the sample was incomplete, note that limitation. If the answer is still unknown, the decision remains open until the authorized person decides how to proceed.
 
-For the hypothetical manufacturer, the quality lead compiles the demonstration record and reviews it with the process owner and operations manager. The record shows which sample tasks were completed, which questions were answered only in discussion, and which exceptions still need testing. The owner then decides whether the available evidence supports a selection or whether further information is required. That decision belongs to the organization, not to the demonstration itself.
+**Illustrative example:** At the hypothetical comparison meeting, the quality lead compiles the demonstration record and reviews it with the process owner and operations manager. The record shows which sample tasks were completed, which questions were answered only in discussion, and which exceptions still need testing. The owner then decides whether the available evidence supports a selection or whether further information is required. That decision belongs to the organization, not to the demonstration itself.
 
 Before comparing the answers, check whether both presenters used the same sample and whether the test reader had the intended access. If the conditions differed, record that limitation alongside the result.
 

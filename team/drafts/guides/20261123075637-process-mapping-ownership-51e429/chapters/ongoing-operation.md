@@ -29,7 +29,7 @@ capabilityIds: []
 
 A process map remains useful only if the organization knows when its explanation needs another look. A change in a role, an instruction, a process boundary, or an interface can affect what the map tells a reader. The process owner should decide which changes require review, who needs to contribute, and how an unresolved question will be recorded. The goal is not to redraw the entire architecture after every event; it is to examine the part of the map whose meaning may have changed.
 
-The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes owners, flowcharts, and controlled-document links. When an instruction changes, list the affected process step and ask its owner whether the decision or recipient also changes. The vendor's description does not establish automatic change detection; the organization must identify how the issue reaches the person who can decide.
+When an instruction changes, identify the affected step and decide whether the recipient or decision also changes. The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes owners, flowcharts, and document links. The organization should agree how the change reaches the responsible owner; automatic detection has not been established.
 
 Start with the change and a representative process record. The process owner can ask the people who perform the work what is different, while the quality lead identifies the current map and related information. Compare the agreed scope, decision points, and handoffs with the changed work. If the change affects another process, include the person who can explain that interface. Record the decision and its owner, including any question that cannot yet be resolved.
 
@@ -37,7 +37,7 @@ A proposed change and an accepted change are different inputs. If an instruction
 
 The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) includes educational material on improvement and states that its guidance is not definitive or mandatory audit criteria. In a map review, ask which record shows the changed handoff and who accepted the explanation. If neither can be identified, retain that gap as an open decision instead of treating a diagram update as evidence of agreement.
 
-**Illustrative example:** A hypothetical production handoff changes because the receiving role needs a different record field. The operator marks the affected step; the supervisor checks the sample; and the process owner decides whether the map's destination remains accurate. The quality lead records the unresolved field until the receiving role confirms what it needs.
+**Illustrative example:** Triage a hypothetical production change in three entries: the receiving role needs a different field; the existing map names the old field; and the updated instruction is not yet accepted. The owner assigns a check to the receiving role and records an interim route. Once the instruction is accepted, a worker traces the changed handoff before the issue is closed.
 
 If the relevant record is unavailable or ownership of the decision is disputed, document the limitation and the person responsible for resolving it. Agree on any interim instruction through the organization's normal controls. A map that still looks complete can conceal an open question, so make the status visible to the people who rely on it. Once a change is accepted, ask an affected reader to follow the revised route and explain what happens next.
 
@@ -51,11 +51,11 @@ Agree on a question before choosing a measure. A team may want to know whether d
 
 Use the measure to support a decision, not as a substitute for examining the underlying work. A short review interval may hide a rushed decision; an older open question may be waiting for necessary evidence. Ask the responsible person what the record shows and what it does not show. Where the sample is incomplete, record that limitation instead of extrapolating to the whole organization.
 
-For the illustrative manufacturer, the quality lead reviews a hypothetical set of map-change records with the process owner. They check whether each identifies a decision-maker and whether an unresolved handoff has a next action. One record lacks the evidence used to accept a change, so the owner assigns follow-up. The example illustrates a review question and makes no claim about measured customer performance.
+**Illustrative example:** To inspect hypothetical change records, the quality lead reviews a hypothetical set of map-change records with the process owner. They check whether each identifies a decision-maker and whether an unresolved handoff has a next action. One record lacks the evidence used to accept a change, so the owner assigns follow-up. The missing acceptance evidence needs a named follow-up before that review record can be closed.
 
 When feedback indicates a recurring problem, examine representative examples before choosing a remedy. A missing decision owner might reflect an unclear process boundary, an incomplete record, or an unavailable person. The team should decide which explanation is supported and record the action and owner. If the evidence does not distinguish the causes, obtain more information rather than assigning blame or changing the map on an assumption.
 
-Review the selected questions when the process changes. A measure that helped during rollout may no longer answer the current decision. Keep the definition, scope, sample, observations, and resulting decision together under the organization's controls. The purpose is to make the next review more informed and to show what remains uncertain, not to produce a score for its own sake.
+When the process changes, ask whether each selected measure still informs a decision. The owner should use the defined scope, sample, and observations to decide whether to retain or replace the question. Record uncertainty in that decision; a score that cannot guide follow-up is not a useful result for the next review.
 
 ## Frequently asked questions
 
@@ -103,7 +103,7 @@ The [ICC process management description](https://isocertificationconsultants.ca/
 
 Prepare an exception as well as the normal route. A reader might need to identify the next decision when an instruction cannot be opened, or the owner might need to explain what happens when two people disagree about a handoff. Ask the presenter to show the proposed response using a suitable test environment. If the scenario cannot be shown, record the reason and the person who will obtain the answer rather than treating the feature as present.
 
-For the illustrative manufacturer, the process owner brings a hypothetical production map and the quality lead supplies a sample question about a changed instruction. An operator follows the route while the supervisor checks whether the next responsible role is clear. The team records the observed route, the explanation provided, and an open access question. This is a hypothetical evaluation, not a claim about an installed system.
+**Illustrative example:** For a hypothetical supplier demonstration, the process owner brings a hypothetical production map and the quality lead supplies a sample question about a changed instruction. An operator follows the route while the supervisor checks whether the next responsible role is clear. The team records the observed route, the explanation provided, and an open access question. The access question should remain open until the intended reader can test the demonstrated route.
 
 At the end of the session, compare the observations with the agreed criteria. Separate a demonstrated outcome from a verbal commitment, an organizational task, and an unresolved question. Name the person who can accept a limitation or request more evidence. If the result depends on configuration, make that condition explicit in the decision record and confirm what will be checked before relying on it.
 

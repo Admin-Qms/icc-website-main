@@ -8,98 +8,28 @@
     },
     {
       "term": "Process boundary",
-      "definition": "An agreed statement of where mapped work starts and ends, naming the triggering event, the output, and the recipient, without implying that work outside the boundary is unimportant."
+      "definition": "An agreed statement of where mapped work starts and ends, identifying the inputs received, outputs handed off, and decisions for which the owner is responsible."
     },
     {
       "term": "Handoff",
-      "definition": "The point at which one role transfers an output to the next role, complete only when the receiving role has the information needed to act."
-    },
-    {
-      "term": "Process architecture",
-      "definition": "A structure for grouping and relating an organization's processes so that readers can find work, understand relationships, and trace connections between overview and detail."
-    },
-    {
-      "term": "Top-level map",
-      "definition": "The entry point to a process architecture, showing agreed process groups and their relationships at a level of detail sufficient for a reader to find a process and identify adjacent processes without a presenter."
-    },
-    {
-      "term": "Interface",
-      "definition": "A represented relationship between two processes at the overview level, identifying what one process provides to another and who is accountable for an open issue on that connection."
-    },
-    {
-      "term": "Pilot",
-      "definition": "A controlled test of a small representative sample of selected maps and decisions, performed before committing to a full migration, with agreed acceptance criteria and retained evidence."
-    },
-    {
-      "term": "Cutover",
-      "definition": "The organizational decision to rely on the new arrangement for an agreed scope, made after reviewing pilot results, open discrepancies, and a tested recovery route."
-    },
-    {
-      "term": "Preparation record",
-      "definition": "A document identifying the source file, intended scope, expected relationships, permitted sample, known limitations, and the person who will accept or escalate the result."
-    },
-    {
-      "term": "Migration inventory",
-      "definition": "A structured list of candidate process maps, each with its purpose, scope, source location, format, acceptance owner, and status, used to guide selection and decisions before a pilot."
+      "definition": "The transfer of an output from one role or process to a receiving role, considered complete only when the receiver has what it needs to act."
     }
   ],
   "roles": [
     "Quality owner",
     "Process owner",
     "Operator",
-    "Quality lead",
-    "Operations manager",
     "Supervisor",
+    "Quality lead",
     "Floor supervisor",
-    "Quality and operations team",
-    "Supplier",
-    "Presenter",
-    "Test reader",
-    "Decision-maker",
-    "Decision owner",
-    "Assigned process owner",
-    "Backup",
-    "Worker",
-    "Reviewer",
-    "Responsible person",
-    "Normal reader",
-    "Authorizing person",
-    "Representative user",
-    "Affected reader"
+    "Vendor"
   ],
   "recordNames": [
     "Documented decision and its owner",
-    "Completed process map with boundary record",
-    "Vendor statement or demonstrated behavior record",
-    "Review record noting date, evidence examined, disagreements, and resolution owners",
-    "Evaluation record",
-    "Demonstration record",
-    "Comparison record",
-    "Accepted overview with scope, reviewers, and outstanding exceptions",
-    "Discrepancy record noting name or scope differences between levels",
-    "Open interface question with its decision owner",
-    "Local decision record identifying scope and person accepting the role",
-    "Responsibility statement",
-    "Interim arrangement record with responsible person",
-    "Decision record stating scope, people consulted, decision-maker, agreed assignment, and conditions",
-    "Review record noting version, scope, participants, sample used, and decisions reached",
-    "Review record capturing step, sample, intended reader, and observed result",
-    "Change record connecting the decision to the process and affected destination",
-    "Traceability review record identifying process scope, sample, participants, observations, and conditions on acceptance",
-    "Migration inventory",
-    "Preparation record",
-    "Pilot acceptance decision record",
-    "Recovery instructions",
-    "Training record with scope, sample, roles involved, and open questions",
-    "Pilot acceptance decision record with scope and conditions",
-    "Staged rollout record with scope, training observations, unresolved items, decision-maker, and acceptance conditions",
-    "Feedback observation record with task, starting point, and observed result",
-    "Decision record with owner, interim guidance, and condition for closing",
-    "Map-change record",
-    "Open decision record",
-    "Interim instruction record",
-    "Review record",
-    "Record identifying process scope, people consulted, evidence examined, and next decision"
+    "Map including what it includes, excludes, and the decisions it supports",
+    "Completed process record or physical output",
+    "Vendor statements or demonstrated behavior record",
+    "Review record noting date, evidence examined, disagreements, and resolution owners"
   ],
   "example": {
     "label": "Illustrative example",
@@ -109,157 +39,17 @@
     {
       "slug": "mapping-current-processes",
       "title": "Map current processes: process mapping software for quality management",
-      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. Changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative example. No unassigned FAQ sections appear. No previous findings were raised. The page passes all checks.",
-      "bodyHash": "cb507d1b5f561194804a068c23ddb4c43ca86c7ff29dc19a6dceae3fe1f23137",
+      "summary": "All four subsections cover map current processes within the assigned scope, correctly attribute vendor descriptions and ISO APG guidance, include workflow elements (roles, inputs, decisions, records, exceptions), provide the required illustrative example, and use the two permitted source URLs appropriately. No FAQ sections are present, which is correct as none are assigned. No unresolved findings from the previous review exist, and the changed paragraphs introduce no new problems. The page passes all checks.",
+      "bodyHash": "c0d7e7991ae98a7ff38fbc8ee78a4bbee04989ca8c77d87e2c187f910c2fec2a",
       "decisions": [
-        "Agree on the mapping purpose before selecting symbols or opening a drawing tool",
-        "Determine which workflow to examine and record that choice with the map",
+        "Determine ownership, acceptance and next action for the mapping purpose",
         "Resolve disagreement on mapping purpose before treating the map as a basis for a software decision",
-        "Decide whether a site difference belongs on a common map, in a linked local instruction, or in a separate process",
-        "Record whether each vendor behavior was shown, described, or left unanswered",
-        "Assign a resolution owner for any unresolved exception or boundary",
-        "Decide who can view, propose, review, and release a change to a process map"
-      ]
-    },
-    {
-      "slug": "evaluating-process-software",
-      "title": "Evaluate process mapping software: process mapping software for quality management",
-      "summary": "All four subsections cover assigned workflow roles, inputs, decisions, records, and exceptions. Changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised, and no new problems are identified in the changed paragraphs. The page passes all checks.",
-      "bodyHash": "79693fc7d2ee4c88b29bb8794be0e68acfdd38c28f5149fd7f9dd376f367dce9",
-      "decisions": [
-        "Name the decision the quality and operations team must make before beginning evaluation",
-        "Agree on what the team will test and who will judge the result",
-        "Separate requirements from preferences in the evaluation record",
-        "Agree on observable outcomes before the demonstration session",
-        "Record what was not demonstrated and assign follow-up responsibility",
-        "Decide whether a gap is a reason to reject an option or requires another session or agreed temporary procedure",
-        "Decide whether available evidence supports a selection or whether further information is required",
-        "Keep commercial and operational decisions separate in the record",
-        "Determine cause before assigning a cause to an unavailable linked item"
-      ]
-    },
-    {
-      "slug": "process-architecture",
-      "title": "Design a process architecture: process mapping software for quality management",
-      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. Changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised, and no new problems are identified in the changed paragraphs. The page passes all checks.",
-      "bodyHash": "6db95509982ee9f1a891d8b691b0ff40c5407092b015775a0921b2090845105a",
-      "decisions": [
-        "Determine which group owns a process that appears in more than one candidate group and mark the other entry as an interface",
-        "Decide whether a duplicated activity reflects a list error or a process that serves more than one purpose",
-        "Decide whether the top-level entry for a shared process refers to a common process with local details or requires separate entries",
-        "Decide whether a scope or name discrepancy between levels is a deliberate distinction or an error requiring correction",
-        "Decide whether an interface line on the overview adds useful information or should be removed",
-        "Assign a decision owner to any unresolved relationship before approving the overview"
-      ]
-    },
-    {
-      "slug": "process-ownership",
-      "title": "Assign process owners: process mapping software for quality management",
-      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
-      "bodyHash": "9da85fd2b195f10925a852fadd5406731930590f625538e0fd99658cd6a29fe0",
-      "decisions": [
-        "Determine ownership, acceptance and next action for each process",
-        "Record proposed responsibilities and any disagreement before treating assignment as complete",
-        "Record the split between owner decisions and resource decisions at a boundary",
-        "Identify which decisions need a temporary alternative during an absence",
-        "Agree on which matters a backup may handle, which require consultation, and which must wait",
-        "Record what will happen while a backup gap remains and what would trigger review",
-        "Identify the person authorized to decide a conflicting assignment and the information that person needs",
-        "Escalate an unresolved conflict through the organization's agreed authority",
-        "Decide when to examine assignments and which events warrant an earlier check",
-        "Update applicable information through the organization's normal controls after an authorized decision is made"
-      ]
-    },
-    {
-      "slug": "mapping-workflows",
-      "title": "Map workflows and decisions: process mapping software for quality management",
-      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
-      "bodyHash": "9a43b4dd3e3cbf1c4f789af20fa5a0575747b49f1e0d4f0f2132d669b9a794c3",
-      "decisions": [
-        "Determine ownership, acceptance and next action",
-        "Decide whether the map should show current practice, an intended change, or an unresolved discrepancy",
-        "Decide whether additional evidence is needed before accepting the map",
-        "Decide whether a draft is suitable for a limited purpose while an issue remains open",
-        "Decide whether another sample, a discussion, or escalation is needed before the map is accepted",
-        "Record the decision owner and an interim action where no route is agreed"
-      ]
-    },
-    {
-      "slug": "documents-and-evidence",
-      "title": "Connect documents and evidence: process mapping software for quality management",
-      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, exceptions, and evaluation criteria. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
-      "bodyHash": "327d7d990548e02343e84a483ef4ada81af8ad4a2c20a0413bec4705c08ab35b",
-      "decisions": [
-        "Determine ownership, acceptance and next action for each proposed document connection",
-        "Decide whether a candidate link helps the intended reader and record why a disputed item was included or left open",
-        "Decide what question the reader is trying to answer before connecting a completed record to a process step",
-        "Decide whether further investigation is needed when a second sample differs from the first",
-        "Decide how the organization will handle the period before a revision issue is resolved",
-        "Identify an approved alternative route, restrict reliance on a draft, or escalate an unresolved revision question",
-        "Decide whether the process description needs an update when a revision changes the meaning of a decision or role",
-        "Assign follow-up for an observation when a reader reaches an older copy or cannot open a destination",
-        "Agree on acceptance criteria before the traceability walkthrough",
-        "Assign an open issue rather than substituting a similar file when a reader cannot open an instruction"
-      ]
-    },
-    {
-      "slug": "migration-and-configuration",
-      "title": "Plan migration and configuration: process mapping software for quality management",
-      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, exceptions, and evaluation criteria. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised, and no new problems are identified in the changed paragraphs. The page passes all checks.",
-      "bodyHash": "7e789db5c27c7da4183e4e10242a48ffde1099c1269bc8370f8541337008ffe8",
-      "decisions": [
-        "Determine ownership, acceptance and next action",
-        "Classify each inventory item as ready for pilot, needing clarification, or retained for reference",
-        "Decide which copy of a conflicting map is applicable and assign a decision-maker",
-        "Decide whether a pilot item is unsuitable until an open question is answered",
-        "Decide whether a visual difference affects the meaning of the map for its intended use",
-        "Decide whether a pilot finding requires updating the preparation plan",
-        "Decide whether a transition must wait if a readiness question is unknown",
-        "Decide whether an excluded item requires an interim route before cutover"
-      ]
-    },
-    {
-      "slug": "rollout-and-training",
-      "title": "Train teams and roll out: process mapping software for quality management",
-      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, exceptions, and evaluation criteria. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
-      "bodyHash": "9f5429d2bc8cb51d8a3f49d68d9dbf71705bdab54d29d33daca72a5b98c67b1d",
-      "decisions": [
-        "Determine ownership, acceptance and next action",
-        "Decide whether to proceed, run another targeted test, or pause based on pilot evidence",
-        "Decide whether to hold, narrow, or reverse a rollout stage when a critical question remains unanswered",
-        "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed",
-        "Record the decision on whether a remaining question is acceptable for a limited scope or must be resolved before proceeding"
-      ]
-    },
-    {
-      "slug": "ongoing-operation",
-      "title": "Maintain process maps and improve: process mapping software for quality management",
-      "summary": "No previous findings were raised against this page. The three changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative example with the correct label and hypothetical framing. All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. The FAQ subsection is plan-assigned and present. No unassigned FAQ sections appear. Links use the two supplied source URLs and the allowed internal path. No new problems are identified in the changed paragraphs and no earlier findings remain unresolved. The page passes all checks.",
-      "bodyHash": "22eb2b5c82b61ef6f5beabbdf0ab3e24b2e1f46518a118996964719ff6e898ab",
-      "decisions": [
-        "Determine which changes require review",
-        "Decide who needs to contribute to a map review",
-        "Decide how an unresolved question will be recorded",
-        "Determine whether the map destination remains accurate after a changed handoff",
-        "Determine ownership, acceptance and next action",
-        "Agree on a question before choosing a measure",
-        "Define what counts in the sample and who will interpret the result",
-        "Use the measure to support a decision",
-        "Decide which explanation is supported when feedback indicates a recurring problem",
-        "Agree on the decisions the demonstration session should inform",
-        "Separate a demonstrated outcome from a verbal commitment and an unresolved question",
-        "Decide whether the selection can proceed while an open question remains"
-      ]
-    },
-    {
-      "slug": "process-mapping-software-for-quality-management",
-      "title": "Process mapping software for quality management in Canadian operations",
-      "summary": "All six dimensions pass. The introduction page aligns with its plan brief, covers all three assigned subsections without scope drift, and provides the required ordered overview of the nine-chapter guide. Both assigned source URLs are cited accurately and support their sentences; one permitted internal site path (/solutions/processes/) is used consistently. Vendor descriptions are distinguished from verified installed behavior throughout. The illustrative example is correctly labeled as hypothetical and not presented as a measured customer result. Prose is clear and readable with no significant repetition across sections. No FAQ section appears, which is correct as none is assigned to this introduction chapter. The three glossary terms (Process owner, Process boundary, Handoff) introduced in the body are already defined in context.glossary with identical wording; the page does not restate or reword them, merely uses the labels in context. No new terms requiring glossary entries are introduced. Roles, records, and decisions extracted below reflect only what the introduction page explicitly names.",
-      "bodyHash": "e8f424f3ae4856e0985b0721312bf4d99de40a94caa08a25e91bba25bf210f4a",
-      "decisions": [
-        "Decide which task the map must support and for which intended reader before relying on the map",
-        "Record what was shown, what was described, what depended on configuration, and what remains unanswered during evaluation",
-        "Agree on who considers a change, what evidence is needed, and how an open issue is recorded after implementation"
+        "Decide which workflow to examine and record that choice with the map",
+        "Determine whether a boundary difference belongs on a common map, a linked local instruction, or a separate process",
+        "Decide whether a process, instruction, or role assignment needs correction when written procedure differs from actual records",
+        "Decide whether the boundary or the actual handoff needs clarification when inspection evidence arrives after release",
+        "Assign a resolution owner for any unresolved escalation route",
+        "Decide who can view, propose, review, and release a map change and how those decisions are recorded"
       ]
     }
   ],
