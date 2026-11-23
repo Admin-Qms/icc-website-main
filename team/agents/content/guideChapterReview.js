@@ -68,7 +68,7 @@ function createChapterReview({ store, readCapabilities, reviewer, editModel }) {
     if (!carried) {
       const cleaned = await require('./contentCleaner').clean(page, { guide: true, ...(editModel ? { call: editModel } : {}) });
       if (!cleaned.cleaned || !editorial.preserveCopyEdit(page.body, cleaned.body).pass) {
-        rejectEdit(job, slug, 'cleaner', page.body, cleaned.body, 'Guide cleaner changed citations or numbers; original page preserved');
+        rejectEdit(job, slug, 'cleaner', page.body, cleaned.body, 'Guide cleaner changed headings, citations or numbers; original page preserved');
       }
       // The grammar agent returns its input on rollback. Retain the actual model
       // reply for this review so a refusal can be diagnosed without another call.

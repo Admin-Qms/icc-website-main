@@ -65,6 +65,29 @@ test('an unreviewed predecessor blocks generation before any writer call', async
   const { service, job } = setupReview(t, { model: async () => { throw new Error('Writer must not run'); } });
   await assert.rejects(() => service.writeGuidePage(job.id, job.manifest.chapters[1].slug), /review|predecessor/i);
 });
+for (const stage of ['cleaner', 'grammar']) {
+  test(`a ${stage}-added H1 cannot mutate a guide page or advance its review`, async t => {
+    let reviewerCalls = 0;
+    const { service, job, writePage } = setupReview(t, {
+      editModel: async (system, message) => {
+        const body = message.split('ARTICLE BODY:\n').at(-1);
+        return (system.startsWith('Clean one') ? stage === 'cleaner' : stage === 'grammar')
+          ? '# Unexpected page title\n\n' + body : body;
+      },
+      reviewer: async () => { reviewerCalls++; return passedReview(); },
+    });
+    const slug = job.manifest.chapters[0].slug;
+    const filename = writePage(slug);
+    const protectedFiles = [filename, ...['state.json', 'guide-context.json'].map(file => path.join(job.directory, file))];
+    const before = protectedFiles.map(file => fs.readFileSync(file));
+    await assert.rejects(service.reviewChapter(job.id, slug), /rejected|preservation|original page preserved/i);
+    assert.deepEqual(protectedFiles.map(file => fs.readFileSync(file)), before);
+    assert.equal(reviewerCalls, 0);
+    const attempt = fs.readdirSync(path.join(job.directory, 'attempts')).find(file => file.startsWith(`${slug}-${stage}-rejected-`));
+    assert.ok(attempt);
+    assert.match(fs.readFileSync(path.join(job.directory, 'attempts', attempt, 'candidate.md'), 'utf8'), /^# Unexpected page title/m);
+  });
+}
 test('reviewed chapters update shared context and edited predecessors invalidate progression', async t => {
   const { service, job, store, writePage } = setupReview(t);
   assert.equal(typeof service.reviewChapter, 'function');
