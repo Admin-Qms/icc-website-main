@@ -32,7 +32,8 @@
     "Record of date, evidence examined, disagreements found, and resolution owners",
     "Evaluation record",
     "Demonstration record",
-    "Gap and commitments record"
+    "Gap and commitments record",
+    "Accepted overview with scope, reviewers, and outstanding exceptions"
   ],
   "example": {
     "label": "Illustrative example",
@@ -71,6 +72,23 @@
         "List unanswered access and ownership questions and assign follow-up",
         "Decide what consequence a gap has for the intended use and name the person who can accept the risk or request further evidence",
         "Decide whether available evidence supports a selection or whether further information is required"
+      ]
+    },
+    {
+      "slug": "process-architecture",
+      "title": "Design a process architecture: process mapping software for quality management",
+      "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses its assigned workflow role (quality lead, process owners, operations manager), input (current process records and relevant evidence), decision (ownership, acceptance, next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership, unresolved relationships). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured plant outcome. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition.",
+      "bodyHash": "44835046026b3ab0057192ba3cc707e3cf621df808877f661e0747e317b0664e",
+      "decisions": [
+        "Determine whether a process belongs within the scope of the proposed architecture and record disputed entries with a resolution owner",
+        "Decide whether a process appearing in two groups is duplicated or serves more than one purpose",
+        "Record the agreed grouping conventions and what a connection means on the top-level map",
+        "Decide whether a shared process with local differences warrants a common entry with local details or separate entries",
+        "Record the accepted overview, its scope, the people who reviewed it, and outstanding exceptions",
+        "Decide whether a name or scope change between levels reflects a deliberate distinction or an error",
+        "Decide how the organization distinguishes shared, site-specific, and in-revision processes in its records",
+        "Decide how an interface should be represented and record agreement with any open questions and their decision owners",
+        "Mark unresolved relationships with a decision owner rather than presenting them as settled on the diagram"
       ]
     }
   ],

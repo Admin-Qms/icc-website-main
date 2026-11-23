@@ -39,8 +39,6 @@ The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-
 
 **Illustrative example:** An unnamed Canadian manufacturer gathers the people involved in a production workflow to review a proposed overview. The quality lead groups related work by purpose, while the operations manager checks whether a reader can locate the production process without knowing the internal department names. The team flags a support activity that appears in two places and records a decision owner. The situation is hypothetical and does not describe a measured plant outcome.
 
-
-
 ## Define the top-level map
 
 The top-level map is the entry point to the architecture. Decide who will use it and what question it should answer before deciding how many boxes to display. A new team member may need to find the process relevant to a customer request; a process owner may need to identify an adjacent process for a review. Both should be able to understand the labels without relying entirely on a presenter.
@@ -55,7 +53,7 @@ A simple design review can use representative questions. Ask a reader to locate 
 
 Show the scope of the overview. If it applies to a particular site or product line, identify that limitation in the accompanying record. If a shared process differs by location, decide whether the top-level entry refers to a common process with local details or whether separate entries are needed. Do not infer that either choice is automatically correct. The decision should make the route to the applicable detail clear to the reader.
 
-For the illustrative manufacturer, the process owners sketch an overview with a production entry and its important neighbouring processes. An operator unfamiliar with the sketch tries to find the sample workflow. The team notes where the label or connection caused confusion and revises the proposal before accepting it. This is a test of the design with a hypothetical sample, not an assertion that a particular software screen behaves in a certain way.
+For the illustrative manufacturer, the process owners sketch an overview with a production entry and its important neighboring processes. An operator unfamiliar with the sketch tries to find the sample workflow. The team notes where the label or connection caused confusion and revises the proposal before accepting it. This is a test of the design with a hypothetical sample, not an assertion that a particular software screen behaves in a certain way.
 
 Record the accepted overview, its scope, the people who reviewed it, and outstanding exceptions. If an important process has no agreed representation, mark the item as unresolved and assign a decision owner. The map should not present an uncertain relationship as settled merely because the diagram has space for a connecting line.
 
@@ -89,4 +87,4 @@ For the illustrative manufacturer, the production owner and the owner of an adjo
 
 After the review, document the accepted changes and the exceptions that remain. Note the sample and the participants so a later reader can judge the reach of the decision. If one interface changes, check whether the top-level representation and its connected detail still describe the same scope. This check is an organizational review practice; it does not imply that a product automatically detects or updates the relationship.
 
-The site's [process management page](/solutions/processes/) can provide a starting point for discussing the published approach. A workable architecture comes from the organization's own decisions: a reader can identify the relevant process, understand its place in the overview, find the appropriate level of detail, and see which connections require further confirmation.
+The site's [process management page](https://isocertificationconsultants.ca/solutions/processes/) can provide a starting point for discussing the published approach. A workable architecture comes from the organization's own decisions: a reader can identify the relevant process, understand its place in the overview, find the appropriate level of detail, and see which connections require further confirmation.
