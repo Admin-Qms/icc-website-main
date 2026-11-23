@@ -49,10 +49,17 @@
       "readTime": 11,
       "status": "written",
       "checkpointedAt": "2026-11-23T13:59:03.606Z"
+    },
+    "process-architecture": {
+      "hash": "f6367c045596f5ae137bbe96de85d164789b920a139d20356129c5f7462a1ef7",
+      "wordCount": 2021,
+      "readTime": 11,
+      "status": "written",
+      "checkpointedAt": "2026-11-23T14:00:37.225Z"
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T13:59:14.278Z",
+  "updatedAt": "2026-11-23T14:00:37.227Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
