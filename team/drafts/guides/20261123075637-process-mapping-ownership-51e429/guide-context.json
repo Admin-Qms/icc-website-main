@@ -26,7 +26,10 @@
     "Resolution owner",
     "Operations manager",
     "Test reader",
-    "Supplier"
+    "Supplier",
+    "Decision owner",
+    "New team member",
+    "Reader"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -38,7 +41,11 @@
     "Demonstration record",
     "Evaluation record",
     "Access demonstration record",
-    "Comparison record"
+    "Comparison record",
+    "Accepted overview with scope and participants",
+    "Outstanding exceptions with decision owner",
+    "Discrepancy record",
+    "Open question with decision owner"
   ],
   "example": {
     "label": "Illustrative example",
@@ -73,6 +80,23 @@
         "Decide whether an unanswered access question prevents a fair comparison of two approaches",
         "Decide whether available evidence supports a selection or whether further information is required",
         "Decide what consequence a gap has for the intended use"
+      ]
+    },
+    {
+      "slug": "process-architecture",
+      "title": "Design a process architecture: process mapping software for quality management",
+      "summary": "All six quality dimensions pass. The changed paragraph introduces the ISO APG link with appropriate hedging, correctly attributing it as educational material rather than a requirement; the URL matches the supplied research source. No prior findings were raised, so there is nothing unresolved. Claims throughout are supported by the supplied sources and appropriately hedged. The page stays within its assigned scope across all four subsections, leaving adjacent chapters untouched. Prose is readable and non-repetitive. Both cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present across all subsections. Illustrative examples are labeled hypothetical.",
+      "bodyHash": "51168526b7b0720b2b1bf8f12737b858c3c548f58a6f5536701a105708c312d4",
+      "decisions": [
+        "Determine ownership, acceptance and next action for disputed process entries",
+        "Decide whether an activity with two claiming groups needs one entry or two on the overview",
+        "Determine where a process serving more than one purpose has its primary entry",
+        "Decide whether to represent a shared process as a common entry with local details or as separate entries",
+        "Decide whether a name or scope change between levels reflects a deliberate distinction or an error",
+        "Decide whether to clarify scope or provide appropriate detail when a discrepancy is found",
+        "Decide how to distinguish shared, site-specific, or in-revision processes in the organization's records",
+        "Record agreement on interface and identify open questions with their decision owners",
+        "Decide whether to retain or remove a connecting line that adds no useful information"
       ]
     }
   ],

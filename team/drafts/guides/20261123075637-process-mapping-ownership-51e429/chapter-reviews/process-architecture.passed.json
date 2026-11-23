@@ -6,32 +6,36 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections cover design a process architecture within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. The changed paragraphs introduce no new problems, and there are no unresolved findings from the previous review. The page passes all checks.",
+  "summary": "All six quality dimensions pass. The changed paragraph introduces the ISO APG link with appropriate hedging, correctly attributing it as educational material rather than a requirement; the URL matches the supplied research source. No prior findings were raised, so there is nothing unresolved. Claims throughout are supported by the supplied sources and appropriately hedged. The page stays within its assigned scope across all four subsections, leaving adjacent chapters untouched. Prose is readable and non-repetitive. Both cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present across all subsections. Illustrative examples are labeled hypothetical.",
   "glossary": [],
   "roles": [
     "Quality lead",
     "Operations manager",
     "Process owner",
+    "Decision owner",
+    "New team member",
+    "Reader",
     "Operator",
-    "Reader"
+    "Test reader",
+    "Supplier"
   ],
   "recordNames": [
     "Documented decision and its owner",
-    "Working list of candidate processes",
-    "Accepted overview record noting scope, reviewers, and outstanding exceptions",
-    "Discrepancy record noting name or scope differences between levels",
-    "Interface review record noting sample, participants, agreement, and open questions"
+    "Accepted overview with scope and participants",
+    "Outstanding exceptions with decision owner",
+    "Discrepancy record",
+    "Open question with decision owner"
   ],
   "decisions": [
-    "Determine ownership, acceptance and next action for each candidate process entry",
-    "Decide whether a disputed process needs one entry or two in the overview",
-    "Decide where the primary entry of a multi-purpose process belongs and identify other relationships as interfaces",
-    "Decide how many boxes and connections to display in the top-level map",
-    "Decide whether a shared process uses a common top-level entry with local details or separate entries per site",
-    "Determine whether a name or scope change between levels reflects a deliberate distinction or an error",
-    "Decide whether to clarify scope or provide appropriate detail when a detail view refers to a different product line",
-    "Decide how the organization distinguishes shared, site-specific, or in-revision processes in its own records",
-    "Decide whether an interface line on the overview reflects an agreed and understood relationship or remains unresolved"
+    "Determine ownership, acceptance and next action for disputed process entries",
+    "Decide whether an activity with two claiming groups needs one entry or two on the overview",
+    "Determine where a process serving more than one purpose has its primary entry",
+    "Decide whether to represent a shared process as a common entry with local details or as separate entries",
+    "Decide whether a name or scope change between levels reflects a deliberate distinction or an error",
+    "Decide whether to clarify scope or provide appropriate detail when a discrepancy is found",
+    "Decide how to distinguish shared, site-specific, or in-revision processes in the organization's records",
+    "Record agreement on interface and identify open questions with their decision owners",
+    "Decide whether to retain or remove a connecting line that adds no useful information"
   ],
   "pass": true,
   "deterministic": {
@@ -129,8 +133,8 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "a69a863080841cd105119d7fbed4652d4b96ab0cb41b04ae6155e8a123c6e182",
-  "contentHash": "fb930c962890ae1bcc63753cd9cbd69101dc3e644729c45f8b7675de08fc81e1",
+  "inputHash": "a9e4dae9b13fa9028d7ce57278d27a79eeab65e3b98a6d54400febd25a945984",
+  "contentHash": "f42871e414798fbbab696fef6948379ce52e82f3c3b9db40a6fdd2064f5106fe",
   "paragraphHashes": [
     "4174f3fe08495fc808f041cee728a1fe35ea809887e02f7ed094a8ca10fa6938",
     "1a78262d1a51649168eea604a6151cbe1fffdf4fec44eef9cce928326c85e6ce",
@@ -138,7 +142,7 @@
     "20a7daedc108c288cb2fa91a1d611443771fadcbfbde93d86de9f6dd5b9ccc0b",
     "17c6be76b8a798326dbc739b798adad9755f01efd5a1c1f184cab970c05d0461",
     "2aaa1477cf27140085ba0c2b3e4a258003150076624cc0899acbc3f3c56fba16",
-    "70587ebfc62723cdf21cb9df63ac42dbfffed5cab7636d9999b07431dffa7f0c",
+    "c908cc38138374a5129878c3fb0556566da4a63aaeefa541a75430715127890f",
     "c8f6c3911537d0bbdafe21bd791b7db959da4ae9de2a1149c38dcde299b51666",
     "38a3216e0f116776848d77a27488a1e01dcb4188b790b2b6d56303b721a05ed4",
     "9dc8fa46b3c6a745134c307b9d55d832ad0281cdc9ed6dd14764f0d47e777d35",
@@ -166,7 +170,7 @@
     "4b4f205a84e375412916bab584854b39c4614cfff6bd4648e91837742e0ac72e",
     "8e6ee52b729e235fd7f933fd7af0d4a3f4c716da5e26464cdab496be630d9c4f"
   ],
-  "outputContextHash": "f61ca39d40fba97cca035821e8b59a5750492b7583c9f073c7a6b4b56f4026ba",
-  "reviewedAt": "2026-11-23T15:14:36.636Z",
+  "outputContextHash": "dc83c06112244f7ca087a597be98d655a72a4b83c73d5c7c5a3c3b69f4d7d286",
+  "reviewedAt": "2026-11-23T15:47:02.867Z",
   "reviewer": "Configured independent chapter reviewer"
 }
