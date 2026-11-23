@@ -33,7 +33,9 @@
     "Proposed owner",
     "Worker",
     "Backup",
-    "Production process owner"
+    "Production process owner",
+    "Supervisor",
+    "Authorizing person"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -57,7 +59,11 @@
     "Decision record",
     "Review record",
     "Change record",
-    "Interim decision record"
+    "Interim decision record",
+    "Inventory of candidate maps with format, scope, source location, and acceptance owner",
+    "Preparation record identifying source file, intended process entry, scope, relationships, permitted sample, and known limitations",
+    "Pilot acceptance decision identifying reviewers, checks performed, discrepancies, and conditions for proceeding",
+    "Transition decision record identifying accepted fallback source and authorized activator"
   ],
   "example": {
     "label": "Illustrative example",
@@ -162,6 +168,22 @@
         "Agree on acceptance criteria before the traceability walkthrough",
         "Accept the tested connection only for the scope and conditions the review supports",
         "Distinguish an access question from an obsolete destination before choosing a remedy"
+      ]
+    },
+    {
+      "slug": "migration-and-configuration",
+      "title": "Plan migration and configuration: process mapping software for quality management",
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ISO APG link with appropriate hedging, correctly attributing it as educational material on evidence collection; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
+      "bodyHash": "9266876f61b8b9f7470f887916c6db068050ceda497f10bb94b7ccf46e83fc0b",
+      "decisions": [
+        "Determine ownership, acceptance and next action for each candidate map",
+        "Decide which copy of a conflicting map is suitable for the pilot",
+        "Classify each map as ready for pilot, needing clarification, or retained for reference",
+        "Decide whether the pilot represents one site or a common process with local detail",
+        "Decide that an item is unsuitable for the pilot until an open question is answered",
+        "Accept the pilot result or escalate a discrepancy",
+        "Decide whether the transition must wait when a readiness answer is unknown",
+        "Authorize the cutover decision for an agreed scope"
       ]
     }
   ],

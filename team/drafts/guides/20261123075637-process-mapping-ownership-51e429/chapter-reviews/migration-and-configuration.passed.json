@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections cover plan migration and configuration within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. There are no unresolved findings from the previous review, and the changed paragraphs introduce no new problems. The page passes all checks.",
+  "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ISO APG link with appropriate hedging, correctly attributing it as educational material on evidence collection; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
   "glossary": [],
   "roles": [
     "Process owner",
@@ -14,25 +14,23 @@
     "Operations manager",
     "Supervisor",
     "Operator",
-    "Responsible person",
     "Authorizing person"
   ],
   "recordNames": [
-    "Inventory identifying candidate map, purpose, scope, source location, and decision owner",
-    "Preparation record identifying source, expected scope and relationships, permitted sample, and known limitations",
-    "Acceptance decision record identifying reviewers, checks performed, discrepancies, and conditions for proceeding",
-    "Recovery plan identifying fallback source, decision authority, and discrepancy recording process",
-    "Transition decision record identifying accepted fallback source and person authorized to activate it"
+    "Inventory of candidate maps with format, scope, source location, and acceptance owner",
+    "Preparation record identifying source file, intended process entry, scope, relationships, permitted sample, and known limitations",
+    "Pilot acceptance decision identifying reviewers, checks performed, discrepancies, and conditions for proceeding",
+    "Transition decision record identifying accepted fallback source and authorized activator"
   ],
   "decisions": [
     "Determine ownership, acceptance and next action for each candidate map",
-    "Classify each candidate as ready for pilot, needing clarification, or retained for reference only",
-    "Decide which copy is applicable when several copies appear to describe the same work",
+    "Decide which copy of a conflicting map is suitable for the pilot",
+    "Classify each map as ready for pilot, needing clarification, or retained for reference",
     "Decide whether the pilot represents one site or a common process with local detail",
-    "Decide whether an item is unsuitable for the pilot until an open question is answered",
-    "Decide whether to accept the pilot result or escalate a discrepancy based on consequence for intended use",
-    "Decide whether a transition must wait when a readiness question is unknown",
-    "Return the transition decision to its authorizer if a later issue changes the accepted assumptions"
+    "Decide that an item is unsuitable for the pilot until an open question is answered",
+    "Accept the pilot result or escalate a discrepancy",
+    "Decide whether the transition must wait when a readiness answer is unknown",
+    "Authorize the cutover decision for an agreed scope"
   ],
   "pass": true,
   "deterministic": {
@@ -130,15 +128,15 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "a3ba997d3829f747c79ad4b4313bc112da9eb81e102c2daaf72720ddab2216c3",
-  "contentHash": "ea497af1845ab21228dc8b26c4fd6acb022aee5e58a7e736a729b36f497b374f",
+  "inputHash": "b66bf4c8fec4a01ce0e8883030e3a0ebfc09910c8082db291ae3ca39d2c1f9d7",
+  "contentHash": "68764a2651eb156e1ee958c7356a2a30df2c9a7643ef0d13ac76dabb5e21ab40",
   "paragraphHashes": [
     "15595205679723fc8e8179a4cf26b3009bd0d696026fe85a12f2251dd74b9e5c",
     "09c79de65f799bd316f499709f02901ba73065207c0cc370aca1f2333eed8d61",
     "f4373a1f7dd6cee61b0deb8b3ff67c3544a97b76939b8d71e1209a30534703b1",
     "7b17fb0c7ae23c1ea8d96bc72be5570d9c2200de7b1487f59e47122725931a1b",
     "cd68c9917aceb4dafbfb1c76563f4f6404c4f9832033ab305e19428834a29ada",
-    "068c290a1cf2c4f63132758b5e1be740ec857a4569c920fdf8b81153d8399365",
+    "f5cd9cbf456325791e0d7bfa8ce90895559a142b2713ca50d2fb4a1b8532a79c",
     "06e7ac895207afbe251ecb735310d32b457285b0984ec90ad90d098c42970b33",
     "00b90db1603a87158de61360d67a07a5f7ccaffed80e4b3da74f5f6f46d9f169",
     "f50cfb81caf859a2bac73b00507ea117b8ba8caebafca66ab4fdb2e4c67811ae",
@@ -170,7 +168,7 @@
     "b634435d22492a934208a33babaa3efa403318e239b1aa6745291781a66a8246",
     "4f606272b9c12fad2b0fc1cc6f1c6a3cb419a4dcdcd678bcc3c29c1f3216e769"
   ],
-  "outputContextHash": "12203e146f84b9a2b33a0fee0efb48e6372cba471628b55ff0acf2180f64d73d",
-  "reviewedAt": "2026-11-23T15:19:58.457Z",
+  "outputContextHash": "89dfafdaf6086f105b64a7150342cabe20ba6000117e907a01eb0f54ca34f7cd",
+  "reviewedAt": "2026-11-23T15:52:25.979Z",
   "reviewer": "Configured independent chapter reviewer"
 }
