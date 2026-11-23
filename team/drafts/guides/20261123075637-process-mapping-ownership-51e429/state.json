@@ -79,11 +79,11 @@
       "checkpointedAt": "2026-11-23T14:59:07.308Z"
     },
     "migration-and-configuration": {
-      "hash": "fc2cf33ddc829d4c4111bf1dc4e8d28f6eeaf618d21194f67a86bf9af2c71822",
-      "wordCount": 2043,
+      "hash": "50c2fb820cf299861c5530d803f210f4c0ad4907af4593003420704fc41a1443",
+      "wordCount": 2048,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-23T14:28:23.669Z"
+      "checkpointedAt": "2026-11-23T15:00:29.295Z"
     },
     "rollout-and-training": {
       "hash": "db5872f76101c531b1a3188db060a5a285a0b5be6e24eb0cb288c4f1792a70ac",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T14:59:17.649Z",
+  "updatedAt": "2026-11-23T15:00:40.939Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -1418,7 +1418,7 @@
     "reviewedChapters": [],
     "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
   },
-  "contextHash": "3d95b37d2e97e54b95a060dc5560460a7c13ab057f26661c53cd923b189aa688",
+  "contextHash": "ae81fdfbf691650366460717a6eae334d0e3bff420648e1ba14aad7f7f6bda41",
   "chapterReviews": {
     "mapping-current-processes": {
       "claims": "passed",
@@ -2478,6 +2478,197 @@
       ],
       "outputContextHash": "3d95b37d2e97e54b95a060dc5560460a7c13ab057f26661c53cd923b189aa688",
       "reviewedAt": "2026-11-23T14:59:17.643Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "migration-and-configuration": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, exceptions, and evaluation criteria. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised, and no new problems are identified in the changed paragraphs. The page passes all checks.",
+      "glossary": [
+        {
+          "term": "Pilot",
+          "definition": "A controlled test of a small representative sample of selected maps and decisions, performed before committing to a full migration, with agreed acceptance criteria and retained evidence."
+        },
+        {
+          "term": "Cutover",
+          "definition": "The organizational decision to rely on the new arrangement for an agreed scope, made after reviewing pilot results, open discrepancies, and a tested recovery route."
+        },
+        {
+          "term": "Preparation record",
+          "definition": "A document identifying the source file, intended scope, expected relationships, permitted sample, known limitations, and the person who will accept or escalate the result."
+        },
+        {
+          "term": "Migration inventory",
+          "definition": "A structured list of candidate process maps, each with its purpose, scope, source location, format, acceptance owner, and status, used to guide selection and decisions before a pilot."
+        }
+      ],
+      "roles": [
+        "Process owner",
+        "Quality lead",
+        "Operations manager",
+        "Supervisor",
+        "Operator",
+        "Authorizing person"
+      ],
+      "recordNames": [
+        "Migration inventory",
+        "Preparation record",
+        "Pilot acceptance decision record",
+        "Recovery instructions"
+      ],
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Classify each inventory item as ready for pilot, needing clarification, or retained for reference",
+        "Decide which copy of a conflicting map is applicable and assign a decision-maker",
+        "Decide whether a pilot item is unsuitable until an open question is answered",
+        "Decide whether a visual difference affects the meaning of the map for its intended use",
+        "Decide whether a pilot finding requires updating the preparation plan",
+        "Decide whether a transition must wait if a readiness question is unknown",
+        "Decide whether an excluded item requires an interim route before cutover"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Inventory existing maps",
+            "section": "Inventory existing maps"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Inventory existing maps; semantic review verifies support",
+            "section": "Inventory existing maps"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Prepare files and relationships",
+            "section": "Prepare files and relationships"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Prepare files and relationships; semantic review verifies support",
+            "section": "Prepare files and relationships"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Pilot imports and review results",
+            "section": "Pilot imports and review results"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Pilot imports and review results; semantic review verifies support",
+            "section": "Pilot imports and review results"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Plan cutover and recovery",
+            "section": "Plan cutover and recovery"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Plan cutover and recovery; semantic review verifies support",
+            "section": "Plan cutover and recovery"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "899946076fd17e3b900d797c6e73adb48e171cef30e82178299ca0a0bf342b1c",
+      "contentHash": "f9e3c9f51e4905a65146a1739f2087b80154a808b1d870300ead40315772f808",
+      "paragraphHashes": [
+        "15595205679723fc8e8179a4cf26b3009bd0d696026fe85a12f2251dd74b9e5c",
+        "09c79de65f799bd316f499709f02901ba73065207c0cc370aca1f2333eed8d61",
+        "3913a1afbc840a0ae1224c181d9dfc64bebca09dc9ab6cdf0a75e30013632fdb",
+        "7b17fb0c7ae23c1ea8d96bc72be5570d9c2200de7b1487f59e47122725931a1b",
+        "cd68c9917aceb4dafbfb1c76563f4f6404c4f9832033ab305e19428834a29ada",
+        "376a3b9997e72d92811d671bc8f993a7e16201b26211768056fe271a805a2874",
+        "615747f58c0a365633aeec54b2d758345725e278339019cf3bab96aac555aa61",
+        "00b90db1603a87158de61360d67a07a5f7ccaffed80e4b3da74f5f6f46d9f169",
+        "f50cfb81caf859a2bac73b00507ea117b8ba8caebafca66ab4fdb2e4c67811ae",
+        "f2482111dc90dcc7c57271cf3197a22318a3394f8cacbdf179009032f62a7482",
+        "d724e42c65acbb69165a1589429b75d0ff21aed79a91b54b7c20e06835647840",
+        "482c3e8e35f98099348ab2a1fe0d91d26fafb3a1232e9ff90267041bdd8d7201",
+        "a2878b251451260368b3f410ae986ba3501a805b6c56a4065f2e39df291dc3ef",
+        "3538d5f8140d091f47f2b0e66a6cf41d3467cbc949f1c64f9b897f5587051f04",
+        "348d1137ac54d7f780cb15634e3c6056eabf9d1c23ab5c55bf79478ac2908804",
+        "08865a9a07f544cf2e6ce1ebd0c8bed44a171914fa9f785033ba99fe01f35c97",
+        "40aff9f6d1cab5a4e36272febd9eb4cb2cfe6bca6f7215c2b5a2cff9b464b69a",
+        "70b9e7fcc911ce1ee70972f2a4e2cbc9f834a175c2dd27d96cd3721346203940",
+        "f6cb5364e2f4796e15d299c99c31f6cd7594132b827f28050b7799672e60ef7c",
+        "0f216e88f4dd2ba62443144bf48e52977aaad5b52d5b96a538c30f6f198c8d1f",
+        "a6f29759f82fbda8013227ce678b78b9a9d5be4fbd6db7244181667d37b9105a",
+        "8a10f00b8d5a50faf38f9171947d0db1936d02cbda8f7d43144e08c0b6b35117",
+        "4925d638345576dadd7b757c1d8dba049bce0896813167565c51f98f306c3418",
+        "0b09b801a92da8d94ee9ce7add96b747a72c815804c7253afbf1c31c21a4008e",
+        "c77838ad4c22b3bd392c9f778ca4c96ae2eca9526bba197f7dd411fba49f7741",
+        "95a619a54fd8fa6d93b0e57e4be4cdd838997df9081214f97b8eb6af96455306",
+        "9c5f4446c238ea68dd928af900343d4e568d0178d9a6894109abfb51aba9a810",
+        "446df22a930e76d98f18abc496c064879535eb5303904075fe5baee659e61e24",
+        "41797f3f787198be4bc2bebff47fa8ec377222fd37353f911f960c3cf9a411cb",
+        "5ce63742f77638b72a9f33379a1da5a85dd214c17e747a45836463860d79f8f3",
+        "c3b541da6be65aba20025380acd80368139eca748d81565d484a3fb414944ecf",
+        "220fa1848cf7986f39bba1941d1fc845ca418984125fdf79f66146d51c7ce9ed",
+        "a8c9173ce4a6b174614622497fc8a075eafcd0557816538aa574ca94bf403e0c",
+        "11dd128cbd3c903c2541d1a50ef879ee1f8f5458187547ca1b921c334c5b5323",
+        "23e0bec5ff9e0895d368dcf687b49411c83f2d3d8735229510f0a04f37673b77",
+        "4f606272b9c12fad2b0fc1cc6f1c6a3cb419a4dcdcd678bcc3c29c1f3216e769"
+      ],
+      "outputContextHash": "ae81fdfbf691650366460717a6eae334d0e3bff420648e1ba14aad7f7f6bda41",
+      "reviewedAt": "2026-11-23T15:00:40.934Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

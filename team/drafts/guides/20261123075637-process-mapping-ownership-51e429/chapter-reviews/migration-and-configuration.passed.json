@@ -6,31 +6,48 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition across sections.",
-  "glossary": [],
+  "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, exceptions, and evaluation criteria. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised, and no new problems are identified in the changed paragraphs. The page passes all checks.",
+  "glossary": [
+    {
+      "term": "Pilot",
+      "definition": "A controlled test of a small representative sample of selected maps and decisions, performed before committing to a full migration, with agreed acceptance criteria and retained evidence."
+    },
+    {
+      "term": "Cutover",
+      "definition": "The organizational decision to rely on the new arrangement for an agreed scope, made after reviewing pilot results, open discrepancies, and a tested recovery route."
+    },
+    {
+      "term": "Preparation record",
+      "definition": "A document identifying the source file, intended scope, expected relationships, permitted sample, known limitations, and the person who will accept or escalate the result."
+    },
+    {
+      "term": "Migration inventory",
+      "definition": "A structured list of candidate process maps, each with its purpose, scope, source location, format, acceptance owner, and status, used to guide selection and decisions before a pilot."
+    }
+  ],
   "roles": [
     "Process owner",
     "Quality lead",
     "Operations manager",
-    "Floor supervisor",
-    "Operator"
+    "Supervisor",
+    "Operator",
+    "Authorizing person"
   ],
   "recordNames": [
-    "Inventory identifying each candidate map, its purpose, scope, source location, and decision owner",
-    "Preparation record identifying source, expected scope and relationships, permitted sample, and known limitations",
-    "Pilot acceptance decision identifying reviewers, checks performed, discrepancies, and conditions for proceeding",
-    "Source inventory, pilot observations, acceptance conditions, and recovery instructions"
+    "Migration inventory",
+    "Preparation record",
+    "Pilot acceptance decision record",
+    "Recovery instructions"
   ],
   "decisions": [
-    "Determine ownership, acceptance and next action for each candidate map",
-    "Decide which copy is applicable when several copies appear to describe the same work",
-    "Classify each candidate map as ready for pilot, needing clarification, or retained for reference only",
-    "Decide whether the pilot represents one site or a common process with local detail when two sites use different versions",
-    "Decide that an item is unsuitable for the pilot until an open question is answered",
-    "Decide whether a visual difference affects the meaning of the map based on its consequence for the intended use",
-    "Decide whether a test finding represents an isolated formatting problem or requires revision of the preparation plan",
-    "Decide whether the transition must wait when a readiness question is unknown",
-    "Decide who can authorize the cutover and who needs to know which source to use"
+    "Determine ownership, acceptance and next action",
+    "Classify each inventory item as ready for pilot, needing clarification, or retained for reference",
+    "Decide which copy of a conflicting map is applicable and assign a decision-maker",
+    "Decide whether a pilot item is unsuitable until an open question is answered",
+    "Decide whether a visual difference affects the meaning of the map for its intended use",
+    "Decide whether a pilot finding requires updating the preparation plan",
+    "Decide whether a transition must wait if a readiness question is unknown",
+    "Decide whether an excluded item requires an interim route before cutover"
   ],
   "pass": true,
   "deterministic": {
@@ -128,16 +145,16 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "043a8af96eb6a4475f5aad1be16c2074ce865778a1e82b895db29d68a48002e4",
-  "contentHash": "e20ffec2cd62a1be1bc75b7e3e163e10af5a77038bdafa2fb985b8c4074964d8",
+  "inputHash": "899946076fd17e3b900d797c6e73adb48e171cef30e82178299ca0a0bf342b1c",
+  "contentHash": "f9e3c9f51e4905a65146a1739f2087b80154a808b1d870300ead40315772f808",
   "paragraphHashes": [
     "15595205679723fc8e8179a4cf26b3009bd0d696026fe85a12f2251dd74b9e5c",
     "09c79de65f799bd316f499709f02901ba73065207c0cc370aca1f2333eed8d61",
-    "646c2677001f8c9f37128c28ed68470c80ab91dafcb856f28083c2c9b5dc9f1e",
+    "3913a1afbc840a0ae1224c181d9dfc64bebca09dc9ab6cdf0a75e30013632fdb",
     "7b17fb0c7ae23c1ea8d96bc72be5570d9c2200de7b1487f59e47122725931a1b",
     "cd68c9917aceb4dafbfb1c76563f4f6404c4f9832033ab305e19428834a29ada",
-    "bca5a0019a6c98a760305737e102425c1cef840fc4e1790598a51d2b306235b0",
-    "15a12e9dd78de9e9c1bfe8dde71c874a64a8baf3aed5885853c9091bab7de1fa",
+    "376a3b9997e72d92811d671bc8f993a7e16201b26211768056fe271a805a2874",
+    "615747f58c0a365633aeec54b2d758345725e278339019cf3bab96aac555aa61",
     "00b90db1603a87158de61360d67a07a5f7ccaffed80e4b3da74f5f6f46d9f169",
     "f50cfb81caf859a2bac73b00507ea117b8ba8caebafca66ab4fdb2e4c67811ae",
     "f2482111dc90dcc7c57271cf3197a22318a3394f8cacbdf179009032f62a7482",
@@ -166,9 +183,9 @@
     "a8c9173ce4a6b174614622497fc8a075eafcd0557816538aa574ca94bf403e0c",
     "11dd128cbd3c903c2541d1a50ef879ee1f8f5458187547ca1b921c334c5b5323",
     "23e0bec5ff9e0895d368dcf687b49411c83f2d3d8735229510f0a04f37673b77",
-    "265185be6294481202559f7d50ad1a7c952356c1c7ae0be48b153fe06550c78c"
+    "4f606272b9c12fad2b0fc1cc6f1c6a3cb419a4dcdcd678bcc3c29c1f3216e769"
   ],
-  "outputContextHash": "7b5cd80c0163ec255e6496e980da65a5f7d9bd6ff0a14312fc551438a2aa8a9f",
-  "reviewedAt": "2026-11-23T14:28:34.796Z",
+  "outputContextHash": "ae81fdfbf691650366460717a6eae334d0e3bff420648e1ba14aad7f7f6bda41",
+  "reviewedAt": "2026-11-23T15:00:40.934Z",
   "reviewer": "Configured independent chapter reviewer"
 }
