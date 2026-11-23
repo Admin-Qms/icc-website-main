@@ -6,7 +6,7 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "The page covers all four assigned subsections within the stated scope of training and rollout for process mapping software for quality management. All changed paragraphs are consistent with the plan's workflow elements, correctly attribute vendor and ISO APG sources, include clearly labeled illustrative examples, and avoid asserting unverified capabilities. Source URLs are drawn from the two permitted research sources. No FAQ sections appear, which is correct as none are assigned. No findings from the previous review remain unresolved, and no new problems appear in the changed paragraphs. The page passes all checks.",
+  "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ISO APG link with appropriate hedging, correctly attributing it as educational material on evidence; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
   "glossary": [],
   "roles": [
     "Process owner",
@@ -14,37 +14,26 @@
     "Operations manager",
     "Operator",
     "Supervisor",
-    "Worker",
     "Trainer",
     "Authorized manager",
     "Authorized decision-maker"
   ],
   "recordNames": [
-    "Training plan identifying decisions each role is expected to make and escalation routes",
-    "Training observation record noting scope, sample, roles, and open questions",
-    "Participant task outcome record noting starting point and task completed",
-    "Pilot scope and acceptance questions record",
-    "Pilot observation record noting route, help provided, and answers given after prompting",
-    "Ambiguous label clarification record",
-    "Staged rollout scope record noting processes, roles, and authorization conditions",
-    "Stage evidence review record noting task completion, access questions, and process owner acceptance",
-    "Rollout decision record noting scope, conditions, and authorized decision-maker",
-    "Issue record noting task attempted, agreed contact, and next action",
-    "Stage-end record noting scope, training observations, unresolved items, decision-maker, and acceptance conditions",
-    "Feedback record noting task attempted, starting point, expected information, and observed result",
-    "Follow-up decision record noting owner, interim guidance, and condition for closing"
+    "Participant starting point, task, and help needed",
+    "Pilot scope and acceptance questions",
+    "Pilot decision record with scope and conditions",
+    "Stage scope, training observations, unresolved items, decision-maker, and acceptance conditions",
+    "Feedback observation record with task, starting point, and result",
+    "Follow-up decision record with interim guidance and closing condition"
   ],
   "decisions": [
     "Determine ownership, acceptance and next action",
-    "Decide whether attendance constitutes evidence of readiness or whether a task outcome record is required",
-    "Decide the agreed interim source when access fails during training",
-    "Decide whether to repeat an affected exercise before judging a role ready for the next stage",
+    "Assign an access investigation and repeat the affected exercise before treating attendance as evidence of readiness",
     "Decide whether the pilot provides enough evidence to proceed, needs another targeted test, or should pause",
-    "Record the pilot decision, its scope, and any conditions",
-    "Decide whether to hold, narrow, or reverse a rollout stage when a critical question remains unanswered",
-    "Decide whether to authorize expansion to the next stage based on evidence from the previous stage",
+    "Record the authorization decision stating the group included and the evidence required before expansion",
+    "Decide whether to hold, narrow, or reverse a stage when a critical question remains unanswered",
     "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed",
-    "Decide whether the next action is to clarify a label, investigate access, or seek more evidence before choosing a training or configuration response"
+    "Decide whether the next action is to clarify a label, investigate access, or seek more evidence"
   ],
   "pass": true,
   "deterministic": {
@@ -142,15 +131,15 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "890d2b31d6568959048865c9459220a0fe69bef8a8f24b3d70395014f314a420",
-  "contentHash": "b34ecf208e4b311399b3a682847f40eed9d3d6df371382ebce5fc3960d060bcb",
+  "inputHash": "91b0d46cf3c7f6e20ebfc0f65ea6f283970852706fc2f7dcebf439bf843bd948",
+  "contentHash": "0586c9a6ddd34ff2e345ce5eb08c46082b365968c6b50a7ef95d7d74eb826e2d",
   "paragraphHashes": [
     "8e244d287482d110baa1e880f0d50fb7809f734cc07752c79d25969d0826b2b9",
     "4fd26f8f68f26f4e6b7dbc0d39e57f08f20e62f35a1a9d1b5b89eaedbca12c4d",
     "e7d43b2762c924f162ad117638e02cae6d7dd542c0895974d3e8553eb5845635",
     "a9a22785b6c3c9a0d86c6f30b79a1c70fce3bb747cceda88f49018d091bbb73b",
     "1ede65876442cf357b43e4ec31ce8dc264f894255088ba477a3f3fa561fbb997",
-    "4e4e3ea3d33eb798db996506b4bf7b12a0402dbf5a6679cfe61a1d2b8180d113",
+    "376afe8edc753f10fa19a252ff4b4a648178a25f5939bb2ed6b68262e1cc7e92",
     "923b21990b54404799f84de10c9fe6703c748109d26a8b27de7f64582c571657",
     "b901b1e67484250e7a2c16a5f0c8a3a05742200e018abbab8bfb58bdfeb8763c",
     "4668f4c7b67e183513e73fcfe3e9c4854bc9daa5849cfdcf7b9dda4d0207392c",
@@ -183,7 +172,7 @@
     "f099bc4599ed10c287a30f464ae6f1c35e68d5751aa0c6ef356fcb9022b68762",
     "ddf6de72eb2cfe0acd15c7dcb655c7fc718c6ff13b26b43f85e44cc6784404a1"
   ],
-  "outputContextHash": "e204f5f5195e5c75ba02b70e2bec8e7319af4d17a31f7fb71c8e3f1752d49722",
-  "reviewedAt": "2026-11-23T15:21:25.135Z",
+  "outputContextHash": "6b9d2f2267077c7059c3f97fe7d0e86ec7b396835e2998601a924e161eac8c19",
+  "reviewedAt": "2026-11-23T15:53:47.847Z",
   "reviewer": "Configured independent chapter reviewer"
 }

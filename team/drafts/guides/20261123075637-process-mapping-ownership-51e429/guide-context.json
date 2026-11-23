@@ -35,7 +35,10 @@
     "Backup",
     "Production process owner",
     "Supervisor",
-    "Authorizing person"
+    "Authorizing person",
+    "Trainer",
+    "Authorized manager",
+    "Authorized decision-maker"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -63,7 +66,13 @@
     "Inventory of candidate maps with format, scope, source location, and acceptance owner",
     "Preparation record identifying source file, intended process entry, scope, relationships, permitted sample, and known limitations",
     "Pilot acceptance decision identifying reviewers, checks performed, discrepancies, and conditions for proceeding",
-    "Transition decision record identifying accepted fallback source and authorized activator"
+    "Transition decision record identifying accepted fallback source and authorized activator",
+    "Participant starting point, task, and help needed",
+    "Pilot scope and acceptance questions",
+    "Pilot decision record with scope and conditions",
+    "Stage scope, training observations, unresolved items, decision-maker, and acceptance conditions",
+    "Feedback observation record with task, starting point, and result",
+    "Follow-up decision record with interim guidance and closing condition"
   ],
   "example": {
     "label": "Illustrative example",
@@ -184,6 +193,21 @@
         "Accept the pilot result or escalate a discrepancy",
         "Decide whether the transition must wait when a readiness answer is unknown",
         "Authorize the cutover decision for an agreed scope"
+      ]
+    },
+    {
+      "slug": "rollout-and-training",
+      "title": "Train teams and roll out: process mapping software for quality management",
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ISO APG link with appropriate hedging, correctly attributing it as educational material on evidence; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
+      "bodyHash": "22ac4fe9617548dac15bb8a86503eba39e5bf2d88a6beb9998c5ce92a76d4747",
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Assign an access investigation and repeat the affected exercise before treating attendance as evidence of readiness",
+        "Decide whether the pilot provides enough evidence to proceed, needs another targeted test, or should pause",
+        "Record the authorization decision stating the group included and the evidence required before expansion",
+        "Decide whether to hold, narrow, or reverse a stage when a critical question remains unanswered",
+        "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed",
+        "Decide whether the next action is to clarify a label, investigate access, or seek more evidence"
       ]
     }
   ],
