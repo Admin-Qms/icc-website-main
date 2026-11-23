@@ -1,0 +1,41 @@
+{
+  "id": "20261123075637-process-mapping-ownership-51e429",
+  "topic": {
+    "id": "process-mapping-ownership",
+    "topic": "Process mapping and process ownership software",
+    "aliases": [],
+    "primaryKeyword": "process mapping software for quality management",
+    "secondaryKeywords": [
+      "process owner assignment",
+      "process flowchart documents linked"
+    ],
+    "moduleSlugs": [
+      "processes"
+    ],
+    "audience": "Canadian quality and operations teams",
+    "problem": "Process maps go stale, processes lack named owners and documents are not tied to the processes they govern, which surfaces at audit.",
+    "priority": 8,
+    "proposedAt": "2026-10-26T15:15:46.773Z",
+    "proposedBy": "topic-scout",
+    "approval": "approved",
+    "approvedBy": "scout-reviewer",
+    "approvedAt": "2026-10-26T15:15:46.773Z",
+    "reviewRules": {
+      "R1_SCOPE": "pass",
+      "R2_DISTINCT": "pass",
+      "R3_SOURCES": "pass",
+      "R4_ACCURACY": "pass",
+      "R5_FIT": "pass"
+    },
+    "reviewFindings": [],
+    "sources": [
+      "https://isocertificationconsultants.ca/solutions/processes/",
+      "https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html"
+    ]
+  },
+  "productionSlotId": "2026-W48-slot-1",
+  "stage": "reserved",
+  "pages": {},
+  "createdAt": "2026-11-23T07:56:37.738Z",
+  "updatedAt": "2026-11-23T07:56:37.738Z"
+}
