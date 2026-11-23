@@ -1,0 +1,309 @@
+{
+  "inputHash": "8bd3ded61c7f8ad9958d32ab2b5d2f4f0b89e880507d5d2d75acd8a3827fd0d5",
+  "reviewContextHash": "1772383ce513a8f7f5803a8a4ed593340e076fc2b78a41b933f5d699e5ec0ce6",
+  "reviewedAt": "2026-11-23T16:12:48.021Z",
+  "screening": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "The outline prescribes 10 chapters with 2000 target words each, but the body content provides only 9 actual chapters. The 'ongoing-operation' chapter includes both 'Measure the review workflow' and a combined 'Frequently asked questions' plus 'Prepare a software demonstration' subsection, which breaks the outline's structure where 'Frequently asked questions' was listed as a separate subsection and 'Prepare a software demonstration' as another. This structural mismatch means the delivered content does not align with the promised outline.",
+      "The introduction (page 1, 'process-mapping-software-for-quality-management') states: 'The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one process map grouped into management, customer-facing, core, and support categories, with a level-two flowchart for each process.' This exact claim is repeated verbatim in the 'mapping-current-processes' chapter ('Define the mapping purpose' subsection): 'The [ICC Processes page](https://isocertificationconsultants.ca/solutions/processes/) describes a level-one process map grouped into management, customer-facing, core and support categories, with a level-two flowchart for each process.' The near-identical wording across standalone pages (with only minor punctuation differences: 'Processes' vs 'process', 'and support' vs 'and support') violates the instruction that chapters are standalone pages and that substantially copied paragraphs or examples constitute a repetition failure. The phrasing is not merely a recurring subject matter or required factual caution; it is a nearly verbatim duplication of a vendor description claim.",
+      "The introduction states that the ICC page 'describes named process owners and links from processes to controlled documents and standard clauses.' This same claim, with nearly identical wording, appears in multiple subsequent chapters: 'mapping-current-processes' ('Record handoffs and exceptions' subsection): 'The [public description of a named owner](https://isocertificationconsultants.ca/solutions/processes/) is not evidence of a particular permission model'; 'process-ownership' ('Define owner responsibilities' subsection): 'Compare the name shown in the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/)'s published owner description with the organization's accepted responsibility statement'; 'evaluating-process-software' ('Test ownership and access' subsection): 'The [ICC page](https://isocertificationconsultants.ca/solutions/processes/) describes named process owners.' These are substantially similar references to the same vendor claim, repeated across multiple chapters beyond what a brief factual caution or cross-reference requires.",
+      "The outline identifies 'process-mapping-ownership' as the topic ID, but the pages delivered do not address the specific topic of 'ownership' assignments with the depth or independence that a dedicated chapter would provide. The 'process-ownership' chapter exists, but it is one of nine chapters rather than the primary focus suggested by the topic ID. The guide's structure distributes ownership questions across multiple chapters (e.g., 'Define owner responsibilities,' 'Assign decisions and backups,' 'Resolve ownership conflicts,' 'Review ownership over time') rather than consolidating them. This fragmentation against the topic ID suggests misalignment between the stated research focus and the delivered content architecture.",
+      "Multiple chapters contain nearly identical subsection structures and workflow descriptions. For example, every subsection in every chapter includes identical boilerplate: 'Explain [subsection title] as an evaluation or implementation decision. Distinguish vendor descriptions, general recommendations and the site's verified evidence.' This exact phrasing, repeated across all chapters, is provided in the outline's 'keyPoints' field for every subsection. While the instruction distinguishes recurring subject matter from prohibited repetition, the identical workflow template and decision-maker structure across nine chapters, combined with identical keyPoints text, creates substantial duplication beyond reasonable chapter independence or necessary recaps. The workflow structure—'role, input, decision, record, exception'—is identical for every subsection across all nine chapters, suggesting a template fill rather than chapter-specific content development.",
+      "The outline's 'estimatedWords' field states 19,500 words total. With 10 outlined chapters at 2,000 target words each, the total should be 20,000. The introduction is promised 1,500 words. The math does not align: 10 chapters × 2000 + 1500 = 21,500, not 19,500. This discrepancy suggests either an error in the outline or an inconsistency in how the guide was planned relative to the delivered structure.",
+      "The source material (research) includes only two sources: 'icc-processes' (the ICC vendor page) and 'iso-apg' (the ISO Auditing Practices Group page). Both sources are cited repeatedly across all chapters. However, the ISO APG source provides only 'educational papers' and explicitly states its guidance 'is not definitive' and 'is not intended as specified requirements.' The ICC page is a vendor marketing description. The guide relies on these two sources for every chapter's key points and evaluation criteria, but neither source provides the actionable, site-specific evidence needed to validate the guide's prescriptions. The guide's repeated claim to distinguish vendor description from verified evidence is undermined by the absence of primary evidence beyond these two limited sources.",
+      "Multiple chapters describe software features (such as automated routing, automatic detection of changes, notification systems, permission models, and backup reassignment) as evaluation questions rather than confirmed capabilities. However, the outline's 'boundary' statements in some chapters (e.g., 'evaluating-process-software') instruct authors to 'Leave plan migration and configuration to its assigned chapter' and similar exclusions. This creates a logical problem: if features remain unanswered questions in one chapter, later chapters cannot reliably build on them. For example, the 'rollout-and-training' chapter assumes features addressed as uncertain in 'evaluating-process-software,' creating circular dependencies rather than independent chapter logic.",
+      "The outline includes a 'glossary' field with a single entry: 'Process owner: The role accountable for decisions and review of a defined process.' However, this glossary appears nowhere in the delivered pages. The guide uses the term 'process owner' throughout but does not display a glossary. This is an unresolved structural gap between the outline specification and the delivered content.",
+      "The guide repeatedly directs readers to 'book a demo' or consult the ICC vendor page, using phrasing such as 'To explore the published approach with a representative sample, [book a demo](https://isocertificationconsultants.ca/contact/).' This call-to-action appears only in the final chapter ('ongoing-operation', 'Prepare a software demonstration' subsection). However, similar invitations are scattered throughout earlier chapters, e.g., 'The [ICC process management information](https://isocertificationconsultants.ca/solutions/processes/) is a source for the vendor's published approach.' While not as explicit as a demo booking button, these repeated references to the vendor page as the primary source for clarification effectively position the vendor site as the arbiter of unanswered questions rather than keeping those questions open for the organization to investigate. This subtle repetition of vendor deferral contradicts the stated goal of distinguishing vendor description from verified evidence.",
+      "The outline specifies 'introductionWords:1500' but does not provide a minimum or maximum for chapter content. The delivered introduction is substantially longer than 1500 words (approximately 2200+ words based on visible content), while several chapters appear shorter than the 2000-word target. Word count distribution across chapters is not transparent, making it impossible to verify whether the 19,500-word budget (or the corrected 21,500 total) has been met or exceeded.",
+      "The 'faqQuestions' array in the outline lists nine questions, and the 'ongoing-operation' chapter includes a 'Frequently asked questions' subsection with nine answered questions. However, the outline's 'boundaries' field for 'ongoing-operation' does not explicitly protect the FAQ from duplication across pages, and the chapter structure suggests the FAQ is embedded within the ongoing-operation page rather than standalone. If another page or chapter references these same FAQs, the repetition would violate the guide's independence requirement. The outline does not clarify whether the FAQ is page-exclusive or shared.",
+      "The 'example' field in the outline specifies: 'Illustrative example: An unnamed Canadian manufacturer evaluates a process map for a production workflow; all situations and records are hypothetical.' This exact example is used throughout every chapter with identical framing: 'Illustrative example:' followed by a hypothetical scenario. However, the variation of scenarios across chapters is minimal and formulaic, often using the same hypothetical manufacturer and production workflow. This creates a pattern of repetitive hypothetical examples rather than chapter-specific illustrations, particularly when the same unresolved issues (e.g., unclear owner, missing document, incomplete record) are iterated across multiple chapters without meaningful variation. The guide's reliance on a single illustrative manufacturer and similar exception patterns across nine chapters constitutes unnecessary repetition masked by minor scenario detail changes."
+    ]
+  },
+  "adjudication": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "failed",
+    "dimensionReasons": {
+      "claims": "All vendor capability descriptions are presented as published vendor descriptions requiring demonstration, not as confirmed operational facts. ICC features (level-one map, level-two flowcharts, named owners, document links, PDF chart review, AI suggestion review, templates, deployment activities) are consistently framed as starting points for evaluation questions. The ISO APG guidance is correctly characterized as educational and non-binding. No assertion that software alone satisfies ISO requirements is made; the guide explicitly denies this in the FAQ. Source-supported claims align with the evidence supplied.",
+      "consistency": "The guide consistently treats ICC descriptions as vendor statements requiring demonstration throughout all nine chapters and the introduction. The ISO APG source is consistently described as educational and non-definitive. The guide maintains a stable internal distinction between observed evidence, vendor descriptions, and organizational decisions. No chapter contradicts another on the nature of these sources or on what the organization must decide for itself. The workflow roles (process owner, quality lead, operations manager, operator, supervisor) are applied consistently across chapters. No internal contradictions were found.",
+      "repetition": "The introduction (page:0) and the mapping-current-processes chapter (page:1) contain substantially copied sentences describing ICC's level-one and level-two map structure. Specifically, page:0:paragraph:5:span:0 reads 'The [ICC process management page]... describes a level-one process map grouped into management, customer-facing, core, and support categories, with a level-two flowchart for each process' and page:1:paragraph:4:span:1 reads 'The [ICC Processes page]... describes categorized maps, flowcharts, owners, and document links' — these differ enough to be near-copy rather than identical. However, page:0:paragraph:5:span:0-span:1 and page:1:paragraph:4:span:0-span:1 together present substantially the same vendor description sentence in adjacent spans. More clearly, the structured vendor-description sentence in page:0:paragraph:5 is substantially reproduced in page:1:paragraph:4, constituting a near-copy across two different reader pages beyond what a brief factual caution requires."
+    },
+    "additionalFindings": [
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding index 0: The outline prescribed 10 chapters but the outline listed 9 chapter slugs (mapping-current-processes, evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, ongoing-operation). The ongoing-operation chapter contains four subsections including FAQ and demonstration preparation as outlined. The delivered pages match the nine chapter slugs listed in the outline's chapters array. The screening's claim of a structural mismatch is not supported by the outline itself, which lists exactly nine chapter entries. The outline's introduction page is separate. This is not a claims defect.",
+        "evidenceIds": [
+          "page:9:paragraph:16",
+          "page:9:paragraph:35"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding index 3: The topic ID 'process-mapping-ownership' is a research identifier, not a promise that the entire guide focuses exclusively on ownership. The guide includes a dedicated chapter (process-ownership) covering four subsections on ownership. The topic ID does not require that ownership be the sole or primary focus of all chapters. No claim is made that the guide is exclusively about ownership. This is not a defect.",
+        "evidenceIds": [
+          "page:4:paragraph:0",
+          "page:4:paragraph:10",
+          "page:4:paragraph:18",
+          "page:4:paragraph:26"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding index 5: The word-count arithmetic discrepancy in the outline is a planning note inconsistency, not a claim made to readers. No page asserts a specific word count. This is not a claims defect in the delivered guide.",
+        "evidenceIds": [],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding index 6: The guide does not claim to have verified sources beyond the two supplied. It explicitly labels ICC descriptions as vendor statements and ISO APG as educational. Using limited sources while being transparent about their nature is not a claims violation; the guide's framing satisfies the maintained writing rule.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "page:0:paragraph:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "consistency",
+        "reason": "Finding index 7: Treating unverified features as evaluation questions in one chapter and referencing the same unverified status in later chapters is internally consistent, not contradictory. Each chapter maintains that the organization must verify features before relying on them. No chapter asserts a feature is available that another chapter says is unverified.",
+        "evidenceIds": [
+          "page:2:paragraph:21",
+          "page:4:paragraph:12",
+          "page:7:paragraph:31"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding index 8: The glossary term 'process owner' is defined inline throughout the guide (page:0:paragraph:4:span:0 and page:4 generally). The absence of a displayed glossary section is a formatting gap, not a false claim. No page asserts a glossary exists.",
+        "evidenceIds": [
+          "page:0:paragraph:4"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding index 9: Linking to the vendor page and offering a demo booking link at the end of the final chapter is a commercial footer, not an assertion that the vendor page resolves unanswered questions. The guide consistently instructs readers to treat vendor descriptions as starting points. The single demo link in the final paragraph does not contradict the guide's maintained framing.",
+        "evidenceIds": [
+          "page:9:paragraph:43"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding index 10: Word count targets are outline planning fields, not claims made to readers. No page asserts a specific word count is achieved.",
+        "evidenceIds": [],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding index 11: The FAQ appears only in page:9 (ongoing-operation). No other chapter reproduces these FAQ answers. The outline boundary for ongoing-operation does not prohibit FAQ content and no other page contains the FAQ questions or answers. No repetition violation.",
+        "evidenceIds": [
+          "page:9:paragraph:17",
+          "page:9:paragraph:19",
+          "page:9:paragraph:21",
+          "page:9:paragraph:23",
+          "page:9:paragraph:25",
+          "page:9:paragraph:27",
+          "page:9:paragraph:29",
+          "page:9:paragraph:31",
+          "page:9:paragraph:33"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding index 4: The outline's keyPoints boilerplate ('Explain X as an evaluation or implementation decision. Distinguish vendor descriptions...') is an outline planning instruction, not reader-page text. Inspecting the actual delivered pages shows each chapter has distinct prose, role-specific scenarios, and chapter-specific guidance. The workflow roles appear across chapters as a necessary structural feature of a multi-chapter implementation guide, not as copied paragraphs. Short recurring cautions about vendor descriptions are permitted under the rules.",
+        "evidenceIds": [],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding index 12: Each chapter's illustrative example is labeled as hypothetical and uses the same unnamed manufacturer as specified by the outline's example field. The scenarios differ materially: mapping boundaries, ownership conflicts, access tests, migration pilots, training rehearsals, and change reviews are distinct chapter-specific situations. Using the same hypothetical manufacturer across chapters is an outline requirement, not prohibited repetition. The subject matter recurs but the specific scenarios, roles consulted, and decisions recorded differ across pages.",
+        "evidenceIds": [
+          "page:1:paragraph:7",
+          "page:2:paragraph:8",
+          "page:3:paragraph:7",
+          "page:4:paragraph:7",
+          "page:5:paragraph:6",
+          "page:6:paragraph:6",
+          "page:7:paragraph:6",
+          "page:8:paragraph:6",
+          "page:9:paragraph:6"
+        ],
+        "comparisons": []
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The outline listed exactly nine chapter slugs. The delivered pages match those nine slugs. The ongoing-operation chapter contains FAQ and demonstration subsections as specified in the outline's subsections array. No structural mismatch constitutes a false claim to readers.",
+        "evidenceIds": [
+          "page:9:paragraph:16",
+          "page:9:paragraph:35"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 1,
+        "verdict": "violation",
+        "dimension": "repetition",
+        "reason": "The introduction page (page:0) and the mapping-current-processes chapter (page:1) both contain substantially the same vendor description of the ICC level-one map and level-two flowchart structure. The sentences in page:0:paragraph:5 and page:1:paragraph:4 are near-copies of each other across two different standalone reader pages. The phrasing goes beyond a brief required factual caution: each sentence identifies the same vendor, the same categories (management, customer-facing, core, support), and the same two-level map structure. This is a substantially copied vendor description sentence, not merely shared subject matter.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "page:1:paragraph:4"
+        ],
+        "comparisons": [
+          {
+            "mode": "near",
+            "leftSpanIds": [
+              "page:0:paragraph:5:span:0",
+              "page:0:paragraph:5:span:1"
+            ],
+            "rightSpanIds": [
+              "page:1:paragraph:4:span:0",
+              "page:1:paragraph:4:span:1"
+            ]
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "The passages cited by the screening are not substantially copied paragraphs. Page:0:paragraph:5:span:1 says the ICC page 'describes named owners and links from processes to controlled documents and standard clauses.' Page:1:paragraph:31:span:3 says 'The [public description of a named owner] is not evidence of a particular permission model.' Page:4:paragraph:3:span:0 says 'Compare the name shown in the ICC page's published owner description with the organization's accepted responsibility statement.' Page:2:paragraph:18:span:0 says 'The [ICC page] describes named process owners.' These are brief factual source cautions applying the vendor description to their specific chapter contexts (permissions, responsibility statements, ownership testing). They are differently worded recommendations in different contexts, not substantially copied paragraphs. Brief recurring factual cautions are permitted.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "page:1:paragraph:31",
+          "page:2:paragraph:18",
+          "page:4:paragraph:3"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 3,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The topic ID is a research planning field, not a reader-facing claim. The guide delivers a dedicated ownership chapter with four subsections. No false promise is made.",
+        "evidenceIds": [
+          "page:4:paragraph:0",
+          "page:4:paragraph:10",
+          "page:4:paragraph:18",
+          "page:4:paragraph:26"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 4,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Outline keyPoints text does not appear verbatim in reader pages. Each chapter's delivered prose is chapter-specific. Recurring structural elements (workflow roles, brief source cautions) are permitted under the rules. No substantially copied paragraphs were found across chapters beyond the finding already addressed in index 1.",
+        "evidenceIds": [],
+        "comparisons": []
+      },
+      {
+        "index": 5,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Word-count planning fields in the outline are not claims made to readers. No defect.",
+        "evidenceIds": [],
+        "comparisons": []
+      },
+      {
+        "index": 6,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The guide transparently labels its two sources as vendor descriptions and educational material respectively. Using limited sources while being honest about their nature satisfies the maintained writing rule.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "page:0:paragraph:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 7,
+        "verdict": "clear",
+        "dimension": "consistency",
+        "reason": "Treating unverified features as evaluation questions consistently across chapters is internally coherent, not contradictory. No chapter asserts a feature the previous chapter declared unverified.",
+        "evidenceIds": [
+          "page:2:paragraph:21",
+          "page:4:paragraph:12",
+          "page:8:paragraph:24"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 8,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Absence of a formatted glossary section is a formatting gap, not a false assertion. The term 'process owner' is defined in page:0:paragraph:4.",
+        "evidenceIds": [
+          "page:0:paragraph:4"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 9,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The demo booking link appears once at the end of the final chapter as a commercial call to action. The guide consistently instructs readers to evaluate claims independently. No false promise is made by the link.",
+        "evidenceIds": [
+          "page:9:paragraph:43"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 10,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Word count targets are planning fields not asserted to readers.",
+        "evidenceIds": [],
+        "comparisons": []
+      },
+      {
+        "index": 11,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "The FAQ content appears only in page:9 and is not reproduced on any other reader page. No repetition violation.",
+        "evidenceIds": [
+          "page:9:paragraph:17",
+          "page:9:paragraph:19",
+          "page:9:paragraph:21",
+          "page:9:paragraph:23"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 12,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "The outline requires the same hypothetical manufacturer across all chapters. Each illustrative example addresses a different chapter-specific decision. Using a common framing label and the same unnamed entity across chapters is required by the outline, not a prohibited copied passage. The scenarios, roles consulted, and specific decisions differ materially across chapters.",
+        "evidenceIds": [
+          "page:1:paragraph:7",
+          "page:2:paragraph:8",
+          "page:3:paragraph:7",
+          "page:4:paragraph:7",
+          "page:5:paragraph:6"
+        ],
+        "comparisons": []
+      }
+    ]
+  }
+}
