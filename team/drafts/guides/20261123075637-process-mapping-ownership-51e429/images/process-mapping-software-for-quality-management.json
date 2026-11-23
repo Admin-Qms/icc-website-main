@@ -1,0 +1,20 @@
+{
+  "id": "process-mapping-software-for-quality-management",
+  "width": 1200,
+  "height": 675,
+  "sha256": "bdfce509ef2169b0c7ec8123e3c19bff909bff50c8d5a79ee68221e64f4fbbb5",
+  "source": "codex",
+  "sourceId": "758802bdb8f0b3c915ee4f77ceb242a50fc8e6a4fa89189218ead20b92ad2e66",
+  "inputHash": "758802bdb8f0b3c915ee4f77ceb242a50fc8e6a4fa89189218ead20b92ad2e66",
+  "alt": "A manufacturing quality lead reviewing a process map beside a production cell; authentic industrial setting, no text or logos",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "c7c405bd50936a67c67292ea5ce69eef6fc338cc275fe4b5094d2102e1cfd4a8",
+  "request": {
+    "id": "process-mapping-software-for-quality-management",
+    "scene": "A manufacturing quality lead reviewing a process map beside a production cell; authentic industrial setting, no text or logos",
+    "kind": "hero",
+    "alt": "A manufacturing quality lead reviewing a process map beside a production cell; authentic industrial setting, no text or logos",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: A manufacturing quality lead reviewing a process map beside a production cell; authentic industrial setting, no text or logos.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-23T16:54:22.151Z"
+}
