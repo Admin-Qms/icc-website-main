@@ -83,3 +83,12 @@ test('comparison witnesses must also be bound to the finding paragraph IDs', asy
     const result = response(message); result.decisions[0].evidenceIds = ['page:0:paragraph:0']; return result;
   }), /comparison/i);
 });
+test('the Claude wire schema requires evidence on indexed and additional outcomes', async () => {
+  await adjudicateGuideAudit(screening, payload('A current boundary example.', 'A current migration example.'), async (_prompt, message, _tokens, options) => {
+    assert.equal(options.schema.properties.decisions.items.properties.evidenceIds.minItems, 1);
+    assert.equal(options.schema.properties.additionalFindings.items.properties.evidenceIds.minItems, 1);
+    const result = response(message);
+    result.repetition = 'passed'; result.decisions[0].verdict = 'clear'; result.decisions[0].comparisons = [];
+    return result;
+  });
+});
