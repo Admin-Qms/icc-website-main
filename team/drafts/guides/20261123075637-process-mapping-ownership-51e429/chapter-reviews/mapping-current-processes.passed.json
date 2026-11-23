@@ -1,0 +1,326 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "All six dimensions pass. The page aligns with its plan brief, covers all four assigned subsections without scope drift, cites only the two assigned source URLs plus one permitted internal path, maintains clear prose, avoids significant repetition, and correctly omits an FAQ section. All three previous findings are confirmed resolved: each previously flagged section now contains an appropriately cited reference to the ICC Processes page supported by the icc-processes source. No changed paragraphs are indicated and no new issues appear in the body. The page correctly treats vendor descriptions as evaluation starting points and distinguishes them from verified plant evidence throughout.",
+  "glossary": [
+    {
+      "term": "Process boundary",
+      "definition": "An agreed statement of where a mapped process starts and ends, naming the triggering event, the output, and the recipient, without implying that work outside the boundary is unimportant."
+    },
+    {
+      "term": "Handoff",
+      "definition": "The point at which one role passes an output to another role, considered complete only when the receiving role has what it needs to act."
+    }
+  ],
+  "roles": [
+    "Process owner",
+    "Quality lead",
+    "Operations manager",
+    "Floor supervisor",
+    "Operator"
+  ],
+  "recordNames": [
+    "Documented decision and its owner",
+    "Completed record of a process instance",
+    "Map including what it includes, excludes, and the decisions it supports",
+    "Record of boundary answers and resolutions",
+    "Record of vendor statements or demonstrated behavior",
+    "Record of date, evidence examined, disagreements found, and resolution owners"
+  ],
+  "decisions": [
+    "Determine which workflow to examine and record that choice with the map",
+    "Resolve disagreement on mapping purpose before treating the map as a basis for a software decision",
+    "Decide whether a site or product-line difference belongs on the common map, in a linked local instruction, or in a separate process",
+    "Mark boundary as unresolved and assign someone to confirm it when evidence is incomplete",
+    "Resolve discrepancy between written procedure and actual records for role accepting an output",
+    "Record escalation route and assign a resolution owner when the route is not agreed",
+    "Decide who can view, propose, review, and release a change to a map and how those decisions are recorded",
+    "Record what was shown, described, or left unanswered during vendor demonstration"
+  ],
+  "previousFindingDecisions": [
+    {
+      "index": 0,
+      "verdict": "clear",
+      "reason": "The current page paragraph 18 cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the top-level map description, flowcharts, and owner information to the vendor page, which is directly supported by source icc-processes claims 0 and 1. The previously flagged absence of assigned evidence in Identify process boundaries is fully resolved.",
+      "evidenceIds": [
+        "page:paragraph:18",
+        "source:0:claim:0",
+        "source:0:claim:1"
+      ]
+    },
+    {
+      "index": 1,
+      "verdict": "clear",
+      "reason": "The current page paragraph 23 cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the description of controlled documents and standard clauses linked to processes to the ICC page, which is supported by source icc-processes claim 1. The previously flagged absence of assigned evidence in Trace inputs and outputs is fully resolved.",
+      "evidenceIds": [
+        "page:paragraph:23",
+        "source:0:claim:1"
+      ]
+    },
+    {
+      "index": 2,
+      "verdict": "clear",
+      "reason": "The current page paragraph 31 cites https://isocertificationconsultants.ca/solutions/processes/ for the named-owner description and correctly treats permission detail as an evaluation question until demonstrated, which is supported by source icc-processes claims 1 and 6. The previously flagged absence of assigned evidence in Record handoffs and exceptions is fully resolved.",
+      "evidenceIds": [
+        "page:paragraph:31",
+        "source:0:claim:1",
+        "source:0:claim:6"
+      ]
+    }
+  ],
+  "resolution": {
+    "protocol": "indexed-chapter-resolution-v1",
+    "previousFindings": [
+      {
+        "section": "Identify process boundaries",
+        "reason": "Previous finding: cite assigned evidence in Identify process boundaries. The changed paragraph now cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the description of a top-level map, flowcharts and owners to the vendor page, which is supported by icc-processes. This finding is resolved.",
+        "action": "No action required; previous finding is resolved."
+      },
+      {
+        "section": "Trace inputs and outputs",
+        "reason": "Previous finding: cite assigned evidence in Trace inputs and outputs. The changed paragraph now cites https://isocertificationconsultants.ca/solutions/processes/ and attributes controlled documents and standard clauses linked to processes to the ICC page, which is supported by icc-processes. This finding is resolved.",
+        "action": "No action required; previous finding is resolved."
+      },
+      {
+        "section": "Record handoffs and exceptions",
+        "reason": "Previous finding: cite assigned evidence in Record handoffs and exceptions. The changed paragraph now cites https://isocertificationconsultants.ca/solutions/processes/ for the named-owner description and correctly treats permission detail as an evaluation question. This finding is resolved.",
+        "action": "No action required; previous finding is resolved."
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "clear",
+        "reason": "The current page paragraph 18 cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the top-level map description, flowcharts, and owner information to the vendor page, which is directly supported by source icc-processes claims 0 and 1. The previously flagged absence of assigned evidence in Identify process boundaries is fully resolved.",
+        "evidenceIds": [
+          "page:paragraph:18",
+          "source:0:claim:0",
+          "source:0:claim:1"
+        ]
+      },
+      {
+        "index": 1,
+        "verdict": "clear",
+        "reason": "The current page paragraph 23 cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the description of controlled documents and standard clauses linked to processes to the ICC page, which is supported by source icc-processes claim 1. The previously flagged absence of assigned evidence in Trace inputs and outputs is fully resolved.",
+        "evidenceIds": [
+          "page:paragraph:23",
+          "source:0:claim:1"
+        ]
+      },
+      {
+        "index": 2,
+        "verdict": "clear",
+        "reason": "The current page paragraph 31 cites https://isocertificationconsultants.ca/solutions/processes/ for the named-owner description and correctly treats permission detail as an evaluation question until demonstrated, which is supported by source icc-processes claims 1 and 6. The previously flagged absence of assigned evidence in Record handoffs and exceptions is fully resolved.",
+        "evidenceIds": [
+          "page:paragraph:31",
+          "source:0:claim:1",
+          "source:0:claim:6"
+        ]
+      }
+    ],
+    "resolvedEvidence": [
+      {
+        "index": 0,
+        "evidence": [
+          {
+            "evidenceId": "page:paragraph:18",
+            "kind": "page",
+            "text": "The vendor's [top-level map description](https://isocertificationconsultants.ca/solutions/processes/) can be a useful demonstration starting point. Ask whether the organization can show its own boundaries and open a flowchart from an appropriate process. Ask who can change the grouping and how a reader knows which map is current. Record the answers as vendor statements or demonstrated behavior, not as a guarantee that every configuration is available.\n\n"
+          },
+          {
+            "evidenceId": "source:0:claim:0",
+            "kind": "source",
+            "sourceId": "icc-processes",
+            "text": "The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process."
+          },
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "sourceId": "icc-processes",
+            "text": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "evidence": [
+          {
+            "evidenceId": "page:paragraph:23",
+            "kind": "page",
+            "text": "The [ICC page](https://isocertificationconsultants.ca/solutions/processes/) describes controlled documents and standard clauses linked to processes. Ask the vendor to demonstrate a process-to-document link using a sample chosen by the plant. Then ask what happens when that document is revised, withdrawn, or temporarily unavailable. The published description is a starting point for the test; it does not establish the behavior of every revision or permission scenario.\n\n"
+          },
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "sourceId": "icc-processes",
+            "text": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "evidence": [
+          {
+            "evidenceId": "page:paragraph:31",
+            "kind": "page",
+            "text": "Access also needs an explicit decision. The people who consult a map may not be the same people who edit it or approve changes. Ask who can view, propose, review, and release a change, and how those decisions are recorded. The [public description of a named owner](https://isocertificationconsultants.ca/solutions/processes/) is not evidence of a particular permission model, so treat permission detail as an evaluation question until demonstrated.\n\n"
+          },
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "sourceId": "icc-processes",
+            "text": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+          },
+          {
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "sourceId": "icc-processes",
+            "text": "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
+          }
+        ]
+      }
+    ]
+  },
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Define the mapping purpose",
+        "section": "Define the mapping purpose"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Define the mapping purpose; semantic review verifies support",
+        "section": "Define the mapping purpose"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Identify process boundaries",
+        "section": "Identify process boundaries"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Identify process boundaries; semantic review verifies support",
+        "section": "Identify process boundaries"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Trace inputs and outputs",
+        "section": "Trace inputs and outputs"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Trace inputs and outputs; semantic review verifies support",
+        "section": "Trace inputs and outputs"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Record handoffs and exceptions",
+        "section": "Record handoffs and exceptions"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Record handoffs and exceptions; semantic review verifies support",
+        "section": "Record handoffs and exceptions"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "7aa8d1e959088c4b3259ccd944256fd78df1c45082c2bfa748dcbe9cac9cfc6a",
+  "contentHash": "c69fd3466c2727f2f3d99e5d1a171a2b22d39429d4485d585f875bc482bc1e88",
+  "paragraphHashes": [
+    "f03b8f70e7e42732e660db0849712ed5a4eb924a80a990869cde6c04a2e6d20f",
+    "66937798e5ad3e50dae9f8165b4ac69bd685ee5151703069f619f86c88a19b85",
+    "c9fd75fd2bd93c254cfccf457bc0234f3c129aa66f5c23d56b31330d3fd921a2",
+    "f69f22b93eb1f8db354d8e66cd6aa9010caf01045e87d3a1576866390b8829f1",
+    "8bcdeab991c2ab3734aca6407829992c21e58434744626dbcbd039a7c488148a",
+    "4dc5994578d8add1df02a52e97fec5ebd89f47cb4b4a1da07761b1bb440aa05e",
+    "653aca5baa64b8333582b5786cb942e0dcf72229ac3a332175de32f0ce3a3441",
+    "cf459e6a4e77bc1e0ca615152cd4a6514b8919582c6ec93af239bfcab5f5c2ce",
+    "bf770e5a454349af2ebafcb92aa675456a531ee9d54f1358ebbbbeedfa7b29da",
+    "05a567e0bc51bf0ca3a75b4b8439cc3421eab2bc98d0257a947b9d2a14fee871",
+    "4e77897fab3192e70752a063eace167858ba2487ebcdff028f8cdb399524e7c4",
+    "cdf98ba48e956b5cb4d7f25a1f74b965b0c734e81d33fc6d98e727ebd138badc",
+    "e85cfafc74a9a9360f0092bfa42ba3887fa43f6fc56d12e5b8c31cb36cc1dfea",
+    "c5f0ddc8d08233aced22360072a5f4ab98f1d945763726850f60f8c6ef6ec8ab",
+    "a3c9779c9ee1315c5d9391730c9ae19b7de0dd16eb22cafb62bdc727599fe6e9",
+    "52e8b9bbcb96debe1635e7ace60d329621d58bdae1e0c939c89879228c657fff",
+    "3bfa2db4578dfd2084970f0d3f4626615e1cafb5ade94a0f7aced6fcc87c9483",
+    "603e9a2e35f0c06a02f670f95b43b887c77cbb7c742c3bac1da17548c62b3dee",
+    "3cd788509828f649f8bf52531877ba770e884d6970d7081a7a5f7cca8b5f8ce1",
+    "5e14326c35e25a0dabd5f96e25e00f7bf1076790ffdbea85a0ead011269c3887",
+    "47bce98511ae3eab35f642a2f4893592716f62c0dc8fa3f9c14a511f85330fc8",
+    "ada28e5fac498efafe83af400c584405880cb0149ce04eb45b6c48113655ea13",
+    "6b40aadb1d68d2ef63aa3d6e5bacce3435adf1ef7545f9441f9966104c1b014e",
+    "64c5de4efeb5459b5f2aed856cbaddeed3e494a48679a16ea87571790055dc3e",
+    "01b1ddee7f2c950ba49b2691bf03eb9b2b338e3df5d30b0aaf7d9a70e7ec20c8",
+    "e98617d12a8d558a7ac2471e55c497e058c5c4be7da0fb5b9ccd59fedde5510f",
+    "e5a5bdfa245c9e3efae89b8c6e6b52464e44a95407dabe3caecdd8142d61ed51",
+    "79353254e7373e5c184223e982aa78cc45a8939c93ba854b0e686257a443d9c5",
+    "abfed04508236c881014d4817dec6cad844e011e1c6e35cf0af00c88bcb2e965",
+    "584fd8299ec9803aa546400694f44ac7981058a0c44a2d2f26f275e5896aa90f",
+    "876f75a04dff38388d0c48400e5a821808ebbdc9cb90cf9c98ceac9ed5dd2a3d",
+    "21c4df32aba7dbc9fd033e465b125e3f6918c7176558592d062fdbc764901777",
+    "7935d39e3ae4d6494a9e448a30beeda17f72fc246eb4c9be286a57eec3872ca8",
+    "cdc3c35bb39f01f1e196097f602f8edd2afea5b1f18fafe212340001aefde966"
+  ],
+  "outputContextHash": "19b1c1e2b3fabad79362ca65eaac9b4778732f76306f01e4be5e45fbed487f3c",
+  "reviewedAt": "2026-11-23T13:54:34.461Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

@@ -5,18 +5,53 @@
     {
       "term": "Process owner",
       "definition": "The role accountable for decisions and review of a defined process."
+    },
+    {
+      "term": "Process boundary",
+      "definition": "An agreed statement of where a mapped process starts and ends, naming the triggering event, the output, and the recipient, without implying that work outside the boundary is unimportant."
+    },
+    {
+      "term": "Handoff",
+      "definition": "The point at which one role passes an output to another role, considered complete only when the receiving role has what it needs to act."
     }
   ],
   "roles": [
     "Quality owner",
     "Process owner",
-    "Operator"
+    "Operator",
+    "Quality lead",
+    "Operations manager",
+    "Floor supervisor"
   ],
-  "recordNames": [],
+  "recordNames": [
+    "Documented decision and its owner",
+    "Completed record of a process instance",
+    "Map including what it includes, excludes, and the decisions it supports",
+    "Record of boundary answers and resolutions",
+    "Record of vendor statements or demonstrated behavior",
+    "Record of date, evidence examined, disagreements found, and resolution owners"
+  ],
   "example": {
     "label": "Illustrative example",
     "description": "An unnamed Canadian manufacturer evaluates a process map for a production workflow; all situations and records are hypothetical."
   },
-  "reviewedChapters": [],
+  "reviewedChapters": [
+    {
+      "slug": "mapping-current-processes",
+      "title": "Map current processes: process mapping software for quality management",
+      "summary": "All six dimensions pass. The page aligns with its plan brief, covers all four assigned subsections without scope drift, cites only the two assigned source URLs plus one permitted internal path, maintains clear prose, avoids significant repetition, and correctly omits an FAQ section. All three previous findings are confirmed resolved: each previously flagged section now contains an appropriately cited reference to the ICC Processes page supported by the icc-processes source. No changed paragraphs are indicated and no new issues appear in the body. The page correctly treats vendor descriptions as evaluation starting points and distinguishes them from verified plant evidence throughout.",
+      "bodyHash": "b198c2f3c6eba2cd1fd752684269894b6fa58d852d6ecf8072e91f6b9c786625",
+      "decisions": [
+        "Determine which workflow to examine and record that choice with the map",
+        "Resolve disagreement on mapping purpose before treating the map as a basis for a software decision",
+        "Decide whether a site or product-line difference belongs on the common map, in a linked local instruction, or in a separate process",
+        "Mark boundary as unresolved and assign someone to confirm it when evidence is incomplete",
+        "Resolve discrepancy between written procedure and actual records for role accepting an output",
+        "Record escalation route and assign a resolution owner when the route is not agreed",
+        "Decide who can view, propose, review, and release a change to a map and how those decisions are recorded",
+        "Record what was shown, described, or left unanswered during vendor demonstration"
+      ]
+    }
+  ],
   "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
 }

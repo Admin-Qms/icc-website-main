@@ -41,11 +41,11 @@
       "wordCount": 2037,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-23T08:03:13.493Z"
+      "checkpointedAt": "2026-11-23T13:54:10.930Z"
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T08:03:31.124Z",
+  "updatedAt": "2026-11-23T13:54:34.465Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -1355,7 +1355,7 @@
     "reviewedChapters": [],
     "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
   },
-  "contextHash": "49c600db5dbcbec048669cbfebf6a08c65d6f2893ec943e3b4506f5aff7d8256",
+  "contextHash": "19b1c1e2b3fabad79362ca65eaac9b4778732f76306f01e4be5e45fbed487f3c",
   "chapterReviews": {
     "mapping-current-processes": {
       "claims": "passed",
@@ -1364,32 +1364,16 @@
       "links": "passed",
       "repetition": "passed",
       "faq": "passed",
-      "findings": [
-        {
-          "section": "Identify process boundaries",
-          "reason": "Previous finding: cite assigned evidence in Identify process boundaries. The changed paragraph now cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the description of a top-level map, flowcharts and owners to the vendor page, which is supported by icc-processes. This finding is resolved.",
-          "action": "No action required; previous finding is resolved."
-        },
-        {
-          "section": "Trace inputs and outputs",
-          "reason": "Previous finding: cite assigned evidence in Trace inputs and outputs. The changed paragraph now cites https://isocertificationconsultants.ca/solutions/processes/ and attributes controlled documents and standard clauses linked to processes to the ICC page, which is supported by icc-processes. This finding is resolved.",
-          "action": "No action required; previous finding is resolved."
-        },
-        {
-          "section": "Record handoffs and exceptions",
-          "reason": "Previous finding: cite assigned evidence in Record handoffs and exceptions. The changed paragraph now cites https://isocertificationconsultants.ca/solutions/processes/ for the named-owner description and correctly treats permission detail as an evaluation question. This finding is resolved.",
-          "action": "No action required; previous finding is resolved."
-        }
-      ],
-      "summary": "All three previously flagged findings are resolved in the changed paragraphs. Each now correctly cites the icc-processes source URL with appropriately hedged vendor-description language. No new problems were found in the changed paragraphs, and unchanged text carries no unresolved prior findings. Claims, scope, readability, links, repetition, and FAQ all pass.",
+      "findings": [],
+      "summary": "All six dimensions pass. The page aligns with its plan brief, covers all four assigned subsections without scope drift, cites only the two assigned source URLs plus one permitted internal path, maintains clear prose, avoids significant repetition, and correctly omits an FAQ section. All three previous findings are confirmed resolved: each previously flagged section now contains an appropriately cited reference to the ICC Processes page supported by the icc-processes source. No changed paragraphs are indicated and no new issues appear in the body. The page correctly treats vendor descriptions as evaluation starting points and distinguishes them from verified plant evidence throughout.",
       "glossary": [
         {
           "term": "Process boundary",
-          "definition": "An agreed statement of where mapped work starts and ends, identifying the inputs received, outputs handed off, and decisions for which the owner is responsible."
+          "definition": "An agreed statement of where a mapped process starts and ends, naming the triggering event, the output, and the recipient, without implying that work outside the boundary is unimportant."
         },
         {
           "term": "Handoff",
-          "definition": "The point at which one role transfers an output to another role, complete only when the receiving role has what it needs to act."
+          "definition": "The point at which one role passes an output to another role, considered complete only when the receiving role has what it needs to act."
         }
       ],
       "roles": [
@@ -1397,24 +1381,171 @@
         "Quality lead",
         "Operations manager",
         "Floor supervisor",
-        "Reviewer"
+        "Operator"
       ],
       "recordNames": [
         "Documented decision and its owner",
-        "Completed record or physical output",
+        "Completed record of a process instance",
         "Map including what it includes, excludes, and the decisions it supports",
-        "Record of boundary answers resolved by the owner",
+        "Record of boundary answers and resolutions",
+        "Record of vendor statements or demonstrated behavior",
         "Record of date, evidence examined, disagreements found, and resolution owners"
       ],
       "decisions": [
         "Determine which workflow to examine and record that choice with the map",
         "Resolve disagreement on mapping purpose before treating the map as a basis for a software decision",
-        "Decide whether a boundary difference belongs on a common map, in a linked local instruction, or in a separate process",
-        "Decide whether work can proceed when an output is incomplete",
-        "Determine ownership, acceptance, and next action for each handoff or exception",
-        "Agree on who can view, propose, review, and release a change to a map"
+        "Decide whether a site or product-line difference belongs on the common map, in a linked local instruction, or in a separate process",
+        "Mark boundary as unresolved and assign someone to confirm it when evidence is incomplete",
+        "Resolve discrepancy between written procedure and actual records for role accepting an output",
+        "Record escalation route and assign a resolution owner when the route is not agreed",
+        "Decide who can view, propose, review, and release a change to a map and how those decisions are recorded",
+        "Record what was shown, described, or left unanswered during vendor demonstration"
       ],
-      "pass": false,
+      "previousFindingDecisions": [
+        {
+          "index": 0,
+          "verdict": "clear",
+          "reason": "The current page paragraph 18 cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the top-level map description, flowcharts, and owner information to the vendor page, which is directly supported by source icc-processes claims 0 and 1. The previously flagged absence of assigned evidence in Identify process boundaries is fully resolved.",
+          "evidenceIds": [
+            "page:paragraph:18",
+            "source:0:claim:0",
+            "source:0:claim:1"
+          ]
+        },
+        {
+          "index": 1,
+          "verdict": "clear",
+          "reason": "The current page paragraph 23 cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the description of controlled documents and standard clauses linked to processes to the ICC page, which is supported by source icc-processes claim 1. The previously flagged absence of assigned evidence in Trace inputs and outputs is fully resolved.",
+          "evidenceIds": [
+            "page:paragraph:23",
+            "source:0:claim:1"
+          ]
+        },
+        {
+          "index": 2,
+          "verdict": "clear",
+          "reason": "The current page paragraph 31 cites https://isocertificationconsultants.ca/solutions/processes/ for the named-owner description and correctly treats permission detail as an evaluation question until demonstrated, which is supported by source icc-processes claims 1 and 6. The previously flagged absence of assigned evidence in Record handoffs and exceptions is fully resolved.",
+          "evidenceIds": [
+            "page:paragraph:31",
+            "source:0:claim:1",
+            "source:0:claim:6"
+          ]
+        }
+      ],
+      "resolution": {
+        "protocol": "indexed-chapter-resolution-v1",
+        "previousFindings": [
+          {
+            "section": "Identify process boundaries",
+            "reason": "Previous finding: cite assigned evidence in Identify process boundaries. The changed paragraph now cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the description of a top-level map, flowcharts and owners to the vendor page, which is supported by icc-processes. This finding is resolved.",
+            "action": "No action required; previous finding is resolved."
+          },
+          {
+            "section": "Trace inputs and outputs",
+            "reason": "Previous finding: cite assigned evidence in Trace inputs and outputs. The changed paragraph now cites https://isocertificationconsultants.ca/solutions/processes/ and attributes controlled documents and standard clauses linked to processes to the ICC page, which is supported by icc-processes. This finding is resolved.",
+            "action": "No action required; previous finding is resolved."
+          },
+          {
+            "section": "Record handoffs and exceptions",
+            "reason": "Previous finding: cite assigned evidence in Record handoffs and exceptions. The changed paragraph now cites https://isocertificationconsultants.ca/solutions/processes/ for the named-owner description and correctly treats permission detail as an evaluation question. This finding is resolved.",
+            "action": "No action required; previous finding is resolved."
+          }
+        ],
+        "decisions": [
+          {
+            "index": 0,
+            "verdict": "clear",
+            "reason": "The current page paragraph 18 cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the top-level map description, flowcharts, and owner information to the vendor page, which is directly supported by source icc-processes claims 0 and 1. The previously flagged absence of assigned evidence in Identify process boundaries is fully resolved.",
+            "evidenceIds": [
+              "page:paragraph:18",
+              "source:0:claim:0",
+              "source:0:claim:1"
+            ]
+          },
+          {
+            "index": 1,
+            "verdict": "clear",
+            "reason": "The current page paragraph 23 cites https://isocertificationconsultants.ca/solutions/processes/ and attributes the description of controlled documents and standard clauses linked to processes to the ICC page, which is supported by source icc-processes claim 1. The previously flagged absence of assigned evidence in Trace inputs and outputs is fully resolved.",
+            "evidenceIds": [
+              "page:paragraph:23",
+              "source:0:claim:1"
+            ]
+          },
+          {
+            "index": 2,
+            "verdict": "clear",
+            "reason": "The current page paragraph 31 cites https://isocertificationconsultants.ca/solutions/processes/ for the named-owner description and correctly treats permission detail as an evaluation question until demonstrated, which is supported by source icc-processes claims 1 and 6. The previously flagged absence of assigned evidence in Record handoffs and exceptions is fully resolved.",
+            "evidenceIds": [
+              "page:paragraph:31",
+              "source:0:claim:1",
+              "source:0:claim:6"
+            ]
+          }
+        ],
+        "resolvedEvidence": [
+          {
+            "index": 0,
+            "evidence": [
+              {
+                "evidenceId": "page:paragraph:18",
+                "kind": "page",
+                "text": "The vendor's [top-level map description](https://isocertificationconsultants.ca/solutions/processes/) can be a useful demonstration starting point. Ask whether the organization can show its own boundaries and open a flowchart from an appropriate process. Ask who can change the grouping and how a reader knows which map is current. Record the answers as vendor statements or demonstrated behavior, not as a guarantee that every configuration is available.\n\n"
+              },
+              {
+                "evidenceId": "source:0:claim:0",
+                "kind": "source",
+                "sourceId": "icc-processes",
+                "text": "The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process."
+              },
+              {
+                "evidenceId": "source:0:claim:1",
+                "kind": "source",
+                "sourceId": "icc-processes",
+                "text": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "evidence": [
+              {
+                "evidenceId": "page:paragraph:23",
+                "kind": "page",
+                "text": "The [ICC page](https://isocertificationconsultants.ca/solutions/processes/) describes controlled documents and standard clauses linked to processes. Ask the vendor to demonstrate a process-to-document link using a sample chosen by the plant. Then ask what happens when that document is revised, withdrawn, or temporarily unavailable. The published description is a starting point for the test; it does not establish the behavior of every revision or permission scenario.\n\n"
+              },
+              {
+                "evidenceId": "source:0:claim:1",
+                "kind": "source",
+                "sourceId": "icc-processes",
+                "text": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "evidence": [
+              {
+                "evidenceId": "page:paragraph:31",
+                "kind": "page",
+                "text": "Access also needs an explicit decision. The people who consult a map may not be the same people who edit it or approve changes. Ask who can view, propose, review, and release a change, and how those decisions are recorded. The [public description of a named owner](https://isocertificationconsultants.ca/solutions/processes/) is not evidence of a particular permission model, so treat permission detail as an evaluation question until demonstrated.\n\n"
+              },
+              {
+                "evidenceId": "source:0:claim:1",
+                "kind": "source",
+                "sourceId": "icc-processes",
+                "text": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+              },
+              {
+                "evidenceId": "source:0:claim:6",
+                "kind": "source",
+                "sourceId": "icc-processes",
+                "text": "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
+              }
+            ]
+          }
+        ]
+      },
+      "pass": true,
       "deterministic": {
         "pass": true,
         "checks": [
@@ -1548,8 +1679,8 @@
         "7935d39e3ae4d6494a9e448a30beeda17f72fc246eb4c9be286a57eec3872ca8",
         "cdc3c35bb39f01f1e196097f602f8edd2afea5b1f18fafe212340001aefde966"
       ],
-      "outputContextHash": "49c600db5dbcbec048669cbfebf6a08c65d6f2893ec943e3b4506f5aff7d8256",
-      "reviewedAt": "2026-11-23T08:03:31.122Z",
+      "outputContextHash": "19b1c1e2b3fabad79362ca65eaac9b4778732f76306f01e4be5e45fbed487f3c",
+      "reviewedAt": "2026-11-23T13:54:34.461Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
