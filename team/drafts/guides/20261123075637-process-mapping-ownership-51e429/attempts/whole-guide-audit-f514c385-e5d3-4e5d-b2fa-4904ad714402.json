@@ -1,0 +1,196 @@
+{
+  "inputHash": "d0f76975d30c11599d0e9eb252a5d05cdc9cbcf631ce982f482fbcb7bed9a41a",
+  "reviewContextHash": "99a09eeabaf74f554063590f41580783a7f8277afe3f6cbccaf512e8706e94c1",
+  "reviewedAt": "2026-11-23T15:23:37.499Z",
+  "screening": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "Systematic repetition of a three-part explanatory structure recurs throughout the nine content pages: (1) role/concept definition, (2) identical vendor-description-with-qualification pattern ('The [ICC page] describes... This published description does not establish...'), (3) illustrative example using prescribed template ('An unnamed Canadian manufacturer... The example is hypothetical'). This pattern is substantially copied across mapping-current-processes, evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, and ongoing-operation. Example: mapping-current-processes states 'The [ICC process management page] describes... Those are published vendor descriptions' and mapping-workflows repeats 'The [ICC page] describes process flowcharts... It does not establish.' This constitutes nearly verbatim repetition of a qualifying framework across independent chapters rather than genuinely distinct chapter-specific composition.",
+      "The illustrative example structure is prescribed identically across pages and subsections: 'An unnamed Canadian manufacturer evaluates/tests [hypothetical work]... all situations and records are hypothetical... This scenario is hypothetical; it is not a case study or a measured customer result.' This exact template or near-identical variants appear in mapping-current-processes ('An unnamed Canadian manufacturer evaluates a hypothetical map... The example is hypothetical...'), evaluating-process-software ('An unnamed manufacturer tests...'), process-architecture ('Classify a hypothetical maintenance activity... The owners choose...'), mapping-workflows ('Walk a hypothetical record...'), documents-and-evidence ('Consider the hypothetical access test...'), migration-and-configuration ('At the hypothetical comparison meeting...'), rollout-and-training ('During a hypothetical rehearsal...'), and ongoing-operation ('To inspect hypothetical change records...'). The core disclaimer ('The example is hypothetical...it is not...a measured customer result') recurs verbatim or near-verbatim across multiple chapters, violating the prohibition on substantially copied paragraphs.",
+      "Identical closing-record directives appear across chapters: 'Keep [X] with [Y] under the organization's controls' and variations ('Keep that decision accessible to the people who will carry it forward'; 'Keep a record for each criterion'; 'Keep the review outcome with...'; 'Retain the source inventory...'; 'Keep the accepted assignment and unresolved items together'). While record retention is a recurring topic, the identical directive phrasing and structure across independent chapters constitutes repetition of explanatory language rather than chapter-specific guidance. The pattern also appears in opening statements such as 'Record [X] and [decision]' used identically across multiple pages to structure recommendations.",
+      "The vendor-description-and-qualification language is reproduced with minimal variation across at least six chapters. Example sequences: mapping-current-processes 'The [ICC process management page] describes...Those are published vendor descriptions. They are not evidence...' and evaluating-process-software 'The [ICC process management description]...does not establish the exact behavior.' The identical rhetorical move—cite the page, state its scope limits, assert it is not proof—recurs in process-architecture ('The [ICC description] presents...These are published vendor descriptions, not verified installed behavior'), process-ownership ('The [ICC page] describes... A displayed name alone does not establish'), documents-and-evidence ('The [ICC page] describes... It does not establish...'), and migration-and-configuration ('The [ICC page]...does not guarantee'). This systematic reuse of the same qualifying formula across chapters violates the prohibition on substantially copied explanatory passages.",
+      "The ISO auditing guidance collection citation includes identical or near-identical qualification statements across multiple chapters: 'The [ISO guidance collection] provides educational material...and states its guidance is not definitive and is not intended as specified requirements, a benchmark or mandatory audit criteria' or close variants. This exact disclaimer appears in mapping-current-processes, evaluating-process-software, process-architecture, mapping-workflows, documents-and-evidence, and ongoing-operation. While the topic recurs legitimately, the identical recitation of the disclaimer—not merely the disclaimer itself but its precise phrasing—across six independent chapters constitutes substantially copied text rather than chapter-specific application of a shared guideline.",
+      "Multiple subsections across chapters open with structurally identical role-definition sentences: 'A [role/concept] is [definition]. [Question about whether it is established by software or map].' Examples: process-ownership 'A process owner is the role accountable for decisions...'; mapping-workflows 'A workflow map is a working explanation...'; documents-and-evidence 'Traceability is useful when...'. These definitional openings are followed immediately by the same vendor-description-and-qualification pattern. The cumulative effect across nine chapters of opening subsections with this identical definitional-then-qualification structure constitutes systematic repetition that makes chapters appear as template variations rather than independently composed guidance.",
+      "The outline prescribes identical workflow and evaluation-criteria templates for all 32+ subsections across nine chapters: 'role Assigned process owner | input Current process records...| decision Determine ownership...| record Documented decision and its owner | exception Missing evidence...' This prescribed structure is implemented without meaningful variation across chapters, and in multiple places the pages repeat the exact same role descriptions, input statements, and exception labels. While workflow structure may be legitimately repeated, the identical column text and role descriptions across independent chapters (e.g., every subsection in multiple chapters uses 'Assigned process owner' and 'Current process records and relevant evidence' identically) constitutes repetition that obscures chapter distinctiveness."
+    ]
+  },
+  "adjudication": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "failed",
+    "dimensionReasons": {
+      "claims": "All vendor capability claims in the guide are explicitly qualified as published vendor descriptions rather than verified behavior. The ICC source is consistently cited with qualifications such as 'Those are published vendor descriptions. They are not evidence that a particular plant has a given problem' (page:0:paragraph:5) and 'The published page does not establish that every relationship will be transferred automatically' (page:7:paragraph:11). The ISO APG source is properly cited as educational and not mandatory audit criteria (page:0:paragraph:6). The AI output claim at page:0:paragraph:18 is explicitly framed as a starting point for questions, not an asserted capability. No unqualified capability promises appear; every vendor description is paired with an explicit caution. Claims dimension passes.",
+      "consistency": "The guide maintains consistent framing throughout: vendor descriptions are always qualified, examples are always labeled hypothetical, and no chapter contradicts another on scope, role definitions, or capability boundaries. The introduction at page:0:paragraph:5 sets the qualification framework, and each chapter applies it without contradiction. The ISO APG qualification at source:1:claim:1 is accurately represented across all chapters. The certification disclaimer at page:9:paragraph:32 is consistent with the introduction's framing. No internal contradictions between chapters were found. Consistency dimension passes.",
+      "repetition": "The screening identifies seven repetition findings. After inspecting the actual passages, several are confirmed as genuine repetition of substantially copied text rather than merely recurring subject matter or short factual cautions. Finding 1 (three-part structure) describes a structural pattern but the actual passages vary materially in content across chapters—this is recurring subject matter, not substantially copied paragraphs. Finding 4 (ISO APG disclaimer) is a necessary short factual caution that legitimately recurs; the phrasing 'its guidance is not definitive and is not intended as specified requirements, a benchmark or mandatory audit criteria' or close variants recurs but this qualifies as a short factual caution under the maintained rule. Finding 6 (outline workflow template) is an outline prescription, not copied prose in the pages themselves. However, Findings 1, 3, and 5 together identify a genuine pattern: the vendor-description-and-qualification formula is reproduced with minimal variation in substantive paragraphs across at least six chapters. For example, page:1:paragraph:4 states 'The [ICC Processes page] describes categorized maps, flowcharts, owners, and document links; use the sample to ask how those elements would be shown' and page:3:paragraph:10 states 'The [ICC description] presents a top-level process map and detailed flowcharts. Use that description as a point of comparison... It does not establish the layout, navigation, or configuration of a particular installation.' These are differently worded recommendations on the same theme. Examining the actual passages more carefully: the introduction paragraph page:0:paragraph:5 contains 'Those are published vendor descriptions. They are not evidence that a particular plant has a given problem, that every configuration behaves identically, or that a software map alone satisfies a standard.' This specific multi-clause formulation does not recur verbatim in content chapters. The illustrative example disclaimers (Finding 2) in the introduction at page:0:paragraph:7 contain 'This scenario is hypothetical; it is not a case study or a measured customer result.' Inspecting actual chapter examples: page:4:paragraph:24 ends 'The example is illustrative, not evidence of an actual site's problems or a guaranteed outcome.' page:5:paragraph:15 states 'The map remains a proposal until the responsible people accept it under their own process.' The specific phrase 'it is not a case study or a measured customer result' appears only in the introduction. Chapter examples use varied wording. The 'Keep [X] with [Y]' directives (Finding 3): page:4:paragraph:33 'Keep the accepted assignment and unresolved items together in an appropriate record'; page:7:paragraph:17 'A preparation record should allow a reviewer to compare like with like'; page:2:paragraph:24 'Keep a record for each criterion.' These are general record-keeping advice with varied wording rather than substantially copied paragraphs. After careful inspection of the actual passages, the screening overstates the degree of verbatim copying. The vendor-qualification pattern and example-labeling pattern recur as a necessary structural approach, but the actual paragraph text varies meaningfully. The rule states: 'Fail repetition for substantially copied paragraphs or examples, not merely recurring subject matter or short factual cautions.' The ISO APG disclaimer is a short factual caution. The vendor-qualification language varies across chapters. However, the outline-prescribed workflow table (Finding 6) with identical role/input/decision/record/exception columns across all 32+ subsections represents a genuine structural repetition concern, though the outline is a planning document and the pages implement it with varied content. On balance, the actual page paragraphs do not contain substantially copied paragraphs; the pattern is recurring subject matter and necessary short cautions. However, the introduction's example paragraph at page:0:paragraph:7 contains a disclaimer that is essentially the template for all chapter examples, and the ISO APG disclaimer at source:1:claim:1 is reproduced near-verbatim in page:1:paragraph:5, page:2:paragraph:7, page:3:paragraph:6, page:4:paragraph:6, page:5:paragraph:5, page:6:paragraph:5, page:6:paragraph:28, page:8:paragraph:5, page:9:paragraph:5, and page:9:paragraph:30. Specifically comparing: page:1:paragraph:5 'its guidance is not definitive or mandatory audit criteria' vs page:2:paragraph:7 'Its guidance is not definitive or mandatory audit criteria' vs page:3:paragraph:6 'its guidance is not definitive or mandatory audit criteria' vs page:4:paragraph:6 'the guidance is not definitive or mandatory audit criteria' vs page:5:paragraph:5 'its guidance is not definitive or mandatory audit criteria' vs page:6:paragraph:5 'its guidance is not definitive or mandatory audit criteria' vs page:9:paragraph:30 'expressly states that its guidance is not mandatory audit criteria.' This phrase appears in ten or more locations with near-identical wording. While a single short factual caution may legitimately recur, this same qualifier appearing in effectively every chapter in full-sentence form across the entire guide constitutes substantially repeated text. Repetition dimension fails on this basis."
+    },
+    "additionalFindings": [
+      {
+        "verdict": "clear",
+        "reason": "The screening's finding 1 (systematic three-part structure) describes a recurring compositional approach. Inspecting actual passages, the content varies meaningfully by chapter: mapping-current-processes discusses boundary identification, evaluating-process-software discusses demonstration criteria, process-architecture discusses grouping, etc. The structure is a template, not substantially copied paragraphs. This finding is cleared as recurring subject matter rather than verbatim repetition.",
+        "evidenceIds": [
+          "page:1:paragraph:4",
+          "page:2:paragraph:4",
+          "page:3:paragraph:3",
+          "page:5:paragraph:3"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 2 (illustrative example structure): inspecting actual chapter examples, the specific disclaimer 'it is not a case study or a measured customer result' appears only in the introduction (page:0:paragraph:7). Chapter examples use varied wording: 'The example is illustrative, not evidence of an actual site's problems' (page:4:paragraph:24), 'The map remains a proposal' (page:5:paragraph:15), 'Compare the site label in the output' (page:7:paragraph:23). These are not substantially copied paragraphs. Cleared as varying implementations of a necessary labeling convention.",
+        "evidenceIds": [
+          "page:0:paragraph:7",
+          "page:4:paragraph:24",
+          "page:7:paragraph:23",
+          "page:5:paragraph:15"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 3 (identical closing-record directives): inspecting actual passages, the 'Keep [X]' phrases vary in content and context across chapters and represent general record-keeping advice rather than substantially copied paragraphs. 'Keep that decision accessible' (page:0:paragraph:23), 'Keep a record for each criterion' (page:2:paragraph:24), 'Keep the accepted assignment' (page:4:paragraph:33) are thematically similar but not substantially copied. Cleared as recurring subject matter.",
+        "evidenceIds": [
+          "page:0:paragraph:23",
+          "page:2:paragraph:24",
+          "page:4:paragraph:33",
+          "page:7:paragraph:17"
+        ]
+      },
+      {
+        "verdict": "violation",
+        "reason": "Finding 4 (ISO APG disclaimer): the phrase 'its guidance is not definitive' and variants appear near-verbatim in at least nine chapter locations. While a short factual caution may legitimately recur, this multi-clause sentence appears in full form in effectively every chapter of the guide, constituting substantially repeated text beyond what is needed as a brief jurisdictional or factual caution. This is the genuine repetition violation supporting the failed repetition dimension.",
+        "evidenceIds": [
+          "page:1:paragraph:5",
+          "page:2:paragraph:7",
+          "page:3:paragraph:6",
+          "page:4:paragraph:6",
+          "page:5:paragraph:5",
+          "page:6:paragraph:5",
+          "page:6:paragraph:28",
+          "page:8:paragraph:5",
+          "page:9:paragraph:5",
+          "page:9:paragraph:30"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 5 (definitional opening sentences): inspecting actual subsection openings, they vary meaningfully: 'A process boundary is an agreement about where the mapped work starts and ends' (page:1:paragraph:11), 'A workflow map is a working explanation of how a selected process proceeds' (page:5:paragraph:1), 'Traceability is useful when a reviewer can follow a process explanation' (page:6:paragraph:27). These are different definitions for different concepts, not substantially copied text. Cleared as recurring subject matter.",
+        "evidenceIds": [
+          "page:1:paragraph:11",
+          "page:5:paragraph:1",
+          "page:6:paragraph:27",
+          "page:4:paragraph:0"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 6 (vendor-description-and-qualification formula): the actual paragraphs vary in which ICC feature is cited and what qualification applies. Page:1:paragraph:23 discusses document-revision behavior; page:3:paragraph:10 discusses layout and navigation; page:5:paragraph:11 discusses symbols and editing controls; page:7:paragraph:11 discusses relationship transfer. The formula is a necessary evaluative approach applied to different subject matter in each chapter, not substantially copied paragraphs. Cleared as recurring subject matter applied to distinct chapter content.",
+        "evidenceIds": [
+          "page:1:paragraph:23",
+          "page:3:paragraph:10",
+          "page:5:paragraph:11",
+          "page:7:paragraph:11"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 7 (outline workflow template): the outline prescribes a template, but the actual page content does not reproduce identical workflow table rows. The outline structure is a planning tool; the pages implement it with varied prose. No substantially copied workflow table paragraphs appear in the actual page content. Cleared.",
+        "evidenceIds": [
+          "page:1:paragraph:2",
+          "page:2:paragraph:2",
+          "page:3:paragraph:2",
+          "page:4:paragraph:2"
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "clear",
+        "reason": "The three-part structural pattern (definition, vendor qualification, illustrative example) is a recurring compositional approach applied to different subject matter in each chapter. Inspecting actual passages, the content varies meaningfully by chapter topic. The rule requires substantially copied paragraphs, not recurring structure. The pattern does not constitute verbatim or near-verbatim copying of paragraph text. Cleared as recurring subject matter and necessary compositional framework.",
+        "evidenceIds": [
+          "page:1:paragraph:4",
+          "page:2:paragraph:4",
+          "page:3:paragraph:3",
+          "page:5:paragraph:3",
+          "page:4:paragraph:3"
+        ]
+      },
+      {
+        "index": 1,
+        "verdict": "clear",
+        "reason": "The illustrative example disclaimers vary across chapters. The specific phrase from the introduction ('it is not a case study or a measured customer result') does not recur verbatim in content chapters, which use varied wording. Each chapter example addresses a different hypothetical scenario with different content. The rule requires substantially copied paragraphs; these examples implement the same labeling convention with varying text. Cleared.",
+        "evidenceIds": [
+          "page:0:paragraph:7",
+          "page:4:paragraph:24",
+          "page:7:paragraph:23",
+          "page:8:paragraph:6",
+          "page:5:paragraph:6"
+        ]
+      },
+      {
+        "index": 2,
+        "verdict": "clear",
+        "reason": "The 'Keep [X] with [Y]' closing directives vary in content across chapters and represent general record-keeping advice applied to different process contexts. The actual paragraph text is not substantially copied; the similarity is thematic. Cleared as recurring subject matter.",
+        "evidenceIds": [
+          "page:0:paragraph:23",
+          "page:2:paragraph:24",
+          "page:4:paragraph:33",
+          "page:9:paragraph:36"
+        ]
+      },
+      {
+        "index": 3,
+        "verdict": "clear",
+        "reason": "The vendor-description-and-qualification language addresses different ICC features in each chapter and uses varied qualifying clauses. Page:1:paragraph:23 addresses revision behavior; page:3:paragraph:10 addresses layout; page:5:paragraph:11 addresses symbols; page:7:paragraph:11 addresses relationship transfer. While the rhetorical move recurs, the actual paragraph text is not substantially copied. Cleared as a necessary evaluative approach with varying content.",
+        "evidenceIds": [
+          "page:1:paragraph:23",
+          "page:3:paragraph:10",
+          "page:5:paragraph:11",
+          "page:7:paragraph:11",
+          "page:0:paragraph:5"
+        ]
+      },
+      {
+        "index": 4,
+        "verdict": "violation",
+        "reason": "The ISO APG disclaimer appears near-verbatim ('its guidance is not definitive' / 'not intended as specified requirements, a benchmark or mandatory audit criteria' or close variants) in at least nine chapter locations. While a short factual caution may legitimately recur, the full multi-clause disclaimer sentence is reproduced in effectively every content chapter, constituting substantially repeated text across independent chapters beyond what is necessary as a brief caution. This is a genuine repetition violation.",
+        "evidenceIds": [
+          "page:1:paragraph:5",
+          "page:2:paragraph:7",
+          "page:3:paragraph:6",
+          "page:4:paragraph:6",
+          "page:5:paragraph:5",
+          "page:6:paragraph:5",
+          "page:6:paragraph:28",
+          "page:8:paragraph:5",
+          "page:9:paragraph:5",
+          "page:9:paragraph:30"
+        ]
+      },
+      {
+        "index": 5,
+        "verdict": "clear",
+        "reason": "The definitional opening sentences address different concepts in each subsection: process boundary (page:1:paragraph:11), workflow map (page:5:paragraph:1), traceability (page:6:paragraph:27), process owner (page:4:paragraph:4). These are distinct definitions for distinct concepts and are not substantially copied. The structural similarity of opening with a definition is a compositional choice, not verbatim text copying. Cleared.",
+        "evidenceIds": [
+          "page:1:paragraph:11",
+          "page:5:paragraph:1",
+          "page:6:paragraph:27",
+          "page:4:paragraph:4"
+        ]
+      },
+      {
+        "index": 6,
+        "verdict": "clear",
+        "reason": "The outline workflow template is a planning prescription; the actual page content does not reproduce identical workflow table rows as paragraph text. The pages implement the template with varied prose addressing different subject matter. No substantially copied workflow table content appears in the page paragraphs. Cleared.",
+        "evidenceIds": [
+          "page:1:paragraph:2",
+          "page:2:paragraph:2",
+          "page:3:paragraph:2",
+          "page:4:paragraph:2",
+          "page:5:paragraph:2"
+        ]
+      }
+    ]
+  }
+}
