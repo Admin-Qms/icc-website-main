@@ -53,7 +53,7 @@ A simple design review can use representative questions. Ask a reader to locate 
 
 Show the scope of the overview. If it applies to a particular site or product line, identify that limitation in the accompanying record. If a shared process differs by location, decide whether the top-level entry refers to a common process with local details or whether separate entries are needed. Do not infer that either choice is automatically correct. The decision should make the route to the applicable detail clear to the reader.
 
-**Illustrative example:** In the hypothetical overview exercise, the process owners sketch an overview with a production entry and its important neighboring processes. An operator unfamiliar with the sketch tries to find the sample workflow. The team notes where the label or connection caused confusion and revises the proposal before accepting it. Use the reader’s route to locate the ambiguous label, then ask the relevant owners to agree on its scope.
+**Illustrative example:** In the hypothetical overview exercise, the process owners sketch an overview with a production entry and its important neighboring processes. An operator unfamiliar with the sketch tries to find the sample workflow. The team notes where the label or connection caused confusion and revises the proposal before accepting it. Use the reader's route to locate the ambiguous label, then ask the relevant owners to agree on its scope.
 
 Record the accepted overview, its scope, the people who reviewed it, and outstanding exceptions. If an important process has no agreed representation, mark the item as unresolved and assign a decision owner. The map should not present an uncertain relationship as settled merely because the diagram has space for a connecting line.
 

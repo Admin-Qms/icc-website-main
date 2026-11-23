@@ -51,11 +51,11 @@
       "checkpointedAt": "2026-11-23T15:13:09.978Z"
     },
     "process-architecture": {
-      "hash": "3b02e72d67bc7fff45c7d75efb45b89a130c2d08020506017e0ae3125bb02925",
-      "wordCount": 2008,
+      "hash": "37839a1107d33a8d8021736da220064978d99517e5d923efc83c82473bcc106b",
+      "wordCount": 2003,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-23T14:54:42.639Z"
+      "checkpointedAt": "2026-11-23T15:14:26.854Z"
     },
     "process-ownership": {
       "hash": "2046ffcd94ec6f6d3ea0a6e9331de769d4d80ee78d32a3619e135d6225d2b004",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T15:13:17.845Z",
+  "updatedAt": "2026-11-23T15:14:36.638Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -1418,7 +1418,7 @@
     "reviewedChapters": [],
     "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
   },
-  "contextHash": "8ba4ec15e165d8c79c93e501bddd74d05903349e0b4fb982d032c464f36954a3",
+  "contextHash": "f61ca39d40fba97cca035821e8b59a5750492b7583c9f073c7a6b4b56f4026ba",
   "chapterReviews": {
     "mapping-current-processes": {
       "claims": "passed",
@@ -1764,6 +1764,178 @@
       ],
       "outputContextHash": "8ba4ec15e165d8c79c93e501bddd74d05903349e0b4fb982d032c464f36954a3",
       "reviewedAt": "2026-11-23T15:13:17.839Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "process-architecture": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All four subsections cover design a process architecture within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. The changed paragraphs introduce no new problems, and there are no unresolved findings from the previous review. The page passes all checks.",
+      "glossary": [],
+      "roles": [
+        "Quality lead",
+        "Operations manager",
+        "Process owner",
+        "Operator",
+        "Reader"
+      ],
+      "recordNames": [
+        "Documented decision and its owner",
+        "Working list of candidate processes",
+        "Accepted overview record noting scope, reviewers, and outstanding exceptions",
+        "Discrepancy record noting name or scope differences between levels",
+        "Interface review record noting sample, participants, agreement, and open questions"
+      ],
+      "decisions": [
+        "Determine ownership, acceptance and next action for each candidate process entry",
+        "Decide whether a disputed process needs one entry or two in the overview",
+        "Decide where the primary entry of a multi-purpose process belongs and identify other relationships as interfaces",
+        "Decide how many boxes and connections to display in the top-level map",
+        "Decide whether a shared process uses a common top-level entry with local details or separate entries per site",
+        "Determine whether a name or scope change between levels reflects a deliberate distinction or an error",
+        "Decide whether to clarify scope or provide appropriate detail when a detail view refers to a different product line",
+        "Decide how the organization distinguishes shared, site-specific, or in-revision processes in its own records",
+        "Decide whether an interface line on the overview reflects an agreed and understood relationship or remains unresolved"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Group processes by purpose",
+            "section": "Group processes by purpose"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Group processes by purpose; semantic review verifies support",
+            "section": "Group processes by purpose"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Define the top-level map",
+            "section": "Define the top-level map"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Define the top-level map; semantic review verifies support",
+            "section": "Define the top-level map"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Connect levels of detail",
+            "section": "Connect levels of detail"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Connect levels of detail; semantic review verifies support",
+            "section": "Connect levels of detail"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Review interfaces between processes",
+            "section": "Review interfaces between processes"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Review interfaces between processes; semantic review verifies support",
+            "section": "Review interfaces between processes"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "a69a863080841cd105119d7fbed4652d4b96ab0cb41b04ae6155e8a123c6e182",
+      "contentHash": "fb930c962890ae1bcc63753cd9cbd69101dc3e644729c45f8b7675de08fc81e1",
+      "paragraphHashes": [
+        "4174f3fe08495fc808f041cee728a1fe35ea809887e02f7ed094a8ca10fa6938",
+        "1a78262d1a51649168eea604a6151cbe1fffdf4fec44eef9cce928326c85e6ce",
+        "7a45c16515d4c53f8dce757a1970bf1149e0f2fda463a7634800370adf8aa557",
+        "20a7daedc108c288cb2fa91a1d611443771fadcbfbde93d86de9f6dd5b9ccc0b",
+        "17c6be76b8a798326dbc739b798adad9755f01efd5a1c1f184cab970c05d0461",
+        "2aaa1477cf27140085ba0c2b3e4a258003150076624cc0899acbc3f3c56fba16",
+        "70587ebfc62723cdf21cb9df63ac42dbfffed5cab7636d9999b07431dffa7f0c",
+        "c8f6c3911537d0bbdafe21bd791b7db959da4ae9de2a1149c38dcde299b51666",
+        "38a3216e0f116776848d77a27488a1e01dcb4188b790b2b6d56303b721a05ed4",
+        "9dc8fa46b3c6a745134c307b9d55d832ad0281cdc9ed6dd14764f0d47e777d35",
+        "258d5e3f2657005e271e13dfabe6ae1be2c9984df21cb4ed3477558a65a6252c",
+        "f8314ffd2ac3c567014d087f4fda7303ba107456abadb252cf9ce0d37241cdf2",
+        "c1ced3c4ba0af090b1039183eec42e12ce4028bf9b53acc68a04b1771d3fe984",
+        "ef57fff73c5f41bfc91e5419875157ae608d16a4aecf930c48d88e35dbbc38c5",
+        "6fd6a00d322de0467dbbf73a446710618f94db63e91ac5992b89e22c608058d3",
+        "473c6bbafddc30984612ca6d7e9af18800a5e2ea3603d432092bfc7a2e8dc09f",
+        "1869a2d38cd7bff84eab29791da91e9b96b836cf17be3bf4f6fb4d787ed2c66c",
+        "cdbf6c7a776adc5be7c28dd716dae5d69131eb62b7c98ed06b9e271f167b7f8a",
+        "a0e7b3913602dfdea7c8db3d9c022a90d5f774c40219dd9549a2e6ee1f1e9118",
+        "beae2f4e2917edcd98c635f01a8041ee89c995f67fe64af9f9b6b510abe888c0",
+        "48dde95b57861d67fdbca668ff8136e65147be346bdebede45ca9bb8e1710446",
+        "32ec22068bdf13b3010fb37322bb958bfdbe0e08e3f01cceb6d276a4a4e4031d",
+        "adf75d103b7cf96166dbad819b227e2241be843f329265cc8a41936c0ddb021a",
+        "ba6fe7c40628d7bb5a3542af57b53030c0013534685ffcb3ee2aade90427e670",
+        "1b7cbc485bb4ad12da56d0ab925644971ebf3a79177c623bddf5314d2fe93977",
+        "13657056ae8fca3d73c5000f6a356e13c019ad75fbad2e3516a1944d65359e4b",
+        "fc6f63477be1423dd67fcadc463dc4736c5ea3194e2c44316db6c963da8a05ff",
+        "55a89e13bbd57c8ff0eae58d3c899df49c2f3047e95ef51d286587997be330a4",
+        "797157957656f1f341b269aa49e2654d76130ed6a0e90f4cc545a4a2c24b275b",
+        "ae41c7759b56e5730a33053abf62ab6bffd747949e97ef9f9206908e519e8b4f",
+        "f180b9ae8dd9912227507fb9c4861565fb04f57f94be80e14ec1bdc64ddf1ee4",
+        "4b4f205a84e375412916bab584854b39c4614cfff6bd4648e91837742e0ac72e",
+        "8e6ee52b729e235fd7f933fd7af0d4a3f4c716da5e26464cdab496be630d9c4f"
+      ],
+      "outputContextHash": "f61ca39d40fba97cca035821e8b59a5750492b7583c9f073c7a6b4b56f4026ba",
+      "reviewedAt": "2026-11-23T15:14:36.636Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

@@ -23,7 +23,8 @@
     "Quality lead",
     "Floor supervisor",
     "Vendor",
-    "Operations manager"
+    "Operations manager",
+    "Reader"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -33,7 +34,11 @@
     "Review record noting date, evidence examined, disagreements, and resolution owners",
     "Demonstration record",
     "Evaluation record",
-    "Comparison record"
+    "Comparison record",
+    "Working list of candidate processes",
+    "Accepted overview record noting scope, reviewers, and outstanding exceptions",
+    "Discrepancy record noting name or scope differences between levels",
+    "Interface review record noting sample, participants, agreement, and open questions"
   ],
   "example": {
     "label": "Illustrative example",
@@ -68,6 +73,23 @@
         "Decide whether available evidence supports a selection or whether further information is required",
         "Record any supplier commitment with its scope, responsible party, and confirmation conditions",
         "Decide what consequence a gap has for the intended use before accepting or rejecting an option"
+      ]
+    },
+    {
+      "slug": "process-architecture",
+      "title": "Design a process architecture: process mapping software for quality management",
+      "summary": "All four subsections cover design a process architecture within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. The changed paragraphs introduce no new problems, and there are no unresolved findings from the previous review. The page passes all checks.",
+      "bodyHash": "09f582419a450e9468fba0691462e24ebdeccae8232a2816e9b2908d8da1276a",
+      "decisions": [
+        "Determine ownership, acceptance and next action for each candidate process entry",
+        "Decide whether a disputed process needs one entry or two in the overview",
+        "Decide where the primary entry of a multi-purpose process belongs and identify other relationships as interfaces",
+        "Decide how many boxes and connections to display in the top-level map",
+        "Decide whether a shared process uses a common top-level entry with local details or separate entries per site",
+        "Determine whether a name or scope change between levels reflects a deliberate distinction or an error",
+        "Decide whether to clarify scope or provide appropriate detail when a detail view refers to a different product line",
+        "Decide how the organization distinguishes shared, site-specific, or in-revision processes in its own records",
+        "Decide whether an interface line on the overview reflects an agreed and understood relationship or remains unresolved"
       ]
     }
   ],
