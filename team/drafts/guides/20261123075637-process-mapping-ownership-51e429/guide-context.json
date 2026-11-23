@@ -45,7 +45,11 @@
     "Map version or other identifier with scope, participants, sample, and decision reached",
     "Review record capturing step, sample, intended reader, and observed result",
     "Change record connecting the decision to the process and affected destination",
-    "Record of observed evidence and open questions from traceability walkthrough"
+    "Record of observed evidence and open questions from traceability walkthrough",
+    "Inventory identifying each candidate map, its purpose, scope, source location, and decision owner",
+    "Preparation record identifying source, expected scope and relationships, permitted sample, and known limitations",
+    "Pilot acceptance decision identifying reviewers, checks performed, discrepancies, and conditions for proceeding",
+    "Source inventory, pilot observations, acceptance conditions, and recovery instructions"
   ],
   "example": {
     "label": "Illustrative example",
@@ -146,6 +150,23 @@
         "Decide how the organization will handle the period before a revision issue is resolved and record the interim decision and its owner",
         "Agree on acceptance criteria before the traceability walkthrough",
         "Decide whether further investigation is needed when a second sample differs from the first"
+      ]
+    },
+    {
+      "slug": "migration-and-configuration",
+      "title": "Plan migration and configuration: process mapping software for quality management",
+      "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition across sections.",
+      "bodyHash": "e8fc4af2b671386f96d756e0d43478c4f91383d3f0b3f82d08160265990b61c7",
+      "decisions": [
+        "Determine ownership, acceptance and next action for each candidate map",
+        "Decide which copy is applicable when several copies appear to describe the same work",
+        "Classify each candidate map as ready for pilot, needing clarification, or retained for reference only",
+        "Decide whether the pilot represents one site or a common process with local detail when two sites use different versions",
+        "Decide that an item is unsuitable for the pilot until an open question is answered",
+        "Decide whether a visual difference affects the meaning of the map based on its consequence for the intended use",
+        "Decide whether a test finding represents an isolated formatting problem or requires revision of the preparation plan",
+        "Decide whether the transition must wait when a readiness question is unknown",
+        "Decide who can authorize the cutover and who needs to know which source to use"
       ]
     }
   ],
