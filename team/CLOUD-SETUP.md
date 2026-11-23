@@ -2,6 +2,14 @@
 
 Status on 2026-11-20: all three Owner-authorized Codex Cloud cutovers are complete (Scout, Guides, then Blog). Terra writes and uses built-in session images; Claude API independently reviews. Matching Claude triggers are paused and retained through at least 2026-12-04. The dated sections below are historical evidence, not current blockers. [AGENTS.md](../AGENTS.md) owns the restricted publication scope.
 
+## Operational repairs — 2026-11-23
+
+Regular runs exposed three safe stops after handover. November 21–22 blogs failed originality evidence validation and were checkpointed without publication. November 23 originality passed at 92/100, but text QA rejected a fixed 165-character description and a 1,471-word draft. The first process-mapping guide chapter corrected its citation findings, then received six passing dimensions with three explicitly resolved items still in the blocking findings list. Neither November 23 job published or generated images; both remote checkpoints and released leases were independently verified.
+
+Keyword picks now validate description length (120–160), keyword coverage and voice inside the existing bounded retries before freezing a brief. They do not truncate descriptions or grant scheduled writers permission to edit fixed metadata. Today's invalid frozen assignment needs a separately authorized, backed-up operator repair; its title, topic and slot remain unchanged.
+
+Cloud chapter re-reviews with prior findings now require exactly one indexed clear/violation/uncertain decision per prior finding, with a reason and IDs resolving to literal supplied page/source evidence. Every decision cites a current page paragraph. Resolved history belongs in those decisions; the ordinary findings array contains current unresolved issues. Missing, duplicate, out-of-range or invented evidence and uncertain outcomes block progression; every substantive dimension and all new findings still gate publication. Decisions, previous findings and resolved witnesses stay in the managed report. Initial/legacy review contracts, models, budgets and editorial limits are unchanged. Regression cases were observed failing before the repair; 321 pipeline tests, changed-file lint and the site build pass. Real repaired cloud review and publication remain to be verified.
+
 ## Completed release and handover — 2026-11-20
 
 Functional code is released through `1b9620c416d8e03c96d35a0519c5ebdac7514c53` (PRs #2–#7). The latest source passed 308 pipeline tests, lint and the site build; the initial release also passed 78 site/contact/chat/redirect tests. Review failures were preserved and corrected without reducing thresholds or changing providers. Schema-bound review contracts now cover all seven mandatory JSON review boundaries; local evidence and completion validation still fail closed.
