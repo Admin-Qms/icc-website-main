@@ -72,7 +72,8 @@
     "Pilot decision record with scope and conditions",
     "Stage scope, training observations, unresolved items, decision-maker, and acceptance conditions",
     "Feedback observation record with task, starting point, and result",
-    "Follow-up decision record with interim guidance and closing condition"
+    "Follow-up decision record with interim guidance and closing condition",
+    "Record identifying process scope, people consulted, evidence examined, and next decision"
   ],
   "example": {
     "label": "Illustrative example",
@@ -226,6 +227,17 @@
         "Decide whether the selection can proceed while an open item remains unanswered",
         "Separate a demonstrated outcome from a verbal commitment and an unresolved question",
         "Accept a limitation or request more evidence after a demonstration"
+      ]
+    },
+    {
+      "slug": "process-mapping-software-for-quality-management",
+      "title": "Process mapping software for quality management in Canadian operations",
+      "summary": "All six dimensions pass. The introduction page aligns with its plan brief, covers all three assigned subsections without scope drift, and provides the required ordered overview of the nine-chapter guide. Both assigned source URLs are cited accurately and support their sentences; one permitted internal site path (/solutions/processes/) is used consistently. Vendor descriptions are distinguished from verified installed behavior throughout. The illustrative example is correctly labeled as hypothetical and not presented as a measured customer result. Prose is clear and readable with no significant repetition across sections. No FAQ section appears, which is correct as none is assigned to this introduction chapter. The three glossary terms (Process owner, Process boundary, Handoff) introduced in the body are already defined in context.glossary with identical wording; the page does not restate or reword them, merely uses the labels in context. No new terms requiring glossary entries are introduced. Roles, records, and decisions extracted below reflect only what the introduction page explicitly names.",
+      "bodyHash": "e8f424f3ae4856e0985b0721312bf4d99de40a94caa08a25e91bba25bf210f4a",
+      "decisions": [
+        "Decide which task the map must support and for which intended reader before relying on the map",
+        "Record what was shown, what was described, what depended on configuration, and what remains unanswered during evaluation",
+        "Agree on who considers a change, what evidence is needed, and how an open issue is recorded after implementation"
       ]
     }
   ],

@@ -104,11 +104,11 @@
       "wordCount": 1519,
       "readTime": 8,
       "status": "written",
-      "checkpointedAt": "2026-11-23T15:23:03.324Z"
+      "checkpointedAt": "2026-11-23T15:55:13.654Z"
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T15:55:08.842Z",
+  "updatedAt": "2026-11-23T15:55:13.668Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -1418,7 +1418,7 @@
     "reviewedChapters": [],
     "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
   },
-  "contextHash": "ccb522246571a65ff8676b28724fcda57b7c73b0f65f5fe421ad6c0499b79953",
+  "contextHash": "838a501ac09a9c136ab7b994766b1d79f2f5802eb4f4010dd028fde506caa173",
   "chapterReviews": {
     "mapping-current-processes": {
       "claims": "passed",
@@ -3124,6 +3124,130 @@
       "outputContextHash": "ccb522246571a65ff8676b28724fcda57b7c73b0f65f5fe421ad6c0499b79953",
       "reviewedAt": "2026-11-23T15:55:08.839Z",
       "reviewer": "Configured independent chapter reviewer"
+    },
+    "process-mapping-software-for-quality-management": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All six dimensions pass. The introduction page aligns with its plan brief, covers all three assigned subsections without scope drift, and provides the required ordered overview of the nine-chapter guide. Both assigned source URLs are cited accurately and support their sentences; one permitted internal site path (/solutions/processes/) is used consistently. Vendor descriptions are distinguished from verified installed behavior throughout. The illustrative example is correctly labeled as hypothetical and not presented as a measured customer result. Prose is clear and readable with no significant repetition across sections. No FAQ section appears, which is correct as none is assigned to this introduction chapter. The three glossary terms (Process owner, Process boundary, Handoff) introduced in the body are already defined in context.glossary with identical wording; the page does not restate or reword them, merely uses the labels in context. No new terms requiring glossary entries are introduced. Roles, records, and decisions extracted below reflect only what the introduction page explicitly names.",
+      "glossary": [],
+      "roles": [
+        "Process owner",
+        "Operator",
+        "Quality lead",
+        "Supervisor"
+      ],
+      "recordNames": [
+        "Record identifying process scope, people consulted, evidence examined, and next decision"
+      ],
+      "decisions": [
+        "Decide which task the map must support and for which intended reader before relying on the map",
+        "Record what was shown, what was described, what depended on configuration, and what remains unanswered during evaluation",
+        "Agree on who considers a change, what evidence is needed, and how an open issue is recorded after implementation"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: The operational problem",
+            "section": "The operational problem"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: How to use this guide",
+            "section": "How to use this guide"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+            "section": "Planning evaluation and implementation"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "77d2cc19b9924cf61ade3467655bfa6bbba12f3dd6532b1ec69c40d13c63f24d",
+      "contentHash": "ca80679d2b550382caa80932c8466fbde5dc02fe89257828d48b82ce58fca0f8",
+      "paragraphHashes": [
+        "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
+        "6e408d7cca5ad9fcf813f34a06ac501cff519a9ebf5cc3b67f9787f241d8468a",
+        "39c5739512abf4d09e34e718405c7edd88b85d57759fe1e2768d413cb55c27c7",
+        "34de74201e183c1d08379b0b44103d1130f3e6b7e2889160c72830108f95a5fa",
+        "fca3698fc6738f0b4ff033a8d12aa2f87e640e1b96ae586e4c0c41adf2827317",
+        "5504bdb2956dcd450902f012999c575af01aa7344347b689b901af57385e8d53",
+        "7f1abd5569e00b849bfa4a7938b4e9aaa1ae0e386869bdb43a905c8d131e2bf1",
+        "1094e52c3d1e21696be26ca43a10a7cd6cb3398c0dd0d91cdd031e26f329c492",
+        "afb6d18ccc24618568f29bea6e99d9338aa61b3f63943097cb25acc69c3464b0",
+        "f1e738161a7a4ec53202aac0ef3c844de52305b30c58a6922e517b890fc534b8",
+        "f72ebad8ceaa371740299498a1809d2b91d10fc2c71258f4244f02eb3cd7857b",
+        "b9b66b08636f09c12664cd67444970f5c590d8d86f5d659e23d5f41152477188",
+        "d94ee43bd6b87148d7dd92456ddf44bd6e026104136b6595520637e18955ae6e",
+        "2fde85e9f559979286f2f9117312093d4d089858ec0c586ed731c94f26914ab7",
+        "afaee7e4af4c729ad4e595bd57e6f3c73b1fb6a9cf9f521dc6b74f655a3abada",
+        "4b64f939bdc35fcff0f89fb4d967d3b2eae9ab9ada0782ba843b16147be96d32",
+        "4945dd96aefffac27e3920d32e5a5d2789868694a68ed950a27c8320903a81ca",
+        "cd1f446cfd5ee47098c1d6a30dc4217506c72e53f8c2ea78e2da452c0fb5a597",
+        "c5edeec997feb9a12b3fb0618a71b70996ce464c9af31f8d463d4a351144f447",
+        "f0b936c4d32dcf0fc0854f22a640715551454c6b6a41fc9971eb841e0509b49e",
+        "662a43f43007aa4c4f00cae6fcda4486475a9b792ec280685b4749c7f461deb9",
+        "28b18c9864a21787549869c34938397da57d3a849a1f2bf5e777f1a0112e75c7",
+        "668c06a48934aa6860095a3ab56982fc0b3cd4f2d95531482115b049685c6d15",
+        "e07952ee77bf72c32ee230c3629982ca2850fd664b6e9858313a65931af8a955"
+      ],
+      "outputContextHash": "838a501ac09a9c136ab7b994766b1d79f2f5802eb4f4010dd028fde506caa173",
+      "reviewedAt": "2026-11-23T15:55:13.666Z",
+      "reviewer": "Configured independent chapter reviewer",
+      "carried": true,
+      "carriedFrom": "2026-11-23T14:40:56.114Z"
     }
   },
   "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5",
