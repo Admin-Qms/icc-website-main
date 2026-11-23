@@ -3,7 +3,7 @@ const path = require("path");
 const { claudeCallFast: claudeCall } = require("../shared/claude");
 const { log } = require("../shared/logger");
 const { KEYWORD_QUEUE_PATH } = require("../shared/config");
-const { listPosts, slugify, slugExists } = require("../shared/contentStore");
+const { listPosts, slugify, slugExists, keywordCovered } = require("../shared/contentStore");
 
 const QUEUE_PATH = KEYWORD_QUEUE_PATH;
 
@@ -223,6 +223,9 @@ async function pickKeyword() {
     else if (isExcludedTopic(result.title)) problem = "AS9100 and ISO 27001 are not covered on the blog.";
     else if (result.slug.length < 6) problem = "The title is too short to form a URL.";
     else if (slugExists(result.slug)) problem = `The title produces the URL "${result.slug}", which is already published. Use a different title.`;
+    else if (typeof result.metaDescription !== 'string' || result.metaDescription.length < 120 || result.metaDescription.length > 160) problem = 'The meta description must contain 120–160 characters before it becomes fixed metadata.';
+    else if (!keywordCovered(queued, result.metaDescription)) problem = 'The meta description must cover the primary keyword.';
+    else if (!require('./contentQA').checkVoice([{ _type: 'block', children: [{ text: result.metaDescription }] }]).pass) problem = 'The meta description must not use first-person voice.';
     else {
       result.primaryKeyword = queued;
       problem = "";
