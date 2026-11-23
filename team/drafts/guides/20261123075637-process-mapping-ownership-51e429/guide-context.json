@@ -72,8 +72,7 @@
     "Pilot decision record with scope and conditions",
     "Stage scope, training observations, unresolved items, decision-maker, and acceptance conditions",
     "Feedback observation record with task, starting point, and result",
-    "Follow-up decision record with interim guidance and closing condition",
-    "Record identifying process scope, people consulted, evidence examined, and next decision"
+    "Follow-up decision record with interim guidance and closing condition"
   ],
   "example": {
     "label": "Illustrative example",
@@ -232,12 +231,14 @@
     {
       "slug": "process-mapping-software-for-quality-management",
       "title": "Process mapping software for quality management in Canadian operations",
-      "summary": "All six dimensions pass. The introduction page aligns with its plan brief, covers all three assigned subsections without scope drift, and provides the required ordered overview of the nine-chapter guide. Both assigned source URLs are cited accurately and support their sentences; one permitted internal site path (/solutions/processes/) is used consistently. Vendor descriptions are distinguished from verified installed behavior throughout. The illustrative example is correctly labeled as hypothetical and not presented as a measured customer result. Prose is clear and readable with no significant repetition across sections. No FAQ section appears, which is correct as none is assigned to this introduction chapter. The three glossary terms (Process owner, Process boundary, Handoff) introduced in the body are already defined in context.glossary with identical wording; the page does not restate or reword them, merely uses the labels in context. No new terms requiring glossary entries are introduced. Roles, records, and decisions extracted below reflect only what the introduction page explicitly names.",
-      "bodyHash": "e8f424f3ae4856e0985b0721312bf4d99de40a94caa08a25e91bba25bf210f4a",
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ICC process management page link with appropriate hedging, correctly distinguishing vendor-published descriptions from observed behavior and assigning follow-up for unanswered questions; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged. The page stays within its assigned introductory scope across all three subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned to this introduction. Workflow roles, records, decisions, and the illustrative example are present and consistent. Glossary terms introduced on this page match context definitions without restating them.",
+      "bodyHash": "5a707a0b5c60a8aa049f325deef26ccb95bee63d25c9aa49a02457faae6c8fea",
       "decisions": [
-        "Decide which task the map must support and for which intended reader before relying on the map",
-        "Record what was shown, what was described, what depended on configuration, and what remains unanswered during evaluation",
-        "Agree on who considers a change, what evidence is needed, and how an open issue is recorded after implementation"
+        "Assign follow-up when an important question about a vendor configuration remains unanswered",
+        "Distinguish an observed fact from a recommendation and an evaluation question",
+        "Record what was shown, what was described, what depended on configuration, and what remains unanswered",
+        "Identify the person who can decide the next action when a question is unanswered",
+        "Retain a limitation in the relevant record rather than assuming a software feature resolves it"
       ]
     }
   ],

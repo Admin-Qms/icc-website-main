@@ -6,21 +6,24 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All six dimensions pass. The introduction page aligns with its plan brief, covers all three assigned subsections without scope drift, and provides the required ordered overview of the nine-chapter guide. Both assigned source URLs are cited accurately and support their sentences; one permitted internal site path (/solutions/processes/) is used consistently. Vendor descriptions are distinguished from verified installed behavior throughout. The illustrative example is correctly labeled as hypothetical and not presented as a measured customer result. Prose is clear and readable with no significant repetition across sections. No FAQ section appears, which is correct as none is assigned to this introduction chapter. The three glossary terms (Process owner, Process boundary, Handoff) introduced in the body are already defined in context.glossary with identical wording; the page does not restate or reword them, merely uses the labels in context. No new terms requiring glossary entries are introduced. Roles, records, and decisions extracted below reflect only what the introduction page explicitly names.",
+  "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ICC process management page link with appropriate hedging, correctly distinguishing vendor-published descriptions from observed behavior and assigning follow-up for unanswered questions; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged. The page stays within its assigned introductory scope across all three subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned to this introduction. Workflow roles, records, decisions, and the illustrative example are present and consistent. Glossary terms introduced on this page match context definitions without restating them.",
   "glossary": [],
   "roles": [
-    "Process owner",
     "Operator",
+    "Process owner",
     "Quality lead",
-    "Supervisor"
+    "Supervisor",
+    "Reader"
   ],
   "recordNames": [
-    "Record identifying process scope, people consulted, evidence examined, and next decision"
+    "Decision record"
   ],
   "decisions": [
-    "Decide which task the map must support and for which intended reader before relying on the map",
-    "Record what was shown, what was described, what depended on configuration, and what remains unanswered during evaluation",
-    "Agree on who considers a change, what evidence is needed, and how an open issue is recorded after implementation"
+    "Assign follow-up when an important question about a vendor configuration remains unanswered",
+    "Distinguish an observed fact from a recommendation and an evaluation question",
+    "Record what was shown, what was described, what depended on configuration, and what remains unanswered",
+    "Identify the person who can decide the next action when a question is unanswered",
+    "Retain a limitation in the relevant record rather than assuming a software feature resolves it"
   ],
   "pass": true,
   "deterministic": {
@@ -88,15 +91,15 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "77d2cc19b9924cf61ade3467655bfa6bbba12f3dd6532b1ec69c40d13c63f24d",
-  "contentHash": "ca80679d2b550382caa80932c8466fbde5dc02fe89257828d48b82ce58fca0f8",
+  "inputHash": "16e439742ed239ffc1abbf5f15ccaf9c82d19b7126761859437ed095b9e33c6b",
+  "contentHash": "c623b8046f27f77eaa6eba62229b48cc3a9d6860780759ffc2619761329c323a",
   "paragraphHashes": [
     "b4e33a4f2d58fe827f7cdda681ec42c3a8bffff2fe72bd67d92ed866ec036046",
     "6e408d7cca5ad9fcf813f34a06ac501cff519a9ebf5cc3b67f9787f241d8468a",
     "39c5739512abf4d09e34e718405c7edd88b85d57759fe1e2768d413cb55c27c7",
     "34de74201e183c1d08379b0b44103d1130f3e6b7e2889160c72830108f95a5fa",
     "fca3698fc6738f0b4ff033a8d12aa2f87e640e1b96ae586e4c0c41adf2827317",
-    "5504bdb2956dcd450902f012999c575af01aa7344347b689b901af57385e8d53",
+    "9a9fcd16d050cb2457cf8a11cc2677596bf96f8408da671757890f6e144b703e",
     "7f1abd5569e00b849bfa4a7938b4e9aaa1ae0e386869bdb43a905c8d131e2bf1",
     "1094e52c3d1e21696be26ca43a10a7cd6cb3398c0dd0d91cdd031e26f329c492",
     "afb6d18ccc24618568f29bea6e99d9338aa61b3f63943097cb25acc69c3464b0",
@@ -116,9 +119,7 @@
     "668c06a48934aa6860095a3ab56982fc0b3cd4f2d95531482115b049685c6d15",
     "e07952ee77bf72c32ee230c3629982ca2850fd664b6e9858313a65931af8a955"
   ],
-  "outputContextHash": "838a501ac09a9c136ab7b994766b1d79f2f5802eb4f4010dd028fde506caa173",
-  "reviewedAt": "2026-11-23T15:55:13.666Z",
-  "reviewer": "Configured independent chapter reviewer",
-  "carried": true,
-  "carriedFrom": "2026-11-23T14:40:56.114Z"
+  "outputContextHash": "a16a093167884e37ffa9b163ce44eb7b8896ea6bc2d43e0df420996203f37b59",
+  "reviewedAt": "2026-11-23T16:19:49.316Z",
+  "reviewer": "Configured independent chapter reviewer"
 }
