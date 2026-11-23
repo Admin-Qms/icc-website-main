@@ -1,0 +1,170 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition across sections.",
+  "glossary": [],
+  "roles": [
+    "Process owner",
+    "Operator",
+    "Floor supervisor",
+    "Quality lead"
+  ],
+  "recordNames": [
+    "Documented decision and its owner",
+    "Record of observed evidence and open questions",
+    "Small review record identifying version, sample, participants, and open decisions",
+    "Map version or other identifier with scope, participants, sample, and decision reached"
+  ],
+  "decisions": [
+    "Determine ownership, acceptance and next action",
+    "Decide whether the map should show current practice, an intended change, or an unresolved discrepancy",
+    "Decide whether another sample, a discussion, or escalation is needed before the map is accepted",
+    "Decide who will determine the next action when two accounts of a step differ",
+    "Decide the granularity of a step based on the map's stated purpose and the reader's question",
+    "Decide whether the draft is suitable for a limited purpose while an open issue remains",
+    "Decide whether additional evidence is needed before accepting the map"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Gather task evidence",
+        "section": "Gather task evidence"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Gather task evidence; semantic review verifies support",
+        "section": "Gather task evidence"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Draw steps and decision points",
+        "section": "Draw steps and decision points"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Draw steps and decision points; semantic review verifies support",
+        "section": "Draw steps and decision points"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Describe exceptions and handoffs",
+        "section": "Describe exceptions and handoffs"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Describe exceptions and handoffs; semantic review verifies support",
+        "section": "Describe exceptions and handoffs"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Validate a map with workers",
+        "section": "Validate a map with workers"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Validate a map with workers; semantic review verifies support",
+        "section": "Validate a map with workers"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "3a7a3ddfe35e3bf794897e7c96d0cdb0c8ac95e6d8c1aa54990afe742d34fb2d",
+  "contentHash": "97ae6228b757d3c9456030708383aee6e3ae52ad67f5c9581dcb57b97ee8401e",
+  "paragraphHashes": [
+    "d8aa8eced6ecd41565081dc8ac296b86ca1c1c932ab91c924aaad28206a1b093",
+    "67902617bf885111fea4a32170173e6209d25457b41b81f5e3f032b45b5801f6",
+    "72bba05d2e191d15f284ed7bf29fea64b7d0f079121ec9cb641565dfcb7ef552",
+    "77c9d5653b607450b665db4b9563a8b05b326a02c691f7bd2c460c66b5b1e1a9",
+    "38ae535c644c92c5f104a2febed40055ecf581b80ed1015d46b77af182946bbe",
+    "af887809595baece63823ba5e37f405e16ff80c84abcad243d6c91f803131d7e",
+    "d145795c050c7e97468b9cfaf4306f44eec49e027717e012b67a7a77911f0f41",
+    "e26f64369ee2fedd3a429f5e62df451dcf16bd2fe0253b3191b7d061857d90f5",
+    "210352536ead3ed78884f7e912abe8f9598b3dda95a313cf3673956191a6e591",
+    "665ff5d1275c29470fd1e725b28e885b080db7c3376fa273ffb7bbc1cfacb838",
+    "354ae2ca3effdaeb03729fcf2aa64ec5e41af29b11ecaeef84606020286de592",
+    "f543328fd670358b16040d8cb76a11eecf875866213ad9676a14ca0bf26dcb94",
+    "699fd0a862a199fe08c14ae5165605fd4b7e8fa9b37fcff81156e00d91df1552",
+    "f24ea3c01f2c3a07ad168c14999e9e99a1466481395ff412fb1a1b714a4e4c7f",
+    "1654f640109778ac85085d5b05029bb98df58282dc957daf8ec6b380b1456e99",
+    "4f62638522ed50dd7bfe2b2f5c8f6cfaa4b3e1ca31911db322f88b08611bb410",
+    "f08f71869d087ace2984f9ed486f8ae7825f89d5dba009c72136ed538824eff4",
+    "9f3fc27ae939616b7b28bedff71e7366524a0679e39055719fbbf8f1d0a84690",
+    "749df13a443c61c8f35c52175e8f4b540b84c6737794ee1d6099d3b2c58a76a0",
+    "90ea2e33e7dc17bb3aea619dbd513301c2e45e919e50265d0b517ad1bc185a4c",
+    "21736b44582e8701293653d879def2d5bf3932a88ec9b88b4750a2447a9a0dec",
+    "37c4e0fd5bcc16dd01b6fa152a0a063281a4167928bb7cd3d0a7e9ece5e3b9ac",
+    "76369158826512dd02fd9fb872f7b3e658cde398664db329fd15359c7bc18d2e",
+    "ba319a629926d4fa7885ff87dff8ecd3393c3f6be12b908d79730f84253107fd",
+    "40c977367faa60201b75a54f1b26e4dab63bc18e71f1cb6bec59d6af34079711",
+    "486dafe4fa78f5a892cbc6d00d64453952efa7395b4927ce9721299089b72b69",
+    "540de109aad2a23668a1972f21c8647af7977c861eeac610ee624db5f3be30cf",
+    "8ad47b6cf36b5995a88b26696b45edf827f1891d41d2cea9338654c372670d22",
+    "cd99b5fc84be1ea23b065992b194aa20e30a8f411537d4fcb98c72272508552a",
+    "1ed10fd0df3756314b8496692d2480756bdd3d92834cc61338f82470d6d8c50a",
+    "f2c12f43743bb250dbcc19550d22fed8d10302910e398740368583d42ff65450",
+    "a7f3a24440a4543a613093dca0617540c023f5286134225cf90c51d1cb566440",
+    "bb3ca51946452d2966751fda614e1abeb2709023d3f89dcc1852e1c7ace33b11",
+    "1659aa03c3731945d90cc8e0fde9bfccbcd54698caf6587d048878be5781a625",
+    "1fd124c5ea06f76d46737bfe849519406218e75e6e5bcaabb43724adde16de55"
+  ],
+  "outputContextHash": "7d5c014e74b2c634d7c97ec2e9032e03107eaf87901294359f0b8f34df5b79df",
+  "reviewedAt": "2026-11-23T14:11:27.987Z",
+  "reviewer": "Configured independent chapter reviewer"
+}

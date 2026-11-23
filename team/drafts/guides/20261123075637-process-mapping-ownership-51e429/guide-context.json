@@ -39,7 +39,10 @@
     "Responsibility statement",
     "Draft responsibility statement",
     "Accepted assignment with unresolved items",
-    "Decision record"
+    "Decision record",
+    "Record of observed evidence and open questions",
+    "Small review record identifying version, sample, participants, and open decisions",
+    "Map version or other identifier with scope, participants, sample, and decision reached"
   ],
   "example": {
     "label": "Illustrative example",
@@ -110,6 +113,21 @@
         "Decide how incomplete evidence or inaccessible records will be corrected following a review",
         "Escalate unresolved conflicts through the organization's agreed authority",
         "Record interim arrangement and the person responsible for resolving it when no suitable backup is available"
+      ]
+    },
+    {
+      "slug": "mapping-workflows",
+      "title": "Map workflows and decisions: process mapping software for quality management",
+      "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition across sections.",
+      "bodyHash": "9540813782a172e1ff307e52ef1b55af883e33ea5e21b3595a35fd2a2680bcd3",
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Decide whether the map should show current practice, an intended change, or an unresolved discrepancy",
+        "Decide whether another sample, a discussion, or escalation is needed before the map is accepted",
+        "Decide who will determine the next action when two accounts of a step differ",
+        "Decide the granularity of a step based on the map's stated purpose and the reader's question",
+        "Decide whether the draft is suitable for a limited purpose while an open issue remains",
+        "Decide whether additional evidence is needed before accepting the map"
       ]
     }
   ],
