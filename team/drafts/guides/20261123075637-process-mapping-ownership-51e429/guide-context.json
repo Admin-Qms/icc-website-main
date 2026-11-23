@@ -42,7 +42,10 @@
     "Decision record",
     "Record of observed evidence and open questions",
     "Small review record identifying version, sample, participants, and open decisions",
-    "Map version or other identifier with scope, participants, sample, and decision reached"
+    "Map version or other identifier with scope, participants, sample, and decision reached",
+    "Review record capturing step, sample, intended reader, and observed result",
+    "Change record connecting the decision to the process and affected destination",
+    "Record of observed evidence and open questions from traceability walkthrough"
   ],
   "example": {
     "label": "Illustrative example",
@@ -128,6 +131,21 @@
         "Decide the granularity of a step based on the map's stated purpose and the reader's question",
         "Decide whether the draft is suitable for a limited purpose while an open issue remains",
         "Decide whether additional evidence is needed before accepting the map"
+      ]
+    },
+    {
+      "slug": "documents-and-evidence",
+      "title": "Connect documents and evidence: process mapping software for quality management",
+      "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition across sections.",
+      "bodyHash": "f10cf32a6e97537ceadba801be1d12e7135d389ca15979e2e70ce510ca8fd9b7",
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Decide what question the reader is trying to answer before connecting a record to a process step",
+        "Decide whether a connection helps the intended reader and record why a disputed item was included or left open",
+        "Decide who will examine a process link when the destination is revised, withdrawn, or moved",
+        "Decide how the organization will handle the period before a revision issue is resolved and record the interim decision and its owner",
+        "Agree on acceptance criteria before the traceability walkthrough",
+        "Decide whether further investigation is needed when a second sample differs from the first"
       ]
     }
   ],
