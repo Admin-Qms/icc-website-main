@@ -24,7 +24,11 @@
     "Floor supervisor",
     "Vendor",
     "Operations manager",
-    "Reader"
+    "Reader",
+    "Proposed owner",
+    "Backup",
+    "Worker",
+    "Assigned process owner"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -38,7 +42,12 @@
     "Working list of candidate processes",
     "Accepted overview record noting scope, reviewers, and outstanding exceptions",
     "Discrepancy record noting name or scope differences between levels",
-    "Interface review record noting sample, participants, agreement, and open questions"
+    "Interface review record noting sample, participants, agreement, and open questions",
+    "Local decision record identifying scope and person accepting the role",
+    "Draft responsibility statement",
+    "Documented assignment record stating process, scope, assigned owner, decisions covered, and accepting person",
+    "Interim arrangement record identifying who accepted it and what would trigger review",
+    "Decision record stating scope, people consulted, decision-maker, agreed assignment, and conditions"
   ],
   "example": {
     "label": "Illustrative example",
@@ -90,6 +99,21 @@
         "Decide whether to clarify scope or provide appropriate detail when a detail view refers to a different product line",
         "Decide how the organization distinguishes shared, site-specific, or in-revision processes in its own records",
         "Decide whether an interface line on the overview reflects an agreed and understood relationship or remains unresolved"
+      ]
+    },
+    {
+      "slug": "process-ownership",
+      "title": "Assign process owners: process mapping software for quality management",
+      "summary": "All four subsections cover assign process owners within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. There are no unresolved findings from the previous review, and the changed paragraphs introduce no new problems. The page passes all checks.",
+      "bodyHash": "a9d0c211b890017363e22f5dcf1b0485d7ea76b3b16b1a01de2c04112aa42172",
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Decide which decisions a backup may handle, which require consultation, and which must wait for another authorized person",
+        "Decide the distinction between a brief absence allowing deferral and a time-sensitive issue requiring immediate escalation",
+        "Decide the agreed escalation route for cross-process changes",
+        "Determine who is authorized to resolve a conflicting ownership claim",
+        "Decide when to examine assignments and which events warrant an earlier check",
+        "Decide whether a single owner covers an agreed scope or whether local responsibilities need to be recorded separately"
       ]
     }
   ],
