@@ -37,7 +37,8 @@
     "Authorizing person",
     "Trainer",
     "Authorized manager",
-    "Authorized decision-maker"
+    "Authorized decision-maker",
+    "Presenter"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -78,7 +79,12 @@
     "Issue record noting task attempted, agreed contact, and next action",
     "Stage-end record noting scope, training observations, unresolved items, decision-maker, and acceptance conditions",
     "Feedback record noting task attempted, starting point, expected information, and observed result",
-    "Follow-up decision record noting owner, interim guidance, and condition for closing"
+    "Follow-up decision record noting owner, interim guidance, and condition for closing",
+    "Review record",
+    "Change record",
+    "Open decision record",
+    "Interim arrangement record",
+    "Follow-up record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -208,6 +214,23 @@
         "Decide whether to authorize expansion to the next stage based on evidence from the previous stage",
         "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed",
         "Decide whether the next action is to clarify a label, investigate access, or seek more evidence before choosing a training or configuration response"
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Maintain process maps and improve: process mapping software for quality management",
+      "summary": "All four subsections cover maintain process maps and improve within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and a clearly labeled illustrative example using a hypothetical scenario. The FAQ subsection is present and assigned; its nine questions cover process mapping, ownership, interfaces, document links, migration, change triggers, auditor expectations, certification guarantees, and demonstrations—all consistent with the chapter scope. The two permitted source URLs are used appropriately and each citation is supported by the research record. No unresolved findings from the previous review exist, and the changed paragraphs introduce no new problems. The page passes all checks.",
+      "bodyHash": "d04868d0b0a25c8923f80599fd931396192faf4a4f04607ea47d5a4513387ddd",
+      "decisions": [
+        "Determine which changes require map review and who needs to contribute",
+        "Record any unresolved question instead of treating a diagram update as evidence of agreement",
+        "Decide whether a proposed change or accepted change is the current input",
+        "Determine ownership, acceptance and next action for each map review",
+        "Agree on a question before choosing a measure",
+        "Decide whether to retain or replace a measure when the process changes",
+        "Decide whether the sample supports a conclusion or whether more information is needed before assigning a remedy",
+        "Record the selection decision including demonstrated outcomes, verbal commitments, organizational tasks, and unresolved questions",
+        "Determine whether the selection can proceed while an open item remains"
       ]
     }
   ],
