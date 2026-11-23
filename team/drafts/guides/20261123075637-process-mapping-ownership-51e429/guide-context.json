@@ -59,7 +59,8 @@
     "Local decision record identifying scope and person accepting the role",
     "Responsibility statement",
     "Interim arrangement record with responsible person",
-    "Decision record stating scope, people consulted, decision-maker, agreed assignment, and conditions"
+    "Decision record stating scope, people consulted, decision-maker, agreed assignment, and conditions",
+    "Review record noting version, scope, participants, sample used, and decisions reached"
   ],
   "example": {
     "label": "Illustrative example",
@@ -128,6 +129,20 @@
         "Escalate an unresolved conflict through the organization's agreed authority",
         "Decide when to examine assignments and which events warrant an earlier check",
         "Update applicable information through the organization's normal controls after an authorized decision is made"
+      ]
+    },
+    {
+      "slug": "mapping-workflows",
+      "title": "Map workflows and decisions: process mapping software for quality management",
+      "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
+      "bodyHash": "9a43b4dd3e3cbf1c4f789af20fa5a0575747b49f1e0d4f0f2132d669b9a794c3",
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Decide whether the map should show current practice, an intended change, or an unresolved discrepancy",
+        "Decide whether additional evidence is needed before accepting the map",
+        "Decide whether a draft is suitable for a limited purpose while an issue remains open",
+        "Decide whether another sample, a discussion, or escalation is needed before the map is accepted",
+        "Record the decision owner and an interim action where no route is agreed"
       ]
     }
   ],

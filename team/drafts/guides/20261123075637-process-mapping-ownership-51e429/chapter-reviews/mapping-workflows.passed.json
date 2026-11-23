@@ -6,28 +6,27 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition across sections.",
+  "summary": "All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. The changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative examples. No unassigned FAQ sections appear. No previous findings were raised against unchanged text, and no new problems are identified in the changed paragraphs. The page passes all checks.",
   "glossary": [],
   "roles": [
     "Process owner",
     "Operator",
     "Floor supervisor",
-    "Quality lead"
+    "Quality lead",
+    "Supervisor",
+    "Worker"
   ],
   "recordNames": [
     "Documented decision and its owner",
-    "Record of observed evidence and open questions",
-    "Small review record identifying version, sample, participants, and open decisions",
-    "Map version or other identifier with scope, participants, sample, and decision reached"
+    "Review record noting version, scope, participants, sample used, and decisions reached"
   ],
   "decisions": [
     "Determine ownership, acceptance and next action",
     "Decide whether the map should show current practice, an intended change, or an unresolved discrepancy",
+    "Decide whether additional evidence is needed before accepting the map",
+    "Decide whether a draft is suitable for a limited purpose while an issue remains open",
     "Decide whether another sample, a discussion, or escalation is needed before the map is accepted",
-    "Decide who will determine the next action when two accounts of a step differ",
-    "Decide the granularity of a step based on the map's stated purpose and the reader's question",
-    "Decide whether the draft is suitable for a limited purpose while an open issue remains",
-    "Decide whether additional evidence is needed before accepting the map"
+    "Record the decision owner and an interim action where no route is agreed"
   ],
   "pass": true,
   "deterministic": {
@@ -125,16 +124,16 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "3a7a3ddfe35e3bf794897e7c96d0cdb0c8ac95e6d8c1aa54990afe742d34fb2d",
-  "contentHash": "97ae6228b757d3c9456030708383aee6e3ae52ad67f5c9581dcb57b97ee8401e",
+  "inputHash": "c8ecb4b089e9145e843dd51a18a1e67992326341f8e1c48aa58e9424b2667e65",
+  "contentHash": "0b0e3645935623461dd18be6d130fa9296fdca32b2d5339d22aeec00ed9764e6",
   "paragraphHashes": [
     "d8aa8eced6ecd41565081dc8ac296b86ca1c1c932ab91c924aaad28206a1b093",
     "67902617bf885111fea4a32170173e6209d25457b41b81f5e3f032b45b5801f6",
     "72bba05d2e191d15f284ed7bf29fea64b7d0f079121ec9cb641565dfcb7ef552",
-    "77c9d5653b607450b665db4b9563a8b05b326a02c691f7bd2c460c66b5b1e1a9",
+    "ec0adfcd9e1dd5f736effc83611fcfc15add290d228710d509c318646846d972",
     "38ae535c644c92c5f104a2febed40055ecf581b80ed1015d46b77af182946bbe",
-    "af887809595baece63823ba5e37f405e16ff80c84abcad243d6c91f803131d7e",
-    "d145795c050c7e97468b9cfaf4306f44eec49e027717e012b67a7a77911f0f41",
+    "d5c1886aa258956d506bd74d578c010ca3c01b3d575c7797edb7a33bd794992e",
+    "92ddb642c909eab33b32505e349a939d582b51c88a32e55f6f7d4a23028dfb94",
     "e26f64369ee2fedd3a429f5e62df451dcf16bd2fe0253b3191b7d061857d90f5",
     "210352536ead3ed78884f7e912abe8f9598b3dda95a313cf3673956191a6e591",
     "665ff5d1275c29470fd1e725b28e885b080db7c3376fa273ffb7bbc1cfacb838",
@@ -162,9 +161,9 @@
     "a7f3a24440a4543a613093dca0617540c023f5286134225cf90c51d1cb566440",
     "bb3ca51946452d2966751fda614e1abeb2709023d3f89dcc1852e1c7ace33b11",
     "1659aa03c3731945d90cc8e0fde9bfccbcd54698caf6587d048878be5781a625",
-    "1fd124c5ea06f76d46737bfe849519406218e75e6e5bcaabb43724adde16de55"
+    "6352099e04ade91fdaad8b888fd514b092c2028f033648aeade30d5d9c9122a5"
   ],
-  "outputContextHash": "7d5c014e74b2c634d7c97ec2e9032e03107eaf87901294359f0b8f34df5b79df",
-  "reviewedAt": "2026-11-23T14:11:27.987Z",
+  "outputContextHash": "6610e024cf0e1f9bf09320a914aa8cbde5c978b2343f2be47a1e54b2e2cd8fe3",
+  "reviewedAt": "2026-11-23T14:57:56.441Z",
   "reviewer": "Configured independent chapter reviewer"
 }
