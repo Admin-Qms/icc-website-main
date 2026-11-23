@@ -5,7 +5,7 @@ Write the article as `body.md` in this folder, then publish it with `node team/p
 ## The article
 
 - **Title (fixed):** ISO 17025 Measurement Uncertainty: 11-Point Compliance Checklist for Ontario Testing Labs
-- **Meta description (fixed):** ISO 17025 measurement uncertainty requirements guide. Essential checklist for testing labs establishing uncertainty budgets and maintaining accreditation compliance.
+- **Meta description (fixed):** Review ISO 17025 measurement uncertainty requirements, build supported uncertainty budgets, and check testing records before accreditation review.
 - **Primary keyword (the topic):** iso 17025 measurement uncertainty requirements
 - **Related topics to cover (not phrases to insert):** Uncertainty budgets and calculation methods; Measurement traceability to SI standards; Calibration intervals and drift analysis; Proficiency testing for uncertainty validation; Laboratory scope and measurement capability
 - **Article type:** checklist — Key Takeaways → short intro → 7-12 numbered items, each a ## with 2-3 sentences → quick-reference summary → close

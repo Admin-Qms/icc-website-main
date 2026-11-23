@@ -26,6 +26,10 @@ Follow the measurement from receipt and preparation through measurement and calc
 
 Input from analysts and technical staff can expose a handoff or preparation step that a spreadsheet alone misses. If a contribution is considered negligible, record the technical basis for that judgment and revisit it when conditions change.
 
+For a test involving sample preparation, trace the quantity through each operation that enters the final calculation. The laboratory may need to consider the reference material, equipment used for preparation, observations used to assess repeatability, and the conditions under which the method was performed. The list is a starting point for investigation; the method and available evidence determine which contributions are relevant.
+
+Keep a clear distinction between a contribution to measurement uncertainty and a known mistake that requires correction. An incorrectly entered dilution factor, for example, should be investigated and corrected under the laboratory’s procedures; it should not simply be hidden in an uncertainty allowance. When a contribution cannot be evaluated as expected, record the limitation and involve the technical reviewer before using the result.
+
 ## 3. Distinguish Type A and Type B evaluations
 
 Type A evaluates uncertainty using statistical analysis of observations; Type B uses other information, such as calibration data, specifications, or prior knowledge. **The distinction is the method of evaluation**, not a ranking of reliability or a claim that one type can be ignored.
@@ -39,6 +43,10 @@ List the input quantities, units, estimated contributions, evaluation methods, a
 [IMAGE: a laboratory analyst handling calibrated glassware and samples near a bench instrument in an industrial testing laboratory]
 
 A budget is a working technical record, not merely a table for an assessment visit. Keep the calculation or validated tool, source data, revision, and approval together so a change to a component can be traced to the reported result.
+
+For each input, record whether the stated value is a standard uncertainty or needs conversion before combination. The evaluation should explain the distribution and divisor used where relevant, the units carried through the calculation, and any correlation between inputs. Those details allow a reviewer to follow the method rather than simply reproduce the final number.
+
+When reporting expanded uncertainty, retain the coverage factor and the basis for selecting it alongside the combined standard uncertainty. The reported value should be rounded and expressed consistently with the result and the laboratory’s reporting procedure. If a method uses a different established approach, record that approach and its limitations rather than forcing its inputs into an unsuitable template.
 
 **Illustrative example:** An unnamed laboratory calculates a concentration from an instrument response and a preparation factor. The analyst records the contribution associated with the reference material, repeat observations, and preparation equipment, then reviews the calculation before using it for reports in the defined range.
 
@@ -75,6 +83,10 @@ The analyst needs to understand the method and the meaning of each input, not me
 [IMAGE: a laboratory technician examining a sample container beside calibrated testing equipment in an industrial laboratory]
 
 A technical reviewer can trace a selected report back through the calculation and source records. If a spreadsheet is used, control its version and check the calculation before relying on it; the person reviewing should know what the tool does and where its inputs originate.
+
+That trace can start with the reported unit and result, then follow the calculation back to the observations, preparation factors, and reference values used for the job. The reviewer should be able to identify the applicable budget revision and determine whether the actual conditions fall within its stated range. If the report includes a conformity statement, the agreed decision rule and its application should also be available for review.
+
+When a calculation tool changes, compare its output with a known calculation or other appropriate verification before it is used for reports. Record who reviewed the change and which version applies. A controlled tool helps prevent an old formula from being used inadvertently, but the laboratory still needs competent people to assess whether the inputs and assumptions fit the measurement.
 
 ## 10. Review after meaningful changes
 
