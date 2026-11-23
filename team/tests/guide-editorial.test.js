@@ -31,6 +31,20 @@ test('copy editing cannot silently alter a citation or a factual number', () => 
   assert.equal(editorial.preserveCopyEdit(before, 'Keep 13 revision records. [Evidence](https://example.org/records)').pass, false);
   assert.equal(editorial.preserveCopyEdit(before, 'Keep 12 revision records. [Evidence](https://example.org/other)').pass, false);
 });
+test('guide copy edits preserve heading levels, labels, order and occurrences', () => {
+  const before = '## Receive the record\n\nInspect the evidence.\n\n### Who decides?\n\nAsk the owner.\n\n## Release the record\n\nRecord the outcome.';
+  for (const candidate of [
+    '# Unexpected page title\n\n' + before,
+    '  # Unexpected page title\n\n' + before,
+    before.replace('## Receive', '# Receive'),
+    before.replace('### Who decides?', '### Who reviews?'),
+    before.replace('### Who decides?\n\n', ''),
+    before + '\n\n## Release the record',
+    before.replace('## Receive the record', '## Release the record').replace(/## Release the record(?=\n\nRecord)/, '## Receive the record'),
+  ]) assert.equal(editorial.preserveCopyEdit(before, candidate).pass, false, candidate);
+  assert.equal(editorial.preserveCopyEdit(before, before.replace('Inspect the evidence.', 'Inspect the current evidence.')).pass, true);
+  assert.equal(editorial.preserveCopyEdit(before, before.replaceAll('\n', '\r\n')).pass, true);
+});
 test('signed measurements and reference-style Markdown citations survive copy editing exactly', () => {
   for (const [before, after] of [['Keep 50mm clearance.', 'Keep 60mm clearance.'], ['The change was -5%.', 'The change was 5%.'], ['[Evidence][source]\n\n[source]: https://example.org/original', '[Evidence][source]\n\n[source]: https://example.org/changed']]) assert.equal(editorial.preserveCopyEdit(before, after).pass, false);
 });

@@ -50,8 +50,13 @@ function links(body, referenceBody = body) {
 }
 function preserveCopyEdit(before, after) {
   const numbers = text => String(text).match(/(?<![\p{L}\p{N}_])[-+]?\d+(?:[.,]\d+)*(?:%|[A-Za-z°µ]+)?/gu) || [];
-  const pass = hashValue(links(before)) === hashValue(links(after)) && hashValue(numbers(before)) === hashValue(numbers(after));
-  return { pass, reason: pass ? '' : 'Copy edit changed citations, link destinations or factual numbers' };
+  // Guide headings are frozen assignments. Check them before any edited body
+  // can be checkpointed; the later content gate must never discover an H1
+  // introduced by a copy editor after it has already replaced the author's text.
+  const headings = text => String(text).split(/\r?\n/).filter(line => /^ {0,3}#{1,6}(?:[\t ]|$)/.test(line)).map(line => line.trim());
+  const pass = hashValue(links(before)) === hashValue(links(after)) && hashValue(numbers(before)) === hashValue(numbers(after))
+    && hashValue(headings(before)) === hashValue(headings(after));
+  return { pass, reason: pass ? '' : 'Copy edit changed headings, citations, link destinations or factual numbers' };
 }
 function checkPageContent(page, plan = {}, research = {}) {
   const checks = []; const add = (id, pass, message, section) => checks.push({ id, pass: Boolean(pass), message, ...(section ? { section } : {}) });
