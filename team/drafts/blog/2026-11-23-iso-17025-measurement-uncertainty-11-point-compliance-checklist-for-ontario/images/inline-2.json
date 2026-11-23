@@ -1,0 +1,20 @@
+{
+  "id": "inline-2",
+  "width": 1200,
+  "height": 675,
+  "sha256": "bbcbe9a58ba2398791984b040fe31f62d9441f6741857eba666948ee7c9802bb",
+  "source": "codex",
+  "sourceId": "2a6e706716a1b985543670e26c21f5004cdfe9441cf3442a8d9c69c414e43656",
+  "inputHash": "2a6e706716a1b985543670e26c21f5004cdfe9441cf3442a8d9c69c414e43656",
+  "alt": "a laboratory analyst handling calibrated glassware and samples near a bench instrument in an industrial testing laboratory",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "69ede6db65a1a5bd47470ac45a9c746a9915590fcd143dca499067d65d0ee5d0",
+  "request": {
+    "id": "inline-2",
+    "scene": "a laboratory analyst handling calibrated glassware and samples near a bench instrument in an industrial testing laboratory",
+    "kind": "inline",
+    "alt": "a laboratory analyst handling calibrated glassware and samples near a bench instrument in an industrial testing laboratory",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nMid-shot of the task itself: hands, tool and part fill the frame, the background softly out of focus.\nScene: a laboratory analyst handling calibrated glassware and samples near a bench instrument in an industrial testing laboratory.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-23T13:57:21.783Z"
+}
