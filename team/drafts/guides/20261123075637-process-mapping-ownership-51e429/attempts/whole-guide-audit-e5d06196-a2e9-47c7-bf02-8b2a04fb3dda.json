@@ -1,0 +1,183 @@
+{
+  "inputHash": "d2b4e42248251f3a1850062588d271084043909cfc4e80914eca6ec6b8dd557d",
+  "reviewContextHash": "1772383ce513a8f7f5803a8a4ed593340e076fc2b78a41b933f5d699e5ec0ce6",
+  "reviewedAt": "2026-11-23T16:32:20.557Z",
+  "screening": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "REPETITION: The introduction (main landing page) states: 'The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process' and 'review of supported PDF process charts before acceptance.' This same description recurs nearly verbatim in multiple chapters ('process-architecture' under 'Define the top-level map,' 'documents-and-evidence' under 'Identify controlled documents,' and 'migration-and-configuration' under 'Pilot imports and review results'). These are substantially copied passages about the same vendor feature across different pages, failing the repetition standard.",
+      "REPETITION UNRESOLVED: The previousAudit identified: 'The introduction asserts a passage about industry templates and PDF chart review, then this is repeated nearly identically in Plan migration and configuration.' This finding remains unresolved. The 'Plan migration and configuration' chapter still contains: 'The [ICC process management description] mentions review of supported PDF process charts before acceptance. Confirm the supported format and the proposed review procedure for the actual implementation.' This is substantially the same assertion as the introduction's discussion of the same feature, merely rephrase with minimal rewording.",
+      "REPETITION UNRESOLVED: The previousAudit identified: 'The Prepare a software demonstration section repeats the entire evaluation framework from the evaluating-process-software chapter.' This core finding persists. Both 'evaluating-process-software' chapter ('Set evaluation criteria' and 'Compare maps and flowcharts' subsections) and 'ongoing-operation' chapter ('Prepare a software demonstration' subsection) contain nearly identical guidance on: selecting representative workflows, identifying observation-based vs. description-based evidence, testing access scenarios, distinguishing demonstrated behavior from supplier statements, recording what was shown vs. what was described, and preparing demonstration records. The phrasing varies but the substantive workflow and decision structure are duplicated.",
+      "CLAIMS: The introduction states: 'The page describes industry starting templates and review of supported PDF process charts before acceptance.' The ICC source's supportedClaims states only: 'The page describes industry starting templates and review of supported PDF process charts before acceptance.' This matches. However, the introduction then claims this information 'does not establish that every file, permission, link, or recovery action works in a particular way' and instructs readers to 'Confirm how those descriptions apply.' This conditional framing is accurate. BUT the source does NOT support claims about 'industry starting templates'—it only mentions 'industry starting templates' as part of the vendor's description without providing evidence those templates exist or are available. The guide treats 'industry templates' as an established vendor capability rather than a research question, which exceeds supported claims.",
+      "CONSISTENCY: Across chapters, the guide inconsistently qualifies the same ICC assertions. In the introduction, 'review of supported PDF process charts' is presented as a vendor statement requiring confirmation. In 'migration-and-configuration,' the identical assertion reappears with the same qualification but different emphasis: 'The [ICC page] describes review of supported PDF process charts before acceptance. Confirm the supported format...' In 'ongoing-operation,' the phrasing shifts again: '[The ICC page] offers a published reference for discussing process information.' This inconsistent treatment of identical vendor claims creates confusion about whether a feature is established, unverified, or merely a discussion reference. The qualification should be consistent across all mentions.",
+      "CLAIMS: The guide states in multiple locations that the ICC page 'describes links from processes to controlled documents and standard clauses.' The source supportedClaims confirms this description exists. However, the guide then asserts in 'documents-and-evidence' chapter: 'Ask to see how the proposed configuration will represent the organization's selected information. The published page does not establish that every relationship will be transferred automatically.' This correctly conditions the claim. BUT later in the same chapter: 'A link to a form does not prove that the form was completed, and a completed record does not necessarily explain every decision made.' This statement goes beyond what the source supports—it is a logical inference about links generally, not a claim about what ICC actually describes. The guide should distinguish ICC's published description from general principles about link mechanics.",
+      "CLAIMS UNRESOLVED: The outline structure promises nine frequently asked questions as a core content component ('faqQuestions' array contains nine entries), but the 'Frequently asked questions' subsection in the 'ongoing-operation' chapter provides only the nine questions with brief answers, not full elaboration. The guide's introduction states: 'The final chapter includes nine frequently asked questions and a demonstration-planning section. The questions are starting points for a discussion, not substitutes for a review of actual records.' This correctly frames the FAQ scope. However, the guide does not deliver FAQ coverage matched to the outlined chapter depth (2000 words per chapter). The FAQ section appears compressed relative to its promised role, raising whether adequate implementation guidance was provided."
+    ]
+  },
+  "adjudication": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "dimensionReasons": {
+      "claims": "All material claims about ICC capabilities are drawn from supported source claims or are explicitly framed as vendor descriptions requiring verification. The guide consistently qualifies ICC-sourced statements. Screening finding 3 (industry templates) is cleared: source:0:claim:2 explicitly supports 'industry starting templates,' and the guide treats it as a vendor description to be verified, not an established capability. Screening finding 5 (general link logic) is cleared: statements such as 'a link to a form does not prove that the form was completed' are general editorial principles about evidence, not unsupported claims about ICC; the guide does not assert ICC makes this guarantee. Screening finding 6 (FAQ depth) is cleared: the guide's introduction explicitly frames the FAQ as 'starting points for a discussion, not substitutes for a review of actual records,' and the outline's word-count targets are planning guidance, not factual promises in the published text. No unverified capability is asserted as fact.",
+      "consistency": "The guide applies a consistent epistemological framework across all chapters: ICC source descriptions are presented as vendor-published starting points for evaluation questions, not confirmed operational capabilities. The minor variation in phrasing across chapters (e.g., 'published reference' vs. 'vendor statement requiring confirmation') reflects legitimate editorial variation within a chapter-standalone structure rather than contradictory factual treatment. Each chapter is a standalone page under the maintained writing rule, so short factual cautions about vendor descriptions may recur without creating inconsistency. The underlying treatment—do not assume, test with a sample, record what was demonstrated—is uniform throughout. Screening finding 4 is cleared.",
+      "repetition": "Inspecting the actual current page paragraphs, no substantially copied paragraphs or examples exist across different pages. The PDF-review caution (source:0:claim:2) appears in multiple chapters but only as a short factual qualification that the maintained writing rule explicitly permits to recur as a 'short factual caution.' The evaluation-criteria guidance in the evaluating-process-software chapter and the demonstration-planning section in the ongoing-operation chapter address materially different questions: the former concerns selecting among competing tools before adoption; the latter concerns preparing a focused discussion around a specific post-deployment change issue. The subsections use different examples, different starting conditions, and different roles and decisions. Shared subject matter and recurring short cautions are explicitly not repetition under the applied standard. No contiguous paragraph block from one reader page is substantially copied into another."
+    },
+    "additionalFindings": [
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Screening finding 3: The guide's reference to 'industry starting templates' is supported by source:0:claim:2, which records that the vendor page describes industry starting templates. The guide presents this as a vendor description to evaluate, not a verified installed capability. No unsupported assertion is made.",
+        "evidenceIds": [
+          "source:0:claim:2",
+          "page:7:paragraph:2"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Screening finding 5: The statement 'a link to a form does not prove that the form was completed' is a general editorial principle about the limits of documentary evidence, not an unsupported claim about ICC's behavior. It is consistent with the guide's overall approach of helping readers understand what evidence a map connection does and does not establish. Source:0:claim:1 supports the description of document links; the editorial caution adds no unsupported assertion about ICC.",
+        "evidenceIds": [
+          "source:0:claim:1",
+          "page:6:paragraph:12"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Screening finding 6: The FAQ section's scope is explicitly framed by the guide's introduction as 'starting points for a discussion, not substitutes for a review of actual records.' The outline's estimated word counts are planning targets, not factual promises published to readers. No claim about FAQ depth appears in the reader-facing text.",
+        "evidenceIds": [
+          "page:0:paragraph:14"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "consistency",
+        "reason": "Screening finding 4: Variation in phrasing for ICC PDF-chart and document-link descriptions across chapters is legitimate editorial variation in a chapter-standalone guide. Each chapter independently qualifies the vendor description as a starting point for evaluation, not a confirmed capability. The maintained writing rule permits short factual cautions to recur across chapters.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "page:7:paragraph:20",
+          "page:9:paragraph:37"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Screening finding 0 and 1: The PDF-chart review caution ('review of supported PDF process charts before acceptance') appears in multiple chapters, but each occurrence is a short factual qualification derived from source:0:claim:2. Under the maintained writing rule, short factual cautions may recur across standalone chapters. No contiguous paragraph is substantially copied; the surrounding context, purpose, and reader task differ materially in each chapter.",
+        "evidenceIds": [
+          "source:0:claim:2",
+          "page:7:paragraph:2",
+          "page:7:paragraph:20",
+          "page:5:paragraph:28"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Screening finding 2: The evaluating-process-software chapter and the ongoing-operation demonstration section address different decisions. The evaluation chapter concerns selecting among tools before adoption; the demonstration section concerns preparing a focused post-deployment discussion around a specific unresolved change. The examples, roles, starting conditions, and decision questions are materially different. Shared subject matter about recording observations does not constitute substantially copied paragraphs.",
+        "evidenceIds": [
+          "page:2:paragraph:5",
+          "page:2:paragraph:16",
+          "page:9:paragraph:36",
+          "page:9:paragraph:38"
+        ],
+        "comparisons": []
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "The PDF-chart review caution appears in multiple chapters as a short factual qualification, which the maintained writing rule permits to recur across standalone pages. Inspecting the actual paragraph text, no contiguous paragraph from one page is substantially copied into another. The surrounding guidance, reader tasks, and decision contexts differ materially in each chapter. The finding is cleared.",
+        "evidenceIds": [
+          "source:0:claim:2",
+          "page:7:paragraph:2",
+          "page:7:paragraph:20",
+          "page:5:paragraph:28"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 1,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Inspecting page:7:paragraph:20 and surrounding chapters, the PDF-chart caution in the migration chapter is a short factual qualification permitted to recur under the maintained writing rule. The phrasing differs from the introduction (page:0:paragraph:5) and serves a different chapter purpose. No substantially copied paragraph block exists. The finding is cleared.",
+        "evidenceIds": [
+          "page:7:paragraph:20",
+          "page:0:paragraph:5",
+          "source:0:claim:2"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 2,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Inspecting page:2:paragraph:5 and page:9:paragraph:38 and their surrounding contexts, the evaluating-process-software chapter addresses tool selection before adoption while the ongoing-operation demonstration section addresses a focused post-deployment change discussion. The examples differ (hypothetical comparison meeting vs. a specific changed handoff), the roles and starting conditions differ, and the decision questions differ. Shared subject matter and the common theme of recording observations do not constitute substantially copied paragraphs under the applied standard.",
+        "evidenceIds": [
+          "page:2:paragraph:5",
+          "page:2:paragraph:24",
+          "page:9:paragraph:36",
+          "page:9:paragraph:38"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 3,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Source:0:claim:2 explicitly records that the vendor page describes industry starting templates, so the guide's reference to them is supported. The guide presents this as a vendor description to verify, not a confirmed capability. No assertion exceeds the supported claim.",
+        "evidenceIds": [
+          "source:0:claim:2",
+          "page:7:paragraph:2"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 4,
+        "verdict": "clear",
+        "dimension": "consistency",
+        "reason": "Phrasing variation for the PDF-chart and document-link descriptions across chapters is editorial variation in a chapter-standalone guide, not contradictory factual treatment. Each chapter independently frames ICC descriptions as vendor-published starting points requiring verification. The maintained writing rule permits this recurrence. The finding is cleared.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "page:7:paragraph:20",
+          "page:9:paragraph:37",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 5,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The statement that 'a link to a form does not prove that the form was completed' is a general editorial principle about the limits of documentary evidence, not an unsupported assertion about ICC's specific behavior. The guide does not claim ICC makes or fails to make this guarantee; it advises readers about what any link can and cannot establish. Source:0:claim:1 supports the description of ICC document links; the editorial caution adds no unsupported ICC claim.",
+        "evidenceIds": [
+          "source:0:claim:1",
+          "page:6:paragraph:12",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 6,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The guide's introduction explicitly states the FAQ questions are 'starting points for a discussion, not substitutes for a review of actual records.' The outline's word-count targets are planning guidance, not factual promises in the published reader-facing text. No claim about FAQ depth or completeness appears in the pages, so there is no unsupported assertion to fail.",
+        "evidenceIds": [
+          "page:0:paragraph:14",
+          "page:9:paragraph:16",
+          "page:9:paragraph:18"
+        ],
+        "comparisons": []
+      }
+    ]
+  }
+}
