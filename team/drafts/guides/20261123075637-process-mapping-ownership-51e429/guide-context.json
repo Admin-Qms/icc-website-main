@@ -231,6 +231,21 @@
         "Decide how to address a recurring problem identified by feedback",
         "Identify who will confirm a proposed product response before the route is relied upon"
       ]
+    },
+    {
+      "slug": "process-mapping-software-for-quality-management",
+      "title": "Process mapping software for quality management in Canadian operations",
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The three changed paragraphs each introduce or extend links with appropriate hedging: the ISO APG link correctly attributes the source as educational material and not mandatory criteria; the ICC process page link is cited as one source for questions; and the AI-output paragraph correctly attributes the claim to the ICC source and hedges it as a starting point for questions rather than a verified capability. All cited URLs match supplied research source URLs or the permitted internal site path. Claims throughout are supported by the supplied sources and appropriately hedged. The page stays within its assigned introductory scope across all three subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. No FAQ section appears, which is correct as none is assigned to this introduction chapter. Workflow roles, records, decisions, and the illustrative example are present and consistently labeled hypothetical. Glossary definitions for Process owner, Process boundary, and Handoff appear in context.glossary and are restated in the page body only as inline prose definitions, which is acceptable usage rather than a formal restatement.",
+      "bodyHash": "025e756bdebaaf5fa552545f7611ec82b7f194cad519dfd5c5c251fafe6bcc82",
+      "decisions": [
+        "Identify the decisions already made and the evidence that supports them",
+        "Assign follow-up for an open question rather than treating a description as proof",
+        "Record what was shown, what was described, what depended on configuration, and what remains unanswered",
+        "Record an exception when a file, owner, or destination is unavailable and assign follow-up",
+        "Agree on whether to proceed, narrow the rollout, or obtain more evidence after training",
+        "Agree on who considers a change, what evidence is needed, and how an open issue is recorded",
+        "Distinguish a condition accepted for a limited scope from a question that still needs evidence before expanding use"
+      ]
     }
   ],
   "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
