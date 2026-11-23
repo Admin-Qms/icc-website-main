@@ -54,7 +54,8 @@
     "Draft responsibility statement",
     "Assignment record",
     "Interim arrangement record",
-    "Decision record"
+    "Decision record",
+    "Review record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -121,6 +122,24 @@
         "Decide when to examine assignments and which events warrant an earlier check",
         "Decide how to address a gap in backup access or knowledge",
         "Update applicable information through the organization's normal controls after an authorized decision is made"
+      ]
+    },
+    {
+      "slug": "mapping-workflows",
+      "title": "Map workflows and decisions: process mapping software for quality management",
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. The single changed paragraph introduces the ISO APG link with appropriate hedging, correctly attributing it as educational material on evidence collection; the URL matches the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. Both cited URLs match supplied research source URLs or the permitted internal site path. No FAQ section appears, which is correct as none is assigned. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
+      "bodyHash": "987447d8787b5ad1be3e1083a82a2145244abf5f93f61c3cfb6eba93e710d00e",
+      "decisions": [
+        "Determine ownership, acceptance and next action",
+        "Mark branch as unresolved and name the person who will decide the next step",
+        "Assign a person to decide the next action when accounts differ",
+        "Determine whether the map should show current practice, an intended change, or an unresolved discrepancy",
+        "Decide whether another sample, a discussion, or escalation is needed before the map is accepted",
+        "Determine whether a step is missing, whether the role shown is correct, and whether the route makes sense",
+        "Record one unclear decision for follow-up",
+        "Decide whether the draft is suitable for a limited purpose while an issue remains open",
+        "Decide whether additional evidence is needed before accepting the map",
+        "Accept a correction or assign further investigation"
       ]
     }
   ],
