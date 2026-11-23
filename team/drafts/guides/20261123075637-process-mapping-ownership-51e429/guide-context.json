@@ -29,7 +29,10 @@
     "Map including what it includes, excludes, and the decisions it supports",
     "Record of boundary answers and resolutions",
     "Record of vendor statements or demonstrated behavior",
-    "Record of date, evidence examined, disagreements found, and resolution owners"
+    "Record of date, evidence examined, disagreements found, and resolution owners",
+    "Evaluation record",
+    "Demonstration record",
+    "Gap and commitments record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -50,6 +53,24 @@
         "Record escalation route and assign a resolution owner when the route is not agreed",
         "Decide who can view, propose, review, and release a change to a map and how those decisions are recorded",
         "Record what was shown, described, or left unanswered during vendor demonstration"
+      ]
+    },
+    {
+      "slug": "evaluating-process-software",
+      "title": "Evaluate process mapping software: process mapping software for quality management",
+      "summary": "All six dimensions pass. The page aligns with its plan brief, covers all four assigned subsections without scope drift, cites only the two assigned source URLs plus one permitted internal path, maintains clear and readable prose, avoids significant repetition, and correctly omits an FAQ section. Each subsection addresses its assigned workflow role, input, decision, record, and exception elements. The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate and support their sentences. Vendor descriptions are consistently distinguished from verified installed behavior throughout.",
+      "bodyHash": "ceccc2bd8d2b219828d0ae1718f8f5d4db321e16ddc8e48f98538c21cb908f25",
+      "decisions": [
+        "Agree on what the team will test and who will judge the result before the demonstration",
+        "Record the decision including evidence observed and questions left open",
+        "Separate a requirement from a preference and record which decision each item supports",
+        "Document what was not demonstrated along with a person responsible for following up",
+        "Record the route actually shown and any explanation necessary to make the route understandable",
+        "Record discrepancies between the agreed sample and the operator's located answer",
+        "Record what was demonstrated separately from what was described by the supplier",
+        "List unanswered access and ownership questions and assign follow-up",
+        "Decide what consequence a gap has for the intended use and name the person who can accept the risk or request further evidence",
+        "Decide whether available evidence supports a selection or whether further information is required"
       ]
     }
   ],
