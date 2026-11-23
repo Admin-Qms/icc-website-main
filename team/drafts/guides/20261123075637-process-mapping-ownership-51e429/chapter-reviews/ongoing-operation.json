@@ -6,41 +6,34 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All four subsections cover maintain process maps and improve within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and a clearly labeled illustrative example using a hypothetical scenario. The FAQ subsection is present and assigned; its nine questions cover process mapping, ownership, interfaces, document links, migration, change triggers, auditor expectations, certification guarantees, and demonstrations—all consistent with the chapter scope. The two permitted source URLs are used appropriately and each citation is supported by the research record. No unresolved findings from the previous review exist, and the changed paragraphs introduce no new problems. The page passes all checks.",
+  "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. Both changed paragraphs introduce ISO APG links with appropriate hedging, correctly attributing the source as educational material on improvement and evidence respectively; both URLs match the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. An FAQ section appears and is correctly assigned in the plan. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
   "glossary": [],
   "roles": [
     "Process owner",
     "Quality lead",
     "Operations manager",
-    "Operator",
-    "Supervisor",
     "Worker",
-    "Receiving role",
-    "Responsible person",
-    "Decision-maker",
-    "Reviewer",
-    "Presenter"
+    "Operator",
+    "Supervisor"
   ],
   "recordNames": [
     "Documented decision and its owner",
-    "Review record",
-    "Evaluation record",
-    "Demonstration record",
-    "Change record",
-    "Open decision record",
     "Interim arrangement record",
-    "Follow-up record"
+    "Review record",
+    "Change record",
+    "Evaluation record"
   ],
   "decisions": [
-    "Determine which changes require map review and who needs to contribute",
-    "Record any unresolved question instead of treating a diagram update as evidence of agreement",
-    "Decide whether a proposed change or accepted change is the current input",
-    "Determine ownership, acceptance and next action for each map review",
+    "Determine which changes require review",
+    "Decide who needs to contribute to a map review",
+    "Record an unresolved question and assign an owner",
+    "Determine ownership, acceptance and next action for a changed handoff",
     "Agree on a question before choosing a measure",
     "Decide whether to retain or replace a measure when the process changes",
-    "Decide whether the sample supports a conclusion or whether more information is needed before assigning a remedy",
-    "Record the selection decision including demonstrated outcomes, verbal commitments, organizational tasks, and unresolved questions",
-    "Determine whether the selection can proceed while an open item remains"
+    "Record uncertainty in a measure decision",
+    "Decide whether the selection can proceed while an open item remains unanswered",
+    "Separate a demonstrated outcome from a verbal commitment and an unresolved question",
+    "Accept a limitation or request more evidence after a demonstration"
   ],
   "pass": true,
   "deterministic": {
@@ -192,15 +185,15 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "6bc7606754cb7aaead43fce75e6912b78f52cabaca5b4681d8dc029ee94d9442",
-  "contentHash": "7b4d0f536c92847e1e59884f99a4cc48c077fe0220798cad81c70e2443d8a6bb",
+  "inputHash": "fb892ebd4671025b413324094ec062456bc6f2ec465940ed153df52bac7ed898",
+  "contentHash": "0dd8e033bd530d1041356d697d672ff27894e4089b0b4806ad1b85d9301739b6",
   "paragraphHashes": [
     "6590f1eeef3c372da1cc642b78338785938c927df82ebf23d8631bb6b45fb7c3",
     "63f184f2959304fa85e8219abb4a56b27535c37594c88c9c686cb0d776176367",
     "20cac4aa7a72fc34a267612992e87262fcce3b64dd0d2617ddfc881c68702d80",
     "6abefebe6214094384c7e9663c8afc580189a3456f6b1c9b7793d1d1a44fef40",
     "ebb901c38cc0ac8a4a39218a0efba43d74aa4c66b57451f066b62d6489680b1a",
-    "d1a633a340b16ea95685ef4053c8100dae53747939dabc27172c68d87ef409ad",
+    "89505be348911465438ab9fefdf0fdbc5d46c56f197e3795c19f90e9d27e2c25",
     "ff596dcb67e0ee99d963abc407c0b5f8c021233a5e06d6a981ec44cb06e6e38c",
     "d5add86d3980b256d41fe63c27a6776c303b9dc3edd5f4d93ec74b76e3941098",
     "17ce9db99eaddf2f9c2deda5bfbda21cb48d5839d7a64715b07177b740287ade",
@@ -225,7 +218,7 @@
     "c299352acefae20a1278bb11927dfc874f7a81e5c5b6db3198d96fa6e5abd5de",
     "2cf1df97a85ca53ba730fb0c1d3579ad364ddb09bdde57f21bba573aec62b395",
     "915d5b73334f32827127a642559d2389b44d602dd18b35fb4e99fae521975cbd",
-    "ee609bfe14b1dba8eca9e4abd0ef882d03f54b7ae54a08f36f0e7dcc0641eee9",
+    "0211504193699224efee1084640c4dd5ccef77708925f0378123091089020508",
     "3525cd31eec092873492dc186377c87ab24df7055e3ad6fcdbef07449a3098be",
     "4a9a206bd2ea9c60bc4da54a0d94f117686103b1b15905d202d2dcbb57411a4e",
     "2ae0b329922a3e5dff11ac7315b00721f3f6d068d98e056f4926e90895d5b7fc",
@@ -240,7 +233,7 @@
     "356e67ad804210f06700274d86d44e7e0f5a365644a22f73819c7d1b3fcb070f",
     "5c8dee673115738f06fbf2179b67786125f2d9113aab877c74bda15ae9237a06"
   ],
-  "outputContextHash": "002a549361ae2692a39792b95f9668113479933bfcff9b69c88504a8fe50365a",
-  "reviewedAt": "2026-11-23T15:22:49.190Z",
+  "outputContextHash": "ccb522246571a65ff8676b28724fcda57b7c73b0f65f5fe421ad6c0499b79953",
+  "reviewedAt": "2026-11-23T15:55:08.839Z",
   "reviewer": "Configured independent chapter reviewer"
 }

@@ -93,11 +93,11 @@
       "checkpointedAt": "2026-11-23T15:53:37.365Z"
     },
     "ongoing-operation": {
-      "hash": "ea154577365738348c6798c3cda2656569cb0305c2e77084c91b10beb28a3a46",
-      "wordCount": 2026,
+      "hash": "587b86def008946365a5387f9c75f9a15804261f2913993962b183b9d1dea8cb",
+      "wordCount": 2025,
       "readTime": 11,
-      "status": "changed",
-      "checkpointedAt": "2026-11-23T15:22:37.694Z"
+      "status": "written",
+      "checkpointedAt": "2026-11-23T15:55:00.164Z"
     },
     "process-mapping-software-for-quality-management": {
       "hash": "58876d36f7039380922fdede8fdffec1743827d7697b1e630e0ef2e2aeeb4643",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T15:53:47.858Z",
+  "updatedAt": "2026-11-23T15:55:08.842Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -1418,7 +1418,7 @@
     "reviewedChapters": [],
     "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
   },
-  "contextHash": "6b9d2f2267077c7059c3f97fe7d0e86ec7b396835e2998601a924e161eac8c19",
+  "contextHash": "ccb522246571a65ff8676b28724fcda57b7c73b0f65f5fe421ad6c0499b79953",
   "chapterReviews": {
     "mapping-current-processes": {
       "claims": "passed",
@@ -2884,6 +2884,245 @@
       ],
       "outputContextHash": "6b9d2f2267077c7059c3f97fe7d0e86ec7b396835e2998601a924e161eac8c19",
       "reviewedAt": "2026-11-23T15:53:47.847Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "ongoing-operation": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. Both changed paragraphs introduce ISO APG links with appropriate hedging, correctly attributing the source as educational material on improvement and evidence respectively; both URLs match the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. An FAQ section appears and is correctly assigned in the plan. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
+      "glossary": [],
+      "roles": [
+        "Process owner",
+        "Quality lead",
+        "Operations manager",
+        "Worker",
+        "Operator",
+        "Supervisor"
+      ],
+      "recordNames": [
+        "Documented decision and its owner",
+        "Interim arrangement record",
+        "Review record",
+        "Change record",
+        "Evaluation record"
+      ],
+      "decisions": [
+        "Determine which changes require review",
+        "Decide who needs to contribute to a map review",
+        "Record an unresolved question and assign an owner",
+        "Determine ownership, acceptance and next action for a changed handoff",
+        "Agree on a question before choosing a measure",
+        "Decide whether to retain or replace a measure when the process changes",
+        "Record uncertainty in a measure decision",
+        "Decide whether the selection can proceed while an open item remains unanswered",
+        "Separate a demonstrated outcome from a verbal commitment and an unresolved question",
+        "Accept a limitation or request more evidence after a demonstration"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Review maps after change",
+            "section": "Review maps after change"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Review maps after change; semantic review verifies support",
+            "section": "Review maps after change"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Measure the review workflow",
+            "section": "Measure the review workflow"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Measure the review workflow; semantic review verifies support",
+            "section": "Measure the review workflow"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Frequently asked questions",
+            "section": "Frequently asked questions"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Frequently asked questions; semantic review verifies support",
+            "section": "Frequently asked questions"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Prepare a software demonstration",
+            "section": "Prepare a software demonstration"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Prepare a software demonstration; semantic review verifies support",
+            "section": "Prepare a software demonstration"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What should a process map show first?",
+            "section": "What should a process map show first?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Who owns a process?",
+            "section": "Who owns a process?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should process interfaces be recorded?",
+            "section": "How should process interfaces be recorded?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Which documents should be linked?",
+            "section": "Which documents should be linked?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should existing maps be migrated?",
+            "section": "How should existing maps be migrated?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: How should changes trigger review?",
+            "section": "How should changes trigger review?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What should an auditor see?",
+            "section": "What should an auditor see?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: Does software guarantee certification?",
+            "section": "Does software guarantee certification?"
+          },
+          {
+            "id": "faq-answer",
+            "pass": true,
+            "message": "Answer with actionable detail: What should a demonstration show?",
+            "section": "What should a demonstration show?"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "fb892ebd4671025b413324094ec062456bc6f2ec465940ed153df52bac7ed898",
+      "contentHash": "0dd8e033bd530d1041356d697d672ff27894e4089b0b4806ad1b85d9301739b6",
+      "paragraphHashes": [
+        "6590f1eeef3c372da1cc642b78338785938c927df82ebf23d8631bb6b45fb7c3",
+        "63f184f2959304fa85e8219abb4a56b27535c37594c88c9c686cb0d776176367",
+        "20cac4aa7a72fc34a267612992e87262fcce3b64dd0d2617ddfc881c68702d80",
+        "6abefebe6214094384c7e9663c8afc580189a3456f6b1c9b7793d1d1a44fef40",
+        "ebb901c38cc0ac8a4a39218a0efba43d74aa4c66b57451f066b62d6489680b1a",
+        "89505be348911465438ab9fefdf0fdbc5d46c56f197e3795c19f90e9d27e2c25",
+        "ff596dcb67e0ee99d963abc407c0b5f8c021233a5e06d6a981ec44cb06e6e38c",
+        "d5add86d3980b256d41fe63c27a6776c303b9dc3edd5f4d93ec74b76e3941098",
+        "17ce9db99eaddf2f9c2deda5bfbda21cb48d5839d7a64715b07177b740287ade",
+        "f8bf803c1f2c6e88f544010f17f1dc276f6789fae730c382cd9a453ffe5726e2",
+        "ea2300d884f0138d3a556c4f6b42daa56472b67ccdeaf1894d7e42d1c0bf5f6c",
+        "eb0d339f55f66def58cec9b0a52f9e78090cbcfb32df15bccca85ca33dcba9d7",
+        "6ac4a0f1701300fef7e237f704856d3df316d8a542ec8ef97e7516f1b2c54e85",
+        "8ad1eef077e713b1789411a39f5f80958cc68a181c5d57acd278ab10621c9f1f",
+        "044d4836b4cf2586fedaf9149cc0178efcd60324c19e60aeb12ca2c16edb5513",
+        "aac9d1884b4c4870a469bfe014770a536c9a80d55cf7d3cb813247be5b9b02b1",
+        "23b74010828734bf71253a50d8ecfd04957b1e2f01d825e7a56e87155f1ba17a",
+        "7e904f67c73cfaacbd08d0daa84cc814435f624e9b74fc5c0ebbe3476b2c5020",
+        "668447c8a937028c378b2fd54f1f66ace99ad73341ca98c1a7f9fabc07f1b8a1",
+        "e8adee913899d89b9bbff1d10476b909b632caff117615b30d0005397d71477b",
+        "39400b101aaac0f55301ae3417439af67fa8a0f6a8659ea1dacd90083b9ab042",
+        "b50923588a47d1a408b0c250afcadb07109e9991a2aa168ff393ae0c15685149",
+        "cffc7231c87e7cc8e0e7e138645dd650f17c5aa6c862838e18e43549e8fcfac9",
+        "69941525c390c6490965f60c15271f1c29da334488615c1efa31255e84ea1d7b",
+        "d5d10754e11bd4dd3e2c391df2509629a937b15e25b32587bf25f327c47aee4b",
+        "ebcf012c2cda99750cbd863da52ab5f391bb70fa0e8a633a9d5be241e9d93cbb",
+        "1f5284516cf7092b9758699261295349f5c9bd0cdfdf689897ec768b9d314255",
+        "c299352acefae20a1278bb11927dfc874f7a81e5c5b6db3198d96fa6e5abd5de",
+        "2cf1df97a85ca53ba730fb0c1d3579ad364ddb09bdde57f21bba573aec62b395",
+        "915d5b73334f32827127a642559d2389b44d602dd18b35fb4e99fae521975cbd",
+        "0211504193699224efee1084640c4dd5ccef77708925f0378123091089020508",
+        "3525cd31eec092873492dc186377c87ab24df7055e3ad6fcdbef07449a3098be",
+        "4a9a206bd2ea9c60bc4da54a0d94f117686103b1b15905d202d2dcbb57411a4e",
+        "2ae0b329922a3e5dff11ac7315b00721f3f6d068d98e056f4926e90895d5b7fc",
+        "c2b5363db99a2f1721005345efcd8ea6d25fd95885ca3f2bbdc16661e8680284",
+        "11025ca68aab3b3636c95064f49445dea47d5fddbfad35a8e17333f920cc6fe0",
+        "7d219e3ae85d8f721ad70f42b6520cabe0d7f6b9dd325b443657239c7cfb8b5d",
+        "b3a035c2ed9ab7e3b2d0791f2a0e6055b3d5170691605643f8fb90f717375d89",
+        "738f4a49e145ed0085282da06f16af1210c1ac5b5bfaabfb7530e428e592675a",
+        "15df493dddb1f572309e63ea331ddef1c91d5a40df55baa1652f856a7012a0a4",
+        "b43f1f54b03a69601b3da6daa9b7090b4183ab80c67d1d2f850293b8e14294a6",
+        "a6e4a0bd4eb2f66ab4b60a6c771a4baa2e5441d335961c48a34b085ca2468a03",
+        "356e67ad804210f06700274d86d44e7e0f5a365644a22f73819c7d1b3fcb070f",
+        "5c8dee673115738f06fbf2179b67786125f2d9113aab877c74bda15ae9237a06"
+      ],
+      "outputContextHash": "ccb522246571a65ff8676b28724fcda57b7c73b0f65f5fe421ad6c0499b79953",
+      "reviewedAt": "2026-11-23T15:55:08.839Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },

@@ -209,6 +209,24 @@
         "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed",
         "Decide whether the next action is to clarify a label, investigate access, or seek more evidence"
       ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Maintain process maps and improve: process mapping software for quality management",
+      "summary": "All six quality dimensions pass. No prior findings were raised, so nothing carries forward as unresolved. Both changed paragraphs introduce ISO APG links with appropriate hedging, correctly attributing the source as educational material on improvement and evidence respectively; both URLs match the supplied research source. Claims throughout are supported by the supplied sources and appropriately hedged against vendor descriptions and ISO APG guidance. The page stays within its assigned scope across all four subsections without encroaching on adjacent chapters. Prose is readable and non-repetitive. All cited URLs match supplied research source URLs or the permitted internal site path. An FAQ section appears and is correctly assigned in the plan. Workflow roles, inputs, decisions, records, and exceptions are present and consistent across all subsections. Illustrative examples are clearly labeled hypothetical.",
+      "bodyHash": "c201df4caf517301aba1bf7441439deb53b6142723105fb4afc4e797e937ed56",
+      "decisions": [
+        "Determine which changes require review",
+        "Decide who needs to contribute to a map review",
+        "Record an unresolved question and assign an owner",
+        "Determine ownership, acceptance and next action for a changed handoff",
+        "Agree on a question before choosing a measure",
+        "Decide whether to retain or replace a measure when the process changes",
+        "Record uncertainty in a measure decision",
+        "Decide whether the selection can proceed while an open item remains unanswered",
+        "Separate a demonstrated outcome from a verbal commitment and an unresolved question",
+        "Accept a limitation or request more evidence after a demonstration"
+      ]
     }
   ],
   "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"

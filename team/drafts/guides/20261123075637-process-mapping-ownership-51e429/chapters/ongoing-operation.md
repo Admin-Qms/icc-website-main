@@ -85,7 +85,7 @@ Agree which events, such as a changed role, instruction, boundary, or handoff, s
 
 ### What should an auditor see?
 
-Provide an understandable process explanation and access to the relevant evidence under the organization’s arrangements. A reviewer should be able to distinguish the map, an instruction, and a record of an instance of work. The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) offers educational papers on evidence; select a sample and ask the process owner to explain how each item relates to the decision being examined.
+Provide an understandable process explanation and access to the relevant evidence under the organization's arrangements. A reviewer should be able to distinguish the map, an instruction, and a record of an instance of work. The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) offers educational papers on evidence; select a sample and ask the process owner to explain how each item relates to the decision being examined.
 
 ### Does software guarantee certification?
 
