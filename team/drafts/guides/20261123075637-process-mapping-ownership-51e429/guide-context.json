@@ -191,6 +191,26 @@
         "Hold, narrow, or reverse a stage when a critical question remains unanswered",
         "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed"
       ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Maintain process maps and improve: process mapping software for quality management",
+      "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The FAQ section is correctly present and assigned in the plan. The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path (/contact/). Vendor descriptions are consistently distinguished from verified installed behavior throughout. Prose is clear and readable with no significant repetition across sections. No new glossary terms are introduced beyond those already defined in context.glossary.",
+      "bodyHash": "db4c66773c068b5da25b661deb74c344cea430d572329797f932df46c773a4d2",
+      "decisions": [
+        "Determine which changes require review and who needs to contribute",
+        "Record an unresolved question and its owner when it cannot yet be resolved",
+        "Decide whether a proposed change or accepted change is the input before treating it as the current route",
+        "Record the discrepancy and identify the next decision when work has changed but the map has not",
+        "Agree on a question before choosing a measure",
+        "Define what counts in the sample and who will interpret the result",
+        "Record a limitation instead of extrapolating when the sample is incomplete",
+        "Decide which explanation is supported and record the action and owner when feedback indicates a recurring problem",
+        "Agree on decisions the demonstration session should inform before asking for a presentation",
+        "Separate a demonstrated outcome from a verbal commitment and name the person who can accept a limitation or request more evidence",
+        "Record what was shown, what was described, and what remains unanswered before making a selection decision",
+        "Confirm whether the selection can proceed while an open item remains and keep the answer with the evaluation record"
+      ]
     }
   ],
   "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
