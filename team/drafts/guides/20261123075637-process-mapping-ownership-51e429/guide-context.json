@@ -30,7 +30,10 @@
     "Worker",
     "Assigned process owner",
     "Receiving role",
-    "Map author"
+    "Map author",
+    "Reviewer",
+    "Decision-maker",
+    "Responsible person"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -51,7 +54,9 @@
     "Interim arrangement record identifying who accepted it and what would trigger review",
     "Decision record stating scope, people consulted, decision-maker, agreed assignment, and conditions",
     "Validation record identifying map version, participants, sample, and decision",
-    "Review record identifying version examined, sample used, participants, and decisions remaining open"
+    "Review record identifying version examined, sample used, participants, and decisions remaining open",
+    "Review record capturing step, sample, intended reader, and observed result",
+    "Change record connecting decision to process and affected destination"
   ],
   "example": {
     "label": "Illustrative example",
@@ -132,6 +137,21 @@
         "Decide whether the draft is suitable for a limited purpose while an unresolved issue remains",
         "Decide whether additional evidence is needed before accepting the map",
         "Assign resolution owner for any unresolved boundary or exception"
+      ]
+    },
+    {
+      "slug": "documents-and-evidence",
+      "title": "Connect documents and evidence: process mapping software for quality management",
+      "summary": "All four subsections cover connect documents and evidence within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. There are no unresolved findings from the previous review, and the changed paragraphs introduce no new problems. The page passes all checks.",
+      "bodyHash": "b0fcb0d91f6d62b0425b81a5d3d6839d7237322241f59f3ce5b1a2662bcf2b74",
+      "decisions": [
+        "Determine ownership, acceptance and next action for each candidate document link",
+        "Decide whether the connection helps the intended reader and record why a disputed item was included or left open",
+        "Decide whether the process description needs an update when a revision changes the meaning of a decision or role",
+        "Decide how the organization will handle the period before a revision issue is resolved",
+        "Identify an approved alternative route, restrict reliance on a draft, or escalate when a link is unavailable",
+        "Accept the tested connection only for the scope and conditions the review supports",
+        "Distinguish an access question from an obsolete destination before choosing a remedy"
       ]
     }
   ],

@@ -72,11 +72,11 @@
       "checkpointedAt": "2026-11-23T15:17:10.677Z"
     },
     "documents-and-evidence": {
-      "hash": "89b2881a38dd81a0041712242ae063d575b3f47bc084fc65f255bb3a391b31b6",
+      "hash": "03c27985769b1000b9fea2e6f7aeca9098c36082e5e3c8078b207e515560cc3b",
       "wordCount": 2077,
       "readTime": 11,
       "status": "written",
-      "checkpointedAt": "2026-11-23T14:59:07.308Z"
+      "checkpointedAt": "2026-11-23T15:18:28.790Z"
     },
     "migration-and-configuration": {
       "hash": "50c2fb820cf299861c5530d803f210f4c0ad4907af4593003420704fc41a1443",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T15:17:17.750Z",
+  "updatedAt": "2026-11-23T15:18:38.212Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -1418,7 +1418,7 @@
     "reviewedChapters": [],
     "researchHash": "eac219f19c45003d26a5d13b4f1dc3e90ec79039067cde5865a34f0bed6dd1e5"
   },
-  "contextHash": "f4b44badab341ee49dc2febf9d1de3348a4c24484a928d224268ea5223aa13df",
+  "contextHash": "b00cf81d1eb976ca95dfee888c18a5af0b9c03f0cc24133a4aad7d72f1bdc853",
   "chapterReviews": {
     "mapping-current-processes": {
       "claims": "passed",
@@ -2282,6 +2282,179 @@
       ],
       "outputContextHash": "f4b44badab341ee49dc2febf9d1de3348a4c24484a928d224268ea5223aa13df",
       "reviewedAt": "2026-11-23T15:17:17.747Z",
+      "reviewer": "Configured independent chapter reviewer"
+    },
+    "documents-and-evidence": {
+      "claims": "passed",
+      "scope": "passed",
+      "readability": "passed",
+      "links": "passed",
+      "repetition": "passed",
+      "faq": "passed",
+      "findings": [],
+      "summary": "All four subsections cover connect documents and evidence within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. There are no unresolved findings from the previous review, and the changed paragraphs introduce no new problems. The page passes all checks.",
+      "glossary": [],
+      "roles": [
+        "Process owner",
+        "Quality lead",
+        "Operator",
+        "Worker",
+        "Reader",
+        "Reviewer",
+        "Decision-maker",
+        "Responsible person"
+      ],
+      "recordNames": [
+        "Review record capturing step, sample, intended reader, and observed result",
+        "Change record connecting decision to process and affected destination"
+      ],
+      "decisions": [
+        "Determine ownership, acceptance and next action for each candidate document link",
+        "Decide whether the connection helps the intended reader and record why a disputed item was included or left open",
+        "Decide whether the process description needs an update when a revision changes the meaning of a decision or role",
+        "Decide how the organization will handle the period before a revision issue is resolved",
+        "Identify an approved alternative route, restrict reliance on a draft, or escalate when a link is unavailable",
+        "Accept the tested connection only for the scope and conditions the review supports",
+        "Distinguish an access question from an obsolete destination before choosing a remedy"
+      ],
+      "pass": true,
+      "deterministic": {
+        "pass": true,
+        "checks": [
+          {
+            "id": "unresolved-marker",
+            "pass": true,
+            "message": "Resolve image and processing markers before review"
+          },
+          {
+            "id": "inline-image-provenance",
+            "pass": true,
+            "message": "Guide inline assets are not supported; use the managed hero image brief"
+          },
+          {
+            "id": "voice",
+            "pass": true,
+            "message": "All blocks use third-person voice"
+          },
+          {
+            "id": "fabricated-quotes",
+            "pass": true,
+            "message": "No fabricated quotes detected"
+          },
+          {
+            "id": "spelling",
+            "pass": true,
+            "message": "Use US spelling"
+          },
+          {
+            "id": "banned-filler",
+            "pass": true,
+            "message": "Remove banned filler"
+          },
+          {
+            "id": "single-h1",
+            "pass": true,
+            "message": "The page shell supplies H1"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Identify controlled documents",
+            "section": "Identify controlled documents"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Identify controlled documents; semantic review verifies support",
+            "section": "Identify controlled documents"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Link records to process steps",
+            "section": "Link records to process steps"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Link records to process steps; semantic review verifies support",
+            "section": "Link records to process steps"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Handle revisions and obsolete links",
+            "section": "Handle revisions and obsolete links"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Handle revisions and obsolete links; semantic review verifies support",
+            "section": "Handle revisions and obsolete links"
+          },
+          {
+            "id": "subsection-coverage",
+            "pass": true,
+            "message": "Explain the assigned subsection with substantive content: Test traceability during review",
+            "section": "Test traceability during review"
+          },
+          {
+            "id": "subsection-evidence",
+            "pass": true,
+            "message": "Cite assigned evidence in Test traceability during review; semantic review verifies support",
+            "section": "Test traceability during review"
+          },
+          {
+            "id": "useful-links",
+            "pass": true,
+            "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+          }
+        ],
+        "failures": []
+      },
+      "glossaryVariantsIgnored": [],
+      "inputHash": "7f8945f8ee9b48609a71da8ce6ec9a0c9e2ab49e01536b3110224553ced21fa5",
+      "contentHash": "443ec56c0e1009ab16389f1b7acf4f2f649e7e18a2b72a42a55f9997caa8e2f7",
+      "paragraphHashes": [
+        "f18b264cdb8c3f7273614d52a7e119a09c578ee766dcfc72f5c2a4ad46cb2ae5",
+        "160ea73a9cf51e3e041491c8cf15d74db077ea46bdd5063e9b355eb8ec70121a",
+        "e6ff926540223664b51cbddccdfb66ec30b20c063f60210257ae98ab2ab99eae",
+        "9d00364e766de5cacc094ae319de6c410f1401f217ed66977bb5804fcfc848ce",
+        "3e57b9c6af011c412d918b21691d38755119123c26860d930f2a52755f61224b",
+        "245d0ad77cf80f48ea8c62c9a68e0e3382dfd5405f9c30ab3258e44d086ccf2f",
+        "7f629aa111fadba710d30a87e9ee370d31649e90ad5f46c3a46b6493a51302ab",
+        "4c01aa91aad241b24ae91e6985b52444cf78a31b42b4e58408f22dcd9b604beb",
+        "fe6a5848c97a9e0b25ae2adb94b65925e0bb4b4bb3bf0a7ed7413d2c0082ef20",
+        "2eb85aa7a4f26769a48832b6eeda0d5435678351bc032a6e80e1b327390a6ee4",
+        "f0a9f8344c6fc5ebaec9e363677951ee6dbd9f7f1724b63bc5564073d99a6ed6",
+        "884ae5d872dcd664ab4033962d3a2625493eab26a1f779f9bfbbb19b3189bbd6",
+        "a4ddf624ddd802306e0830eafb83eabdb1db7436a51adf7e37dbb5456bd40efd",
+        "fb4d4fdbfc4a70a48b25e87bcc68538f10b908e67fde3eaff98f9e7e61314bfc",
+        "f301229f972bd157820d52f84af599aab495fab3594609dcb0a3508d86d95316",
+        "e624b1a7165c755cf46be9af7540ef6660c56b1c50cc2b1fd6f1536b64a72655",
+        "319897ac4c17f9ffc577687f9887c2e8e1e9304600108f983db04bcaa7233c38",
+        "f353816940a9387a65746a9f977e08f0eeab8cdbd85017142104ed8b1a629e78",
+        "764e3ac0a26d52a335b690e78bb39aefeac64ed51901358091b184be796440c9",
+        "e867dcf656b15ff951357d874eb2cf6b83005478ad21906d5a37c076d839e454",
+        "f2435da9e60001c3b1e6fdc427a990ebccb684b8690278161632f9184b1b833d",
+        "a70ea9ed40dab3244bbba977ff314d59252028005145bc7a9290aa0addb70659",
+        "b072eedafa87bd205aa89303abe25e4e1e458f6fdbd819d89746f9d1d26ef018",
+        "477704831c6841edd8c605507e6849b9615872dd7784022940167b7bff4f16a4",
+        "1a802f7f20942b157b253b315d0d4a3ced2c744e0bad8f001da52a809a775468",
+        "79add66079e063432a041bb2f35f62d134e57629f126046c958ebd1cff2fb958",
+        "eaf2f25c079be0d36606f57e76c4f65bde43f313d0519b50a154a017a9b6bd92",
+        "84d6d119f5dc08774fa24b96d7295cc5272613e2d0fafd9acd565beed3957747",
+        "559dfb177d1a6648de55cf5ed00e146fcf4bd9fe91d66cafcad20a7269cb5399",
+        "e852a0e9175c12886268133ddb5b13eb04967b4eba57ff0a68ef8221b5fb553d",
+        "5c626a79b9a7f2654071df54b042d68e2b94e517454f00b615a0b8a857ce4a96",
+        "17b5425ab886cd75ad4fc0ad63a38faf9fd5ae532e73e7b32ba2ef6a65a1bfdf",
+        "0a325f8db2838764abef93cb4919c0238c492c4c760d9c72c86eabb549a99fb4",
+        "5fdf8537b58484658149e5083eb97de309658028791d899de203989578ef2aa1",
+        "c152a6d46072b34e25053d996069eef0f6a69668ccb550f3a03676749762f63b",
+        "d6f0e57dfe2617e15a437bb900e8c6b16a2f2f0aa2d693ad73ccb9e8a71e4be9"
+      ],
+      "outputContextHash": "b00cf81d1eb976ca95dfee888c18a5af0b9c03f0cc24133a4aad7d72f1bdc853",
+      "reviewedAt": "2026-11-23T15:18:38.208Z",
       "reviewer": "Configured independent chapter reviewer"
     }
   },
