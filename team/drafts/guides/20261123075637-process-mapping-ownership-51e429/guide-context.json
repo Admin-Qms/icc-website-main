@@ -63,7 +63,9 @@
     "Reviewer",
     "Responsible person",
     "Normal reader",
-    "Authorizing person"
+    "Authorizing person",
+    "Representative user",
+    "Affected reader"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -92,7 +94,11 @@
     "Pilot acceptance decision record with scope and conditions",
     "Staged rollout record with scope, training observations, unresolved items, decision-maker, and acceptance conditions",
     "Feedback observation record with task, starting point, and observed result",
-    "Decision record with owner, interim guidance, and condition for closing"
+    "Decision record with owner, interim guidance, and condition for closing",
+    "Map-change record",
+    "Open decision record",
+    "Interim instruction record",
+    "Review record"
   ],
   "example": {
     "label": "Illustrative example",
@@ -222,6 +228,26 @@
         "Decide whether to hold, narrow, or reverse a rollout stage when a critical question remains unanswered",
         "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed",
         "Record the decision on whether a remaining question is acceptable for a limited scope or must be resolved before proceeding"
+      ]
+    },
+    {
+      "slug": "ongoing-operation",
+      "title": "Maintain process maps and improve: process mapping software for quality management",
+      "summary": "No previous findings were raised against this page. The three changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative example with the correct label and hypothetical framing. All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. The FAQ subsection is plan-assigned and present. No unassigned FAQ sections appear. Links use the two supplied source URLs and the allowed internal path. No new problems are identified in the changed paragraphs and no earlier findings remain unresolved. The page passes all checks.",
+      "bodyHash": "22eb2b5c82b61ef6f5beabbdf0ab3e24b2e1f46518a118996964719ff6e898ab",
+      "decisions": [
+        "Determine which changes require review",
+        "Decide who needs to contribute to a map review",
+        "Decide how an unresolved question will be recorded",
+        "Determine whether the map destination remains accurate after a changed handoff",
+        "Determine ownership, acceptance and next action",
+        "Agree on a question before choosing a measure",
+        "Define what counts in the sample and who will interpret the result",
+        "Use the measure to support a decision",
+        "Decide which explanation is supported when feedback indicates a recurring problem",
+        "Agree on the decisions the demonstration session should inform",
+        "Separate a demonstrated outcome from a verbal commitment and an unresolved question",
+        "Decide whether the selection can proceed while an open question remains"
       ]
     }
   ],

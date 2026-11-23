@@ -6,33 +6,42 @@
   "repetition": "passed",
   "faq": "passed",
   "findings": [],
-  "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The FAQ section is correctly present and assigned in the plan. The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path (/contact/). Vendor descriptions are consistently distinguished from verified installed behavior throughout. Prose is clear and readable with no significant repetition across sections. No new glossary terms are introduced beyond those already defined in context.glossary.",
+  "summary": "No previous findings were raised against this page. The three changed paragraphs correctly cite icc-processes and iso-apg, distinguish vendor descriptions from site-verified evidence, and include the required illustrative example with the correct label and hypothetical framing. All four subsections cover the assigned workflow roles, inputs, decisions, records, and exceptions. The FAQ subsection is plan-assigned and present. No unassigned FAQ sections appear. Links use the two supplied source URLs and the allowed internal path. No new problems are identified in the changed paragraphs and no earlier findings remain unresolved. The page passes all checks.",
   "glossary": [],
   "roles": [
-    "Assigned process owner",
+    "Process owner",
     "Quality lead",
-    "Operations manager",
     "Operator",
-    "Supervisor"
+    "Supervisor",
+    "Operations manager",
+    "Presenter",
+    "Responsible person",
+    "Representative user",
+    "Affected reader",
+    "Decision-maker"
   ],
   "recordNames": [
     "Documented decision and its owner",
+    "Map-change record",
     "Evaluation record",
-    "Demonstration record"
+    "Demonstration record",
+    "Open decision record",
+    "Interim instruction record",
+    "Review record"
   ],
   "decisions": [
-    "Determine which changes require review and who needs to contribute",
-    "Record an unresolved question and its owner when it cannot yet be resolved",
-    "Decide whether a proposed change or accepted change is the input before treating it as the current route",
-    "Record the discrepancy and identify the next decision when work has changed but the map has not",
+    "Determine which changes require review",
+    "Decide who needs to contribute to a map review",
+    "Decide how an unresolved question will be recorded",
+    "Determine whether the map destination remains accurate after a changed handoff",
+    "Determine ownership, acceptance and next action",
     "Agree on a question before choosing a measure",
     "Define what counts in the sample and who will interpret the result",
-    "Record a limitation instead of extrapolating when the sample is incomplete",
-    "Decide which explanation is supported and record the action and owner when feedback indicates a recurring problem",
-    "Agree on decisions the demonstration session should inform before asking for a presentation",
-    "Separate a demonstrated outcome from a verbal commitment and name the person who can accept a limitation or request more evidence",
-    "Record what was shown, what was described, and what remains unanswered before making a selection decision",
-    "Confirm whether the selection can proceed while an open item remains and keep the answer with the evaluation record"
+    "Use the measure to support a decision",
+    "Decide which explanation is supported when feedback indicates a recurring problem",
+    "Agree on the decisions the demonstration session should inform",
+    "Separate a demonstrated outcome from a verbal commitment and an unresolved question",
+    "Decide whether the selection can proceed while an open question remains"
   ],
   "pass": true,
   "deterministic": {
@@ -184,16 +193,16 @@
     "failures": []
   },
   "glossaryVariantsIgnored": [],
-  "inputHash": "c8461f999875a5ae6a9003d45f5200788d108dfc1e9fe2596bf87cbb024d444d",
-  "contentHash": "f94eab37621672afd9ea8a2460823499f6f082bfab56283edfb92f725f14992d",
+  "inputHash": "d88ec0fe5f326ccd72a6b1d216861c834655f6c329cac1cee10b02d1e4e0a0ea",
+  "contentHash": "5977f1acced5a56dbb083872d294e1b390051b18cc4cfb762f336a3f314383ec",
   "paragraphHashes": [
     "6590f1eeef3c372da1cc642b78338785938c927df82ebf23d8631bb6b45fb7c3",
     "63f184f2959304fa85e8219abb4a56b27535c37594c88c9c686cb0d776176367",
-    "52a4afaa02e22a4284244d77639eb53fa8425ece1fcdbac02cff286367e02784",
+    "54b01701a37c64e1374df989fd37371fd4b89fb8772ab48eb3b45b2990cb0f26",
     "6abefebe6214094384c7e9663c8afc580189a3456f6b1c9b7793d1d1a44fef40",
     "ebb901c38cc0ac8a4a39218a0efba43d74aa4c66b57451f066b62d6489680b1a",
-    "5c7ce5121457745ff71311bc6891e3d8ddc08c69eca12b780dc1cb2542b9e8dd",
-    "deca6b475608e62a84d9d7ee90d35fbfbd192e91e0d113e4c51994d493a4d87a",
+    "d1a633a340b16ea95685ef4053c8100dae53747939dabc27172c68d87ef409ad",
+    "ad584382227eaac3e8b81da67e4dcf11a11ea13663747469bd811532ef41fb0f",
     "d5add86d3980b256d41fe63c27a6776c303b9dc3edd5f4d93ec74b76e3941098",
     "17ce9db99eaddf2f9c2deda5bfbda21cb48d5839d7a64715b07177b740287ade",
     "f8bf803c1f2c6e88f544010f17f1dc276f6789fae730c382cd9a453ffe5726e2",
@@ -232,7 +241,7 @@
     "356e67ad804210f06700274d86d44e7e0f5a365644a22f73819c7d1b3fcb070f",
     "5c8dee673115738f06fbf2179b67786125f2d9113aab877c74bda15ae9237a06"
   ],
-  "outputContextHash": "4c89d9f4699db1100f80579c4112504c882811dd548f9685c731ff5ffc0eaf82",
-  "reviewedAt": "2026-11-23T14:38:47.050Z",
+  "outputContextHash": "a17be8cd85c728673f867520cc44cbab320c95f213e98e52ef252c29f80b6513",
+  "reviewedAt": "2026-11-23T15:03:25.007Z",
   "reviewer": "Configured independent chapter reviewer"
 }
