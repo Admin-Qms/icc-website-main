@@ -18,6 +18,20 @@ sourceIds:
   - icc-processes
   - iso-apg
 capabilityIds: []
+wordCount: 1524
+readTime: 8
+image:
+  src: >-
+    /images/guides/process-mapping-software-for-quality-management/process-mapping-software-for-quality-management.webp
+  alt: >-
+    A manufacturing quality lead reviewing a process map beside a production
+    cell; authentic industrial setting, no text or logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 758802bdb8f0b3c915ee4f77ceb242a50fc8e6a4fa89189218ead20b92ad2e66
+  sha256: bdfce509ef2169b0c7ec8123e3c19bff909bff50c8d5a79ee68221e64f4fbbb5
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## The operational problem
 

@@ -34,7 +34,7 @@
     ]
   },
   "productionSlotId": "2026-W48-slot-1",
-  "stage": "reviewing",
+  "stage": "ready-for-publication",
   "pages": {
     "mapping-current-processes": {
       "hash": "cecc917920a5507ba1b2f644638d4278151d1f6b8919dfb8f780a8e8a2f9750f",
@@ -108,7 +108,7 @@
     }
   },
   "createdAt": "2026-11-23T07:56:37.738Z",
-  "updatedAt": "2026-11-23T16:33:04.711Z",
+  "updatedAt": "2026-11-23T17:15:12.195Z",
   "manifest": {
     "schemaVersion": 1,
     "topicId": "process-mapping-ownership",
@@ -3269,13 +3269,14 @@
       "consistency": "failed",
       "repetition": "failed",
       "unresolvedFindings": [
-        "REPETITION: The introduction (main landing page) states: 'The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process' and 'review of supported PDF process charts before acceptance.' This same description recurs nearly verbatim in multiple chapters ('process-architecture' under 'Define the top-level map,' 'documents-and-evidence' under 'Identify controlled documents,' and 'migration-and-configuration' under 'Pilot imports and review results'). These are substantially copied passages about the same vendor feature across different pages, failing the repetition standard.",
-        "REPETITION UNRESOLVED: The previousAudit identified: 'The introduction asserts a passage about industry templates and PDF chart review, then this is repeated nearly identically in Plan migration and configuration.' This finding remains unresolved. The 'Plan migration and configuration' chapter still contains: 'The [ICC process management description] mentions review of supported PDF process charts before acceptance. Confirm the supported format and the proposed review procedure for the actual implementation.' This is substantially the same assertion as the introduction's discussion of the same feature, merely rephrase with minimal rewording.",
-        "REPETITION UNRESOLVED: The previousAudit identified: 'The Prepare a software demonstration section repeats the entire evaluation framework from the evaluating-process-software chapter.' This core finding persists. Both 'evaluating-process-software' chapter ('Set evaluation criteria' and 'Compare maps and flowcharts' subsections) and 'ongoing-operation' chapter ('Prepare a software demonstration' subsection) contain nearly identical guidance on: selecting representative workflows, identifying observation-based vs. description-based evidence, testing access scenarios, distinguishing demonstrated behavior from supplier statements, recording what was shown vs. what was described, and preparing demonstration records. The phrasing varies but the substantive workflow and decision structure are duplicated.",
-        "CLAIMS: The introduction states: 'The page describes industry starting templates and review of supported PDF process charts before acceptance.' The ICC source's supportedClaims states only: 'The page describes industry starting templates and review of supported PDF process charts before acceptance.' This matches. However, the introduction then claims this information 'does not establish that every file, permission, link, or recovery action works in a particular way' and instructs readers to 'Confirm how those descriptions apply.' This conditional framing is accurate. BUT the source does NOT support claims about 'industry starting templates'—it only mentions 'industry starting templates' as part of the vendor's description without providing evidence those templates exist or are available. The guide treats 'industry templates' as an established vendor capability rather than a research question, which exceeds supported claims.",
-        "CONSISTENCY: Across chapters, the guide inconsistently qualifies the same ICC assertions. In the introduction, 'review of supported PDF process charts' is presented as a vendor statement requiring confirmation. In 'migration-and-configuration,' the identical assertion reappears with the same qualification but different emphasis: 'The [ICC page] describes review of supported PDF process charts before acceptance. Confirm the supported format...' In 'ongoing-operation,' the phrasing shifts again: '[The ICC page] offers a published reference for discussing process information.' This inconsistent treatment of identical vendor claims creates confusion about whether a feature is established, unverified, or merely a discussion reference. The qualification should be consistent across all mentions.",
-        "CLAIMS: The guide states in multiple locations that the ICC page 'describes links from processes to controlled documents and standard clauses.' The source supportedClaims confirms this description exists. However, the guide then asserts in 'documents-and-evidence' chapter: 'Ask to see how the proposed configuration will represent the organization's selected information. The published page does not establish that every relationship will be transferred automatically.' This correctly conditions the claim. BUT later in the same chapter: 'A link to a form does not prove that the form was completed, and a completed record does not necessarily explain every decision made.' This statement goes beyond what the source supports—it is a logical inference about links generally, not a claim about what ICC actually describes. The guide should distinguish ICC's published description from general principles about link mechanics.",
-        "CLAIMS UNRESOLVED: The outline structure promises nine frequently asked questions as a core content component ('faqQuestions' array contains nine entries), but the 'Frequently asked questions' subsection in the 'ongoing-operation' chapter provides only the nine questions with brief answers, not full elaboration. The guide's introduction states: 'The final chapter includes nine frequently asked questions and a demonstration-planning section. The questions are starting points for a discussion, not substitutes for a review of actual records.' This correctly frames the FAQ scope. However, the guide does not deliver FAQ coverage matched to the outlined chapter depth (2000 words per chapter). The FAQ section appears compressed relative to its promised role, raising whether adequate implementation guidance was provided."
+        "The guide claims 'The page states AI output is a suggestion reviewed by a person before entry into a controlled record' (introduction, planning section) but provides no evidence that this claim is supported by the ICC source. The ICC supportedClaims list states 'The page states AI output is a suggestion reviewed by a person before entry into a controlled record' but this is a meta-claim about what the source says, not direct evidence from the source text itself. The guide presents this as a factual assertion about ICC's statement without quoting or directly referencing the source material.",
+        "The outline structure and multiple chapters reference the same workflow, roles, inputs, decisions, records, and exceptions nearly identically across nine separate pages (mapping-current-processes, evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, ongoing-operation). Each chapter repeats: the same workflow role, input, decision, record, exception structure; identical evaluation criteria template; near-identical illustrative example framing; and highly similar instructional patterns. For example, every chapter subsection contains: 'Explain [activity] as an evaluation or implementation decision. Distinguish vendor descriptions, general recommendations and the site's verified evidence.' This verbatim repetition across nine chapters, combined with identical workflow templates in each subsection, constitutes substantial duplication that violates the maintained writing rule. The boundary instructions at the outline level acknowledge separate scopes but the actual page content repeats the same decision framework, role assignments, and example structures across all nine pages rather than providing distinct chapter-level scope.",
+        "The introduction claims the guide uses 'the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) as a source for questions a team can bring to an evaluation' and references it repeatedly, but the research notes the supportedClaims only describe what the ICC page presents (level-one maps, level-two flowcharts, named owners, document links, templates, PDF review, numbered activities, AI suggestion workflow, vendor description of ISO mapping). The guide does not establish that the ICC page actually provides 'questions a team can bring' to an evaluation—it describes features and capabilities. The guide also claims the page 'describes configuration activities including process mapping, module configuration, standards onboarding and deployment with training' but the supportedClaims state only 'The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training. Details and applicability require demonstration.' The guide presents the described activities as facts about what the page discusses without adequately qualifying that details and applicability require demonstration.",
+        "The guide repeatedly invokes the [ISO 9001 Auditing Practices Group site](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) across multiple chapters (mapping-current-processes, evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, ongoing-operation) with references such as 'The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational material on evidence collection' or 'includes educational material on improvement.' However, the research supportedClaims only confirm: 'The ISO 9001 Auditing Practices Group site provides educational papers on quality management system auditing, including a process-based approach and risk-based thinking' and 'Its ISO 9001:2015 auditing topics include processes, evidence collection, audit planning and improvement.' The guide cites the site for 'evidence collection,' 'evidence,' 'auditing,' and 'improvement' repeatedly across nine pages without establishing through the research that the site's educational papers actually address the specific topics invoked in each context (e.g., 'evidence collection' for specific handoff scenarios, 'traceability,' 'exception handling'). The supportedClaims note the site is not definitive and not mandatory audit criteria, but the guide does not consistently qualify its citations.",
+        "Multiple pages reference the ICC process management page with descriptions of features (level-one maps, level-two flowcharts, named owners, controlled document links, PDF review, configuration activities) but do not provide direct quotations or verify that the ICC page explicitly makes each claim attributed to it. For example: 'The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes named process owners' (process-ownership chapter), 'The [ICC description](https://isocertificationconsultants.ca/solutions/processes/) presents a level-one process map and a level-two flowchart' (process-architecture chapter), 'The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes links to controlled documents' (documents-and-evidence chapter). The research supportedClaims confirm these are 'published vendor descriptions' but do not quote the actual ICC page text. The guide presents these attributions as factual without direct evidence from the source text itself.",
+        "The guide claims in the planning evaluation section: 'Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.' However, the ICC supportedClaims state: 'The page states AI output is a suggestion reviewed by a person before entry into a controlled record.' This directly asserts the capability exists on the ICC page but the guide hedges it as a starting point and explicitly warns against assuming the capability exists. This internal contradiction between the introduction's presentation of the AI feature as a described fact and the later qualification that it should not be assumed as an unverified capability creates inconsistency in how the guide treats vendor claims.",
+        "The guide states 'The pages that follow build on this distinction between an observed fact, a recommendation, and an evaluation question' but the outline structure and chapter design do not consistently maintain that distinction. Multiple chapters present the same workflow template (role, input, decision, record, exception) and evaluation criteria template without distinguishing whether the guidance is a recommendation, a question, or an observed fact in context. The maintained writing rule requires that unverified capabilities be labeled as evaluation questions, but the chapters present repetitive decision frameworks as if they are prescribed structures rather than contextual guidance.",
+        "The research snapshot includes 'supportedClaims' for the ICC source that assert facts about what the page 'describes,' 'states,' and 'presents' (e.g., 'The page describes a level-one process map,' 'The page states AI output is a suggestion'), but these claims lack direct quotations from the ICC page itself. The guide relies on these supported claims but presents them as established facts rather than vendor descriptions requiring verification. This creates a gap between what the research confirms the ICC page claims and what the guide presents as operative facts about process mapping software."
       ]
     },
     "adjudication": {
@@ -3283,72 +3284,101 @@
       "consistency": "passed",
       "repetition": "passed",
       "dimensionReasons": {
-        "claims": "All material claims about ICC capabilities are drawn from supported source claims or are explicitly framed as vendor descriptions requiring verification. The guide consistently qualifies ICC-sourced statements. Screening finding 3 (industry templates) is cleared: source:0:claim:2 explicitly supports 'industry starting templates,' and the guide treats it as a vendor description to be verified, not an established capability. Screening finding 5 (general link logic) is cleared: statements such as 'a link to a form does not prove that the form was completed' are general editorial principles about evidence, not unsupported claims about ICC; the guide does not assert ICC makes this guarantee. Screening finding 6 (FAQ depth) is cleared: the guide's introduction explicitly frames the FAQ as 'starting points for a discussion, not substitutes for a review of actual records,' and the outline's word-count targets are planning guidance, not factual promises in the published text. No unverified capability is asserted as fact.",
-        "consistency": "The guide applies a consistent epistemological framework across all chapters: ICC source descriptions are presented as vendor-published starting points for evaluation questions, not confirmed operational capabilities. The minor variation in phrasing across chapters (e.g., 'published reference' vs. 'vendor statement requiring confirmation') reflects legitimate editorial variation within a chapter-standalone structure rather than contradictory factual treatment. Each chapter is a standalone page under the maintained writing rule, so short factual cautions about vendor descriptions may recur without creating inconsistency. The underlying treatment—do not assume, test with a sample, record what was demonstrated—is uniform throughout. Screening finding 4 is cleared.",
-        "repetition": "Inspecting the actual current page paragraphs, no substantially copied paragraphs or examples exist across different pages. The PDF-review caution (source:0:claim:2) appears in multiple chapters but only as a short factual qualification that the maintained writing rule explicitly permits to recur as a 'short factual caution.' The evaluation-criteria guidance in the evaluating-process-software chapter and the demonstration-planning section in the ongoing-operation chapter address materially different questions: the former concerns selecting among competing tools before adoption; the latter concerns preparing a focused discussion around a specific post-deployment change issue. The subsections use different examples, different starting conditions, and different roles and decisions. Shared subject matter and recurring short cautions are explicitly not repetition under the applied standard. No contiguous paragraph block from one reader page is substantially copied into another."
+        "claims": "The guide consistently treats ICC source descriptions as vendor statements requiring demonstration, qualifies the ISO APG source as non-definitive educational material, labels all examples as hypothetical, and frames unverified capabilities as evaluation questions rather than promises. The AI-output statement in page:0:paragraph:18 is explicitly sourced, presented as a starting point for questions, and accompanied by explicit cautions not to assume capability—consistent with the maintained writing rule. Source supportedClaims confirm each attributed ICC feature (level-one maps, level-two flowcharts, named owners, controlled document links, PDF review, configuration activities, AI suggestion review). The guide does not assert that ICC has any capability beyond what the source records describe, and no concrete unsupported assertion was found across the full guide text.",
+        "consistency": "No internal contradiction survives inspection. Page:0:paragraph:18 states the ICC source says AI output is a suggestion reviewed by a person, then immediately qualifies it as a starting point and warns against assuming the capability—this is consistent framing, not contradiction. The ISO APG source is cited for educational material on evidence collection, audit planning, and improvement; source:1:claim:2 confirms those topics are covered. Each chapter references ICC and ISO APG source-supported features with appropriate evaluation-question framing. No chapter contradicts another chapter's factual claims about the same subject. The guide's distinction between observed fact, recommendation, and evaluation question is maintained throughout.",
+        "repetition": "The guide's chapters address materially distinct decisions with different process content, evidence trails, roles, examples, and evaluation questions. Shared short cautions (distinguish vendor descriptions from demonstrated behavior, record open questions, do not assume unverified capabilities) are required recurring labels under the maintained writing rule and do not constitute substantially copied paragraphs. Workflow tables, boundary sections, illustrative examples, and document-link discussions are substantively different across chapters. No two current reader pages contain substantially copied paragraphs or examples whose actual selected wording is near-verbatim."
       },
       "additionalFindings": [
         {
           "verdict": "clear",
           "dimension": "claims",
-          "reason": "Screening finding 3: The guide's reference to 'industry starting templates' is supported by source:0:claim:2, which records that the vendor page describes industry starting templates. The guide presents this as a vendor description to evaluate, not a verified installed capability. No unsupported assertion is made.",
+          "reason": "Finding 0: The guide attributes the AI-output statement to the ICC source at page:0:paragraph:18 with explicit sourcing and immediately qualifies it as a starting point requiring organizational evaluation. Source:0:claim:5 confirms the ICC page states AI output is a suggestion reviewed by a person before entry into a controlled record. The guide does not assert the capability as a product promise; it presents it as a vendor description and warns against assuming it supplies an unverified capability. This is consistent with the maintained writing rule.",
           "evidenceIds": [
-            "source:0:claim:2",
-            "page:7:paragraph:2"
+            "page:0:paragraph:18",
+            "source:0:claim:5"
+          ],
+          "comparisons": []
+        },
+        {
+          "verdict": "clear",
+          "dimension": "repetition",
+          "reason": "Finding 1: The outline's workflow template (role, input, decision, record, exception) and evaluation criteria appear in the planning structure but the actual rendered page content differs substantively across chapters. Each chapter addresses a different operational decision, uses distinct evidence trails, different process steps, different exceptions, and different illustrative scenarios. Required recurring cautions about distinguishing vendor descriptions from demonstrated behavior are short factual labels, not substantially copied paragraphs. No actual current page paragraphs are near-verbatim copies of paragraphs on another page.",
+          "evidenceIds": [
+            "page:1:paragraph:2",
+            "page:2:paragraph:2",
+            "page:3:paragraph:2",
+            "page:4:paragraph:2",
+            "page:5:paragraph:1",
+            "page:6:paragraph:1",
+            "page:7:paragraph:1",
+            "page:8:paragraph:1",
+            "page:9:paragraph:3"
           ],
           "comparisons": []
         },
         {
           "verdict": "clear",
           "dimension": "claims",
-          "reason": "Screening finding 5: The statement 'a link to a form does not prove that the form was completed' is a general editorial principle about the limits of documentary evidence, not an unsupported claim about ICC's behavior. It is consistent with the guide's overall approach of helping readers understand what evidence a map connection does and does not establish. Source:0:claim:1 supports the description of document links; the editorial caution adds no unsupported assertion about ICC.",
+          "reason": "Finding 2: The guide presents the ICC page as a source for evaluation questions, not as a repository of prescribed questions. Page:0:paragraph:5 says the guide uses it 'as a source for questions a team can bring to an evaluation.' Source:0:claim:4 confirms the page presents numbered configuration activities with the qualifier that details and applicability require demonstration. The guide consistently qualifies ICC descriptions as vendor statements requiring demonstration throughout each chapter.",
           "evidenceIds": [
+            "page:0:paragraph:5",
+            "source:0:claim:4"
+          ],
+          "comparisons": []
+        },
+        {
+          "verdict": "clear",
+          "dimension": "claims",
+          "reason": "Finding 3: The ISO APG source is cited for educational material on evidence collection, audit planning, and improvement. Source:1:claim:2 explicitly confirms its topics include processes, evidence collection, audit planning, and improvement. Source:1:claim:1 confirms guidance is not definitive. The guide cites it only for educational material framing and does not assert it as mandatory criteria. The qualification that the site is not definitive is stated explicitly in page:0:paragraph:6 and is a required recurring label under the maintained writing rule.",
+          "evidenceIds": [
+            "page:0:paragraph:6",
+            "source:1:claim:1",
+            "source:1:claim:2"
+          ],
+          "comparisons": []
+        },
+        {
+          "verdict": "clear",
+          "dimension": "claims",
+          "reason": "Finding 4: The guide's attributions of ICC features (level-one maps, level-two flowcharts, named owners, controlled document links, PDF review, configuration activities) are each supported by corresponding source supportedClaims records. Source:0:claim:0 supports level-one map and level-two flowchart attributions; source:0:claim:1 supports named owners and document links; source:0:claim:2 supports PDF review and industry templates; source:0:claim:4 supports configuration activities. The guide consistently frames these as vendor descriptions, not verified installed behavior, per source:0:claim:6.",
+          "evidenceIds": [
+            "source:0:claim:0",
             "source:0:claim:1",
-            "page:6:paragraph:12"
-          ],
-          "comparisons": []
-        },
-        {
-          "verdict": "clear",
-          "dimension": "claims",
-          "reason": "Screening finding 6: The FAQ section's scope is explicitly framed by the guide's introduction as 'starting points for a discussion, not substitutes for a review of actual records.' The outline's estimated word counts are planning targets, not factual promises published to readers. No claim about FAQ depth appears in the reader-facing text.",
-          "evidenceIds": [
-            "page:0:paragraph:14"
+            "source:0:claim:2",
+            "source:0:claim:4",
+            "source:0:claim:6"
           ],
           "comparisons": []
         },
         {
           "verdict": "clear",
           "dimension": "consistency",
-          "reason": "Screening finding 4: Variation in phrasing for ICC PDF-chart and document-link descriptions across chapters is legitimate editorial variation in a chapter-standalone guide. Each chapter independently qualifies the vendor description as a starting point for evaluation, not a confirmed capability. The maintained writing rule permits short factual cautions to recur across chapters.",
+          "reason": "Finding 5: Page:0:paragraph:18 presents the AI-output statement as a vendor description and immediately warns not to assume it as an unverified product capability. This is not a contradiction; it is the maintained writing rule applied correctly—stating what the source says while qualifying it as requiring organizational evaluation. Source:0:claim:5 supports the description; the guide's caution is consistent with source:0:claim:6 which notes published vendor descriptions are not verified installed behavior.",
+          "evidenceIds": [
+            "page:0:paragraph:18",
+            "source:0:claim:5",
+            "source:0:claim:6"
+          ],
+          "comparisons": []
+        },
+        {
+          "verdict": "clear",
+          "dimension": "consistency",
+          "reason": "Finding 6: The guide explicitly commits to distinguishing observed facts, recommendations, and evaluation questions in page:0:paragraph:8 and page:0:paragraph:5. Each chapter applies this commitment by framing ICC feature descriptions as evaluation questions, ISO APG references as educational material, and examples as hypothetical. The recurring workflow framework is a consistent organizational aid, not a failure to distinguish types of guidance.",
           "evidenceIds": [
             "page:0:paragraph:5",
-            "page:7:paragraph:20",
-            "page:9:paragraph:37"
+            "page:0:paragraph:8"
           ],
           "comparisons": []
         },
         {
           "verdict": "clear",
-          "dimension": "repetition",
-          "reason": "Screening finding 0 and 1: The PDF-chart review caution ('review of supported PDF process charts before acceptance') appears in multiple chapters, but each occurrence is a short factual qualification derived from source:0:claim:2. Under the maintained writing rule, short factual cautions may recur across standalone chapters. No contiguous paragraph is substantially copied; the surrounding context, purpose, and reader task differ materially in each chapter.",
+          "dimension": "claims",
+          "reason": "Finding 7: The source supportedClaims are the research record and the program treats them as evidence to evaluate. Source:0:claim:6 explicitly states these are published vendor descriptions, not verified installed behavior. The guide relies on these records appropriately and consistently frames them as vendor descriptions requiring demonstration. No claim in the guide exceeds what the source records support.",
           "evidenceIds": [
-            "source:0:claim:2",
-            "page:7:paragraph:2",
-            "page:7:paragraph:20",
-            "page:5:paragraph:28"
-          ],
-          "comparisons": []
-        },
-        {
-          "verdict": "clear",
-          "dimension": "repetition",
-          "reason": "Screening finding 2: The evaluating-process-software chapter and the ongoing-operation demonstration section address different decisions. The evaluation chapter concerns selecting among tools before adoption; the demonstration section concerns preparing a focused post-deployment discussion around a specific unresolved change. The examples, roles, starting conditions, and decision questions are materially different. Shared subject matter about recording observations does not constitute substantially copied paragraphs.",
-          "evidenceIds": [
-            "page:2:paragraph:5",
-            "page:2:paragraph:16",
-            "page:9:paragraph:36",
-            "page:9:paragraph:38"
+            "source:0:claim:6",
+            "source:0:claim:0",
+            "source:0:claim:1"
           ],
           "comparisons": []
         }
@@ -3357,13 +3387,12 @@
         {
           "index": 0,
           "verdict": "clear",
-          "dimension": "repetition",
-          "reason": "The PDF-chart review caution appears in multiple chapters as a short factual qualification, which the maintained writing rule permits to recur across standalone pages. Inspecting the actual paragraph text, no contiguous paragraph from one page is substantially copied into another. The surrounding guidance, reader tasks, and decision contexts differ materially in each chapter. The finding is cleared.",
+          "dimension": "claims",
+          "reason": "The guide presents the AI-output statement as a vendor description sourced to the ICC page, immediately qualifies it as a starting point for evaluation questions, and warns explicitly against assuming it as an unverified product capability. Source:0:claim:5 confirms the ICC page states this. The guide's treatment is fully consistent with the maintained writing rule.",
           "evidenceIds": [
-            "source:0:claim:2",
-            "page:7:paragraph:2",
-            "page:7:paragraph:20",
-            "page:5:paragraph:28"
+            "page:0:paragraph:18",
+            "source:0:claim:5",
+            "source:0:claim:6"
           ],
           "comparisons": []
         },
@@ -3371,24 +3400,29 @@
           "index": 1,
           "verdict": "clear",
           "dimension": "repetition",
-          "reason": "Inspecting page:7:paragraph:20 and surrounding chapters, the PDF-chart caution in the migration chapter is a short factual qualification permitted to recur under the maintained writing rule. The phrasing differs from the introduction (page:0:paragraph:5) and serves a different chapter purpose. No substantially copied paragraph block exists. The finding is cleared.",
+          "reason": "Inspection of actual page paragraphs across all nine chapters confirms that while each chapter addresses similar roles and uses required recurring cautions, the substantive content—process decisions, evidence trails, exceptions, illustrative examples, and evaluation questions—differs materially. Required short cautions about distinguishing vendor descriptions from demonstrated behavior recur as necessary labels, not as substantially copied paragraphs. No two pages contain near-verbatim substantive passages.",
           "evidenceIds": [
-            "page:7:paragraph:20",
-            "page:0:paragraph:5",
-            "source:0:claim:2"
+            "page:1:paragraph:2",
+            "page:2:paragraph:2",
+            "page:3:paragraph:2",
+            "page:4:paragraph:2",
+            "page:5:paragraph:1",
+            "page:6:paragraph:1",
+            "page:7:paragraph:1",
+            "page:8:paragraph:1",
+            "page:9:paragraph:3"
           ],
           "comparisons": []
         },
         {
           "index": 2,
           "verdict": "clear",
-          "dimension": "repetition",
-          "reason": "Inspecting page:2:paragraph:5 and page:9:paragraph:38 and their surrounding contexts, the evaluating-process-software chapter addresses tool selection before adoption while the ongoing-operation demonstration section addresses a focused post-deployment change discussion. The examples differ (hypothetical comparison meeting vs. a specific changed handoff), the roles and starting conditions differ, and the decision questions differ. Shared subject matter and the common theme of recording observations do not constitute substantially copied paragraphs under the applied standard.",
+          "dimension": "claims",
+          "reason": "The guide characterizes the ICC page as a source for evaluation questions and frames its described features as vendor statements requiring demonstration. Source:0:claim:4 confirms configuration activities are described with the qualifier that details require demonstration. The guide does not convert the page into a mandatory sequence or promise about deployment, consistent with page:2:paragraph:25 and source:0:claim:4.",
           "evidenceIds": [
-            "page:2:paragraph:5",
-            "page:2:paragraph:24",
-            "page:9:paragraph:36",
-            "page:9:paragraph:38"
+            "page:0:paragraph:5",
+            "page:2:paragraph:25",
+            "source:0:claim:4"
           ],
           "comparisons": []
         },
@@ -3396,22 +3430,24 @@
           "index": 3,
           "verdict": "clear",
           "dimension": "claims",
-          "reason": "Source:0:claim:2 explicitly records that the vendor page describes industry starting templates, so the guide's reference to them is supported. The guide presents this as a vendor description to verify, not a confirmed capability. No assertion exceeds the supported claim.",
+          "reason": "ISO APG citations are supported by source:1:claim:2 confirming the site's topics include evidence collection, audit planning, and improvement. The guide cites it only for educational material framing and consistently notes it is not definitive per source:1:claim:1, as stated at page:0:paragraph:6. Citations in subsequent chapters are brief references consistent with the established qualification.",
           "evidenceIds": [
-            "source:0:claim:2",
-            "page:7:paragraph:2"
+            "page:0:paragraph:6",
+            "source:1:claim:1",
+            "source:1:claim:2"
           ],
           "comparisons": []
         },
         {
           "index": 4,
           "verdict": "clear",
-          "dimension": "consistency",
-          "reason": "Phrasing variation for the PDF-chart and document-link descriptions across chapters is editorial variation in a chapter-standalone guide, not contradictory factual treatment. Each chapter independently frames ICC descriptions as vendor-published starting points requiring verification. The maintained writing rule permits this recurrence. The finding is cleared.",
+          "dimension": "claims",
+          "reason": "Each ICC feature attribution in the guide is supported by a corresponding source supportedClaim. Level-one map and level-two flowchart attributions are supported by source:0:claim:0; named owners and document links by source:0:claim:1; PDF review and templates by source:0:claim:2; configuration activities by source:0:claim:4. The guide consistently appends evaluation-question qualifiers, consistent with source:0:claim:6.",
           "evidenceIds": [
-            "page:0:paragraph:5",
-            "page:7:paragraph:20",
-            "page:9:paragraph:37",
+            "source:0:claim:0",
+            "source:0:claim:1",
+            "source:0:claim:2",
+            "source:0:claim:4",
             "source:0:claim:6"
           ],
           "comparisons": []
@@ -3419,11 +3455,11 @@
         {
           "index": 5,
           "verdict": "clear",
-          "dimension": "claims",
-          "reason": "The statement that 'a link to a form does not prove that the form was completed' is a general editorial principle about the limits of documentary evidence, not an unsupported assertion about ICC's specific behavior. The guide does not claim ICC makes or fails to make this guarantee; it advises readers about what any link can and cannot establish. Source:0:claim:1 supports the description of ICC document links; the editorial caution adds no unsupported ICC claim.",
+          "dimension": "consistency",
+          "reason": "No contradiction exists. Page:0:paragraph:18 states the ICC source says AI output is a suggestion reviewed by a person, then immediately qualifies the description as a starting point and warns against assuming unverified capability. This is the maintained writing rule applied correctly and is consistent with source:0:claim:5 and source:0:claim:6.",
           "evidenceIds": [
-            "source:0:claim:1",
-            "page:6:paragraph:12",
+            "page:0:paragraph:18",
+            "source:0:claim:5",
             "source:0:claim:6"
           ],
           "comparisons": []
@@ -3431,12 +3467,23 @@
         {
           "index": 6,
           "verdict": "clear",
-          "dimension": "claims",
-          "reason": "The guide's introduction explicitly states the FAQ questions are 'starting points for a discussion, not substitutes for a review of actual records.' The outline's word-count targets are planning guidance, not factual promises in the published reader-facing text. No claim about FAQ depth or completeness appears in the pages, so there is no unsupported assertion to fail.",
+          "dimension": "consistency",
+          "reason": "The guide maintains the distinction between observed facts, recommendations, and evaluation questions throughout. Page:0:paragraph:5 and page:0:paragraph:8 establish this commitment; subsequent chapters apply it by framing ICC descriptions as vendor statements and ISO APG references as educational material. The recurring workflow framework is a consistent organizational aid that does not collapse the distinction.",
           "evidenceIds": [
-            "page:0:paragraph:14",
-            "page:9:paragraph:16",
-            "page:9:paragraph:18"
+            "page:0:paragraph:5",
+            "page:0:paragraph:8"
+          ],
+          "comparisons": []
+        },
+        {
+          "index": 7,
+          "verdict": "clear",
+          "dimension": "claims",
+          "reason": "The guide relies on source supportedClaims as the research record. Source:0:claim:6 explicitly states published vendor descriptions are not verified installed behavior. The guide applies this qualifier consistently across chapters. No claim in the guide asserts more than the source records support, and each ICC feature description is accompanied by evaluation-question framing.",
+          "evidenceIds": [
+            "source:0:claim:6",
+            "source:0:claim:0",
+            "source:0:claim:1"
           ],
           "comparisons": []
         }
@@ -3447,32 +3494,25 @@
         "index": 0,
         "evidence": [
           {
-            "evidenceId": "source:0:claim:2",
+            "evidenceId": "page:0:paragraph:18",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 18,
+            "quote": "The same source states that AI output is a suggestion reviewed by a person before entry into a controlled record. Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.\n\n"
+          },
+          {
+            "evidenceId": "source:0:claim:5",
             "kind": "source",
             "id": "icc-processes",
-            "paragraph": 2,
-            "quote": "The page describes industry starting templates and review of supported PDF process charts before acceptance."
+            "paragraph": 5,
+            "quote": "The page states AI output is a suggestion reviewed by a person before entry into a controlled record."
           },
           {
-            "evidenceId": "page:7:paragraph:2",
-            "kind": "page",
-            "id": "migration-and-configuration",
-            "paragraph": 2,
-            "quote": "Put format, scope, and acceptance owner beside each candidate in the inventory. The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes industry templates and review of supported PDF charts. Confirm support for the selected file and compare the result with its source; do not assume every relationship survives a conversion.\n\n"
-          },
-          {
-            "evidenceId": "page:7:paragraph:20",
-            "kind": "page",
-            "id": "migration-and-configuration",
-            "paragraph": 20,
-            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) mentions review of supported PDF process charts before acceptance. Confirm the supported format and the proposed review procedure for the actual implementation. The published statement does not guarantee that all other file types, links, permissions, or layouts will be preserved. Ask those questions and distinguish a demonstrated result from a supplier's description.\n\n"
-          },
-          {
-            "evidenceId": "page:5:paragraph:28",
-            "kind": "page",
-            "id": "mapping-workflows",
-            "paragraph": 28,
-            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) says supported PDF process charts are reviewed before acceptance. That is a published vendor description, not proof that a specific site's map has been validated or that all file types follow the same path. Ask how the proposed workflow would handle the organization's sample and who is expected to review and accept it.\n\n"
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 6,
+            "quote": "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
           }
         ]
       },
@@ -3480,25 +3520,67 @@
         "index": 1,
         "evidence": [
           {
-            "evidenceId": "page:7:paragraph:20",
+            "evidenceId": "page:1:paragraph:2",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 2,
+            "quote": "The process owner is responsible for agreeing on the purpose with the people who use the process. The inputs are the current work, the records it produces, and the questions the organization needs answered. The owner decides which workflow to examine and records that choice with the map. If the people involved cannot agree on the purpose, record the disagreement and resolve it before treating the map as a basis for a software decision.\n\n"
+          },
+          {
+            "evidenceId": "page:2:paragraph:2",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 2,
+            "quote": "The input to the evaluation should include a current map or draft, an example record, and a list of known exceptions. The process owner agrees on what the team will test and who will judge the result. The quality lead records the decision, including evidence observed and questions left open. If there is no agreed process owner, record that gap before treating a demonstration as a reliable indication of operational readiness.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:2",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 2,
+            "quote": "The quality lead can assemble a working list from existing maps and process records. The process owners and operations manager then examine the list together. For each item, identify its purpose, the people who depend on its output, and whether it belongs within the scope of the proposed architecture. Record disputed entries and the person who will resolve them. When two groups claim the same activity, identify the decision that belongs to each before deciding whether the overview needs one entry or two. A list compiled by one department may omit work that another department treats as an essential input.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:2",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 2,
+            "quote": "Start with the agreed process scope and representative records. The quality lead can bring the current map, the accepted overview, and unresolved boundary questions to a meeting with the proposed owner and operations manager. Ask what decisions arise in the process, what information is needed for each, and who must contribute. Record the proposed responsibilities and any disagreement before treating the assignment as complete.\n\n"
+          },
+          {
+            "evidenceId": "page:5:paragraph:1",
+            "kind": "page",
+            "id": "mapping-workflows",
+            "paragraph": 1,
+            "quote": "A workflow map is a working explanation of how a selected process proceeds. To make it useful, start with evidence of the work and the people who perform it. The process owner can bring together an operator, a floor supervisor, and the quality lead around a representative record. Their task is to identify the sequence and decisions shown by that example, then note where additional evidence is needed before drawing conclusions.\n\n"
+          },
+          {
+            "evidenceId": "page:6:paragraph:1",
+            "kind": "page",
+            "id": "documents-and-evidence",
+            "paragraph": 1,
+            "quote": "A process map can help a reader find the information needed to perform or review work, but a link is useful only when its purpose and destination are understood. Begin with the process scope and ask which instructions or other controlled documents people actually need at the relevant steps. The process owner, quality lead, and workers can examine a representative process record together and distinguish a document that guides work from a record that shows what happened in one instance.\n\n"
+          },
+          {
+            "evidenceId": "page:7:paragraph:1",
             "kind": "page",
             "id": "migration-and-configuration",
-            "paragraph": 20,
-            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) mentions review of supported PDF process charts before acceptance. Confirm the supported format and the proposed review procedure for the actual implementation. The published statement does not guarantee that all other file types, links, permissions, or layouts will be preserved. Ask those questions and distinguish a demonstrated result from a supplier's description.\n\n"
+            "paragraph": 1,
+            "quote": "A migration plan begins with knowing what the organization intends to move and why. Gather the maps and process descriptions used within the agreed scope, along with the people who can explain them. The process owner can identify the workflow and its boundaries; the quality lead can help locate the information the organization treats as current. The operations manager should be involved when the selection affects several teams or sites.\n\n"
           },
           {
-            "evidenceId": "page:0:paragraph:5",
+            "evidenceId": "page:8:paragraph:1",
             "kind": "page",
-            "id": "process-mapping-software-for-quality-management",
-            "paragraph": 5,
-            "quote": "The guide uses the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) as a source for questions a team can bring to an evaluation. In its decision record, distinguish what the vendor publishes from what a representative user actually observes with a sample. Identify the scope of that observation and who can accept the result; if an important question remains unanswered, assign follow-up instead of treating a description as proof of the site's conditions or of a particular configuration.\n\n"
+            "id": "rollout-and-training",
+            "paragraph": 1,
+            "quote": "A rollout works better when people can practice the tasks they will actually perform. Start with the accepted process scope and identify the readers, process owners, supervisors, and quality staff who will use the information. The process owner can explain the workflow; the quality lead can prepare representative records; and the operations manager can help make time for the people who need to participate. The training plan should identify the decisions each role is expected to make and where questions go when the answer is unclear.\n\n"
           },
           {
-            "evidenceId": "source:0:claim:2",
-            "kind": "source",
-            "id": "icc-processes",
-            "paragraph": 2,
-            "quote": "The page describes industry starting templates and review of supported PDF process charts before acceptance."
+            "evidenceId": "page:9:paragraph:3",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 3,
+            "quote": "Start with the change and a representative process record. The process owner can ask the people who perform the work what is different, while the quality lead identifies the current map and related information. Compare the agreed scope, decision points, and handoffs with the changed work. If the change affects another process, include the person who can explain that interface. Record the decision and its owner, including any question that cannot yet be resolved.\n\n"
           }
         ]
       },
@@ -3506,38 +3588,71 @@
         "index": 2,
         "evidence": [
           {
-            "evidenceId": "page:2:paragraph:5",
+            "evidenceId": "page:0:paragraph:5",
             "kind": "page",
-            "id": "evaluating-process-software",
+            "id": "process-mapping-software-for-quality-management",
             "paragraph": 5,
-            "quote": "Agree on a small set of observable outcomes before the session. For each one, name a user, a starting point, and an output the user should be able to find or verify. Include an exception: a missing document, an unclear owner, or a record that belongs to another process. If the demonstration cannot cover that exception, record it as open rather than marking the criterion satisfied by inference. A practical evaluation can use the following prompts:\n\n"
+            "quote": "The guide uses the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) as a source for questions a team can bring to an evaluation. In its decision record, distinguish what the vendor publishes from what a representative user actually observes with a sample. Identify the scope of that observation and who can accept the result; if an important question remains unanswered, assign follow-up instead of treating a description as proof of the site's conditions or of a particular configuration.\n\n"
           },
           {
-            "evidenceId": "page:2:paragraph:24",
+            "evidenceId": "page:2:paragraph:25",
             "kind": "page",
             "id": "evaluating-process-software",
-            "paragraph": 24,
-            "quote": "A comparison is useful only if its conclusions can be revisited. Keep a record for each criterion that identifies the question, the sample, the observer, and the result. Attach or reference an appropriate evidence record under the organization's own controls. Distinguish a demonstrated outcome from a supplier statement, an internal assumption, and a question that remains unanswered. The person making the selection can then see the limits of the evidence rather than treating a checklist as a guarantee.\n\n"
+            "paragraph": 25,
+            "quote": "The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes configuration activities and onboarding in broad terms. Ask how the proposed implementation would address the team's open questions, but do not convert the published description into a mandatory sequence or a promise about a particular deployment. Record any commitment with its scope, responsible party, and the conditions under which it would be confirmed. A verbal explanation can be useful input, but the team should label it accurately and seek the evidence needed for its decision.\n\n"
           },
           {
-            "evidenceId": "page:9:paragraph:36",
-            "kind": "page",
-            "id": "ongoing-operation",
-            "paragraph": 36,
-            "quote": "Start with an issue discovered after people began using a process map. A changed handoff, a disputed owner, or an instruction that a reader could not reach gives the discussion a concrete purpose. The process owner can choose the issue with the greatest effect on the next decision and bring the current map and a suitable sample. If the issue is still disputed, describe the competing interpretations rather than presenting either one as settled.\n\n"
-          },
-          {
-            "evidenceId": "page:9:paragraph:38",
-            "kind": "page",
-            "id": "ongoing-operation",
-            "paragraph": 38,
-            "quote": "A focused agenda can follow the lifecycle of the issue. First, show the point where the current explanation became uncertain. Next, ask who should assess the effect on the connected process and its readers. Finally, consider how the organization would confirm that the revised explanation reaches the people who use it. These are organizational decisions to discuss; the demonstration is an opportunity to explore the proposed support, not evidence that every step is automatic.\n\n"
+            "evidenceId": "source:0:claim:4",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 4,
+            "quote": "The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training. Details and applicability require demonstration."
           }
         ]
       },
       {
         "index": 3,
         "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:6",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 6,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational papers about quality management system auditing, including a process-based approach and evidence collection. The collection states that its guidance is not definitive and is not intended as specified requirements, a benchmark, or mandatory audit criteria. Use it to frame questions about evidence and relationships, while assessing the requirements and arrangements that apply to the organization separately.\n\n"
+          },
+          {
+            "evidenceId": "source:1:claim:1",
+            "kind": "source",
+            "id": "iso-apg",
+            "paragraph": 1,
+            "quote": "The site says its guidance is not definitive and is not intended as specified requirements, a benchmark or mandatory audit criteria."
+          },
+          {
+            "evidenceId": "source:1:claim:2",
+            "kind": "source",
+            "id": "iso-apg",
+            "paragraph": 2,
+            "quote": "Its ISO 9001:2015 auditing topics include processes, evidence collection, audit planning and improvement."
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:0",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 0,
+            "quote": "The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process."
+          },
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 1,
+            "quote": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+          },
           {
             "evidenceId": "source:0:claim:2",
             "kind": "source",
@@ -3546,37 +3661,11 @@
             "quote": "The page describes industry starting templates and review of supported PDF process charts before acceptance."
           },
           {
-            "evidenceId": "page:7:paragraph:2",
-            "kind": "page",
-            "id": "migration-and-configuration",
-            "paragraph": 2,
-            "quote": "Put format, scope, and acceptance owner beside each candidate in the inventory. The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes industry templates and review of supported PDF charts. Confirm support for the selected file and compare the result with its source; do not assume every relationship survives a conversion.\n\n"
-          }
-        ]
-      },
-      {
-        "index": 4,
-        "evidence": [
-          {
-            "evidenceId": "page:0:paragraph:5",
-            "kind": "page",
-            "id": "process-mapping-software-for-quality-management",
-            "paragraph": 5,
-            "quote": "The guide uses the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) as a source for questions a team can bring to an evaluation. In its decision record, distinguish what the vendor publishes from what a representative user actually observes with a sample. Identify the scope of that observation and who can accept the result; if an important question remains unanswered, assign follow-up instead of treating a description as proof of the site's conditions or of a particular configuration.\n\n"
-          },
-          {
-            "evidenceId": "page:7:paragraph:20",
-            "kind": "page",
-            "id": "migration-and-configuration",
-            "paragraph": 20,
-            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) mentions review of supported PDF process charts before acceptance. Confirm the supported format and the proposed review procedure for the actual implementation. The published statement does not guarantee that all other file types, links, permissions, or layouts will be preserved. Ask those questions and distinguish a demonstrated result from a supplier's description.\n\n"
-          },
-          {
-            "evidenceId": "page:9:paragraph:37",
-            "kind": "page",
-            "id": "ongoing-operation",
-            "paragraph": 37,
-            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) offers a published reference for discussing process information. Ask how the proposed arrangement would help the team examine the selected change, without assuming that a particular reminder, permission, or automatic update exists. If the question cannot be shown in the session, identify what additional information is needed before the organization relies on an answer.\n\n"
+            "evidenceId": "source:0:claim:4",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 4,
+            "quote": "The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training. Details and applicability require demonstration."
           },
           {
             "evidenceId": "source:0:claim:6",
@@ -3591,18 +3680,18 @@
         "index": 5,
         "evidence": [
           {
-            "evidenceId": "source:0:claim:1",
-            "kind": "source",
-            "id": "icc-processes",
-            "paragraph": 1,
-            "quote": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+            "evidenceId": "page:0:paragraph:18",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 18,
+            "quote": "The same source states that AI output is a suggestion reviewed by a person before entry into a controlled record. Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.\n\n"
           },
           {
-            "evidenceId": "page:6:paragraph:12",
-            "kind": "page",
-            "id": "documents-and-evidence",
-            "paragraph": 12,
-            "quote": "A useful association should help a reader understand the relationship between the step and the evidence. State whether the destination is an instruction, a blank form, a completed example, or another kind of record. A link to a form does not prove that the form was completed, and a completed record does not necessarily explain every decision made. The label and surrounding explanation should avoid implying more than the evidence supports.\n\n"
+            "evidenceId": "source:0:claim:5",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 5,
+            "quote": "The page states AI output is a suggestion reviewed by a person before entry into a controlled record."
           },
           {
             "evidenceId": "source:0:claim:6",
@@ -3617,25 +3706,44 @@
         "index": 6,
         "evidence": [
           {
-            "evidenceId": "page:0:paragraph:14",
+            "evidenceId": "page:0:paragraph:5",
             "kind": "page",
             "id": "process-mapping-software-for-quality-management",
-            "paragraph": 14,
-            "quote": "The final chapter includes nine frequently asked questions and a demonstration-planning section. The questions are starting points for a discussion, not substitutes for a review of actual records. A reader who finds an unanswered question should identify the person who can decide the next action and retain the limitation in the relevant record rather than assuming that a software feature resolves it.\n\n"
+            "paragraph": 5,
+            "quote": "The guide uses the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) as a source for questions a team can bring to an evaluation. In its decision record, distinguish what the vendor publishes from what a representative user actually observes with a sample. Identify the scope of that observation and who can accept the result; if an important question remains unanswered, assign follow-up instead of treating a description as proof of the site's conditions or of a particular configuration.\n\n"
           },
           {
-            "evidenceId": "page:9:paragraph:16",
+            "evidenceId": "page:0:paragraph:8",
             "kind": "page",
-            "id": "ongoing-operation",
-            "paragraph": 16,
-            "quote": "## Frequently asked questions\n\n"
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 8,
+            "quote": "A useful starting record identifies the process scope, the people consulted, the evidence examined, and the next decision. If an instruction is unavailable or two participants disagree about responsibility, document the limitation and assign someone to resolve it. A proposed route should not be presented as settled until the people with authority have made the relevant decision. The pages that follow build on this distinction between an observed fact, a recommendation, and an evaluation question.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 6,
+            "quote": "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
           },
           {
-            "evidenceId": "page:9:paragraph:18",
-            "kind": "page",
-            "id": "ongoing-operation",
-            "paragraph": 18,
-            "quote": "Begin with the purpose and the agreed boundary: where the selected process starts, what output it produces, and who receives it. Use a representative record and ask the process owner and a worker whether the explanation supports the reader's task. Record a disputed boundary as open and assign a person to resolve it; do not let a polished diagram imply agreement that has not been reached.\n\n"
+            "evidenceId": "source:0:claim:0",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 0,
+            "quote": "The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process."
+          },
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 1,
+            "quote": "The page describes named process owners and links from processes to controlled documents and standard clauses."
           }
         ]
       }
@@ -3645,18 +3753,18 @@
         "index": 0,
         "evidence": [
           {
-            "evidenceId": "source:0:claim:2",
-            "kind": "source",
-            "id": "icc-processes",
-            "paragraph": 2,
-            "quote": "The page describes industry starting templates and review of supported PDF process charts before acceptance."
+            "evidenceId": "page:0:paragraph:18",
+            "kind": "page",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 18,
+            "quote": "The same source states that AI output is a suggestion reviewed by a person before entry into a controlled record. Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.\n\n"
           },
           {
-            "evidenceId": "page:7:paragraph:2",
-            "kind": "page",
-            "id": "migration-and-configuration",
-            "paragraph": 2,
-            "quote": "Put format, scope, and acceptance owner beside each candidate in the inventory. The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes industry templates and review of supported PDF charts. Confirm support for the selected file and compare the result with its source; do not assume every relationship survives a conversion.\n\n"
+            "evidenceId": "source:0:claim:5",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 5,
+            "quote": "The page states AI output is a suggestion reviewed by a person before entry into a controlled record."
           }
         ]
       },
@@ -3664,35 +3772,72 @@
         "index": 1,
         "evidence": [
           {
-            "evidenceId": "source:0:claim:1",
-            "kind": "source",
-            "id": "icc-processes",
-            "paragraph": 1,
-            "quote": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+            "evidenceId": "page:1:paragraph:2",
+            "kind": "page",
+            "id": "mapping-current-processes",
+            "paragraph": 2,
+            "quote": "The process owner is responsible for agreeing on the purpose with the people who use the process. The inputs are the current work, the records it produces, and the questions the organization needs answered. The owner decides which workflow to examine and records that choice with the map. If the people involved cannot agree on the purpose, record the disagreement and resolve it before treating the map as a basis for a software decision.\n\n"
           },
           {
-            "evidenceId": "page:6:paragraph:12",
+            "evidenceId": "page:2:paragraph:2",
+            "kind": "page",
+            "id": "evaluating-process-software",
+            "paragraph": 2,
+            "quote": "The input to the evaluation should include a current map or draft, an example record, and a list of known exceptions. The process owner agrees on what the team will test and who will judge the result. The quality lead records the decision, including evidence observed and questions left open. If there is no agreed process owner, record that gap before treating a demonstration as a reliable indication of operational readiness.\n\n"
+          },
+          {
+            "evidenceId": "page:3:paragraph:2",
+            "kind": "page",
+            "id": "process-architecture",
+            "paragraph": 2,
+            "quote": "The quality lead can assemble a working list from existing maps and process records. The process owners and operations manager then examine the list together. For each item, identify its purpose, the people who depend on its output, and whether it belongs within the scope of the proposed architecture. Record disputed entries and the person who will resolve them. When two groups claim the same activity, identify the decision that belongs to each before deciding whether the overview needs one entry or two. A list compiled by one department may omit work that another department treats as an essential input.\n\n"
+          },
+          {
+            "evidenceId": "page:4:paragraph:2",
+            "kind": "page",
+            "id": "process-ownership",
+            "paragraph": 2,
+            "quote": "Start with the agreed process scope and representative records. The quality lead can bring the current map, the accepted overview, and unresolved boundary questions to a meeting with the proposed owner and operations manager. Ask what decisions arise in the process, what information is needed for each, and who must contribute. Record the proposed responsibilities and any disagreement before treating the assignment as complete.\n\n"
+          },
+          {
+            "evidenceId": "page:5:paragraph:1",
+            "kind": "page",
+            "id": "mapping-workflows",
+            "paragraph": 1,
+            "quote": "A workflow map is a working explanation of how a selected process proceeds. To make it useful, start with evidence of the work and the people who perform it. The process owner can bring together an operator, a floor supervisor, and the quality lead around a representative record. Their task is to identify the sequence and decisions shown by that example, then note where additional evidence is needed before drawing conclusions.\n\n"
+          },
+          {
+            "evidenceId": "page:6:paragraph:1",
             "kind": "page",
             "id": "documents-and-evidence",
-            "paragraph": 12,
-            "quote": "A useful association should help a reader understand the relationship between the step and the evidence. State whether the destination is an instruction, a blank form, a completed example, or another kind of record. A link to a form does not prove that the form was completed, and a completed record does not necessarily explain every decision made. The label and surrounding explanation should avoid implying more than the evidence supports.\n\n"
+            "paragraph": 1,
+            "quote": "A process map can help a reader find the information needed to perform or review work, but a link is useful only when its purpose and destination are understood. Begin with the process scope and ask which instructions or other controlled documents people actually need at the relevant steps. The process owner, quality lead, and workers can examine a representative process record together and distinguish a document that guides work from a record that shows what happened in one instance.\n\n"
+          },
+          {
+            "evidenceId": "page:7:paragraph:1",
+            "kind": "page",
+            "id": "migration-and-configuration",
+            "paragraph": 1,
+            "quote": "A migration plan begins with knowing what the organization intends to move and why. Gather the maps and process descriptions used within the agreed scope, along with the people who can explain them. The process owner can identify the workflow and its boundaries; the quality lead can help locate the information the organization treats as current. The operations manager should be involved when the selection affects several teams or sites.\n\n"
+          },
+          {
+            "evidenceId": "page:8:paragraph:1",
+            "kind": "page",
+            "id": "rollout-and-training",
+            "paragraph": 1,
+            "quote": "A rollout works better when people can practice the tasks they will actually perform. Start with the accepted process scope and identify the readers, process owners, supervisors, and quality staff who will use the information. The process owner can explain the workflow; the quality lead can prepare representative records; and the operations manager can help make time for the people who need to participate. The training plan should identify the decisions each role is expected to make and where questions go when the answer is unclear.\n\n"
+          },
+          {
+            "evidenceId": "page:9:paragraph:3",
+            "kind": "page",
+            "id": "ongoing-operation",
+            "paragraph": 3,
+            "quote": "Start with the change and a representative process record. The process owner can ask the people who perform the work what is different, while the quality lead identifies the current map and related information. Compare the agreed scope, decision points, and handoffs with the changed work. If the change affects another process, include the person who can explain that interface. Record the decision and its owner, including any question that cannot yet be resolved.\n\n"
           }
         ]
       },
       {
         "index": 2,
-        "evidence": [
-          {
-            "evidenceId": "page:0:paragraph:14",
-            "kind": "page",
-            "id": "process-mapping-software-for-quality-management",
-            "paragraph": 14,
-            "quote": "The final chapter includes nine frequently asked questions and a demonstration-planning section. The questions are starting points for a discussion, not substitutes for a review of actual records. A reader who finds an unanswered question should identify the person who can decide the next action and retain the limitation in the relevant record rather than assuming that a software feature resolves it.\n\n"
-          }
-        ]
-      },
-      {
-        "index": 3,
         "evidence": [
           {
             "evidenceId": "page:0:paragraph:5",
@@ -3702,24 +3847,57 @@
             "quote": "The guide uses the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) as a source for questions a team can bring to an evaluation. In its decision record, distinguish what the vendor publishes from what a representative user actually observes with a sample. Identify the scope of that observation and who can accept the result; if an important question remains unanswered, assign follow-up instead of treating a description as proof of the site's conditions or of a particular configuration.\n\n"
           },
           {
-            "evidenceId": "page:7:paragraph:20",
+            "evidenceId": "source:0:claim:4",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 4,
+            "quote": "The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training. Details and applicability require demonstration."
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:6",
             "kind": "page",
-            "id": "migration-and-configuration",
-            "paragraph": 20,
-            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) mentions review of supported PDF process charts before acceptance. Confirm the supported format and the proposed review procedure for the actual implementation. The published statement does not guarantee that all other file types, links, permissions, or layouts will be preserved. Ask those questions and distinguish a demonstrated result from a supplier's description.\n\n"
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 6,
+            "quote": "The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational papers about quality management system auditing, including a process-based approach and evidence collection. The collection states that its guidance is not definitive and is not intended as specified requirements, a benchmark, or mandatory audit criteria. Use it to frame questions about evidence and relationships, while assessing the requirements and arrangements that apply to the organization separately.\n\n"
           },
           {
-            "evidenceId": "page:9:paragraph:37",
-            "kind": "page",
-            "id": "ongoing-operation",
-            "paragraph": 37,
-            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) offers a published reference for discussing process information. Ask how the proposed arrangement would help the team examine the selected change, without assuming that a particular reminder, permission, or automatic update exists. If the question cannot be shown in the session, identify what additional information is needed before the organization relies on an answer.\n\n"
+            "evidenceId": "source:1:claim:1",
+            "kind": "source",
+            "id": "iso-apg",
+            "paragraph": 1,
+            "quote": "The site says its guidance is not definitive and is not intended as specified requirements, a benchmark or mandatory audit criteria."
+          },
+          {
+            "evidenceId": "source:1:claim:2",
+            "kind": "source",
+            "id": "iso-apg",
+            "paragraph": 2,
+            "quote": "Its ISO 9001:2015 auditing topics include processes, evidence collection, audit planning and improvement."
           }
         ]
       },
       {
         "index": 4,
         "evidence": [
+          {
+            "evidenceId": "source:0:claim:0",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 0,
+            "quote": "The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process."
+          },
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 1,
+            "quote": "The page describes named process owners and links from processes to controlled documents and standard clauses."
+          },
           {
             "evidenceId": "source:0:claim:2",
             "kind": "source",
@@ -3728,25 +3906,18 @@
             "quote": "The page describes industry starting templates and review of supported PDF process charts before acceptance."
           },
           {
-            "evidenceId": "page:7:paragraph:2",
-            "kind": "page",
-            "id": "migration-and-configuration",
-            "paragraph": 2,
-            "quote": "Put format, scope, and acceptance owner beside each candidate in the inventory. The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes industry templates and review of supported PDF charts. Confirm support for the selected file and compare the result with its source; do not assume every relationship survives a conversion.\n\n"
+            "evidenceId": "source:0:claim:4",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 4,
+            "quote": "The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training. Details and applicability require demonstration."
           },
           {
-            "evidenceId": "page:7:paragraph:20",
-            "kind": "page",
-            "id": "migration-and-configuration",
-            "paragraph": 20,
-            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) mentions review of supported PDF process charts before acceptance. Confirm the supported format and the proposed review procedure for the actual implementation. The published statement does not guarantee that all other file types, links, permissions, or layouts will be preserved. Ask those questions and distinguish a demonstrated result from a supplier's description.\n\n"
-          },
-          {
-            "evidenceId": "page:5:paragraph:28",
-            "kind": "page",
-            "id": "mapping-workflows",
-            "paragraph": 28,
-            "quote": "The [ICC process management description](https://isocertificationconsultants.ca/solutions/processes/) says supported PDF process charts are reviewed before acceptance. That is a published vendor description, not proof that a specific site's map has been validated or that all file types follow the same path. Ask how the proposed workflow would handle the organization's sample and who is expected to review and accept it.\n\n"
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 6,
+            "quote": "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
           }
         ]
       },
@@ -3754,32 +3925,70 @@
         "index": 5,
         "evidence": [
           {
-            "evidenceId": "page:2:paragraph:5",
+            "evidenceId": "page:0:paragraph:18",
             "kind": "page",
-            "id": "evaluating-process-software",
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 18,
+            "quote": "The same source states that AI output is a suggestion reviewed by a person before entry into a controlled record. Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.\n\n"
+          },
+          {
+            "evidenceId": "source:0:claim:5",
+            "kind": "source",
+            "id": "icc-processes",
             "paragraph": 5,
-            "quote": "Agree on a small set of observable outcomes before the session. For each one, name a user, a starting point, and an output the user should be able to find or verify. Include an exception: a missing document, an unclear owner, or a record that belongs to another process. If the demonstration cannot cover that exception, record it as open rather than marking the criterion satisfied by inference. A practical evaluation can use the following prompts:\n\n"
+            "quote": "The page states AI output is a suggestion reviewed by a person before entry into a controlled record."
           },
           {
-            "evidenceId": "page:2:paragraph:16",
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 6,
+            "quote": "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "evidence": [
+          {
+            "evidenceId": "page:0:paragraph:5",
             "kind": "page",
-            "id": "evaluating-process-software",
-            "paragraph": 16,
-            "quote": "## Test ownership and access\n\n"
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 5,
+            "quote": "The guide uses the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) as a source for questions a team can bring to an evaluation. In its decision record, distinguish what the vendor publishes from what a representative user actually observes with a sample. Identify the scope of that observation and who can accept the result; if an important question remains unanswered, assign follow-up instead of treating a description as proof of the site's conditions or of a particular configuration.\n\n"
           },
           {
-            "evidenceId": "page:9:paragraph:36",
+            "evidenceId": "page:0:paragraph:8",
             "kind": "page",
-            "id": "ongoing-operation",
-            "paragraph": 36,
-            "quote": "Start with an issue discovered after people began using a process map. A changed handoff, a disputed owner, or an instruction that a reader could not reach gives the discussion a concrete purpose. The process owner can choose the issue with the greatest effect on the next decision and bring the current map and a suitable sample. If the issue is still disputed, describe the competing interpretations rather than presenting either one as settled.\n\n"
+            "id": "process-mapping-software-for-quality-management",
+            "paragraph": 8,
+            "quote": "A useful starting record identifies the process scope, the people consulted, the evidence examined, and the next decision. If an instruction is unavailable or two participants disagree about responsibility, document the limitation and assign someone to resolve it. A proposed route should not be presented as settled until the people with authority have made the relevant decision. The pages that follow build on this distinction between an observed fact, a recommendation, and an evaluation question.\n\n"
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "evidence": [
+          {
+            "evidenceId": "source:0:claim:6",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 6,
+            "quote": "These are published vendor descriptions, not verified installed behavior or proof of a particular plant’s conditions."
           },
           {
-            "evidenceId": "page:9:paragraph:38",
-            "kind": "page",
-            "id": "ongoing-operation",
-            "paragraph": 38,
-            "quote": "A focused agenda can follow the lifecycle of the issue. First, show the point where the current explanation became uncertain. Next, ask who should assess the effect on the connected process and its readers. Finally, consider how the organization would confirm that the revised explanation reaches the people who use it. These are organizational decisions to discuss; the demonstration is an opportunity to explore the proposed support, not evidence that every step is automatic.\n\n"
+            "evidenceId": "source:0:claim:0",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 0,
+            "quote": "The vendor page describes a level-one process map grouped into management, customer-facing, core and support categories and a level-two flowchart for each process."
+          },
+          {
+            "evidenceId": "source:0:claim:1",
+            "kind": "source",
+            "id": "icc-processes",
+            "paragraph": 1,
+            "quote": "The page describes named process owners and links from processes to controlled documents and standard clauses."
           }
         ]
       }
@@ -3788,7 +3997,7 @@
       {
         "kind": "decision",
         "index": 0,
-        "dimension": "repetition",
+        "dimension": "claims",
         "comparisons": []
       },
       {
@@ -3800,7 +4009,7 @@
       {
         "kind": "decision",
         "index": 2,
-        "dimension": "repetition",
+        "dimension": "claims",
         "comparisons": []
       },
       {
@@ -3812,18 +4021,24 @@
       {
         "kind": "decision",
         "index": 4,
-        "dimension": "consistency",
-        "comparisons": []
-      },
-      {
-        "kind": "decision",
-        "index": 5,
         "dimension": "claims",
         "comparisons": []
       },
       {
         "kind": "decision",
+        "index": 5,
+        "dimension": "consistency",
+        "comparisons": []
+      },
+      {
+        "kind": "decision",
         "index": 6,
+        "dimension": "consistency",
+        "comparisons": []
+      },
+      {
+        "kind": "decision",
+        "index": 7,
         "dimension": "claims",
         "comparisons": []
       },
@@ -3836,7 +4051,7 @@
       {
         "kind": "additional",
         "index": 1,
-        "dimension": "claims",
+        "dimension": "repetition",
         "comparisons": []
       },
       {
@@ -3848,19 +4063,31 @@
       {
         "kind": "additional",
         "index": 3,
-        "dimension": "consistency",
+        "dimension": "claims",
         "comparisons": []
       },
       {
         "kind": "additional",
         "index": 4,
-        "dimension": "repetition",
+        "dimension": "claims",
         "comparisons": []
       },
       {
         "kind": "additional",
         "index": 5,
-        "dimension": "repetition",
+        "dimension": "consistency",
+        "comparisons": []
+      },
+      {
+        "kind": "additional",
+        "index": 6,
+        "dimension": "consistency",
+        "comparisons": []
+      },
+      {
+        "kind": "additional",
+        "index": 7,
+        "dimension": "claims",
         "comparisons": []
       }
     ],
@@ -3879,8 +4106,2985 @@
       "ongoing-operation": "d5c548f3c325ec55c312fdf0617f7acd32e97bc0dea40639751b057a304811ba"
     },
     "reviewer": "Configured claude independent review",
-    "reviewedAt": "2026-11-23T16:33:04.707Z"
+    "reviewedAt": "2026-11-23T17:15:10.214Z"
   },
-  "generationCompletedAt": null,
-  "finalReport": null
+  "generationCompletedAt": "2026-11-23T17:15:12.193Z",
+  "finalReport": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "schema-version",
+        "pass": true,
+        "message": "Guide schemaVersion must be 1"
+      },
+      {
+        "id": "guide-slug",
+        "pass": true,
+        "message": "Guide slug must have 6–80 lowercase letters/digits with hyphens"
+      },
+      {
+        "id": "topic-id",
+        "pass": true,
+        "message": "A stable topic ID is required"
+      },
+      {
+        "id": "chapter-count",
+        "pass": true,
+        "message": "Nine complete chapters are required; ten plus an introduction exceeds the inclusive budget"
+      },
+      {
+        "id": "introduction-file",
+        "pass": true,
+        "message": "Introduction filename must be introduction.md"
+      },
+      {
+        "id": "manifest-metadata",
+        "pass": true,
+        "message": "Guide identity and author are required"
+      },
+      {
+        "id": "manifest-description",
+        "pass": true,
+        "message": "Guide description must be 120–160 characters"
+      },
+      {
+        "id": "manifest-date",
+        "pass": true,
+        "message": "Guide date must be valid and not in the future"
+      },
+      {
+        "id": "snapshot-hashes",
+        "pass": true,
+        "message": "Evidence snapshots must have SHA-256 hashes"
+      },
+      {
+        "id": "unique-chapters",
+        "pass": true,
+        "message": "Chapter slugs must be unique"
+      },
+      {
+        "id": "chapter-reference",
+        "pass": true,
+        "message": "Chapter reference must use its canonical filename",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "chapter-reference",
+        "pass": true,
+        "message": "Chapter reference must use its canonical filename",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "chapter-reference",
+        "pass": true,
+        "message": "Chapter reference must use its canonical filename",
+        "page": "process-architecture"
+      },
+      {
+        "id": "chapter-reference",
+        "pass": true,
+        "message": "Chapter reference must use its canonical filename",
+        "page": "process-ownership"
+      },
+      {
+        "id": "chapter-reference",
+        "pass": true,
+        "message": "Chapter reference must use its canonical filename",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "chapter-reference",
+        "pass": true,
+        "message": "Chapter reference must use its canonical filename",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "chapter-reference",
+        "pass": true,
+        "message": "Chapter reference must use its canonical filename",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "chapter-reference",
+        "pass": true,
+        "message": "Chapter reference must use its canonical filename",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "chapter-reference",
+        "pass": true,
+        "message": "Chapter reference must use its canonical filename",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "chapter-order",
+        "pass": true,
+        "message": "Every chapter must exist in manifest order"
+      },
+      {
+        "id": "introduction-slug",
+        "pass": true,
+        "message": "Introduction slug must equal guide slug"
+      },
+      {
+        "id": "unique-titles",
+        "pass": true,
+        "message": "Every page needs a unique title"
+      },
+      {
+        "id": "page-metadata",
+        "pass": true,
+        "message": "Page identity, author and image brief required",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "page-slug",
+        "pass": true,
+        "message": "Invalid page slug",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "page-description",
+        "pass": true,
+        "message": "Description must be 120–160 characters",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "page-date",
+        "pass": true,
+        "message": "Dates must be valid, ordered and not in the future",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies the only H1",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "introduction-words",
+        "pass": true,
+        "message": "1524 visible words",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "content-blocks",
+        "pass": true,
+        "message": "At least three real content blocks required",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "evidence-ids",
+        "pass": true,
+        "message": "Each page must identify its evidence",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "page-metadata",
+        "pass": true,
+        "message": "Page identity, author and image brief required",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "page-slug",
+        "pass": true,
+        "message": "Invalid page slug",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "page-description",
+        "pass": true,
+        "message": "Description must be 120–160 characters",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "page-date",
+        "pass": true,
+        "message": "Dates must be valid, ordered and not in the future",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies the only H1",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "chapter-words",
+        "pass": true,
+        "message": "2010 visible words",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "subsections",
+        "pass": true,
+        "message": "Chapter needs 3–5 H2 subsections",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "content-blocks",
+        "pass": true,
+        "message": "At least three real content blocks required",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "evidence-ids",
+        "pass": true,
+        "message": "Each page must identify its evidence",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "page-metadata",
+        "pass": true,
+        "message": "Page identity, author and image brief required",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "page-slug",
+        "pass": true,
+        "message": "Invalid page slug",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "page-description",
+        "pass": true,
+        "message": "Description must be 120–160 characters",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "page-date",
+        "pass": true,
+        "message": "Dates must be valid, ordered and not in the future",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies the only H1",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "chapter-words",
+        "pass": true,
+        "message": "2017 visible words",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "subsections",
+        "pass": true,
+        "message": "Chapter needs 3–5 H2 subsections",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "content-blocks",
+        "pass": true,
+        "message": "At least three real content blocks required",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "evidence-ids",
+        "pass": true,
+        "message": "Each page must identify its evidence",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "page-metadata",
+        "pass": true,
+        "message": "Page identity, author and image brief required",
+        "page": "process-architecture"
+      },
+      {
+        "id": "page-slug",
+        "pass": true,
+        "message": "Invalid page slug",
+        "page": "process-architecture"
+      },
+      {
+        "id": "page-description",
+        "pass": true,
+        "message": "Description must be 120–160 characters",
+        "page": "process-architecture"
+      },
+      {
+        "id": "page-date",
+        "pass": true,
+        "message": "Dates must be valid, ordered and not in the future",
+        "page": "process-architecture"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies the only H1",
+        "page": "process-architecture"
+      },
+      {
+        "id": "chapter-words",
+        "pass": true,
+        "message": "2006 visible words",
+        "page": "process-architecture"
+      },
+      {
+        "id": "subsections",
+        "pass": true,
+        "message": "Chapter needs 3–5 H2 subsections",
+        "page": "process-architecture"
+      },
+      {
+        "id": "content-blocks",
+        "pass": true,
+        "message": "At least three real content blocks required",
+        "page": "process-architecture"
+      },
+      {
+        "id": "evidence-ids",
+        "pass": true,
+        "message": "Each page must identify its evidence",
+        "page": "process-architecture"
+      },
+      {
+        "id": "page-metadata",
+        "pass": true,
+        "message": "Page identity, author and image brief required",
+        "page": "process-ownership"
+      },
+      {
+        "id": "page-slug",
+        "pass": true,
+        "message": "Invalid page slug",
+        "page": "process-ownership"
+      },
+      {
+        "id": "page-description",
+        "pass": true,
+        "message": "Description must be 120–160 characters",
+        "page": "process-ownership"
+      },
+      {
+        "id": "page-date",
+        "pass": true,
+        "message": "Dates must be valid, ordered and not in the future",
+        "page": "process-ownership"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies the only H1",
+        "page": "process-ownership"
+      },
+      {
+        "id": "chapter-words",
+        "pass": true,
+        "message": "2022 visible words",
+        "page": "process-ownership"
+      },
+      {
+        "id": "subsections",
+        "pass": true,
+        "message": "Chapter needs 3–5 H2 subsections",
+        "page": "process-ownership"
+      },
+      {
+        "id": "content-blocks",
+        "pass": true,
+        "message": "At least three real content blocks required",
+        "page": "process-ownership"
+      },
+      {
+        "id": "evidence-ids",
+        "pass": true,
+        "message": "Each page must identify its evidence",
+        "page": "process-ownership"
+      },
+      {
+        "id": "page-metadata",
+        "pass": true,
+        "message": "Page identity, author and image brief required",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "page-slug",
+        "pass": true,
+        "message": "Invalid page slug",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "page-description",
+        "pass": true,
+        "message": "Description must be 120–160 characters",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "page-date",
+        "pass": true,
+        "message": "Dates must be valid, ordered and not in the future",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies the only H1",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "chapter-words",
+        "pass": true,
+        "message": "2076 visible words",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "subsections",
+        "pass": true,
+        "message": "Chapter needs 3–5 H2 subsections",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "content-blocks",
+        "pass": true,
+        "message": "At least three real content blocks required",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "evidence-ids",
+        "pass": true,
+        "message": "Each page must identify its evidence",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "page-metadata",
+        "pass": true,
+        "message": "Page identity, author and image brief required",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "page-slug",
+        "pass": true,
+        "message": "Invalid page slug",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "page-description",
+        "pass": true,
+        "message": "Description must be 120–160 characters",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "page-date",
+        "pass": true,
+        "message": "Dates must be valid, ordered and not in the future",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies the only H1",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "chapter-words",
+        "pass": true,
+        "message": "2081 visible words",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "subsections",
+        "pass": true,
+        "message": "Chapter needs 3–5 H2 subsections",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "content-blocks",
+        "pass": true,
+        "message": "At least three real content blocks required",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "evidence-ids",
+        "pass": true,
+        "message": "Each page must identify its evidence",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "page-metadata",
+        "pass": true,
+        "message": "Page identity, author and image brief required",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "page-slug",
+        "pass": true,
+        "message": "Invalid page slug",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "page-description",
+        "pass": true,
+        "message": "Description must be 120–160 characters",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "page-date",
+        "pass": true,
+        "message": "Dates must be valid, ordered and not in the future",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies the only H1",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "chapter-words",
+        "pass": true,
+        "message": "2058 visible words",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "subsections",
+        "pass": true,
+        "message": "Chapter needs 3–5 H2 subsections",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "content-blocks",
+        "pass": true,
+        "message": "At least three real content blocks required",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "evidence-ids",
+        "pass": true,
+        "message": "Each page must identify its evidence",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "page-metadata",
+        "pass": true,
+        "message": "Page identity, author and image brief required",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "page-slug",
+        "pass": true,
+        "message": "Invalid page slug",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "page-description",
+        "pass": true,
+        "message": "Description must be 120–160 characters",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "page-date",
+        "pass": true,
+        "message": "Dates must be valid, ordered and not in the future",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies the only H1",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "chapter-words",
+        "pass": true,
+        "message": "2068 visible words",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "subsections",
+        "pass": true,
+        "message": "Chapter needs 3–5 H2 subsections",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "content-blocks",
+        "pass": true,
+        "message": "At least three real content blocks required",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "evidence-ids",
+        "pass": true,
+        "message": "Each page must identify its evidence",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "page-metadata",
+        "pass": true,
+        "message": "Page identity, author and image brief required",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "page-slug",
+        "pass": true,
+        "message": "Invalid page slug",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "page-description",
+        "pass": true,
+        "message": "Description must be 120–160 characters",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "page-date",
+        "pass": true,
+        "message": "Dates must be valid, ordered and not in the future",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies the only H1",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "chapter-words",
+        "pass": true,
+        "message": "2063 visible words",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "subsections",
+        "pass": true,
+        "message": "Chapter needs 3–5 H2 subsections",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "content-blocks",
+        "pass": true,
+        "message": "At least three real content blocks required",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "evidence-ids",
+        "pass": true,
+        "message": "Each page must identify its evidence",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "total-words",
+        "pass": true,
+        "message": "19925 total visible words; maximum 20,000 includes introduction"
+      },
+      {
+        "id": "cross-chapter-repetition",
+        "pass": true,
+        "message": "No substantially copied paragraphs across guide pages"
+      },
+      {
+        "id": "audit-hash",
+        "pass": true,
+        "message": "Required review must match the current prose, metadata, links and evidence"
+      },
+      {
+        "id": "audit-identity",
+        "pass": true,
+        "message": "Review identity and date are required"
+      },
+      {
+        "id": "audit-claims",
+        "pass": true,
+        "message": "claims review must complete and pass; skipped or unavailable is a failure"
+      },
+      {
+        "id": "audit-consistency",
+        "pass": true,
+        "message": "consistency review must complete and pass; skipped or unavailable is a failure"
+      },
+      {
+        "id": "audit-repetition",
+        "pass": true,
+        "message": "repetition review must complete and pass; skipped or unavailable is a failure"
+      },
+      {
+        "id": "audit-findings",
+        "pass": true,
+        "message": "All required review findings must be resolved"
+      },
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: The operational problem",
+        "section": "The operational problem",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: How to use this guide",
+        "section": "How to use this guide",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+        "section": "Planning evaluation and implementation",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use ICC US spelling while preserving proper names",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler phrases",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "positioning-terms",
+        "pass": true,
+        "message": "Remove product names and AI audit claims",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "keyword-covered",
+        "pass": true,
+        "message": "The introduction must name the assigned topic in both title and description",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "page-title-unused",
+        "pass": true,
+        "message": "Title must not duplicate another published content page",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "source-supported",
+        "pass": true,
+        "message": "Every page source must appear in the manifest",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "capability-supported",
+        "pass": true,
+        "message": "Every claimed product capability must be verified",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs useful internal and primary-source links",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "hero-image",
+        "pass": true,
+        "message": "Each page needs a 1200×675 hero and alt text",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "image-provenance",
+        "pass": true,
+        "message": "Hero needs a safe path, source identity, hash and licensing reference",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "image-unique",
+        "pass": true,
+        "message": "Hero must be unique across all content pages",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "read-time",
+        "pass": true,
+        "message": "Reading time must match actual words",
+        "page": "process-mapping-software-for-quality-management"
+      },
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Define the mapping purpose",
+        "section": "Define the mapping purpose",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Define the mapping purpose; semantic review verifies support",
+        "section": "Define the mapping purpose",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Identify process boundaries",
+        "section": "Identify process boundaries",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Identify process boundaries; semantic review verifies support",
+        "section": "Identify process boundaries",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Trace inputs and outputs",
+        "section": "Trace inputs and outputs",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Trace inputs and outputs; semantic review verifies support",
+        "section": "Trace inputs and outputs",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Record handoffs and exceptions",
+        "section": "Record handoffs and exceptions",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Record handoffs and exceptions; semantic review verifies support",
+        "section": "Record handoffs and exceptions",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use ICC US spelling while preserving proper names",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler phrases",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "positioning-terms",
+        "pass": true,
+        "message": "Remove product names and AI audit claims",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "keyword-covered",
+        "pass": true,
+        "message": "A chapter must name the assigned topic in its title or description",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "page-title-unused",
+        "pass": true,
+        "message": "Title must not duplicate another published content page",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "source-supported",
+        "pass": true,
+        "message": "Every page source must appear in the manifest",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "capability-supported",
+        "pass": true,
+        "message": "Every claimed product capability must be verified",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs useful internal and primary-source links",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "hero-image",
+        "pass": true,
+        "message": "Each page needs a 1200×675 hero and alt text",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "image-provenance",
+        "pass": true,
+        "message": "Hero needs a safe path, source identity, hash and licensing reference",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "image-unique",
+        "pass": true,
+        "message": "Hero must be unique across all content pages",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "read-time",
+        "pass": true,
+        "message": "Reading time must match actual words",
+        "page": "mapping-current-processes"
+      },
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Set evaluation criteria",
+        "section": "Set evaluation criteria",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Set evaluation criteria; semantic review verifies support",
+        "section": "Set evaluation criteria",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Compare maps and flowcharts",
+        "section": "Compare maps and flowcharts",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Compare maps and flowcharts; semantic review verifies support",
+        "section": "Compare maps and flowcharts",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Test ownership and access",
+        "section": "Test ownership and access",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Test ownership and access; semantic review verifies support",
+        "section": "Test ownership and access",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Document gaps and commitments",
+        "section": "Document gaps and commitments",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Document gaps and commitments; semantic review verifies support",
+        "section": "Document gaps and commitments",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use ICC US spelling while preserving proper names",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler phrases",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "positioning-terms",
+        "pass": true,
+        "message": "Remove product names and AI audit claims",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "keyword-covered",
+        "pass": true,
+        "message": "A chapter must name the assigned topic in its title or description",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "page-title-unused",
+        "pass": true,
+        "message": "Title must not duplicate another published content page",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "source-supported",
+        "pass": true,
+        "message": "Every page source must appear in the manifest",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "capability-supported",
+        "pass": true,
+        "message": "Every claimed product capability must be verified",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs useful internal and primary-source links",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "hero-image",
+        "pass": true,
+        "message": "Each page needs a 1200×675 hero and alt text",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "image-provenance",
+        "pass": true,
+        "message": "Hero needs a safe path, source identity, hash and licensing reference",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "image-unique",
+        "pass": true,
+        "message": "Hero must be unique across all content pages",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "read-time",
+        "pass": true,
+        "message": "Reading time must match actual words",
+        "page": "evaluating-process-software"
+      },
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review",
+        "page": "process-architecture"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief",
+        "page": "process-architecture"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "process-architecture"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "process-architecture"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling",
+        "page": "process-architecture"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler",
+        "page": "process-architecture"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1",
+        "page": "process-architecture"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Group processes by purpose",
+        "section": "Group processes by purpose",
+        "page": "process-architecture"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Group processes by purpose; semantic review verifies support",
+        "section": "Group processes by purpose",
+        "page": "process-architecture"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Define the top-level map",
+        "section": "Define the top-level map",
+        "page": "process-architecture"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Define the top-level map; semantic review verifies support",
+        "section": "Define the top-level map",
+        "page": "process-architecture"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Connect levels of detail",
+        "section": "Connect levels of detail",
+        "page": "process-architecture"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Connect levels of detail; semantic review verifies support",
+        "section": "Connect levels of detail",
+        "page": "process-architecture"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Review interfaces between processes",
+        "section": "Review interfaces between processes",
+        "page": "process-architecture"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Review interfaces between processes; semantic review verifies support",
+        "section": "Review interfaces between processes",
+        "page": "process-architecture"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+        "page": "process-architecture"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "process-architecture"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "process-architecture"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use ICC US spelling while preserving proper names",
+        "page": "process-architecture"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler phrases",
+        "page": "process-architecture"
+      },
+      {
+        "id": "positioning-terms",
+        "pass": true,
+        "message": "Remove product names and AI audit claims",
+        "page": "process-architecture"
+      },
+      {
+        "id": "keyword-covered",
+        "pass": true,
+        "message": "A chapter must name the assigned topic in its title or description",
+        "page": "process-architecture"
+      },
+      {
+        "id": "page-title-unused",
+        "pass": true,
+        "message": "Title must not duplicate another published content page",
+        "page": "process-architecture"
+      },
+      {
+        "id": "source-supported",
+        "pass": true,
+        "message": "Every page source must appear in the manifest",
+        "page": "process-architecture"
+      },
+      {
+        "id": "capability-supported",
+        "pass": true,
+        "message": "Every claimed product capability must be verified",
+        "page": "process-architecture"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-architecture"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "process-architecture"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-architecture"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-architecture"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-architecture"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-architecture"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs useful internal and primary-source links",
+        "page": "process-architecture"
+      },
+      {
+        "id": "hero-image",
+        "pass": true,
+        "message": "Each page needs a 1200×675 hero and alt text",
+        "page": "process-architecture"
+      },
+      {
+        "id": "image-provenance",
+        "pass": true,
+        "message": "Hero needs a safe path, source identity, hash and licensing reference",
+        "page": "process-architecture"
+      },
+      {
+        "id": "image-unique",
+        "pass": true,
+        "message": "Hero must be unique across all content pages",
+        "page": "process-architecture"
+      },
+      {
+        "id": "read-time",
+        "pass": true,
+        "message": "Reading time must match actual words",
+        "page": "process-architecture"
+      },
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review",
+        "page": "process-ownership"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief",
+        "page": "process-ownership"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "process-ownership"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "process-ownership"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling",
+        "page": "process-ownership"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler",
+        "page": "process-ownership"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1",
+        "page": "process-ownership"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Define owner responsibilities",
+        "section": "Define owner responsibilities",
+        "page": "process-ownership"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Define owner responsibilities; semantic review verifies support",
+        "section": "Define owner responsibilities",
+        "page": "process-ownership"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Assign decisions and backups",
+        "section": "Assign decisions and backups",
+        "page": "process-ownership"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Assign decisions and backups; semantic review verifies support",
+        "section": "Assign decisions and backups",
+        "page": "process-ownership"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Resolve ownership conflicts",
+        "section": "Resolve ownership conflicts",
+        "page": "process-ownership"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Resolve ownership conflicts; semantic review verifies support",
+        "section": "Resolve ownership conflicts",
+        "page": "process-ownership"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Review ownership over time",
+        "section": "Review ownership over time",
+        "page": "process-ownership"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Review ownership over time; semantic review verifies support",
+        "section": "Review ownership over time",
+        "page": "process-ownership"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+        "page": "process-ownership"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "process-ownership"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "process-ownership"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use ICC US spelling while preserving proper names",
+        "page": "process-ownership"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler phrases",
+        "page": "process-ownership"
+      },
+      {
+        "id": "positioning-terms",
+        "pass": true,
+        "message": "Remove product names and AI audit claims",
+        "page": "process-ownership"
+      },
+      {
+        "id": "keyword-covered",
+        "pass": true,
+        "message": "A chapter must name the assigned topic in its title or description",
+        "page": "process-ownership"
+      },
+      {
+        "id": "page-title-unused",
+        "pass": true,
+        "message": "Title must not duplicate another published content page",
+        "page": "process-ownership"
+      },
+      {
+        "id": "source-supported",
+        "pass": true,
+        "message": "Every page source must appear in the manifest",
+        "page": "process-ownership"
+      },
+      {
+        "id": "capability-supported",
+        "pass": true,
+        "message": "Every claimed product capability must be verified",
+        "page": "process-ownership"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-ownership"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "process-ownership"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-ownership"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-ownership"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-ownership"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "process-ownership"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs useful internal and primary-source links",
+        "page": "process-ownership"
+      },
+      {
+        "id": "hero-image",
+        "pass": true,
+        "message": "Each page needs a 1200×675 hero and alt text",
+        "page": "process-ownership"
+      },
+      {
+        "id": "image-provenance",
+        "pass": true,
+        "message": "Hero needs a safe path, source identity, hash and licensing reference",
+        "page": "process-ownership"
+      },
+      {
+        "id": "image-unique",
+        "pass": true,
+        "message": "Hero must be unique across all content pages",
+        "page": "process-ownership"
+      },
+      {
+        "id": "read-time",
+        "pass": true,
+        "message": "Reading time must match actual words",
+        "page": "process-ownership"
+      },
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Gather task evidence",
+        "section": "Gather task evidence",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Gather task evidence; semantic review verifies support",
+        "section": "Gather task evidence",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Draw steps and decision points",
+        "section": "Draw steps and decision points",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Draw steps and decision points; semantic review verifies support",
+        "section": "Draw steps and decision points",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Describe exceptions and handoffs",
+        "section": "Describe exceptions and handoffs",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Describe exceptions and handoffs; semantic review verifies support",
+        "section": "Describe exceptions and handoffs",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Validate a map with workers",
+        "section": "Validate a map with workers",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Validate a map with workers; semantic review verifies support",
+        "section": "Validate a map with workers",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use ICC US spelling while preserving proper names",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler phrases",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "positioning-terms",
+        "pass": true,
+        "message": "Remove product names and AI audit claims",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "keyword-covered",
+        "pass": true,
+        "message": "A chapter must name the assigned topic in its title or description",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "page-title-unused",
+        "pass": true,
+        "message": "Title must not duplicate another published content page",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "source-supported",
+        "pass": true,
+        "message": "Every page source must appear in the manifest",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "capability-supported",
+        "pass": true,
+        "message": "Every claimed product capability must be verified",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs useful internal and primary-source links",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "hero-image",
+        "pass": true,
+        "message": "Each page needs a 1200×675 hero and alt text",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "image-provenance",
+        "pass": true,
+        "message": "Hero needs a safe path, source identity, hash and licensing reference",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "image-unique",
+        "pass": true,
+        "message": "Hero must be unique across all content pages",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "read-time",
+        "pass": true,
+        "message": "Reading time must match actual words",
+        "page": "mapping-workflows"
+      },
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Identify controlled documents",
+        "section": "Identify controlled documents",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Identify controlled documents; semantic review verifies support",
+        "section": "Identify controlled documents",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Link records to process steps",
+        "section": "Link records to process steps",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Link records to process steps; semantic review verifies support",
+        "section": "Link records to process steps",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Handle revisions and obsolete links",
+        "section": "Handle revisions and obsolete links",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Handle revisions and obsolete links; semantic review verifies support",
+        "section": "Handle revisions and obsolete links",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Test traceability during review",
+        "section": "Test traceability during review",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Test traceability during review; semantic review verifies support",
+        "section": "Test traceability during review",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use ICC US spelling while preserving proper names",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler phrases",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "positioning-terms",
+        "pass": true,
+        "message": "Remove product names and AI audit claims",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "keyword-covered",
+        "pass": true,
+        "message": "A chapter must name the assigned topic in its title or description",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "page-title-unused",
+        "pass": true,
+        "message": "Title must not duplicate another published content page",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "source-supported",
+        "pass": true,
+        "message": "Every page source must appear in the manifest",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "capability-supported",
+        "pass": true,
+        "message": "Every claimed product capability must be verified",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs useful internal and primary-source links",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "hero-image",
+        "pass": true,
+        "message": "Each page needs a 1200×675 hero and alt text",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "image-provenance",
+        "pass": true,
+        "message": "Hero needs a safe path, source identity, hash and licensing reference",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "image-unique",
+        "pass": true,
+        "message": "Hero must be unique across all content pages",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "read-time",
+        "pass": true,
+        "message": "Reading time must match actual words",
+        "page": "documents-and-evidence"
+      },
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Inventory existing maps",
+        "section": "Inventory existing maps",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Inventory existing maps; semantic review verifies support",
+        "section": "Inventory existing maps",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Prepare files and relationships",
+        "section": "Prepare files and relationships",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Prepare files and relationships; semantic review verifies support",
+        "section": "Prepare files and relationships",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Pilot imports and review results",
+        "section": "Pilot imports and review results",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Pilot imports and review results; semantic review verifies support",
+        "section": "Pilot imports and review results",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Plan cutover and recovery",
+        "section": "Plan cutover and recovery",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Plan cutover and recovery; semantic review verifies support",
+        "section": "Plan cutover and recovery",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use ICC US spelling while preserving proper names",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler phrases",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "positioning-terms",
+        "pass": true,
+        "message": "Remove product names and AI audit claims",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "keyword-covered",
+        "pass": true,
+        "message": "A chapter must name the assigned topic in its title or description",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "page-title-unused",
+        "pass": true,
+        "message": "Title must not duplicate another published content page",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "source-supported",
+        "pass": true,
+        "message": "Every page source must appear in the manifest",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "capability-supported",
+        "pass": true,
+        "message": "Every claimed product capability must be verified",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs useful internal and primary-source links",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "hero-image",
+        "pass": true,
+        "message": "Each page needs a 1200×675 hero and alt text",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "image-provenance",
+        "pass": true,
+        "message": "Hero needs a safe path, source identity, hash and licensing reference",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "image-unique",
+        "pass": true,
+        "message": "Hero must be unique across all content pages",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "read-time",
+        "pass": true,
+        "message": "Reading time must match actual words",
+        "page": "migration-and-configuration"
+      },
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Prepare role-based training",
+        "section": "Prepare role-based training",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Prepare role-based training; semantic review verifies support",
+        "section": "Prepare role-based training",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Pilot with representative users",
+        "section": "Pilot with representative users",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Pilot with representative users; semantic review verifies support",
+        "section": "Pilot with representative users",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Manage staged rollout",
+        "section": "Manage staged rollout",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Manage staged rollout; semantic review verifies support",
+        "section": "Manage staged rollout",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Evaluate use and feedback",
+        "section": "Evaluate use and feedback",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Evaluate use and feedback; semantic review verifies support",
+        "section": "Evaluate use and feedback",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use ICC US spelling while preserving proper names",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler phrases",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "positioning-terms",
+        "pass": true,
+        "message": "Remove product names and AI audit claims",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "keyword-covered",
+        "pass": true,
+        "message": "A chapter must name the assigned topic in its title or description",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "page-title-unused",
+        "pass": true,
+        "message": "Title must not duplicate another published content page",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "source-supported",
+        "pass": true,
+        "message": "Every page source must appear in the manifest",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "capability-supported",
+        "pass": true,
+        "message": "Every claimed product capability must be verified",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs useful internal and primary-source links",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "hero-image",
+        "pass": true,
+        "message": "Each page needs a 1200×675 hero and alt text",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "image-provenance",
+        "pass": true,
+        "message": "Hero needs a safe path, source identity, hash and licensing reference",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "image-unique",
+        "pass": true,
+        "message": "Hero must be unique across all content pages",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "read-time",
+        "pass": true,
+        "message": "Reading time must match actual words",
+        "page": "rollout-and-training"
+      },
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Review maps after change",
+        "section": "Review maps after change",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Review maps after change; semantic review verifies support",
+        "section": "Review maps after change",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Measure the review workflow",
+        "section": "Measure the review workflow",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Measure the review workflow; semantic review verifies support",
+        "section": "Measure the review workflow",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Frequently asked questions",
+        "section": "Frequently asked questions",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Frequently asked questions; semantic review verifies support",
+        "section": "Frequently asked questions",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Prepare a software demonstration",
+        "section": "Prepare a software demonstration",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Prepare a software demonstration; semantic review verifies support",
+        "section": "Prepare a software demonstration",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: What should a process map show first?",
+        "section": "What should a process map show first?",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: Who owns a process?",
+        "section": "Who owns a process?",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: How should process interfaces be recorded?",
+        "section": "How should process interfaces be recorded?",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: Which documents should be linked?",
+        "section": "Which documents should be linked?",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: How should existing maps be migrated?",
+        "section": "How should existing maps be migrated?",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: How should changes trigger review?",
+        "section": "How should changes trigger review?",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: What should an auditor see?",
+        "section": "What should an auditor see?",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: Does software guarantee certification?",
+        "section": "Does software guarantee certification?",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "faq-answer",
+        "pass": true,
+        "message": "Answer with actionable detail: What should a demonstration show?",
+        "section": "What should a demonstration show?",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use ICC US spelling while preserving proper names",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler phrases",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "positioning-terms",
+        "pass": true,
+        "message": "Remove product names and AI audit claims",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "keyword-covered",
+        "pass": true,
+        "message": "A chapter must name the assigned topic in its title or description",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "page-title-unused",
+        "pass": true,
+        "message": "Title must not duplicate another published content page",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "source-supported",
+        "pass": true,
+        "message": "Every page source must appear in the manifest",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "capability-supported",
+        "pass": true,
+        "message": "Every claimed product capability must be verified",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "external-link",
+        "pass": true,
+        "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "internal-link",
+        "pass": true,
+        "message": "Internal destination must exist: https://isocertificationconsultants.ca/contact/",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs useful internal and primary-source links",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "hero-image",
+        "pass": true,
+        "message": "Each page needs a 1200×675 hero and alt text",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "image-provenance",
+        "pass": true,
+        "message": "Hero needs a safe path, source identity, hash and licensing reference",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "image-unique",
+        "pass": true,
+        "message": "Hero must be unique across all content pages",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "read-time",
+        "pass": true,
+        "message": "Reading time must match actual words",
+        "page": "ongoing-operation"
+      },
+      {
+        "id": "faq-coverage",
+        "pass": true,
+        "message": "Eight to ten distinct visible FAQ questions required"
+      },
+      {
+        "id": "demonstration-invitation",
+        "pass": true,
+        "message": "The closing paragraph must invite a software demonstration at /contact/"
+      }
+    ],
+    "failures": [],
+    "wordCount": 19925
+  }
 }

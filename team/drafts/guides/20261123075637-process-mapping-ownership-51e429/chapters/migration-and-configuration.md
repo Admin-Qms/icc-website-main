@@ -24,6 +24,21 @@ sourceIds:
   - icc-processes
   - iso-apg
 capabilityIds: []
+wordCount: 2058
+readTime: 11
+image:
+  src: >-
+    /images/guides/process-mapping-software-for-quality-management/migration-and-configuration.webp
+  alt: >-
+    A manufacturing quality professional reviewing process evidence beside an
+    active production area; authentic industrial setting, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 730e0a9146898294ac8973be2382084e5846ce20c565129c67ac16ffbcc29563
+  sha256: aca2b104fe9df58d6573c2e1202f028b6bc39cf52264bf4064f80079963c156b
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Inventory existing maps
 

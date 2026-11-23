@@ -21,8 +21,22 @@ sourceIds:
   - icc-processes
   - iso-apg
 capabilityIds: []
+wordCount: 2010
+readTime: 11
+image:
+  src: >-
+    /images/guides/process-mapping-software-for-quality-management/mapping-current-processes.webp
+  alt: >-
+    A manufacturing quality professional reviewing process evidence beside an
+    active production area; authentic industrial setting, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 97c52c5f8e3db6613190ef6a007cc7b02cba086d972d9ec5492e491412433e5a
+  sha256: b7fb83179e7ef9c2371cf4ec36b49bdc17b524847d8277be018d1ae58ed513fa
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
-
 ## Define the mapping purpose
 
 Trace a single release boundary before choosing a display format. Start at the production order, stop at the release decision, and mark the separate complaint process as an interface. Ask the receiving role what inspection evidence it needs; a missing answer is a boundary question for the owner, not a reason to extend the map indefinitely.

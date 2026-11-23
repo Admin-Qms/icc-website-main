@@ -20,6 +20,21 @@ sourceIds:
   - icc-processes
   - iso-apg
 capabilityIds: []
+wordCount: 2076
+readTime: 11
+image:
+  src: >-
+    /images/guides/process-mapping-software-for-quality-management/mapping-workflows.webp
+  alt: >-
+    A manufacturing quality professional reviewing process evidence beside an
+    active production area; authentic industrial setting, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 6a139e750fe14f551e3643273b57cef79a8bf933cf3ca4d09b5b983e2a2fc561
+  sha256: 5306b1513dfb88f450cbde6f3bafc5536c678b3518e5dd74a2b26a926ced6d71
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Gather task evidence
 

@@ -1,0 +1,230 @@
+{
+  "inputHash": "d2b4e42248251f3a1850062588d271084043909cfc4e80914eca6ec6b8dd557d",
+  "reviewContextHash": "1772383ce513a8f7f5803a8a4ed593340e076fc2b78a41b933f5d699e5ec0ce6",
+  "reviewedAt": "2026-11-23T17:14:18.273Z",
+  "screening": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "The guide claims 'The page states AI output is a suggestion reviewed by a person before entry into a controlled record' (introduction, planning section) but provides no evidence that this claim is supported by the ICC source. The ICC supportedClaims list states 'The page states AI output is a suggestion reviewed by a person before entry into a controlled record' but this is a meta-claim about what the source says, not direct evidence from the source text itself. The guide presents this as a factual assertion about ICC's statement without quoting or directly referencing the source material.",
+      "The outline structure and multiple chapters reference the same workflow, roles, inputs, decisions, records, and exceptions nearly identically across nine separate pages (mapping-current-processes, evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, ongoing-operation). Each chapter repeats: the same workflow role, input, decision, record, exception structure; identical evaluation criteria template; near-identical illustrative example framing; and highly similar instructional patterns. For example, every chapter subsection contains: 'Explain [activity] as an evaluation or implementation decision. Distinguish vendor descriptions, general recommendations and the site's verified evidence.' This verbatim repetition across nine chapters, combined with identical workflow templates in each subsection, constitutes substantial duplication that violates the maintained writing rule. The boundary instructions at the outline level acknowledge separate scopes but the actual page content repeats the same decision framework, role assignments, and example structures across all nine pages rather than providing distinct chapter-level scope.",
+      "The introduction claims the guide uses 'the [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) as a source for questions a team can bring to an evaluation' and references it repeatedly, but the research notes the supportedClaims only describe what the ICC page presents (level-one maps, level-two flowcharts, named owners, document links, templates, PDF review, numbered activities, AI suggestion workflow, vendor description of ISO mapping). The guide does not establish that the ICC page actually provides 'questions a team can bring' to an evaluation—it describes features and capabilities. The guide also claims the page 'describes configuration activities including process mapping, module configuration, standards onboarding and deployment with training' but the supportedClaims state only 'The page presents numbered configuration activities including process mapping, module configuration, standards onboarding and deployment with training. Details and applicability require demonstration.' The guide presents the described activities as facts about what the page discusses without adequately qualifying that details and applicability require demonstration.",
+      "The guide repeatedly invokes the [ISO 9001 Auditing Practices Group site](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) across multiple chapters (mapping-current-processes, evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, ongoing-operation) with references such as 'The [ISO auditing guidance collection](https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html) provides educational material on evidence collection' or 'includes educational material on improvement.' However, the research supportedClaims only confirm: 'The ISO 9001 Auditing Practices Group site provides educational papers on quality management system auditing, including a process-based approach and risk-based thinking' and 'Its ISO 9001:2015 auditing topics include processes, evidence collection, audit planning and improvement.' The guide cites the site for 'evidence collection,' 'evidence,' 'auditing,' and 'improvement' repeatedly across nine pages without establishing through the research that the site's educational papers actually address the specific topics invoked in each context (e.g., 'evidence collection' for specific handoff scenarios, 'traceability,' 'exception handling'). The supportedClaims note the site is not definitive and not mandatory audit criteria, but the guide does not consistently qualify its citations.",
+      "Multiple pages reference the ICC process management page with descriptions of features (level-one maps, level-two flowcharts, named owners, controlled document links, PDF review, configuration activities) but do not provide direct quotations or verify that the ICC page explicitly makes each claim attributed to it. For example: 'The [ICC process page](https://isocertificationconsultants.ca/solutions/processes/) describes named process owners' (process-ownership chapter), 'The [ICC description](https://isocertificationconsultants.ca/solutions/processes/) presents a level-one process map and a level-two flowchart' (process-architecture chapter), 'The [ICC process management page](https://isocertificationconsultants.ca/solutions/processes/) describes links to controlled documents' (documents-and-evidence chapter). The research supportedClaims confirm these are 'published vendor descriptions' but do not quote the actual ICC page text. The guide presents these attributions as factual without direct evidence from the source text itself.",
+      "The guide claims in the planning evaluation section: 'Treat that description as a starting point for questions about the proposed use. A team should identify who reviews a suggestion, what evidence that person needs, and how the organization decides whether to use it. Do not assume that a generated suggestion is an approved record or that it supplies an unverified product capability.' However, the ICC supportedClaims state: 'The page states AI output is a suggestion reviewed by a person before entry into a controlled record.' This directly asserts the capability exists on the ICC page but the guide hedges it as a starting point and explicitly warns against assuming the capability exists. This internal contradiction between the introduction's presentation of the AI feature as a described fact and the later qualification that it should not be assumed as an unverified capability creates inconsistency in how the guide treats vendor claims.",
+      "The guide states 'The pages that follow build on this distinction between an observed fact, a recommendation, and an evaluation question' but the outline structure and chapter design do not consistently maintain that distinction. Multiple chapters present the same workflow template (role, input, decision, record, exception) and evaluation criteria template without distinguishing whether the guidance is a recommendation, a question, or an observed fact in context. The maintained writing rule requires that unverified capabilities be labeled as evaluation questions, but the chapters present repetitive decision frameworks as if they are prescribed structures rather than contextual guidance.",
+      "The research snapshot includes 'supportedClaims' for the ICC source that assert facts about what the page 'describes,' 'states,' and 'presents' (e.g., 'The page describes a level-one process map,' 'The page states AI output is a suggestion'), but these claims lack direct quotations from the ICC page itself. The guide relies on these supported claims but presents them as established facts rather than vendor descriptions requiring verification. This creates a gap between what the research confirms the ICC page claims and what the guide presents as operative facts about process mapping software."
+    ]
+  },
+  "adjudication": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "passed",
+    "dimensionReasons": {
+      "claims": "The guide consistently treats ICC source descriptions as vendor statements requiring demonstration, qualifies the ISO APG source as non-definitive educational material, labels all examples as hypothetical, and frames unverified capabilities as evaluation questions rather than promises. The AI-output statement in page:0:paragraph:18 is explicitly sourced, presented as a starting point for questions, and accompanied by explicit cautions not to assume capability—consistent with the maintained writing rule. Source supportedClaims confirm each attributed ICC feature (level-one maps, level-two flowcharts, named owners, controlled document links, PDF review, configuration activities, AI suggestion review). The guide does not assert that ICC has any capability beyond what the source records describe, and no concrete unsupported assertion was found across the full guide text.",
+      "consistency": "No internal contradiction survives inspection. Page:0:paragraph:18 states the ICC source says AI output is a suggestion reviewed by a person, then immediately qualifies it as a starting point and warns against assuming the capability—this is consistent framing, not contradiction. The ISO APG source is cited for educational material on evidence collection, audit planning, and improvement; source:1:claim:2 confirms those topics are covered. Each chapter references ICC and ISO APG source-supported features with appropriate evaluation-question framing. No chapter contradicts another chapter's factual claims about the same subject. The guide's distinction between observed fact, recommendation, and evaluation question is maintained throughout.",
+      "repetition": "The guide's chapters address materially distinct decisions with different process content, evidence trails, roles, examples, and evaluation questions. Shared short cautions (distinguish vendor descriptions from demonstrated behavior, record open questions, do not assume unverified capabilities) are required recurring labels under the maintained writing rule and do not constitute substantially copied paragraphs. Workflow tables, boundary sections, illustrative examples, and document-link discussions are substantively different across chapters. No two current reader pages contain substantially copied paragraphs or examples whose actual selected wording is near-verbatim."
+    },
+    "additionalFindings": [
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 0: The guide attributes the AI-output statement to the ICC source at page:0:paragraph:18 with explicit sourcing and immediately qualifies it as a starting point requiring organizational evaluation. Source:0:claim:5 confirms the ICC page states AI output is a suggestion reviewed by a person before entry into a controlled record. The guide does not assert the capability as a product promise; it presents it as a vendor description and warns against assuming it supplies an unverified capability. This is consistent with the maintained writing rule.",
+        "evidenceIds": [
+          "page:0:paragraph:18",
+          "source:0:claim:5"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Finding 1: The outline's workflow template (role, input, decision, record, exception) and evaluation criteria appear in the planning structure but the actual rendered page content differs substantively across chapters. Each chapter addresses a different operational decision, uses distinct evidence trails, different process steps, different exceptions, and different illustrative scenarios. Required recurring cautions about distinguishing vendor descriptions from demonstrated behavior are short factual labels, not substantially copied paragraphs. No actual current page paragraphs are near-verbatim copies of paragraphs on another page.",
+        "evidenceIds": [
+          "page:1:paragraph:2",
+          "page:2:paragraph:2",
+          "page:3:paragraph:2",
+          "page:4:paragraph:2",
+          "page:5:paragraph:1",
+          "page:6:paragraph:1",
+          "page:7:paragraph:1",
+          "page:8:paragraph:1",
+          "page:9:paragraph:3"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 2: The guide presents the ICC page as a source for evaluation questions, not as a repository of prescribed questions. Page:0:paragraph:5 says the guide uses it 'as a source for questions a team can bring to an evaluation.' Source:0:claim:4 confirms the page presents numbered configuration activities with the qualifier that details and applicability require demonstration. The guide consistently qualifies ICC descriptions as vendor statements requiring demonstration throughout each chapter.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "source:0:claim:4"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 3: The ISO APG source is cited for educational material on evidence collection, audit planning, and improvement. Source:1:claim:2 explicitly confirms its topics include processes, evidence collection, audit planning, and improvement. Source:1:claim:1 confirms guidance is not definitive. The guide cites it only for educational material framing and does not assert it as mandatory criteria. The qualification that the site is not definitive is stated explicitly in page:0:paragraph:6 and is a required recurring label under the maintained writing rule.",
+        "evidenceIds": [
+          "page:0:paragraph:6",
+          "source:1:claim:1",
+          "source:1:claim:2"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 4: The guide's attributions of ICC features (level-one maps, level-two flowcharts, named owners, controlled document links, PDF review, configuration activities) are each supported by corresponding source supportedClaims records. Source:0:claim:0 supports level-one map and level-two flowchart attributions; source:0:claim:1 supports named owners and document links; source:0:claim:2 supports PDF review and industry templates; source:0:claim:4 supports configuration activities. The guide consistently frames these as vendor descriptions, not verified installed behavior, per source:0:claim:6.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:1",
+          "source:0:claim:2",
+          "source:0:claim:4",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "consistency",
+        "reason": "Finding 5: Page:0:paragraph:18 presents the AI-output statement as a vendor description and immediately warns not to assume it as an unverified product capability. This is not a contradiction; it is the maintained writing rule applied correctly—stating what the source says while qualifying it as requiring organizational evaluation. Source:0:claim:5 supports the description; the guide's caution is consistent with source:0:claim:6 which notes published vendor descriptions are not verified installed behavior.",
+        "evidenceIds": [
+          "page:0:paragraph:18",
+          "source:0:claim:5",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "consistency",
+        "reason": "Finding 6: The guide explicitly commits to distinguishing observed facts, recommendations, and evaluation questions in page:0:paragraph:8 and page:0:paragraph:5. Each chapter applies this commitment by framing ICC feature descriptions as evaluation questions, ISO APG references as educational material, and examples as hypothetical. The recurring workflow framework is a consistent organizational aid, not a failure to distinguish types of guidance.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "page:0:paragraph:8"
+        ],
+        "comparisons": []
+      },
+      {
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Finding 7: The source supportedClaims are the research record and the program treats them as evidence to evaluate. Source:0:claim:6 explicitly states these are published vendor descriptions, not verified installed behavior. The guide relies on these records appropriately and consistently frames them as vendor descriptions requiring demonstration. No claim in the guide exceeds what the source records support.",
+        "evidenceIds": [
+          "source:0:claim:6",
+          "source:0:claim:0",
+          "source:0:claim:1"
+        ],
+        "comparisons": []
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The guide presents the AI-output statement as a vendor description sourced to the ICC page, immediately qualifies it as a starting point for evaluation questions, and warns explicitly against assuming it as an unverified product capability. Source:0:claim:5 confirms the ICC page states this. The guide's treatment is fully consistent with the maintained writing rule.",
+        "evidenceIds": [
+          "page:0:paragraph:18",
+          "source:0:claim:5",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 1,
+        "verdict": "clear",
+        "dimension": "repetition",
+        "reason": "Inspection of actual page paragraphs across all nine chapters confirms that while each chapter addresses similar roles and uses required recurring cautions, the substantive content—process decisions, evidence trails, exceptions, illustrative examples, and evaluation questions—differs materially. Required short cautions about distinguishing vendor descriptions from demonstrated behavior recur as necessary labels, not as substantially copied paragraphs. No two pages contain near-verbatim substantive passages.",
+        "evidenceIds": [
+          "page:1:paragraph:2",
+          "page:2:paragraph:2",
+          "page:3:paragraph:2",
+          "page:4:paragraph:2",
+          "page:5:paragraph:1",
+          "page:6:paragraph:1",
+          "page:7:paragraph:1",
+          "page:8:paragraph:1",
+          "page:9:paragraph:3"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 2,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The guide characterizes the ICC page as a source for evaluation questions and frames its described features as vendor statements requiring demonstration. Source:0:claim:4 confirms configuration activities are described with the qualifier that details require demonstration. The guide does not convert the page into a mandatory sequence or promise about deployment, consistent with page:2:paragraph:25 and source:0:claim:4.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "page:2:paragraph:25",
+          "source:0:claim:4"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 3,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "ISO APG citations are supported by source:1:claim:2 confirming the site's topics include evidence collection, audit planning, and improvement. The guide cites it only for educational material framing and consistently notes it is not definitive per source:1:claim:1, as stated at page:0:paragraph:6. Citations in subsequent chapters are brief references consistent with the established qualification.",
+        "evidenceIds": [
+          "page:0:paragraph:6",
+          "source:1:claim:1",
+          "source:1:claim:2"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 4,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "Each ICC feature attribution in the guide is supported by a corresponding source supportedClaim. Level-one map and level-two flowchart attributions are supported by source:0:claim:0; named owners and document links by source:0:claim:1; PDF review and templates by source:0:claim:2; configuration activities by source:0:claim:4. The guide consistently appends evaluation-question qualifiers, consistent with source:0:claim:6.",
+        "evidenceIds": [
+          "source:0:claim:0",
+          "source:0:claim:1",
+          "source:0:claim:2",
+          "source:0:claim:4",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 5,
+        "verdict": "clear",
+        "dimension": "consistency",
+        "reason": "No contradiction exists. Page:0:paragraph:18 states the ICC source says AI output is a suggestion reviewed by a person, then immediately qualifies the description as a starting point and warns against assuming unverified capability. This is the maintained writing rule applied correctly and is consistent with source:0:claim:5 and source:0:claim:6.",
+        "evidenceIds": [
+          "page:0:paragraph:18",
+          "source:0:claim:5",
+          "source:0:claim:6"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 6,
+        "verdict": "clear",
+        "dimension": "consistency",
+        "reason": "The guide maintains the distinction between observed facts, recommendations, and evaluation questions throughout. Page:0:paragraph:5 and page:0:paragraph:8 establish this commitment; subsequent chapters apply it by framing ICC descriptions as vendor statements and ISO APG references as educational material. The recurring workflow framework is a consistent organizational aid that does not collapse the distinction.",
+        "evidenceIds": [
+          "page:0:paragraph:5",
+          "page:0:paragraph:8"
+        ],
+        "comparisons": []
+      },
+      {
+        "index": 7,
+        "verdict": "clear",
+        "dimension": "claims",
+        "reason": "The guide relies on source supportedClaims as the research record. Source:0:claim:6 explicitly states published vendor descriptions are not verified installed behavior. The guide applies this qualifier consistently across chapters. No claim in the guide asserts more than the source records support, and each ICC feature description is accompanied by evaluation-question framing.",
+        "evidenceIds": [
+          "source:0:claim:6",
+          "source:0:claim:0",
+          "source:0:claim:1"
+        ],
+        "comparisons": []
+      }
+    ]
+  }
+}

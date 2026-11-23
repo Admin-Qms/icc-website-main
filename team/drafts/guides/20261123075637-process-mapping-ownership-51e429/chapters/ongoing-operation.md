@@ -24,6 +24,21 @@ sourceIds:
   - icc-processes
   - iso-apg
 capabilityIds: []
+wordCount: 2063
+readTime: 11
+image:
+  src: >-
+    /images/guides/process-mapping-software-for-quality-management/ongoing-operation.webp
+  alt: >-
+    A manufacturing quality professional reviewing process evidence beside an
+    active production area; authentic industrial setting, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: b92caa5771209ed714bb7b5329de96ffa9941448bfb530a3fcce7bc69b72f9fe
+  sha256: fc3c5d644bb1d45d8ddb2b2a088304d46195781220ab74a5300cb4365956f183
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Review maps after change
 

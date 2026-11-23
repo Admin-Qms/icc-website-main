@@ -24,6 +24,21 @@ sourceIds:
   - icc-processes
   - iso-apg
 capabilityIds: []
+wordCount: 2017
+readTime: 11
+image:
+  src: >-
+    /images/guides/process-mapping-software-for-quality-management/evaluating-process-software.webp
+  alt: >-
+    A manufacturing quality professional reviewing process evidence beside an
+    active production area; authentic industrial setting, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 0cdc71502784a666ed7dfdc951c651bff64b14443dcc1c4d0902530ffc39e658
+  sha256: 4b689a9ff5056549f80d7b3f9b4ebc134ac352ea709a39761627c106ff4188e4
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Set evaluation criteria
 

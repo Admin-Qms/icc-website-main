@@ -1,0 +1,2978 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "id": "schema-version",
+      "pass": true,
+      "message": "Guide schemaVersion must be 1"
+    },
+    {
+      "id": "guide-slug",
+      "pass": true,
+      "message": "Guide slug must have 6–80 lowercase letters/digits with hyphens"
+    },
+    {
+      "id": "topic-id",
+      "pass": true,
+      "message": "A stable topic ID is required"
+    },
+    {
+      "id": "chapter-count",
+      "pass": true,
+      "message": "Nine complete chapters are required; ten plus an introduction exceeds the inclusive budget"
+    },
+    {
+      "id": "introduction-file",
+      "pass": true,
+      "message": "Introduction filename must be introduction.md"
+    },
+    {
+      "id": "manifest-metadata",
+      "pass": true,
+      "message": "Guide identity and author are required"
+    },
+    {
+      "id": "manifest-description",
+      "pass": true,
+      "message": "Guide description must be 120–160 characters"
+    },
+    {
+      "id": "manifest-date",
+      "pass": true,
+      "message": "Guide date must be valid and not in the future"
+    },
+    {
+      "id": "snapshot-hashes",
+      "pass": true,
+      "message": "Evidence snapshots must have SHA-256 hashes"
+    },
+    {
+      "id": "unique-chapters",
+      "pass": true,
+      "message": "Chapter slugs must be unique"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "process-architecture"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "process-ownership"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "chapter-reference",
+      "pass": true,
+      "message": "Chapter reference must use its canonical filename",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "chapter-order",
+      "pass": true,
+      "message": "Every chapter must exist in manifest order"
+    },
+    {
+      "id": "introduction-slug",
+      "pass": true,
+      "message": "Introduction slug must equal guide slug"
+    },
+    {
+      "id": "unique-titles",
+      "pass": true,
+      "message": "Every page needs a unique title"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "introduction-words",
+      "pass": true,
+      "message": "1524 visible words",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2010 visible words",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2017 visible words",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "process-architecture"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "process-architecture"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "process-architecture"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "process-architecture"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "process-architecture"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2006 visible words",
+      "page": "process-architecture"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "process-architecture"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "process-architecture"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "process-architecture"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "process-ownership"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "process-ownership"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "process-ownership"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "process-ownership"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "process-ownership"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2022 visible words",
+      "page": "process-ownership"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "process-ownership"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "process-ownership"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "process-ownership"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2076 visible words",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2081 visible words",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2058 visible words",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2068 visible words",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "page-metadata",
+      "pass": true,
+      "message": "Page identity, author and image brief required",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-slug",
+      "pass": true,
+      "message": "Invalid page slug",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-description",
+      "pass": true,
+      "message": "Description must be 120–160 characters",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-date",
+      "pass": true,
+      "message": "Dates must be valid, ordered and not in the future",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies the only H1",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "chapter-words",
+      "pass": true,
+      "message": "2063 visible words",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsections",
+      "pass": true,
+      "message": "Chapter needs 3–5 H2 subsections",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "content-blocks",
+      "pass": true,
+      "message": "At least three real content blocks required",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "evidence-ids",
+      "pass": true,
+      "message": "Each page must identify its evidence",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "total-words",
+      "pass": true,
+      "message": "19925 total visible words; maximum 20,000 includes introduction"
+    },
+    {
+      "id": "cross-chapter-repetition",
+      "pass": true,
+      "message": "No substantially copied paragraphs across guide pages"
+    },
+    {
+      "id": "audit-hash",
+      "pass": true,
+      "message": "Required review must match the current prose, metadata, links and evidence"
+    },
+    {
+      "id": "audit-identity",
+      "pass": true,
+      "message": "Review identity and date are required"
+    },
+    {
+      "id": "audit-claims",
+      "pass": true,
+      "message": "claims review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-consistency",
+      "pass": true,
+      "message": "consistency review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-repetition",
+      "pass": true,
+      "message": "repetition review must complete and pass; skipped or unavailable is a failure"
+    },
+    {
+      "id": "audit-findings",
+      "pass": true,
+      "message": "All required review findings must be resolved"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: The operational problem",
+      "section": "The operational problem",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: How to use this guide",
+      "section": "How to use this guide",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Planning evaluation and implementation",
+      "section": "Planning evaluation and implementation",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "The introduction must name the assigned topic in both title and description",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "process-mapping-software-for-quality-management"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Define the mapping purpose",
+      "section": "Define the mapping purpose",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Define the mapping purpose; semantic review verifies support",
+      "section": "Define the mapping purpose",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Identify process boundaries",
+      "section": "Identify process boundaries",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Identify process boundaries; semantic review verifies support",
+      "section": "Identify process boundaries",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Trace inputs and outputs",
+      "section": "Trace inputs and outputs",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Trace inputs and outputs; semantic review verifies support",
+      "section": "Trace inputs and outputs",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Record handoffs and exceptions",
+      "section": "Record handoffs and exceptions",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Record handoffs and exceptions; semantic review verifies support",
+      "section": "Record handoffs and exceptions",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "mapping-current-processes"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Set evaluation criteria",
+      "section": "Set evaluation criteria",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Set evaluation criteria; semantic review verifies support",
+      "section": "Set evaluation criteria",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Compare maps and flowcharts",
+      "section": "Compare maps and flowcharts",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Compare maps and flowcharts; semantic review verifies support",
+      "section": "Compare maps and flowcharts",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Test ownership and access",
+      "section": "Test ownership and access",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Test ownership and access; semantic review verifies support",
+      "section": "Test ownership and access",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Document gaps and commitments",
+      "section": "Document gaps and commitments",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Document gaps and commitments; semantic review verifies support",
+      "section": "Document gaps and commitments",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "evaluating-process-software"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "process-architecture"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "process-architecture"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "process-architecture"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "process-architecture"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "process-architecture"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "process-architecture"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "process-architecture"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Group processes by purpose",
+      "section": "Group processes by purpose",
+      "page": "process-architecture"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Group processes by purpose; semantic review verifies support",
+      "section": "Group processes by purpose",
+      "page": "process-architecture"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Define the top-level map",
+      "section": "Define the top-level map",
+      "page": "process-architecture"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Define the top-level map; semantic review verifies support",
+      "section": "Define the top-level map",
+      "page": "process-architecture"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Connect levels of detail",
+      "section": "Connect levels of detail",
+      "page": "process-architecture"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Connect levels of detail; semantic review verifies support",
+      "section": "Connect levels of detail",
+      "page": "process-architecture"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Review interfaces between processes",
+      "section": "Review interfaces between processes",
+      "page": "process-architecture"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Review interfaces between processes; semantic review verifies support",
+      "section": "Review interfaces between processes",
+      "page": "process-architecture"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "process-architecture"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "process-architecture"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "process-architecture"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "process-architecture"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "process-architecture"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "process-architecture"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "process-architecture"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "process-architecture"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "process-architecture"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "process-architecture"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-architecture"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "process-architecture"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-architecture"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-architecture"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-architecture"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-architecture"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "process-architecture"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "process-architecture"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "process-architecture"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "process-architecture"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "process-architecture"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "process-ownership"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "process-ownership"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "process-ownership"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "process-ownership"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "process-ownership"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "process-ownership"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "process-ownership"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Define owner responsibilities",
+      "section": "Define owner responsibilities",
+      "page": "process-ownership"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Define owner responsibilities; semantic review verifies support",
+      "section": "Define owner responsibilities",
+      "page": "process-ownership"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Assign decisions and backups",
+      "section": "Assign decisions and backups",
+      "page": "process-ownership"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Assign decisions and backups; semantic review verifies support",
+      "section": "Assign decisions and backups",
+      "page": "process-ownership"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Resolve ownership conflicts",
+      "section": "Resolve ownership conflicts",
+      "page": "process-ownership"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Resolve ownership conflicts; semantic review verifies support",
+      "section": "Resolve ownership conflicts",
+      "page": "process-ownership"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Review ownership over time",
+      "section": "Review ownership over time",
+      "page": "process-ownership"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Review ownership over time; semantic review verifies support",
+      "section": "Review ownership over time",
+      "page": "process-ownership"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "process-ownership"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "process-ownership"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "process-ownership"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "process-ownership"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "process-ownership"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "process-ownership"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "process-ownership"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "process-ownership"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "process-ownership"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "process-ownership"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-ownership"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "process-ownership"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-ownership"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-ownership"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-ownership"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "process-ownership"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "process-ownership"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "process-ownership"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "process-ownership"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "process-ownership"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "process-ownership"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Gather task evidence",
+      "section": "Gather task evidence",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Gather task evidence; semantic review verifies support",
+      "section": "Gather task evidence",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Draw steps and decision points",
+      "section": "Draw steps and decision points",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Draw steps and decision points; semantic review verifies support",
+      "section": "Draw steps and decision points",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Describe exceptions and handoffs",
+      "section": "Describe exceptions and handoffs",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Describe exceptions and handoffs; semantic review verifies support",
+      "section": "Describe exceptions and handoffs",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Validate a map with workers",
+      "section": "Validate a map with workers",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Validate a map with workers; semantic review verifies support",
+      "section": "Validate a map with workers",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "mapping-workflows"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Identify controlled documents",
+      "section": "Identify controlled documents",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Identify controlled documents; semantic review verifies support",
+      "section": "Identify controlled documents",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Link records to process steps",
+      "section": "Link records to process steps",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Link records to process steps; semantic review verifies support",
+      "section": "Link records to process steps",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Handle revisions and obsolete links",
+      "section": "Handle revisions and obsolete links",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Handle revisions and obsolete links; semantic review verifies support",
+      "section": "Handle revisions and obsolete links",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Test traceability during review",
+      "section": "Test traceability during review",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Test traceability during review; semantic review verifies support",
+      "section": "Test traceability during review",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "documents-and-evidence"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Inventory existing maps",
+      "section": "Inventory existing maps",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Inventory existing maps; semantic review verifies support",
+      "section": "Inventory existing maps",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Prepare files and relationships",
+      "section": "Prepare files and relationships",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Prepare files and relationships; semantic review verifies support",
+      "section": "Prepare files and relationships",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Pilot imports and review results",
+      "section": "Pilot imports and review results",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Pilot imports and review results; semantic review verifies support",
+      "section": "Pilot imports and review results",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Plan cutover and recovery",
+      "section": "Plan cutover and recovery",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Plan cutover and recovery; semantic review verifies support",
+      "section": "Plan cutover and recovery",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "migration-and-configuration"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Prepare role-based training",
+      "section": "Prepare role-based training",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Prepare role-based training; semantic review verifies support",
+      "section": "Prepare role-based training",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Pilot with representative users",
+      "section": "Pilot with representative users",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Pilot with representative users; semantic review verifies support",
+      "section": "Pilot with representative users",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Manage staged rollout",
+      "section": "Manage staged rollout",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Manage staged rollout; semantic review verifies support",
+      "section": "Manage staged rollout",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Evaluate use and feedback",
+      "section": "Evaluate use and feedback",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Evaluate use and feedback; semantic review verifies support",
+      "section": "Evaluate use and feedback",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "rollout-and-training"
+    },
+    {
+      "id": "unresolved-marker",
+      "pass": true,
+      "message": "Resolve image and processing markers before review",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "inline-image-provenance",
+      "pass": true,
+      "message": "Guide inline assets are not supported; use the managed hero image brief",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use US spelling",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "single-h1",
+      "pass": true,
+      "message": "The page shell supplies H1",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Review maps after change",
+      "section": "Review maps after change",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Review maps after change; semantic review verifies support",
+      "section": "Review maps after change",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Measure the review workflow",
+      "section": "Measure the review workflow",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Measure the review workflow; semantic review verifies support",
+      "section": "Measure the review workflow",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Frequently asked questions",
+      "section": "Frequently asked questions",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Frequently asked questions; semantic review verifies support",
+      "section": "Frequently asked questions",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-coverage",
+      "pass": true,
+      "message": "Explain the assigned subsection with substantive content: Prepare a software demonstration",
+      "section": "Prepare a software demonstration",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "subsection-evidence",
+      "pass": true,
+      "message": "Cite assigned evidence in Prepare a software demonstration; semantic review verifies support",
+      "section": "Prepare a software demonstration",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What should a process map show first?",
+      "section": "What should a process map show first?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Who owns a process?",
+      "section": "Who owns a process?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: How should process interfaces be recorded?",
+      "section": "How should process interfaces be recorded?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Which documents should be linked?",
+      "section": "Which documents should be linked?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: How should existing maps be migrated?",
+      "section": "How should existing maps be migrated?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: How should changes trigger review?",
+      "section": "How should changes trigger review?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What should an auditor see?",
+      "section": "What should an auditor see?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: Does software guarantee certification?",
+      "section": "Does software guarantee certification?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-answer",
+      "pass": true,
+      "message": "Answer with actionable detail: What should a demonstration show?",
+      "section": "What should a demonstration show?",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "voice",
+      "pass": true,
+      "message": "All blocks use third-person voice",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "fabricated-quotes",
+      "pass": true,
+      "message": "No fabricated quotes detected",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "spelling",
+      "pass": true,
+      "message": "Use ICC US spelling while preserving proper names",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "banned-filler",
+      "pass": true,
+      "message": "Remove banned filler phrases",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "positioning-terms",
+      "pass": true,
+      "message": "Remove product names and AI audit claims",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "keyword-covered",
+      "pass": true,
+      "message": "A chapter must name the assigned topic in its title or description",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "page-title-unused",
+      "pass": true,
+      "message": "Title must not duplicate another published content page",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "source-supported",
+      "pass": true,
+      "message": "Every page source must appear in the manifest",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "capability-supported",
+      "pass": true,
+      "message": "Every claimed product capability must be verified",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "external-link",
+      "pass": true,
+      "message": "External source must be approved and present in research: https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/solutions/processes/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "internal-link",
+      "pass": true,
+      "message": "Internal destination must exist: https://isocertificationconsultants.ca/contact/",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "useful-links",
+      "pass": true,
+      "message": "Each page needs useful internal and primary-source links",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "hero-image",
+      "pass": true,
+      "message": "Each page needs a 1200×675 hero and alt text",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "image-provenance",
+      "pass": true,
+      "message": "Hero needs a safe path, source identity, hash and licensing reference",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "image-unique",
+      "pass": true,
+      "message": "Hero must be unique across all content pages",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "read-time",
+      "pass": true,
+      "message": "Reading time must match actual words",
+      "page": "ongoing-operation"
+    },
+    {
+      "id": "faq-coverage",
+      "pass": true,
+      "message": "Eight to ten distinct visible FAQ questions required"
+    },
+    {
+      "id": "demonstration-invitation",
+      "pass": true,
+      "message": "The closing paragraph must invite a software demonstration at /contact/"
+    }
+  ],
+  "failures": [],
+  "wordCount": 19925
+}

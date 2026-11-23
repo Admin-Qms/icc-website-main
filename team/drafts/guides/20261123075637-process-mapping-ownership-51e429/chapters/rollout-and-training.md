@@ -20,6 +20,21 @@ sourceIds:
   - icc-processes
   - iso-apg
 capabilityIds: []
+wordCount: 2068
+readTime: 11
+image:
+  src: >-
+    /images/guides/process-mapping-software-for-quality-management/rollout-and-training.webp
+  alt: >-
+    A manufacturing quality professional reviewing process evidence beside an
+    active production area; authentic industrial setting, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 00cfe39f0f5d1ca34087d8308c300b09f3c33a05a00181ed400d329a05e8fe6f
+  sha256: 72f719e3dd17e4bbeb23dad6694f8db6ecb61c937f1700307dcfd22500e58939
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Prepare role-based training
 

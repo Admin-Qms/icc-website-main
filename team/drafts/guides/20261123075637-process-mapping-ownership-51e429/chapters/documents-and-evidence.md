@@ -24,6 +24,21 @@ sourceIds:
   - icc-processes
   - iso-apg
 capabilityIds: []
+wordCount: 2081
+readTime: 11
+image:
+  src: >-
+    /images/guides/process-mapping-software-for-quality-management/documents-and-evidence.webp
+  alt: >-
+    A manufacturing quality professional reviewing process evidence beside an
+    active production area; authentic industrial setting, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: b921eba564b9c4ab6b5006a6ef58f3013396f5f314eb06d16b2cb968e5af2900
+  sha256: 0dbdfb6e922cc93c66aa50732eb87783883d17534f08db9a1b2c2b6fefa0e802
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Identify controlled documents
 

@@ -22,6 +22,21 @@ sourceIds:
   - icc-processes
   - iso-apg
 capabilityIds: []
+wordCount: 2006
+readTime: 11
+image:
+  src: >-
+    /images/guides/process-mapping-software-for-quality-management/process-architecture.webp
+  alt: >-
+    A manufacturing quality professional reviewing process evidence beside an
+    active production area; authentic industrial setting, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: 8076cd1348d42b32246c6a9b3dd0c22fb7f5bd0e6873ced945c98a8e308f3412
+  sha256: e8efee6d17ae1a686087a97c365ec0707cbdd13ba3fcb747dc979cdb0cd5d742
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Group processes by purpose
 

@@ -20,6 +20,21 @@ sourceIds:
   - icc-processes
   - iso-apg
 capabilityIds: []
+wordCount: 2022
+readTime: 11
+image:
+  src: >-
+    /images/guides/process-mapping-software-for-quality-management/process-ownership.webp
+  alt: >-
+    A manufacturing quality professional reviewing process evidence beside an
+    active production area; authentic industrial setting, no readable text or
+    logos
+  width: 1200
+  height: 675
+  source: codex
+  sourceId: b19eca77ea703f24be39d7942bd6a0cec41a17c4dde4be60bcd2d8483db0d8bf
+  sha256: 3e6fb8eca34189684eb5effd9a01dbadfb6c30e1eda8c9dfece28b6312c5ccca
+  licenseUrl: 'https://openai.com/policies/terms-of-use/'
 ---
 ## Define owner responsibilities
 
