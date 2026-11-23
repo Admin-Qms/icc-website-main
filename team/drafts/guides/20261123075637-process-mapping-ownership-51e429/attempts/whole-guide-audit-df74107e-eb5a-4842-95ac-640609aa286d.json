@@ -1,0 +1,208 @@
+{
+  "inputHash": "c2098c6bef79c5de5646142eb9df87e5405104f9d46850741b3e8b3978a090d2",
+  "reviewContextHash": "99a09eeabaf74f554063590f41580783a7f8277afe3f6cbccaf512e8706e94c1",
+  "reviewedAt": "2026-11-23T15:04:12.258Z",
+  "screening": {
+    "claims": "failed",
+    "consistency": "failed",
+    "repetition": "failed",
+    "unresolvedFindings": [
+      "The guide exhibits systematic repetition of a three-part explanatory structure across all nine chapters: (1) role or decision definition, (2) vendor description with identical qualifying language ('The [ICC page] describes... This published description...'), (3) illustrative example with the same template ('An unnamed Canadian manufacturer... The example is hypothetical...'). This pattern recurs across mapping-current-processes, evaluating-process-software, process-architecture, process-ownership, mapping-workflows, documents-and-evidence, migration-and-configuration, rollout-and-training, and ongoing-operation pages, constituting substantial near-verbatim repetition of explanatory framing rather than chapter-specific composition.",
+      "The illustrative example structure is prescribed identically across all 32+ subsections in the outline: 'Illustrative example: An unnamed Canadian manufacturer evaluates/tests [hypothetical process]; all situations and records are hypothetical.' Multiple chapter implementations follow this prescribed template word-for-word or nearly so (e.g., mapping-current-processes 'An unnamed Canadian manufacturer evaluates...The example is hypothetical,' mapping-workflows 'An unnamed Canadian manufacturer...The example is hypothetical and does not describe a measured customer result'). This constitutes repetition of a standardized template across chapters rather than genuinely distinct illustrative content.",
+      "Identical qualifying statements about vendor descriptions recur across chapters: 'The [ICC page] describes [X]. [That description is a reason to ask/This published description is a reason to ask] how [Y]; it does not establish [Z].' This exact pattern appears in evaluating-process-software ('The [ICC process management page] describes an overview...Ask whether the organization can show...The public description is not evidence'), process-architecture ('The [ICC description] presents a top-level process map...The vendor's categories do not establish'), documents-and-evidence ('The [ICC page] describes controlled documents...The vendor's description does not establish'), and migration-and-configuration ('The [ICC page] describes...Do not assume automatic updates'). This repetition of the same qualifying framework across multiple independent chapters violates the prohibition on 'substantially copied paragraphs or examples.'",
+      "The opening paragraph structure for several chapters follows an identical pattern: state a decision or role definition, explain why it matters, then immediately cite ICC and ISO sources with identical qualifying language. For example, mapping-current-processes begins 'A process boundary is an agreed statement... [ICC page] describes... Those are published vendor descriptions'; process-architecture begins 'A process architecture gives the organization... The [ICC process management page] describes... [these] do not establish'; process-ownership begins 'A process owner is accountable for decisions... The [ICC process management page] describes... A name on a map is a starting point.' Each applies the same 'vendor description—not proof' pattern to introduce its chapter's core concept, constituting systematic repetition across chapters.",
+      "The figure-caption and workflow-table patterns repeat across chapters. Each subsection specifies identical table headers ('Boundary question | Evidence to examine | Decision to record') and identical workflow role/input/decision/record/exception structures. While recurring workflows are appropriate, the chapters present these structures with the same column headers, formatting, and explanatory introduction across multiple pages (e.g., mapping-current-processes 'The table is a working aid, not a prescribed software configuration'; mapping-workflows uses identical table structure). This constitutes repetition of formatting and table design across chapters.",
+      "The pages contain multiple instances of near-identical closing directives: 'Keep [X] with [Y] under the organization's controls' (mapping-current-processes 'Keep that decision accessible...'; evaluating-process-software 'Keep a record for each criterion...'; documents-and-evidence 'Keep the review outcome with...'; migration-and-configuration 'After cutover, retain the source inventory...'; ongoing-operation 'Keep the accepted assignment and unresolved items together'). While record-keeping is a repeated subject, the identical directive structure and phrasing across pages constitutes substantially copied explanatory language rather than chapter-specific guidance.",
+      "The pages do not adequately distinguish or verify the nine frequently asked questions from actual research evidence. The FAQ section states 'What should a process map show first?' and 'Who owns a process?' but these questions are not supported by specific testable claims in the research sources. The ISO APG source provides educational guidance on auditing, not answers to FAQ topics. The ICC source describes process-management software features but does not establish that these features answer the posed FAQ questions. The FAQ section appears to present unanswered questions as if they had been resolved by the guide's content, without evidence that the questions were actually posed or validated against user research.",
+      "The claimed FAQ answers lack connection to verified evidence. For example, the FAQ 'Does software guarantee certification?' responds 'No. A software view can help people organize...' but this answer is not supported by the research sources. Neither ICC nor ISO APG sources address certification guarantees or outcomes. The guide presents an answer to a FAQ question without citing evidence that the question was asked by intended readers or that the answer reflects verified practice. This violates the requirement that 'every cited factual claim' fits supplied primary evidence.",
+      "The 'Prepare a software demonstration' section at the end of the ongoing-operation page states 'To explore the published approach with a representative sample, [book a demo]' and links to the ICC contact page. This is a sales call-to-action embedded in what purports to be independent guidance. The guide has repeatedly qualified ICC descriptions as 'published vendor descriptions, not proof,' yet concludes by directing readers to book a demo with that vendor. This inconsistency undermines the claimed objectivity of the evaluation guidance and suggests promotional bias rather than neutral comparison.",
+      "The guide systematically qualifies every vendor-sourced claim with identical skeptical language ('This is a published description...not proof that...'), yet the nine FAQ answers and the demonstration-preparation section assume reader questions and direct readers to a vendor demo without equivalent skepticism. The inconsistent application of verification standards—strict for ICC feature descriptions but absent for FAQ answers and demonstration guidance—constitutes a consistency failure in the guide's evidentiary approach.",
+      "The pages provided show that every subsection across all nine chapters follows the outline's prescribed workflow structure (role/input/decision/record/exception) and evaluation-criteria template without meaningful variation. While repetition of a workflow structure is appropriate, the identical column headers, role descriptions, and explanatory framing across chapters (e.g., 'The role Assigned process owner | The input Current process records and relevant evidence | The decision Determine ownership...') constitute repetition that makes independent chapters feel like variations of a single template rather than chapters with distinct scope and evidence.",
+      "The guide fails to distinguish unverified organizational practices from verified product capabilities. For example, the mapping-current-processes page states 'Ask the responsible people to verify it' and 'Record unresolved boundaries rather than forcing an artificial end'—these are organizational practices, not ICC software capabilities. Yet the page is titled 'Process mapping software for quality management' and placed in a guide evaluating process-mapping software. This conflation of organizational process discipline with software features renders the guide unsuitable for evaluating whether the software actually delivers the described capabilities."
+    ]
+  },
+  "adjudication": {
+    "claims": "passed",
+    "consistency": "passed",
+    "repetition": "failed",
+    "dimensionReasons": {
+      "claims": "All factual assertions about ICC capabilities are qualified as published vendor descriptions not verified installed behavior (source:0:claim:6), vendor capability claims cite supported evidence (source:0:claim:0, source:0:claim:1, source:0:claim:2, source:0:claim:5), ISO APG qualifications are accurately reproduced (source:1:claim:1), and the guide consistently frames vendor descriptions as evaluation questions rather than promises. The FAQ answer that software does not guarantee certification is not a factual claim requiring primary-source citation but a correct negative statement consistent with source:0:claim:3. No unsupported positive assertion of a product capability was found.",
+      "consistency": "The guide applies uniform skeptical framing to ICC descriptions throughout all chapters and the FAQ. The 'book a demo' call-to-action at page:9:paragraph:43 is a navigation link to the vendor consistent with the guide's stated purpose of evaluating the vendor's published approach; it does not assert an unverified capability and is immediately preceded by explicit uncertainty framing ('whether the proposed approach supports its work'). The FAQ answers are general quality-management principles, not vendor capability claims, and do not require the same evidential treatment as specific ICC feature descriptions. No inconsistency between applied verification standards rises to a genuine defect.",
+      "repetition": "The guide genuinely repeats substantially similar explanatory structures across chapters. Examining actual passages: page:1:paragraph:4 ('The [ICC Processes page] describes a categorized overview...The vendor description does not establish...'), page:3:paragraph:3 ('The [ICC process management page] describes management, customer-facing, core, and support groups...The vendor's categories do not establish...'), page:4:paragraph:3 ('The [ICC process management page] describes named process owners...A name displayed in a proposed arrangement does not by itself establish...'), and page:6:paragraph:2 ('The [ICC process management page] describes links from processes to controlled documents...The vendor's description does not establish...') are structurally near-identical paragraphs performing the same function with only topic-specific substitutions. The illustrative examples across chapters share the same framing: page:1:paragraph:7, page:3:paragraph:7, page:5:paragraph:6, page:9:paragraph:6 all open with a hypothetical named actor, describe an incomplete evidence situation, and close with a nearly identical disclaimer. These are substantially copied paragraphs and examples, not merely recurring subject matter or short factual cautions."
+    },
+    "additionalFindings": [
+      {
+        "verdict": "clear",
+        "reason": "Finding 6: The FAQ questions are not presented as empirically validated user-research findings requiring citation; they are practitioner starting points for discussion. The guide explicitly states at page:9:paragraph:34 that demonstration questions are 'starting points for a discussion, not substitutes for a review of actual records,' and the FAQ format is consistent with that framing. No claim is made that the questions were validated against user research. This is not a violation.",
+        "evidenceIds": [
+          "page:0:paragraph:14",
+          "page:9:paragraph:17",
+          "page:9:paragraph:34"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 7: The FAQ answer 'Does software guarantee certification? No.' is a correct negative statement. It does not assert a positive product capability requiring primary-source citation. Source:0:claim:3 explicitly states that the vendor's clause mapping 'is not proof that software alone satisfies requirements,' which is consistent with the FAQ answer. The absence of a source citation for a correct general negative is not a factual claim violation.",
+        "evidenceIds": [
+          "source:0:claim:3",
+          "page:9:paragraph:31",
+          "page:9:paragraph:32"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 8: The 'book a demo' link at page:9:paragraph:43 is a navigation element directing readers to explore the vendor's published approach, preceded by explicit uncertainty language. It does not assert that the demo will confirm any specific capability. The guide maintains its qualification framework immediately before the link. This is not a promotional inconsistency that rises to a defect under the maintained writing rule.",
+        "evidenceIds": [
+          "page:9:paragraph:40",
+          "page:9:paragraph:41",
+          "page:9:paragraph:43"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 9: The guide applies consistent skeptical framing to ICC feature descriptions throughout. FAQ answers address general quality management principles, not ICC-specific capabilities, and therefore do not require the same evidential treatment. The demonstration guidance at page:9:paragraph:37-42 continues to apply the same qualifying language as earlier chapters. No inconsistency in applied verification standards was found.",
+        "evidenceIds": [
+          "page:9:paragraph:37",
+          "page:9:paragraph:38",
+          "page:9:paragraph:40"
+        ]
+      },
+      {
+        "verdict": "clear",
+        "reason": "Finding 11: The guide is an implementation and evaluation guide, not a pure software review. Organizational practices such as 'ask the responsible people to verify it' are explicitly framed as the organization's decisions, not ICC software capabilities. The maintained writing rule requires the guide to provide actionable evaluation criteria and honest boundaries, which it does. The mix of organizational practice and software evaluation is the guide's stated purpose.",
+        "evidenceIds": [
+          "page:0:paragraph:1",
+          "page:0:paragraph:8",
+          "page:1:paragraph:14"
+        ]
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "verdict": "violation",
+        "reason": "Examining actual passages confirms the screening finding. Page:1:paragraph:4, page:3:paragraph:3, page:4:paragraph:3, and page:6:paragraph:2 each open with '[ICC page] describes [feature]' and close with '[description] does not establish [specific claim]' using near-identical sentence construction with only topic substitution. This is substantially copied explanatory framing across independent chapters, not merely recurring subject matter.",
+        "evidenceIds": [
+          "page:1:paragraph:4",
+          "page:3:paragraph:3",
+          "page:4:paragraph:3",
+          "page:6:paragraph:2"
+        ]
+      },
+      {
+        "index": 1,
+        "verdict": "violation",
+        "reason": "Illustrative examples in page:1:paragraph:7, page:3:paragraph:7, page:5:paragraph:6, and page:9:paragraph:6 follow the same template: a named role (quality lead, operator, supervisor), an incomplete evidence situation, and a closing disclaimer that the example is hypothetical. The specific topics differ but the structural prose is substantially copied across chapters.",
+        "evidenceIds": [
+          "page:1:paragraph:7",
+          "page:3:paragraph:7",
+          "page:5:paragraph:6",
+          "page:9:paragraph:6"
+        ]
+      },
+      {
+        "index": 2,
+        "verdict": "violation",
+        "reason": "The pattern '[ICC page] describes [X]...it does not establish [Z]' appears in substantively identical form at page:1:paragraph:4, page:2:paragraph:4, page:3:paragraph:3, page:4:paragraph:3, page:6:paragraph:2, page:7:paragraph:2, page:9:paragraph:2. These are independent chapters whose qualifying framework is substantially copied rather than chapter-specific.",
+        "evidenceIds": [
+          "page:1:paragraph:4",
+          "page:2:paragraph:4",
+          "page:3:paragraph:3",
+          "page:6:paragraph:2",
+          "page:7:paragraph:2"
+        ]
+      },
+      {
+        "index": 3,
+        "verdict": "uncertain",
+        "reason": "The opening-paragraph pattern described is real: page:1:paragraph:11 defines process boundary then cites ICC; page:3:paragraph:1 defines process architecture then cites ICC; page:4:paragraph:1 defines process owner then cites ICC. However, these introductions address genuinely different concepts and the ICC citation language, while structurally similar, uses different qualifying content specific to each chapter's topic. The pattern is close but the prose is not verbatim; this finding partially overlaps with finding 2 and the structural similarity is real but the passages are not word-for-word copies.",
+        "evidenceIds": [
+          "page:1:paragraph:11",
+          "page:3:paragraph:1",
+          "page:4:paragraph:1"
+        ]
+      },
+      {
+        "index": 4,
+        "verdict": "clear",
+        "reason": "Only one workflow table appears in the actual pages, at page:1:paragraph:13. The screening finding claims multiple chapters repeat identical table headers, but inspection of the page content finds that the structured table with 'Boundary question | Evidence to examine | Decision to record' appears only in the mapping-current-processes chapter. The claim that this table structure recurs across chapters in the actual prose is not supported by the supplied page paragraphs.",
+        "evidenceIds": [
+          "page:1:paragraph:13",
+          "page:1:paragraph:14"
+        ]
+      },
+      {
+        "index": 5,
+        "verdict": "uncertain",
+        "reason": "The 'keep [X] with [Y] under the organization's controls' directive does recur: page:5:paragraph:33, page:6:paragraph:34, page:7:paragraph:34, page:8:paragraph:8, page:9:paragraph:15 all use this formulation. However, record-keeping under organizational controls is a necessary factual caution that may legitimately recur. The question is whether the phrasing is sufficiently distinct per the maintained writing rule's exception for 'necessary short factual cautions.' The passages are not verbatim but are very close in structure; this is a genuine borderline case.",
+        "evidenceIds": [
+          "page:5:paragraph:33",
+          "page:6:paragraph:34",
+          "page:7:paragraph:34",
+          "page:8:paragraph:8",
+          "page:9:paragraph:15"
+        ]
+      },
+      {
+        "index": 6,
+        "verdict": "clear",
+        "reason": "FAQ questions are practitioner starting points, not claims requiring primary-source validation. The guide states explicitly at page:0:paragraph:14 that FAQ questions are starting points for discussion. No claim is made that the questions were validated against user research. This is not a violation.",
+        "evidenceIds": [
+          "page:0:paragraph:14",
+          "page:9:paragraph:17",
+          "page:9:paragraph:19"
+        ]
+      },
+      {
+        "index": 7,
+        "verdict": "clear",
+        "reason": "The FAQ answer that software does not guarantee certification is a correct negative consistent with source:0:claim:3. It requires no positive evidential citation. See additionalFindings verdict above.",
+        "evidenceIds": [
+          "source:0:claim:3",
+          "page:9:paragraph:31",
+          "page:9:paragraph:32"
+        ]
+      },
+      {
+        "index": 8,
+        "verdict": "clear",
+        "reason": "The book-a-demo link is a navigation element preceded by explicit uncertainty framing at page:9:paragraph:40-42. It does not assert any unverified capability. See additionalFindings verdict above.",
+        "evidenceIds": [
+          "page:9:paragraph:40",
+          "page:9:paragraph:43"
+        ]
+      },
+      {
+        "index": 9,
+        "verdict": "clear",
+        "reason": "FAQ answers address general quality management principles not requiring the same evidential treatment as specific ICC feature claims. The demonstration guidance at page:9:paragraph:37-42 maintains the same qualifying language. No genuine inconsistency in verification standards was found. See additionalFindings verdict above.",
+        "evidenceIds": [
+          "page:9:paragraph:37",
+          "page:9:paragraph:40"
+        ]
+      },
+      {
+        "index": 10,
+        "verdict": "violation",
+        "reason": "Every chapter's subsections are structured identically around role/input/decision/record/exception and the ICC citation qualifying framework. While a consistent structure is acceptable, the actual prose implementing that structure uses near-identical sentences across chapters (compare page:2:paragraph:4, page:3:paragraph:3, page:4:paragraph:3, page:5:paragraph:3, page:6:paragraph:2, page:7:paragraph:2). This overlaps with finding 2 and confirms the repetition verdict.",
+        "evidenceIds": [
+          "page:2:paragraph:4",
+          "page:3:paragraph:3",
+          "page:5:paragraph:3",
+          "page:6:paragraph:2",
+          "page:7:paragraph:2"
+        ]
+      },
+      {
+        "index": 11,
+        "verdict": "clear",
+        "reason": "The guide's explicit purpose is implementation and evaluation guidance. Organizational practices are framed as the organization's decisions throughout. Source:0:claim:6 and the guide's consistent disclaimers make clear that software capabilities are evaluation questions, not promises. The mix of organizational and software guidance is the guide's stated scope and does not constitute a defect. See additionalFindings verdict above.",
+        "evidenceIds": [
+          "source:0:claim:6",
+          "page:0:paragraph:1",
+          "page:0:paragraph:8"
+        ]
+      }
+    ]
+  }
+}
