@@ -1,0 +1,177 @@
+{
+  "claims": "passed",
+  "scope": "passed",
+  "readability": "passed",
+  "links": "passed",
+  "repetition": "passed",
+  "faq": "passed",
+  "findings": [],
+  "summary": "All six dimensions pass. The page aligns with its plan brief and covers all four assigned subsections without scope drift. Each subsection addresses the assigned workflow role (assigned process owner), input (current process records and relevant evidence), decision (determine ownership, acceptance and next action), record (documented decision and its owner), and exception (missing evidence, conflicting ownership or unavailable access). The illustrative manufacturer example appears in all four subsections, is correctly labeled as hypothetical, and is never presented as a measured customer result. Citations to the ICC processes page and ISO APG source are accurate, support their sentences, and use only the two supplied source URLs plus one permitted internal site path. Vendor descriptions are consistently distinguished from verified installed behavior throughout. No FAQ section appears, which is correct as none is assigned. Prose is clear and readable with no significant repetition across sections.",
+  "glossary": [],
+  "roles": [
+    "Process owner",
+    "Quality lead",
+    "Operations manager",
+    "Supervisor",
+    "Operator"
+  ],
+  "recordNames": [
+    "Training record with scope, sample, roles involved, and open questions",
+    "Pilot acceptance decision identifying reviewers, checks performed, discrepancies, and conditions for proceeding",
+    "Staged rollout record retaining scope, training observations, unresolved items, decision-maker, and acceptance conditions",
+    "Feedback record identifying task, starting point, and observed result"
+  ],
+  "decisions": [
+    "Determine ownership, acceptance and next action",
+    "Identify the decisions each role is expected to make and where questions go when the answer is unclear",
+    "Decide whether a hypothetical or sanitized record is more appropriate than a real production record for a demonstration",
+    "Distinguish participation from the outcome of the task before marking an exercise complete",
+    "Agree on the pilot scope and acceptance questions in advance",
+    "Record conditions that could not be tested as unknown and assign someone to obtain the missing evidence",
+    "Decide whether the pilot provides enough evidence to proceed, needs another targeted test, or should pause while an issue is resolved",
+    "Define the processes and roles included in each stage and identify the person who can authorize the next one",
+    "Decide whether a remaining question is acceptable for a limited scope and record the limitation",
+    "Hold, narrow, or reverse a stage when a critical question remains unanswered",
+    "Decide whether another group is ready, whether a specific issue requires a pause, or whether more representative input is needed"
+  ],
+  "pass": true,
+  "deterministic": {
+    "pass": true,
+    "checks": [
+      {
+        "id": "unresolved-marker",
+        "pass": true,
+        "message": "Resolve image and processing markers before review"
+      },
+      {
+        "id": "inline-image-provenance",
+        "pass": true,
+        "message": "Guide inline assets are not supported; use the managed hero image brief"
+      },
+      {
+        "id": "voice",
+        "pass": true,
+        "message": "All blocks use third-person voice"
+      },
+      {
+        "id": "fabricated-quotes",
+        "pass": true,
+        "message": "No fabricated quotes detected"
+      },
+      {
+        "id": "spelling",
+        "pass": true,
+        "message": "Use US spelling"
+      },
+      {
+        "id": "banned-filler",
+        "pass": true,
+        "message": "Remove banned filler"
+      },
+      {
+        "id": "single-h1",
+        "pass": true,
+        "message": "The page shell supplies H1"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Prepare role-based training",
+        "section": "Prepare role-based training"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Prepare role-based training; semantic review verifies support",
+        "section": "Prepare role-based training"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Pilot with representative users",
+        "section": "Pilot with representative users"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Pilot with representative users; semantic review verifies support",
+        "section": "Pilot with representative users"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Manage staged rollout",
+        "section": "Manage staged rollout"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Manage staged rollout; semantic review verifies support",
+        "section": "Manage staged rollout"
+      },
+      {
+        "id": "subsection-coverage",
+        "pass": true,
+        "message": "Explain the assigned subsection with substantive content: Evaluate use and feedback",
+        "section": "Evaluate use and feedback"
+      },
+      {
+        "id": "subsection-evidence",
+        "pass": true,
+        "message": "Cite assigned evidence in Evaluate use and feedback; semantic review verifies support",
+        "section": "Evaluate use and feedback"
+      },
+      {
+        "id": "useful-links",
+        "pass": true,
+        "message": "Each page needs at least one internal link (a site path or site URL) and one primary-source link"
+      }
+    ],
+    "failures": []
+  },
+  "glossaryVariantsIgnored": [],
+  "inputHash": "5c86c45d8f59c0283315f8a7c45f869449a0550b36fa89ed1007f1000c5aeaa8",
+  "contentHash": "6d68a579a81a3cedf4330b5862c7ec06c6bf9a95e7b555f4dcb58432b5891f4b",
+  "paragraphHashes": [
+    "8e244d287482d110baa1e880f0d50fb7809f734cc07752c79d25969d0826b2b9",
+    "4fd26f8f68f26f4e6b7dbc0d39e57f08f20e62f35a1a9d1b5b89eaedbca12c4d",
+    "2a03e0715d0e2228bbf8eba28ca1aef8acc55c1845a4ee4d082345d23d254d67",
+    "a9a22785b6c3c9a0d86c6f30b79a1c70fce3bb747cceda88f49018d091bbb73b",
+    "1ede65876442cf357b43e4ec31ce8dc264f894255088ba477a3f3fa561fbb997",
+    "3deb7db3ba14d57c23bebeba09396be0fbc0c6700f72a97fe01f4244ab36ccd3",
+    "d45281ca4cba6bfa57cff6c8f9e958f453475f9be6065e00ca14f75433994151",
+    "b901b1e67484250e7a2c16a5f0c8a3a05742200e018abbab8bfb58bdfeb8763c",
+    "1c917aef7042c51b6688a1ab72cc42fd25cd170c7c50bf9908523ece48350169",
+    "6e68bbc29fb75d740be4cbdda41e97aa9014651425ef98414926443e716257df",
+    "c46ba4e7b4405f9c070d73cbd6b6ca26c9e16ae543b083532beff5d69deb6a08",
+    "0853b2a9218581267b3776172f04709eb376fa44e79cdb465eba56363415925c",
+    "d7f645b662966de21c94d6615903068bcdd1541e05f660a19c8355a70c98c478",
+    "a3b12a3b555eb9adff3b203a74cc83894e5efe34c07a1af7deacc311447a8585",
+    "628f04d119bf0af0e3aaf7e9934eb18e4a35c9bd7bc0ce65d248cff1edf27666",
+    "03ffbb6a90627ae53933af408f1accc7b98d123691503a81406564f7acce368f",
+    "ec2c6ba74f532ebadd1f607ffce2a75944498a18e40249dd46619e3eca8dc981",
+    "fc791565f3f80198f0def86130d00b732f1b73ce6fa10bfe8b5d8b19ce0870fc",
+    "ff1afe178167e2b82ff912c7cbfb5a3d451119e57655c2d2ecb04a88f5787923",
+    "844e548f35ecd01e835d8f05cdd4b29cb6f0f6b2a716164be9eeefadd4882ac4",
+    "24268a004621c87b515ea989647d88f5f04e5b42d9015ac0c9c1b36a7b63bf7f",
+    "9a89ca0379c8b96b3b65a63ce60896ed8dabb7a9bc3057e3a55c6d5298113efa",
+    "c912a240d72f85ba4561fa7773375d09f927262602634d31f8de4f36fc5b4b7f",
+    "da78b54af36f08d8164a51be6bd82f2867ef01edd793a1cb648921cffbcf33d7",
+    "37b6caaf93a8dcfab9c4e531c9f119d6ec5421cbd2945d4a91d0c220e4872757",
+    "9aa48d4ae86da972bff44bc36b5389042f95fa8d366dbf1626411ab38660bf15",
+    "40bc06a00da3e58cee7358d373c5524bb2d5f619e4d75211fd498d0018a3e14d",
+    "2e72437fb3cce8207df5c6b4502314789b0113b3276c4a6b8759ce236ca59b79",
+    "b5f3482661cb5c7e3d53f7eb29dc0cb44cf65e6bf23ee490b35f7e4bc2e53cf8",
+    "1912e91a7f1be7f85b82596075a9d930ce998f41857a3723d479a079e613de8c",
+    "e77f92569963ae93aa60d4d0cfe32cf2dc82b4ba4360fbd122e7857b44f8290d",
+    "7db32477c110898a7c67e9694959ab62562a9a4347820314881574c82b8d0fde",
+    "ad0e87e8f8b1c5ac179275c22c02d13ba138d3be9c22f99010e6071fc00c4e95",
+    "0b78dc2036c8b8686a547b8ee045cf7932aa5bb739aaed953eba17eaba4c70da",
+    "e700247f6faf5828feb2eaa69a93d2ca46b27a6c125bd438dfdc4b1ac8a2e957",
+    "f099bc4599ed10c287a30f464ae6f1c35e68d5751aa0c6ef356fcb9022b68762",
+    "5cef7fe7a19597765e5e472927db0cc3da7b53b6a8458024b726e11fd7712073"
+  ],
+  "outputContextHash": "3341ec48dc7924c29ce62d396d0b47f51a1a18f5adffaf18f0b7fd361e1e92db",
+  "reviewedAt": "2026-11-23T14:31:15.280Z",
+  "reviewer": "Configured independent chapter reviewer"
+}
