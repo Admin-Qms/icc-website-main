@@ -33,7 +33,8 @@
     "Map author",
     "Reviewer",
     "Decision-maker",
-    "Responsible person"
+    "Responsible person",
+    "Authorizing person"
   ],
   "recordNames": [
     "Documented decision and its owner",
@@ -56,7 +57,12 @@
     "Validation record identifying map version, participants, sample, and decision",
     "Review record identifying version examined, sample used, participants, and decisions remaining open",
     "Review record capturing step, sample, intended reader, and observed result",
-    "Change record connecting decision to process and affected destination"
+    "Change record connecting decision to process and affected destination",
+    "Inventory identifying candidate map, purpose, scope, source location, and decision owner",
+    "Preparation record identifying source, expected scope and relationships, permitted sample, and known limitations",
+    "Acceptance decision record identifying reviewers, checks performed, discrepancies, and conditions for proceeding",
+    "Recovery plan identifying fallback source, decision authority, and discrepancy recording process",
+    "Transition decision record identifying accepted fallback source and person authorized to activate it"
   ],
   "example": {
     "label": "Illustrative example",
@@ -152,6 +158,22 @@
         "Identify an approved alternative route, restrict reliance on a draft, or escalate when a link is unavailable",
         "Accept the tested connection only for the scope and conditions the review supports",
         "Distinguish an access question from an obsolete destination before choosing a remedy"
+      ]
+    },
+    {
+      "slug": "migration-and-configuration",
+      "title": "Plan migration and configuration: process mapping software for quality management",
+      "summary": "All four subsections cover plan migration and configuration within the assigned scope. Vendor descriptions and ISO APG guidance are correctly attributed and distinguished from verified evidence. Each subsection includes the required workflow elements (roles, inputs, decisions, records, exceptions) and an illustrative example using a hypothetical scenario. The two permitted source URLs are used appropriately and each citation is supported by the research record. No FAQ sections are present, which is correct as none are assigned. There are no unresolved findings from the previous review, and the changed paragraphs introduce no new problems. The page passes all checks.",
+      "bodyHash": "bfcf4f444397dbc68215612b293042c440c533c30851c0323cd94ac492e1563f",
+      "decisions": [
+        "Determine ownership, acceptance and next action for each candidate map",
+        "Classify each candidate as ready for pilot, needing clarification, or retained for reference only",
+        "Decide which copy is applicable when several copies appear to describe the same work",
+        "Decide whether the pilot represents one site or a common process with local detail",
+        "Decide whether an item is unsuitable for the pilot until an open question is answered",
+        "Decide whether to accept the pilot result or escalate a discrepancy based on consequence for intended use",
+        "Decide whether a transition must wait when a readiness question is unknown",
+        "Return the transition decision to its authorizer if a later issue changes the accepted assumptions"
       ]
     }
   ],
