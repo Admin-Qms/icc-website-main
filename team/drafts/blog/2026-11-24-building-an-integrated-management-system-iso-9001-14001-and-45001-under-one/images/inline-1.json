@@ -1,0 +1,20 @@
+{
+  "id": "inline-1",
+  "width": 1200,
+  "height": 675,
+  "sha256": "8ad04c61067900b2781cf694aeb3a269df9e457b5096a20aeeac48d5e7d74a16",
+  "source": "codex",
+  "sourceId": "39590a2b988a6fbb0a3acd80454cf1b175a5a37298fd435994964de335f6fef8",
+  "inputHash": "39590a2b988a6fbb0a3acd80454cf1b175a5a37298fd435994964de335f6fef8",
+  "alt": "A manufacturing technician wearing safety glasses and protective gloves checks a metal parts cleaning station beside guarded machinery on an industrial shop floor",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "c4dc8eee92f419c32df0749249a749f06777f721e5a65e04e0cd4128fc84a2c2",
+  "request": {
+    "id": "inline-1",
+    "scene": "A manufacturing technician wearing safety glasses and protective gloves checks a metal parts cleaning station beside guarded machinery on an industrial shop floor",
+    "kind": "inline",
+    "alt": "A manufacturing technician wearing safety glasses and protective gloves checks a metal parts cleaning station beside guarded machinery on an industrial shop floor",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nMid-shot of the task itself: hands, tool and part fill the frame, the background softly out of focus.\nScene: A manufacturing technician wearing safety glasses and protective gloves checks a metal parts cleaning station beside guarded machinery on an industrial shop floor.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-24T19:25:49.131Z"
+}
