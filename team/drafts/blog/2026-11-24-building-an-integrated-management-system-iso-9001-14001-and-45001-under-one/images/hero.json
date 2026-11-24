@@ -1,0 +1,20 @@
+{
+  "id": "hero",
+  "width": 1200,
+  "height": 675,
+  "sha256": "6bfe3bc0e59fbb29836cc3ec7802e0e8ab3ffe4f972b85839f38b0c3bffa418f",
+  "source": "codex",
+  "sourceId": "2eeb2c38581c74c064fffe3b03cc0b44340c4c29bfaaae8ac0702bcc59a3dc83",
+  "inputHash": "2eeb2c38581c74c064fffe3b03cc0b44340c4c29bfaaae8ac0702bcc59a3dc83",
+  "alt": "Building an Integrated Management System: ISO 9001, 14001, and 45001 Under One Framework",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "a6843fb31d2008e8ac4e3a938cdc391c9c07f1ac6fb5e819c7e26a4f5b956ad8",
+  "request": {
+    "id": "hero",
+    "scene": "Industrial quality work related to integrated management system iso 9001 14001 45001",
+    "kind": "hero",
+    "alt": "Building an Integrated Management System: ISO 9001, 14001, and 45001 Under One Framework",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: Industrial quality work related to integrated management system iso 9001 14001 45001.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-24T19:24:06.835Z"
+}
