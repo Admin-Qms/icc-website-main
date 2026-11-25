@@ -1,0 +1,20 @@
+{
+  "id": "hero",
+  "width": 1200,
+  "height": 675,
+  "sha256": "20f2ffc1d5fb93ab040b22dbb59f16bdc75dafc0c3afa2b7018bcff68485e082",
+  "source": "codex",
+  "sourceId": "3bdc85b09ad9b2a67206377d80196f975452e51a68bc4c4e9a7ead0f3d2a5dd6",
+  "inputHash": "3bdc85b09ad9b2a67206377d80196f975452e51a68bc4c4e9a7ead0f3d2a5dd6",
+  "alt": "5 ISO 17025 Proficiency Testing Myths That Undermine Lab Credibility",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "055e8b7200c7a3bc3658f3e017ae451a8d26b59a94aad9630c8bc720754910c5",
+  "request": {
+    "id": "hero",
+    "scene": "Industrial quality work related to iso 17025 proficiency testing requirements",
+    "kind": "hero",
+    "alt": "5 ISO 17025 Proficiency Testing Myths That Undermine Lab Credibility",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: Industrial quality work related to iso 17025 proficiency testing requirements.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-25T09:10:12.828Z"
+}
