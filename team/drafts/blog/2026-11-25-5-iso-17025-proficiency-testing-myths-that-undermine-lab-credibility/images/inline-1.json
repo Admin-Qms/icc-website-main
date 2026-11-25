@@ -1,0 +1,20 @@
+{
+  "id": "inline-1",
+  "width": 1200,
+  "height": 675,
+  "sha256": "84b395979305ea5e259d8554be8413a4b8f3077d95673a3f93329eecf491b6ba",
+  "source": "codex",
+  "sourceId": "d7fe32de876066d3b83590564b2db2dbc2775b4e9004543f631090928eeb3375",
+  "inputHash": "d7fe32de876066d3b83590564b2db2dbc2775b4e9004543f631090928eeb3375",
+  "alt": "A technician wearing safety glasses, high-visibility vest and gloves examines a metal test specimen with a digital caliper beside guarded industrial testing equipment on a manufacturing floor",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "5b99b495a68fc1b3fddb85309a0c1b914907f1f9f423d57749a5c0176f280be3",
+  "request": {
+    "id": "inline-1",
+    "scene": "A technician wearing safety glasses, high-visibility vest and gloves examines a metal test specimen with a digital caliper beside guarded industrial testing equipment on a manufacturing floor",
+    "kind": "inline",
+    "alt": "A technician wearing safety glasses, high-visibility vest and gloves examines a metal test specimen with a digital caliper beside guarded industrial testing equipment on a manufacturing floor",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nMid-shot of the task itself: hands, tool and part fill the frame, the background softly out of focus.\nScene: A technician wearing safety glasses, high-visibility vest and gloves examines a metal test specimen with a digital caliper beside guarded industrial testing equipment on a manufacturing floor.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-25T09:12:02.912Z"
+}
