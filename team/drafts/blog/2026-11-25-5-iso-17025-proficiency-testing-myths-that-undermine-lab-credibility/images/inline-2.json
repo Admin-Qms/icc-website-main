@@ -1,0 +1,20 @@
+{
+  "id": "inline-2",
+  "width": 1200,
+  "height": 675,
+  "sha256": "834680d1f90d9e9e25cbd9ebd042a499bf5e4f57761ca368e0541cc083f53962",
+  "source": "codex",
+  "sourceId": "05f676c79c2dadf8aa3946c744efa0b8704c0692052fa88ace048e33f3a35235",
+  "inputHash": "05f676c79c2dadf8aa3946c744efa0b8704c0692052fa88ace048e33f3a35235",
+  "alt": "A gloved inspector checks a machined steel specimen with a handheld gauge beside a guarded materials testing machine in an industrial workshop",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "c774b652e33ef48cbb0a88b6f12cc9c6c19464ae550093caf84e66bc3c243275",
+  "request": {
+    "id": "inline-2",
+    "scene": "A gloved inspector checks a machined steel specimen with a handheld gauge beside a guarded materials testing machine in an industrial workshop",
+    "kind": "inline",
+    "alt": "A gloved inspector checks a machined steel specimen with a handheld gauge beside a guarded materials testing machine in an industrial workshop",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nMid-shot of the task itself: hands, tool and part fill the frame, the background softly out of focus.\nScene: A gloved inspector checks a machined steel specimen with a handheld gauge beside a guarded materials testing machine in an industrial workshop.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-25T09:14:15.714Z"
+}
