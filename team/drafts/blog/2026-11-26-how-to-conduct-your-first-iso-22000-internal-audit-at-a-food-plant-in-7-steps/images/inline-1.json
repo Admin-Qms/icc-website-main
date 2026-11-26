@@ -1,0 +1,20 @@
+{
+  "id": "inline-1",
+  "width": 1200,
+  "height": 675,
+  "sha256": "398c82fc9380db59bcb58509c01fded936cebe35b842e8f73d4e8992eea8d18d",
+  "source": "codex",
+  "sourceId": "bf0794a6f64d44c79d371eba89717ce0165e3bb47527c93b9d0a6e7a29f17ae9",
+  "inputHash": "bf0794a6f64d44c79d371eba89717ce0165e3bb47527c93b9d0a6e7a29f17ae9",
+  "alt": "A food plant quality auditor in a hairnet and protective clothing observing a stainless steel processing line from a safe designated walkway",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "15d495034ac7a06a4746789f32cb567cf1e67d70dd314a099ef248f852871bb7",
+  "request": {
+    "id": "inline-1",
+    "scene": "A food plant quality auditor in a hairnet and protective clothing observing a stainless steel processing line from a safe designated walkway",
+    "kind": "inline",
+    "alt": "A food plant quality auditor in a hairnet and protective clothing observing a stainless steel processing line from a safe designated walkway",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nMid-shot of the task itself: hands, tool and part fill the frame, the background softly out of focus.\nScene: A food plant quality auditor in a hairnet and protective clothing observing a stainless steel processing line from a safe designated walkway.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-26T16:19:23.997Z"
+}
