@@ -1,4 +1,9 @@
 {
+  "git": {
+    "deploymentEnabled": {
+      "codex/icc-homepage-video-preview": false
+    }
+  },
   "functions": {
     "api/chat.ts": {
       "includeFiles": "content/chatbot-context.md"

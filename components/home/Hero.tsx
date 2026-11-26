@@ -1,198 +1,263 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Check, Icon } from "../Icons";
+import { useEffect, useRef, useState } from "react";
+import { ContactForm } from "../ContactForm";
+import { ArrowRight, Icon } from "../Icons";
+import { IMAGEKIT_URL } from "@/lib/imagekit-loader";
 import { MODULES } from "@/lib/site";
-import { ProblemSolved } from "./ProblemSolved";
 
-const easeOut = [0.22, 1, 0.36, 1] as const;
-const INDUSTRY_WORDS = ["automotive", "aerospace", "medical device", "food and beverage", "manufacturing"];
+const VIDEO = "/videos/homepage-overview.mp4";
+const MOBILE_VIDEO = "/videos/homepage-overview-720.mp4";
+const DESKTOP_ASSET = `${IMAGEKIT_URL}/icc/website/homepage/overview-1080-eb36428bf2.mp4`;
+const DESKTOP_CDN = `${DESKTOP_ASSET}?tr=orig-true`;
+const HLS_MANIFEST = `${DESKTOP_ASSET}/ik-master.m3u8?tr=sr-360_480_720_1080`;
+const MOBILE_CDN = `${IMAGEKIT_URL}/icc/website/homepage/overview-720-dc6d5ed762.mp4?tr=orig-true`;
+const MOBILE_MEDIA = "(max-width: 767px)";
+const POSTER = "/videos/homepage-overview-poster.webp";
+const VIDEO_ID = "homepage-overview-video";
+const PLAYBACK_MODULE = "/videos/hero-playback.js";
+const PLAYER_BUTTON = "grid h-11 w-11 shrink-0 place-items-center rounded-full text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white disabled:opacity-60";
+
+// Start the visible hero on a direct visit while the rest of the page hydrates.
+const START_HERO = `(() => {
+  const video = document.getElementById(${JSON.stringify(VIDEO_ID)});
+  if (!video || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const observer = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) return;
+    observer.disconnect();
+    import(${JSON.stringify(PLAYBACK_MODULE)}).then(({ playHero }) => {
+      if (!video.isConnected || video.getBoundingClientRect().bottom <= 0) return;
+      playHero(video);
+    }, () => {
+      if (video.isConnected) video.play().catch(() => {});
+    });
+  });
+  observer.observe(video);
+})();`;
+
+type HeroPlayback = {
+  playHero(video: HTMLVideoElement): void;
+  pauseHero(video: HTMLVideoElement): void;
+  disposeHero(video: HTMLVideoElement): void;
+};
+
+function loadHeroPlayback(): Promise<HeroPlayback> {
+  // This small module is shared with the pre-hydration player.
+  return import(/* webpackIgnore: true */ PLAYBACK_MODULE);
+}
+
+function playVisibleVideo(video: HTMLVideoElement, canPlay: () => boolean) {
+  void loadHeroPlayback().then(({ playHero }) => {
+    if (canPlay()) playHero(video);
+  }, () => {
+    if (video.isConnected && canPlay()) void video.play().catch(() => {});
+  });
+}
+
+function pauseVideo(video: HTMLVideoElement) {
+  video.pause();
+  void loadHeroPlayback().then(({ pauseHero }) => pauseHero(video), () => {});
+}
 
 export function Hero() {
-  const reduce = useReducedMotion();
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const ambientRef = useRef<HTMLCanvasElement>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const bookingRef = useRef<HTMLButtonElement>(null);
+  const wantsPlayback = useRef(false);
+  const inViewport = useRef(false);
+  const [ready, setReady] = useState(false);
+  const [playing, setPlaying] = useState(false);
+  const [muted, setMuted] = useState(true);
+  const playbackLabel = playing ? "Pause" : "Play";
+  const soundLabel = muted ? "Unmute" : "Mute";
+
+  useEffect(() => {
+    setReady(true);
+    const video = videoRef.current;
+    if (!video) return;
+
+    setPlaying(!video.paused);
+    wantsPlayback.current = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const observer = new IntersectionObserver(([entry]) => {
+      const wasVisible = inViewport.current;
+      inViewport.current = entry.isIntersecting;
+      if (!inViewport.current) {
+        if (wasVisible || !video.paused) pauseVideo(video);
+      } else if (wantsPlayback.current && video.paused) {
+        playVisibleVideo(video, () => wantsPlayback.current && inViewport.current);
+      }
+    });
+    observer.observe(video);
+    return () => {
+      observer.disconnect();
+      queueMicrotask(() => {
+        if (!video.isConnected) {
+          void loadHeroPlayback().then(({ disposeHero }) => disposeHero(video), () => {});
+        }
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const ambient = ambientRef.current?.getContext("2d");
+    if (!video || !ambient) return;
+
+    // Skip canvas work when the sharp video already fills the whole viewport.
+    let visible = ambient.canvas.clientWidth > 0;
+    const paintAmbient = () => {
+      if (visible && video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+        ambient.drawImage(video, 0, 0, ambient.canvas.width, ambient.canvas.height);
+      }
+    };
+
+    const observer = new ResizeObserver(([entry]) => {
+      visible = entry.contentRect.width > 0;
+      paintAmbient();
+    });
+    observer.observe(ambient.canvas);
+
+    paintAmbient();
+    video.addEventListener("loadeddata", paintAmbient);
+    video.addEventListener("timeupdate", paintAmbient);
+    return () => {
+      observer.disconnect();
+      video.removeEventListener("loadeddata", paintAmbient);
+      video.removeEventListener("timeupdate", paintAmbient);
+    };
+  }, []);
+
+  function togglePlayback() {
+    const video = videoRef.current;
+    if (!video) return;
+    wantsPlayback.current = video.paused;
+    if (video.paused) {
+      playVisibleVideo(video, () => wantsPlayback.current && inViewport.current);
+    } else {
+      pauseVideo(video);
+    }
+  }
+
+  function toggleSound() {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = !video.muted;
+    setMuted(video.muted);
+  }
+
   return (
-    <section className="relative overflow-hidden bg-blueprint pt-28 lg:pt-36">
-      <HeroBackground reduce={!!reduce} />
+    <section aria-labelledby="homepage-heading">
+      <div className="relative isolate overflow-hidden bg-navy-950 pt-[var(--home-nav-offset)] md:[--home-frame-height:calc(100svh-var(--home-nav-offset))]">
+        <canvas
+          ref={ambientRef}
+          aria-hidden="true"
+          width={96}
+          height={54}
+          className="home-hero-ambient pointer-events-none absolute inset-x-0 top-0 -z-10 h-[var(--home-nav-height)] w-full scale-110 bg-cover bg-center object-cover opacity-60 blur-2xl saturate-75 md:h-full"
+          style={{ backgroundImage: `url(${POSTER})` }}
+        />
+        <div className="md:grid md:h-[var(--home-frame-height)] md:place-items-center">
+          <div className="relative w-full md:max-w-[calc(var(--home-frame-height)*16/9)]">
+            <h1 id="homepage-heading" className="sr-only">Quality and compliance management software</h1>
+            <video
+              ref={videoRef}
+              id={VIDEO_ID}
+              data-hls={HLS_MANIFEST}
+              aria-label="ICC homepage overview"
+              width={1920}
+              height={1080}
+              className="block aspect-video h-auto w-full object-contain"
+              poster={POSTER}
+              preload="none"
+              crossOrigin="anonymous"
+              muted
+              playsInline
+              loop
+              onPlay={() => setPlaying(true)}
+              onPause={() => setPlaying(false)}
+            >
+              <source src={MOBILE_CDN} type="video/mp4" media={MOBILE_MEDIA} />
+              <source src={MOBILE_VIDEO} type="video/mp4" media={MOBILE_MEDIA} />
+              <source src={DESKTOP_CDN} type="video/mp4" />
+              <source src={VIDEO} type="video/mp4" />
+              <a href={VIDEO}>Watch the ICC homepage overview</a>
+            </video>
+            <script dangerouslySetInnerHTML={{ __html: START_HERO }} />
 
-      <div className="container-page relative pb-16 lg:pb-20">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          {/* Left — message. Rendered without a fade-in: this text is the largest
-              paint on phones, so hiding it until scripts load delayed LCP. */}
-          <div>
-            <IndustryTagline reduce={!!reduce} />
-
-            <h1 className="mt-5 font-heading text-4xl font-bold leading-[1.07] text-navy-900 sm:text-5xl lg:text-[3.4rem]">
-              <AnimatedHeadline />
-            </h1>
-
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
-              Documents, corrective actions, audits, training and suppliers in
-              one place. AI drafts the paperwork, your team approves it, and
-              you are ready for an audit any day of the year.
-            </p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link href="/contact" className="btn-primary group">
-                Book a call
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-
-            <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
-              {[
-                "Ready for an audit any day",
-                "Less paperwork for your team",
-                "You approve everything AI prepares",
-              ].map((f) => (
-                <span
-                  key={f}
-                  className="flex items-center gap-2 text-sm font-semibold text-slate-700"
-                >
-                  <Check className="h-4 w-4 text-teal-600" />
-                  {f}
-                </span>
-              ))}
+            <div className="flex items-center justify-between gap-2 bg-navy-950/75 px-4 py-2 sm:px-6 md:pointer-events-none md:absolute md:inset-x-0 md:bottom-0 md:bg-transparent md:px-[clamp(2rem,4vw,6rem)] md:pb-[clamp(5.75rem,9svh,8rem)]">
+              <div className="flex items-center gap-1 md:pointer-events-auto md:rounded-full md:border md:border-white/20 md:bg-navy-900/90 md:px-1.5">
+                <button type="button" className={PLAYER_BUTTON} aria-label={playbackLabel} title={playbackLabel} onClick={togglePlayback} disabled={!ready}>
+                  <Icon name={playing ? "pause" : "play"} className="h-5 w-5" aria-hidden="true" />
+                </button>
+                <button type="button" className={PLAYER_BUTTON} aria-label={soundLabel} title={soundLabel} onClick={toggleSound} disabled={!ready}>
+                  <Icon name={muted ? "volume-off" : "volume"} className="h-5 w-5" aria-hidden="true" />
+                </button>
+              </div>
+              <button
+                ref={bookingRef}
+                type="button"
+                aria-haspopup="dialog"
+                disabled={!ready}
+                onClick={() => dialogRef.current?.showModal()}
+                className="btn-primary group shrink-0 gap-2 px-4 py-3 disabled:opacity-60 md:pointer-events-auto md:rounded-full md:bg-white md:px-6 md:py-3.5 md:text-base md:text-navy-900 md:shadow-lg md:hover:bg-teal-50 md:focus-visible:ring-white md:focus-visible:ring-offset-navy-900"
+              >
+                Book a demo
+                <ArrowRight className="h-4 w-4 motion-safe:transition-transform motion-safe:group-hover:translate-x-1" />
+              </button>
             </div>
           </div>
-
-          {/* Right — the problems buyers recognise, and what the platform changes. */}
-          <ProblemSolved />
         </div>
+
+        <dialog
+          ref={dialogRef}
+          aria-label="Book a demo"
+          onClose={() => bookingRef.current?.focus()}
+          onClick={(event) => {
+            if (event.target === event.currentTarget) event.currentTarget.close();
+          }}
+          className="m-auto max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-lg overflow-y-auto overscroll-contain rounded-2xl bg-transparent p-0 shadow-2xl backdrop:bg-navy-900/50"
+        >
+          <div className="relative">
+            <ContactForm compact title="Book a demo" submitLabel="Request demo" />
+            <button
+              type="button"
+              aria-label="Close demo form"
+              onClick={() => dialogRef.current?.close()}
+              className="absolute right-2 top-2 grid h-11 w-11 place-items-center rounded-lg text-navy-900 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-700"
+            >
+              <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" className="h-5 w-5">
+                <path d="m5 5 10 10M15 5 5 15" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
+        </dialog>
       </div>
 
-      {/* Modules strip: everything the platform covers, one click from here. */}
-      <div className="relative border-t border-slate-200 bg-white/80 backdrop-blur">
+      <div className="border-y border-slate-200 bg-white">
         <div className="container-page py-8">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mb-5 text-center text-xs font-bold uppercase tracking-[0.14em] text-slate-500"
-          >
+          <p className="mb-5 text-center text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
             Everything your quality system needs, in one platform
-          </motion.p>
-          <motion.ul
-            variants={{ show: { transition: { staggerChildren: 0.05 } } }}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="flex flex-wrap items-center justify-center gap-3"
-          >
-            {MODULES.map((m) => (
-              <motion.li
-                key={m.slug}
-                variants={{
-                  hidden: { opacity: 0, y: 12 },
-                  show: { opacity: 1, y: 0 },
-                }}
-              >
+          </p>
+          <ul className="flex flex-wrap items-center justify-center gap-3">
+            {MODULES.map((module) => (
+              <li key={module.slug}>
                 <Link
-                  href={`/solutions/${m.slug}`}
+                  href={`/solutions/${module.slug}`}
                   className="group flex items-center gap-2 rounded-md border border-slate-200 bg-white px-3.5 py-2 text-sm font-bold text-navy-800 shadow-sm transition-colors hover:border-teal-300 hover:text-teal-700"
                 >
                   <span className="grid h-6 w-6 place-items-center rounded bg-teal-50 text-teal-700 transition-colors group-hover:bg-teal-600 group-hover:text-white">
-                    <Icon name={m.icon} className="h-4 w-4" />
+                    <Icon name={module.icon} className="h-4 w-4" />
                   </span>
-                  {m.name}
+                  {module.name}
                 </Link>
-              </motion.li>
+              </li>
             ))}
-          </motion.ul>
+          </ul>
         </div>
       </div>
     </section>
-  );
-}
-
-/* ---- eyebrow: a tagline with the industry word rotating ---- */
-function IndustryTagline({ reduce }: { reduce: boolean }) {
-  const [i, setI] = useState(0);
-
-  useEffect(() => {
-    if (reduce) return;
-    const timer = window.setInterval(() => setI((n) => (n + 1) % INDUSTRY_WORDS.length), 2400);
-    return () => window.clearInterval(timer);
-  }, [reduce]);
-
-  return (
-    <p className="inline-flex flex-wrap items-center gap-x-1.5 rounded-full border border-teal-200 bg-teal-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-teal-700">
-      <span className="relative mr-1 flex h-2 w-2">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-500 opacity-60" />
-        <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-600" />
-      </span>
-      Less paperwork for
-      <span className="relative inline-flex overflow-hidden text-navy-900">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.span
-            key={INDUSTRY_WORDS[i]}
-            initial={{ y: "100%", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: "-100%", opacity: 0 }}
-            transition={{ duration: 0.35, ease: easeOut }}
-            className="inline-block"
-          >
-            {INDUSTRY_WORDS[i]}
-          </motion.span>
-        </AnimatePresence>
-      </span>
-      quality teams
-    </p>
-  );
-}
-
-/* ---- headline with a highlighted, underline-drawing accent ---- */
-function AnimatedHeadline() {
-  return (
-    <span className="inline">
-      <span className="block">
-        The compliance platform
-        {/* The lines are block spans; the trailing space keeps the words apart in
-            the page text that crawlers and screen readers read. */}{" "}
-      </span>
-      <span className="relative inline-block text-teal-700">
-        built by ISO auditors
-        <motion.svg
-          className="absolute -bottom-1.5 left-0 w-full"
-          height="10"
-          viewBox="0 0 200 10"
-          preserveAspectRatio="none"
-          fill="none"
-        >
-          <motion.path
-            d="M2 7 Q 50 2 100 6 T 198 5"
-            stroke="#D97706"
-            strokeWidth="3"
-            strokeLinecap="round"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 0.9, ease: easeOut, delay: 0.9 }}
-          />
-        </motion.svg>
-      </span>
-    </span>
-  );
-}
-
-/* ---- layered animated background (subtle, industrial, professional) ---- */
-function HeroBackground({ reduce }: { reduce: boolean }) {
-  return (
-    <div
-      className="pointer-events-none absolute inset-0 overflow-hidden"
-      aria-hidden
-    >
-      <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-teal-50/70 to-transparent" />
-      <motion.div
-        className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-teal-200/30 blur-3xl"
-        animate={reduce ? undefined : { x: [0, 30, 0], y: [0, 20, 0] }}
-        transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute right-0 top-32 h-80 w-80 rounded-full bg-gold-200/25 blur-3xl"
-        animate={reduce ? undefined : { x: [0, -30, 0], y: [0, 24, 0] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-      />
-    </div>
   );
 }

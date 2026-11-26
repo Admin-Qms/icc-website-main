@@ -103,10 +103,10 @@ export function Benefits() {
                 {/* Accent rule in the benefit's colour, drawn across the top as it appears. */}
                 <motion.span
                   aria-hidden
-                  className={`absolute left-0 top-0 h-1 ${tone.bar}`}
+                  className={`absolute left-0 top-0 h-1 w-full origin-left ${tone.bar}`}
                   variants={{
-                    hidden: { width: reduce ? "100%" : "0%" },
-                    show: { width: "100%", transition: { delay: reduce ? 0 : 0.25, duration: reduce ? 0 : 0.7, ease: easeOut } },
+                    hidden: { scaleX: reduce ? 1 : 0 },
+                    show: { scaleX: 1, transition: { delay: reduce ? 0 : 0.25, duration: reduce ? 0 : 0.7, ease: easeOut } },
                   }}
                 />
                 <span className="flex items-center gap-3">

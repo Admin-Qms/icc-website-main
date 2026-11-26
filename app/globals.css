@@ -5,6 +5,96 @@
 :root {
   --background: #ffffff;
   --foreground: #1e293b;
+  --home-nav-height: 65px;
+  --home-nav-offset: var(--home-nav-height);
+}
+
+@screen xl {
+  :root {
+    --home-nav-height: 77px;
+  }
+}
+
+@media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+  :root {
+    --home-nav-offset: 0px;
+  }
+
+  .home-navbar {
+    --home-navbar-width: min(100% - 3rem, 100rem);
+    padding-top: 0.75rem;
+  }
+
+  .home-navbar-surface {
+    width: var(--home-navbar-width);
+    margin-inline: auto;
+    border: 1px solid rgb(255 255 255 / 0.18);
+    border-radius: 0.875rem;
+    opacity: 0;
+  }
+
+  .home-navbar #mobile-navigation {
+    width: var(--home-navbar-width);
+    margin: 0.5rem auto 0;
+    border-radius: 0.875rem;
+  }
+
+  .home-navbar:is(:hover, :has(:focus-visible), [data-menu-open]) .home-navbar-surface {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .home-navbar-surface {
+      transition: opacity 160ms ease-out;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (aspect-ratio: 16/9) {
+  @screen md {
+    .home-hero-ambient {
+      display: none;
+    }
+  }
+}
+
+.home-navbar-surface :focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.nav-menu-panel {
+  @apply border-slate-200 bg-white/90 text-navy-900 backdrop-blur-sm;
+  --nav-menu-muted: #475569;
+  --nav-menu-accent: #155e75;
+  --nav-menu-divider: #e2e8f0;
+  --nav-menu-highlight: rgb(8 145 178 / 0.08);
+}
+
+.home-navbar .nav-menu-panel {
+  @apply border-white/20 text-white;
+  background-color: rgb(13 26 48 / 0.76);
+  --nav-menu-muted: #cbd5e1;
+  --nav-menu-accent: #a5f3fc;
+  --nav-menu-divider: rgb(255 255 255 / 0.15);
+  --nav-menu-highlight: rgb(255 255 255 / 0.1);
+}
+
+.nav-menu-muted {
+  color: var(--nav-menu-muted);
+}
+
+.nav-menu-accent {
+  color: var(--nav-menu-accent);
+}
+
+.nav-menu-divider {
+  border-color: var(--nav-menu-divider);
+}
+
+.nav-menu-row:hover,
+.nav-menu-spotlight {
+  background-color: var(--nav-menu-highlight);
 }
 
 @layer base {

@@ -54,6 +54,26 @@ export function ShieldCheck(props: IconProps) {
 
 export function Icon({ name, ...props }: { name: string } & IconProps) {
   switch (name) {
+    case "play":
+      return (
+        <svg {...base} {...props}>
+          <path d="M8 5.5 18 12 8 18.5V5.5Z" fill="currentColor" />
+        </svg>
+      );
+    case "pause":
+      return (
+        <svg {...base} {...props}>
+          <path d="M9 5.5v13m6-13v13" strokeWidth={2.5} />
+        </svg>
+      );
+    case "volume":
+    case "volume-off":
+      return (
+        <svg {...base} {...props}>
+          <path d="M3 9v6h4l5 4V5L7 9H3Z" />
+          {name === "volume" ? <path d="M16 9a4.2 4.2 0 0 1 0 6m3-9a8.5 8.5 0 0 1 0 12" /> : <path d="m16 10 4 4m0-4-4 4" />}
+        </svg>
+      );
     case "assessment":
       return (
         <svg {...base} {...props}>

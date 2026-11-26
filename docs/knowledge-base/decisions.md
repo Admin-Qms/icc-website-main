@@ -92,6 +92,16 @@ Each entry should include:
 
 ## Design Decisions
 
+### 2026-11-24 | Homepage overview video and demo booking
+
+The homepage overview video shows its complete 16:9 frame, including the titles and embedded captions. On desktop the video fills a 16:9 viewport, with a blurred copy of the footage extending to the edges on other window shapes. ImageKit serves an adaptive HLS stream from 360p to 1080p. Browsers with native HLS use it directly. Other compatible browsers load the self-hosted [hls.js light player](https://github.com/video-dev/hls.js/tree/v1.7.4). The uploaded 1080p and 720p MP4s remain fallbacks for desktop and phone widths, with local copies if CDN delivery fails.
+
+Visible playback can begin before the page finishes loading its interactive components. The video starts muted, loops inline, and starts paused for visitors who prefer reduced motion. The playback and sound icons let visitors pause playback or turn on sound. Playback pauses when the video leaves the viewport and resumes on return if the visitor was playing it.
+
+The floating glass navigation reveals on pointer hover at the top of the page or on keyboard focus. On touch screens the navigation remains visible above the footage. Dropdowns and the mobile menu use translucent glass and scroll within the available window height.
+
+**Book a demo** sits in the lower-right area of the desktop video, clear of the center of the footage. It opens the existing demo request form over the homepage. Opening or closing it leaves the video playing if it was already playing. The form uses the existing contact endpoint, and the team follows up to schedule the demo.
+
 ### 2026-03 | Glass Navbar with Mega Menu
 **Decision:** Navbar uses glass morphism effect (`backdrop-blur-md bg-white/80`) with dropdown mega menus for Standards and Industries.
 **Why:** 10 standards + 8 industries don't fit in a simple nav. Mega menu provides scannable grouping. Glass effect is modern without being distracting.
@@ -239,4 +249,4 @@ The entries above were made for the previous site (Sanity, Vercel, chatbot). The
 
 ---
 
-*Last updated: 2026-10-06*
+*Last updated: 2026-11-24*
