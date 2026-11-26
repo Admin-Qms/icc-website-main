@@ -1,0 +1,20 @@
+{
+  "id": "hero",
+  "width": 1200,
+  "height": 675,
+  "sha256": "1971329378f46b77f142275f340689c17111b0a294da9080b16edb248a683672",
+  "source": "codex",
+  "sourceId": "cdcd7fe22587368b26ec0e58651fa8cbeb38205fa1813df0421848ffc774db96",
+  "inputHash": "cdcd7fe22587368b26ec0e58651fa8cbeb38205fa1813df0421848ffc774db96",
+  "alt": "How to Conduct Your First ISO 22000 Internal Audit at a Food Plant in 7 Steps",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "cbdeab78b065ef85472f72de1b71294f83c4193bb83a9bb72e1c6d4d9328dd3d",
+  "request": {
+    "id": "hero",
+    "scene": "Industrial quality work related to iso 22000 internal audit food plant",
+    "kind": "hero",
+    "alt": "How to Conduct Your First ISO 22000 Internal Audit at a Food Plant in 7 Steps",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: Industrial quality work related to iso 22000 internal audit food plant.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-26T16:17:26.560Z"
+}
