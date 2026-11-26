@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Phone, ChevronDown, Icon } from "./Icons";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { ArrowRight, Phone, ChevronDown, Icon } from "./Icons";
 import { MODULES, SITE } from "@/lib/site";
 import { Logo } from "./Logo";
 
@@ -48,11 +48,14 @@ const RESOURCES_MENU = [
 type MenuId = "platform" | "resources";
 
 const LINK_CLASS =
-  "group relative whitespace-nowrap rounded-md px-3.5 py-2 text-[15px] font-semibold text-navy-800 transition-colors hover:text-teal-700";
+  "group relative whitespace-nowrap rounded-md px-3.5 py-2 text-[15px] font-semibold transition-colors";
+const LINK_COLOR = "text-navy-800 hover:text-teal-700";
 const UNDERLINE_CLASS =
   "absolute inset-x-3.5 -bottom-0.5 h-0.5 origin-left scale-x-0 rounded bg-teal-600 transition-transform duration-300 group-hover:scale-x-100";
 
 export function Navbar() {
+  const linkClass = `${LINK_CLASS} ${LINK_COLOR}`;
+  const reduceMotion = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [menu, setMenu] = useState<MenuId | null>(null);
@@ -105,9 +108,7 @@ export function Navbar() {
             else setMenu(id);
           }}
           aria-expanded={isOpen}
-          className={`group relative flex items-center gap-1.5 whitespace-nowrap rounded-md px-3.5 py-2 text-[15px] font-semibold transition-colors ${
-            isOpen ? "text-teal-700" : "text-navy-800 hover:text-teal-700"
-          }`}
+          className={`${LINK_CLASS} flex items-center gap-1.5 ${isOpen ? "text-teal-700" : LINK_COLOR}`}
         >
           {label}
           <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
@@ -116,13 +117,13 @@ export function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, y: 8, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 8, scale: 0.98 }}
-              transition={{ duration: 0.18 }}
-              className={`absolute left-0 top-full pt-3 ${width}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, pointerEvents: "none" }}
+              transition={{ duration: reduceMotion ? 0 : 0.12 }}
+              className={`absolute left-1/2 top-full max-w-[calc(100vw-2rem)] pt-3 [translate:-50%_0] ${width}`}
             >
-              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white p-2 shadow-[0_24px_60px_-24px_rgba(22,43,77,0.45)]">
+              <div className="nav-menu-panel max-h-[calc(100dvh-8rem)] overflow-y-auto overscroll-contain rounded-xl border p-2 shadow-[0_24px_60px_-24px_rgba(22,43,77,0.45)]">
                 {children}
               </div>
             </motion.div>
@@ -133,42 +134,19 @@ export function Navbar() {
   }
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50" onKeyDown={(event) => {
-      if (event.key === "Escape") { setOpen(false); setMenu(null); }
-    }}>
-      {/* Utility bar — trust + phone (hidden once scrolled to save space) */}
+    <header
+      className={`site-navbar fixed inset-x-0 top-0 flex max-h-[100dvh] flex-col ${open ? "z-[75]" : "z-50"}`}
+      onKeyDown={(event) => {
+        if (event.key === "Escape") { setOpen(false); setMenu(null); }
+      }}
+    >
       <div
-        className={`hidden overflow-hidden bg-navy-900 text-slate-300 transition-all duration-300 lg:block ${
-          scrolled ? "max-h-0" : "max-h-12"
-        }`}
+        className={`site-navbar-surface shrink-0 backdrop-blur-sm motion-safe:transition-colors motion-safe:duration-150 ${scrolled ? "bg-white/[0.85]" : "bg-transparent"}`}
       >
-        <div className="container-page flex h-10 items-center justify-between text-[13px]">
-          <p className="flex items-center gap-2">
-            <ShieldCheck className="h-4 w-4 text-teal-400" />
-            Compliance platform built by ISO auditors · {SITE.region}
-          </p>
-          <div className="flex items-center gap-6">
-            <a
-              href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
-              className="flex items-center gap-2 font-semibold text-white hover:text-teal-300"
-            >
-              <Phone className="h-4 w-4 text-teal-400" />
-              {SITE.phone}
-            </a>
-            <span className="text-slate-400">Mon–Fri · 8am–6pm ET</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Main nav */}
-      <div
-        className={`border-b transition-all duration-300 ${
-          scrolled
-            ? "border-slate-200 bg-white/95 shadow-[0_4px_20px_-16px_rgba(22,43,77,0.5)] backdrop-blur"
-            : "border-transparent bg-white"
-        }`}
-      >
-        <nav aria-label="Main navigation" className="container-page flex h-16 items-center justify-between gap-5 xl:h-[76px]">
+        <nav
+          aria-label="Main navigation"
+          className="mx-auto flex h-[65px] w-full max-w-[1600px] items-center justify-between gap-3 px-5 sm:gap-5 sm:px-8 xl:h-[77px] xl:px-12"
+        >
           <Link href="/" className="group flex min-w-0 items-center xl:w-[300px] xl:shrink-0" onClick={() => setOpen(false)}>
             <Logo tagline={false} singleLine />
           </Link>
@@ -178,45 +156,45 @@ export function Navbar() {
               <Link
                 href={PLATFORM_OVERVIEW.href}
                 onClick={() => setMenu(null)}
-                className="group/item flex items-start gap-3.5 rounded-lg bg-slate-50 p-3.5 transition-colors hover:bg-teal-50"
+                className="nav-menu-row nav-menu-spotlight group/item flex items-start gap-3.5 rounded-lg p-3.5 transition-colors"
               >
                 <span className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-navy-900 text-teal-400 transition-colors group-hover/item:bg-teal-600 group-hover/item:text-white">
                   <Icon name={PLATFORM_OVERVIEW.icon} className="h-5 w-5" />
                 </span>
                 <span>
-                  <span className="flex items-center gap-1.5 font-heading text-[15px] font-bold text-navy-900">
+                  <span className="flex items-center gap-1.5 font-heading text-[15px] font-bold">
                     {PLATFORM_OVERVIEW.title}
-                    <ArrowRight className="h-3.5 w-3.5 text-teal-600 opacity-0 transition-all group-hover/item:translate-x-0.5 group-hover/item:opacity-100" />
+                    <ArrowRight className="nav-menu-accent h-3.5 w-3.5 opacity-0 transition-opacity group-hover/item:opacity-100" />
                   </span>
-                  <span className="mt-0.5 block text-[13px] leading-snug text-slate-500">{PLATFORM_OVERVIEW.desc}</span>
+                  <span className="nav-menu-muted mt-0.5 block text-[13px] leading-snug">{PLATFORM_OVERVIEW.desc}</span>
                 </span>
               </Link>
-              <p className="px-3.5 pb-1 pt-3 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-400">Modules</p>
+              <p className="nav-menu-muted px-3.5 pb-1 pt-3 text-[11px] font-bold uppercase tracking-[0.14em]">Modules</p>
               <div className="grid grid-cols-2 gap-0.5">
                 {MODULES.map((m) => (
                   <Link
                     key={m.slug}
                     href={`/solutions/${m.slug}`}
                     onClick={() => setMenu(null)}
-                    className="group/item flex items-center gap-2.5 rounded-lg px-3.5 py-2 transition-colors hover:bg-teal-50"
+                    className="nav-menu-row group/item flex items-center gap-2.5 rounded-lg px-3.5 py-2 transition-colors"
                   >
                     <span className="grid h-7 w-7 shrink-0 place-items-center rounded-md bg-teal-50 text-teal-700 transition-colors group-hover/item:bg-teal-600 group-hover/item:text-white">
                       <Icon name={m.icon} className="h-4 w-4" />
                     </span>
-                    <span className="text-sm font-semibold text-navy-900">{m.name}</span>
+                    <span className="text-sm font-semibold">{m.name}</span>
                   </Link>
                 ))}
               </div>
               <Link
                 href="/solutions"
                 onClick={() => setMenu(null)}
-                className="link-arrow mx-3.5 mb-2 mt-3 text-sm"
+                className="nav-menu-accent mx-3.5 mb-2 mt-3 inline-flex items-center gap-1.5 text-sm font-semibold hover:underline"
               >
                 Compare all modules <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </>)}
 
-            <Link href={INDUSTRIES.href} className={LINK_CLASS}>
+            <Link href={INDUSTRIES.href} className={linkClass}>
               {INDUSTRIES.label}
               <span className={UNDERLINE_CLASS} />
             </Link>
@@ -227,7 +205,7 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMenu(null)}
-                  className={`group/item flex items-start gap-3.5 rounded-lg p-3.5 transition-colors hover:bg-teal-50 ${
+                  className={`nav-menu-row group/item flex items-start gap-3.5 rounded-lg p-3.5 transition-colors ${
                     i < RESOURCES_MENU.length - 1 ? "mb-0.5" : ""
                   }`}
                 >
@@ -235,11 +213,11 @@ export function Navbar() {
                     <Icon name={item.icon} className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="flex items-center gap-1.5 font-heading text-[15px] font-bold text-navy-900">
+                    <span className="flex items-center gap-1.5 font-heading text-[15px] font-bold">
                       {item.title}
-                      <ArrowRight className="h-3.5 w-3.5 text-teal-600 opacity-0 transition-all group-hover/item:translate-x-0.5 group-hover/item:opacity-100" />
+                      <ArrowRight className="nav-menu-accent h-3.5 w-3.5 opacity-0 transition-opacity group-hover/item:opacity-100" />
                     </span>
-                    <span className="mt-0.5 block text-[13px] leading-snug text-slate-500">
+                    <span className="nav-menu-muted mt-0.5 block text-[13px] leading-snug">
                       {item.desc}
                     </span>
                   </span>
@@ -247,14 +225,24 @@ export function Navbar() {
               ))}
             </>)}
 
-            <Link href={ABOUT.href} className={LINK_CLASS}>
+            <Link href={ABOUT.href} className={linkClass}>
               {ABOUT.label}
               <span className={UNDERLINE_CLASS} />
             </Link>
           </div>
 
           <div className="hidden shrink-0 items-center gap-2 xl:flex">
-            <Link href="/contact" className="btn-primary cta-pulse whitespace-nowrap px-6 py-3 text-[15px]">
+            <a
+              href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
+              aria-label={`Call ${SITE.phone}`}
+              className="grid h-11 w-11 place-items-center rounded-lg text-navy-800 hover:bg-white/60 hover:text-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-700"
+            >
+              <Phone className="h-4 w-4" />
+            </a>
+            <Link
+              href="/contact"
+              className="btn-primary cta-pulse whitespace-nowrap px-6 py-3 text-[15px]"
+            >
               Book a call
               <ArrowRight className="h-4 w-4" />
             </Link>
@@ -264,7 +252,7 @@ export function Navbar() {
             aria-label="Toggle menu"
             aria-expanded={open}
             aria-controls="mobile-navigation"
-            className="relative z-50 grid h-10 w-10 shrink-0 place-items-center rounded-lg text-navy-900 xl:hidden"
+            className="relative z-50 grid h-10 w-10 shrink-0 place-items-center rounded-lg text-navy-900 hover:bg-white/60 xl:hidden"
             onClick={() => setOpen((v) => !v)}
           >
             <span className="sr-only">Menu</span>
@@ -282,37 +270,37 @@ export function Navbar() {
         {open && (
           <motion.div
             id="mobile-navigation"
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2 }}
-            className={`overflow-y-auto border-b border-slate-200 bg-white px-5 pb-8 pt-3 shadow-lg xl:hidden ${scrolled ? 'max-h-[calc(100dvh-4rem)]' : 'max-h-[calc(100dvh-4rem)] lg:max-h-[calc(100dvh-6.5rem)]'}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, pointerEvents: "none" }}
+            transition={{ duration: reduceMotion ? 0 : 0.15 }}
+            className="nav-menu-panel min-h-0 overflow-y-auto overscroll-contain border-b px-5 pb-6 pt-3 shadow-lg xl:hidden"
           >
-            <p className="px-1 pb-1 pt-2 text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
+            <p className="nav-menu-muted px-1 pb-1 pt-2 text-xs font-bold uppercase tracking-[0.14em]">
               Platform
             </p>
             <Link
               href={PLATFORM_OVERVIEW.href}
               onClick={() => setOpen(false)}
-              className="block border-b border-slate-100 py-3.5 text-base font-semibold text-navy-900"
+              className="nav-menu-divider block border-b py-3.5 text-base font-semibold"
             >
               {PLATFORM_OVERVIEW.title}
             </Link>
-            <div className="grid grid-cols-2 gap-x-3 border-b border-slate-100 py-2">
+            <div className="nav-menu-divider grid grid-cols-2 gap-x-3 border-b py-2">
               {MODULES.map((m) => (
                 <Link
                   key={m.slug}
                   href={`/solutions/${m.slug}`}
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2 py-2 text-sm font-semibold text-navy-800"
+                  className="flex items-center gap-2 py-2 text-sm font-semibold"
                 >
-                  <Icon name={m.icon} className="h-4 w-4 shrink-0 text-teal-700" />
+                  <Icon name={m.icon} className="nav-menu-accent h-4 w-4 shrink-0" />
                   {m.name}
                 </Link>
               ))}
             </div>
 
-            <p className="px-1 pb-1 pt-4 text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
+            <p className="nav-menu-muted px-1 pb-1 pt-4 text-xs font-bold uppercase tracking-[0.14em]">
               Menu
             </p>
             <div className="flex flex-col">
@@ -321,14 +309,14 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block border-b border-slate-100 py-3.5 text-base font-semibold text-navy-900"
+                  className="nav-menu-divider block border-b py-3.5 text-base font-semibold"
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
 
-            <p className="px-1 pb-1 pt-4 text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
+            <p className="nav-menu-muted px-1 pb-1 pt-4 text-xs font-bold uppercase tracking-[0.14em]">
               Resources
             </p>
             {RESOURCES_MENU.map((item) => (
@@ -342,19 +330,19 @@ export function Navbar() {
                   <Icon name={item.icon} className="h-5 w-5" />
                 </span>
                 <span>
-                  <span className="block font-heading text-[15px] font-bold text-navy-900">
+                  <span className="block font-heading text-[15px] font-bold">
                     {item.title}
                   </span>
-                  <span className="block text-[13px] text-slate-500">{item.desc}</span>
+                  <span className="nav-menu-muted block text-[13px]">{item.desc}</span>
                 </span>
               </Link>
             ))}
 
             <a
               href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
-              className="mt-5 flex items-center justify-center gap-2 text-lg font-bold text-navy-900"
+              className="mt-5 flex items-center justify-center gap-2 text-lg font-bold"
             >
-              <Phone className="h-5 w-5 text-teal-600" />
+              <Phone className="nav-menu-accent h-5 w-5" />
               {SITE.phone}
             </a>
             <div className="mt-4 flex flex-col gap-3">

@@ -7,6 +7,56 @@
   --foreground: #1e293b;
 }
 
+@screen md {
+  .site-navbar {
+    --site-navbar-width: min(100% - 3rem, 100rem);
+    padding-top: 0.75rem;
+  }
+
+  .site-navbar-surface {
+    width: var(--site-navbar-width);
+    margin-inline: auto;
+    border: 1px solid rgb(22 43 77 / 0.1);
+    border-radius: 0.875rem;
+  }
+
+  .site-navbar #mobile-navigation {
+    width: var(--site-navbar-width);
+    margin: 0.5rem auto 0;
+    border-radius: 0.875rem;
+  }
+}
+
+.site-navbar-surface :focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.nav-menu-panel {
+  @apply border-slate-200 bg-white/90 text-navy-900 backdrop-blur-sm;
+  --nav-menu-muted: #475569;
+  --nav-menu-accent: #155e75;
+  --nav-menu-divider: #e2e8f0;
+  --nav-menu-highlight: rgb(8 145 178 / 0.08);
+}
+
+.nav-menu-muted {
+  color: var(--nav-menu-muted);
+}
+
+.nav-menu-accent {
+  color: var(--nav-menu-accent);
+}
+
+.nav-menu-divider {
+  border-color: var(--nav-menu-divider);
+}
+
+.nav-menu-row:hover,
+.nav-menu-spotlight {
+  background-color: var(--nav-menu-highlight);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

@@ -92,6 +92,10 @@ Each entry should include:
 
 ## Design Decisions
 
+### 2026-11-27 | Sitewide glass navigation
+
+The navigation stays visible across the site. At the top of each page, a transparent bar with dark text lets the page background show through. A light translucent surface keeps the links readable while scrolling. Dropdowns and the mobile menu use translucent panels with their own scrolling on short screens. The desktop **Book a call** button uses the gold primary style and its halo animation.
+
 ### 2026-03 | Glass Navbar with Mega Menu
 **Decision:** Navbar uses glass morphism effect (`backdrop-blur-md bg-white/80`) with dropdown mega menus for Standards and Industries.
 **Why:** 10 standards + 8 industries don't fit in a simple nav. Mega menu provides scannable grouping. Glass effect is modern without being distracting.
