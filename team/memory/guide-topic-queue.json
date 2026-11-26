@@ -248,6 +248,39 @@
         "https://isocertificationconsultants.ca/solutions/processes/",
         "https://committee.iso.org/home/tc176/iso-9001-auditing-practices-group.html"
       ]
+    },
+    {
+      "id": "management-review-decisions",
+      "topic": "Management review decision and action tracking software",
+      "aliases": [],
+      "primaryKeyword": "management review decision tracking software",
+      "secondaryKeywords": [
+        "management review action records"
+      ],
+      "moduleSlugs": [
+        "audits-management-review"
+      ],
+      "audience": "Canadian quality and operations teams",
+      "problem": "Leadership teams need to assemble management review inputs and record decisions, assigned actions and follow-up across review cycles.",
+      "priority": 9,
+      "proposedAt": "2026-11-26T16:37:34.546Z",
+      "proposedBy": "topic-scout",
+      "approval": "approved",
+      "approvedBy": "scout-reviewer",
+      "approvedAt": "2026-11-26T16:37:34.546Z",
+      "reviewRules": {
+        "R1_SCOPE": "pass",
+        "R2_DISTINCT": "pass",
+        "R3_SOURCES": "pass",
+        "R4_ACCURACY": "pass",
+        "R5_FIT": "pass"
+      },
+      "reviewFindings": [],
+      "sources": [
+        "https://isocertificationconsultants.ca/process/",
+        "https://committee.iso.org/files/live/sites/tc176/files/PDF%20APG%20New%20Disclaimer%2012-2023/ISO-TC%20176-TF_APG-PolicyObjectivesManagementReview.pdf",
+        "https://www.nist.gov/system/files/documents/2021/12/07/owm-mgmt-rev-outline-20211015.pdf"
+      ]
     }
   ]
 }
