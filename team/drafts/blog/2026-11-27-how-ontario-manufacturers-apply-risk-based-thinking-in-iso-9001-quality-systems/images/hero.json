@@ -1,0 +1,20 @@
+{
+  "id": "hero",
+  "width": 1200,
+  "height": 675,
+  "sha256": "4d1971a90b7fe86b21a75043cfcc2e14b82c67898ede075652bf283312e9e1f2",
+  "source": "codex",
+  "sourceId": "6e570c058518856785a04a4a532323b9508933648b6de3f006ec6f0a54186489",
+  "inputHash": "6e570c058518856785a04a4a532323b9508933648b6de3f006ec6f0a54186489",
+  "alt": "How Ontario Manufacturers Apply Risk-Based Thinking in ISO 9001 Quality Systems",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "695be7a03b5c92a1dd439a2c798e7cf451a980144236a338b2cbfc45401cb533",
+  "request": {
+    "id": "hero",
+    "scene": "Industrial quality work related to iso 9001 risk based thinking examples manufacturing",
+    "kind": "hero",
+    "alt": "How Ontario Manufacturers Apply Risk-Based Thinking in ISO 9001 Quality Systems",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: Industrial quality work related to iso 9001 risk based thinking examples manufacturing.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-27T09:06:41.461Z"
+}
