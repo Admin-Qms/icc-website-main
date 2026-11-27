@@ -1,0 +1,20 @@
+{
+  "id": "inline-2",
+  "width": 1200,
+  "height": 675,
+  "sha256": "27158cbe8131eea03c564cf432e9a4ae8a8ef3f0dbb02aa4d8ed3eb47391e0ad",
+  "source": "codex",
+  "sourceId": "a05f9f2d1baf36692bc306949ba7d8da0f201d047614daeab3efd95aa9e16dbf",
+  "inputHash": "a05f9f2d1baf36692bc306949ba7d8da0f201d047614daeab3efd95aa9e16dbf",
+  "alt": "A manufacturing quality lead in safety glasses and protective workwear checking a production setup beside an industrial machine",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "5276e67de829f08fbce5bfec6c367331308b9810a952770a940f56881edd5a58",
+  "request": {
+    "id": "inline-2",
+    "scene": "A manufacturing quality lead in safety glasses and protective workwear checking a production setup beside an industrial machine",
+    "kind": "inline",
+    "alt": "A manufacturing quality lead in safety glasses and protective workwear checking a production setup beside an industrial machine",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nMid-shot of the task itself: hands, tool and part fill the frame, the background softly out of focus.\nScene: A manufacturing quality lead in safety glasses and protective workwear checking a production setup beside an industrial machine.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-27T09:10:34.600Z"
+}
