@@ -1,0 +1,20 @@
+{
+  "id": "inline-1",
+  "width": 1200,
+  "height": 675,
+  "sha256": "a3c068d72e305397c91ca00f90c3ff4e79f6d906f105e95edd15215ef62c460b",
+  "source": "codex",
+  "sourceId": "abd85fd576367e042da49ca2337a7292d44f15bddea9a101711fc7fe6d9b40e6",
+  "inputHash": "abd85fd576367e042da49ca2337a7292d44f15bddea9a101711fc7fe6d9b40e6",
+  "alt": "A manufacturing quality inspector wearing safety glasses and a high-visibility vest examines a machined component at a factory receiving station",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "ce8fcf2770b51fe1ab8f87fa0f16bace62595c912eca8c6a1f1573f9f779ff48",
+  "request": {
+    "id": "inline-1",
+    "scene": "A manufacturing quality inspector wearing safety glasses and a high-visibility vest examines a machined component at a factory receiving station",
+    "kind": "inline",
+    "alt": "A manufacturing quality inspector wearing safety glasses and a high-visibility vest examines a machined component at a factory receiving station",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nMid-shot of the task itself: hands, tool and part fill the frame, the background softly out of focus.\nScene: A manufacturing quality inspector wearing safety glasses and a high-visibility vest examines a machined component at a factory receiving station.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-27T09:08:25.297Z"
+}
