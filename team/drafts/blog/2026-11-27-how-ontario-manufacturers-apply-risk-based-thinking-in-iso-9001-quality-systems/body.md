@@ -96,7 +96,7 @@ Review the decision when circumstances change. A supplier response, new equipmen
 
 ## Common pitfalls and practical checks
 
-A frequent difficulty is treating every uncertainty as equally important. A team can focus its attention by considering the potential effect on requirements, the controls already in place and the evidence available. The method needs to be understandable to the people who will use it, not just the person who built the assessment.
+A frequent difficulty is treating every uncertainty as equally important. A team can focus its attention by considering the potential effect on requirements, the controls already in place and the evidence available. 
 
 Another difficulty is closing an action when the task is complete but before anyone checks its effectiveness. Installing a control, training a person or updating an instruction can be necessary; the later check asks whether the concern has actually been addressed under the conditions that matter.
 
