@@ -1,0 +1,20 @@
+{
+  "id": "hero",
+  "width": 1200,
+  "height": 675,
+  "sha256": "fe79b22d9ef5f5504815f5049e1e19aa2efdbba7f55eaccf8361742b01ee3d3d",
+  "source": "codex",
+  "sourceId": "05dcbbb212ecbfcb35b091a635454531729547475f803cfa4c77e97022aadf5f",
+  "inputHash": "05dcbbb212ecbfcb35b091a635454531729547475f803cfa4c77e97022aadf5f",
+  "alt": "Building Your IATF 16949 Internal Auditor: Competency Requirements That Drive Automotive Quality",
+  "licenseUrl": "https://openai.com/policies/terms-of-use/",
+  "requestHash": "f59a36511ea27e2cba81f84b16b49f66217d993be52a6b693308531ec8369aa6",
+  "request": {
+    "id": "hero",
+    "scene": "Industrial quality work related to iatf 16949 internal auditor competency requirements",
+    "kind": "hero",
+    "alt": "Building Your IATF 16949 Internal Auditor: Competency Requirements That Drive Automotive Quality",
+    "prompt": "Photorealistic editorial photograph for a manufacturing trade publication. Modern North American manufacturing interior: clean floor, organized workstations, real machinery. Natural daylight from high windows mixed with even overhead lighting. Palette: steel gray and navy blue machinery and workwear with muted safety-orange accents; no saturated reds or greens, no dramatic color grading, no HDR. 35 mm lens at eye level, shallow depth of field, slight film grain, true-to-life color. People wear real PPE (safety glasses, high-visibility vest, gloves) and are shown mid-task, never posed, never looking at the camera, no close-up faces.\nWide establishing shot of the whole work area, the subject in the middle distance, room to crop to 16:9.\nScene: Industrial quality work related to iatf 16949 internal auditor competency requirements.\nAvoid: offices, boardrooms, desks, meetings, laptops as the subject, stock-photo smiles, text, logos, signage, labels or watermarks of any kind."
+  },
+  "importedAt": "2026-11-28T09:14:29.674Z"
+}
