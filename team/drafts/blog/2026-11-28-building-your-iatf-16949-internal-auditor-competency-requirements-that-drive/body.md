@@ -4,7 +4,7 @@
 > - Training records help show development, but course attendance alone does not establish practical competence.
 > - Maintain evidence of assessment, audit activity and ongoing development, and check current applicable customer and scheme requirements.
 
-An internal audit can follow a part from an incoming shipment to final release, but the value of that audit depends on the person asking the questions. IATF 16949 internal auditor competency requirements matter because an automotive supplier needs auditors who can connect requirements, process controls and evidence rather than simply complete a checklist.
+A revised control plan is approved, but the instruction at the inspection station still shows the previous check. Can the assigned auditor recognize that mismatch, identify the applicable requirement and follow the change back to its approval? IATF 16949 internal auditor competency requirements help an automotive supplier decide who is prepared to examine questions like these.
 
 The task is broader than knowing the title of a standard. An auditor needs to understand the assigned process, recognize the criteria being used and assess whether a record or observation supports a conclusion. For an Ontario supplier, that can mean examining how a customer requirement reaches a control plan or how a change is reviewed before production.
 
@@ -32,7 +32,7 @@ Knowing where a requirement is recorded is not the same as understanding how it 
 
 Automotive processes may use tools such as process flow diagrams, failure mode and effects analysis, control plans, measurement system analysis and statistical process control. The [AIAG quality resources](https://www.aiag.org/expertise-areas/quality) describe automotive quality initiatives and core tools. Which tools matter to an assignment depends on the plant's work and the applicable customer requirements.
 
-**A control plan is a starting point for a question, not proof that a control happened.** The auditor can compare the planned control with the workstation instruction, a relevant record and an observation of the process. The [control plan overview](/blog/what-iatf-16949-control-plan-requirements-mean-for-automotive-suppliers) explains that document's role in automotive production.
+**A signed control plan cannot show whether a particular workstation used the current check.** The auditor can compare its revision and planned control with the workstation instruction, a relevant record and an observation of the process. The [control plan overview](/blog/what-iatf-16949-control-plan-requirements-mean-for-automotive-suppliers) explains that document's role in automotive production.
 
 A practical knowledge assessment can ask the prospective auditor to explain how information moves between related records. It can also ask the person to identify what evidence would be needed to assess a change. These activities reveal whether the person can apply the material, rather than merely recognize terminology.
 
@@ -44,11 +44,11 @@ At the workstation, observation and discussion should be connected to the proces
 
 The following skills are useful across assignments:
 
-- **Plan a process trail.** Identify the input, activity, output and handoff that need to be examined against the audit criteria.
-- **Interview without leading.** Ask the person responsible to explain the work, then clarify how the applicable instruction is found and used.
-- **Evaluate objective evidence.** Record the relevant observation or record and check that it actually addresses the audit question.
-- **Write a clear finding.** Connect the criterion, observed evidence and identified gap without assigning blame or overstating the sample.
-- **Escalate appropriately.** Use the plant's established process when an observation may affect product or customer requirements.
+- **Plan a process trail.** Follow an approved process change to the control plan, affected workstation instruction and the person responsible for the handoff.
+- **Interview without leading.** Ask an operator how the current inspection instruction is identified and what happens when a measured feature does not meet its criterion.
+- **Evaluate objective evidence.** Compare a sample inspection record with the applicable control-plan revision and the feature being checked.
+- **Write a clear finding.** State the applicable criterion and the specific mismatch between the sampled instruction and approved control plan without overstating the sample.
+- **Escalate appropriately.** Use the plant's established containment process if an outdated inspection instruction may affect product awaiting release.
 
 [IMAGE: A quality specialist wearing safety glasses and protective gloves checks an industrial measurement setup on a manufacturing production line]
 
@@ -64,7 +64,7 @@ Training can introduce requirements, audit methods and automotive tools. A usefu
 
 Course selection should be based on current applicable requirements and the scope of the auditor's work. A certificate may document attendance or completion, but it does not automatically prove that the person can apply the material at a particular plant. Where a customer or certification arrangement specifies additional conditions, the supplier should verify those conditions from the current authoritative source.
 
-The [IATF Global Oversight site](https://www.iatfglobaloversight.org/) is a source for official IATF publications and information. A supplier should check current sanctioned interpretations and applicable customer-specific requirements rather than rely on an old training slide when defining its competence criteria.
+An outdated training slide can lead an auditor to assess an assignment against a superseded interpretation or miss a customer-specific condition. The [IATF Global Oversight site](https://www.iatfglobaloversight.org/) provides official publications and information to check against the supplier’s current applicable criteria.
 
 A training plan should answer several practical questions:
 
@@ -86,7 +86,7 @@ A matrix can help a coordinator see which auditors are available for particular 
 
 Objectivity also matters when selecting the audit team. A quality manager may have relevant technical knowledge, but the organization must arrange assignments so the audit remains impartial and does not become a review of the auditor's own work. Consider responsibility and reporting relationships before the schedule is issued.
 
-The audit report and subsequent follow-up provide another opportunity to evaluate performance. Were findings supported by objective evidence? Did the auditor identify the applicable criterion and communicate the conclusion accurately? The answers can inform coaching without turning a single observation into an unsupported conclusion about the person's overall ability.
+When reviewing an observed audit, an assessor can check whether a finding identifies the sampled record, the applicable criterion and the gap between them. If any element is missing, coaching can focus on that finding before the person receives a similar assignment.
 
 > **Key Consideration:** A qualification record should be easy to retrieve, but its purpose is to support a sound assignment decision, not simply satisfy a document request.
 
@@ -94,7 +94,7 @@ The audit report and subsequent follow-up provide another opportunity to evaluat
 
 Competence is not a one-time event. An auditor who has not examined a process recently may need a refresher on its current controls; a new customer requirement or manufacturing change may call for additional preparation. The organization should follow applicable IATF and customer requirements for maintaining competence and verify the current details from authoritative sources.
 
-A development review can consider audit activity, changes to applicable criteria, feedback on audit performance and the knowledge needed for upcoming assignments. It should distinguish a requirement to maintain competence from an assumption that every person must take the same course on the same schedule. Where a fixed interval or minimum activity applies, confirm it in the current applicable IATF requirements and interpretations.
+A new customer-specific requirement, a planned audit of an unfamiliar process or a gap in the organization’s required audit activity can trigger a review of the auditor’s authorization and development needs. It should distinguish a requirement to maintain competence from an assumption that every person must take the same course on the same schedule. Where a fixed interval or minimum activity applies, confirm it in the current applicable IATF requirements and interpretations.
 
 Common gaps include assigning an auditor to an unfamiliar process without support, keeping training records without assessment, and failing to update competence records after a change. Another is treating internal audits and certification-body audits as interchangeable: they have different purposes and may have different qualification arrangements.
 
@@ -122,4 +122,4 @@ A quality manager can be considered for an assignment if the organization demons
 
 Relevant records may include the competence criteria, training and experience, assessment results, authorization scope, audit activity and development actions. The organization should retain the documented information required by its applicable system and make the evidence available for review.
 
-Assigning qualified auditors and tracking their assessment, training and follow-up can be difficult when records are scattered. ISO Certification Consultants' compliance management software helps organize audit and competence information; [book a demo](/contact/) to see how a team could keep its audit program visible.
+Before assigning the next production-process audit, a coordinator needs to see which auditor is authorized for that scope and what development remains open. ISO Certification Consultants’ compliance management software can organize audit and competence information; [book a demo](/contact/) to examine that assignment workflow.
