@@ -4,9 +4,9 @@
 > - Training records help show development, but course attendance alone does not establish practical competence.
 > - Maintain evidence of assessment, audit activity and ongoing development, and check current applicable customer and scheme requirements.
 
-A revised control plan is approved, but the instruction at the inspection station still shows the previous check. Can the assigned auditor recognize that mismatch, identify the applicable requirement and follow the change back to its approval? IATF 16949 internal auditor competency requirements help an automotive supplier decide who is prepared to examine questions like these.
+A certificate of course attendance tells an Ontario automotive supplier what training a person completed; it does not show which production processes that person is ready to audit. IATF 16949 internal auditor competency requirements help the supplier assess whether an auditor can apply the relevant criteria and examine evidence for an assigned process.
 
-The task is broader than knowing the title of a standard. An auditor needs to understand the assigned process, recognize the criteria being used and assess whether a record or observation supports a conclusion. For an Ontario supplier, that can mean examining how a customer requirement reaches a control plan or how a change is reviewed before production.
+For an Ontario supplier, the competence decision might turn on whether the auditor can follow a customer requirement into the current control plan, then compare that plan with an inspection instruction at the line. If the documents disagree, the auditor needs to identify the applicable criterion and gather evidence before reporting a finding.
 
 > **Key Consideration:** Define competence for the audit being assigned. An auditor's general experience is useful, but it does not automatically demonstrate knowledge of every process or customer requirement.
 
@@ -16,7 +16,7 @@ IATF 16949:2016 is the automotive quality management system standard used alongs
 
 [IATF's description of IATF 16949:2016](https://www.iatfglobaloversight.org/iatf-169492016/about/) explains the automotive quality management system standard and its relationship with ISO 9001. The supplier's own documented system, applicable customer-specific requirements and current IATF publications also form part of the context for a particular assignment.
 
-An internal auditor does not need to operate every machine, but must understand enough about the process to recognize the right evidence and ask useful follow-up questions. In a receiving audit, for instance, the issue may be how the supplier verifies purchased material and communicates a hold. In a production audit, the question may concern the relationship between the approved control plan and the checks performed at the workstation.
+An auditor examining a production change needs to distinguish the approved control-plan revision from the instruction currently used at the workstation. Following the change record, approval and inspection evidence can reveal whether the planned check reached the people performing it. A receiving audit may instead examine how purchased material is verified and a hold communicated.
 
 [IMAGE: An automotive quality auditor in safety glasses and a high-visibility vest reviews a machined component beside a production line]
 
@@ -26,7 +26,7 @@ The [automotive industry overview](/industries/automotive) describes the sector 
 
 ## Build the technical foundation
 
-Begin by identifying the criteria an auditor must apply. The list may include applicable ISO 9001 and IATF 16949 requirements, the organization's own procedures, customer-specific requirements and process documents. Auditors should understand how to find the current applicable material and distinguish a requirement from a local practice.
+For a production-process assignment, an auditor can work through three layers: applicable ISO 9001 and IATF 16949 criteria; the customer-specific requirements that apply to the part; and the current control plan and workstation instruction. The auditor must distinguish a requirement from a local practice and know where the approved versions are kept.
 
 Knowing where a requirement is recorded is not the same as understanding how it applies. An auditor should be able to connect a criterion to a process, select evidence that addresses it and identify when more information is needed. When a requirement is unclear, the auditor should consult the approved source or a competent technical resource rather than guess.
 
@@ -54,7 +54,7 @@ The following skills are useful across assignments:
 
 **Illustrative example:** An unnamed automotive supplier assigns a trainee to observe an experienced auditor reviewing a production change. The trainee compares the approved change record with a control plan and explains the next evidence needed. The supervising auditor assesses the explanation and records any development needed before an independent assignment.
 
-The example is hypothetical. An actual supplier should define how supervision, independence and approval are handled within its own audit program. The important distinction is between exposure to an audit and demonstrated ability to perform the assigned work.
+The example is hypothetical. **Illustrative example:** An unnamed Ontario automotive supplier receives a customer requirement for a new production process. Before assigning its audit, the coordinator compares the auditor’s existing authorization with the new process and customer criteria, then records any development and reassessment required. An actual supplier should define how supervision, independence and approval are handled within its own audit program. The important distinction is between exposure to an audit and demonstrated ability to perform the assigned work.
 
 > **Important:** A potential product issue should enter the plant's normal containment and escalation process without waiting for the final audit report.
 
@@ -122,4 +122,4 @@ A quality manager can be considered for an assignment if the organization demons
 
 Relevant records may include the competence criteria, training and experience, assessment results, authorization scope, audit activity and development actions. The organization should retain the documented information required by its applicable system and make the evidence available for review.
 
-Before assigning the next production-process audit, a coordinator needs to see which auditor is authorized for that scope and what development remains open. ISO Certification Consultants’ compliance management software can organize audit and competence information; [book a demo](/contact/) to examine that assignment workflow.
+When a new production process enters the audit schedule, a course certificate alone cannot answer whether the available auditor is authorized for that scope. A coordinator can use ISO Certification Consultants’ compliance management software to organize the assessment and assignment evidence; [book a demo](/contact/) to examine that workflow.
